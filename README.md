@@ -99,6 +99,7 @@ Class | Method | HTTP request | Description
  - [LegacyContactAddress](docs/Model/LegacyContactAddress.md)
  - [LegacyProvisioningUserIdentifier](docs/Model/LegacyProvisioningUserIdentifier.md)
  - [LegacyProvisioningUserPayload](docs/Model/LegacyProvisioningUserPayload.md)
+ - [LegacyResponse](docs/Model/LegacyResponse.md)
 
 
 ## Documentation For Authorization

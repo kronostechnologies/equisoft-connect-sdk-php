@@ -126,7 +126,7 @@ class LegacyProvisioningApi
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return AnyType
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
      */
     public function appsProvisioningPost($method, $json = null, $body = null)
     {
@@ -145,7 +145,7 @@ class LegacyProvisioningApi
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of AnyType, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function appsProvisioningPostWithHttpInfo($method, $json = null, $body = null)
     {
@@ -182,20 +182,20 @@ class LegacyProvisioningApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('AnyType' === '\SplFileObject') {
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'AnyType', []),
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = 'AnyType';
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -214,7 +214,7 @@ class LegacyProvisioningApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'AnyType',
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -260,7 +260,7 @@ class LegacyProvisioningApi
      */
     public function appsProvisioningPostAsyncWithHttpInfo($method, $json = null, $body = null)
     {
-        $returnType = 'AnyType';
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse';
         $request = $this->appsProvisioningPostRequest($method, $json, $body);
 
         return $this->client

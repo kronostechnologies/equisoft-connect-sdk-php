@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## appsApiPost
 
-> AnyType appsApiPost($method, $json, $body)
+> \Equisoft\SDK\EquisoftConnect\Model\LegacyResponse appsApiPost($method, $json, $body)
 
 Legacy API entrypoint
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AnyType**](../Model/AnyType.md)
+[**\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse**](../Model/LegacyResponse.md)
 
 ### Authorization
 
