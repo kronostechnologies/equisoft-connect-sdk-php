@@ -1,6 +1,6 @@
 <?php
 /**
- * LegacyResponse
+ * LegacyProvisioningGetOrganizationResponse
  *
  * PHP version 5
  *
@@ -28,28 +28,26 @@
  */
 
 namespace Equisoft\SDK\EquisoftConnect\Model;
-
-use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * LegacyResponse Class Doc Comment
+ * LegacyProvisioningGetOrganizationResponse Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class LegacyResponse implements ModelInterface, ArrayAccess
+class LegacyProvisioningGetOrganizationResponse extends LegacyResponse 
 {
-    const DISCRIMINATOR = 'responseType';
+    const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
       *
       * @var string
       */
-    protected static $openAPIModelName = 'LegacyResponse';
+    protected static $openAPIModelName = 'LegacyProvisioningGetOrganizationResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +55,7 @@ class LegacyResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'stat' => 'string',
-        'errorCode' => 'string',
-        'errorMsg' => 'string',
+        'organization' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem',
         'responseType' => 'string'
     ];
 
@@ -69,9 +65,7 @@ class LegacyResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'stat' => null,
-        'errorCode' => null,
-        'errorMsg' => null,
+        'organization' => null,
         'responseType' => null
     ];
 
@@ -82,7 +76,7 @@ class LegacyResponse implements ModelInterface, ArrayAccess
      */
     public static function openAPITypes()
     {
-        return self::$openAPITypes;
+        return self::$openAPITypes + parent::openAPITypes();
     }
 
     /**
@@ -92,7 +86,7 @@ class LegacyResponse implements ModelInterface, ArrayAccess
      */
     public static function openAPIFormats()
     {
-        return self::$openAPIFormats;
+        return self::$openAPIFormats + parent::openAPIFormats();
     }
 
     /**
@@ -102,9 +96,7 @@ class LegacyResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'stat' => 'stat',
-        'errorCode' => 'error_code',
-        'errorMsg' => 'error_msg',
+        'organization' => 'organization',
         'responseType' => 'responseType'
     ];
 
@@ -114,9 +106,7 @@ class LegacyResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'stat' => 'setStat',
-        'errorCode' => 'setErrorCode',
-        'errorMsg' => 'setErrorMsg',
+        'organization' => 'setOrganization',
         'responseType' => 'setResponseType'
     ];
 
@@ -126,9 +116,7 @@ class LegacyResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'stat' => 'getStat',
-        'errorCode' => 'getErrorCode',
-        'errorMsg' => 'getErrorMsg',
+        'organization' => 'getOrganization',
         'responseType' => 'getResponseType'
     ];
 
@@ -140,7 +128,7 @@ class LegacyResponse implements ModelInterface, ArrayAccess
      */
     public static function attributeMap()
     {
-        return self::$attributeMap;
+        return parent::attributeMap() + self::$attributeMap;
     }
 
     /**
@@ -150,7 +138,7 @@ class LegacyResponse implements ModelInterface, ArrayAccess
      */
     public static function setters()
     {
-        return self::$setters;
+        return parent::setters() + self::$setters;
     }
 
     /**
@@ -160,7 +148,7 @@ class LegacyResponse implements ModelInterface, ArrayAccess
      */
     public static function getters()
     {
-        return self::$getters;
+        return parent::getters() + self::$getters;
     }
 
     /**
@@ -177,12 +165,6 @@ class LegacyResponse implements ModelInterface, ArrayAccess
 
     
 
-    /**
-     * Associative array for storing property values
-     *
-     * @var mixed[]
-     */
-    protected $container = [];
 
     /**
      * Constructor
@@ -192,13 +174,10 @@ class LegacyResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['stat'] = isset($data['stat']) ? $data['stat'] : null;
-        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
-        $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
-        $this->container['responseType'] = isset($data['responseType']) ? $data['responseType'] : null;
+        parent::__construct($data);
 
-        // Initialize discriminator property with the model name.
-        $this->container['responseType'] = static::$openAPIModelName;
+        $this->container['organization'] = isset($data['organization']) ? $data['organization'] : null;
+        $this->container['responseType'] = isset($data['responseType']) ? $data['responseType'] : null;
     }
 
     /**
@@ -226,73 +205,25 @@ class LegacyResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets stat
+     * Gets organization
      *
-     * @return string|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem|null
      */
-    public function getStat()
+    public function getOrganization()
     {
-        return $this->container['stat'];
+        return $this->container['organization'];
     }
 
     /**
-     * Sets stat
+     * Sets organization
      *
-     * @param string|null $stat Status of the request that has been made. Can be 'ok' or 'fail'
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem|null $organization organization
      *
      * @return $this
      */
-    public function setStat($stat)
+    public function setOrganization($organization)
     {
-        $this->container['stat'] = $stat;
-
-        return $this;
-    }
-
-    /**
-     * Gets errorCode
-     *
-     * @return string|null
-     */
-    public function getErrorCode()
-    {
-        return $this->container['errorCode'];
-    }
-
-    /**
-     * Sets errorCode
-     *
-     * @param string|null $errorCode If the request has failed, this element will contain the error code related to the problem encountered.
-     *
-     * @return $this
-     */
-    public function setErrorCode($errorCode)
-    {
-        $this->container['errorCode'] = $errorCode;
-
-        return $this;
-    }
-
-    /**
-     * Gets errorMsg
-     *
-     * @return string|null
-     */
-    public function getErrorMsg()
-    {
-        return $this->container['errorMsg'];
-    }
-
-    /**
-     * Sets errorMsg
-     *
-     * @param string|null $errorMsg If the request has failed, this element will contain the error message related to the problem encountered.
-     *
-     * @return $this
-     */
-    public function setErrorMsg($errorMsg)
-    {
-        $this->container['errorMsg'] = $errorMsg;
+        $this->container['organization'] = $organization;
 
         return $this;
     }

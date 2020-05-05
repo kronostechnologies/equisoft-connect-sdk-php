@@ -97,6 +97,9 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [LegacyContactAddress](docs/Model/LegacyContactAddress.md)
+ - [LegacyProvisioningGetOrganizationResponse](docs/Model/LegacyProvisioningGetOrganizationResponse.md)
+ - [LegacyProvisioningGetOrganizationResponseAllOf](docs/Model/LegacyProvisioningGetOrganizationResponseAllOf.md)
+ - [LegacyProvisioningOrganizationItem](docs/Model/LegacyProvisioningOrganizationItem.md)
  - [LegacyProvisioningUserIdentifier](docs/Model/LegacyProvisioningUserIdentifier.md)
  - [LegacyProvisioningUserPayload](docs/Model/LegacyProvisioningUserPayload.md)
  - [LegacyResponse](docs/Model/LegacyResponse.md)

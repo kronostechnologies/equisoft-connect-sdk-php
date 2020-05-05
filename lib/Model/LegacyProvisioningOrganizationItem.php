@@ -1,6 +1,6 @@
 <?php
 /**
- * LegacyResponse
+ * LegacyProvisioningOrganizationItem
  *
  * PHP version 5
  *
@@ -33,23 +33,23 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * LegacyResponse Class Doc Comment
+ * LegacyProvisioningOrganizationItem Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class LegacyResponse implements ModelInterface, ArrayAccess
+class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = 'responseType';
+    const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
       *
       * @var string
       */
-    protected static $openAPIModelName = 'LegacyResponse';
+    protected static $openAPIModelName = 'legacy.provisioning.OrganizationItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,10 +57,7 @@ class LegacyResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'stat' => 'string',
-        'errorCode' => 'string',
-        'errorMsg' => 'string',
-        'responseType' => 'string'
+        'orgId' => 'string'
     ];
 
     /**
@@ -69,10 +66,7 @@ class LegacyResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'stat' => null,
-        'errorCode' => null,
-        'errorMsg' => null,
-        'responseType' => null
+        'orgId' => null
     ];
 
     /**
@@ -102,10 +96,7 @@ class LegacyResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'stat' => 'stat',
-        'errorCode' => 'error_code',
-        'errorMsg' => 'error_msg',
-        'responseType' => 'responseType'
+        'orgId' => 'orgId'
     ];
 
     /**
@@ -114,10 +105,7 @@ class LegacyResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'stat' => 'setStat',
-        'errorCode' => 'setErrorCode',
-        'errorMsg' => 'setErrorMsg',
-        'responseType' => 'setResponseType'
+        'orgId' => 'setOrgId'
     ];
 
     /**
@@ -126,10 +114,7 @@ class LegacyResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'stat' => 'getStat',
-        'errorCode' => 'getErrorCode',
-        'errorMsg' => 'getErrorMsg',
-        'responseType' => 'getResponseType'
+        'orgId' => 'getOrgId'
     ];
 
     /**
@@ -192,13 +177,7 @@ class LegacyResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['stat'] = isset($data['stat']) ? $data['stat'] : null;
-        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
-        $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
-        $this->container['responseType'] = isset($data['responseType']) ? $data['responseType'] : null;
-
-        // Initialize discriminator property with the model name.
-        $this->container['responseType'] = static::$openAPIModelName;
+        $this->container['orgId'] = isset($data['orgId']) ? $data['orgId'] : null;
     }
 
     /**
@@ -208,7 +187,7 @@ class LegacyResponse implements ModelInterface, ArrayAccess
      */
     public function listInvalidProperties()
     {
-        $invalidProperties = parent::listInvalidProperties();
+        $invalidProperties = [];
 
         return $invalidProperties;
     }
@@ -226,97 +205,25 @@ class LegacyResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets stat
+     * Gets orgId
      *
      * @return string|null
      */
-    public function getStat()
+    public function getOrgId()
     {
-        return $this->container['stat'];
+        return $this->container['orgId'];
     }
 
     /**
-     * Sets stat
+     * Sets orgId
      *
-     * @param string|null $stat Status of the request that has been made. Can be 'ok' or 'fail'
+     * @param string|null $orgId Unique identifier for the organization
      *
      * @return $this
      */
-    public function setStat($stat)
+    public function setOrgId($orgId)
     {
-        $this->container['stat'] = $stat;
-
-        return $this;
-    }
-
-    /**
-     * Gets errorCode
-     *
-     * @return string|null
-     */
-    public function getErrorCode()
-    {
-        return $this->container['errorCode'];
-    }
-
-    /**
-     * Sets errorCode
-     *
-     * @param string|null $errorCode If the request has failed, this element will contain the error code related to the problem encountered.
-     *
-     * @return $this
-     */
-    public function setErrorCode($errorCode)
-    {
-        $this->container['errorCode'] = $errorCode;
-
-        return $this;
-    }
-
-    /**
-     * Gets errorMsg
-     *
-     * @return string|null
-     */
-    public function getErrorMsg()
-    {
-        return $this->container['errorMsg'];
-    }
-
-    /**
-     * Sets errorMsg
-     *
-     * @param string|null $errorMsg If the request has failed, this element will contain the error message related to the problem encountered.
-     *
-     * @return $this
-     */
-    public function setErrorMsg($errorMsg)
-    {
-        $this->container['errorMsg'] = $errorMsg;
-
-        return $this;
-    }
-
-    /**
-     * Gets responseType
-     *
-     * @return string|null
-     */
-    public function getResponseType()
-    {
-        return $this->container['responseType'];
-    }
-
-    /**
-     * Sets responseType
-     *
-     * @param string|null $responseType responseType
-     *
-     * @return $this
-     */
-    public function setResponseType($responseType)
-    {
-        $this->container['responseType'] = $responseType;
+        $this->container['orgId'] = $orgId;
 
         return $this;
     }
