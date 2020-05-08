@@ -64,21 +64,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = Equisoft\SDK\EquisoftConnect\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\LegacyApi(
+$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\LegacyDocumentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$method = 'method_example'; // string | Legacy method name
-$json = True; // bool | 
-$body = new \Equisoft\SDK\EquisoftConnect\Model\AnyType(); // AnyType | 
+$legacyDocumentDocumentPayloadRequest = new \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentPayloadRequest(); // \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentPayloadRequest | 
 
 try {
-    $result = $apiInstance->appsApiPost($method, $json, $body);
+    $result = $apiInstance->addDocument($legacyDocumentDocumentPayloadRequest);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling LegacyApi->appsApiPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling LegacyDocumentApi->addDocument: ', $e->getMessage(), PHP_EOL;
 }
 
 ?>
@@ -90,15 +88,40 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*LegacyApi* | [**appsApiPost**](docs/Api/LegacyApi.md#appsapipost) | **POST** /apps/api/ | Legacy API entrypoint
-*LegacyProvisioningApi* | [**appsProvisioningPost**](docs/Api/LegacyProvisioningApi.md#appsprovisioningpost) | **POST** /apps/provisioning/ | Legacy API entrypoint
+*LegacyDocumentApi* | [**addDocument**](docs/Api/LegacyDocumentApi.md#adddocument) | **POST** /apps/api/kronos.document.add | Create a new document.
+*LegacyDocumentApi* | [**deleteDocument**](docs/Api/LegacyDocumentApi.md#deletedocument) | **POST** /apps/api/kronos.document.delete | Delete a document and it&#39;s related files.
+*LegacyDocumentApi* | [**deleteDocumentFile**](docs/Api/LegacyDocumentApi.md#deletedocumentfile) | **POST** /apps/api/kronos.document.deleteFile | Delete one file from a document
+*LegacyDocumentApi* | [**downloadDocumentFile**](docs/Api/LegacyDocumentApi.md#downloaddocumentfile) | **GET** /apps/api/kronos.document.downloadFile | Download a file. File data is encoded in base64.
+*LegacyDocumentApi* | [**getDocument**](docs/Api/LegacyDocumentApi.md#getdocument) | **GET** /apps/api/kronos.document.get | Get all data for a document record.
+*LegacyDocumentApi* | [**getDocumentList**](docs/Api/LegacyDocumentApi.md#getdocumentlist) | **GET** /apps/api/kronos.document.getList | Get a list of all documents. This will return basic information about the document.
+*LegacyDocumentApi* | [**updateDocument**](docs/Api/LegacyDocumentApi.md#updatedocument) | **POST** /apps/api/kronos.document.update | Update a document.
+*LegacyDocumentApi* | [**uploadDocumentFile**](docs/Api/LegacyDocumentApi.md#uploaddocumentfile) | **POST** /apps/api/kronos.document.uploadFile | Upload a new file in a document
 *LegacyProvisioningApi* | [**getOrganization**](docs/Api/LegacyProvisioningApi.md#getorganization) | **GET** /apps/provisioning/kronos.provisioning.getOrganization | Get all informations about an organization.
 *LegacyProvisioningApi* | [**getOrganizationList**](docs/Api/LegacyProvisioningApi.md#getorganizationlist) | **GET** /apps/provisioning/kronos.provisioning.getOrganizationList | List all organizations
 
 
 ## Documentation For Models
 
+ - [LegacyAddUpdateResponse](docs/Model/LegacyAddUpdateResponse.md)
  - [LegacyContactAddress](docs/Model/LegacyContactAddress.md)
+ - [LegacyContactContact](docs/Model/LegacyContactContact.md)
+ - [LegacyContactContactPayloadItem](docs/Model/LegacyContactContactPayloadItem.md)
+ - [LegacyDocumentBase64FilePayload](docs/Model/LegacyDocumentBase64FilePayload.md)
+ - [LegacyDocumentBase64FilePayloadItem](docs/Model/LegacyDocumentBase64FilePayloadItem.md)
+ - [LegacyDocumentBase64FilePayloadItemAllOf](docs/Model/LegacyDocumentBase64FilePayloadItemAllOf.md)
+ - [LegacyDocumentDocument](docs/Model/LegacyDocumentDocument.md)
+ - [LegacyDocumentDocumentListItem](docs/Model/LegacyDocumentDocumentListItem.md)
+ - [LegacyDocumentDocumentPayloadItem](docs/Model/LegacyDocumentDocumentPayloadItem.md)
+ - [LegacyDocumentDocumentPayloadRequest](docs/Model/LegacyDocumentDocumentPayloadRequest.md)
+ - [LegacyDocumentDownloadFileResponse](docs/Model/LegacyDocumentDownloadFileResponse.md)
+ - [LegacyDocumentDownloadFileResponseAllOf](docs/Model/LegacyDocumentDownloadFileResponseAllOf.md)
+ - [LegacyDocumentFile](docs/Model/LegacyDocumentFile.md)
+ - [LegacyDocumentGetListOptions](docs/Model/LegacyDocumentGetListOptions.md)
+ - [LegacyDocumentGetListResponse](docs/Model/LegacyDocumentGetListResponse.md)
+ - [LegacyDocumentGetListResponseAllOf](docs/Model/LegacyDocumentGetListResponseAllOf.md)
+ - [LegacyDocumentGetResponse](docs/Model/LegacyDocumentGetResponse.md)
+ - [LegacyDocumentGetResponseAllOf](docs/Model/LegacyDocumentGetResponseAllOf.md)
+ - [LegacyDocumentUploadDocumentFileRequest](docs/Model/LegacyDocumentUploadDocumentFileRequest.md)
  - [LegacyProvisioningGetOrganizationListResponse](docs/Model/LegacyProvisioningGetOrganizationListResponse.md)
  - [LegacyProvisioningGetOrganizationListResponseAllOf](docs/Model/LegacyProvisioningGetOrganizationListResponseAllOf.md)
  - [LegacyProvisioningGetOrganizationResponse](docs/Model/LegacyProvisioningGetOrganizationResponse.md)
@@ -109,6 +132,7 @@ Class | Method | HTTP request | Description
  - [LegacyProvisioningUserItem](docs/Model/LegacyProvisioningUserItem.md)
  - [LegacyProvisioningUserPayload](docs/Model/LegacyProvisioningUserPayload.md)
  - [LegacyResponse](docs/Model/LegacyResponse.md)
+ - [LegacyUser](docs/Model/LegacyUser.md)
 
 
 ## Documentation For Authorization
@@ -122,8 +146,10 @@ Class | Method | HTTP request | Description
 - **Flow**: implicit
 - **Authorization URL**: https://secure.kronos-web.com/oauth/authorize
 - **Scopes**: 
-- **crm:contact**: 
-- **crm:event**: 
+- **crm:contact**: Read/Write access on contacts
+- **crm:event**: Read/Write access on events
+- **crm:task**: Read/Write access on tasks
+- **crm:document**: Read/Write access on documents
 
 
 ## Author
