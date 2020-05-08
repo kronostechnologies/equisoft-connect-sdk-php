@@ -57,7 +57,24 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'orgId' => 'string'
+        'orgId' => 'string',
+        'displayName' => 'string',
+        'status' => 'string',
+        'diskUsageQuota' => 'int',
+        'lang' => 'string',
+        'mainPhone' => 'string',
+        'tollFree' => 'string',
+        'fax' => 'string',
+        'address' => 'string',
+        'addressLine2' => 'string',
+        'addressCity' => 'string',
+        'addressState' => 'string',
+        'addressPostalCode' => 'string',
+        'addressCountry' => 'string',
+        'webSite' => 'string',
+        'isMultiUser' => 'string',
+        'fnaStatus' => 'string',
+        'users' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserItem[]'
     ];
 
     /**
@@ -66,7 +83,24 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'orgId' => null
+        'orgId' => null,
+        'displayName' => null,
+        'status' => null,
+        'diskUsageQuota' => null,
+        'lang' => null,
+        'mainPhone' => null,
+        'tollFree' => null,
+        'fax' => null,
+        'address' => null,
+        'addressLine2' => null,
+        'addressCity' => null,
+        'addressState' => null,
+        'addressPostalCode' => null,
+        'addressCountry' => null,
+        'webSite' => null,
+        'isMultiUser' => null,
+        'fnaStatus' => null,
+        'users' => null
     ];
 
     /**
@@ -96,7 +130,24 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'orgId' => 'orgId'
+        'orgId' => 'orgId',
+        'displayName' => 'displayName',
+        'status' => 'status',
+        'diskUsageQuota' => 'diskUsageQuota',
+        'lang' => 'lang',
+        'mainPhone' => 'mainPhone',
+        'tollFree' => 'tollFree',
+        'fax' => 'fax',
+        'address' => 'address',
+        'addressLine2' => 'addressLine2',
+        'addressCity' => 'addressCity',
+        'addressState' => 'addressState',
+        'addressPostalCode' => 'addressPostalCode',
+        'addressCountry' => 'addressCountry',
+        'webSite' => 'webSite',
+        'isMultiUser' => 'isMultiUser',
+        'fnaStatus' => 'fnaStatus',
+        'users' => 'users'
     ];
 
     /**
@@ -105,7 +156,24 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'orgId' => 'setOrgId'
+        'orgId' => 'setOrgId',
+        'displayName' => 'setDisplayName',
+        'status' => 'setStatus',
+        'diskUsageQuota' => 'setDiskUsageQuota',
+        'lang' => 'setLang',
+        'mainPhone' => 'setMainPhone',
+        'tollFree' => 'setTollFree',
+        'fax' => 'setFax',
+        'address' => 'setAddress',
+        'addressLine2' => 'setAddressLine2',
+        'addressCity' => 'setAddressCity',
+        'addressState' => 'setAddressState',
+        'addressPostalCode' => 'setAddressPostalCode',
+        'addressCountry' => 'setAddressCountry',
+        'webSite' => 'setWebSite',
+        'isMultiUser' => 'setIsMultiUser',
+        'fnaStatus' => 'setFnaStatus',
+        'users' => 'setUsers'
     ];
 
     /**
@@ -114,7 +182,24 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'orgId' => 'getOrgId'
+        'orgId' => 'getOrgId',
+        'displayName' => 'getDisplayName',
+        'status' => 'getStatus',
+        'diskUsageQuota' => 'getDiskUsageQuota',
+        'lang' => 'getLang',
+        'mainPhone' => 'getMainPhone',
+        'tollFree' => 'getTollFree',
+        'fax' => 'getFax',
+        'address' => 'getAddress',
+        'addressLine2' => 'getAddressLine2',
+        'addressCity' => 'getAddressCity',
+        'addressState' => 'getAddressState',
+        'addressPostalCode' => 'getAddressPostalCode',
+        'addressCountry' => 'getAddressCountry',
+        'webSite' => 'getWebSite',
+        'isMultiUser' => 'getIsMultiUser',
+        'fnaStatus' => 'getFnaStatus',
+        'users' => 'getUsers'
     ];
 
     /**
@@ -178,6 +263,23 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['orgId'] = isset($data['orgId']) ? $data['orgId'] : null;
+        $this->container['displayName'] = isset($data['displayName']) ? $data['displayName'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['diskUsageQuota'] = isset($data['diskUsageQuota']) ? $data['diskUsageQuota'] : null;
+        $this->container['lang'] = isset($data['lang']) ? $data['lang'] : null;
+        $this->container['mainPhone'] = isset($data['mainPhone']) ? $data['mainPhone'] : null;
+        $this->container['tollFree'] = isset($data['tollFree']) ? $data['tollFree'] : null;
+        $this->container['fax'] = isset($data['fax']) ? $data['fax'] : null;
+        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
+        $this->container['addressLine2'] = isset($data['addressLine2']) ? $data['addressLine2'] : null;
+        $this->container['addressCity'] = isset($data['addressCity']) ? $data['addressCity'] : null;
+        $this->container['addressState'] = isset($data['addressState']) ? $data['addressState'] : null;
+        $this->container['addressPostalCode'] = isset($data['addressPostalCode']) ? $data['addressPostalCode'] : null;
+        $this->container['addressCountry'] = isset($data['addressCountry']) ? $data['addressCountry'] : null;
+        $this->container['webSite'] = isset($data['webSite']) ? $data['webSite'] : null;
+        $this->container['isMultiUser'] = isset($data['isMultiUser']) ? $data['isMultiUser'] : null;
+        $this->container['fnaStatus'] = isset($data['fnaStatus']) ? $data['fnaStatus'] : null;
+        $this->container['users'] = isset($data['users']) ? $data['users'] : null;
     }
 
     /**
@@ -224,6 +326,414 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
     public function setOrgId($orgId)
     {
         $this->container['orgId'] = $orgId;
+
+        return $this;
+    }
+
+    /**
+     * Gets displayName
+     *
+     * @return string|null
+     */
+    public function getDisplayName()
+    {
+        return $this->container['displayName'];
+    }
+
+    /**
+     * Sets displayName
+     *
+     * @param string|null $displayName Organization Name
+     *
+     * @return $this
+     */
+    public function setDisplayName($displayName)
+    {
+        $this->container['displayName'] = $displayName;
+
+        return $this;
+    }
+
+    /**
+     * Gets status
+     *
+     * @return string|null
+     */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+     * Sets status
+     *
+     * @param string|null $status Organization status In creation, Active, Maintenance
+     *
+     * @return $this
+     */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets diskUsageQuota
+     *
+     * @return int|null
+     */
+    public function getDiskUsageQuota()
+    {
+        return $this->container['diskUsageQuota'];
+    }
+
+    /**
+     * Sets diskUsageQuota
+     *
+     * @param int|null $diskUsageQuota Organization disk usage quota. Deprecated. Always empty.
+     *
+     * @return $this
+     */
+    public function setDiskUsageQuota($diskUsageQuota)
+    {
+        $this->container['diskUsageQuota'] = $diskUsageQuota;
+
+        return $this;
+    }
+
+    /**
+     * Gets lang
+     *
+     * @return string|null
+     */
+    public function getLang()
+    {
+        return $this->container['lang'];
+    }
+
+    /**
+     * Sets lang
+     *
+     * @param string|null $lang Default language
+     *
+     * @return $this
+     */
+    public function setLang($lang)
+    {
+        $this->container['lang'] = $lang;
+
+        return $this;
+    }
+
+    /**
+     * Gets mainPhone
+     *
+     * @return string|null
+     */
+    public function getMainPhone()
+    {
+        return $this->container['mainPhone'];
+    }
+
+    /**
+     * Sets mainPhone
+     *
+     * @param string|null $mainPhone Organization main phone number
+     *
+     * @return $this
+     */
+    public function setMainPhone($mainPhone)
+    {
+        $this->container['mainPhone'] = $mainPhone;
+
+        return $this;
+    }
+
+    /**
+     * Gets tollFree
+     *
+     * @return string|null
+     */
+    public function getTollFree()
+    {
+        return $this->container['tollFree'];
+    }
+
+    /**
+     * Sets tollFree
+     *
+     * @param string|null $tollFree Organization tollFree phone number
+     *
+     * @return $this
+     */
+    public function setTollFree($tollFree)
+    {
+        $this->container['tollFree'] = $tollFree;
+
+        return $this;
+    }
+
+    /**
+     * Gets fax
+     *
+     * @return string|null
+     */
+    public function getFax()
+    {
+        return $this->container['fax'];
+    }
+
+    /**
+     * Sets fax
+     *
+     * @param string|null $fax Organization fax phone number
+     *
+     * @return $this
+     */
+    public function setFax($fax)
+    {
+        $this->container['fax'] = $fax;
+
+        return $this;
+    }
+
+    /**
+     * Gets address
+     *
+     * @return string|null
+     */
+    public function getAddress()
+    {
+        return $this->container['address'];
+    }
+
+    /**
+     * Sets address
+     *
+     * @param string|null $address Organization address first line
+     *
+     * @return $this
+     */
+    public function setAddress($address)
+    {
+        $this->container['address'] = $address;
+
+        return $this;
+    }
+
+    /**
+     * Gets addressLine2
+     *
+     * @return string|null
+     */
+    public function getAddressLine2()
+    {
+        return $this->container['addressLine2'];
+    }
+
+    /**
+     * Sets addressLine2
+     *
+     * @param string|null $addressLine2 Organization address second line
+     *
+     * @return $this
+     */
+    public function setAddressLine2($addressLine2)
+    {
+        $this->container['addressLine2'] = $addressLine2;
+
+        return $this;
+    }
+
+    /**
+     * Gets addressCity
+     *
+     * @return string|null
+     */
+    public function getAddressCity()
+    {
+        return $this->container['addressCity'];
+    }
+
+    /**
+     * Sets addressCity
+     *
+     * @param string|null $addressCity Organization address city
+     *
+     * @return $this
+     */
+    public function setAddressCity($addressCity)
+    {
+        $this->container['addressCity'] = $addressCity;
+
+        return $this;
+    }
+
+    /**
+     * Gets addressState
+     *
+     * @return string|null
+     */
+    public function getAddressState()
+    {
+        return $this->container['addressState'];
+    }
+
+    /**
+     * Sets addressState
+     *
+     * @param string|null $addressState Organization address state/province
+     *
+     * @return $this
+     */
+    public function setAddressState($addressState)
+    {
+        $this->container['addressState'] = $addressState;
+
+        return $this;
+    }
+
+    /**
+     * Gets addressPostalCode
+     *
+     * @return string|null
+     */
+    public function getAddressPostalCode()
+    {
+        return $this->container['addressPostalCode'];
+    }
+
+    /**
+     * Sets addressPostalCode
+     *
+     * @param string|null $addressPostalCode Organization address postal code
+     *
+     * @return $this
+     */
+    public function setAddressPostalCode($addressPostalCode)
+    {
+        $this->container['addressPostalCode'] = $addressPostalCode;
+
+        return $this;
+    }
+
+    /**
+     * Gets addressCountry
+     *
+     * @return string|null
+     */
+    public function getAddressCountry()
+    {
+        return $this->container['addressCountry'];
+    }
+
+    /**
+     * Sets addressCountry
+     *
+     * @param string|null $addressCountry Organization address country
+     *
+     * @return $this
+     */
+    public function setAddressCountry($addressCountry)
+    {
+        $this->container['addressCountry'] = $addressCountry;
+
+        return $this;
+    }
+
+    /**
+     * Gets webSite
+     *
+     * @return string|null
+     */
+    public function getWebSite()
+    {
+        return $this->container['webSite'];
+    }
+
+    /**
+     * Sets webSite
+     *
+     * @param string|null $webSite Organization website url
+     *
+     * @return $this
+     */
+    public function setWebSite($webSite)
+    {
+        $this->container['webSite'] = $webSite;
+
+        return $this;
+    }
+
+    /**
+     * Gets isMultiUser
+     *
+     * @return string|null
+     */
+    public function getIsMultiUser()
+    {
+        return $this->container['isMultiUser'];
+    }
+
+    /**
+     * Sets isMultiUser
+     *
+     * @param string|null $isMultiUser Is the organization in single user mode or mutil user mode
+     *
+     * @return $this
+     */
+    public function setIsMultiUser($isMultiUser)
+    {
+        $this->container['isMultiUser'] = $isMultiUser;
+
+        return $this;
+    }
+
+    /**
+     * Gets fnaStatus
+     *
+     * @return string|null
+     */
+    public function getFnaStatus()
+    {
+        return $this->container['fnaStatus'];
+    }
+
+    /**
+     * Sets fnaStatus
+     *
+     * @param string|null $fnaStatus Is FNA enabled for the organization
+     *
+     * @return $this
+     */
+    public function setFnaStatus($fnaStatus)
+    {
+        $this->container['fnaStatus'] = $fnaStatus;
+
+        return $this;
+    }
+
+    /**
+     * Gets users
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserItem[]|null
+     */
+    public function getUsers()
+    {
+        return $this->container['users'];
+    }
+
+    /**
+     * Sets users
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserItem[]|null $users Organization users
+     *
+     * @return $this
+     */
+    public function setUsers($users)
+    {
+        $this->container['users'] = $users;
 
         return $this;
     }

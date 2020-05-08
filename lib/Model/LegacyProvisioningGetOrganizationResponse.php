@@ -28,6 +28,8 @@
  */
 
 namespace Equisoft\SDK\EquisoftConnect\Model;
+
+use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
@@ -38,7 +40,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class LegacyProvisioningGetOrganizationResponse extends LegacyResponse 
+class LegacyProvisioningGetOrganizationResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +49,7 @@ class LegacyProvisioningGetOrganizationResponse extends LegacyResponse
       *
       * @var string
       */
-    protected static $openAPIModelName = 'LegacyProvisioningGetOrganizationResponse';
+    protected static $openAPIModelName = 'legacy.provisioning.GetOrganizationResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -55,8 +57,10 @@ class LegacyProvisioningGetOrganizationResponse extends LegacyResponse
       * @var string[]
       */
     protected static $openAPITypes = [
-        'organization' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem',
-        'responseType' => 'string'
+        'stat' => 'string',
+        'errorCode' => 'string',
+        'errorMsg' => 'string',
+        'organization' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem'
     ];
 
     /**
@@ -65,8 +69,10 @@ class LegacyProvisioningGetOrganizationResponse extends LegacyResponse
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'organization' => null,
-        'responseType' => null
+        'stat' => null,
+        'errorCode' => null,
+        'errorMsg' => null,
+        'organization' => null
     ];
 
     /**
@@ -76,7 +82,7 @@ class LegacyProvisioningGetOrganizationResponse extends LegacyResponse
      */
     public static function openAPITypes()
     {
-        return self::$openAPITypes + parent::openAPITypes();
+        return self::$openAPITypes;
     }
 
     /**
@@ -86,7 +92,7 @@ class LegacyProvisioningGetOrganizationResponse extends LegacyResponse
      */
     public static function openAPIFormats()
     {
-        return self::$openAPIFormats + parent::openAPIFormats();
+        return self::$openAPIFormats;
     }
 
     /**
@@ -96,8 +102,10 @@ class LegacyProvisioningGetOrganizationResponse extends LegacyResponse
      * @var string[]
      */
     protected static $attributeMap = [
-        'organization' => 'organization',
-        'responseType' => 'responseType'
+        'stat' => 'stat',
+        'errorCode' => 'error_code',
+        'errorMsg' => 'error_msg',
+        'organization' => 'organization'
     ];
 
     /**
@@ -106,8 +114,10 @@ class LegacyProvisioningGetOrganizationResponse extends LegacyResponse
      * @var string[]
      */
     protected static $setters = [
-        'organization' => 'setOrganization',
-        'responseType' => 'setResponseType'
+        'stat' => 'setStat',
+        'errorCode' => 'setErrorCode',
+        'errorMsg' => 'setErrorMsg',
+        'organization' => 'setOrganization'
     ];
 
     /**
@@ -116,8 +126,10 @@ class LegacyProvisioningGetOrganizationResponse extends LegacyResponse
      * @var string[]
      */
     protected static $getters = [
-        'organization' => 'getOrganization',
-        'responseType' => 'getResponseType'
+        'stat' => 'getStat',
+        'errorCode' => 'getErrorCode',
+        'errorMsg' => 'getErrorMsg',
+        'organization' => 'getOrganization'
     ];
 
     /**
@@ -128,7 +140,7 @@ class LegacyProvisioningGetOrganizationResponse extends LegacyResponse
      */
     public static function attributeMap()
     {
-        return parent::attributeMap() + self::$attributeMap;
+        return self::$attributeMap;
     }
 
     /**
@@ -138,7 +150,7 @@ class LegacyProvisioningGetOrganizationResponse extends LegacyResponse
      */
     public static function setters()
     {
-        return parent::setters() + self::$setters;
+        return self::$setters;
     }
 
     /**
@@ -148,7 +160,7 @@ class LegacyProvisioningGetOrganizationResponse extends LegacyResponse
      */
     public static function getters()
     {
-        return parent::getters() + self::$getters;
+        return self::$getters;
     }
 
     /**
@@ -165,6 +177,12 @@ class LegacyProvisioningGetOrganizationResponse extends LegacyResponse
 
     
 
+    /**
+     * Associative array for storing property values
+     *
+     * @var mixed[]
+     */
+    protected $container = [];
 
     /**
      * Constructor
@@ -174,10 +192,10 @@ class LegacyProvisioningGetOrganizationResponse extends LegacyResponse
      */
     public function __construct(array $data = null)
     {
-        parent::__construct($data);
-
+        $this->container['stat'] = isset($data['stat']) ? $data['stat'] : null;
+        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
+        $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
         $this->container['organization'] = isset($data['organization']) ? $data['organization'] : null;
-        $this->container['responseType'] = isset($data['responseType']) ? $data['responseType'] : null;
     }
 
     /**
@@ -187,7 +205,7 @@ class LegacyProvisioningGetOrganizationResponse extends LegacyResponse
      */
     public function listInvalidProperties()
     {
-        $invalidProperties = parent::listInvalidProperties();
+        $invalidProperties = [];
 
         return $invalidProperties;
     }
@@ -203,6 +221,78 @@ class LegacyProvisioningGetOrganizationResponse extends LegacyResponse
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets stat
+     *
+     * @return string|null
+     */
+    public function getStat()
+    {
+        return $this->container['stat'];
+    }
+
+    /**
+     * Sets stat
+     *
+     * @param string|null $stat Status of the request that has been made. Can be 'ok' or 'fail'
+     *
+     * @return $this
+     */
+    public function setStat($stat)
+    {
+        $this->container['stat'] = $stat;
+
+        return $this;
+    }
+
+    /**
+     * Gets errorCode
+     *
+     * @return string|null
+     */
+    public function getErrorCode()
+    {
+        return $this->container['errorCode'];
+    }
+
+    /**
+     * Sets errorCode
+     *
+     * @param string|null $errorCode If the request has failed, this element will contain the error code related to the problem encountered.
+     *
+     * @return $this
+     */
+    public function setErrorCode($errorCode)
+    {
+        $this->container['errorCode'] = $errorCode;
+
+        return $this;
+    }
+
+    /**
+     * Gets errorMsg
+     *
+     * @return string|null
+     */
+    public function getErrorMsg()
+    {
+        return $this->container['errorMsg'];
+    }
+
+    /**
+     * Sets errorMsg
+     *
+     * @param string|null $errorMsg If the request has failed, this element will contain the error message related to the problem encountered.
+     *
+     * @return $this
+     */
+    public function setErrorMsg($errorMsg)
+    {
+        $this->container['errorMsg'] = $errorMsg;
+
+        return $this;
+    }
 
     /**
      * Gets organization
@@ -224,30 +314,6 @@ class LegacyProvisioningGetOrganizationResponse extends LegacyResponse
     public function setOrganization($organization)
     {
         $this->container['organization'] = $organization;
-
-        return $this;
-    }
-
-    /**
-     * Gets responseType
-     *
-     * @return string|null
-     */
-    public function getResponseType()
-    {
-        return $this->container['responseType'];
-    }
-
-    /**
-     * Sets responseType
-     *
-     * @param string|null $responseType responseType
-     *
-     * @return $this
-     */
-    public function setResponseType($responseType)
-    {
-        $this->container['responseType'] = $responseType;
 
         return $this;
     }

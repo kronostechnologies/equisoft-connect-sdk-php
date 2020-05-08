@@ -93,15 +93,20 @@ Class | Method | HTTP request | Description
 *LegacyApi* | [**appsApiPost**](docs/Api/LegacyApi.md#appsapipost) | **POST** /apps/api/ | Legacy API entrypoint
 *LegacyProvisioningApi* | [**appsProvisioningPost**](docs/Api/LegacyProvisioningApi.md#appsprovisioningpost) | **POST** /apps/provisioning/ | Legacy API entrypoint
 *LegacyProvisioningApi* | [**getOrganization**](docs/Api/LegacyProvisioningApi.md#getorganization) | **GET** /apps/provisioning/kronos.provisioning.getOrganization | Get all informations about an organization.
+*LegacyProvisioningApi* | [**getOrganizationList**](docs/Api/LegacyProvisioningApi.md#getorganizationlist) | **GET** /apps/provisioning/kronos.provisioning.getOrganizationList | List all organizations
 
 
 ## Documentation For Models
 
  - [LegacyContactAddress](docs/Model/LegacyContactAddress.md)
+ - [LegacyProvisioningGetOrganizationListResponse](docs/Model/LegacyProvisioningGetOrganizationListResponse.md)
+ - [LegacyProvisioningGetOrganizationListResponseAllOf](docs/Model/LegacyProvisioningGetOrganizationListResponseAllOf.md)
  - [LegacyProvisioningGetOrganizationResponse](docs/Model/LegacyProvisioningGetOrganizationResponse.md)
  - [LegacyProvisioningGetOrganizationResponseAllOf](docs/Model/LegacyProvisioningGetOrganizationResponseAllOf.md)
+ - [LegacyProvisioningGroupItem](docs/Model/LegacyProvisioningGroupItem.md)
  - [LegacyProvisioningOrganizationItem](docs/Model/LegacyProvisioningOrganizationItem.md)
  - [LegacyProvisioningUserIdentifier](docs/Model/LegacyProvisioningUserIdentifier.md)
+ - [LegacyProvisioningUserItem](docs/Model/LegacyProvisioningUserItem.md)
  - [LegacyProvisioningUserPayload](docs/Model/LegacyProvisioningUserPayload.md)
  - [LegacyResponse](docs/Model/LegacyResponse.md)
 

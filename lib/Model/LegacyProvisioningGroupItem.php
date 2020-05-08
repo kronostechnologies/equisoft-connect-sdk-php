@@ -1,6 +1,6 @@
 <?php
 /**
- * LegacyResponse
+ * LegacyProvisioningGroupItem
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * LegacyResponse Class Doc Comment
+ * LegacyProvisioningGroupItem Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class LegacyResponse implements ModelInterface, ArrayAccess
+class LegacyProvisioningGroupItem implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class LegacyResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'legacy.Response';
+    protected static $openAPIModelName = 'legacy.provisioning.GroupItem';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +57,8 @@ class LegacyResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'stat' => 'string',
-        'errorCode' => 'string',
-        'errorMsg' => 'string'
+        'groupId' => 'string',
+        'name' => 'string'
     ];
 
     /**
@@ -68,9 +67,8 @@ class LegacyResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'stat' => null,
-        'errorCode' => null,
-        'errorMsg' => null
+        'groupId' => null,
+        'name' => null
     ];
 
     /**
@@ -100,9 +98,8 @@ class LegacyResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'stat' => 'stat',
-        'errorCode' => 'error_code',
-        'errorMsg' => 'error_msg'
+        'groupId' => 'groupId',
+        'name' => 'name'
     ];
 
     /**
@@ -111,9 +108,8 @@ class LegacyResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'stat' => 'setStat',
-        'errorCode' => 'setErrorCode',
-        'errorMsg' => 'setErrorMsg'
+        'groupId' => 'setGroupId',
+        'name' => 'setName'
     ];
 
     /**
@@ -122,9 +118,8 @@ class LegacyResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'stat' => 'getStat',
-        'errorCode' => 'getErrorCode',
-        'errorMsg' => 'getErrorMsg'
+        'groupId' => 'getGroupId',
+        'name' => 'getName'
     ];
 
     /**
@@ -187,9 +182,8 @@ class LegacyResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['stat'] = isset($data['stat']) ? $data['stat'] : null;
-        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
-        $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
+        $this->container['groupId'] = isset($data['groupId']) ? $data['groupId'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
     }
 
     /**
@@ -217,73 +211,49 @@ class LegacyResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets stat
+     * Gets groupId
      *
      * @return string|null
      */
-    public function getStat()
+    public function getGroupId()
     {
-        return $this->container['stat'];
+        return $this->container['groupId'];
     }
 
     /**
-     * Sets stat
+     * Sets groupId
      *
-     * @param string|null $stat Status of the request that has been made. Can be 'ok' or 'fail'
+     * @param string|null $groupId User unique identifier
      *
      * @return $this
      */
-    public function setStat($stat)
+    public function setGroupId($groupId)
     {
-        $this->container['stat'] = $stat;
+        $this->container['groupId'] = $groupId;
 
         return $this;
     }
 
     /**
-     * Gets errorCode
+     * Gets name
      *
      * @return string|null
      */
-    public function getErrorCode()
+    public function getName()
     {
-        return $this->container['errorCode'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets errorCode
+     * Sets name
      *
-     * @param string|null $errorCode If the request has failed, this element will contain the error code related to the problem encountered.
+     * @param string|null $name Group name
      *
      * @return $this
      */
-    public function setErrorCode($errorCode)
+    public function setName($name)
     {
-        $this->container['errorCode'] = $errorCode;
-
-        return $this;
-    }
-
-    /**
-     * Gets errorMsg
-     *
-     * @return string|null
-     */
-    public function getErrorMsg()
-    {
-        return $this->container['errorMsg'];
-    }
-
-    /**
-     * Sets errorMsg
-     *
-     * @param string|null $errorMsg If the request has failed, this element will contain the error message related to the problem encountered.
-     *
-     * @return $this
-     */
-    public function setErrorMsg($errorMsg)
-    {
-        $this->container['errorMsg'] = $errorMsg;
+        $this->container['name'] = $name;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * LegacyResponse
+ * LegacyProvisioningGetOrganizationListResponse
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * LegacyResponse Class Doc Comment
+ * LegacyProvisioningGetOrganizationListResponse Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class LegacyResponse implements ModelInterface, ArrayAccess
+class LegacyProvisioningGetOrganizationListResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class LegacyResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'legacy.Response';
+    protected static $openAPIModelName = 'legacy.provisioning.GetOrganizationListResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,8 @@ class LegacyResponse implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
         'stat' => 'string',
         'errorCode' => 'string',
-        'errorMsg' => 'string'
+        'errorMsg' => 'string',
+        'organizations' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem[]'
     ];
 
     /**
@@ -70,7 +71,8 @@ class LegacyResponse implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'stat' => null,
         'errorCode' => null,
-        'errorMsg' => null
+        'errorMsg' => null,
+        'organizations' => null
     ];
 
     /**
@@ -102,7 +104,8 @@ class LegacyResponse implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'stat' => 'stat',
         'errorCode' => 'error_code',
-        'errorMsg' => 'error_msg'
+        'errorMsg' => 'error_msg',
+        'organizations' => 'organizations'
     ];
 
     /**
@@ -113,7 +116,8 @@ class LegacyResponse implements ModelInterface, ArrayAccess
     protected static $setters = [
         'stat' => 'setStat',
         'errorCode' => 'setErrorCode',
-        'errorMsg' => 'setErrorMsg'
+        'errorMsg' => 'setErrorMsg',
+        'organizations' => 'setOrganizations'
     ];
 
     /**
@@ -124,7 +128,8 @@ class LegacyResponse implements ModelInterface, ArrayAccess
     protected static $getters = [
         'stat' => 'getStat',
         'errorCode' => 'getErrorCode',
-        'errorMsg' => 'getErrorMsg'
+        'errorMsg' => 'getErrorMsg',
+        'organizations' => 'getOrganizations'
     ];
 
     /**
@@ -190,6 +195,7 @@ class LegacyResponse implements ModelInterface, ArrayAccess
         $this->container['stat'] = isset($data['stat']) ? $data['stat'] : null;
         $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
         $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
+        $this->container['organizations'] = isset($data['organizations']) ? $data['organizations'] : null;
     }
 
     /**
@@ -284,6 +290,30 @@ class LegacyResponse implements ModelInterface, ArrayAccess
     public function setErrorMsg($errorMsg)
     {
         $this->container['errorMsg'] = $errorMsg;
+
+        return $this;
+    }
+
+    /**
+     * Gets organizations
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem[]|null
+     */
+    public function getOrganizations()
+    {
+        return $this->container['organizations'];
+    }
+
+    /**
+     * Sets organizations
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem[]|null $organizations List of organization
+     *
+     * @return $this
+     */
+    public function setOrganizations($organizations)
+    {
+        $this->container['organizations'] = $organizations;
 
         return $this;
     }

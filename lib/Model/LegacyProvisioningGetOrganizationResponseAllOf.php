@@ -49,7 +49,7 @@ class LegacyProvisioningGetOrganizationResponseAllOf implements ModelInterface, 
       *
       * @var string
       */
-    protected static $openAPIModelName = 'LegacyProvisioningGetOrganizationResponse_allOf';
+    protected static $openAPIModelName = 'legacy_provisioning_GetOrganizationResponse_allOf';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,7 @@ class LegacyProvisioningGetOrganizationResponseAllOf implements ModelInterface, 
       * @var string[]
       */
     protected static $openAPITypes = [
-        'organization' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem',
-        'responseType' => 'string'
+        'organization' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem'
     ];
 
     /**
@@ -67,8 +66,7 @@ class LegacyProvisioningGetOrganizationResponseAllOf implements ModelInterface, 
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'organization' => null,
-        'responseType' => null
+        'organization' => null
     ];
 
     /**
@@ -98,8 +96,7 @@ class LegacyProvisioningGetOrganizationResponseAllOf implements ModelInterface, 
      * @var string[]
      */
     protected static $attributeMap = [
-        'organization' => 'organization',
-        'responseType' => 'responseType'
+        'organization' => 'organization'
     ];
 
     /**
@@ -108,8 +105,7 @@ class LegacyProvisioningGetOrganizationResponseAllOf implements ModelInterface, 
      * @var string[]
      */
     protected static $setters = [
-        'organization' => 'setOrganization',
-        'responseType' => 'setResponseType'
+        'organization' => 'setOrganization'
     ];
 
     /**
@@ -118,8 +114,7 @@ class LegacyProvisioningGetOrganizationResponseAllOf implements ModelInterface, 
      * @var string[]
      */
     protected static $getters = [
-        'organization' => 'getOrganization',
-        'responseType' => 'getResponseType'
+        'organization' => 'getOrganization'
     ];
 
     /**
@@ -183,7 +178,6 @@ class LegacyProvisioningGetOrganizationResponseAllOf implements ModelInterface, 
     public function __construct(array $data = null)
     {
         $this->container['organization'] = isset($data['organization']) ? $data['organization'] : null;
-        $this->container['responseType'] = isset($data['responseType']) ? $data['responseType'] : null;
     }
 
     /**
@@ -230,30 +224,6 @@ class LegacyProvisioningGetOrganizationResponseAllOf implements ModelInterface, 
     public function setOrganization($organization)
     {
         $this->container['organization'] = $organization;
-
-        return $this;
-    }
-
-    /**
-     * Gets responseType
-     *
-     * @return string|null
-     */
-    public function getResponseType()
-    {
-        return $this->container['responseType'];
-    }
-
-    /**
-     * Sets responseType
-     *
-     * @param string|null $responseType responseType
-     *
-     * @return $this
-     */
-    public function setResponseType($responseType)
-    {
-        $this->container['responseType'] = $responseType;
 
         return $this;
     }
