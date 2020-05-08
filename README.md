@@ -92,6 +92,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *LegacyApi* | [**appsApiPost**](docs/Api/LegacyApi.md#appsapipost) | **POST** /apps/api/ | Legacy API entrypoint
 *LegacyProvisioningApi* | [**appsProvisioningPost**](docs/Api/LegacyProvisioningApi.md#appsprovisioningpost) | **POST** /apps/provisioning/ | Legacy API entrypoint
+*LegacyProvisioningApi* | [**getOrganization**](docs/Api/LegacyProvisioningApi.md#getorganization) | **GET** /apps/provisioning/kronos.provisioning.getOrganization | Get all informations about an organization.
 
 
 ## Documentation For Models
