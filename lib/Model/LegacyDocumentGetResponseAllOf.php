@@ -189,6 +189,9 @@ class LegacyDocumentGetResponseAllOf implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['documents'] === null) {
+            $invalidProperties[] = "'documents' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -207,7 +210,7 @@ class LegacyDocumentGetResponseAllOf implements ModelInterface, ArrayAccess
     /**
      * Gets documents
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocument[]|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocument[]
      */
     public function getDocuments()
     {
@@ -217,7 +220,7 @@ class LegacyDocumentGetResponseAllOf implements ModelInterface, ArrayAccess
     /**
      * Sets documents
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocument[]|null $documents Array of documents
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocument[] $documents Array of documents
      *
      * @return $this
      */

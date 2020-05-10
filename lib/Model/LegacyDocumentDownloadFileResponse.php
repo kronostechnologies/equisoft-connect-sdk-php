@@ -207,6 +207,9 @@ class LegacyDocumentDownloadFileResponse implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['files'] === null) {
+            $invalidProperties[] = "'files' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -297,7 +300,7 @@ class LegacyDocumentDownloadFileResponse implements ModelInterface, ArrayAccess
     /**
      * Gets files
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentBase64FilePayloadItem[]|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentBase64FilePayloadItem[]
      */
     public function getFiles()
     {
@@ -307,7 +310,7 @@ class LegacyDocumentDownloadFileResponse implements ModelInterface, ArrayAccess
     /**
      * Sets files
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentBase64FilePayloadItem[]|null $files Array of documents
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentBase64FilePayloadItem[] $files Array of documents
      *
      * @return $this
      */
