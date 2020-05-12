@@ -106,6 +106,7 @@ Class | Method | HTTP request | Description
  - [LegacyContactAddress](docs/Model/LegacyContactAddress.md)
  - [LegacyContactContact](docs/Model/LegacyContactContact.md)
  - [LegacyContactContactPayloadItem](docs/Model/LegacyContactContactPayloadItem.md)
+ - [LegacyContactContactPayloadItemAllOf](docs/Model/LegacyContactContactPayloadItemAllOf.md)
  - [LegacyDocumentBase64FilePayload](docs/Model/LegacyDocumentBase64FilePayload.md)
  - [LegacyDocumentBase64FilePayloadItem](docs/Model/LegacyDocumentBase64FilePayloadItem.md)
  - [LegacyDocumentBase64FilePayloadItemAllOf](docs/Model/LegacyDocumentBase64FilePayloadItemAllOf.md)

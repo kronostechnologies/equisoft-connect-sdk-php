@@ -57,7 +57,17 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'string'
+        'id' => 'string',
+        'uuid' => 'AnyType',
+        'typeContact' => 'string',
+        'indOrg' => 'string',
+        'displayName' => 'string',
+        'firstName' => 'string',
+        'middleName' => 'string',
+        'lastName' => 'string',
+        'corporationName' => 'string',
+        'corporationNameLine2' => 'string',
+        'rank' => 'string'
     ];
 
     /**
@@ -66,7 +76,17 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'id' => null
+        'id' => null,
+        'uuid' => null,
+        'typeContact' => null,
+        'indOrg' => null,
+        'displayName' => null,
+        'firstName' => null,
+        'middleName' => null,
+        'lastName' => null,
+        'corporationName' => null,
+        'corporationNameLine2' => null,
+        'rank' => null
     ];
 
     /**
@@ -96,7 +116,17 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id'
+        'id' => 'id',
+        'uuid' => 'uuid',
+        'typeContact' => 'typeContact',
+        'indOrg' => 'indOrg',
+        'displayName' => 'displayName',
+        'firstName' => 'firstName',
+        'middleName' => 'middleName',
+        'lastName' => 'lastName',
+        'corporationName' => 'corporationName',
+        'corporationNameLine2' => 'corporationNameLine2',
+        'rank' => 'rank'
     ];
 
     /**
@@ -105,7 +135,17 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId'
+        'id' => 'setId',
+        'uuid' => 'setUuid',
+        'typeContact' => 'setTypeContact',
+        'indOrg' => 'setIndOrg',
+        'displayName' => 'setDisplayName',
+        'firstName' => 'setFirstName',
+        'middleName' => 'setMiddleName',
+        'lastName' => 'setLastName',
+        'corporationName' => 'setCorporationName',
+        'corporationNameLine2' => 'setCorporationNameLine2',
+        'rank' => 'setRank'
     ];
 
     /**
@@ -114,7 +154,17 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId'
+        'id' => 'getId',
+        'uuid' => 'getUuid',
+        'typeContact' => 'getTypeContact',
+        'indOrg' => 'getIndOrg',
+        'displayName' => 'getDisplayName',
+        'firstName' => 'getFirstName',
+        'middleName' => 'getMiddleName',
+        'lastName' => 'getLastName',
+        'corporationName' => 'getCorporationName',
+        'corporationNameLine2' => 'getCorporationNameLine2',
+        'rank' => 'getRank'
     ];
 
     /**
@@ -178,6 +228,16 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
+        $this->container['typeContact'] = isset($data['typeContact']) ? $data['typeContact'] : null;
+        $this->container['indOrg'] = isset($data['indOrg']) ? $data['indOrg'] : null;
+        $this->container['displayName'] = isset($data['displayName']) ? $data['displayName'] : null;
+        $this->container['firstName'] = isset($data['firstName']) ? $data['firstName'] : null;
+        $this->container['middleName'] = isset($data['middleName']) ? $data['middleName'] : null;
+        $this->container['lastName'] = isset($data['lastName']) ? $data['lastName'] : null;
+        $this->container['corporationName'] = isset($data['corporationName']) ? $data['corporationName'] : null;
+        $this->container['corporationNameLine2'] = isset($data['corporationNameLine2']) ? $data['corporationNameLine2'] : null;
+        $this->container['rank'] = isset($data['rank']) ? $data['rank'] : null;
     }
 
     /**
@@ -224,6 +284,246 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets uuid
+     *
+     * @return AnyType|null
+     */
+    public function getUuid()
+    {
+        return $this->container['uuid'];
+    }
+
+    /**
+     * Sets uuid
+     *
+     * @param AnyType|null $uuid Contact UUID
+     *
+     * @return $this
+     */
+    public function setUuid($uuid)
+    {
+        $this->container['uuid'] = $uuid;
+
+        return $this;
+    }
+
+    /**
+     * Gets typeContact
+     *
+     * @return string|null
+     */
+    public function getTypeContact()
+    {
+        return $this->container['typeContact'];
+    }
+
+    /**
+     * Sets typeContact
+     *
+     * @param string|null $typeContact type of the contact
+     *
+     * @return $this
+     */
+    public function setTypeContact($typeContact)
+    {
+        $this->container['typeContact'] = $typeContact;
+
+        return $this;
+    }
+
+    /**
+     * Gets indOrg
+     *
+     * @return string|null
+     */
+    public function getIndOrg()
+    {
+        return $this->container['indOrg'];
+    }
+
+    /**
+     * Sets indOrg
+     *
+     * @param string|null $indOrg type INDIVIDUAL OR ORGANIZATION
+     *
+     * @return $this
+     */
+    public function setIndOrg($indOrg)
+    {
+        $this->container['indOrg'] = $indOrg;
+
+        return $this;
+    }
+
+    /**
+     * Gets displayName
+     *
+     * @return string|null
+     */
+    public function getDisplayName()
+    {
+        return $this->container['displayName'];
+    }
+
+    /**
+     * Sets displayName
+     *
+     * @param string|null $displayName display name of the contact
+     *
+     * @return $this
+     */
+    public function setDisplayName($displayName)
+    {
+        $this->container['displayName'] = $displayName;
+
+        return $this;
+    }
+
+    /**
+     * Gets firstName
+     *
+     * @return string|null
+     */
+    public function getFirstName()
+    {
+        return $this->container['firstName'];
+    }
+
+    /**
+     * Sets firstName
+     *
+     * @param string|null $firstName first name of the contact
+     *
+     * @return $this
+     */
+    public function setFirstName($firstName)
+    {
+        $this->container['firstName'] = $firstName;
+
+        return $this;
+    }
+
+    /**
+     * Gets middleName
+     *
+     * @return string|null
+     */
+    public function getMiddleName()
+    {
+        return $this->container['middleName'];
+    }
+
+    /**
+     * Sets middleName
+     *
+     * @param string|null $middleName middle name of the contact
+     *
+     * @return $this
+     */
+    public function setMiddleName($middleName)
+    {
+        $this->container['middleName'] = $middleName;
+
+        return $this;
+    }
+
+    /**
+     * Gets lastName
+     *
+     * @return string|null
+     */
+    public function getLastName()
+    {
+        return $this->container['lastName'];
+    }
+
+    /**
+     * Sets lastName
+     *
+     * @param string|null $lastName last name of the contact
+     *
+     * @return $this
+     */
+    public function setLastName($lastName)
+    {
+        $this->container['lastName'] = $lastName;
+
+        return $this;
+    }
+
+    /**
+     * Gets corporationName
+     *
+     * @return string|null
+     */
+    public function getCorporationName()
+    {
+        return $this->container['corporationName'];
+    }
+
+    /**
+     * Sets corporationName
+     *
+     * @param string|null $corporationName first line of corporation name (Organization)
+     *
+     * @return $this
+     */
+    public function setCorporationName($corporationName)
+    {
+        $this->container['corporationName'] = $corporationName;
+
+        return $this;
+    }
+
+    /**
+     * Gets corporationNameLine2
+     *
+     * @return string|null
+     */
+    public function getCorporationNameLine2()
+    {
+        return $this->container['corporationNameLine2'];
+    }
+
+    /**
+     * Sets corporationNameLine2
+     *
+     * @param string|null $corporationNameLine2 second line of corporation name (Organization)
+     *
+     * @return $this
+     */
+    public function setCorporationNameLine2($corporationNameLine2)
+    {
+        $this->container['corporationNameLine2'] = $corporationNameLine2;
+
+        return $this;
+    }
+
+    /**
+     * Gets rank
+     *
+     * @return string|null
+     */
+    public function getRank()
+    {
+        return $this->container['rank'];
+    }
+
+    /**
+     * Sets rank
+     *
+     * @param string|null $rank rank of the contact. (Industrial Alliance only)
+     *
+     * @return $this
+     */
+    public function setRank($rank)
+    {
+        $this->container['rank'] = $rank;
 
         return $this;
     }
