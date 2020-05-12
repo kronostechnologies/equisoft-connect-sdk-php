@@ -190,6 +190,9 @@ class LegacyDocumentUploadDocumentFileRequest implements ModelInterface, ArrayAc
     {
         $invalidProperties = [];
 
+        if ($this->container['payload'] === null) {
+            $invalidProperties[] = "'payload' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -208,7 +211,7 @@ class LegacyDocumentUploadDocumentFileRequest implements ModelInterface, ArrayAc
     /**
      * Gets payload
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentBase64FilePayload|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentBase64FilePayload
      */
     public function getPayload()
     {
@@ -218,7 +221,7 @@ class LegacyDocumentUploadDocumentFileRequest implements ModelInterface, ArrayAc
     /**
      * Sets payload
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentBase64FilePayload|null $payload payload
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentBase64FilePayload $payload payload
      *
      * @return $this
      */

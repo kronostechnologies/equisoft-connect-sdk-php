@@ -111,6 +111,7 @@ Class | Method | HTTP request | Description
  - [LegacyDocumentBase64FilePayloadItemAllOf](docs/Model/LegacyDocumentBase64FilePayloadItemAllOf.md)
  - [LegacyDocumentDocument](docs/Model/LegacyDocumentDocument.md)
  - [LegacyDocumentDocumentListItem](docs/Model/LegacyDocumentDocumentListItem.md)
+ - [LegacyDocumentDocumentPayload](docs/Model/LegacyDocumentDocumentPayload.md)
  - [LegacyDocumentDocumentPayloadItem](docs/Model/LegacyDocumentDocumentPayloadItem.md)
  - [LegacyDocumentDocumentPayloadRequest](docs/Model/LegacyDocumentDocumentPayloadRequest.md)
  - [LegacyDocumentDownloadFileResponse](docs/Model/LegacyDocumentDownloadFileResponse.md)

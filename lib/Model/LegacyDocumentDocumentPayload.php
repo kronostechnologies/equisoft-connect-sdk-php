@@ -1,6 +1,6 @@
 <?php
 /**
- * LegacyDocumentDocumentPayloadRequest
+ * LegacyDocumentDocumentPayload
  *
  * PHP version 5
  *
@@ -33,15 +33,14 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * LegacyDocumentDocumentPayloadRequest Class Doc Comment
+ * LegacyDocumentDocumentPayload Class Doc Comment
  *
  * @category Class
- * @description Wrapper for Legacy payload argument
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class LegacyDocumentDocumentPayloadRequest implements ModelInterface, ArrayAccess
+class LegacyDocumentDocumentPayload implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -50,7 +49,7 @@ class LegacyDocumentDocumentPayloadRequest implements ModelInterface, ArrayAcces
       *
       * @var string
       */
-    protected static $openAPIModelName = 'legacy.document.DocumentPayloadRequest';
+    protected static $openAPIModelName = 'legacy.document.DocumentPayload';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,7 +57,7 @@ class LegacyDocumentDocumentPayloadRequest implements ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $openAPITypes = [
-        'payload' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentPayload'
+        'documents' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentPayloadItem[]'
     ];
 
     /**
@@ -67,7 +66,7 @@ class LegacyDocumentDocumentPayloadRequest implements ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'payload' => null
+        'documents' => null
     ];
 
     /**
@@ -97,7 +96,7 @@ class LegacyDocumentDocumentPayloadRequest implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $attributeMap = [
-        'payload' => 'payload'
+        'documents' => 'documents'
     ];
 
     /**
@@ -106,7 +105,7 @@ class LegacyDocumentDocumentPayloadRequest implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $setters = [
-        'payload' => 'setPayload'
+        'documents' => 'setDocuments'
     ];
 
     /**
@@ -115,7 +114,7 @@ class LegacyDocumentDocumentPayloadRequest implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $getters = [
-        'payload' => 'getPayload'
+        'documents' => 'getDocuments'
     ];
 
     /**
@@ -178,7 +177,7 @@ class LegacyDocumentDocumentPayloadRequest implements ModelInterface, ArrayAcces
      */
     public function __construct(array $data = null)
     {
-        $this->container['payload'] = isset($data['payload']) ? $data['payload'] : null;
+        $this->container['documents'] = isset($data['documents']) ? $data['documents'] : null;
     }
 
     /**
@@ -190,9 +189,6 @@ class LegacyDocumentDocumentPayloadRequest implements ModelInterface, ArrayAcces
     {
         $invalidProperties = [];
 
-        if ($this->container['payload'] === null) {
-            $invalidProperties[] = "'payload' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -209,25 +205,25 @@ class LegacyDocumentDocumentPayloadRequest implements ModelInterface, ArrayAcces
 
 
     /**
-     * Gets payload
+     * Gets documents
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentPayload
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentPayloadItem[]|null
      */
-    public function getPayload()
+    public function getDocuments()
     {
-        return $this->container['payload'];
+        return $this->container['documents'];
     }
 
     /**
-     * Sets payload
+     * Sets documents
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentPayload $payload payload
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentPayloadItem[]|null $documents List of document
      *
      * @return $this
      */
-    public function setPayload($payload)
+    public function setDocuments($documents)
     {
-        $this->container['payload'] = $payload;
+        $this->container['documents'] = $documents;
 
         return $this;
     }
