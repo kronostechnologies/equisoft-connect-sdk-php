@@ -98,10 +98,12 @@ Class | Method | HTTP request | Description
 *LegacyDocumentApi* | [**uploadDocumentFile**](docs/Api/LegacyDocumentApi.md#uploaddocumentfile) | **POST** /apps/api/kronos.document.uploadFile | Upload a new file in a document
 *LegacyProvisioningApi* | [**getOrganization**](docs/Api/LegacyProvisioningApi.md#getorganization) | **GET** /apps/provisioning/kronos.provisioning.getOrganization | Get all informations about an organization.
 *LegacyProvisioningApi* | [**getOrganizationList**](docs/Api/LegacyProvisioningApi.md#getorganizationlist) | **GET** /apps/provisioning/kronos.provisioning.getOrganizationList | List all organizations
+*MovementApi* | [**listMovements**](docs/Api/MovementApi.md#listmovements) | **GET** /crm/api/v1/movement | 
 
 
 ## Documentation For Models
 
+ - [ErrorResponse](docs/Model/ErrorResponse.md)
  - [LegacyAddUpdateResponse](docs/Model/LegacyAddUpdateResponse.md)
  - [LegacyContactAddress](docs/Model/LegacyContactAddress.md)
  - [LegacyContactContact](docs/Model/LegacyContactContact.md)
@@ -135,6 +137,8 @@ Class | Method | HTTP request | Description
  - [LegacyProvisioningUserPayload](docs/Model/LegacyProvisioningUserPayload.md)
  - [LegacyResponse](docs/Model/LegacyResponse.md)
  - [LegacyUser](docs/Model/LegacyUser.md)
+ - [MovementListMovementResponse](docs/Model/MovementListMovementResponse.md)
+ - [MovementScheduledMovement](docs/Model/MovementScheduledMovement.md)
 
 
 ## Documentation For Authorization
