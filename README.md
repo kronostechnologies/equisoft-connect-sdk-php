@@ -99,6 +99,7 @@ Class | Method | HTTP request | Description
 *LegacyProvisioningApi* | [**getOrganization**](docs/Api/LegacyProvisioningApi.md#getorganization) | **GET** /apps/provisioning/kronos.provisioning.getOrganization | Get all informations about an organization.
 *LegacyProvisioningApi* | [**getOrganizationList**](docs/Api/LegacyProvisioningApi.md#getorganizationlist) | **GET** /apps/provisioning/kronos.provisioning.getOrganizationList | List all organizations
 *MovementApi* | [**addMovement**](docs/Api/MovementApi.md#addmovement) | **POST** /crm/api/v1/movements | 
+*MovementApi* | [**getMovementStatus**](docs/Api/MovementApi.md#getmovementstatus) | **GET** /crm/api/v1/movements/{movementId}/status | 
 *MovementApi* | [**listMovements**](docs/Api/MovementApi.md#listmovements) | **GET** /crm/api/v1/movements | 
 
 
@@ -147,6 +148,7 @@ Class | Method | HTTP request | Description
  - [MovementClientBaseUsingFilePayloadAllOf](docs/Model/MovementClientBaseUsingFilePayloadAllOf.md)
  - [MovementCopyMovementPayload](docs/Model/MovementCopyMovementPayload.md)
  - [MovementCopyMovementPayloadAllOf](docs/Model/MovementCopyMovementPayloadAllOf.md)
+ - [MovementGetStatusResponse](docs/Model/MovementGetStatusResponse.md)
  - [MovementListMovementResponse](docs/Model/MovementListMovementResponse.md)
  - [MovementMoveMovementPayload](docs/Model/MovementMoveMovementPayload.md)
  - [MovementMoveMovementPayloadAllOf](docs/Model/MovementMoveMovementPayloadAllOf.md)
