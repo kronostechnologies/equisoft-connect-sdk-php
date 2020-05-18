@@ -99,6 +99,8 @@ Class | Method | HTTP request | Description
 *LegacyProvisioningApi* | [**getOrganization**](docs/Api/LegacyProvisioningApi.md#getorganization) | **GET** /apps/provisioning/kronos.provisioning.getOrganization | Get all informations about an organization.
 *LegacyProvisioningApi* | [**getOrganizationList**](docs/Api/LegacyProvisioningApi.md#getorganizationlist) | **GET** /apps/provisioning/kronos.provisioning.getOrganizationList | List all organizations
 *MovementApi* | [**addMovement**](docs/Api/MovementApi.md#addmovement) | **POST** /crm/api/v1/movements | 
+*MovementApi* | [**cancelMovement**](docs/Api/MovementApi.md#cancelmovement) | **POST** /crm/api/v1/movements/{movementId}/cancel | 
+*MovementApi* | [**deleteMovement**](docs/Api/MovementApi.md#deletemovement) | **DELETE** /crm/api/v1/movements/{movementId} | 
 *MovementApi* | [**getMovementStatus**](docs/Api/MovementApi.md#getmovementstatus) | **GET** /crm/api/v1/movements/{movementId}/status | 
 *MovementApi* | [**listMovements**](docs/Api/MovementApi.md#listmovements) | **GET** /crm/api/v1/movements | 
 
