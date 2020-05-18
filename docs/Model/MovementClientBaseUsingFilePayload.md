@@ -1,0 +1,17 @@
+# # MovementClientBaseUsingFilePayload
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**movementType** | **string** |  | [default to 'ClientBaseUsingFilePayload']
+**sourceDatabase** | **string** |  | 
+**sourceUser** | **string** |  | 
+**destinationDatabase** | **string** |  | 
+**destinationUser** | **string** |  | 
+**capsilFile** | **string** |  | [optional] 
+**univerisFile** | **string** |  | [optional] 
+
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
+
+

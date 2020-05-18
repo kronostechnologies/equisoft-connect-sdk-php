@@ -1,6 +1,6 @@
 <?php
 /**
- * LegacyAddUpdateResponse
+ * LegacyAddUpdateResponseAllOf
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * LegacyAddUpdateResponse Class Doc Comment
+ * LegacyAddUpdateResponseAllOf Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class LegacyAddUpdateResponse implements ModelInterface, ArrayAccess
+class LegacyAddUpdateResponseAllOf implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class LegacyAddUpdateResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'legacy.AddUpdateResponse';
+    protected static $openAPIModelName = 'legacy_AddUpdateResponse_allOf';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +57,6 @@ class LegacyAddUpdateResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'stat' => 'string',
-        'errorCode' => 'string',
-        'errorMsg' => 'string',
         'items' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyAddUpdateItem[]'
     ];
 
@@ -69,9 +66,6 @@ class LegacyAddUpdateResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'stat' => null,
-        'errorCode' => null,
-        'errorMsg' => null,
         'items' => null
     ];
 
@@ -102,9 +96,6 @@ class LegacyAddUpdateResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'stat' => 'stat',
-        'errorCode' => 'error_code',
-        'errorMsg' => 'error_msg',
         'items' => 'items'
     ];
 
@@ -114,9 +105,6 @@ class LegacyAddUpdateResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'stat' => 'setStat',
-        'errorCode' => 'setErrorCode',
-        'errorMsg' => 'setErrorMsg',
         'items' => 'setItems'
     ];
 
@@ -126,9 +114,6 @@ class LegacyAddUpdateResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'stat' => 'getStat',
-        'errorCode' => 'getErrorCode',
-        'errorMsg' => 'getErrorMsg',
         'items' => 'getItems'
     ];
 
@@ -192,9 +177,6 @@ class LegacyAddUpdateResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['stat'] = isset($data['stat']) ? $data['stat'] : null;
-        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
-        $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
         $this->container['items'] = isset($data['items']) ? $data['items'] : null;
     }
 
@@ -224,78 +206,6 @@ class LegacyAddUpdateResponse implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets stat
-     *
-     * @return string|null
-     */
-    public function getStat()
-    {
-        return $this->container['stat'];
-    }
-
-    /**
-     * Sets stat
-     *
-     * @param string|null $stat Status of the request that has been made. Can be 'ok' or 'fail'
-     *
-     * @return $this
-     */
-    public function setStat($stat)
-    {
-        $this->container['stat'] = $stat;
-
-        return $this;
-    }
-
-    /**
-     * Gets errorCode
-     *
-     * @return string|null
-     */
-    public function getErrorCode()
-    {
-        return $this->container['errorCode'];
-    }
-
-    /**
-     * Sets errorCode
-     *
-     * @param string|null $errorCode If the request has failed, this element will contain the error code related to the problem encountered.
-     *
-     * @return $this
-     */
-    public function setErrorCode($errorCode)
-    {
-        $this->container['errorCode'] = $errorCode;
-
-        return $this;
-    }
-
-    /**
-     * Gets errorMsg
-     *
-     * @return string|null
-     */
-    public function getErrorMsg()
-    {
-        return $this->container['errorMsg'];
-    }
-
-    /**
-     * Sets errorMsg
-     *
-     * @param string|null $errorMsg If the request has failed, this element will contain the error message related to the problem encountered.
-     *
-     * @return $this
-     */
-    public function setErrorMsg($errorMsg)
-    {
-        $this->container['errorMsg'] = $errorMsg;
-
-        return $this;
-    }
 
     /**
      * Gets items

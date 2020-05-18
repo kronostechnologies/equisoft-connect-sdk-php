@@ -1,6 +1,6 @@
 <?php
 /**
- * LegacyAddUpdateResponse
+ * MovementValidationError
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * LegacyAddUpdateResponse Class Doc Comment
+ * MovementValidationError Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class LegacyAddUpdateResponse implements ModelInterface, ArrayAccess
+class MovementValidationError implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class LegacyAddUpdateResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'legacy.AddUpdateResponse';
+    protected static $openAPIModelName = 'movement.ValidationError';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,10 +57,8 @@ class LegacyAddUpdateResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'stat' => 'string',
-        'errorCode' => 'string',
-        'errorMsg' => 'string',
-        'items' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyAddUpdateItem[]'
+        'message' => 'string',
+        'context' => 'map[string,string]'
     ];
 
     /**
@@ -69,10 +67,8 @@ class LegacyAddUpdateResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'stat' => null,
-        'errorCode' => null,
-        'errorMsg' => null,
-        'items' => null
+        'message' => null,
+        'context' => null
     ];
 
     /**
@@ -102,10 +98,8 @@ class LegacyAddUpdateResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'stat' => 'stat',
-        'errorCode' => 'error_code',
-        'errorMsg' => 'error_msg',
-        'items' => 'items'
+        'message' => 'message',
+        'context' => 'context'
     ];
 
     /**
@@ -114,10 +108,8 @@ class LegacyAddUpdateResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'stat' => 'setStat',
-        'errorCode' => 'setErrorCode',
-        'errorMsg' => 'setErrorMsg',
-        'items' => 'setItems'
+        'message' => 'setMessage',
+        'context' => 'setContext'
     ];
 
     /**
@@ -126,10 +118,8 @@ class LegacyAddUpdateResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'stat' => 'getStat',
-        'errorCode' => 'getErrorCode',
-        'errorMsg' => 'getErrorMsg',
-        'items' => 'getItems'
+        'message' => 'getMessage',
+        'context' => 'getContext'
     ];
 
     /**
@@ -192,10 +182,8 @@ class LegacyAddUpdateResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['stat'] = isset($data['stat']) ? $data['stat'] : null;
-        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
-        $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
-        $this->container['items'] = isset($data['items']) ? $data['items'] : null;
+        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['context'] = isset($data['context']) ? $data['context'] : null;
     }
 
     /**
@@ -207,9 +195,6 @@ class LegacyAddUpdateResponse implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['items'] === null) {
-            $invalidProperties[] = "'items' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -226,97 +211,49 @@ class LegacyAddUpdateResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets stat
+     * Gets message
      *
      * @return string|null
      */
-    public function getStat()
+    public function getMessage()
     {
-        return $this->container['stat'];
+        return $this->container['message'];
     }
 
     /**
-     * Sets stat
+     * Sets message
      *
-     * @param string|null $stat Status of the request that has been made. Can be 'ok' or 'fail'
+     * @param string|null $message message
      *
      * @return $this
      */
-    public function setStat($stat)
+    public function setMessage($message)
     {
-        $this->container['stat'] = $stat;
+        $this->container['message'] = $message;
 
         return $this;
     }
 
     /**
-     * Gets errorCode
+     * Gets context
      *
-     * @return string|null
+     * @return map[string,string]|null
      */
-    public function getErrorCode()
+    public function getContext()
     {
-        return $this->container['errorCode'];
+        return $this->container['context'];
     }
 
     /**
-     * Sets errorCode
+     * Sets context
      *
-     * @param string|null $errorCode If the request has failed, this element will contain the error code related to the problem encountered.
+     * @param map[string,string]|null $context context
      *
      * @return $this
      */
-    public function setErrorCode($errorCode)
+    public function setContext($context)
     {
-        $this->container['errorCode'] = $errorCode;
-
-        return $this;
-    }
-
-    /**
-     * Gets errorMsg
-     *
-     * @return string|null
-     */
-    public function getErrorMsg()
-    {
-        return $this->container['errorMsg'];
-    }
-
-    /**
-     * Sets errorMsg
-     *
-     * @param string|null $errorMsg If the request has failed, this element will contain the error message related to the problem encountered.
-     *
-     * @return $this
-     */
-    public function setErrorMsg($errorMsg)
-    {
-        $this->container['errorMsg'] = $errorMsg;
-
-        return $this;
-    }
-
-    /**
-     * Gets items
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyAddUpdateItem[]
-     */
-    public function getItems()
-    {
-        return $this->container['items'];
-    }
-
-    /**
-     * Sets items
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyAddUpdateItem[] $items List all items status for the Add or Update operation
-     *
-     * @return $this
-     */
-    public function setItems($items)
-    {
-        $this->container['items'] = $items;
+        $this->container['context'] = $context;
 
         return $this;
     }

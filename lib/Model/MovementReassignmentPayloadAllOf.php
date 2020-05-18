@@ -1,6 +1,6 @@
 <?php
 /**
- * LegacyAddUpdateResponse
+ * MovementReassignmentPayloadAllOf
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * LegacyAddUpdateResponse Class Doc Comment
+ * MovementReassignmentPayloadAllOf Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class LegacyAddUpdateResponse implements ModelInterface, ArrayAccess
+class MovementReassignmentPayloadAllOf implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class LegacyAddUpdateResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'legacy.AddUpdateResponse';
+    protected static $openAPIModelName = 'movement_ReassignmentPayload_allOf';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,10 +57,11 @@ class LegacyAddUpdateResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'stat' => 'string',
-        'errorCode' => 'string',
-        'errorMsg' => 'string',
-        'items' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyAddUpdateItem[]'
+        'movementType' => 'string',
+        'sourceDatabase' => 'string',
+        'sourceUser' => 'string',
+        'destinationUser' => 'string',
+        'accessCode' => 'string'
     ];
 
     /**
@@ -69,10 +70,11 @@ class LegacyAddUpdateResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'stat' => null,
-        'errorCode' => null,
-        'errorMsg' => null,
-        'items' => null
+        'movementType' => null,
+        'sourceDatabase' => null,
+        'sourceUser' => null,
+        'destinationUser' => null,
+        'accessCode' => null
     ];
 
     /**
@@ -102,10 +104,11 @@ class LegacyAddUpdateResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'stat' => 'stat',
-        'errorCode' => 'error_code',
-        'errorMsg' => 'error_msg',
-        'items' => 'items'
+        'movementType' => 'movementType',
+        'sourceDatabase' => 'sourceDatabase',
+        'sourceUser' => 'sourceUser',
+        'destinationUser' => 'destinationUser',
+        'accessCode' => 'accessCode'
     ];
 
     /**
@@ -114,10 +117,11 @@ class LegacyAddUpdateResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'stat' => 'setStat',
-        'errorCode' => 'setErrorCode',
-        'errorMsg' => 'setErrorMsg',
-        'items' => 'setItems'
+        'movementType' => 'setMovementType',
+        'sourceDatabase' => 'setSourceDatabase',
+        'sourceUser' => 'setSourceUser',
+        'destinationUser' => 'setDestinationUser',
+        'accessCode' => 'setAccessCode'
     ];
 
     /**
@@ -126,10 +130,11 @@ class LegacyAddUpdateResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'stat' => 'getStat',
-        'errorCode' => 'getErrorCode',
-        'errorMsg' => 'getErrorMsg',
-        'items' => 'getItems'
+        'movementType' => 'getMovementType',
+        'sourceDatabase' => 'getSourceDatabase',
+        'sourceUser' => 'getSourceUser',
+        'destinationUser' => 'getDestinationUser',
+        'accessCode' => 'getAccessCode'
     ];
 
     /**
@@ -173,8 +178,21 @@ class LegacyAddUpdateResponse implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
+    const MOVEMENT_TYPE_REASSIGNMENT_PAYLOAD = 'ReassignmentPayload';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getMovementTypeAllowableValues()
+    {
+        return [
+            self::MOVEMENT_TYPE_REASSIGNMENT_PAYLOAD,
+        ];
+    }
     
 
     /**
@@ -192,10 +210,11 @@ class LegacyAddUpdateResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['stat'] = isset($data['stat']) ? $data['stat'] : null;
-        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
-        $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
-        $this->container['items'] = isset($data['items']) ? $data['items'] : null;
+        $this->container['movementType'] = isset($data['movementType']) ? $data['movementType'] : 'ReassignmentPayload';
+        $this->container['sourceDatabase'] = isset($data['sourceDatabase']) ? $data['sourceDatabase'] : null;
+        $this->container['sourceUser'] = isset($data['sourceUser']) ? $data['sourceUser'] : null;
+        $this->container['destinationUser'] = isset($data['destinationUser']) ? $data['destinationUser'] : null;
+        $this->container['accessCode'] = isset($data['accessCode']) ? $data['accessCode'] : null;
     }
 
     /**
@@ -207,8 +226,28 @@ class LegacyAddUpdateResponse implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['items'] === null) {
-            $invalidProperties[] = "'items' can't be null";
+        if ($this->container['movementType'] === null) {
+            $invalidProperties[] = "'movementType' can't be null";
+        }
+        $allowedValues = $this->getMovementTypeAllowableValues();
+        if (!is_null($this->container['movementType']) && !in_array($this->container['movementType'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'movementType', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
+        if ($this->container['sourceDatabase'] === null) {
+            $invalidProperties[] = "'sourceDatabase' can't be null";
+        }
+        if ($this->container['sourceUser'] === null) {
+            $invalidProperties[] = "'sourceUser' can't be null";
+        }
+        if ($this->container['destinationUser'] === null) {
+            $invalidProperties[] = "'destinationUser' can't be null";
+        }
+        if ($this->container['accessCode'] === null) {
+            $invalidProperties[] = "'accessCode' can't be null";
         }
         return $invalidProperties;
     }
@@ -226,97 +265,130 @@ class LegacyAddUpdateResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets stat
+     * Gets movementType
      *
-     * @return string|null
+     * @return string
      */
-    public function getStat()
+    public function getMovementType()
     {
-        return $this->container['stat'];
+        return $this->container['movementType'];
     }
 
     /**
-     * Sets stat
+     * Sets movementType
      *
-     * @param string|null $stat Status of the request that has been made. Can be 'ok' or 'fail'
+     * @param string $movementType movementType
      *
      * @return $this
      */
-    public function setStat($stat)
+    public function setMovementType($movementType)
     {
-        $this->container['stat'] = $stat;
+        $allowedValues = $this->getMovementTypeAllowableValues();
+        if (!in_array($movementType, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'movementType', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['movementType'] = $movementType;
 
         return $this;
     }
 
     /**
-     * Gets errorCode
+     * Gets sourceDatabase
      *
-     * @return string|null
+     * @return string
      */
-    public function getErrorCode()
+    public function getSourceDatabase()
     {
-        return $this->container['errorCode'];
+        return $this->container['sourceDatabase'];
     }
 
     /**
-     * Sets errorCode
+     * Sets sourceDatabase
      *
-     * @param string|null $errorCode If the request has failed, this element will contain the error code related to the problem encountered.
+     * @param string $sourceDatabase sourceDatabase
      *
      * @return $this
      */
-    public function setErrorCode($errorCode)
+    public function setSourceDatabase($sourceDatabase)
     {
-        $this->container['errorCode'] = $errorCode;
+        $this->container['sourceDatabase'] = $sourceDatabase;
 
         return $this;
     }
 
     /**
-     * Gets errorMsg
+     * Gets sourceUser
      *
-     * @return string|null
+     * @return string
      */
-    public function getErrorMsg()
+    public function getSourceUser()
     {
-        return $this->container['errorMsg'];
+        return $this->container['sourceUser'];
     }
 
     /**
-     * Sets errorMsg
+     * Sets sourceUser
      *
-     * @param string|null $errorMsg If the request has failed, this element will contain the error message related to the problem encountered.
+     * @param string $sourceUser sourceUser
      *
      * @return $this
      */
-    public function setErrorMsg($errorMsg)
+    public function setSourceUser($sourceUser)
     {
-        $this->container['errorMsg'] = $errorMsg;
+        $this->container['sourceUser'] = $sourceUser;
 
         return $this;
     }
 
     /**
-     * Gets items
+     * Gets destinationUser
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyAddUpdateItem[]
+     * @return string
      */
-    public function getItems()
+    public function getDestinationUser()
     {
-        return $this->container['items'];
+        return $this->container['destinationUser'];
     }
 
     /**
-     * Sets items
+     * Sets destinationUser
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyAddUpdateItem[] $items List all items status for the Add or Update operation
+     * @param string $destinationUser destinationUser
      *
      * @return $this
      */
-    public function setItems($items)
+    public function setDestinationUser($destinationUser)
     {
-        $this->container['items'] = $items;
+        $this->container['destinationUser'] = $destinationUser;
+
+        return $this;
+    }
+
+    /**
+     * Gets accessCode
+     *
+     * @return string
+     */
+    public function getAccessCode()
+    {
+        return $this->container['accessCode'];
+    }
+
+    /**
+     * Sets accessCode
+     *
+     * @param string $accessCode accessCode
+     *
+     * @return $this
+     */
+    public function setAccessCode($accessCode)
+    {
+        $this->container['accessCode'] = $accessCode;
 
         return $this;
     }

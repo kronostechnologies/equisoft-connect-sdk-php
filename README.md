@@ -98,13 +98,16 @@ Class | Method | HTTP request | Description
 *LegacyDocumentApi* | [**uploadDocumentFile**](docs/Api/LegacyDocumentApi.md#uploaddocumentfile) | **POST** /apps/api/kronos.document.uploadFile | Upload a new file in a document
 *LegacyProvisioningApi* | [**getOrganization**](docs/Api/LegacyProvisioningApi.md#getorganization) | **GET** /apps/provisioning/kronos.provisioning.getOrganization | Get all informations about an organization.
 *LegacyProvisioningApi* | [**getOrganizationList**](docs/Api/LegacyProvisioningApi.md#getorganizationlist) | **GET** /apps/provisioning/kronos.provisioning.getOrganizationList | List all organizations
-*MovementApi* | [**listMovements**](docs/Api/MovementApi.md#listmovements) | **GET** /crm/api/v1/movement | 
+*MovementApi* | [**addMovement**](docs/Api/MovementApi.md#addmovement) | **POST** /crm/api/v1/movements | 
+*MovementApi* | [**listMovements**](docs/Api/MovementApi.md#listmovements) | **GET** /crm/api/v1/movements | 
 
 
 ## Documentation For Models
 
  - [ErrorResponse](docs/Model/ErrorResponse.md)
+ - [LegacyAddUpdateItem](docs/Model/LegacyAddUpdateItem.md)
  - [LegacyAddUpdateResponse](docs/Model/LegacyAddUpdateResponse.md)
+ - [LegacyAddUpdateResponseAllOf](docs/Model/LegacyAddUpdateResponseAllOf.md)
  - [LegacyContactAddress](docs/Model/LegacyContactAddress.md)
  - [LegacyContactContact](docs/Model/LegacyContactContact.md)
  - [LegacyContactContactPayloadItem](docs/Model/LegacyContactContactPayloadItem.md)
@@ -137,8 +140,22 @@ Class | Method | HTTP request | Description
  - [LegacyProvisioningUserPayload](docs/Model/LegacyProvisioningUserPayload.md)
  - [LegacyResponse](docs/Model/LegacyResponse.md)
  - [LegacyUser](docs/Model/LegacyUser.md)
+ - [MovementAddMovementResponse](docs/Model/MovementAddMovementResponse.md)
+ - [MovementClientBaseUsingDistributionListPayload](docs/Model/MovementClientBaseUsingDistributionListPayload.md)
+ - [MovementClientBaseUsingDistributionListPayloadAllOf](docs/Model/MovementClientBaseUsingDistributionListPayloadAllOf.md)
+ - [MovementClientBaseUsingFilePayload](docs/Model/MovementClientBaseUsingFilePayload.md)
+ - [MovementClientBaseUsingFilePayloadAllOf](docs/Model/MovementClientBaseUsingFilePayloadAllOf.md)
+ - [MovementCopyMovementPayload](docs/Model/MovementCopyMovementPayload.md)
+ - [MovementCopyMovementPayloadAllOf](docs/Model/MovementCopyMovementPayloadAllOf.md)
  - [MovementListMovementResponse](docs/Model/MovementListMovementResponse.md)
+ - [MovementMoveMovementPayload](docs/Model/MovementMoveMovementPayload.md)
+ - [MovementMoveMovementPayloadAllOf](docs/Model/MovementMoveMovementPayloadAllOf.md)
+ - [MovementMovementPayload](docs/Model/MovementMovementPayload.md)
+ - [MovementReassignmentPayload](docs/Model/MovementReassignmentPayload.md)
+ - [MovementReassignmentPayloadAllOf](docs/Model/MovementReassignmentPayloadAllOf.md)
  - [MovementScheduledMovement](docs/Model/MovementScheduledMovement.md)
+ - [MovementValidationError](docs/Model/MovementValidationError.md)
+ - [MovementValidationErrorResponse](docs/Model/MovementValidationErrorResponse.md)
 
 
 ## Documentation For Authorization
