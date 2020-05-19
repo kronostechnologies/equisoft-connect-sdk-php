@@ -61,7 +61,7 @@ class MovementClientBaseUsingDistributionListPayload extends MovementMovementPay
         'sourceDistList' => 'string',
         'destinationDatabase' => 'string',
         'destinationUser' => 'string',
-        'datagatewayAccessMappings' => 'string[]',
+        'datagatewayAccessMappings' => 'map[string,string]',
         'transferOption' => 'string'
     ];
 
@@ -192,6 +192,8 @@ class MovementClientBaseUsingDistributionListPayload extends MovementMovementPay
     }
 
     const MOVEMENT_TYPE_CLIENT_BASE_USING_DISTRIBUTION_LIST_PAYLOAD = 'ClientBaseUsingDistributionListPayload';
+    const TRANSFER_OPTION_COPY = 'COPY';
+    const TRANSFER_OPTION_TRANSFER = 'TRANSFER';
     
 
     
@@ -204,6 +206,19 @@ class MovementClientBaseUsingDistributionListPayload extends MovementMovementPay
     {
         return [
             self::MOVEMENT_TYPE_CLIENT_BASE_USING_DISTRIBUTION_LIST_PAYLOAD,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getTransferOptionAllowableValues()
+    {
+        return [
+            self::TRANSFER_OPTION_COPY,
+            self::TRANSFER_OPTION_TRANSFER,
         ];
     }
     
@@ -267,6 +282,14 @@ class MovementClientBaseUsingDistributionListPayload extends MovementMovementPay
         if ($this->container['transferOption'] === null) {
             $invalidProperties[] = "'transferOption' can't be null";
         }
+        $allowedValues = $this->getTransferOptionAllowableValues();
+        if (!is_null($this->container['transferOption']) && !in_array($this->container['transferOption'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'transferOption', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
         return $invalidProperties;
     }
 
@@ -438,7 +461,7 @@ class MovementClientBaseUsingDistributionListPayload extends MovementMovementPay
     /**
      * Gets datagatewayAccessMappings
      *
-     * @return string[]|null
+     * @return map[string,string]|null
      */
     public function getDatagatewayAccessMappings()
     {
@@ -448,7 +471,7 @@ class MovementClientBaseUsingDistributionListPayload extends MovementMovementPay
     /**
      * Sets datagatewayAccessMappings
      *
-     * @param string[]|null $datagatewayAccessMappings datagatewayAccessMappings
+     * @param map[string,string]|null $datagatewayAccessMappings datagatewayAccessMappings
      *
      * @return $this
      */
@@ -478,6 +501,15 @@ class MovementClientBaseUsingDistributionListPayload extends MovementMovementPay
      */
     public function setTransferOption($transferOption)
     {
+        $allowedValues = $this->getTransferOptionAllowableValues();
+        if (!in_array($transferOption, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'transferOption', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
         $this->container['transferOption'] = $transferOption;
 
         return $this;

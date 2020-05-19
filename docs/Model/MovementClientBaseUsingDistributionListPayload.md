@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **sourceDistList** | **string** |  | 
 **destinationDatabase** | **string** |  | 
 **destinationUser** | **string** |  | 
-**datagatewayAccessMappings** | **string[]** |  | [optional] 
+**datagatewayAccessMappings** | **map[string,string]** |  | [optional] 
 **transferOption** | **string** |  | 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
