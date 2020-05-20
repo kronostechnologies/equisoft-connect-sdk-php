@@ -158,6 +158,7 @@ Class | Method | HTTP request | Description
  - [MovementReassignmentPayload](docs/Model/MovementReassignmentPayload.md)
  - [MovementReassignmentPayloadAllOf](docs/Model/MovementReassignmentPayloadAllOf.md)
  - [MovementScheduledMovement](docs/Model/MovementScheduledMovement.md)
+ - [MovementTransferOption](docs/Model/MovementTransferOption.md)
  - [MovementValidationError](docs/Model/MovementValidationError.md)
  - [MovementValidationErrorResponse](docs/Model/MovementValidationErrorResponse.md)
 
