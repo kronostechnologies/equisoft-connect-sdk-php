@@ -73,12 +73,22 @@ class LegacyProvisioningApiTest extends TestCase
     }
 
     /**
-     * Test case for appsProvisioningPost
+     * Test case for getOrganization
      *
-     * Legacy API entrypoint.
+     * Get all informations about an organization..
      *
      */
-    public function testAppsProvisioningPost()
+    public function testGetOrganization()
+    {
+    }
+
+    /**
+     * Test case for getOrganizationList
+     *
+     * List all organizations.
+     *
+     */
+    public function testGetOrganizationList()
     {
     }
 }

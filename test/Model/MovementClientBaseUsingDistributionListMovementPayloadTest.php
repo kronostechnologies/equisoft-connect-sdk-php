@@ -1,6 +1,6 @@
 <?php
 /**
- * MovementScheduledMovementTest
+ * MovementClientBaseUsingDistributionListMovementPayloadTest
  *
  * PHP version 5
  *
@@ -32,15 +32,15 @@ namespace Equisoft\SDK\EquisoftConnect;
 use PHPUnit\Framework\TestCase;
 
 /**
- * MovementScheduledMovementTest Class Doc Comment
+ * MovementClientBaseUsingDistributionListMovementPayloadTest Class Doc Comment
  *
  * @category    Class
- * @description MovementScheduledMovement
+ * @description MovementClientBaseUsingDistributionListMovementPayload
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class MovementScheduledMovementTest extends TestCase
+class MovementClientBaseUsingDistributionListMovementPayloadTest extends TestCase
 {
 
     /**
@@ -72,51 +72,65 @@ class MovementScheduledMovementTest extends TestCase
     }
 
     /**
-     * Test "MovementScheduledMovement"
+     * Test "MovementClientBaseUsingDistributionListMovementPayload"
      */
-    public function testMovementScheduledMovement()
+    public function testMovementClientBaseUsingDistributionListMovementPayload()
     {
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "movementType"
      */
-    public function testPropertyId()
+    public function testPropertyMovementType()
     {
     }
 
     /**
-     * Test attribute "type"
+     * Test attribute "sourceDatabase"
      */
-    public function testPropertyType()
+    public function testPropertySourceDatabase()
     {
     }
 
     /**
-     * Test attribute "status"
+     * Test attribute "sourceUser"
      */
-    public function testPropertyStatus()
+    public function testPropertySourceUser()
     {
     }
 
     /**
-     * Test attribute "availableAction"
+     * Test attribute "sourceDistList"
      */
-    public function testPropertyAvailableAction()
+    public function testPropertySourceDistList()
     {
     }
 
     /**
-     * Test attribute "date"
+     * Test attribute "destinationDatabase"
      */
-    public function testPropertyDate()
+    public function testPropertyDestinationDatabase()
     {
     }
 
     /**
-     * Test attribute "detail"
+     * Test attribute "destinationUser"
      */
-    public function testPropertyDetail()
+    public function testPropertyDestinationUser()
+    {
+    }
+
+    /**
+     * Test attribute "datagatewayAccessMappings"
+     */
+    public function testPropertyDatagatewayAccessMappings()
+    {
+    }
+
+    /**
+     * Test attribute "transferOption"
+     */
+    public function testPropertyTransferOption()
     {
     }
 }

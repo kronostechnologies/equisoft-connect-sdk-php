@@ -1,10 +1,10 @@
-# # MovementClientBaseUsingDistributionListPayload
+# # MovementClientBaseUsingDistributionListMovementPayload
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**movementType** | **string** |  | [default to 'ClientBaseUsingDistributionListPayload']
+**movementType** | **string** |  | [default to 'ClientBaseUsingDistributionListMovementPayload']
 **sourceDatabase** | **string** |  | 
 **sourceUser** | **string** |  | 
 **sourceDistList** | **string** |  | 

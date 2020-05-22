@@ -1,6 +1,6 @@
 <?php
 /**
- * MovementClientBaseUsingFilePayloadTest
+ * MovementReassignmentMovementPayloadTest
  *
  * PHP version 5
  *
@@ -32,15 +32,15 @@ namespace Equisoft\SDK\EquisoftConnect;
 use PHPUnit\Framework\TestCase;
 
 /**
- * MovementClientBaseUsingFilePayloadTest Class Doc Comment
+ * MovementReassignmentMovementPayloadTest Class Doc Comment
  *
  * @category    Class
- * @description MovementClientBaseUsingFilePayload
+ * @description MovementReassignmentMovementPayload
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class MovementClientBaseUsingFilePayloadTest extends TestCase
+class MovementReassignmentMovementPayloadTest extends TestCase
 {
 
     /**
@@ -72,9 +72,9 @@ class MovementClientBaseUsingFilePayloadTest extends TestCase
     }
 
     /**
-     * Test "MovementClientBaseUsingFilePayload"
+     * Test "MovementReassignmentMovementPayload"
      */
-    public function testMovementClientBaseUsingFilePayload()
+    public function testMovementReassignmentMovementPayload()
     {
     }
 
@@ -100,13 +100,6 @@ class MovementClientBaseUsingFilePayloadTest extends TestCase
     }
 
     /**
-     * Test attribute "destinationDatabase"
-     */
-    public function testPropertyDestinationDatabase()
-    {
-    }
-
-    /**
      * Test attribute "destinationUser"
      */
     public function testPropertyDestinationUser()
@@ -114,16 +107,9 @@ class MovementClientBaseUsingFilePayloadTest extends TestCase
     }
 
     /**
-     * Test attribute "capsilFile"
+     * Test attribute "accessCode"
      */
-    public function testPropertyCapsilFile()
-    {
-    }
-
-    /**
-     * Test attribute "univerisFile"
-     */
-    public function testPropertyUniverisFile()
+    public function testPropertyAccessCode()
     {
     }
 }

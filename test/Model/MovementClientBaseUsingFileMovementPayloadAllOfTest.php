@@ -1,6 +1,6 @@
 <?php
 /**
- * MovementClientBaseUsingFilePayloadAllOfTest
+ * MovementClientBaseUsingFileMovementPayloadAllOfTest
  *
  * PHP version 5
  *
@@ -32,15 +32,15 @@ namespace Equisoft\SDK\EquisoftConnect;
 use PHPUnit\Framework\TestCase;
 
 /**
- * MovementClientBaseUsingFilePayloadAllOfTest Class Doc Comment
+ * MovementClientBaseUsingFileMovementPayloadAllOfTest Class Doc Comment
  *
  * @category    Class
- * @description MovementClientBaseUsingFilePayloadAllOf
+ * @description MovementClientBaseUsingFileMovementPayloadAllOf
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class MovementClientBaseUsingFilePayloadAllOfTest extends TestCase
+class MovementClientBaseUsingFileMovementPayloadAllOfTest extends TestCase
 {
 
     /**
@@ -72,9 +72,9 @@ class MovementClientBaseUsingFilePayloadAllOfTest extends TestCase
     }
 
     /**
-     * Test "MovementClientBaseUsingFilePayloadAllOf"
+     * Test "MovementClientBaseUsingFileMovementPayloadAllOf"
      */
-    public function testMovementClientBaseUsingFilePayloadAllOf()
+    public function testMovementClientBaseUsingFileMovementPayloadAllOf()
     {
     }
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * MovementReassignmentPayloadAllOf
+ * MovementReassignmentMovementPayload
  *
  * PHP version 5
  *
@@ -28,19 +28,17 @@
  */
 
 namespace Equisoft\SDK\EquisoftConnect\Model;
-
-use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * MovementReassignmentPayloadAllOf Class Doc Comment
+ * MovementReassignmentMovementPayload Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class MovementReassignmentPayloadAllOf implements ModelInterface, ArrayAccess
+class MovementReassignmentMovementPayload extends MovementMovementPayload 
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +47,7 @@ class MovementReassignmentPayloadAllOf implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'movement_ReassignmentPayload_allOf';
+    protected static $openAPIModelName = 'movement.ReassignmentMovementPayload';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -84,7 +82,7 @@ class MovementReassignmentPayloadAllOf implements ModelInterface, ArrayAccess
      */
     public static function openAPITypes()
     {
-        return self::$openAPITypes;
+        return self::$openAPITypes + parent::openAPITypes();
     }
 
     /**
@@ -94,7 +92,7 @@ class MovementReassignmentPayloadAllOf implements ModelInterface, ArrayAccess
      */
     public static function openAPIFormats()
     {
-        return self::$openAPIFormats;
+        return self::$openAPIFormats + parent::openAPIFormats();
     }
 
     /**
@@ -145,7 +143,7 @@ class MovementReassignmentPayloadAllOf implements ModelInterface, ArrayAccess
      */
     public static function attributeMap()
     {
-        return self::$attributeMap;
+        return parent::attributeMap() + self::$attributeMap;
     }
 
     /**
@@ -155,7 +153,7 @@ class MovementReassignmentPayloadAllOf implements ModelInterface, ArrayAccess
      */
     public static function setters()
     {
-        return self::$setters;
+        return parent::setters() + self::$setters;
     }
 
     /**
@@ -165,7 +163,7 @@ class MovementReassignmentPayloadAllOf implements ModelInterface, ArrayAccess
      */
     public static function getters()
     {
-        return self::$getters;
+        return parent::getters() + self::$getters;
     }
 
     /**
@@ -178,7 +176,7 @@ class MovementReassignmentPayloadAllOf implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    const MOVEMENT_TYPE_REASSIGNMENT_PAYLOAD = 'ReassignmentPayload';
+    const MOVEMENT_TYPE_REASSIGNMENT_MOVEMENT_PAYLOAD = 'ReassignmentMovementPayload';
     
 
     
@@ -190,17 +188,11 @@ class MovementReassignmentPayloadAllOf implements ModelInterface, ArrayAccess
     public function getMovementTypeAllowableValues()
     {
         return [
-            self::MOVEMENT_TYPE_REASSIGNMENT_PAYLOAD,
+            self::MOVEMENT_TYPE_REASSIGNMENT_MOVEMENT_PAYLOAD,
         ];
     }
     
 
-    /**
-     * Associative array for storing property values
-     *
-     * @var mixed[]
-     */
-    protected $container = [];
 
     /**
      * Constructor
@@ -210,7 +202,9 @@ class MovementReassignmentPayloadAllOf implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['movementType'] = isset($data['movementType']) ? $data['movementType'] : 'ReassignmentPayload';
+        parent::__construct($data);
+
+        $this->container['movementType'] = isset($data['movementType']) ? $data['movementType'] : 'ReassignmentMovementPayload';
         $this->container['sourceDatabase'] = isset($data['sourceDatabase']) ? $data['sourceDatabase'] : null;
         $this->container['sourceUser'] = isset($data['sourceUser']) ? $data['sourceUser'] : null;
         $this->container['destinationUser'] = isset($data['destinationUser']) ? $data['destinationUser'] : null;
@@ -224,7 +218,7 @@ class MovementReassignmentPayloadAllOf implements ModelInterface, ArrayAccess
      */
     public function listInvalidProperties()
     {
-        $invalidProperties = [];
+        $invalidProperties = parent::listInvalidProperties();
 
         if ($this->container['movementType'] === null) {
             $invalidProperties[] = "'movementType' can't be null";

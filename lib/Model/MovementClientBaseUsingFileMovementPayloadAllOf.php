@@ -1,6 +1,6 @@
 <?php
 /**
- * MovementClientBaseUsingDistributionListPayload
+ * MovementClientBaseUsingFileMovementPayloadAllOf
  *
  * PHP version 5
  *
@@ -28,17 +28,19 @@
  */
 
 namespace Equisoft\SDK\EquisoftConnect\Model;
+
+use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * MovementClientBaseUsingDistributionListPayload Class Doc Comment
+ * MovementClientBaseUsingFileMovementPayloadAllOf Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class MovementClientBaseUsingDistributionListPayload extends MovementMovementPayload 
+class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +49,7 @@ class MovementClientBaseUsingDistributionListPayload extends MovementMovementPay
       *
       * @var string
       */
-    protected static $openAPIModelName = 'movement.ClientBaseUsingDistributionListPayload';
+    protected static $openAPIModelName = 'movement_ClientBaseUsingFileMovementPayload_allOf';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,11 +60,10 @@ class MovementClientBaseUsingDistributionListPayload extends MovementMovementPay
         'movementType' => 'string',
         'sourceDatabase' => 'string',
         'sourceUser' => 'string',
-        'sourceDistList' => 'string',
         'destinationDatabase' => 'string',
         'destinationUser' => 'string',
-        'datagatewayAccessMappings' => 'map[string,string]',
-        'transferOption' => 'string'
+        'capsilFile' => 'string',
+        'univerisFile' => 'string'
     ];
 
     /**
@@ -74,11 +75,10 @@ class MovementClientBaseUsingDistributionListPayload extends MovementMovementPay
         'movementType' => null,
         'sourceDatabase' => null,
         'sourceUser' => null,
-        'sourceDistList' => null,
         'destinationDatabase' => null,
         'destinationUser' => null,
-        'datagatewayAccessMappings' => null,
-        'transferOption' => null
+        'capsilFile' => null,
+        'univerisFile' => null
     ];
 
     /**
@@ -88,7 +88,7 @@ class MovementClientBaseUsingDistributionListPayload extends MovementMovementPay
      */
     public static function openAPITypes()
     {
-        return self::$openAPITypes + parent::openAPITypes();
+        return self::$openAPITypes;
     }
 
     /**
@@ -98,7 +98,7 @@ class MovementClientBaseUsingDistributionListPayload extends MovementMovementPay
      */
     public static function openAPIFormats()
     {
-        return self::$openAPIFormats + parent::openAPIFormats();
+        return self::$openAPIFormats;
     }
 
     /**
@@ -111,11 +111,10 @@ class MovementClientBaseUsingDistributionListPayload extends MovementMovementPay
         'movementType' => 'movementType',
         'sourceDatabase' => 'sourceDatabase',
         'sourceUser' => 'sourceUser',
-        'sourceDistList' => 'sourceDistList',
         'destinationDatabase' => 'destinationDatabase',
         'destinationUser' => 'destinationUser',
-        'datagatewayAccessMappings' => 'datagatewayAccessMappings',
-        'transferOption' => 'transferOption'
+        'capsilFile' => 'capsilFile',
+        'univerisFile' => 'univerisFile'
     ];
 
     /**
@@ -127,11 +126,10 @@ class MovementClientBaseUsingDistributionListPayload extends MovementMovementPay
         'movementType' => 'setMovementType',
         'sourceDatabase' => 'setSourceDatabase',
         'sourceUser' => 'setSourceUser',
-        'sourceDistList' => 'setSourceDistList',
         'destinationDatabase' => 'setDestinationDatabase',
         'destinationUser' => 'setDestinationUser',
-        'datagatewayAccessMappings' => 'setDatagatewayAccessMappings',
-        'transferOption' => 'setTransferOption'
+        'capsilFile' => 'setCapsilFile',
+        'univerisFile' => 'setUniverisFile'
     ];
 
     /**
@@ -143,11 +141,10 @@ class MovementClientBaseUsingDistributionListPayload extends MovementMovementPay
         'movementType' => 'getMovementType',
         'sourceDatabase' => 'getSourceDatabase',
         'sourceUser' => 'getSourceUser',
-        'sourceDistList' => 'getSourceDistList',
         'destinationDatabase' => 'getDestinationDatabase',
         'destinationUser' => 'getDestinationUser',
-        'datagatewayAccessMappings' => 'getDatagatewayAccessMappings',
-        'transferOption' => 'getTransferOption'
+        'capsilFile' => 'getCapsilFile',
+        'univerisFile' => 'getUniverisFile'
     ];
 
     /**
@@ -158,7 +155,7 @@ class MovementClientBaseUsingDistributionListPayload extends MovementMovementPay
      */
     public static function attributeMap()
     {
-        return parent::attributeMap() + self::$attributeMap;
+        return self::$attributeMap;
     }
 
     /**
@@ -168,7 +165,7 @@ class MovementClientBaseUsingDistributionListPayload extends MovementMovementPay
      */
     public static function setters()
     {
-        return parent::setters() + self::$setters;
+        return self::$setters;
     }
 
     /**
@@ -178,7 +175,7 @@ class MovementClientBaseUsingDistributionListPayload extends MovementMovementPay
      */
     public static function getters()
     {
-        return parent::getters() + self::$getters;
+        return self::$getters;
     }
 
     /**
@@ -191,7 +188,7 @@ class MovementClientBaseUsingDistributionListPayload extends MovementMovementPay
         return self::$openAPIModelName;
     }
 
-    const MOVEMENT_TYPE_CLIENT_BASE_USING_DISTRIBUTION_LIST_PAYLOAD = 'ClientBaseUsingDistributionListPayload';
+    const MOVEMENT_TYPE_CLIENT_BASE_USING_FILE_MOVEMENT_PAYLOAD = 'ClientBaseUsingFileMovementPayload';
     
 
     
@@ -203,11 +200,17 @@ class MovementClientBaseUsingDistributionListPayload extends MovementMovementPay
     public function getMovementTypeAllowableValues()
     {
         return [
-            self::MOVEMENT_TYPE_CLIENT_BASE_USING_DISTRIBUTION_LIST_PAYLOAD,
+            self::MOVEMENT_TYPE_CLIENT_BASE_USING_FILE_MOVEMENT_PAYLOAD,
         ];
     }
     
 
+    /**
+     * Associative array for storing property values
+     *
+     * @var mixed[]
+     */
+    protected $container = [];
 
     /**
      * Constructor
@@ -217,16 +220,13 @@ class MovementClientBaseUsingDistributionListPayload extends MovementMovementPay
      */
     public function __construct(array $data = null)
     {
-        parent::__construct($data);
-
-        $this->container['movementType'] = isset($data['movementType']) ? $data['movementType'] : 'ClientBaseUsingDistributionListPayload';
+        $this->container['movementType'] = isset($data['movementType']) ? $data['movementType'] : 'ClientBaseUsingFileMovementPayload';
         $this->container['sourceDatabase'] = isset($data['sourceDatabase']) ? $data['sourceDatabase'] : null;
         $this->container['sourceUser'] = isset($data['sourceUser']) ? $data['sourceUser'] : null;
-        $this->container['sourceDistList'] = isset($data['sourceDistList']) ? $data['sourceDistList'] : null;
         $this->container['destinationDatabase'] = isset($data['destinationDatabase']) ? $data['destinationDatabase'] : null;
         $this->container['destinationUser'] = isset($data['destinationUser']) ? $data['destinationUser'] : null;
-        $this->container['datagatewayAccessMappings'] = isset($data['datagatewayAccessMappings']) ? $data['datagatewayAccessMappings'] : null;
-        $this->container['transferOption'] = isset($data['transferOption']) ? $data['transferOption'] : null;
+        $this->container['capsilFile'] = isset($data['capsilFile']) ? $data['capsilFile'] : null;
+        $this->container['univerisFile'] = isset($data['univerisFile']) ? $data['univerisFile'] : null;
     }
 
     /**
@@ -236,7 +236,7 @@ class MovementClientBaseUsingDistributionListPayload extends MovementMovementPay
      */
     public function listInvalidProperties()
     {
-        $invalidProperties = parent::listInvalidProperties();
+        $invalidProperties = [];
 
         if ($this->container['movementType'] === null) {
             $invalidProperties[] = "'movementType' can't be null";
@@ -255,17 +255,11 @@ class MovementClientBaseUsingDistributionListPayload extends MovementMovementPay
         if ($this->container['sourceUser'] === null) {
             $invalidProperties[] = "'sourceUser' can't be null";
         }
-        if ($this->container['sourceDistList'] === null) {
-            $invalidProperties[] = "'sourceDistList' can't be null";
-        }
         if ($this->container['destinationDatabase'] === null) {
             $invalidProperties[] = "'destinationDatabase' can't be null";
         }
         if ($this->container['destinationUser'] === null) {
             $invalidProperties[] = "'destinationUser' can't be null";
-        }
-        if ($this->container['transferOption'] === null) {
-            $invalidProperties[] = "'transferOption' can't be null";
         }
         return $invalidProperties;
     }
@@ -364,30 +358,6 @@ class MovementClientBaseUsingDistributionListPayload extends MovementMovementPay
     }
 
     /**
-     * Gets sourceDistList
-     *
-     * @return string
-     */
-    public function getSourceDistList()
-    {
-        return $this->container['sourceDistList'];
-    }
-
-    /**
-     * Sets sourceDistList
-     *
-     * @param string $sourceDistList sourceDistList
-     *
-     * @return $this
-     */
-    public function setSourceDistList($sourceDistList)
-    {
-        $this->container['sourceDistList'] = $sourceDistList;
-
-        return $this;
-    }
-
-    /**
      * Gets destinationDatabase
      *
      * @return string
@@ -436,49 +406,49 @@ class MovementClientBaseUsingDistributionListPayload extends MovementMovementPay
     }
 
     /**
-     * Gets datagatewayAccessMappings
+     * Gets capsilFile
      *
-     * @return map[string,string]|null
+     * @return string|null
      */
-    public function getDatagatewayAccessMappings()
+    public function getCapsilFile()
     {
-        return $this->container['datagatewayAccessMappings'];
+        return $this->container['capsilFile'];
     }
 
     /**
-     * Sets datagatewayAccessMappings
+     * Sets capsilFile
      *
-     * @param map[string,string]|null $datagatewayAccessMappings datagatewayAccessMappings
+     * @param string|null $capsilFile capsilFile
      *
      * @return $this
      */
-    public function setDatagatewayAccessMappings($datagatewayAccessMappings)
+    public function setCapsilFile($capsilFile)
     {
-        $this->container['datagatewayAccessMappings'] = $datagatewayAccessMappings;
+        $this->container['capsilFile'] = $capsilFile;
 
         return $this;
     }
 
     /**
-     * Gets transferOption
+     * Gets univerisFile
      *
-     * @return string
+     * @return string|null
      */
-    public function getTransferOption()
+    public function getUniverisFile()
     {
-        return $this->container['transferOption'];
+        return $this->container['univerisFile'];
     }
 
     /**
-     * Sets transferOption
+     * Sets univerisFile
      *
-     * @param string $transferOption transferOption
+     * @param string|null $univerisFile univerisFile
      *
      * @return $this
      */
-    public function setTransferOption($transferOption)
+    public function setUniverisFile($univerisFile)
     {
-        $this->container['transferOption'] = $transferOption;
+        $this->container['univerisFile'] = $univerisFile;
 
         return $this;
     }

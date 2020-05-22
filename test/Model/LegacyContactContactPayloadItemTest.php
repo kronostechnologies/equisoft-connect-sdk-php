@@ -77,4 +77,382 @@ class LegacyContactContactPayloadItemTest extends TestCase
     public function testLegacyContactContactPayloadItem()
     {
     }
+
+    /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+    }
+
+    /**
+     * Test attribute "uuid"
+     */
+    public function testPropertyUuid()
+    {
+    }
+
+    /**
+     * Test attribute "typeContact"
+     */
+    public function testPropertyTypeContact()
+    {
+    }
+
+    /**
+     * Test attribute "indOrg"
+     */
+    public function testPropertyIndOrg()
+    {
+    }
+
+    /**
+     * Test attribute "displayName"
+     */
+    public function testPropertyDisplayName()
+    {
+    }
+
+    /**
+     * Test attribute "firstName"
+     */
+    public function testPropertyFirstName()
+    {
+    }
+
+    /**
+     * Test attribute "middleName"
+     */
+    public function testPropertyMiddleName()
+    {
+    }
+
+    /**
+     * Test attribute "lastName"
+     */
+    public function testPropertyLastName()
+    {
+    }
+
+    /**
+     * Test attribute "corporationName"
+     */
+    public function testPropertyCorporationName()
+    {
+    }
+
+    /**
+     * Test attribute "corporationNameLine2"
+     */
+    public function testPropertyCorporationNameLine2()
+    {
+    }
+
+    /**
+     * Test attribute "rank"
+     */
+    public function testPropertyRank()
+    {
+    }
+
+    /**
+     * Test attribute "externalKey"
+     */
+    public function testPropertyExternalKey()
+    {
+    }
+
+    /**
+     * Test attribute "externalKeyType"
+     */
+    public function testPropertyExternalKeyType()
+    {
+    }
+
+    /**
+     * Test attribute "gender"
+     */
+    public function testPropertyGender()
+    {
+    }
+
+    /**
+     * Test attribute "sin"
+     */
+    public function testPropertySin()
+    {
+    }
+
+    /**
+     * Test attribute "birthdate"
+     */
+    public function testPropertyBirthdate()
+    {
+    }
+
+    /**
+     * Test attribute "smoker"
+     */
+    public function testPropertySmoker()
+    {
+    }
+
+    /**
+     * Test attribute "smokerSince"
+     */
+    public function testPropertySmokerSince()
+    {
+    }
+
+    /**
+     * Test attribute "phoneHome"
+     */
+    public function testPropertyPhoneHome()
+    {
+    }
+
+    /**
+     * Test attribute "phoneHomeSecond"
+     */
+    public function testPropertyPhoneHomeSecond()
+    {
+    }
+
+    /**
+     * Test attribute "phoneAssistant"
+     */
+    public function testPropertyPhoneAssistant()
+    {
+    }
+
+    /**
+     * Test attribute "phoneOffice"
+     */
+    public function testPropertyPhoneOffice()
+    {
+    }
+
+    /**
+     * Test attribute "phoneOfficeSecond"
+     */
+    public function testPropertyPhoneOfficeSecond()
+    {
+    }
+
+    /**
+     * Test attribute "phoneCell"
+     */
+    public function testPropertyPhoneCell()
+    {
+    }
+
+    /**
+     * Test attribute "phonePager"
+     */
+    public function testPropertyPhonePager()
+    {
+    }
+
+    /**
+     * Test attribute "phoneFax"
+     */
+    public function testPropertyPhoneFax()
+    {
+    }
+
+    /**
+     * Test attribute "mainEmail"
+     */
+    public function testPropertyMainEmail()
+    {
+    }
+
+    /**
+     * Test attribute "emailPersonal"
+     */
+    public function testPropertyEmailPersonal()
+    {
+    }
+
+    /**
+     * Test attribute "webSite"
+     */
+    public function testPropertyWebSite()
+    {
+    }
+
+    /**
+     * Test attribute "emailBusiness"
+     */
+    public function testPropertyEmailBusiness()
+    {
+    }
+
+    /**
+     * Test attribute "emailOther"
+     */
+    public function testPropertyEmailOther()
+    {
+    }
+
+    /**
+     * Test attribute "notes"
+     */
+    public function testPropertyNotes()
+    {
+    }
+
+    /**
+     * Test attribute "peculiarity"
+     */
+    public function testPropertyPeculiarity()
+    {
+    }
+
+    /**
+     * Test attribute "endFinancialYear"
+     */
+    public function testPropertyEndFinancialYear()
+    {
+    }
+
+    /**
+     * Test attribute "language"
+     */
+    public function testPropertyLanguage()
+    {
+    }
+
+    /**
+     * Test attribute "active"
+     */
+    public function testPropertyActive()
+    {
+    }
+
+    /**
+     * Test attribute "publish"
+     */
+    public function testPropertyPublish()
+    {
+    }
+
+    /**
+     * Test attribute "title"
+     */
+    public function testPropertyTitle()
+    {
+    }
+
+    /**
+     * Test attribute "suffix"
+     */
+    public function testPropertySuffix()
+    {
+    }
+
+    /**
+     * Test attribute "civility"
+     */
+    public function testPropertyCivility()
+    {
+    }
+
+    /**
+     * Test attribute "civilityId"
+     */
+    public function testPropertyCivilityId()
+    {
+    }
+
+    /**
+     * Test attribute "personAddressed"
+     */
+    public function testPropertyPersonAddressed()
+    {
+    }
+
+    /**
+     * Test attribute "organizationLine1"
+     */
+    public function testPropertyOrganizationLine1()
+    {
+    }
+
+    /**
+     * Test attribute "organizationLine2"
+     */
+    public function testPropertyOrganizationLine2()
+    {
+    }
+
+    /**
+     * Test attribute "department"
+     */
+    public function testPropertyDepartment()
+    {
+    }
+
+    /**
+     * Test attribute "customerNumber"
+     */
+    public function testPropertyCustomerNumber()
+    {
+    }
+
+    /**
+     * Test attribute "birthPlace"
+     */
+    public function testPropertyBirthPlace()
+    {
+    }
+
+    /**
+     * Test attribute "nationality"
+     */
+    public function testPropertyNationality()
+    {
+    }
+
+    /**
+     * Test attribute "orgDateCreated"
+     */
+    public function testPropertyOrgDateCreated()
+    {
+    }
+
+    /**
+     * Test attribute "orgDateClosed"
+     */
+    public function testPropertyOrgDateClosed()
+    {
+    }
+
+    /**
+     * Test attribute "dateEndFinancialYear"
+     */
+    public function testPropertyDateEndFinancialYear()
+    {
+    }
+
+    /**
+     * Test attribute "orgIdNo"
+     */
+    public function testPropertyOrgIdNo()
+    {
+    }
+
+    /**
+     * Test attribute "orgFedNo"
+     */
+    public function testPropertyOrgFedNo()
+    {
+    }
+
+    /**
+     * Test attribute "orgProvNo"
+     */
+    public function testPropertyOrgProvNo()
+    {
+    }
 }

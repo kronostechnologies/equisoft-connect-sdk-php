@@ -86,20 +86,6 @@ class MovementCopyMovementPayloadTest extends TestCase
     }
 
     /**
-     * Test attribute "date"
-     */
-    public function testPropertyDate()
-    {
-    }
-
-    /**
-     * Test attribute "now"
-     */
-    public function testPropertyNow()
-    {
-    }
-
-    /**
      * Test attribute "sourceDatabase"
      */
     public function testPropertySourceDatabase()

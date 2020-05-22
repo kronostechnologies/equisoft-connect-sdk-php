@@ -57,7 +57,7 @@ class MovementListMovementResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'items' => '\Equisoft\SDK\EquisoftConnect\Model\MovementScheduledMovement[]'
+        'items' => '\Equisoft\SDK\EquisoftConnect\Model\MovementMovement[]'
     ];
 
     /**
@@ -210,7 +210,7 @@ class MovementListMovementResponse implements ModelInterface, ArrayAccess
     /**
      * Gets items
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementScheduledMovement[]
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementMovement[]
      */
     public function getItems()
     {
@@ -220,7 +220,7 @@ class MovementListMovementResponse implements ModelInterface, ArrayAccess
     /**
      * Sets items
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementScheduledMovement[] $items items
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementMovement[] $items items
      *
      * @return $this
      */

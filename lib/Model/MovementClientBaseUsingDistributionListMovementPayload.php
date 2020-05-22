@@ -1,6 +1,6 @@
 <?php
 /**
- * MovementReassignmentPayload
+ * MovementClientBaseUsingDistributionListMovementPayload
  *
  * PHP version 5
  *
@@ -31,14 +31,14 @@ namespace Equisoft\SDK\EquisoftConnect\Model;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * MovementReassignmentPayload Class Doc Comment
+ * MovementClientBaseUsingDistributionListMovementPayload Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class MovementReassignmentPayload extends MovementMovementPayload 
+class MovementClientBaseUsingDistributionListMovementPayload extends MovementMovementPayload 
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class MovementReassignmentPayload extends MovementMovementPayload
       *
       * @var string
       */
-    protected static $openAPIModelName = 'movement.ReassignmentPayload';
+    protected static $openAPIModelName = 'movement.ClientBaseUsingDistributionListMovementPayload';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,8 +58,11 @@ class MovementReassignmentPayload extends MovementMovementPayload
         'movementType' => 'string',
         'sourceDatabase' => 'string',
         'sourceUser' => 'string',
+        'sourceDistList' => 'string',
+        'destinationDatabase' => 'string',
         'destinationUser' => 'string',
-        'accessCode' => 'string'
+        'datagatewayAccessMappings' => 'map[string,string]',
+        'transferOption' => 'string'
     ];
 
     /**
@@ -71,8 +74,11 @@ class MovementReassignmentPayload extends MovementMovementPayload
         'movementType' => null,
         'sourceDatabase' => null,
         'sourceUser' => null,
+        'sourceDistList' => null,
+        'destinationDatabase' => null,
         'destinationUser' => null,
-        'accessCode' => null
+        'datagatewayAccessMappings' => null,
+        'transferOption' => null
     ];
 
     /**
@@ -105,8 +111,11 @@ class MovementReassignmentPayload extends MovementMovementPayload
         'movementType' => 'movementType',
         'sourceDatabase' => 'sourceDatabase',
         'sourceUser' => 'sourceUser',
+        'sourceDistList' => 'sourceDistList',
+        'destinationDatabase' => 'destinationDatabase',
         'destinationUser' => 'destinationUser',
-        'accessCode' => 'accessCode'
+        'datagatewayAccessMappings' => 'datagatewayAccessMappings',
+        'transferOption' => 'transferOption'
     ];
 
     /**
@@ -118,8 +127,11 @@ class MovementReassignmentPayload extends MovementMovementPayload
         'movementType' => 'setMovementType',
         'sourceDatabase' => 'setSourceDatabase',
         'sourceUser' => 'setSourceUser',
+        'sourceDistList' => 'setSourceDistList',
+        'destinationDatabase' => 'setDestinationDatabase',
         'destinationUser' => 'setDestinationUser',
-        'accessCode' => 'setAccessCode'
+        'datagatewayAccessMappings' => 'setDatagatewayAccessMappings',
+        'transferOption' => 'setTransferOption'
     ];
 
     /**
@@ -131,8 +143,11 @@ class MovementReassignmentPayload extends MovementMovementPayload
         'movementType' => 'getMovementType',
         'sourceDatabase' => 'getSourceDatabase',
         'sourceUser' => 'getSourceUser',
+        'sourceDistList' => 'getSourceDistList',
+        'destinationDatabase' => 'getDestinationDatabase',
         'destinationUser' => 'getDestinationUser',
-        'accessCode' => 'getAccessCode'
+        'datagatewayAccessMappings' => 'getDatagatewayAccessMappings',
+        'transferOption' => 'getTransferOption'
     ];
 
     /**
@@ -176,7 +191,7 @@ class MovementReassignmentPayload extends MovementMovementPayload
         return self::$openAPIModelName;
     }
 
-    const MOVEMENT_TYPE_REASSIGNMENT_PAYLOAD = 'ReassignmentPayload';
+    const MOVEMENT_TYPE_CLIENT_BASE_USING_DISTRIBUTION_LIST_MOVEMENT_PAYLOAD = 'ClientBaseUsingDistributionListMovementPayload';
     
 
     
@@ -188,7 +203,7 @@ class MovementReassignmentPayload extends MovementMovementPayload
     public function getMovementTypeAllowableValues()
     {
         return [
-            self::MOVEMENT_TYPE_REASSIGNMENT_PAYLOAD,
+            self::MOVEMENT_TYPE_CLIENT_BASE_USING_DISTRIBUTION_LIST_MOVEMENT_PAYLOAD,
         ];
     }
     
@@ -204,11 +219,14 @@ class MovementReassignmentPayload extends MovementMovementPayload
     {
         parent::__construct($data);
 
-        $this->container['movementType'] = isset($data['movementType']) ? $data['movementType'] : 'ReassignmentPayload';
+        $this->container['movementType'] = isset($data['movementType']) ? $data['movementType'] : 'ClientBaseUsingDistributionListMovementPayload';
         $this->container['sourceDatabase'] = isset($data['sourceDatabase']) ? $data['sourceDatabase'] : null;
         $this->container['sourceUser'] = isset($data['sourceUser']) ? $data['sourceUser'] : null;
+        $this->container['sourceDistList'] = isset($data['sourceDistList']) ? $data['sourceDistList'] : null;
+        $this->container['destinationDatabase'] = isset($data['destinationDatabase']) ? $data['destinationDatabase'] : null;
         $this->container['destinationUser'] = isset($data['destinationUser']) ? $data['destinationUser'] : null;
-        $this->container['accessCode'] = isset($data['accessCode']) ? $data['accessCode'] : null;
+        $this->container['datagatewayAccessMappings'] = isset($data['datagatewayAccessMappings']) ? $data['datagatewayAccessMappings'] : null;
+        $this->container['transferOption'] = isset($data['transferOption']) ? $data['transferOption'] : null;
     }
 
     /**
@@ -237,11 +255,17 @@ class MovementReassignmentPayload extends MovementMovementPayload
         if ($this->container['sourceUser'] === null) {
             $invalidProperties[] = "'sourceUser' can't be null";
         }
+        if ($this->container['sourceDistList'] === null) {
+            $invalidProperties[] = "'sourceDistList' can't be null";
+        }
+        if ($this->container['destinationDatabase'] === null) {
+            $invalidProperties[] = "'destinationDatabase' can't be null";
+        }
         if ($this->container['destinationUser'] === null) {
             $invalidProperties[] = "'destinationUser' can't be null";
         }
-        if ($this->container['accessCode'] === null) {
-            $invalidProperties[] = "'accessCode' can't be null";
+        if ($this->container['transferOption'] === null) {
+            $invalidProperties[] = "'transferOption' can't be null";
         }
         return $invalidProperties;
     }
@@ -340,6 +364,54 @@ class MovementReassignmentPayload extends MovementMovementPayload
     }
 
     /**
+     * Gets sourceDistList
+     *
+     * @return string
+     */
+    public function getSourceDistList()
+    {
+        return $this->container['sourceDistList'];
+    }
+
+    /**
+     * Sets sourceDistList
+     *
+     * @param string $sourceDistList sourceDistList
+     *
+     * @return $this
+     */
+    public function setSourceDistList($sourceDistList)
+    {
+        $this->container['sourceDistList'] = $sourceDistList;
+
+        return $this;
+    }
+
+    /**
+     * Gets destinationDatabase
+     *
+     * @return string
+     */
+    public function getDestinationDatabase()
+    {
+        return $this->container['destinationDatabase'];
+    }
+
+    /**
+     * Sets destinationDatabase
+     *
+     * @param string $destinationDatabase destinationDatabase
+     *
+     * @return $this
+     */
+    public function setDestinationDatabase($destinationDatabase)
+    {
+        $this->container['destinationDatabase'] = $destinationDatabase;
+
+        return $this;
+    }
+
+    /**
      * Gets destinationUser
      *
      * @return string
@@ -364,25 +436,49 @@ class MovementReassignmentPayload extends MovementMovementPayload
     }
 
     /**
-     * Gets accessCode
+     * Gets datagatewayAccessMappings
      *
-     * @return string
+     * @return map[string,string]|null
      */
-    public function getAccessCode()
+    public function getDatagatewayAccessMappings()
     {
-        return $this->container['accessCode'];
+        return $this->container['datagatewayAccessMappings'];
     }
 
     /**
-     * Sets accessCode
+     * Sets datagatewayAccessMappings
      *
-     * @param string $accessCode accessCode
+     * @param map[string,string]|null $datagatewayAccessMappings datagatewayAccessMappings
      *
      * @return $this
      */
-    public function setAccessCode($accessCode)
+    public function setDatagatewayAccessMappings($datagatewayAccessMappings)
     {
-        $this->container['accessCode'] = $accessCode;
+        $this->container['datagatewayAccessMappings'] = $datagatewayAccessMappings;
+
+        return $this;
+    }
+
+    /**
+     * Gets transferOption
+     *
+     * @return string
+     */
+    public function getTransferOption()
+    {
+        return $this->container['transferOption'];
+    }
+
+    /**
+     * Sets transferOption
+     *
+     * @param string $transferOption transferOption
+     *
+     * @return $this
+     */
+    public function setTransferOption($transferOption)
+    {
+        $this->container['transferOption'] = $transferOption;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * MovementReassignmentPayloadAllOfTest
+ * MovementReassignmentMovementPayloadAllOfTest
  *
  * PHP version 5
  *
@@ -32,15 +32,15 @@ namespace Equisoft\SDK\EquisoftConnect;
 use PHPUnit\Framework\TestCase;
 
 /**
- * MovementReassignmentPayloadAllOfTest Class Doc Comment
+ * MovementReassignmentMovementPayloadAllOfTest Class Doc Comment
  *
  * @category    Class
- * @description MovementReassignmentPayloadAllOf
+ * @description MovementReassignmentMovementPayloadAllOf
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class MovementReassignmentPayloadAllOfTest extends TestCase
+class MovementReassignmentMovementPayloadAllOfTest extends TestCase
 {
 
     /**
@@ -72,9 +72,9 @@ class MovementReassignmentPayloadAllOfTest extends TestCase
     }
 
     /**
-     * Test "MovementReassignmentPayloadAllOf"
+     * Test "MovementReassignmentMovementPayloadAllOf"
      */
-    public function testMovementReassignmentPayloadAllOf()
+    public function testMovementReassignmentMovementPayloadAllOf()
     {
     }
 

@@ -79,13 +79,6 @@ class MovementMovementPayloadTest extends TestCase
     }
 
     /**
-     * Test attribute "movementType"
-     */
-    public function testPropertyMovementType()
-    {
-    }
-
-    /**
      * Test attribute "date"
      */
     public function testPropertyDate()

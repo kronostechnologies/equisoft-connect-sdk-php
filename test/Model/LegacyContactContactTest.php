@@ -84,4 +84,74 @@ class LegacyContactContactTest extends TestCase
     public function testPropertyId()
     {
     }
+
+    /**
+     * Test attribute "uuid"
+     */
+    public function testPropertyUuid()
+    {
+    }
+
+    /**
+     * Test attribute "typeContact"
+     */
+    public function testPropertyTypeContact()
+    {
+    }
+
+    /**
+     * Test attribute "indOrg"
+     */
+    public function testPropertyIndOrg()
+    {
+    }
+
+    /**
+     * Test attribute "displayName"
+     */
+    public function testPropertyDisplayName()
+    {
+    }
+
+    /**
+     * Test attribute "firstName"
+     */
+    public function testPropertyFirstName()
+    {
+    }
+
+    /**
+     * Test attribute "middleName"
+     */
+    public function testPropertyMiddleName()
+    {
+    }
+
+    /**
+     * Test attribute "lastName"
+     */
+    public function testPropertyLastName()
+    {
+    }
+
+    /**
+     * Test attribute "corporationName"
+     */
+    public function testPropertyCorporationName()
+    {
+    }
+
+    /**
+     * Test attribute "corporationNameLine2"
+     */
+    public function testPropertyCorporationNameLine2()
+    {
+    }
+
+    /**
+     * Test attribute "rank"
+     */
+    public function testPropertyRank()
+    {
+    }
 }

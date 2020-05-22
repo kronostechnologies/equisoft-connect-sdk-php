@@ -1,14 +1,16 @@
-# # MovementReassignmentPayload
+# # MovementClientBaseUsingFileMovementPayloadAllOf
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**movementType** | **string** |  | [default to 'ReassignmentPayload']
+**movementType** | **string** |  | [default to 'ClientBaseUsingFileMovementPayload']
 **sourceDatabase** | **string** |  | 
 **sourceUser** | **string** |  | 
+**destinationDatabase** | **string** |  | 
 **destinationUser** | **string** |  | 
-**accessCode** | **string** |  | 
+**capsilFile** | **string** |  | [optional] 
+**univerisFile** | **string** |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

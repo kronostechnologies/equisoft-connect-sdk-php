@@ -1,6 +1,6 @@
 <?php
 /**
- * MovementClientBaseUsingFilePayloadAllOf
+ * MovementReassignmentMovementPayloadAllOf
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * MovementClientBaseUsingFilePayloadAllOf Class Doc Comment
+ * MovementReassignmentMovementPayloadAllOf Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class MovementClientBaseUsingFilePayloadAllOf implements ModelInterface, ArrayAccess
+class MovementReassignmentMovementPayloadAllOf implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class MovementClientBaseUsingFilePayloadAllOf implements ModelInterface, ArrayAc
       *
       * @var string
       */
-    protected static $openAPIModelName = 'movement_ClientBaseUsingFilePayload_allOf';
+    protected static $openAPIModelName = 'movement_ReassignmentMovementPayload_allOf';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -60,10 +60,8 @@ class MovementClientBaseUsingFilePayloadAllOf implements ModelInterface, ArrayAc
         'movementType' => 'string',
         'sourceDatabase' => 'string',
         'sourceUser' => 'string',
-        'destinationDatabase' => 'string',
         'destinationUser' => 'string',
-        'capsilFile' => 'string',
-        'univerisFile' => 'string'
+        'accessCode' => 'string'
     ];
 
     /**
@@ -75,10 +73,8 @@ class MovementClientBaseUsingFilePayloadAllOf implements ModelInterface, ArrayAc
         'movementType' => null,
         'sourceDatabase' => null,
         'sourceUser' => null,
-        'destinationDatabase' => null,
         'destinationUser' => null,
-        'capsilFile' => null,
-        'univerisFile' => null
+        'accessCode' => null
     ];
 
     /**
@@ -111,10 +107,8 @@ class MovementClientBaseUsingFilePayloadAllOf implements ModelInterface, ArrayAc
         'movementType' => 'movementType',
         'sourceDatabase' => 'sourceDatabase',
         'sourceUser' => 'sourceUser',
-        'destinationDatabase' => 'destinationDatabase',
         'destinationUser' => 'destinationUser',
-        'capsilFile' => 'capsilFile',
-        'univerisFile' => 'univerisFile'
+        'accessCode' => 'accessCode'
     ];
 
     /**
@@ -126,10 +120,8 @@ class MovementClientBaseUsingFilePayloadAllOf implements ModelInterface, ArrayAc
         'movementType' => 'setMovementType',
         'sourceDatabase' => 'setSourceDatabase',
         'sourceUser' => 'setSourceUser',
-        'destinationDatabase' => 'setDestinationDatabase',
         'destinationUser' => 'setDestinationUser',
-        'capsilFile' => 'setCapsilFile',
-        'univerisFile' => 'setUniverisFile'
+        'accessCode' => 'setAccessCode'
     ];
 
     /**
@@ -141,10 +133,8 @@ class MovementClientBaseUsingFilePayloadAllOf implements ModelInterface, ArrayAc
         'movementType' => 'getMovementType',
         'sourceDatabase' => 'getSourceDatabase',
         'sourceUser' => 'getSourceUser',
-        'destinationDatabase' => 'getDestinationDatabase',
         'destinationUser' => 'getDestinationUser',
-        'capsilFile' => 'getCapsilFile',
-        'univerisFile' => 'getUniverisFile'
+        'accessCode' => 'getAccessCode'
     ];
 
     /**
@@ -188,7 +178,7 @@ class MovementClientBaseUsingFilePayloadAllOf implements ModelInterface, ArrayAc
         return self::$openAPIModelName;
     }
 
-    const MOVEMENT_TYPE_CLIENT_BASE_USING_FILE_PAYLOAD = 'ClientBaseUsingFilePayload';
+    const MOVEMENT_TYPE_REASSIGNMENT_MOVEMENT_PAYLOAD = 'ReassignmentMovementPayload';
     
 
     
@@ -200,7 +190,7 @@ class MovementClientBaseUsingFilePayloadAllOf implements ModelInterface, ArrayAc
     public function getMovementTypeAllowableValues()
     {
         return [
-            self::MOVEMENT_TYPE_CLIENT_BASE_USING_FILE_PAYLOAD,
+            self::MOVEMENT_TYPE_REASSIGNMENT_MOVEMENT_PAYLOAD,
         ];
     }
     
@@ -220,13 +210,11 @@ class MovementClientBaseUsingFilePayloadAllOf implements ModelInterface, ArrayAc
      */
     public function __construct(array $data = null)
     {
-        $this->container['movementType'] = isset($data['movementType']) ? $data['movementType'] : 'ClientBaseUsingFilePayload';
+        $this->container['movementType'] = isset($data['movementType']) ? $data['movementType'] : 'ReassignmentMovementPayload';
         $this->container['sourceDatabase'] = isset($data['sourceDatabase']) ? $data['sourceDatabase'] : null;
         $this->container['sourceUser'] = isset($data['sourceUser']) ? $data['sourceUser'] : null;
-        $this->container['destinationDatabase'] = isset($data['destinationDatabase']) ? $data['destinationDatabase'] : null;
         $this->container['destinationUser'] = isset($data['destinationUser']) ? $data['destinationUser'] : null;
-        $this->container['capsilFile'] = isset($data['capsilFile']) ? $data['capsilFile'] : null;
-        $this->container['univerisFile'] = isset($data['univerisFile']) ? $data['univerisFile'] : null;
+        $this->container['accessCode'] = isset($data['accessCode']) ? $data['accessCode'] : null;
     }
 
     /**
@@ -255,11 +243,11 @@ class MovementClientBaseUsingFilePayloadAllOf implements ModelInterface, ArrayAc
         if ($this->container['sourceUser'] === null) {
             $invalidProperties[] = "'sourceUser' can't be null";
         }
-        if ($this->container['destinationDatabase'] === null) {
-            $invalidProperties[] = "'destinationDatabase' can't be null";
-        }
         if ($this->container['destinationUser'] === null) {
             $invalidProperties[] = "'destinationUser' can't be null";
+        }
+        if ($this->container['accessCode'] === null) {
+            $invalidProperties[] = "'accessCode' can't be null";
         }
         return $invalidProperties;
     }
@@ -358,30 +346,6 @@ class MovementClientBaseUsingFilePayloadAllOf implements ModelInterface, ArrayAc
     }
 
     /**
-     * Gets destinationDatabase
-     *
-     * @return string
-     */
-    public function getDestinationDatabase()
-    {
-        return $this->container['destinationDatabase'];
-    }
-
-    /**
-     * Sets destinationDatabase
-     *
-     * @param string $destinationDatabase destinationDatabase
-     *
-     * @return $this
-     */
-    public function setDestinationDatabase($destinationDatabase)
-    {
-        $this->container['destinationDatabase'] = $destinationDatabase;
-
-        return $this;
-    }
-
-    /**
      * Gets destinationUser
      *
      * @return string
@@ -406,49 +370,25 @@ class MovementClientBaseUsingFilePayloadAllOf implements ModelInterface, ArrayAc
     }
 
     /**
-     * Gets capsilFile
+     * Gets accessCode
      *
-     * @return string|null
+     * @return string
      */
-    public function getCapsilFile()
+    public function getAccessCode()
     {
-        return $this->container['capsilFile'];
+        return $this->container['accessCode'];
     }
 
     /**
-     * Sets capsilFile
+     * Sets accessCode
      *
-     * @param string|null $capsilFile capsilFile
+     * @param string $accessCode accessCode
      *
      * @return $this
      */
-    public function setCapsilFile($capsilFile)
+    public function setAccessCode($accessCode)
     {
-        $this->container['capsilFile'] = $capsilFile;
-
-        return $this;
-    }
-
-    /**
-     * Gets univerisFile
-     *
-     * @return string|null
-     */
-    public function getUniverisFile()
-    {
-        return $this->container['univerisFile'];
-    }
-
-    /**
-     * Sets univerisFile
-     *
-     * @param string|null $univerisFile univerisFile
-     *
-     * @return $this
-     */
-    public function setUniverisFile($univerisFile)
-    {
-        $this->container['univerisFile'] = $univerisFile;
+        $this->container['accessCode'] = $accessCode;
 
         return $this;
     }

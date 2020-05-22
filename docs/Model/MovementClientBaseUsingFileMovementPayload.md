@@ -1,10 +1,10 @@
-# # MovementClientBaseUsingFilePayload
+# # MovementClientBaseUsingFileMovementPayload
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**movementType** | **string** |  | [default to 'ClientBaseUsingFilePayload']
+**movementType** | **string** |  | [default to 'ClientBaseUsingFileMovementPayload']
 **sourceDatabase** | **string** |  | 
 **sourceUser** | **string** |  | 
 **destinationDatabase** | **string** |  | 

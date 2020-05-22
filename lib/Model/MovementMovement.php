@@ -1,6 +1,6 @@
 <?php
 /**
- * MovementScheduledMovement
+ * MovementMovement
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * MovementScheduledMovement Class Doc Comment
+ * MovementMovement Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class MovementScheduledMovement implements ModelInterface, ArrayAccess
+class MovementMovement implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class MovementScheduledMovement implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'movement.ScheduledMovement';
+    protected static $openAPIModelName = 'movement.Movement';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

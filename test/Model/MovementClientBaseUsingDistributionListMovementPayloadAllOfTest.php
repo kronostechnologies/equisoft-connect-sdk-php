@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineObjectTest
+ * MovementClientBaseUsingDistributionListMovementPayloadAllOfTest
  *
  * PHP version 5
  *
@@ -32,15 +32,15 @@ namespace Equisoft\SDK\EquisoftConnect;
 use PHPUnit\Framework\TestCase;
 
 /**
- * InlineObjectTest Class Doc Comment
+ * MovementClientBaseUsingDistributionListMovementPayloadAllOfTest Class Doc Comment
  *
  * @category    Class
- * @description InlineObject
+ * @description MovementClientBaseUsingDistributionListMovementPayloadAllOf
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class InlineObjectTest extends TestCase
+class MovementClientBaseUsingDistributionListMovementPayloadAllOfTest extends TestCase
 {
 
     /**
@@ -72,16 +72,65 @@ class InlineObjectTest extends TestCase
     }
 
     /**
-     * Test "InlineObject"
+     * Test "MovementClientBaseUsingDistributionListMovementPayloadAllOf"
      */
-    public function testInlineObject()
+    public function testMovementClientBaseUsingDistributionListMovementPayloadAllOf()
     {
     }
 
     /**
-     * Test attribute "payload"
+     * Test attribute "movementType"
      */
-    public function testPropertyPayload()
+    public function testPropertyMovementType()
+    {
+    }
+
+    /**
+     * Test attribute "sourceDatabase"
+     */
+    public function testPropertySourceDatabase()
+    {
+    }
+
+    /**
+     * Test attribute "sourceUser"
+     */
+    public function testPropertySourceUser()
+    {
+    }
+
+    /**
+     * Test attribute "sourceDistList"
+     */
+    public function testPropertySourceDistList()
+    {
+    }
+
+    /**
+     * Test attribute "destinationDatabase"
+     */
+    public function testPropertyDestinationDatabase()
+    {
+    }
+
+    /**
+     * Test attribute "destinationUser"
+     */
+    public function testPropertyDestinationUser()
+    {
+    }
+
+    /**
+     * Test attribute "datagatewayAccessMappings"
+     */
+    public function testPropertyDatagatewayAccessMappings()
+    {
+    }
+
+    /**
+     * Test attribute "transferOption"
+     */
+    public function testPropertyTransferOption()
     {
     }
 }
