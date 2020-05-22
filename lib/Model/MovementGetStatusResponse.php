@@ -158,29 +158,8 @@ class MovementGetStatusResponse implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    const STATUS_TODO = 'TODO';
-    const STATUS_CANCELLED = 'CANCELLED';
-    const STATUS_IGNORED = 'IGNORED';
-    const STATUS_FAILURE = 'FAILURE';
-    const STATUS_SUCCESS = 'SUCCESS';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getStatusAllowableValues()
-    {
-        return [
-            self::STATUS_TODO,
-            self::STATUS_CANCELLED,
-            self::STATUS_IGNORED,
-            self::STATUS_FAILURE,
-            self::STATUS_SUCCESS,
-        ];
-    }
     
 
     /**
@@ -213,14 +192,6 @@ class MovementGetStatusResponse implements ModelInterface, ArrayAccess
         if ($this->container['status'] === null) {
             $invalidProperties[] = "'status' can't be null";
         }
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!is_null($this->container['status']) && !in_array($this->container['status'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'status', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
         return $invalidProperties;
     }
 
@@ -255,15 +226,6 @@ class MovementGetStatusResponse implements ModelInterface, ArrayAccess
      */
     public function setStatus($status)
     {
-        $allowedValues = $this->getStatusAllowableValues();
-        if (!in_array($status, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'status', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
         $this->container['status'] = $status;
 
         return $this;

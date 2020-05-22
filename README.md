@@ -155,6 +155,7 @@ Class | Method | HTTP request | Description
  - [MovementMoveMovementPayload](docs/Model/MovementMoveMovementPayload.md)
  - [MovementMoveMovementPayloadAllOf](docs/Model/MovementMoveMovementPayloadAllOf.md)
  - [MovementMovementPayload](docs/Model/MovementMovementPayload.md)
+ - [MovementMovementStatus](docs/Model/MovementMovementStatus.md)
  - [MovementReassignmentPayload](docs/Model/MovementReassignmentPayload.md)
  - [MovementReassignmentPayloadAllOf](docs/Model/MovementReassignmentPayloadAllOf.md)
  - [MovementScheduledMovement](docs/Model/MovementScheduledMovement.md)
