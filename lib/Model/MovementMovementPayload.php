@@ -43,6 +43,13 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 class MovementMovementPayload implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = 'movementType';
+    const DISCRIMINATOR_MAP = [
+        "MOVE" => "MovementMoveMovementPayload",
+        "COPY" => "MovementCopyMovementPayload",
+        "REASSIGNMENT" => "MovementReassignmentMovementPayload",
+        "CLIENTBASE_USING_DISTLIST" => "MovementClientBaseUsingDistributionListMovementPayload",
+        "CLIENTBASE_USING_FILE" => "MovementClientBaseUsingFileMovementPayload",
+    ];
 
     /**
       * The original name of the model.
