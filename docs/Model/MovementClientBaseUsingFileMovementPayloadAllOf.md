@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**movementType** | **string** |  | [default to 'CLIENTBASE_USING_FILE']
+**type** | **string** |  | [default to 'CLIENTBASE_USING_FILE']
 **sourceDatabase** | **string** |  | 
 **sourceUser** | **string** |  | 
 **destinationDatabase** | **string** |  | 

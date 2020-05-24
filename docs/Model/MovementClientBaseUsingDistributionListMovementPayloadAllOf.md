@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**movementType** | **string** |  | [default to 'CLIENTBASE_USING_DISTLIST']
+**type** | **string** |  | [default to 'CLIENTBASE_USING_DISTLIST']
 **sourceDatabase** | **string** |  | 
 **sourceUser** | **string** |  | 
 **sourceDistList** | **string** |  | 

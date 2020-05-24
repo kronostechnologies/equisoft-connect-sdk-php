@@ -42,7 +42,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  */
 class MovementMovementPayload implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = 'movementType';
+    const DISCRIMINATOR = 'type';
     const DISCRIMINATOR_MAP = [
         "MOVE" => "MovementMoveMovementPayload",
         "COPY" => "MovementCopyMovementPayload",
@@ -193,7 +193,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess
         $this->container['now'] = isset($data['now']) ? $data['now'] : null;
 
         // Initialize discriminator property with the model name.
-        $this->container['movementType'] = static::$openAPIModelName;
+        $this->container['type'] = static::$openAPIModelName;
     }
 
     /**

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**movementType** | **string** |  | [default to 'REASSIGNMENT']
+**type** | **string** |  | [default to 'REASSIGNMENT']
 **sourceDatabase** | **string** |  | 
 **sourceUser** | **string** |  | 
 **destinationUser** | **string** |  | 

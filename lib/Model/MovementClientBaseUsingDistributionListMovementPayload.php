@@ -55,7 +55,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
       * @var string[]
       */
     protected static $openAPITypes = [
-        'movementType' => 'string',
+        'type' => 'string',
         'sourceDatabase' => 'string',
         'sourceUser' => 'string',
         'sourceDistList' => 'string',
@@ -71,7 +71,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'movementType' => null,
+        'type' => null,
         'sourceDatabase' => null,
         'sourceUser' => null,
         'sourceDistList' => null,
@@ -108,7 +108,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
      * @var string[]
      */
     protected static $attributeMap = [
-        'movementType' => 'movementType',
+        'type' => 'type',
         'sourceDatabase' => 'sourceDatabase',
         'sourceUser' => 'sourceUser',
         'sourceDistList' => 'sourceDistList',
@@ -124,7 +124,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
      * @var string[]
      */
     protected static $setters = [
-        'movementType' => 'setMovementType',
+        'type' => 'setType',
         'sourceDatabase' => 'setSourceDatabase',
         'sourceUser' => 'setSourceUser',
         'sourceDistList' => 'setSourceDistList',
@@ -140,7 +140,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
      * @var string[]
      */
     protected static $getters = [
-        'movementType' => 'getMovementType',
+        'type' => 'getType',
         'sourceDatabase' => 'getSourceDatabase',
         'sourceUser' => 'getSourceUser',
         'sourceDistList' => 'getSourceDistList',
@@ -191,7 +191,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
         return self::$openAPIModelName;
     }
 
-    const MOVEMENT_TYPE_CLIENTBASE_USING_DISTLIST = 'CLIENTBASE_USING_DISTLIST';
+    const TYPE_CLIENTBASE_USING_DISTLIST = 'CLIENTBASE_USING_DISTLIST';
     
 
     
@@ -200,10 +200,10 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
      *
      * @return string[]
      */
-    public function getMovementTypeAllowableValues()
+    public function getTypeAllowableValues()
     {
         return [
-            self::MOVEMENT_TYPE_CLIENTBASE_USING_DISTLIST,
+            self::TYPE_CLIENTBASE_USING_DISTLIST,
         ];
     }
     
@@ -219,7 +219,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
     {
         parent::__construct($data);
 
-        $this->container['movementType'] = isset($data['movementType']) ? $data['movementType'] : 'CLIENTBASE_USING_DISTLIST';
+        $this->container['type'] = isset($data['type']) ? $data['type'] : 'CLIENTBASE_USING_DISTLIST';
         $this->container['sourceDatabase'] = isset($data['sourceDatabase']) ? $data['sourceDatabase'] : null;
         $this->container['sourceUser'] = isset($data['sourceUser']) ? $data['sourceUser'] : null;
         $this->container['sourceDistList'] = isset($data['sourceDistList']) ? $data['sourceDistList'] : null;
@@ -238,13 +238,13 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
     {
         $invalidProperties = parent::listInvalidProperties();
 
-        if ($this->container['movementType'] === null) {
-            $invalidProperties[] = "'movementType' can't be null";
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
         }
-        $allowedValues = $this->getMovementTypeAllowableValues();
-        if (!is_null($this->container['movementType']) && !in_array($this->container['movementType'], $allowedValues, true)) {
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value for 'movementType', must be one of '%s'",
+                "invalid value for 'type', must be one of '%s'",
                 implode("', '", $allowedValues)
             );
         }
@@ -283,34 +283,34 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
 
 
     /**
-     * Gets movementType
+     * Gets type
      *
      * @return string
      */
-    public function getMovementType()
+    public function getType()
     {
-        return $this->container['movementType'];
+        return $this->container['type'];
     }
 
     /**
-     * Sets movementType
+     * Sets type
      *
-     * @param string $movementType movementType
+     * @param string $type type
      *
      * @return $this
      */
-    public function setMovementType($movementType)
+    public function setType($type)
     {
-        $allowedValues = $this->getMovementTypeAllowableValues();
-        if (!in_array($movementType, $allowedValues, true)) {
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!in_array($type, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value for 'movementType', must be one of '%s'",
+                    "Invalid value for 'type', must be one of '%s'",
                     implode("', '", $allowedValues)
                 )
             );
         }
-        $this->container['movementType'] = $movementType;
+        $this->container['type'] = $type;
 
         return $this;
     }

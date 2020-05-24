@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**movementType** | **string** |  | [default to 'MOVE']
+**type** | **string** |  | [default to 'MOVE']
 **sourceDatabase** | **string** |  | 
 **destinationDatabase** | **string** |  | 
 **users** | **string[]** |  | 
