@@ -1,6 +1,6 @@
 <?php
 /**
- * MovementReassignmentMovement
+ * MovementGatewayAccessCode
  *
  * PHP version 5
  *
@@ -28,17 +28,19 @@
  */
 
 namespace Equisoft\SDK\EquisoftConnect\Model;
+
+use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * MovementReassignmentMovement Class Doc Comment
+ * MovementGatewayAccessCode Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class MovementReassignmentMovement extends MovementMovement 
+class MovementGatewayAccessCode implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +49,7 @@ class MovementReassignmentMovement extends MovementMovement
       *
       * @var string
       */
-    protected static $openAPIModelName = 'movement.ReassignmentMovement';
+    protected static $openAPIModelName = 'movement.GatewayAccessCode';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -55,11 +57,10 @@ class MovementReassignmentMovement extends MovementMovement
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string',
-        'sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
-        'sourceUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
-        'destinationUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
-        'accessCode' => '\Equisoft\SDK\EquisoftConnect\Model\MovementGatewayAccessCode'
+        'accessCode' => 'string',
+        'label' => 'string',
+        'code' => 'string',
+        'system' => 'string'
     ];
 
     /**
@@ -68,11 +69,10 @@ class MovementReassignmentMovement extends MovementMovement
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'type' => null,
-        'sourceDatabase' => null,
-        'sourceUser' => null,
-        'destinationUser' => null,
-        'accessCode' => null
+        'accessCode' => null,
+        'label' => null,
+        'code' => null,
+        'system' => null
     ];
 
     /**
@@ -82,7 +82,7 @@ class MovementReassignmentMovement extends MovementMovement
      */
     public static function openAPITypes()
     {
-        return self::$openAPITypes + parent::openAPITypes();
+        return self::$openAPITypes;
     }
 
     /**
@@ -92,7 +92,7 @@ class MovementReassignmentMovement extends MovementMovement
      */
     public static function openAPIFormats()
     {
-        return self::$openAPIFormats + parent::openAPIFormats();
+        return self::$openAPIFormats;
     }
 
     /**
@@ -102,11 +102,10 @@ class MovementReassignmentMovement extends MovementMovement
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type',
-        'sourceDatabase' => 'sourceDatabase',
-        'sourceUser' => 'sourceUser',
-        'destinationUser' => 'destinationUser',
-        'accessCode' => 'accessCode'
+        'accessCode' => 'accessCode',
+        'label' => 'label',
+        'code' => 'code',
+        'system' => 'system'
     ];
 
     /**
@@ -115,11 +114,10 @@ class MovementReassignmentMovement extends MovementMovement
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType',
-        'sourceDatabase' => 'setSourceDatabase',
-        'sourceUser' => 'setSourceUser',
-        'destinationUser' => 'setDestinationUser',
-        'accessCode' => 'setAccessCode'
+        'accessCode' => 'setAccessCode',
+        'label' => 'setLabel',
+        'code' => 'setCode',
+        'system' => 'setSystem'
     ];
 
     /**
@@ -128,11 +126,10 @@ class MovementReassignmentMovement extends MovementMovement
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType',
-        'sourceDatabase' => 'getSourceDatabase',
-        'sourceUser' => 'getSourceUser',
-        'destinationUser' => 'getDestinationUser',
-        'accessCode' => 'getAccessCode'
+        'accessCode' => 'getAccessCode',
+        'label' => 'getLabel',
+        'code' => 'getCode',
+        'system' => 'getSystem'
     ];
 
     /**
@@ -143,7 +140,7 @@ class MovementReassignmentMovement extends MovementMovement
      */
     public static function attributeMap()
     {
-        return parent::attributeMap() + self::$attributeMap;
+        return self::$attributeMap;
     }
 
     /**
@@ -153,7 +150,7 @@ class MovementReassignmentMovement extends MovementMovement
      */
     public static function setters()
     {
-        return parent::setters() + self::$setters;
+        return self::$setters;
     }
 
     /**
@@ -163,7 +160,7 @@ class MovementReassignmentMovement extends MovementMovement
      */
     public static function getters()
     {
-        return parent::getters() + self::$getters;
+        return self::$getters;
     }
 
     /**
@@ -176,23 +173,16 @@ class MovementReassignmentMovement extends MovementMovement
         return self::$openAPIModelName;
     }
 
-    const TYPE_REASSIGNMENT = 'REASSIGNMENT';
     
 
     
+
     /**
-     * Gets allowable values of the enum
+     * Associative array for storing property values
      *
-     * @return string[]
+     * @var mixed[]
      */
-    public function getTypeAllowableValues()
-    {
-        return [
-            self::TYPE_REASSIGNMENT,
-        ];
-    }
-    
-
+    protected $container = [];
 
     /**
      * Constructor
@@ -202,13 +192,10 @@ class MovementReassignmentMovement extends MovementMovement
      */
     public function __construct(array $data = null)
     {
-        parent::__construct($data);
-
-        $this->container['type'] = isset($data['type']) ? $data['type'] : 'REASSIGNMENT';
-        $this->container['sourceDatabase'] = isset($data['sourceDatabase']) ? $data['sourceDatabase'] : null;
-        $this->container['sourceUser'] = isset($data['sourceUser']) ? $data['sourceUser'] : null;
-        $this->container['destinationUser'] = isset($data['destinationUser']) ? $data['destinationUser'] : null;
         $this->container['accessCode'] = isset($data['accessCode']) ? $data['accessCode'] : null;
+        $this->container['label'] = isset($data['label']) ? $data['label'] : null;
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
+        $this->container['system'] = isset($data['system']) ? $data['system'] : null;
     }
 
     /**
@@ -218,15 +205,7 @@ class MovementReassignmentMovement extends MovementMovement
      */
     public function listInvalidProperties()
     {
-        $invalidProperties = parent::listInvalidProperties();
-
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'type', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
+        $invalidProperties = [];
 
         return $invalidProperties;
     }
@@ -244,114 +223,9 @@ class MovementReassignmentMovement extends MovementMovement
 
 
     /**
-     * Gets type
-     *
-     * @return string|null
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param string|null $type type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($type) && !in_array($type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'type', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets sourceDatabase
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null
-     */
-    public function getSourceDatabase()
-    {
-        return $this->container['sourceDatabase'];
-    }
-
-    /**
-     * Sets sourceDatabase
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null $sourceDatabase sourceDatabase
-     *
-     * @return $this
-     */
-    public function setSourceDatabase($sourceDatabase)
-    {
-        $this->container['sourceDatabase'] = $sourceDatabase;
-
-        return $this;
-    }
-
-    /**
-     * Gets sourceUser
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null
-     */
-    public function getSourceUser()
-    {
-        return $this->container['sourceUser'];
-    }
-
-    /**
-     * Sets sourceUser
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null $sourceUser sourceUser
-     *
-     * @return $this
-     */
-    public function setSourceUser($sourceUser)
-    {
-        $this->container['sourceUser'] = $sourceUser;
-
-        return $this;
-    }
-
-    /**
-     * Gets destinationUser
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null
-     */
-    public function getDestinationUser()
-    {
-        return $this->container['destinationUser'];
-    }
-
-    /**
-     * Sets destinationUser
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null $destinationUser destinationUser
-     *
-     * @return $this
-     */
-    public function setDestinationUser($destinationUser)
-    {
-        $this->container['destinationUser'] = $destinationUser;
-
-        return $this;
-    }
-
-    /**
      * Gets accessCode
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementGatewayAccessCode|null
+     * @return string|null
      */
     public function getAccessCode()
     {
@@ -361,13 +235,85 @@ class MovementReassignmentMovement extends MovementMovement
     /**
      * Sets accessCode
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementGatewayAccessCode|null $accessCode accessCode
+     * @param string|null $accessCode accessCode
      *
      * @return $this
      */
     public function setAccessCode($accessCode)
     {
         $this->container['accessCode'] = $accessCode;
+
+        return $this;
+    }
+
+    /**
+     * Gets label
+     *
+     * @return string|null
+     */
+    public function getLabel()
+    {
+        return $this->container['label'];
+    }
+
+    /**
+     * Sets label
+     *
+     * @param string|null $label label
+     *
+     * @return $this
+     */
+    public function setLabel($label)
+    {
+        $this->container['label'] = $label;
+
+        return $this;
+    }
+
+    /**
+     * Gets code
+     *
+     * @return string|null
+     */
+    public function getCode()
+    {
+        return $this->container['code'];
+    }
+
+    /**
+     * Sets code
+     *
+     * @param string|null $code code
+     *
+     * @return $this
+     */
+    public function setCode($code)
+    {
+        $this->container['code'] = $code;
+
+        return $this;
+    }
+
+    /**
+     * Gets system
+     *
+     * @return string|null
+     */
+    public function getSystem()
+    {
+        return $this->container['system'];
+    }
+
+    /**
+     * Sets system
+     *
+     * @param string|null $system system
+     *
+     * @return $this
+     */
+    public function setSystem($system)
+    {
+        $this->container['system'] = $system;
 
         return $this;
     }

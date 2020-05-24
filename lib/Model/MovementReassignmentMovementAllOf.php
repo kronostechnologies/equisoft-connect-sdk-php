@@ -60,7 +60,8 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
         'type' => 'string',
         'sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
         'sourceUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
-        'destinationUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser'
+        'destinationUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
+        'accessCode' => '\Equisoft\SDK\EquisoftConnect\Model\MovementGatewayAccessCode'
     ];
 
     /**
@@ -72,7 +73,8 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
         'type' => null,
         'sourceDatabase' => null,
         'sourceUser' => null,
-        'destinationUser' => null
+        'destinationUser' => null,
+        'accessCode' => null
     ];
 
     /**
@@ -105,7 +107,8 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
         'type' => 'type',
         'sourceDatabase' => 'sourceDatabase',
         'sourceUser' => 'sourceUser',
-        'destinationUser' => 'destinationUser'
+        'destinationUser' => 'destinationUser',
+        'accessCode' => 'accessCode'
     ];
 
     /**
@@ -117,7 +120,8 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
         'type' => 'setType',
         'sourceDatabase' => 'setSourceDatabase',
         'sourceUser' => 'setSourceUser',
-        'destinationUser' => 'setDestinationUser'
+        'destinationUser' => 'setDestinationUser',
+        'accessCode' => 'setAccessCode'
     ];
 
     /**
@@ -129,7 +133,8 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
         'type' => 'getType',
         'sourceDatabase' => 'getSourceDatabase',
         'sourceUser' => 'getSourceUser',
-        'destinationUser' => 'getDestinationUser'
+        'destinationUser' => 'getDestinationUser',
+        'accessCode' => 'getAccessCode'
     ];
 
     /**
@@ -209,6 +214,7 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
         $this->container['sourceDatabase'] = isset($data['sourceDatabase']) ? $data['sourceDatabase'] : null;
         $this->container['sourceUser'] = isset($data['sourceUser']) ? $data['sourceUser'] : null;
         $this->container['destinationUser'] = isset($data['destinationUser']) ? $data['destinationUser'] : null;
+        $this->container['accessCode'] = isset($data['accessCode']) ? $data['accessCode'] : null;
     }
 
     /**
@@ -344,6 +350,30 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
     public function setDestinationUser($destinationUser)
     {
         $this->container['destinationUser'] = $destinationUser;
+
+        return $this;
+    }
+
+    /**
+     * Gets accessCode
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementGatewayAccessCode|null
+     */
+    public function getAccessCode()
+    {
+        return $this->container['accessCode'];
+    }
+
+    /**
+     * Sets accessCode
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementGatewayAccessCode|null $accessCode accessCode
+     *
+     * @return $this
+     */
+    public function setAccessCode($accessCode)
+    {
+        $this->container['accessCode'] = $accessCode;
 
         return $this;
     }
