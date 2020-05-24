@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
 **type** | **string** |  | [optional] 
+**id** | **int** |  | [optional] 
 **status** | **string** |  | [optional] 
 **availableAction** | **string** |  | [optional] 
 **scheduledDate** | **string** |  | [optional] 
