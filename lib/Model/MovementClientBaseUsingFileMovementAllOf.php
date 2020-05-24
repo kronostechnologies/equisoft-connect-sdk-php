@@ -57,7 +57,13 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string'
+        'type' => 'string',
+        'sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
+        'sourceUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
+        'destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
+        'destinationUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
+        'capsil' => 'bool',
+        'univeris' => 'bool'
     ];
 
     /**
@@ -66,7 +72,13 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'type' => null
+        'type' => null,
+        'sourceDatabase' => null,
+        'sourceUser' => null,
+        'destinationDatabase' => null,
+        'destinationUser' => null,
+        'capsil' => null,
+        'univeris' => null
     ];
 
     /**
@@ -96,7 +108,13 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type'
+        'type' => 'type',
+        'sourceDatabase' => 'sourceDatabase',
+        'sourceUser' => 'sourceUser',
+        'destinationDatabase' => 'destinationDatabase',
+        'destinationUser' => 'destinationUser',
+        'capsil' => 'capsil',
+        'univeris' => 'univeris'
     ];
 
     /**
@@ -105,7 +123,13 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType'
+        'type' => 'setType',
+        'sourceDatabase' => 'setSourceDatabase',
+        'sourceUser' => 'setSourceUser',
+        'destinationDatabase' => 'setDestinationDatabase',
+        'destinationUser' => 'setDestinationUser',
+        'capsil' => 'setCapsil',
+        'univeris' => 'setUniveris'
     ];
 
     /**
@@ -114,7 +138,13 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType'
+        'type' => 'getType',
+        'sourceDatabase' => 'getSourceDatabase',
+        'sourceUser' => 'getSourceUser',
+        'destinationDatabase' => 'getDestinationDatabase',
+        'destinationUser' => 'getDestinationUser',
+        'capsil' => 'getCapsil',
+        'univeris' => 'getUniveris'
     ];
 
     /**
@@ -191,6 +221,12 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
     public function __construct(array $data = null)
     {
         $this->container['type'] = isset($data['type']) ? $data['type'] : 'CLIENTBASE_USING_FILE';
+        $this->container['sourceDatabase'] = isset($data['sourceDatabase']) ? $data['sourceDatabase'] : null;
+        $this->container['sourceUser'] = isset($data['sourceUser']) ? $data['sourceUser'] : null;
+        $this->container['destinationDatabase'] = isset($data['destinationDatabase']) ? $data['destinationDatabase'] : null;
+        $this->container['destinationUser'] = isset($data['destinationUser']) ? $data['destinationUser'] : null;
+        $this->container['capsil'] = isset($data['capsil']) ? $data['capsil'] : null;
+        $this->container['univeris'] = isset($data['univeris']) ? $data['univeris'] : null;
     }
 
     /**
@@ -254,6 +290,150 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
             );
         }
         $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets sourceDatabase
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null
+     */
+    public function getSourceDatabase()
+    {
+        return $this->container['sourceDatabase'];
+    }
+
+    /**
+     * Sets sourceDatabase
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null $sourceDatabase sourceDatabase
+     *
+     * @return $this
+     */
+    public function setSourceDatabase($sourceDatabase)
+    {
+        $this->container['sourceDatabase'] = $sourceDatabase;
+
+        return $this;
+    }
+
+    /**
+     * Gets sourceUser
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null
+     */
+    public function getSourceUser()
+    {
+        return $this->container['sourceUser'];
+    }
+
+    /**
+     * Sets sourceUser
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null $sourceUser sourceUser
+     *
+     * @return $this
+     */
+    public function setSourceUser($sourceUser)
+    {
+        $this->container['sourceUser'] = $sourceUser;
+
+        return $this;
+    }
+
+    /**
+     * Gets destinationDatabase
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null
+     */
+    public function getDestinationDatabase()
+    {
+        return $this->container['destinationDatabase'];
+    }
+
+    /**
+     * Sets destinationDatabase
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null $destinationDatabase destinationDatabase
+     *
+     * @return $this
+     */
+    public function setDestinationDatabase($destinationDatabase)
+    {
+        $this->container['destinationDatabase'] = $destinationDatabase;
+
+        return $this;
+    }
+
+    /**
+     * Gets destinationUser
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null
+     */
+    public function getDestinationUser()
+    {
+        return $this->container['destinationUser'];
+    }
+
+    /**
+     * Sets destinationUser
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null $destinationUser destinationUser
+     *
+     * @return $this
+     */
+    public function setDestinationUser($destinationUser)
+    {
+        $this->container['destinationUser'] = $destinationUser;
+
+        return $this;
+    }
+
+    /**
+     * Gets capsil
+     *
+     * @return bool|null
+     */
+    public function getCapsil()
+    {
+        return $this->container['capsil'];
+    }
+
+    /**
+     * Sets capsil
+     *
+     * @param bool|null $capsil capsil
+     *
+     * @return $this
+     */
+    public function setCapsil($capsil)
+    {
+        $this->container['capsil'] = $capsil;
+
+        return $this;
+    }
+
+    /**
+     * Gets univeris
+     *
+     * @return bool|null
+     */
+    public function getUniveris()
+    {
+        return $this->container['univeris'];
+    }
+
+    /**
+     * Sets univeris
+     *
+     * @param bool|null $univeris univeris
+     *
+     * @return $this
+     */
+    public function setUniveris($univeris)
+    {
+        $this->container['univeris'] = $univeris;
 
         return $this;
     }

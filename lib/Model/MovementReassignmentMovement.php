@@ -55,7 +55,10 @@ class MovementReassignmentMovement extends MovementMovement
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string'
+        'type' => 'string',
+        'sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
+        'sourceUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
+        'destinationUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser'
     ];
 
     /**
@@ -64,7 +67,10 @@ class MovementReassignmentMovement extends MovementMovement
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'type' => null
+        'type' => null,
+        'sourceDatabase' => null,
+        'sourceUser' => null,
+        'destinationUser' => null
     ];
 
     /**
@@ -94,7 +100,10 @@ class MovementReassignmentMovement extends MovementMovement
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type'
+        'type' => 'type',
+        'sourceDatabase' => 'sourceDatabase',
+        'sourceUser' => 'sourceUser',
+        'destinationUser' => 'destinationUser'
     ];
 
     /**
@@ -103,7 +112,10 @@ class MovementReassignmentMovement extends MovementMovement
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType'
+        'type' => 'setType',
+        'sourceDatabase' => 'setSourceDatabase',
+        'sourceUser' => 'setSourceUser',
+        'destinationUser' => 'setDestinationUser'
     ];
 
     /**
@@ -112,7 +124,10 @@ class MovementReassignmentMovement extends MovementMovement
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType'
+        'type' => 'getType',
+        'sourceDatabase' => 'getSourceDatabase',
+        'sourceUser' => 'getSourceUser',
+        'destinationUser' => 'getDestinationUser'
     ];
 
     /**
@@ -185,6 +200,9 @@ class MovementReassignmentMovement extends MovementMovement
         parent::__construct($data);
 
         $this->container['type'] = isset($data['type']) ? $data['type'] : 'REASSIGNMENT';
+        $this->container['sourceDatabase'] = isset($data['sourceDatabase']) ? $data['sourceDatabase'] : null;
+        $this->container['sourceUser'] = isset($data['sourceUser']) ? $data['sourceUser'] : null;
+        $this->container['destinationUser'] = isset($data['destinationUser']) ? $data['destinationUser'] : null;
     }
 
     /**
@@ -248,6 +266,78 @@ class MovementReassignmentMovement extends MovementMovement
             );
         }
         $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets sourceDatabase
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null
+     */
+    public function getSourceDatabase()
+    {
+        return $this->container['sourceDatabase'];
+    }
+
+    /**
+     * Sets sourceDatabase
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null $sourceDatabase sourceDatabase
+     *
+     * @return $this
+     */
+    public function setSourceDatabase($sourceDatabase)
+    {
+        $this->container['sourceDatabase'] = $sourceDatabase;
+
+        return $this;
+    }
+
+    /**
+     * Gets sourceUser
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null
+     */
+    public function getSourceUser()
+    {
+        return $this->container['sourceUser'];
+    }
+
+    /**
+     * Sets sourceUser
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null $sourceUser sourceUser
+     *
+     * @return $this
+     */
+    public function setSourceUser($sourceUser)
+    {
+        $this->container['sourceUser'] = $sourceUser;
+
+        return $this;
+    }
+
+    /**
+     * Gets destinationUser
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null
+     */
+    public function getDestinationUser()
+    {
+        return $this->container['destinationUser'];
+    }
+
+    /**
+     * Sets destinationUser
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null $destinationUser destinationUser
+     *
+     * @return $this
+     */
+    public function setDestinationUser($destinationUser)
+    {
+        $this->container['destinationUser'] = $destinationUser;
 
         return $this;
     }

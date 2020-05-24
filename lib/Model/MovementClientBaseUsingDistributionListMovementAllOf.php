@@ -57,7 +57,14 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string'
+        'type' => 'string',
+        'sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
+        'sourceUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
+        'sourceDistList' => 'string',
+        'destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
+        'destinationUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
+        'datagatewayAccessMappings' => 'map[string,string]',
+        'transferOption' => 'string'
     ];
 
     /**
@@ -66,7 +73,14 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'type' => null
+        'type' => null,
+        'sourceDatabase' => null,
+        'sourceUser' => null,
+        'sourceDistList' => null,
+        'destinationDatabase' => null,
+        'destinationUser' => null,
+        'datagatewayAccessMappings' => null,
+        'transferOption' => null
     ];
 
     /**
@@ -96,7 +110,14 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type'
+        'type' => 'type',
+        'sourceDatabase' => 'sourceDatabase',
+        'sourceUser' => 'sourceUser',
+        'sourceDistList' => 'sourceDistList',
+        'destinationDatabase' => 'destinationDatabase',
+        'destinationUser' => 'destinationUser',
+        'datagatewayAccessMappings' => 'datagatewayAccessMappings',
+        'transferOption' => 'transferOption'
     ];
 
     /**
@@ -105,7 +126,14 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType'
+        'type' => 'setType',
+        'sourceDatabase' => 'setSourceDatabase',
+        'sourceUser' => 'setSourceUser',
+        'sourceDistList' => 'setSourceDistList',
+        'destinationDatabase' => 'setDestinationDatabase',
+        'destinationUser' => 'setDestinationUser',
+        'datagatewayAccessMappings' => 'setDatagatewayAccessMappings',
+        'transferOption' => 'setTransferOption'
     ];
 
     /**
@@ -114,7 +142,14 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType'
+        'type' => 'getType',
+        'sourceDatabase' => 'getSourceDatabase',
+        'sourceUser' => 'getSourceUser',
+        'sourceDistList' => 'getSourceDistList',
+        'destinationDatabase' => 'getDestinationDatabase',
+        'destinationUser' => 'getDestinationUser',
+        'datagatewayAccessMappings' => 'getDatagatewayAccessMappings',
+        'transferOption' => 'getTransferOption'
     ];
 
     /**
@@ -191,6 +226,13 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
     public function __construct(array $data = null)
     {
         $this->container['type'] = isset($data['type']) ? $data['type'] : 'CLIENTBASE_USING_DISTLIST';
+        $this->container['sourceDatabase'] = isset($data['sourceDatabase']) ? $data['sourceDatabase'] : null;
+        $this->container['sourceUser'] = isset($data['sourceUser']) ? $data['sourceUser'] : null;
+        $this->container['sourceDistList'] = isset($data['sourceDistList']) ? $data['sourceDistList'] : null;
+        $this->container['destinationDatabase'] = isset($data['destinationDatabase']) ? $data['destinationDatabase'] : null;
+        $this->container['destinationUser'] = isset($data['destinationUser']) ? $data['destinationUser'] : null;
+        $this->container['datagatewayAccessMappings'] = isset($data['datagatewayAccessMappings']) ? $data['datagatewayAccessMappings'] : null;
+        $this->container['transferOption'] = isset($data['transferOption']) ? $data['transferOption'] : null;
     }
 
     /**
@@ -254,6 +296,174 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
             );
         }
         $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets sourceDatabase
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null
+     */
+    public function getSourceDatabase()
+    {
+        return $this->container['sourceDatabase'];
+    }
+
+    /**
+     * Sets sourceDatabase
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null $sourceDatabase sourceDatabase
+     *
+     * @return $this
+     */
+    public function setSourceDatabase($sourceDatabase)
+    {
+        $this->container['sourceDatabase'] = $sourceDatabase;
+
+        return $this;
+    }
+
+    /**
+     * Gets sourceUser
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null
+     */
+    public function getSourceUser()
+    {
+        return $this->container['sourceUser'];
+    }
+
+    /**
+     * Sets sourceUser
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null $sourceUser sourceUser
+     *
+     * @return $this
+     */
+    public function setSourceUser($sourceUser)
+    {
+        $this->container['sourceUser'] = $sourceUser;
+
+        return $this;
+    }
+
+    /**
+     * Gets sourceDistList
+     *
+     * @return string|null
+     */
+    public function getSourceDistList()
+    {
+        return $this->container['sourceDistList'];
+    }
+
+    /**
+     * Sets sourceDistList
+     *
+     * @param string|null $sourceDistList sourceDistList
+     *
+     * @return $this
+     */
+    public function setSourceDistList($sourceDistList)
+    {
+        $this->container['sourceDistList'] = $sourceDistList;
+
+        return $this;
+    }
+
+    /**
+     * Gets destinationDatabase
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null
+     */
+    public function getDestinationDatabase()
+    {
+        return $this->container['destinationDatabase'];
+    }
+
+    /**
+     * Sets destinationDatabase
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null $destinationDatabase destinationDatabase
+     *
+     * @return $this
+     */
+    public function setDestinationDatabase($destinationDatabase)
+    {
+        $this->container['destinationDatabase'] = $destinationDatabase;
+
+        return $this;
+    }
+
+    /**
+     * Gets destinationUser
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null
+     */
+    public function getDestinationUser()
+    {
+        return $this->container['destinationUser'];
+    }
+
+    /**
+     * Sets destinationUser
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null $destinationUser destinationUser
+     *
+     * @return $this
+     */
+    public function setDestinationUser($destinationUser)
+    {
+        $this->container['destinationUser'] = $destinationUser;
+
+        return $this;
+    }
+
+    /**
+     * Gets datagatewayAccessMappings
+     *
+     * @return map[string,string]|null
+     */
+    public function getDatagatewayAccessMappings()
+    {
+        return $this->container['datagatewayAccessMappings'];
+    }
+
+    /**
+     * Sets datagatewayAccessMappings
+     *
+     * @param map[string,string]|null $datagatewayAccessMappings datagatewayAccessMappings
+     *
+     * @return $this
+     */
+    public function setDatagatewayAccessMappings($datagatewayAccessMappings)
+    {
+        $this->container['datagatewayAccessMappings'] = $datagatewayAccessMappings;
+
+        return $this;
+    }
+
+    /**
+     * Gets transferOption
+     *
+     * @return string|null
+     */
+    public function getTransferOption()
+    {
+        return $this->container['transferOption'];
+    }
+
+    /**
+     * Sets transferOption
+     *
+     * @param string|null $transferOption transferOption
+     *
+     * @return $this
+     */
+    public function setTransferOption($transferOption)
+    {
+        $this->container['transferOption'] = $transferOption;
 
         return $this;
     }

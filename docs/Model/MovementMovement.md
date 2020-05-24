@@ -14,7 +14,6 @@ Name | Type | Description | Notes
 **addedBy** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementUser**](MovementUser.md) |  | [optional] 
 **cancelledDate** | **string** |  | [optional] 
 **cancelledBy** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementUser**](MovementUser.md) |  | [optional] 
-**detail** | **string** | Additional movement information encoded in json. TODO: Structure ? | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

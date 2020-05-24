@@ -73,8 +73,7 @@ class MovementMovement implements ModelInterface, ArrayAccess
         'addedDate' => 'string',
         'addedBy' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
         'cancelledDate' => 'string',
-        'cancelledBy' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
-        'detail' => 'string'
+        'cancelledBy' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser'
     ];
 
     /**
@@ -92,8 +91,7 @@ class MovementMovement implements ModelInterface, ArrayAccess
         'addedDate' => null,
         'addedBy' => null,
         'cancelledDate' => null,
-        'cancelledBy' => null,
-        'detail' => null
+        'cancelledBy' => null
     ];
 
     /**
@@ -132,8 +130,7 @@ class MovementMovement implements ModelInterface, ArrayAccess
         'addedDate' => 'addedDate',
         'addedBy' => 'addedBy',
         'cancelledDate' => 'cancelledDate',
-        'cancelledBy' => 'cancelledBy',
-        'detail' => 'detail'
+        'cancelledBy' => 'cancelledBy'
     ];
 
     /**
@@ -151,8 +148,7 @@ class MovementMovement implements ModelInterface, ArrayAccess
         'addedDate' => 'setAddedDate',
         'addedBy' => 'setAddedBy',
         'cancelledDate' => 'setCancelledDate',
-        'cancelledBy' => 'setCancelledBy',
-        'detail' => 'setDetail'
+        'cancelledBy' => 'setCancelledBy'
     ];
 
     /**
@@ -170,8 +166,7 @@ class MovementMovement implements ModelInterface, ArrayAccess
         'addedDate' => 'getAddedDate',
         'addedBy' => 'getAddedBy',
         'cancelledDate' => 'getCancelledDate',
-        'cancelledBy' => 'getCancelledBy',
-        'detail' => 'getDetail'
+        'cancelledBy' => 'getCancelledBy'
     ];
 
     /**
@@ -265,7 +260,6 @@ class MovementMovement implements ModelInterface, ArrayAccess
         $this->container['addedBy'] = isset($data['addedBy']) ? $data['addedBy'] : null;
         $this->container['cancelledDate'] = isset($data['cancelledDate']) ? $data['cancelledDate'] : null;
         $this->container['cancelledBy'] = isset($data['cancelledBy']) ? $data['cancelledBy'] : null;
-        $this->container['detail'] = isset($data['detail']) ? $data['detail'] : null;
 
         // Initialize discriminator property with the model name.
         $this->container['type'] = static::$openAPIModelName;
@@ -548,30 +542,6 @@ class MovementMovement implements ModelInterface, ArrayAccess
     public function setCancelledBy($cancelledBy)
     {
         $this->container['cancelledBy'] = $cancelledBy;
-
-        return $this;
-    }
-
-    /**
-     * Gets detail
-     *
-     * @return string|null
-     */
-    public function getDetail()
-    {
-        return $this->container['detail'];
-    }
-
-    /**
-     * Sets detail
-     *
-     * @param string|null $detail Additional movement information encoded in json. TODO: Structure ?
-     *
-     * @return $this
-     */
-    public function setDetail($detail)
-    {
-        $this->container['detail'] = $detail;
 
         return $this;
     }
