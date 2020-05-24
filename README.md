@@ -175,6 +175,7 @@ Class | Method | HTTP request | Description
  - [MovementReassignmentMovementPayloadAllOf](docs/Model/MovementReassignmentMovementPayloadAllOf.md)
  - [MovementTransferOption](docs/Model/MovementTransferOption.md)
  - [MovementUser](docs/Model/MovementUser.md)
+ - [MovementUserTuple](docs/Model/MovementUserTuple.md)
  - [MovementValidationError](docs/Model/MovementValidationError.md)
  - [MovementValidationErrorResponse](docs/Model/MovementValidationErrorResponse.md)
 

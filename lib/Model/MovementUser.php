@@ -58,6 +58,7 @@ class MovementUser implements ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'id' => 'int',
+        'uuid' => 'string',
         'displayName' => 'string'
     ];
 
@@ -68,6 +69,7 @@ class MovementUser implements ModelInterface, ArrayAccess
       */
     protected static $openAPIFormats = [
         'id' => null,
+        'uuid' => null,
         'displayName' => null
     ];
 
@@ -99,6 +101,7 @@ class MovementUser implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'uuid' => 'uuid',
         'displayName' => 'displayName'
     ];
 
@@ -109,6 +112,7 @@ class MovementUser implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'uuid' => 'setUuid',
         'displayName' => 'setDisplayName'
     ];
 
@@ -119,6 +123,7 @@ class MovementUser implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'uuid' => 'getUuid',
         'displayName' => 'getDisplayName'
     ];
 
@@ -183,6 +188,7 @@ class MovementUser implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
         $this->container['displayName'] = isset($data['displayName']) ? $data['displayName'] : null;
     }
 
@@ -230,6 +236,30 @@ class MovementUser implements ModelInterface, ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets uuid
+     *
+     * @return string|null
+     */
+    public function getUuid()
+    {
+        return $this->container['uuid'];
+    }
+
+    /**
+     * Sets uuid
+     *
+     * @param string|null $uuid uuid
+     *
+     * @return $this
+     */
+    public function setUuid($uuid)
+    {
+        $this->container['uuid'] = $uuid;
 
         return $this;
     }

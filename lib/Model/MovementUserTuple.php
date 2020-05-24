@@ -1,6 +1,6 @@
 <?php
 /**
- * MovementCopyMovement
+ * MovementUserTuple
  *
  * PHP version 5
  *
@@ -28,17 +28,19 @@
  */
 
 namespace Equisoft\SDK\EquisoftConnect\Model;
+
+use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * MovementCopyMovement Class Doc Comment
+ * MovementUserTuple Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class MovementCopyMovement extends MovementMovement 
+class MovementUserTuple implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +49,7 @@ class MovementCopyMovement extends MovementMovement
       *
       * @var string
       */
-    protected static $openAPIModelName = 'movement.CopyMovement';
+    protected static $openAPIModelName = 'movement.UserTuple';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -55,10 +57,8 @@ class MovementCopyMovement extends MovementMovement
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string',
-        'sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
-        'destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
-        'users' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUserTuple[]'
+        'from' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
+        'to' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser'
     ];
 
     /**
@@ -67,10 +67,8 @@ class MovementCopyMovement extends MovementMovement
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'type' => null,
-        'sourceDatabase' => null,
-        'destinationDatabase' => null,
-        'users' => null
+        'from' => null,
+        'to' => null
     ];
 
     /**
@@ -80,7 +78,7 @@ class MovementCopyMovement extends MovementMovement
      */
     public static function openAPITypes()
     {
-        return self::$openAPITypes + parent::openAPITypes();
+        return self::$openAPITypes;
     }
 
     /**
@@ -90,7 +88,7 @@ class MovementCopyMovement extends MovementMovement
      */
     public static function openAPIFormats()
     {
-        return self::$openAPIFormats + parent::openAPIFormats();
+        return self::$openAPIFormats;
     }
 
     /**
@@ -100,10 +98,8 @@ class MovementCopyMovement extends MovementMovement
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type',
-        'sourceDatabase' => 'sourceDatabase',
-        'destinationDatabase' => 'destinationDatabase',
-        'users' => 'users'
+        'from' => 'from',
+        'to' => 'to'
     ];
 
     /**
@@ -112,10 +108,8 @@ class MovementCopyMovement extends MovementMovement
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType',
-        'sourceDatabase' => 'setSourceDatabase',
-        'destinationDatabase' => 'setDestinationDatabase',
-        'users' => 'setUsers'
+        'from' => 'setFrom',
+        'to' => 'setTo'
     ];
 
     /**
@@ -124,10 +118,8 @@ class MovementCopyMovement extends MovementMovement
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType',
-        'sourceDatabase' => 'getSourceDatabase',
-        'destinationDatabase' => 'getDestinationDatabase',
-        'users' => 'getUsers'
+        'from' => 'getFrom',
+        'to' => 'getTo'
     ];
 
     /**
@@ -138,7 +130,7 @@ class MovementCopyMovement extends MovementMovement
      */
     public static function attributeMap()
     {
-        return parent::attributeMap() + self::$attributeMap;
+        return self::$attributeMap;
     }
 
     /**
@@ -148,7 +140,7 @@ class MovementCopyMovement extends MovementMovement
      */
     public static function setters()
     {
-        return parent::setters() + self::$setters;
+        return self::$setters;
     }
 
     /**
@@ -158,7 +150,7 @@ class MovementCopyMovement extends MovementMovement
      */
     public static function getters()
     {
-        return parent::getters() + self::$getters;
+        return self::$getters;
     }
 
     /**
@@ -171,23 +163,16 @@ class MovementCopyMovement extends MovementMovement
         return self::$openAPIModelName;
     }
 
-    const TYPE_COPY = 'COPY';
     
 
     
+
     /**
-     * Gets allowable values of the enum
+     * Associative array for storing property values
      *
-     * @return string[]
+     * @var mixed[]
      */
-    public function getTypeAllowableValues()
-    {
-        return [
-            self::TYPE_COPY,
-        ];
-    }
-    
-
+    protected $container = [];
 
     /**
      * Constructor
@@ -197,12 +182,8 @@ class MovementCopyMovement extends MovementMovement
      */
     public function __construct(array $data = null)
     {
-        parent::__construct($data);
-
-        $this->container['type'] = isset($data['type']) ? $data['type'] : 'COPY';
-        $this->container['sourceDatabase'] = isset($data['sourceDatabase']) ? $data['sourceDatabase'] : null;
-        $this->container['destinationDatabase'] = isset($data['destinationDatabase']) ? $data['destinationDatabase'] : null;
-        $this->container['users'] = isset($data['users']) ? $data['users'] : null;
+        $this->container['from'] = isset($data['from']) ? $data['from'] : null;
+        $this->container['to'] = isset($data['to']) ? $data['to'] : null;
     }
 
     /**
@@ -212,16 +193,14 @@ class MovementCopyMovement extends MovementMovement
      */
     public function listInvalidProperties()
     {
-        $invalidProperties = parent::listInvalidProperties();
+        $invalidProperties = [];
 
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'type', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
+        if ($this->container['from'] === null) {
+            $invalidProperties[] = "'from' can't be null";
         }
-
+        if ($this->container['to'] === null) {
+            $invalidProperties[] = "'to' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -238,106 +217,49 @@ class MovementCopyMovement extends MovementMovement
 
 
     /**
-     * Gets type
+     * Gets from
      *
-     * @return string|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser
      */
-    public function getType()
+    public function getFrom()
     {
-        return $this->container['type'];
+        return $this->container['from'];
     }
 
     /**
-     * Sets type
+     * Sets from
      *
-     * @param string|null $type type
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser $from from
      *
      * @return $this
      */
-    public function setType($type)
+    public function setFrom($from)
     {
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($type) && !in_array($type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'type', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['type'] = $type;
+        $this->container['from'] = $from;
 
         return $this;
     }
 
     /**
-     * Gets sourceDatabase
+     * Gets to
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser
      */
-    public function getSourceDatabase()
+    public function getTo()
     {
-        return $this->container['sourceDatabase'];
+        return $this->container['to'];
     }
 
     /**
-     * Sets sourceDatabase
+     * Sets to
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null $sourceDatabase sourceDatabase
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser $to to
      *
      * @return $this
      */
-    public function setSourceDatabase($sourceDatabase)
+    public function setTo($to)
     {
-        $this->container['sourceDatabase'] = $sourceDatabase;
-
-        return $this;
-    }
-
-    /**
-     * Gets destinationDatabase
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null
-     */
-    public function getDestinationDatabase()
-    {
-        return $this->container['destinationDatabase'];
-    }
-
-    /**
-     * Sets destinationDatabase
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null $destinationDatabase destinationDatabase
-     *
-     * @return $this
-     */
-    public function setDestinationDatabase($destinationDatabase)
-    {
-        $this->container['destinationDatabase'] = $destinationDatabase;
-
-        return $this;
-    }
-
-    /**
-     * Gets users
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUserTuple[]|null
-     */
-    public function getUsers()
-    {
-        return $this->container['users'];
-    }
-
-    /**
-     * Sets users
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUserTuple[]|null $users users
-     *
-     * @return $this
-     */
-    public function setUsers($users)
-    {
-        $this->container['users'] = $users;
+        $this->container['to'] = $to;
 
         return $this;
     }

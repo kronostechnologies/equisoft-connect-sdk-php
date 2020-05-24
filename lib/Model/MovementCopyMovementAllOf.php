@@ -60,7 +60,7 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess
         'type' => 'string',
         'sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
         'destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
-        'users' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser[]'
+        'users' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUserTuple[]'
     ];
 
     /**
@@ -327,7 +327,7 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess
     /**
      * Gets users
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser[]|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUserTuple[]|null
      */
     public function getUsers()
     {
@@ -337,7 +337,7 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess
     /**
      * Sets users
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser[]|null $users users
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUserTuple[]|null $users users
      *
      * @return $this
      */
