@@ -60,7 +60,7 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
         'type' => 'string',
         'sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
         'sourceUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
-        'sourceDistList' => 'string',
+        'sourceDistributionList' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDistributionList',
         'destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
         'destinationUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
         'datagatewayAccessMappings' => 'map[string,string]',
@@ -76,7 +76,7 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
         'type' => null,
         'sourceDatabase' => null,
         'sourceUser' => null,
-        'sourceDistList' => null,
+        'sourceDistributionList' => null,
         'destinationDatabase' => null,
         'destinationUser' => null,
         'datagatewayAccessMappings' => null,
@@ -113,7 +113,7 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
         'type' => 'type',
         'sourceDatabase' => 'sourceDatabase',
         'sourceUser' => 'sourceUser',
-        'sourceDistList' => 'sourceDistList',
+        'sourceDistributionList' => 'sourceDistributionList',
         'destinationDatabase' => 'destinationDatabase',
         'destinationUser' => 'destinationUser',
         'datagatewayAccessMappings' => 'datagatewayAccessMappings',
@@ -129,7 +129,7 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
         'type' => 'setType',
         'sourceDatabase' => 'setSourceDatabase',
         'sourceUser' => 'setSourceUser',
-        'sourceDistList' => 'setSourceDistList',
+        'sourceDistributionList' => 'setSourceDistributionList',
         'destinationDatabase' => 'setDestinationDatabase',
         'destinationUser' => 'setDestinationUser',
         'datagatewayAccessMappings' => 'setDatagatewayAccessMappings',
@@ -145,7 +145,7 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
         'type' => 'getType',
         'sourceDatabase' => 'getSourceDatabase',
         'sourceUser' => 'getSourceUser',
-        'sourceDistList' => 'getSourceDistList',
+        'sourceDistributionList' => 'getSourceDistributionList',
         'destinationDatabase' => 'getDestinationDatabase',
         'destinationUser' => 'getDestinationUser',
         'datagatewayAccessMappings' => 'getDatagatewayAccessMappings',
@@ -228,7 +228,7 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
         $this->container['type'] = isset($data['type']) ? $data['type'] : 'CLIENTBASE_USING_DISTLIST';
         $this->container['sourceDatabase'] = isset($data['sourceDatabase']) ? $data['sourceDatabase'] : null;
         $this->container['sourceUser'] = isset($data['sourceUser']) ? $data['sourceUser'] : null;
-        $this->container['sourceDistList'] = isset($data['sourceDistList']) ? $data['sourceDistList'] : null;
+        $this->container['sourceDistributionList'] = isset($data['sourceDistributionList']) ? $data['sourceDistributionList'] : null;
         $this->container['destinationDatabase'] = isset($data['destinationDatabase']) ? $data['destinationDatabase'] : null;
         $this->container['destinationUser'] = isset($data['destinationUser']) ? $data['destinationUser'] : null;
         $this->container['datagatewayAccessMappings'] = isset($data['datagatewayAccessMappings']) ? $data['datagatewayAccessMappings'] : null;
@@ -349,25 +349,25 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
     }
 
     /**
-     * Gets sourceDistList
+     * Gets sourceDistributionList
      *
-     * @return string|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDistributionList|null
      */
-    public function getSourceDistList()
+    public function getSourceDistributionList()
     {
-        return $this->container['sourceDistList'];
+        return $this->container['sourceDistributionList'];
     }
 
     /**
-     * Sets sourceDistList
+     * Sets sourceDistributionList
      *
-     * @param string|null $sourceDistList sourceDistList
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDistributionList|null $sourceDistributionList sourceDistributionList
      *
      * @return $this
      */
-    public function setSourceDistList($sourceDistList)
+    public function setSourceDistributionList($sourceDistributionList)
     {
-        $this->container['sourceDistList'] = $sourceDistList;
+        $this->container['sourceDistributionList'] = $sourceDistributionList;
 
         return $this;
     }

@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **type** | **string** |  | [default to 'CLIENTBASE_USING_DISTLIST']
 **sourceDatabase** | **string** |  | 
 **sourceUser** | **string** |  | 
-**sourceDistList** | **string** |  | 
+**sourceDistributionList** | **string** |  | [optional] 
 **destinationDatabase** | **string** |  | 
 **destinationUser** | **string** |  | 
 **datagatewayAccessMappings** | **map[string,string]** |  | [optional] 

@@ -157,6 +157,7 @@ Class | Method | HTTP request | Description
  - [MovementCopyMovementPayload](docs/Model/MovementCopyMovementPayload.md)
  - [MovementCopyMovementPayloadAllOf](docs/Model/MovementCopyMovementPayloadAllOf.md)
  - [MovementDatabase](docs/Model/MovementDatabase.md)
+ - [MovementDistributionList](docs/Model/MovementDistributionList.md)
  - [MovementGetStatusResponse](docs/Model/MovementGetStatusResponse.md)
  - [MovementListMovementResponse](docs/Model/MovementListMovementResponse.md)
  - [MovementMoveMovement](docs/Model/MovementMoveMovement.md)

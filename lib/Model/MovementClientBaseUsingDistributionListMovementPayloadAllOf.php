@@ -60,7 +60,7 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
         'type' => 'string',
         'sourceDatabase' => 'string',
         'sourceUser' => 'string',
-        'sourceDistList' => 'string',
+        'sourceDistributionList' => 'string',
         'destinationDatabase' => 'string',
         'destinationUser' => 'string',
         'datagatewayAccessMappings' => 'map[string,string]',
@@ -76,7 +76,7 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
         'type' => null,
         'sourceDatabase' => null,
         'sourceUser' => null,
-        'sourceDistList' => null,
+        'sourceDistributionList' => null,
         'destinationDatabase' => null,
         'destinationUser' => null,
         'datagatewayAccessMappings' => null,
@@ -113,7 +113,7 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
         'type' => 'type',
         'sourceDatabase' => 'sourceDatabase',
         'sourceUser' => 'sourceUser',
-        'sourceDistList' => 'sourceDistList',
+        'sourceDistributionList' => 'sourceDistributionList',
         'destinationDatabase' => 'destinationDatabase',
         'destinationUser' => 'destinationUser',
         'datagatewayAccessMappings' => 'datagatewayAccessMappings',
@@ -129,7 +129,7 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
         'type' => 'setType',
         'sourceDatabase' => 'setSourceDatabase',
         'sourceUser' => 'setSourceUser',
-        'sourceDistList' => 'setSourceDistList',
+        'sourceDistributionList' => 'setSourceDistributionList',
         'destinationDatabase' => 'setDestinationDatabase',
         'destinationUser' => 'setDestinationUser',
         'datagatewayAccessMappings' => 'setDatagatewayAccessMappings',
@@ -145,7 +145,7 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
         'type' => 'getType',
         'sourceDatabase' => 'getSourceDatabase',
         'sourceUser' => 'getSourceUser',
-        'sourceDistList' => 'getSourceDistList',
+        'sourceDistributionList' => 'getSourceDistributionList',
         'destinationDatabase' => 'getDestinationDatabase',
         'destinationUser' => 'getDestinationUser',
         'datagatewayAccessMappings' => 'getDatagatewayAccessMappings',
@@ -228,7 +228,7 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
         $this->container['type'] = isset($data['type']) ? $data['type'] : 'CLIENTBASE_USING_DISTLIST';
         $this->container['sourceDatabase'] = isset($data['sourceDatabase']) ? $data['sourceDatabase'] : null;
         $this->container['sourceUser'] = isset($data['sourceUser']) ? $data['sourceUser'] : null;
-        $this->container['sourceDistList'] = isset($data['sourceDistList']) ? $data['sourceDistList'] : null;
+        $this->container['sourceDistributionList'] = isset($data['sourceDistributionList']) ? $data['sourceDistributionList'] : null;
         $this->container['destinationDatabase'] = isset($data['destinationDatabase']) ? $data['destinationDatabase'] : null;
         $this->container['destinationUser'] = isset($data['destinationUser']) ? $data['destinationUser'] : null;
         $this->container['datagatewayAccessMappings'] = isset($data['datagatewayAccessMappings']) ? $data['datagatewayAccessMappings'] : null;
@@ -260,9 +260,6 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
         }
         if ($this->container['sourceUser'] === null) {
             $invalidProperties[] = "'sourceUser' can't be null";
-        }
-        if ($this->container['sourceDistList'] === null) {
-            $invalidProperties[] = "'sourceDistList' can't be null";
         }
         if ($this->container['destinationDatabase'] === null) {
             $invalidProperties[] = "'destinationDatabase' can't be null";
@@ -370,25 +367,25 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
     }
 
     /**
-     * Gets sourceDistList
+     * Gets sourceDistributionList
      *
-     * @return string
+     * @return string|null
      */
-    public function getSourceDistList()
+    public function getSourceDistributionList()
     {
-        return $this->container['sourceDistList'];
+        return $this->container['sourceDistributionList'];
     }
 
     /**
-     * Sets sourceDistList
+     * Sets sourceDistributionList
      *
-     * @param string $sourceDistList sourceDistList
+     * @param string|null $sourceDistributionList sourceDistributionList
      *
      * @return $this
      */
-    public function setSourceDistList($sourceDistList)
+    public function setSourceDistributionList($sourceDistributionList)
     {
-        $this->container['sourceDistList'] = $sourceDistList;
+        $this->container['sourceDistributionList'] = $sourceDistributionList;
 
         return $this;
     }
