@@ -157,6 +157,7 @@ Class | Method | HTTP request | Description
  - [MovementMovement](docs/Model/MovementMovement.md)
  - [MovementMovementPayload](docs/Model/MovementMovementPayload.md)
  - [MovementMovementStatus](docs/Model/MovementMovementStatus.md)
+ - [MovementMovementType](docs/Model/MovementMovementType.md)
  - [MovementReassignmentMovementPayload](docs/Model/MovementReassignmentMovementPayload.md)
  - [MovementReassignmentMovementPayloadAllOf](docs/Model/MovementReassignmentMovementPayloadAllOf.md)
  - [MovementTransferOption](docs/Model/MovementTransferOption.md)

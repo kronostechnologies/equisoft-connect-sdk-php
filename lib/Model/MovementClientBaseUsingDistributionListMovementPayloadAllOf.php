@@ -193,7 +193,7 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
         return self::$openAPIModelName;
     }
 
-    const MOVEMENT_TYPE_CLIENT_BASE_USING_DISTRIBUTION_LIST_MOVEMENT_PAYLOAD = 'ClientBaseUsingDistributionListMovementPayload';
+    const MOVEMENT_TYPE_CLIENTBASE_USING_DISTLIST = 'CLIENTBASE_USING_DISTLIST';
     
 
     
@@ -205,7 +205,7 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
     public function getMovementTypeAllowableValues()
     {
         return [
-            self::MOVEMENT_TYPE_CLIENT_BASE_USING_DISTRIBUTION_LIST_MOVEMENT_PAYLOAD,
+            self::MOVEMENT_TYPE_CLIENTBASE_USING_DISTLIST,
         ];
     }
     
@@ -225,7 +225,7 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
      */
     public function __construct(array $data = null)
     {
-        $this->container['movementType'] = isset($data['movementType']) ? $data['movementType'] : 'ClientBaseUsingDistributionListMovementPayload';
+        $this->container['movementType'] = isset($data['movementType']) ? $data['movementType'] : 'CLIENTBASE_USING_DISTLIST';
         $this->container['sourceDatabase'] = isset($data['sourceDatabase']) ? $data['sourceDatabase'] : null;
         $this->container['sourceUser'] = isset($data['sourceUser']) ? $data['sourceUser'] : null;
         $this->container['sourceDistList'] = isset($data['sourceDistList']) ? $data['sourceDistList'] : null;

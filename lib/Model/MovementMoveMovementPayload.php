@@ -171,7 +171,7 @@ class MovementMoveMovementPayload extends MovementMovementPayload
         return self::$openAPIModelName;
     }
 
-    const MOVEMENT_TYPE_MOVE_MOVEMENT_PAYLOAD = 'MoveMovementPayload';
+    const MOVEMENT_TYPE_MOVE = 'MOVE';
     
 
     
@@ -183,7 +183,7 @@ class MovementMoveMovementPayload extends MovementMovementPayload
     public function getMovementTypeAllowableValues()
     {
         return [
-            self::MOVEMENT_TYPE_MOVE_MOVEMENT_PAYLOAD,
+            self::MOVEMENT_TYPE_MOVE,
         ];
     }
     
@@ -199,7 +199,7 @@ class MovementMoveMovementPayload extends MovementMovementPayload
     {
         parent::__construct($data);
 
-        $this->container['movementType'] = isset($data['movementType']) ? $data['movementType'] : 'MoveMovementPayload';
+        $this->container['movementType'] = isset($data['movementType']) ? $data['movementType'] : 'MOVE';
         $this->container['sourceDatabase'] = isset($data['sourceDatabase']) ? $data['sourceDatabase'] : null;
         $this->container['destinationDatabase'] = isset($data['destinationDatabase']) ? $data['destinationDatabase'] : null;
         $this->container['users'] = isset($data['users']) ? $data['users'] : null;

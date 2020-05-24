@@ -173,7 +173,7 @@ class MovementCopyMovementPayloadAllOf implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    const MOVEMENT_TYPE_COPY_MOVEMENT_PAYLOAD = 'CopyMovementPayload';
+    const MOVEMENT_TYPE_COPY = 'COPY';
     
 
     
@@ -185,7 +185,7 @@ class MovementCopyMovementPayloadAllOf implements ModelInterface, ArrayAccess
     public function getMovementTypeAllowableValues()
     {
         return [
-            self::MOVEMENT_TYPE_COPY_MOVEMENT_PAYLOAD,
+            self::MOVEMENT_TYPE_COPY,
         ];
     }
     
@@ -205,7 +205,7 @@ class MovementCopyMovementPayloadAllOf implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['movementType'] = isset($data['movementType']) ? $data['movementType'] : 'CopyMovementPayload';
+        $this->container['movementType'] = isset($data['movementType']) ? $data['movementType'] : 'COPY';
         $this->container['sourceDatabase'] = isset($data['sourceDatabase']) ? $data['sourceDatabase'] : null;
         $this->container['destinationDatabase'] = isset($data['destinationDatabase']) ? $data['destinationDatabase'] : null;
         $this->container['users'] = isset($data['users']) ? $data['users'] : null;

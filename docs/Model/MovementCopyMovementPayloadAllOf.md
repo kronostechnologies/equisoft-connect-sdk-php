@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**movementType** | **string** |  | [default to 'CopyMovementPayload']
+**movementType** | **string** |  | [default to 'COPY']
 **sourceDatabase** | **string** |  | 
 **destinationDatabase** | **string** |  | 
 **users** | **string[]** |  | 

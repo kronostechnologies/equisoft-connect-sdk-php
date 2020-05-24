@@ -173,7 +173,7 @@ class MovementMoveMovementPayloadAllOf implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    const MOVEMENT_TYPE_MOVE_MOVEMENT_PAYLOAD = 'MoveMovementPayload';
+    const MOVEMENT_TYPE_MOVE = 'MOVE';
     
 
     
@@ -185,7 +185,7 @@ class MovementMoveMovementPayloadAllOf implements ModelInterface, ArrayAccess
     public function getMovementTypeAllowableValues()
     {
         return [
-            self::MOVEMENT_TYPE_MOVE_MOVEMENT_PAYLOAD,
+            self::MOVEMENT_TYPE_MOVE,
         ];
     }
     
@@ -205,7 +205,7 @@ class MovementMoveMovementPayloadAllOf implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['movementType'] = isset($data['movementType']) ? $data['movementType'] : 'MoveMovementPayload';
+        $this->container['movementType'] = isset($data['movementType']) ? $data['movementType'] : 'MOVE';
         $this->container['sourceDatabase'] = isset($data['sourceDatabase']) ? $data['sourceDatabase'] : null;
         $this->container['destinationDatabase'] = isset($data['destinationDatabase']) ? $data['destinationDatabase'] : null;
         $this->container['users'] = isset($data['users']) ? $data['users'] : null;

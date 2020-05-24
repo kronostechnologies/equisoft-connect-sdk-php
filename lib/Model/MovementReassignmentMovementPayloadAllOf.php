@@ -178,7 +178,7 @@ class MovementReassignmentMovementPayloadAllOf implements ModelInterface, ArrayA
         return self::$openAPIModelName;
     }
 
-    const MOVEMENT_TYPE_REASSIGNMENT_MOVEMENT_PAYLOAD = 'ReassignmentMovementPayload';
+    const MOVEMENT_TYPE_REASSIGNMENT = 'REASSIGNMENT';
     
 
     
@@ -190,7 +190,7 @@ class MovementReassignmentMovementPayloadAllOf implements ModelInterface, ArrayA
     public function getMovementTypeAllowableValues()
     {
         return [
-            self::MOVEMENT_TYPE_REASSIGNMENT_MOVEMENT_PAYLOAD,
+            self::MOVEMENT_TYPE_REASSIGNMENT,
         ];
     }
     
@@ -210,7 +210,7 @@ class MovementReassignmentMovementPayloadAllOf implements ModelInterface, ArrayA
      */
     public function __construct(array $data = null)
     {
-        $this->container['movementType'] = isset($data['movementType']) ? $data['movementType'] : 'ReassignmentMovementPayload';
+        $this->container['movementType'] = isset($data['movementType']) ? $data['movementType'] : 'REASSIGNMENT';
         $this->container['sourceDatabase'] = isset($data['sourceDatabase']) ? $data['sourceDatabase'] : null;
         $this->container['sourceUser'] = isset($data['sourceUser']) ? $data['sourceUser'] : null;
         $this->container['destinationUser'] = isset($data['destinationUser']) ? $data['destinationUser'] : null;

@@ -188,7 +188,7 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
         return self::$openAPIModelName;
     }
 
-    const MOVEMENT_TYPE_CLIENT_BASE_USING_FILE_MOVEMENT_PAYLOAD = 'ClientBaseUsingFileMovementPayload';
+    const MOVEMENT_TYPE_CLIENTBASE_USING_FILE = 'CLIENTBASE_USING_FILE';
     
 
     
@@ -200,7 +200,7 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
     public function getMovementTypeAllowableValues()
     {
         return [
-            self::MOVEMENT_TYPE_CLIENT_BASE_USING_FILE_MOVEMENT_PAYLOAD,
+            self::MOVEMENT_TYPE_CLIENTBASE_USING_FILE,
         ];
     }
     
@@ -220,7 +220,7 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
      */
     public function __construct(array $data = null)
     {
-        $this->container['movementType'] = isset($data['movementType']) ? $data['movementType'] : 'ClientBaseUsingFileMovementPayload';
+        $this->container['movementType'] = isset($data['movementType']) ? $data['movementType'] : 'CLIENTBASE_USING_FILE';
         $this->container['sourceDatabase'] = isset($data['sourceDatabase']) ? $data['sourceDatabase'] : null;
         $this->container['sourceUser'] = isset($data['sourceUser']) ? $data['sourceUser'] : null;
         $this->container['destinationDatabase'] = isset($data['destinationDatabase']) ? $data['destinationDatabase'] : null;
