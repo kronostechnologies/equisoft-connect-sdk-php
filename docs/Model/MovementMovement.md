@@ -8,7 +8,12 @@ Name | Type | Description | Notes
 **type** | **string** |  | [optional] 
 **status** | **string** |  | [optional] 
 **availableAction** | **string** |  | [optional] 
-**date** | **string** |  | [optional] 
+**scheduledDate** | **string** |  | [optional] 
+**processedDate** | **string** |  | [optional] 
+**addedDate** | **string** |  | [optional] 
+**addedBy** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementUser**](MovementUser.md) |  | [optional] 
+**cancelledDate** | **string** |  | [optional] 
+**cancelledBy** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementUser**](MovementUser.md) |  | [optional] 
 **detail** | **string** | Additional movement information encoded in json. TODO: Structure ? | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)

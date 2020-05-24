@@ -150,6 +150,7 @@ Class | Method | HTTP request | Description
  - [MovementClientBaseUsingFileMovementPayloadAllOf](docs/Model/MovementClientBaseUsingFileMovementPayloadAllOf.md)
  - [MovementCopyMovementPayload](docs/Model/MovementCopyMovementPayload.md)
  - [MovementCopyMovementPayloadAllOf](docs/Model/MovementCopyMovementPayloadAllOf.md)
+ - [MovementDatabase](docs/Model/MovementDatabase.md)
  - [MovementGetStatusResponse](docs/Model/MovementGetStatusResponse.md)
  - [MovementListMovementResponse](docs/Model/MovementListMovementResponse.md)
  - [MovementMoveMovementPayload](docs/Model/MovementMoveMovementPayload.md)
@@ -161,6 +162,7 @@ Class | Method | HTTP request | Description
  - [MovementReassignmentMovementPayload](docs/Model/MovementReassignmentMovementPayload.md)
  - [MovementReassignmentMovementPayloadAllOf](docs/Model/MovementReassignmentMovementPayloadAllOf.md)
  - [MovementTransferOption](docs/Model/MovementTransferOption.md)
+ - [MovementUser](docs/Model/MovementUser.md)
  - [MovementValidationError](docs/Model/MovementValidationError.md)
  - [MovementValidationErrorResponse](docs/Model/MovementValidationErrorResponse.md)
 

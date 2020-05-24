@@ -61,7 +61,12 @@ class MovementMovement implements ModelInterface, ArrayAccess
         'type' => 'string',
         'status' => 'string',
         'availableAction' => 'string',
-        'date' => 'string',
+        'scheduledDate' => 'string',
+        'processedDate' => 'string',
+        'addedDate' => 'string',
+        'addedBy' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
+        'cancelledDate' => 'string',
+        'cancelledBy' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
         'detail' => 'string'
     ];
 
@@ -75,7 +80,12 @@ class MovementMovement implements ModelInterface, ArrayAccess
         'type' => null,
         'status' => null,
         'availableAction' => null,
-        'date' => null,
+        'scheduledDate' => null,
+        'processedDate' => null,
+        'addedDate' => null,
+        'addedBy' => null,
+        'cancelledDate' => null,
+        'cancelledBy' => null,
         'detail' => null
     ];
 
@@ -110,7 +120,12 @@ class MovementMovement implements ModelInterface, ArrayAccess
         'type' => 'type',
         'status' => 'status',
         'availableAction' => 'availableAction',
-        'date' => 'date',
+        'scheduledDate' => 'scheduledDate',
+        'processedDate' => 'processedDate',
+        'addedDate' => 'addedDate',
+        'addedBy' => 'addedBy',
+        'cancelledDate' => 'cancelledDate',
+        'cancelledBy' => 'cancelledBy',
         'detail' => 'detail'
     ];
 
@@ -124,7 +139,12 @@ class MovementMovement implements ModelInterface, ArrayAccess
         'type' => 'setType',
         'status' => 'setStatus',
         'availableAction' => 'setAvailableAction',
-        'date' => 'setDate',
+        'scheduledDate' => 'setScheduledDate',
+        'processedDate' => 'setProcessedDate',
+        'addedDate' => 'setAddedDate',
+        'addedBy' => 'setAddedBy',
+        'cancelledDate' => 'setCancelledDate',
+        'cancelledBy' => 'setCancelledBy',
         'detail' => 'setDetail'
     ];
 
@@ -138,7 +158,12 @@ class MovementMovement implements ModelInterface, ArrayAccess
         'type' => 'getType',
         'status' => 'getStatus',
         'availableAction' => 'getAvailableAction',
-        'date' => 'getDate',
+        'scheduledDate' => 'getScheduledDate',
+        'processedDate' => 'getProcessedDate',
+        'addedDate' => 'getAddedDate',
+        'addedBy' => 'getAddedBy',
+        'cancelledDate' => 'getCancelledDate',
+        'cancelledBy' => 'getCancelledBy',
         'detail' => 'getDetail'
     ];
 
@@ -206,7 +231,12 @@ class MovementMovement implements ModelInterface, ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['availableAction'] = isset($data['availableAction']) ? $data['availableAction'] : null;
-        $this->container['date'] = isset($data['date']) ? $data['date'] : null;
+        $this->container['scheduledDate'] = isset($data['scheduledDate']) ? $data['scheduledDate'] : null;
+        $this->container['processedDate'] = isset($data['processedDate']) ? $data['processedDate'] : null;
+        $this->container['addedDate'] = isset($data['addedDate']) ? $data['addedDate'] : null;
+        $this->container['addedBy'] = isset($data['addedBy']) ? $data['addedBy'] : null;
+        $this->container['cancelledDate'] = isset($data['cancelledDate']) ? $data['cancelledDate'] : null;
+        $this->container['cancelledBy'] = isset($data['cancelledBy']) ? $data['cancelledBy'] : null;
         $this->container['detail'] = isset($data['detail']) ? $data['detail'] : null;
     }
 
@@ -331,25 +361,145 @@ class MovementMovement implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets date
+     * Gets scheduledDate
      *
      * @return string|null
      */
-    public function getDate()
+    public function getScheduledDate()
     {
-        return $this->container['date'];
+        return $this->container['scheduledDate'];
     }
 
     /**
-     * Sets date
+     * Sets scheduledDate
      *
-     * @param string|null $date date
+     * @param string|null $scheduledDate scheduledDate
      *
      * @return $this
      */
-    public function setDate($date)
+    public function setScheduledDate($scheduledDate)
     {
-        $this->container['date'] = $date;
+        $this->container['scheduledDate'] = $scheduledDate;
+
+        return $this;
+    }
+
+    /**
+     * Gets processedDate
+     *
+     * @return string|null
+     */
+    public function getProcessedDate()
+    {
+        return $this->container['processedDate'];
+    }
+
+    /**
+     * Sets processedDate
+     *
+     * @param string|null $processedDate processedDate
+     *
+     * @return $this
+     */
+    public function setProcessedDate($processedDate)
+    {
+        $this->container['processedDate'] = $processedDate;
+
+        return $this;
+    }
+
+    /**
+     * Gets addedDate
+     *
+     * @return string|null
+     */
+    public function getAddedDate()
+    {
+        return $this->container['addedDate'];
+    }
+
+    /**
+     * Sets addedDate
+     *
+     * @param string|null $addedDate addedDate
+     *
+     * @return $this
+     */
+    public function setAddedDate($addedDate)
+    {
+        $this->container['addedDate'] = $addedDate;
+
+        return $this;
+    }
+
+    /**
+     * Gets addedBy
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null
+     */
+    public function getAddedBy()
+    {
+        return $this->container['addedBy'];
+    }
+
+    /**
+     * Sets addedBy
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null $addedBy addedBy
+     *
+     * @return $this
+     */
+    public function setAddedBy($addedBy)
+    {
+        $this->container['addedBy'] = $addedBy;
+
+        return $this;
+    }
+
+    /**
+     * Gets cancelledDate
+     *
+     * @return string|null
+     */
+    public function getCancelledDate()
+    {
+        return $this->container['cancelledDate'];
+    }
+
+    /**
+     * Sets cancelledDate
+     *
+     * @param string|null $cancelledDate cancelledDate
+     *
+     * @return $this
+     */
+    public function setCancelledDate($cancelledDate)
+    {
+        $this->container['cancelledDate'] = $cancelledDate;
+
+        return $this;
+    }
+
+    /**
+     * Gets cancelledBy
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null
+     */
+    public function getCancelledBy()
+    {
+        return $this->container['cancelledBy'];
+    }
+
+    /**
+     * Sets cancelledBy
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null $cancelledBy cancelledBy
+     *
+     * @return $this
+     */
+    public function setCancelledBy($cancelledBy)
+    {
+        $this->container['cancelledBy'] = $cancelledBy;
 
         return $this;
     }
