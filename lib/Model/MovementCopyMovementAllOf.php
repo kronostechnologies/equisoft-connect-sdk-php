@@ -60,7 +60,7 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess
         'type' => 'string',
         'sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
         'destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
-        'users' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUserTuple[]'
+        'userTuples' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUserTuple[]'
     ];
 
     /**
@@ -72,7 +72,7 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess
         'type' => null,
         'sourceDatabase' => null,
         'destinationDatabase' => null,
-        'users' => null
+        'userTuples' => null
     ];
 
     /**
@@ -105,7 +105,7 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess
         'type' => 'type',
         'sourceDatabase' => 'sourceDatabase',
         'destinationDatabase' => 'destinationDatabase',
-        'users' => 'users'
+        'userTuples' => 'userTuples'
     ];
 
     /**
@@ -117,7 +117,7 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess
         'type' => 'setType',
         'sourceDatabase' => 'setSourceDatabase',
         'destinationDatabase' => 'setDestinationDatabase',
-        'users' => 'setUsers'
+        'userTuples' => 'setUserTuples'
     ];
 
     /**
@@ -129,7 +129,7 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess
         'type' => 'getType',
         'sourceDatabase' => 'getSourceDatabase',
         'destinationDatabase' => 'getDestinationDatabase',
-        'users' => 'getUsers'
+        'userTuples' => 'getUserTuples'
     ];
 
     /**
@@ -208,7 +208,7 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : 'COPY';
         $this->container['sourceDatabase'] = isset($data['sourceDatabase']) ? $data['sourceDatabase'] : null;
         $this->container['destinationDatabase'] = isset($data['destinationDatabase']) ? $data['destinationDatabase'] : null;
-        $this->container['users'] = isset($data['users']) ? $data['users'] : null;
+        $this->container['userTuples'] = isset($data['userTuples']) ? $data['userTuples'] : null;
     }
 
     /**
@@ -220,6 +220,9 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
         $allowedValues = $this->getTypeAllowableValues();
         if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -228,6 +231,15 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess
             );
         }
 
+        if ($this->container['sourceDatabase'] === null) {
+            $invalidProperties[] = "'sourceDatabase' can't be null";
+        }
+        if ($this->container['destinationDatabase'] === null) {
+            $invalidProperties[] = "'destinationDatabase' can't be null";
+        }
+        if ($this->container['userTuples'] === null) {
+            $invalidProperties[] = "'userTuples' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -246,7 +258,7 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return string|null
+     * @return string
      */
     public function getType()
     {
@@ -256,14 +268,14 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param string|null $type type
+     * @param string $type type
      *
      * @return $this
      */
     public function setType($type)
     {
         $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($type) && !in_array($type, $allowedValues, true)) {
+        if (!in_array($type, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
                     "Invalid value for 'type', must be one of '%s'",
@@ -279,7 +291,7 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess
     /**
      * Gets sourceDatabase
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase
      */
     public function getSourceDatabase()
     {
@@ -289,7 +301,7 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess
     /**
      * Sets sourceDatabase
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null $sourceDatabase sourceDatabase
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase $sourceDatabase sourceDatabase
      *
      * @return $this
      */
@@ -303,7 +315,7 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess
     /**
      * Gets destinationDatabase
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase
      */
     public function getDestinationDatabase()
     {
@@ -313,7 +325,7 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess
     /**
      * Sets destinationDatabase
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null $destinationDatabase destinationDatabase
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase $destinationDatabase destinationDatabase
      *
      * @return $this
      */
@@ -325,25 +337,25 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets users
+     * Gets userTuples
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUserTuple[]|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUserTuple[]
      */
-    public function getUsers()
+    public function getUserTuples()
     {
-        return $this->container['users'];
+        return $this->container['userTuples'];
     }
 
     /**
-     * Sets users
+     * Sets userTuples
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUserTuple[]|null $users users
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUserTuple[] $userTuples userTuples
      *
      * @return $this
      */
-    public function setUsers($users)
+    public function setUserTuples($userTuples)
     {
-        $this->container['users'] = $users;
+        $this->container['userTuples'] = $userTuples;
 
         return $this;
     }

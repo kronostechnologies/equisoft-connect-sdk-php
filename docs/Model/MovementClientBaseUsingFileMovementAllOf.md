@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **string** |  | [optional] [default to 'CLIENTBASE_USING_FILE']
-**sourceDatabase** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase**](MovementDatabase.md) |  | [optional] 
-**sourceUser** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementUser**](MovementUser.md) |  | [optional] 
-**destinationDatabase** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase**](MovementDatabase.md) |  | [optional] 
-**destinationUser** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementUser**](MovementUser.md) |  | [optional] 
+**type** | **string** |  | [default to 'CLIENTBASE_USING_FILE']
+**sourceDatabase** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase**](MovementDatabase.md) |  | 
+**sourceUser** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementUser**](MovementUser.md) |  | 
+**destinationDatabase** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase**](MovementDatabase.md) |  | 
+**destinationUser** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementUser**](MovementUser.md) |  | 
 **capsil** | **bool** |  | [optional] 
 **univeris** | **bool** |  | [optional] 
 

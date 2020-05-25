@@ -244,6 +244,9 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
     {
         $invalidProperties = [];
 
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
         $allowedValues = $this->getTypeAllowableValues();
         if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -252,6 +255,21 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
             );
         }
 
+        if ($this->container['sourceDatabase'] === null) {
+            $invalidProperties[] = "'sourceDatabase' can't be null";
+        }
+        if ($this->container['sourceUser'] === null) {
+            $invalidProperties[] = "'sourceUser' can't be null";
+        }
+        if ($this->container['destinationDatabase'] === null) {
+            $invalidProperties[] = "'destinationDatabase' can't be null";
+        }
+        if ($this->container['destinationUser'] === null) {
+            $invalidProperties[] = "'destinationUser' can't be null";
+        }
+        if ($this->container['transferOption'] === null) {
+            $invalidProperties[] = "'transferOption' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -270,7 +288,7 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
     /**
      * Gets type
      *
-     * @return string|null
+     * @return string
      */
     public function getType()
     {
@@ -280,14 +298,14 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
     /**
      * Sets type
      *
-     * @param string|null $type type
+     * @param string $type type
      *
      * @return $this
      */
     public function setType($type)
     {
         $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($type) && !in_array($type, $allowedValues, true)) {
+        if (!in_array($type, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
                     "Invalid value for 'type', must be one of '%s'",
@@ -303,7 +321,7 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
     /**
      * Gets sourceDatabase
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase
      */
     public function getSourceDatabase()
     {
@@ -313,7 +331,7 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
     /**
      * Sets sourceDatabase
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null $sourceDatabase sourceDatabase
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase $sourceDatabase sourceDatabase
      *
      * @return $this
      */
@@ -327,7 +345,7 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
     /**
      * Gets sourceUser
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser
      */
     public function getSourceUser()
     {
@@ -337,7 +355,7 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
     /**
      * Sets sourceUser
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null $sourceUser sourceUser
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser $sourceUser sourceUser
      *
      * @return $this
      */
@@ -375,7 +393,7 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
     /**
      * Gets destinationDatabase
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase
      */
     public function getDestinationDatabase()
     {
@@ -385,7 +403,7 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
     /**
      * Sets destinationDatabase
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null $destinationDatabase destinationDatabase
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase $destinationDatabase destinationDatabase
      *
      * @return $this
      */
@@ -399,7 +417,7 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
     /**
      * Gets destinationUser
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser
      */
     public function getDestinationUser()
     {
@@ -409,7 +427,7 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
     /**
      * Sets destinationUser
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null $destinationUser destinationUser
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser $destinationUser destinationUser
      *
      * @return $this
      */
@@ -447,7 +465,7 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
     /**
      * Gets transferOption
      *
-     * @return string|null
+     * @return string
      */
     public function getTransferOption()
     {
@@ -457,7 +475,7 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
     /**
      * Sets transferOption
      *
-     * @param string|null $transferOption transferOption
+     * @param string $transferOption transferOption
      *
      * @return $this
      */

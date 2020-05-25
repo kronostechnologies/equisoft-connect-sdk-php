@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **string** |  | [optional] [default to 'REASSIGNMENT']
-**sourceDatabase** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase**](MovementDatabase.md) |  | [optional] 
-**sourceUser** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementUser**](MovementUser.md) |  | [optional] 
-**destinationUser** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementUser**](MovementUser.md) |  | [optional] 
-**accessCode** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementGatewayAccessCode**](MovementGatewayAccessCode.md) |  | [optional] 
+**type** | **string** |  | [default to 'REASSIGNMENT']
+**sourceDatabase** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase**](MovementDatabase.md) |  | 
+**sourceUser** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementUser**](MovementUser.md) |  | 
+**destinationUser** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementUser**](MovementUser.md) |  | 
+**accessCode** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementGatewayAccessCode**](MovementGatewayAccessCode.md) |  | 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

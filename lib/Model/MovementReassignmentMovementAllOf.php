@@ -226,6 +226,9 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
         $allowedValues = $this->getTypeAllowableValues();
         if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -234,6 +237,18 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
             );
         }
 
+        if ($this->container['sourceDatabase'] === null) {
+            $invalidProperties[] = "'sourceDatabase' can't be null";
+        }
+        if ($this->container['sourceUser'] === null) {
+            $invalidProperties[] = "'sourceUser' can't be null";
+        }
+        if ($this->container['destinationUser'] === null) {
+            $invalidProperties[] = "'destinationUser' can't be null";
+        }
+        if ($this->container['accessCode'] === null) {
+            $invalidProperties[] = "'accessCode' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -252,7 +267,7 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return string|null
+     * @return string
      */
     public function getType()
     {
@@ -262,14 +277,14 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param string|null $type type
+     * @param string $type type
      *
      * @return $this
      */
     public function setType($type)
     {
         $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($type) && !in_array($type, $allowedValues, true)) {
+        if (!in_array($type, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
                     "Invalid value for 'type', must be one of '%s'",
@@ -285,7 +300,7 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
     /**
      * Gets sourceDatabase
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase
      */
     public function getSourceDatabase()
     {
@@ -295,7 +310,7 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
     /**
      * Sets sourceDatabase
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null $sourceDatabase sourceDatabase
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase $sourceDatabase sourceDatabase
      *
      * @return $this
      */
@@ -309,7 +324,7 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
     /**
      * Gets sourceUser
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser
      */
     public function getSourceUser()
     {
@@ -319,7 +334,7 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
     /**
      * Sets sourceUser
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null $sourceUser sourceUser
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser $sourceUser sourceUser
      *
      * @return $this
      */
@@ -333,7 +348,7 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
     /**
      * Gets destinationUser
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser
      */
     public function getDestinationUser()
     {
@@ -343,7 +358,7 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
     /**
      * Sets destinationUser
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null $destinationUser destinationUser
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser $destinationUser destinationUser
      *
      * @return $this
      */
@@ -357,7 +372,7 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
     /**
      * Gets accessCode
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementGatewayAccessCode|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementGatewayAccessCode
      */
     public function getAccessCode()
     {
@@ -367,7 +382,7 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
     /**
      * Sets accessCode
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementGatewayAccessCode|null $accessCode accessCode
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementGatewayAccessCode $accessCode accessCode
      *
      * @return $this
      */

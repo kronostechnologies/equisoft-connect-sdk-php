@@ -176,6 +176,7 @@ Class | Method | HTTP request | Description
  - [MovementTransferOption](docs/Model/MovementTransferOption.md)
  - [MovementUser](docs/Model/MovementUser.md)
  - [MovementUserTuple](docs/Model/MovementUserTuple.md)
+ - [MovementUserTuplePayload](docs/Model/MovementUserTuplePayload.md)
  - [MovementValidationError](docs/Model/MovementValidationError.md)
  - [MovementValidationErrorResponse](docs/Model/MovementValidationErrorResponse.md)
 

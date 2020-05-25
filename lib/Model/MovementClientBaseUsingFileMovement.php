@@ -232,6 +232,9 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
     {
         $invalidProperties = parent::listInvalidProperties();
 
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
         $allowedValues = $this->getTypeAllowableValues();
         if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -240,6 +243,18 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
             );
         }
 
+        if ($this->container['sourceDatabase'] === null) {
+            $invalidProperties[] = "'sourceDatabase' can't be null";
+        }
+        if ($this->container['sourceUser'] === null) {
+            $invalidProperties[] = "'sourceUser' can't be null";
+        }
+        if ($this->container['destinationDatabase'] === null) {
+            $invalidProperties[] = "'destinationDatabase' can't be null";
+        }
+        if ($this->container['destinationUser'] === null) {
+            $invalidProperties[] = "'destinationUser' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -258,7 +273,7 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
     /**
      * Gets type
      *
-     * @return string|null
+     * @return string
      */
     public function getType()
     {
@@ -268,14 +283,14 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
     /**
      * Sets type
      *
-     * @param string|null $type type
+     * @param string $type type
      *
      * @return $this
      */
     public function setType($type)
     {
         $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($type) && !in_array($type, $allowedValues, true)) {
+        if (!in_array($type, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
                     "Invalid value for 'type', must be one of '%s'",
@@ -291,7 +306,7 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
     /**
      * Gets sourceDatabase
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase
      */
     public function getSourceDatabase()
     {
@@ -301,7 +316,7 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
     /**
      * Sets sourceDatabase
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null $sourceDatabase sourceDatabase
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase $sourceDatabase sourceDatabase
      *
      * @return $this
      */
@@ -315,7 +330,7 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
     /**
      * Gets sourceUser
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser
      */
     public function getSourceUser()
     {
@@ -325,7 +340,7 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
     /**
      * Sets sourceUser
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null $sourceUser sourceUser
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser $sourceUser sourceUser
      *
      * @return $this
      */
@@ -339,7 +354,7 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
     /**
      * Gets destinationDatabase
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase
      */
     public function getDestinationDatabase()
     {
@@ -349,7 +364,7 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
     /**
      * Sets destinationDatabase
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null $destinationDatabase destinationDatabase
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase $destinationDatabase destinationDatabase
      *
      * @return $this
      */
@@ -363,7 +378,7 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
     /**
      * Gets destinationUser
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser
      */
     public function getDestinationUser()
     {
@@ -373,7 +388,7 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
     /**
      * Sets destinationUser
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null $destinationUser destinationUser
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser $destinationUser destinationUser
      *
      * @return $this
      */

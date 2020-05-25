@@ -220,6 +220,9 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
         $allowedValues = $this->getTypeAllowableValues();
         if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -228,6 +231,15 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess
             );
         }
 
+        if ($this->container['sourceDatabase'] === null) {
+            $invalidProperties[] = "'sourceDatabase' can't be null";
+        }
+        if ($this->container['destinationDatabase'] === null) {
+            $invalidProperties[] = "'destinationDatabase' can't be null";
+        }
+        if ($this->container['users'] === null) {
+            $invalidProperties[] = "'users' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -246,7 +258,7 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return string|null
+     * @return string
      */
     public function getType()
     {
@@ -256,14 +268,14 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param string|null $type type
+     * @param string $type type
      *
      * @return $this
      */
     public function setType($type)
     {
         $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($type) && !in_array($type, $allowedValues, true)) {
+        if (!in_array($type, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
                     "Invalid value for 'type', must be one of '%s'",
@@ -279,7 +291,7 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess
     /**
      * Gets sourceDatabase
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase
      */
     public function getSourceDatabase()
     {
@@ -289,7 +301,7 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess
     /**
      * Sets sourceDatabase
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null $sourceDatabase sourceDatabase
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase $sourceDatabase sourceDatabase
      *
      * @return $this
      */
@@ -303,7 +315,7 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess
     /**
      * Gets destinationDatabase
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase
      */
     public function getDestinationDatabase()
     {
@@ -313,7 +325,7 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess
     /**
      * Sets destinationDatabase
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null $destinationDatabase destinationDatabase
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase $destinationDatabase destinationDatabase
      *
      * @return $this
      */
@@ -327,7 +339,7 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess
     /**
      * Gets users
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser[]|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser[]
      */
     public function getUsers()
     {
@@ -337,7 +349,7 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess
     /**
      * Sets users
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser[]|null $users users
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser[] $users users
      *
      * @return $this
      */
