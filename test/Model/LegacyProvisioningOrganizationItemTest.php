@@ -84,4 +84,123 @@ class LegacyProvisioningOrganizationItemTest extends TestCase
     public function testPropertyOrgId()
     {
     }
+
+    /**
+     * Test attribute "displayName"
+     */
+    public function testPropertyDisplayName()
+    {
+    }
+
+    /**
+     * Test attribute "status"
+     */
+    public function testPropertyStatus()
+    {
+    }
+
+    /**
+     * Test attribute "diskUsageQuota"
+     */
+    public function testPropertyDiskUsageQuota()
+    {
+    }
+
+    /**
+     * Test attribute "lang"
+     */
+    public function testPropertyLang()
+    {
+    }
+
+    /**
+     * Test attribute "mainPhone"
+     */
+    public function testPropertyMainPhone()
+    {
+    }
+
+    /**
+     * Test attribute "tollFree"
+     */
+    public function testPropertyTollFree()
+    {
+    }
+
+    /**
+     * Test attribute "fax"
+     */
+    public function testPropertyFax()
+    {
+    }
+
+    /**
+     * Test attribute "address"
+     */
+    public function testPropertyAddress()
+    {
+    }
+
+    /**
+     * Test attribute "addressLine2"
+     */
+    public function testPropertyAddressLine2()
+    {
+    }
+
+    /**
+     * Test attribute "addressCity"
+     */
+    public function testPropertyAddressCity()
+    {
+    }
+
+    /**
+     * Test attribute "addressState"
+     */
+    public function testPropertyAddressState()
+    {
+    }
+
+    /**
+     * Test attribute "addressPostalCode"
+     */
+    public function testPropertyAddressPostalCode()
+    {
+    }
+
+    /**
+     * Test attribute "addressCountry"
+     */
+    public function testPropertyAddressCountry()
+    {
+    }
+
+    /**
+     * Test attribute "webSite"
+     */
+    public function testPropertyWebSite()
+    {
+    }
+
+    /**
+     * Test attribute "isMultiUser"
+     */
+    public function testPropertyIsMultiUser()
+    {
+    }
+
+    /**
+     * Test attribute "fnaStatus"
+     */
+    public function testPropertyFnaStatus()
+    {
+    }
+
+    /**
+     * Test attribute "users"
+     */
+    public function testPropertyUsers()
+    {
+    }
 }

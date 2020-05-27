@@ -328,7 +328,11 @@ class ObjectSerializer
             // If a discriminator is defined and points to a valid subclass, use it.
             $discriminator = $class::DISCRIMINATOR;
             if (!empty($discriminator) && isset($data->{$discriminator}) && is_string($data->{$discriminator})) {
-                $subclass = '\Equisoft\SDK\EquisoftConnect\Model\\' . $data->{$discriminator};
+                if (isset($class::DISCRIMINATOR_MAP[$data->{$discriminator}])) {
+                    $subclass = '\Equisoft\SDK\EquisoftConnect\Model\\' . $class::DISCRIMINATOR_MAP[$data->{$discriminator}];
+                } else {
+                    $subclass = '\Equisoft\SDK\EquisoftConnect\Model\\' . $data->{$discriminator};
+                }
                 if (is_subclass_of($subclass, $class)) {
                     $class = $subclass;
                 }

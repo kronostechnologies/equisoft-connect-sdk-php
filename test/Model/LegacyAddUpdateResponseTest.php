@@ -77,4 +77,32 @@ class LegacyAddUpdateResponseTest extends TestCase
     public function testLegacyAddUpdateResponse()
     {
     }
+
+    /**
+     * Test attribute "stat"
+     */
+    public function testPropertyStat()
+    {
+    }
+
+    /**
+     * Test attribute "errorCode"
+     */
+    public function testPropertyErrorCode()
+    {
+    }
+
+    /**
+     * Test attribute "errorMsg"
+     */
+    public function testPropertyErrorMsg()
+    {
+    }
+
+    /**
+     * Test attribute "items"
+     */
+    public function testPropertyItems()
+    {
+    }
 }

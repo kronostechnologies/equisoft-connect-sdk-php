@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineObject
+ * MovementMoveMovement
  *
  * PHP version 5
  *
@@ -28,19 +28,17 @@
  */
 
 namespace Equisoft\SDK\EquisoftConnect\Model;
-
-use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * InlineObject Class Doc Comment
+ * MovementMoveMovement Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class InlineObject implements ModelInterface, ArrayAccess
+class MovementMoveMovement extends MovementMovement 
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +47,7 @@ class InlineObject implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'inline_object';
+    protected static $openAPIModelName = 'movement.MoveMovement';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +55,10 @@ class InlineObject implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'payload' => 'AnyType'
+        'type' => 'string',
+        'sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
+        'destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
+        'users' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser[]'
     ];
 
     /**
@@ -66,7 +67,10 @@ class InlineObject implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'payload' => null
+        'type' => null,
+        'sourceDatabase' => null,
+        'destinationDatabase' => null,
+        'users' => null
     ];
 
     /**
@@ -76,7 +80,7 @@ class InlineObject implements ModelInterface, ArrayAccess
      */
     public static function openAPITypes()
     {
-        return self::$openAPITypes;
+        return self::$openAPITypes + parent::openAPITypes();
     }
 
     /**
@@ -86,7 +90,7 @@ class InlineObject implements ModelInterface, ArrayAccess
      */
     public static function openAPIFormats()
     {
-        return self::$openAPIFormats;
+        return self::$openAPIFormats + parent::openAPIFormats();
     }
 
     /**
@@ -96,7 +100,10 @@ class InlineObject implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'payload' => 'payload'
+        'type' => 'type',
+        'sourceDatabase' => 'sourceDatabase',
+        'destinationDatabase' => 'destinationDatabase',
+        'users' => 'users'
     ];
 
     /**
@@ -105,7 +112,10 @@ class InlineObject implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'payload' => 'setPayload'
+        'type' => 'setType',
+        'sourceDatabase' => 'setSourceDatabase',
+        'destinationDatabase' => 'setDestinationDatabase',
+        'users' => 'setUsers'
     ];
 
     /**
@@ -114,7 +124,10 @@ class InlineObject implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'payload' => 'getPayload'
+        'type' => 'getType',
+        'sourceDatabase' => 'getSourceDatabase',
+        'destinationDatabase' => 'getDestinationDatabase',
+        'users' => 'getUsers'
     ];
 
     /**
@@ -125,7 +138,7 @@ class InlineObject implements ModelInterface, ArrayAccess
      */
     public static function attributeMap()
     {
-        return self::$attributeMap;
+        return parent::attributeMap() + self::$attributeMap;
     }
 
     /**
@@ -135,7 +148,7 @@ class InlineObject implements ModelInterface, ArrayAccess
      */
     public static function setters()
     {
-        return self::$setters;
+        return parent::setters() + self::$setters;
     }
 
     /**
@@ -145,7 +158,7 @@ class InlineObject implements ModelInterface, ArrayAccess
      */
     public static function getters()
     {
-        return self::$getters;
+        return parent::getters() + self::$getters;
     }
 
     /**
@@ -158,16 +171,23 @@ class InlineObject implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
+    const TYPE_MOVE = 'MOVE';
     
 
     
-
     /**
-     * Associative array for storing property values
+     * Gets allowable values of the enum
      *
-     * @var mixed[]
+     * @return string[]
      */
-    protected $container = [];
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_MOVE,
+        ];
+    }
+    
+
 
     /**
      * Constructor
@@ -177,7 +197,12 @@ class InlineObject implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['payload'] = isset($data['payload']) ? $data['payload'] : null;
+        parent::__construct($data);
+
+        $this->container['type'] = isset($data['type']) ? $data['type'] : 'MOVE';
+        $this->container['sourceDatabase'] = isset($data['sourceDatabase']) ? $data['sourceDatabase'] : null;
+        $this->container['destinationDatabase'] = isset($data['destinationDatabase']) ? $data['destinationDatabase'] : null;
+        $this->container['users'] = isset($data['users']) ? $data['users'] : null;
     }
 
     /**
@@ -187,8 +212,28 @@ class InlineObject implements ModelInterface, ArrayAccess
      */
     public function listInvalidProperties()
     {
-        $invalidProperties = [];
+        $invalidProperties = parent::listInvalidProperties();
 
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value for 'type', must be one of '%s'",
+                implode("', '", $allowedValues)
+            );
+        }
+
+        if ($this->container['sourceDatabase'] === null) {
+            $invalidProperties[] = "'sourceDatabase' can't be null";
+        }
+        if ($this->container['destinationDatabase'] === null) {
+            $invalidProperties[] = "'destinationDatabase' can't be null";
+        }
+        if ($this->container['users'] === null) {
+            $invalidProperties[] = "'users' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -205,25 +250,106 @@ class InlineObject implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets payload
+     * Gets type
      *
-     * @return AnyType|null
+     * @return string
      */
-    public function getPayload()
+    public function getType()
     {
-        return $this->container['payload'];
+        return $this->container['type'];
     }
 
     /**
-     * Sets payload
+     * Sets type
      *
-     * @param AnyType|null $payload payload
+     * @param string $type type
      *
      * @return $this
      */
-    public function setPayload($payload)
+    public function setType($type)
     {
-        $this->container['payload'] = $payload;
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!in_array($type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value for 'type', must be one of '%s'",
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets sourceDatabase
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase
+     */
+    public function getSourceDatabase()
+    {
+        return $this->container['sourceDatabase'];
+    }
+
+    /**
+     * Sets sourceDatabase
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase $sourceDatabase sourceDatabase
+     *
+     * @return $this
+     */
+    public function setSourceDatabase($sourceDatabase)
+    {
+        $this->container['sourceDatabase'] = $sourceDatabase;
+
+        return $this;
+    }
+
+    /**
+     * Gets destinationDatabase
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase
+     */
+    public function getDestinationDatabase()
+    {
+        return $this->container['destinationDatabase'];
+    }
+
+    /**
+     * Sets destinationDatabase
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase $destinationDatabase destinationDatabase
+     *
+     * @return $this
+     */
+    public function setDestinationDatabase($destinationDatabase)
+    {
+        $this->container['destinationDatabase'] = $destinationDatabase;
+
+        return $this;
+    }
+
+    /**
+     * Gets users
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser[]
+     */
+    public function getUsers()
+    {
+        return $this->container['users'];
+    }
+
+    /**
+     * Sets users
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser[] $users users
+     *
+     * @return $this
+     */
+    public function setUsers($users)
+    {
+        $this->container['users'] = $users;
 
         return $this;
     }

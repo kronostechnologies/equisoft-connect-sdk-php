@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineObjectTest
+ * MovementMoveMovementTest
  *
  * PHP version 5
  *
@@ -32,15 +32,15 @@ namespace Equisoft\SDK\EquisoftConnect;
 use PHPUnit\Framework\TestCase;
 
 /**
- * InlineObjectTest Class Doc Comment
+ * MovementMoveMovementTest Class Doc Comment
  *
  * @category    Class
- * @description InlineObject
+ * @description MovementMoveMovement
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class InlineObjectTest extends TestCase
+class MovementMoveMovementTest extends TestCase
 {
 
     /**
@@ -72,16 +72,30 @@ class InlineObjectTest extends TestCase
     }
 
     /**
-     * Test "InlineObject"
+     * Test "MovementMoveMovement"
      */
-    public function testInlineObject()
+    public function testMovementMoveMovement()
     {
     }
 
     /**
-     * Test attribute "payload"
+     * Test attribute "sourceDatabase"
      */
-    public function testPropertyPayload()
+    public function testPropertySourceDatabase()
+    {
+    }
+
+    /**
+     * Test attribute "destinationDatabase"
+     */
+    public function testPropertyDestinationDatabase()
+    {
+    }
+
+    /**
+     * Test attribute "users"
+     */
+    public function testPropertyUsers()
     {
     }
 }

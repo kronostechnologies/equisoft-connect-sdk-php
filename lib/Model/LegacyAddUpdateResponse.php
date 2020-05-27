@@ -28,6 +28,8 @@
  */
 
 namespace Equisoft\SDK\EquisoftConnect\Model;
+
+use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
@@ -38,7 +40,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class LegacyAddUpdateResponse extends LegacyResponse 
+class LegacyAddUpdateResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -55,7 +57,10 @@ class LegacyAddUpdateResponse extends LegacyResponse
       * @var string[]
       */
     protected static $openAPITypes = [
-        
+        'stat' => 'string',
+        'errorCode' => 'string',
+        'errorMsg' => 'string',
+        'items' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyAddUpdateItem[]'
     ];
 
     /**
@@ -64,7 +69,10 @@ class LegacyAddUpdateResponse extends LegacyResponse
       * @var string[]
       */
     protected static $openAPIFormats = [
-        
+        'stat' => null,
+        'errorCode' => null,
+        'errorMsg' => null,
+        'items' => null
     ];
 
     /**
@@ -74,7 +82,7 @@ class LegacyAddUpdateResponse extends LegacyResponse
      */
     public static function openAPITypes()
     {
-        return self::$openAPITypes + parent::openAPITypes();
+        return self::$openAPITypes;
     }
 
     /**
@@ -84,7 +92,7 @@ class LegacyAddUpdateResponse extends LegacyResponse
      */
     public static function openAPIFormats()
     {
-        return self::$openAPIFormats + parent::openAPIFormats();
+        return self::$openAPIFormats;
     }
 
     /**
@@ -94,7 +102,10 @@ class LegacyAddUpdateResponse extends LegacyResponse
      * @var string[]
      */
     protected static $attributeMap = [
-        
+        'stat' => 'stat',
+        'errorCode' => 'error_code',
+        'errorMsg' => 'error_msg',
+        'items' => 'items'
     ];
 
     /**
@@ -103,7 +114,10 @@ class LegacyAddUpdateResponse extends LegacyResponse
      * @var string[]
      */
     protected static $setters = [
-        
+        'stat' => 'setStat',
+        'errorCode' => 'setErrorCode',
+        'errorMsg' => 'setErrorMsg',
+        'items' => 'setItems'
     ];
 
     /**
@@ -112,7 +126,10 @@ class LegacyAddUpdateResponse extends LegacyResponse
      * @var string[]
      */
     protected static $getters = [
-        
+        'stat' => 'getStat',
+        'errorCode' => 'getErrorCode',
+        'errorMsg' => 'getErrorMsg',
+        'items' => 'getItems'
     ];
 
     /**
@@ -123,7 +140,7 @@ class LegacyAddUpdateResponse extends LegacyResponse
      */
     public static function attributeMap()
     {
-        return parent::attributeMap() + self::$attributeMap;
+        return self::$attributeMap;
     }
 
     /**
@@ -133,7 +150,7 @@ class LegacyAddUpdateResponse extends LegacyResponse
      */
     public static function setters()
     {
-        return parent::setters() + self::$setters;
+        return self::$setters;
     }
 
     /**
@@ -143,7 +160,7 @@ class LegacyAddUpdateResponse extends LegacyResponse
      */
     public static function getters()
     {
-        return parent::getters() + self::$getters;
+        return self::$getters;
     }
 
     /**
@@ -160,6 +177,12 @@ class LegacyAddUpdateResponse extends LegacyResponse
 
     
 
+    /**
+     * Associative array for storing property values
+     *
+     * @var mixed[]
+     */
+    protected $container = [];
 
     /**
      * Constructor
@@ -169,8 +192,10 @@ class LegacyAddUpdateResponse extends LegacyResponse
      */
     public function __construct(array $data = null)
     {
-        parent::__construct($data);
-
+        $this->container['stat'] = isset($data['stat']) ? $data['stat'] : null;
+        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
+        $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
+        $this->container['items'] = isset($data['items']) ? $data['items'] : null;
     }
 
     /**
@@ -180,8 +205,11 @@ class LegacyAddUpdateResponse extends LegacyResponse
      */
     public function listInvalidProperties()
     {
-        $invalidProperties = parent::listInvalidProperties();
+        $invalidProperties = [];
 
+        if ($this->container['items'] === null) {
+            $invalidProperties[] = "'items' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -196,6 +224,102 @@ class LegacyAddUpdateResponse extends LegacyResponse
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets stat
+     *
+     * @return string|null
+     */
+    public function getStat()
+    {
+        return $this->container['stat'];
+    }
+
+    /**
+     * Sets stat
+     *
+     * @param string|null $stat Status of the request that has been made. Can be 'ok' or 'fail'
+     *
+     * @return $this
+     */
+    public function setStat($stat)
+    {
+        $this->container['stat'] = $stat;
+
+        return $this;
+    }
+
+    /**
+     * Gets errorCode
+     *
+     * @return string|null
+     */
+    public function getErrorCode()
+    {
+        return $this->container['errorCode'];
+    }
+
+    /**
+     * Sets errorCode
+     *
+     * @param string|null $errorCode If the request has failed, this element will contain the error code related to the problem encountered.
+     *
+     * @return $this
+     */
+    public function setErrorCode($errorCode)
+    {
+        $this->container['errorCode'] = $errorCode;
+
+        return $this;
+    }
+
+    /**
+     * Gets errorMsg
+     *
+     * @return string|null
+     */
+    public function getErrorMsg()
+    {
+        return $this->container['errorMsg'];
+    }
+
+    /**
+     * Sets errorMsg
+     *
+     * @param string|null $errorMsg If the request has failed, this element will contain the error message related to the problem encountered.
+     *
+     * @return $this
+     */
+    public function setErrorMsg($errorMsg)
+    {
+        $this->container['errorMsg'] = $errorMsg;
+
+        return $this;
+    }
+
+    /**
+     * Gets items
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyAddUpdateItem[]
+     */
+    public function getItems()
+    {
+        return $this->container['items'];
+    }
+
+    /**
+     * Sets items
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyAddUpdateItem[] $items List all items status for the Add or Update operation
+     *
+     * @return $this
+     */
+    public function setItems($items)
+    {
+        $this->container['items'] = $items;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      *

@@ -100,13 +100,6 @@ class LegacyProvisioningGetOrganizationResponseTest extends TestCase
     }
 
     /**
-     * Test attribute "responseType"
-     */
-    public function testPropertyResponseType()
-    {
-    }
-
-    /**
      * Test attribute "organization"
      */
     public function testPropertyOrganization()

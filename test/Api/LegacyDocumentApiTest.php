@@ -83,6 +83,36 @@ class LegacyDocumentApiTest extends TestCase
     }
 
     /**
+     * Test case for deleteDocument
+     *
+     * Delete a document and it's related files..
+     *
+     */
+    public function testDeleteDocument()
+    {
+    }
+
+    /**
+     * Test case for deleteDocumentFile
+     *
+     * Delete one file from a document.
+     *
+     */
+    public function testDeleteDocumentFile()
+    {
+    }
+
+    /**
+     * Test case for downloadDocumentFile
+     *
+     * Download a file. File data is encoded in base64..
+     *
+     */
+    public function testDownloadDocumentFile()
+    {
+    }
+
+    /**
      * Test case for getDocument
      *
      * Get all data for a document record..
@@ -99,6 +129,26 @@ class LegacyDocumentApiTest extends TestCase
      *
      */
     public function testGetDocumentList()
+    {
+    }
+
+    /**
+     * Test case for updateDocument
+     *
+     * Update a document..
+     *
+     */
+    public function testUpdateDocument()
+    {
+    }
+
+    /**
+     * Test case for uploadDocumentFile
+     *
+     * Upload a new file in a document.
+     *
+     */
+    public function testUploadDocumentFile()
     {
     }
 }
