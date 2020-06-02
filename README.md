@@ -64,19 +64,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = Equisoft\SDK\EquisoftConnect\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\LegacyDocumentApi(
+$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\GatewaysApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$legacyDocumentDocumentPayloadRequest = new \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentPayloadRequest(); // \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentPayloadRequest | 
+$gatewaysAccessesCreateEquisoftAnalyzeAccessPayload = new \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateEquisoftAnalyzeAccessPayload(); // \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateEquisoftAnalyzeAccessPayload | Use the CreateAccessPayload corresponding to the gateway type
 
 try {
-    $result = $apiInstance->addDocument($legacyDocumentDocumentPayloadRequest);
+    $result = $apiInstance->createEquisoftAnalyzeAccess($gatewaysAccessesCreateEquisoftAnalyzeAccessPayload);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling LegacyDocumentApi->addDocument: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GatewaysApi->createEquisoftAnalyzeAccess: ', $e->getMessage(), PHP_EOL;
 }
 
 ?>
@@ -88,6 +88,10 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*GatewaysApi* | [**createEquisoftAnalyzeAccess**](docs/Api/GatewaysApi.md#createequisoftanalyzeaccess) | **POST** /crm/api/v1/gateways/equisoftAnalyze/accesses | 
+*GatewaysApi* | [**deleteEquisoftAnalyzeAccess**](docs/Api/GatewaysApi.md#deleteequisoftanalyzeaccess) | **DELETE** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} | 
+*GatewaysApi* | [**listEquisoftAnalyzeAccesses**](docs/Api/GatewaysApi.md#listequisoftanalyzeaccesses) | **GET** /crm/api/v1/gateways/equisoftAnalyze/accesses | 
+*GatewaysApi* | [**patchEquisoftAnalyzeAccess**](docs/Api/GatewaysApi.md#patchequisoftanalyzeaccess) | **PATCH** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} | 
 *LegacyDocumentApi* | [**addDocument**](docs/Api/LegacyDocumentApi.md#adddocument) | **POST** /apps/api/kronos.document.add | Create a new document.
 *LegacyDocumentApi* | [**deleteDocument**](docs/Api/LegacyDocumentApi.md#deletedocument) | **POST** /apps/api/kronos.document.delete | Delete a document and it&#39;s related files.
 *LegacyDocumentApi* | [**deleteDocumentFile**](docs/Api/LegacyDocumentApi.md#deletedocumentfile) | **POST** /apps/api/kronos.document.deleteFile | Delete one file from a document
@@ -108,6 +112,18 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [ErrorResponse](docs/Model/ErrorResponse.md)
+ - [GatewaysAccessesAccess](docs/Model/GatewaysAccessesAccess.md)
+ - [GatewaysAccessesCreateAccessPayload](docs/Model/GatewaysAccessesCreateAccessPayload.md)
+ - [GatewaysAccessesCreateAccessResponse](docs/Model/GatewaysAccessesCreateAccessResponse.md)
+ - [GatewaysAccessesCreateEquisoftAnalyzeAccessPayload](docs/Model/GatewaysAccessesCreateEquisoftAnalyzeAccessPayload.md)
+ - [GatewaysAccessesEquisoftAnalyzeAccess](docs/Model/GatewaysAccessesEquisoftAnalyzeAccess.md)
+ - [GatewaysAccessesEquisoftAnalyzeAccessAllOf](docs/Model/GatewaysAccessesEquisoftAnalyzeAccessAllOf.md)
+ - [GatewaysAccessesListGatewayAccessesResponse](docs/Model/GatewaysAccessesListGatewayAccessesResponse.md)
+ - [GatewaysAccessesPatchAccessPayload](docs/Model/GatewaysAccessesPatchAccessPayload.md)
+ - [GatewaysAccessesPatchEquisoftAnalyzeAccessPayload](docs/Model/GatewaysAccessesPatchEquisoftAnalyzeAccessPayload.md)
+ - [GatewaysAccessesUser](docs/Model/GatewaysAccessesUser.md)
+ - [GatewaysGatewayName](docs/Model/GatewaysGatewayName.md)
+ - [GatewaysGatewayType](docs/Model/GatewaysGatewayType.md)
  - [LegacyAddUpdateItem](docs/Model/LegacyAddUpdateItem.md)
  - [LegacyAddUpdateResponse](docs/Model/LegacyAddUpdateResponse.md)
  - [LegacyAddUpdateResponseAllOf](docs/Model/LegacyAddUpdateResponseAllOf.md)
