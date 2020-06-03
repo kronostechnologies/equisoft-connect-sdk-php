@@ -91,6 +91,7 @@ Class | Method | HTTP request | Description
 *GatewaysApi* | [**createEquisoftAnalyzeAccess**](docs/Api/GatewaysApi.md#createequisoftanalyzeaccess) | **POST** /crm/api/v1/gateways/equisoftAnalyze/accesses | 
 *GatewaysApi* | [**deleteEquisoftAnalyzeAccess**](docs/Api/GatewaysApi.md#deleteequisoftanalyzeaccess) | **DELETE** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} | 
 *GatewaysApi* | [**listEquisoftAnalyzeAccesses**](docs/Api/GatewaysApi.md#listequisoftanalyzeaccesses) | **GET** /crm/api/v1/gateways/equisoftAnalyze/accesses | 
+*GatewaysApi* | [**listGenericCredentials**](docs/Api/GatewaysApi.md#listgenericcredentials) | **GET** /crm/api/v1/gateways/generic/{gatewayName}/credentials | 
 *GatewaysApi* | [**patchEquisoftAnalyzeAccess**](docs/Api/GatewaysApi.md#patchequisoftanalyzeaccess) | **PATCH** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} | 
 *LegacyDocumentApi* | [**addDocument**](docs/Api/LegacyDocumentApi.md#adddocument) | **POST** /apps/api/kronos.document.add | Create a new document.
 *LegacyDocumentApi* | [**deleteDocument**](docs/Api/LegacyDocumentApi.md#deletedocument) | **POST** /apps/api/kronos.document.delete | Delete a document and it&#39;s related files.
@@ -122,8 +123,10 @@ Class | Method | HTTP request | Description
  - [GatewaysAccessesPatchAccessPayload](docs/Model/GatewaysAccessesPatchAccessPayload.md)
  - [GatewaysAccessesPatchEquisoftAnalyzeAccessPayload](docs/Model/GatewaysAccessesPatchEquisoftAnalyzeAccessPayload.md)
  - [GatewaysAccessesUser](docs/Model/GatewaysAccessesUser.md)
+ - [GatewaysCredentials](docs/Model/GatewaysCredentials.md)
  - [GatewaysGatewayName](docs/Model/GatewaysGatewayName.md)
  - [GatewaysGatewayType](docs/Model/GatewaysGatewayType.md)
+ - [GatewaysListCredentialsResponse](docs/Model/GatewaysListCredentialsResponse.md)
  - [LegacyAddUpdateItem](docs/Model/LegacyAddUpdateItem.md)
  - [LegacyAddUpdateResponse](docs/Model/LegacyAddUpdateResponse.md)
  - [LegacyAddUpdateResponseAllOf](docs/Model/LegacyAddUpdateResponseAllOf.md)
