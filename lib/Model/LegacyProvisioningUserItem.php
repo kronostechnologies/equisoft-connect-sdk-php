@@ -58,6 +58,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'orgId' => 'string',
+        'uuid' => 'string',
         'userId' => 'string',
         'displayName' => 'string',
         'firstName' => 'string',
@@ -90,6 +91,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
       */
     protected static $openAPIFormats = [
         'orgId' => null,
+        'uuid' => null,
         'userId' => null,
         'displayName' => null,
         'firstName' => null,
@@ -143,6 +145,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'orgId' => 'orgId',
+        'uuid' => 'uuid',
         'userId' => 'userId',
         'displayName' => 'displayName',
         'firstName' => 'firstName',
@@ -175,6 +178,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'orgId' => 'setOrgId',
+        'uuid' => 'setUuid',
         'userId' => 'setUserId',
         'displayName' => 'setDisplayName',
         'firstName' => 'setFirstName',
@@ -207,6 +211,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'orgId' => 'getOrgId',
+        'uuid' => 'getUuid',
         'userId' => 'getUserId',
         'displayName' => 'getDisplayName',
         'firstName' => 'getFirstName',
@@ -293,6 +298,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['orgId'] = isset($data['orgId']) ? $data['orgId'] : null;
+        $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
         $this->container['userId'] = isset($data['userId']) ? $data['userId'] : null;
         $this->container['displayName'] = isset($data['displayName']) ? $data['displayName'] : null;
         $this->container['firstName'] = isset($data['firstName']) ? $data['firstName'] : null;
@@ -362,6 +368,30 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
     public function setOrgId($orgId)
     {
         $this->container['orgId'] = $orgId;
+
+        return $this;
+    }
+
+    /**
+     * Gets uuid
+     *
+     * @return string|null
+     */
+    public function getUuid()
+    {
+        return $this->container['uuid'];
+    }
+
+    /**
+     * Sets uuid
+     *
+     * @param string|null $uuid User globaly unique identifier
+     *
+     * @return $this
+     */
+    public function setUuid($uuid)
+    {
+        $this->container['uuid'] = $uuid;
 
         return $this;
     }
