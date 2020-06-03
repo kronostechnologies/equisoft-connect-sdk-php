@@ -118,7 +118,7 @@ class GatewaysApi
     /**
      * Operation createEquisoftAnalyzeAccess
      *
-     * @param  \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateEquisoftAnalyzeAccessPayload $gatewaysAccessesCreateEquisoftAnalyzeAccessPayload Use the CreateAccessPayload corresponding to the gateway type (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateEquisoftAnalyzeAccessPayload $gatewaysAccessesCreateEquisoftAnalyzeAccessPayload gatewaysAccessesCreateEquisoftAnalyzeAccessPayload (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -133,7 +133,7 @@ class GatewaysApi
     /**
      * Operation createEquisoftAnalyzeAccessWithHttpInfo
      *
-     * @param  \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateEquisoftAnalyzeAccessPayload $gatewaysAccessesCreateEquisoftAnalyzeAccessPayload Use the CreateAccessPayload corresponding to the gateway type (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateEquisoftAnalyzeAccessPayload $gatewaysAccessesCreateEquisoftAnalyzeAccessPayload (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -301,7 +301,7 @@ class GatewaysApi
      *
      * 
      *
-     * @param  \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateEquisoftAnalyzeAccessPayload $gatewaysAccessesCreateEquisoftAnalyzeAccessPayload Use the CreateAccessPayload corresponding to the gateway type (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateEquisoftAnalyzeAccessPayload $gatewaysAccessesCreateEquisoftAnalyzeAccessPayload (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -321,7 +321,7 @@ class GatewaysApi
      *
      * 
      *
-     * @param  \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateEquisoftAnalyzeAccessPayload $gatewaysAccessesCreateEquisoftAnalyzeAccessPayload Use the CreateAccessPayload corresponding to the gateway type (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateEquisoftAnalyzeAccessPayload $gatewaysAccessesCreateEquisoftAnalyzeAccessPayload (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -368,7 +368,7 @@ class GatewaysApi
     /**
      * Create request for operation 'createEquisoftAnalyzeAccess'
      *
-     * @param  \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateEquisoftAnalyzeAccessPayload $gatewaysAccessesCreateEquisoftAnalyzeAccessPayload Use the CreateAccessPayload corresponding to the gateway type (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateEquisoftAnalyzeAccessPayload $gatewaysAccessesCreateEquisoftAnalyzeAccessPayload (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1463,7 +1463,7 @@ class GatewaysApi
      * Operation patchEquisoftAnalyzeAccess
      *
      * @param  int $accessId accessId (required)
-     * @param  \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesPatchEquisoftAnalyzeAccessPayload $gatewaysAccessesPatchEquisoftAnalyzeAccessPayload Use the PatchAccessPayload corresponding to the gateway type (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesPatchEquisoftAnalyzeAccessPayload $gatewaysAccessesPatchEquisoftAnalyzeAccessPayload gatewaysAccessesPatchEquisoftAnalyzeAccessPayload (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1479,7 +1479,7 @@ class GatewaysApi
      * Operation patchEquisoftAnalyzeAccessWithHttpInfo
      *
      * @param  int $accessId (required)
-     * @param  \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesPatchEquisoftAnalyzeAccessPayload $gatewaysAccessesPatchEquisoftAnalyzeAccessPayload Use the PatchAccessPayload corresponding to the gateway type (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesPatchEquisoftAnalyzeAccessPayload $gatewaysAccessesPatchEquisoftAnalyzeAccessPayload (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1648,7 +1648,7 @@ class GatewaysApi
      * 
      *
      * @param  int $accessId (required)
-     * @param  \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesPatchEquisoftAnalyzeAccessPayload $gatewaysAccessesPatchEquisoftAnalyzeAccessPayload Use the PatchAccessPayload corresponding to the gateway type (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesPatchEquisoftAnalyzeAccessPayload $gatewaysAccessesPatchEquisoftAnalyzeAccessPayload (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1669,7 +1669,7 @@ class GatewaysApi
      * 
      *
      * @param  int $accessId (required)
-     * @param  \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesPatchEquisoftAnalyzeAccessPayload $gatewaysAccessesPatchEquisoftAnalyzeAccessPayload Use the PatchAccessPayload corresponding to the gateway type (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesPatchEquisoftAnalyzeAccessPayload $gatewaysAccessesPatchEquisoftAnalyzeAccessPayload (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1717,7 +1717,7 @@ class GatewaysApi
      * Create request for operation 'patchEquisoftAnalyzeAccess'
      *
      * @param  int $accessId (required)
-     * @param  \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesPatchEquisoftAnalyzeAccessPayload $gatewaysAccessesPatchEquisoftAnalyzeAccessPayload Use the PatchAccessPayload corresponding to the gateway type (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesPatchEquisoftAnalyzeAccessPayload $gatewaysAccessesPatchEquisoftAnalyzeAccessPayload (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

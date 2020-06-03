@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **orgId** | **string** | User organization id | [optional] 
+**uuid** | **string** | User globaly unique identifier | [optional] 
 **userId** | **string** | User unique identifier | [optional] 
 **displayName** | **string** | User display name | [optional] 
 **firstName** | **string** | First name | [optional] 

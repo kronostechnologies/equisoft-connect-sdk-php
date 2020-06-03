@@ -37,7 +37,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\GatewaysApi(
     new GuzzleHttp\Client(),
     $config
 );
-$gatewaysAccessesCreateEquisoftAnalyzeAccessPayload = new \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateEquisoftAnalyzeAccessPayload(); // \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateEquisoftAnalyzeAccessPayload | Use the CreateAccessPayload corresponding to the gateway type
+$gatewaysAccessesCreateEquisoftAnalyzeAccessPayload = new \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateEquisoftAnalyzeAccessPayload(); // \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateEquisoftAnalyzeAccessPayload | 
 
 try {
     $result = $apiInstance->createEquisoftAnalyzeAccess($gatewaysAccessesCreateEquisoftAnalyzeAccessPayload);
@@ -53,7 +53,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **gatewaysAccessesCreateEquisoftAnalyzeAccessPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateEquisoftAnalyzeAccessPayload**](../Model/GatewaysAccessesCreateEquisoftAnalyzeAccessPayload.md)| Use the CreateAccessPayload corresponding to the gateway type |
+ **gatewaysAccessesCreateEquisoftAnalyzeAccessPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateEquisoftAnalyzeAccessPayload**](../Model/GatewaysAccessesCreateEquisoftAnalyzeAccessPayload.md)|  |
 
 ### Return type
 
@@ -280,7 +280,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\GatewaysApi(
     $config
 );
 $accessId = 56; // int | 
-$gatewaysAccessesPatchEquisoftAnalyzeAccessPayload = new \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesPatchEquisoftAnalyzeAccessPayload(); // \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesPatchEquisoftAnalyzeAccessPayload | Use the PatchAccessPayload corresponding to the gateway type
+$gatewaysAccessesPatchEquisoftAnalyzeAccessPayload = new \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesPatchEquisoftAnalyzeAccessPayload(); // \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesPatchEquisoftAnalyzeAccessPayload | 
 
 try {
     $result = $apiInstance->patchEquisoftAnalyzeAccess($accessId, $gatewaysAccessesPatchEquisoftAnalyzeAccessPayload);
@@ -297,7 +297,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accessId** | **int**|  |
- **gatewaysAccessesPatchEquisoftAnalyzeAccessPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesPatchEquisoftAnalyzeAccessPayload**](../Model/GatewaysAccessesPatchEquisoftAnalyzeAccessPayload.md)| Use the PatchAccessPayload corresponding to the gateway type |
+ **gatewaysAccessesPatchEquisoftAnalyzeAccessPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesPatchEquisoftAnalyzeAccessPayload**](../Model/GatewaysAccessesPatchEquisoftAnalyzeAccessPayload.md)|  |
 
 ### Return type
 

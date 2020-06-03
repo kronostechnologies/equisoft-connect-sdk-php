@@ -70,7 +70,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\GatewaysApi(
     new GuzzleHttp\Client(),
     $config
 );
-$gatewaysAccessesCreateEquisoftAnalyzeAccessPayload = new \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateEquisoftAnalyzeAccessPayload(); // \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateEquisoftAnalyzeAccessPayload | Use the CreateAccessPayload corresponding to the gateway type
+$gatewaysAccessesCreateEquisoftAnalyzeAccessPayload = new \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateEquisoftAnalyzeAccessPayload(); // \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateEquisoftAnalyzeAccessPayload | 
 
 try {
     $result = $apiInstance->createEquisoftAnalyzeAccess($gatewaysAccessesCreateEquisoftAnalyzeAccessPayload);
@@ -114,13 +114,11 @@ Class | Method | HTTP request | Description
 
  - [ErrorResponse](docs/Model/ErrorResponse.md)
  - [GatewaysAccessesAccess](docs/Model/GatewaysAccessesAccess.md)
- - [GatewaysAccessesCreateAccessPayload](docs/Model/GatewaysAccessesCreateAccessPayload.md)
  - [GatewaysAccessesCreateAccessResponse](docs/Model/GatewaysAccessesCreateAccessResponse.md)
  - [GatewaysAccessesCreateEquisoftAnalyzeAccessPayload](docs/Model/GatewaysAccessesCreateEquisoftAnalyzeAccessPayload.md)
  - [GatewaysAccessesEquisoftAnalyzeAccess](docs/Model/GatewaysAccessesEquisoftAnalyzeAccess.md)
  - [GatewaysAccessesEquisoftAnalyzeAccessAllOf](docs/Model/GatewaysAccessesEquisoftAnalyzeAccessAllOf.md)
  - [GatewaysAccessesListGatewayAccessesResponse](docs/Model/GatewaysAccessesListGatewayAccessesResponse.md)
- - [GatewaysAccessesPatchAccessPayload](docs/Model/GatewaysAccessesPatchAccessPayload.md)
  - [GatewaysAccessesPatchEquisoftAnalyzeAccessPayload](docs/Model/GatewaysAccessesPatchEquisoftAnalyzeAccessPayload.md)
  - [GatewaysAccessesUser](docs/Model/GatewaysAccessesUser.md)
  - [GatewaysCredentials](docs/Model/GatewaysCredentials.md)
