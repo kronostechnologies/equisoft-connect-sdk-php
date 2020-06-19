@@ -79,6 +79,13 @@ class MovementCopyMovementTest extends TestCase
     }
 
     /**
+     * Test attribute "type"
+     */
+    public function testPropertyType()
+    {
+    }
+
+    /**
      * Test attribute "sourceDatabase"
      */
     public function testPropertySourceDatabase()
@@ -93,9 +100,9 @@ class MovementCopyMovementTest extends TestCase
     }
 
     /**
-     * Test attribute "users"
+     * Test attribute "userTuples"
      */
-    public function testPropertyUsers()
+    public function testPropertyUserTuples()
     {
     }
 }

@@ -58,8 +58,7 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
       */
     protected static $openAPITypes = [
         'userUuid' => 'string',
-        'clientKey' => 'string',
-        'anzlyzeUserName' => 'string'
+        'clientKey' => 'string'
     ];
 
     /**
@@ -69,8 +68,7 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
       */
     protected static $openAPIFormats = [
         'userUuid' => null,
-        'clientKey' => null,
-        'anzlyzeUserName' => null
+        'clientKey' => null
     ];
 
     /**
@@ -101,8 +99,7 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
      */
     protected static $attributeMap = [
         'userUuid' => 'userUuid',
-        'clientKey' => 'clientKey',
-        'anzlyzeUserName' => 'anzlyzeUserName'
+        'clientKey' => 'clientKey'
     ];
 
     /**
@@ -112,8 +109,7 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
      */
     protected static $setters = [
         'userUuid' => 'setUserUuid',
-        'clientKey' => 'setClientKey',
-        'anzlyzeUserName' => 'setAnzlyzeUserName'
+        'clientKey' => 'setClientKey'
     ];
 
     /**
@@ -123,8 +119,7 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
      */
     protected static $getters = [
         'userUuid' => 'getUserUuid',
-        'clientKey' => 'getClientKey',
-        'anzlyzeUserName' => 'getAnzlyzeUserName'
+        'clientKey' => 'getClientKey'
     ];
 
     /**
@@ -189,7 +184,6 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
     {
         $this->container['userUuid'] = isset($data['userUuid']) ? $data['userUuid'] : null;
         $this->container['clientKey'] = isset($data['clientKey']) ? $data['clientKey'] : null;
-        $this->container['anzlyzeUserName'] = isset($data['anzlyzeUserName']) ? $data['anzlyzeUserName'] : null;
     }
 
     /**
@@ -206,9 +200,6 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
         }
         if ($this->container['clientKey'] === null) {
             $invalidProperties[] = "'clientKey' can't be null";
-        }
-        if ($this->container['anzlyzeUserName'] === null) {
-            $invalidProperties[] = "'anzlyzeUserName' can't be null";
         }
         return $invalidProperties;
     }
@@ -269,30 +260,6 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
     public function setClientKey($clientKey)
     {
         $this->container['clientKey'] = $clientKey;
-
-        return $this;
-    }
-
-    /**
-     * Gets anzlyzeUserName
-     *
-     * @return string
-     */
-    public function getAnzlyzeUserName()
-    {
-        return $this->container['anzlyzeUserName'];
-    }
-
-    /**
-     * Sets anzlyzeUserName
-     *
-     * @param string $anzlyzeUserName anzlyzeUserName
-     *
-     * @return $this
-     */
-    public function setAnzlyzeUserName($anzlyzeUserName)
-    {
-        $this->container['anzlyzeUserName'] = $anzlyzeUserName;
 
         return $this;
     }

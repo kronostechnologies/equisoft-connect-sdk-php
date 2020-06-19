@@ -56,7 +56,6 @@ class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess
       */
     protected static $openAPITypes = [
         'clientKey' => 'string',
-        'anzlyzeUserName' => 'string',
         'version' => 'string'
     ];
 
@@ -67,7 +66,6 @@ class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess
       */
     protected static $openAPIFormats = [
         'clientKey' => null,
-        'anzlyzeUserName' => null,
         'version' => null
     ];
 
@@ -99,7 +97,6 @@ class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess
      */
     protected static $attributeMap = [
         'clientKey' => 'clientKey',
-        'anzlyzeUserName' => 'anzlyzeUserName',
         'version' => 'version'
     ];
 
@@ -110,7 +107,6 @@ class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess
      */
     protected static $setters = [
         'clientKey' => 'setClientKey',
-        'anzlyzeUserName' => 'setAnzlyzeUserName',
         'version' => 'setVersion'
     ];
 
@@ -121,7 +117,6 @@ class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess
      */
     protected static $getters = [
         'clientKey' => 'getClientKey',
-        'anzlyzeUserName' => 'getAnzlyzeUserName',
         'version' => 'getVersion'
     ];
 
@@ -197,7 +192,6 @@ class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess
         parent::__construct($data);
 
         $this->container['clientKey'] = isset($data['clientKey']) ? $data['clientKey'] : null;
-        $this->container['anzlyzeUserName'] = isset($data['anzlyzeUserName']) ? $data['anzlyzeUserName'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : 'NATIVE';
     }
 
@@ -212,9 +206,6 @@ class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess
 
         if ($this->container['clientKey'] === null) {
             $invalidProperties[] = "'clientKey' can't be null";
-        }
-        if ($this->container['anzlyzeUserName'] === null) {
-            $invalidProperties[] = "'anzlyzeUserName' can't be null";
         }
         if ($this->container['version'] === null) {
             $invalidProperties[] = "'version' can't be null";
@@ -262,30 +253,6 @@ class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess
     public function setClientKey($clientKey)
     {
         $this->container['clientKey'] = $clientKey;
-
-        return $this;
-    }
-
-    /**
-     * Gets anzlyzeUserName
-     *
-     * @return string
-     */
-    public function getAnzlyzeUserName()
-    {
-        return $this->container['anzlyzeUserName'];
-    }
-
-    /**
-     * Sets anzlyzeUserName
-     *
-     * @param string $anzlyzeUserName anzlyzeUserName
-     *
-     * @return $this
-     */
-    public function setAnzlyzeUserName($anzlyzeUserName)
-    {
-        $this->container['anzlyzeUserName'] = $anzlyzeUserName;
 
         return $this;
     }

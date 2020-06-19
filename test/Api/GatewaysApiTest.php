@@ -103,6 +103,16 @@ class GatewaysApiTest extends TestCase
     }
 
     /**
+     * Test case for listGenericCredentials
+     *
+     * .
+     *
+     */
+    public function testListGenericCredentials()
+    {
+    }
+
+    /**
      * Test case for patchEquisoftAnalyzeAccess
      *
      * .

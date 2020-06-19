@@ -1,6 +1,6 @@
 <?php
 /**
- * GatewaysAccessesCreateAccessPayloadTest
+ * GatewaysCredentialsWithSsnTest
  *
  * PHP version 5
  *
@@ -32,15 +32,15 @@ namespace Equisoft\SDK\EquisoftConnect;
 use PHPUnit\Framework\TestCase;
 
 /**
- * GatewaysAccessesCreateAccessPayloadTest Class Doc Comment
+ * GatewaysCredentialsWithSsnTest Class Doc Comment
  *
  * @category    Class
- * @description GatewaysAccessesCreateAccessPayload
+ * @description GatewaysCredentialsWithSsn
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class GatewaysAccessesCreateAccessPayloadTest extends TestCase
+class GatewaysCredentialsWithSsnTest extends TestCase
 {
 
     /**
@@ -72,16 +72,30 @@ class GatewaysAccessesCreateAccessPayloadTest extends TestCase
     }
 
     /**
-     * Test "GatewaysAccessesCreateAccessPayload"
+     * Test "GatewaysCredentialsWithSsn"
      */
-    public function testGatewaysAccessesCreateAccessPayload()
+    public function testGatewaysCredentialsWithSsn()
     {
     }
 
     /**
-     * Test attribute "type"
+     * Test attribute "username"
      */
-    public function testPropertyType()
+    public function testPropertyUsername()
+    {
+    }
+
+    /**
+     * Test attribute "password"
+     */
+    public function testPropertyPassword()
+    {
+    }
+
+    /**
+     * Test attribute "ssnList"
+     */
+    public function testPropertySsnList()
     {
     }
 }

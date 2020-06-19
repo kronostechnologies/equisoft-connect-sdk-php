@@ -84,4 +84,46 @@ class MovementClientBaseUsingFileMovementAllOfTest extends TestCase
     public function testPropertyType()
     {
     }
+
+    /**
+     * Test attribute "sourceDatabase"
+     */
+    public function testPropertySourceDatabase()
+    {
+    }
+
+    /**
+     * Test attribute "sourceUser"
+     */
+    public function testPropertySourceUser()
+    {
+    }
+
+    /**
+     * Test attribute "destinationDatabase"
+     */
+    public function testPropertyDestinationDatabase()
+    {
+    }
+
+    /**
+     * Test attribute "destinationUser"
+     */
+    public function testPropertyDestinationUser()
+    {
+    }
+
+    /**
+     * Test attribute "capsil"
+     */
+    public function testPropertyCapsil()
+    {
+    }
+
+    /**
+     * Test attribute "univeris"
+     */
+    public function testPropertyUniveris()
+    {
+    }
 }

@@ -122,6 +122,8 @@ Class | Method | HTTP request | Description
  - [GatewaysAccessesPatchEquisoftAnalyzeAccessPayload](docs/Model/GatewaysAccessesPatchEquisoftAnalyzeAccessPayload.md)
  - [GatewaysAccessesUser](docs/Model/GatewaysAccessesUser.md)
  - [GatewaysCredentials](docs/Model/GatewaysCredentials.md)
+ - [GatewaysCredentialsWithSsn](docs/Model/GatewaysCredentialsWithSsn.md)
+ - [GatewaysCredentialsWithSsnAllOf](docs/Model/GatewaysCredentialsWithSsnAllOf.md)
  - [GatewaysGatewayName](docs/Model/GatewaysGatewayName.md)
  - [GatewaysGatewayType](docs/Model/GatewaysGatewayType.md)
  - [GatewaysListCredentialsResponse](docs/Model/GatewaysListCredentialsResponse.md)

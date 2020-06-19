@@ -79,9 +79,9 @@ class MovementMoveMovementPayloadAllOfTest extends TestCase
     }
 
     /**
-     * Test attribute "movementType"
+     * Test attribute "type"
      */
-    public function testPropertyMovementType()
+    public function testPropertyType()
     {
     }
 

@@ -84,4 +84,53 @@ class MovementClientBaseUsingDistributionListMovementAllOfTest extends TestCase
     public function testPropertyType()
     {
     }
+
+    /**
+     * Test attribute "sourceDatabase"
+     */
+    public function testPropertySourceDatabase()
+    {
+    }
+
+    /**
+     * Test attribute "sourceUser"
+     */
+    public function testPropertySourceUser()
+    {
+    }
+
+    /**
+     * Test attribute "sourceDistributionList"
+     */
+    public function testPropertySourceDistributionList()
+    {
+    }
+
+    /**
+     * Test attribute "destinationDatabase"
+     */
+    public function testPropertyDestinationDatabase()
+    {
+    }
+
+    /**
+     * Test attribute "destinationUser"
+     */
+    public function testPropertyDestinationUser()
+    {
+    }
+
+    /**
+     * Test attribute "datagatewayAccessMappings"
+     */
+    public function testPropertyDatagatewayAccessMappings()
+    {
+    }
+
+    /**
+     * Test attribute "transferOption"
+     */
+    public function testPropertyTransferOption()
+    {
+    }
 }

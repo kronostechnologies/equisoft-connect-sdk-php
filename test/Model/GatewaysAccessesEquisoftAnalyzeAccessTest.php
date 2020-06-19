@@ -86,13 +86,6 @@ class GatewaysAccessesEquisoftAnalyzeAccessTest extends TestCase
     }
 
     /**
-     * Test attribute "anzlyzeUserName"
-     */
-    public function testPropertyAnzlyzeUserName()
-    {
-    }
-
-    /**
      * Test attribute "version"
      */
     public function testPropertyVersion()

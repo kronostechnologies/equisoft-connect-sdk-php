@@ -197,7 +197,7 @@ Name | Type | Description  | Notes
 
 ## listGenericCredentials
 
-> \Equisoft\SDK\EquisoftConnect\Model\GatewaysListCredentialsResponse listGenericCredentials($gatewayName)
+> \Equisoft\SDK\EquisoftConnect\Model\GatewaysListCredentialsResponse listGenericCredentials($gatewayName, $includeSsn)
 
 
 
@@ -219,9 +219,10 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\GatewaysApi(
     $config
 );
 $gatewayName = 'gatewayName_example'; // string | 
+$includeSsn = True; // bool | Include the list of SSN for each credentials. Defaults to false
 
 try {
-    $result = $apiInstance->listGenericCredentials($gatewayName);
+    $result = $apiInstance->listGenericCredentials($gatewayName, $includeSsn);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GatewaysApi->listGenericCredentials: ', $e->getMessage(), PHP_EOL;
@@ -235,6 +236,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **gatewayName** | **string**|  |
+ **includeSsn** | **bool**| Include the list of SSN for each credentials. Defaults to false | [optional]
 
 ### Return type
 

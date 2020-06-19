@@ -58,7 +58,6 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
       */
     protected static $openAPITypes = [
         'clientKey' => 'string',
-        'anzlyzeUserName' => 'string',
         'version' => 'string'
     ];
 
@@ -69,7 +68,6 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
       */
     protected static $openAPIFormats = [
         'clientKey' => null,
-        'anzlyzeUserName' => null,
         'version' => null
     ];
 
@@ -101,7 +99,6 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
      */
     protected static $attributeMap = [
         'clientKey' => 'clientKey',
-        'anzlyzeUserName' => 'anzlyzeUserName',
         'version' => 'version'
     ];
 
@@ -112,7 +109,6 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
      */
     protected static $setters = [
         'clientKey' => 'setClientKey',
-        'anzlyzeUserName' => 'setAnzlyzeUserName',
         'version' => 'setVersion'
     ];
 
@@ -123,7 +119,6 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
      */
     protected static $getters = [
         'clientKey' => 'getClientKey',
-        'anzlyzeUserName' => 'getAnzlyzeUserName',
         'version' => 'getVersion'
     ];
 
@@ -203,7 +198,6 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
     public function __construct(array $data = null)
     {
         $this->container['clientKey'] = isset($data['clientKey']) ? $data['clientKey'] : null;
-        $this->container['anzlyzeUserName'] = isset($data['anzlyzeUserName']) ? $data['anzlyzeUserName'] : null;
         $this->container['version'] = isset($data['version']) ? $data['version'] : 'NATIVE';
     }
 
@@ -218,9 +212,6 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
 
         if ($this->container['clientKey'] === null) {
             $invalidProperties[] = "'clientKey' can't be null";
-        }
-        if ($this->container['anzlyzeUserName'] === null) {
-            $invalidProperties[] = "'anzlyzeUserName' can't be null";
         }
         if ($this->container['version'] === null) {
             $invalidProperties[] = "'version' can't be null";
@@ -268,30 +259,6 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
     public function setClientKey($clientKey)
     {
         $this->container['clientKey'] = $clientKey;
-
-        return $this;
-    }
-
-    /**
-     * Gets anzlyzeUserName
-     *
-     * @return string
-     */
-    public function getAnzlyzeUserName()
-    {
-        return $this->container['anzlyzeUserName'];
-    }
-
-    /**
-     * Sets anzlyzeUserName
-     *
-     * @param string $anzlyzeUserName anzlyzeUserName
-     *
-     * @return $this
-     */
-    public function setAnzlyzeUserName($anzlyzeUserName)
-    {
-        $this->container['anzlyzeUserName'] = $anzlyzeUserName;
 
         return $this;
     }

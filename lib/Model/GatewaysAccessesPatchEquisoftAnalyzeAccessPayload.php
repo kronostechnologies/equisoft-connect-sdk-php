@@ -57,8 +57,7 @@ class GatewaysAccessesPatchEquisoftAnalyzeAccessPayload implements ModelInterfac
       * @var string[]
       */
     protected static $openAPITypes = [
-        'clientKey' => 'string',
-        'anzlyzeUserName' => 'string'
+        'clientKey' => 'string'
     ];
 
     /**
@@ -67,8 +66,7 @@ class GatewaysAccessesPatchEquisoftAnalyzeAccessPayload implements ModelInterfac
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'clientKey' => null,
-        'anzlyzeUserName' => null
+        'clientKey' => null
     ];
 
     /**
@@ -98,8 +96,7 @@ class GatewaysAccessesPatchEquisoftAnalyzeAccessPayload implements ModelInterfac
      * @var string[]
      */
     protected static $attributeMap = [
-        'clientKey' => 'clientKey',
-        'anzlyzeUserName' => 'anzlyzeUserName'
+        'clientKey' => 'clientKey'
     ];
 
     /**
@@ -108,8 +105,7 @@ class GatewaysAccessesPatchEquisoftAnalyzeAccessPayload implements ModelInterfac
      * @var string[]
      */
     protected static $setters = [
-        'clientKey' => 'setClientKey',
-        'anzlyzeUserName' => 'setAnzlyzeUserName'
+        'clientKey' => 'setClientKey'
     ];
 
     /**
@@ -118,8 +114,7 @@ class GatewaysAccessesPatchEquisoftAnalyzeAccessPayload implements ModelInterfac
      * @var string[]
      */
     protected static $getters = [
-        'clientKey' => 'getClientKey',
-        'anzlyzeUserName' => 'getAnzlyzeUserName'
+        'clientKey' => 'getClientKey'
     ];
 
     /**
@@ -183,7 +178,6 @@ class GatewaysAccessesPatchEquisoftAnalyzeAccessPayload implements ModelInterfac
     public function __construct(array $data = null)
     {
         $this->container['clientKey'] = isset($data['clientKey']) ? $data['clientKey'] : null;
-        $this->container['anzlyzeUserName'] = isset($data['anzlyzeUserName']) ? $data['anzlyzeUserName'] : null;
     }
 
     /**
@@ -230,30 +224,6 @@ class GatewaysAccessesPatchEquisoftAnalyzeAccessPayload implements ModelInterfac
     public function setClientKey($clientKey)
     {
         $this->container['clientKey'] = $clientKey;
-
-        return $this;
-    }
-
-    /**
-     * Gets anzlyzeUserName
-     *
-     * @return string|null
-     */
-    public function getAnzlyzeUserName()
-    {
-        return $this->container['anzlyzeUserName'];
-    }
-
-    /**
-     * Sets anzlyzeUserName
-     *
-     * @param string|null $anzlyzeUserName anzlyzeUserName
-     *
-     * @return $this
-     */
-    public function setAnzlyzeUserName($anzlyzeUserName)
-    {
-        $this->container['anzlyzeUserName'] = $anzlyzeUserName;
 
         return $this;
     }

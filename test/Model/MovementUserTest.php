@@ -86,6 +86,13 @@ class MovementUserTest extends TestCase
     }
 
     /**
+     * Test attribute "uuid"
+     */
+    public function testPropertyUuid()
+    {
+    }
+
+    /**
      * Test attribute "displayName"
      */
     public function testPropertyDisplayName()

@@ -1,6 +1,6 @@
 <?php
 /**
- * GatewaysAccessesCreateAccessPayload
+ * GatewaysCredentialsWithSsnAllOf
  *
  * PHP version 5
  *
@@ -33,26 +33,23 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * GatewaysAccessesCreateAccessPayload Class Doc Comment
+ * GatewaysCredentialsWithSsnAllOf Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class GatewaysAccessesCreateAccessPayload implements ModelInterface, ArrayAccess
+class GatewaysCredentialsWithSsnAllOf implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = 'type';
-    const DISCRIMINATOR_MAP = [
-        "EQUISOFT_ANALYZE" => "GatewaysAccessesCreateEquisoftAnalyzeAccessPayload",
-    ];
+    const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
       *
       * @var string
       */
-    protected static $openAPIModelName = 'gateways.accesses.CreateAccessPayload';
+    protected static $openAPIModelName = 'gateways_CredentialsWithSsn_allOf';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -60,7 +57,7 @@ class GatewaysAccessesCreateAccessPayload implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string'
+        'ssnList' => 'string[]'
     ];
 
     /**
@@ -69,7 +66,7 @@ class GatewaysAccessesCreateAccessPayload implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'type' => null
+        'ssnList' => null
     ];
 
     /**
@@ -99,7 +96,7 @@ class GatewaysAccessesCreateAccessPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type'
+        'ssnList' => 'ssnList'
     ];
 
     /**
@@ -108,7 +105,7 @@ class GatewaysAccessesCreateAccessPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType'
+        'ssnList' => 'setSsnList'
     ];
 
     /**
@@ -117,7 +114,7 @@ class GatewaysAccessesCreateAccessPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType'
+        'ssnList' => 'getSsnList'
     ];
 
     /**
@@ -161,21 +158,8 @@ class GatewaysAccessesCreateAccessPayload implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    const TYPE_EQUISOFT_ANALYZE = 'EQUISOFT_ANALYZE';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getTypeAllowableValues()
-    {
-        return [
-            self::TYPE_EQUISOFT_ANALYZE,
-        ];
-    }
     
 
     /**
@@ -193,10 +177,7 @@ class GatewaysAccessesCreateAccessPayload implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-
-        // Initialize discriminator property with the model name.
-        $this->container['type'] = static::$openAPIModelName;
+        $this->container['ssnList'] = isset($data['ssnList']) ? $data['ssnList'] : null;
     }
 
     /**
@@ -207,17 +188,6 @@ class GatewaysAccessesCreateAccessPayload implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'type', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
 
         return $invalidProperties;
     }
@@ -235,34 +205,25 @@ class GatewaysAccessesCreateAccessPayload implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets type
+     * Gets ssnList
      *
-     * @return string
+     * @return string[]|null
      */
-    public function getType()
+    public function getSsnList()
     {
-        return $this->container['type'];
+        return $this->container['ssnList'];
     }
 
     /**
-     * Sets type
+     * Sets ssnList
      *
-     * @param string $type type
+     * @param string[]|null $ssnList The list will contain formatted SSNs, i.e. \"123 456 789\"
      *
      * @return $this
      */
-    public function setType($type)
+    public function setSsnList($ssnList)
     {
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!in_array($type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'type', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['type'] = $type;
+        $this->container['ssnList'] = $ssnList;
 
         return $this;
     }

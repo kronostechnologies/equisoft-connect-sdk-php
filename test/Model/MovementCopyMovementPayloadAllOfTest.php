@@ -79,9 +79,9 @@ class MovementCopyMovementPayloadAllOfTest extends TestCase
     }
 
     /**
-     * Test attribute "movementType"
+     * Test attribute "type"
      */
-    public function testPropertyMovementType()
+    public function testPropertyType()
     {
     }
 
@@ -100,9 +100,9 @@ class MovementCopyMovementPayloadAllOfTest extends TestCase
     }
 
     /**
-     * Test attribute "users"
+     * Test attribute "userTuples"
      */
-    public function testPropertyUsers()
+    public function testPropertyUserTuples()
     {
     }
 }

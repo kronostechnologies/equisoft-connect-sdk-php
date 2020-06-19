@@ -77,4 +77,39 @@ class MovementReassignmentMovementTest extends TestCase
     public function testMovementReassignmentMovement()
     {
     }
+
+    /**
+     * Test attribute "type"
+     */
+    public function testPropertyType()
+    {
+    }
+
+    /**
+     * Test attribute "sourceDatabase"
+     */
+    public function testPropertySourceDatabase()
+    {
+    }
+
+    /**
+     * Test attribute "sourceUser"
+     */
+    public function testPropertySourceUser()
+    {
+    }
+
+    /**
+     * Test attribute "destinationUser"
+     */
+    public function testPropertyDestinationUser()
+    {
+    }
+
+    /**
+     * Test attribute "accessCode"
+     */
+    public function testPropertyAccessCode()
+    {
+    }
 }

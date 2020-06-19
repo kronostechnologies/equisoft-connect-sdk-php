@@ -79,16 +79,16 @@ class MovementMovementTest extends TestCase
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "type"
      */
-    public function testPropertyId()
+    public function testPropertyType()
     {
     }
 
     /**
-     * Test attribute "type"
+     * Test attribute "id"
      */
-    public function testPropertyType()
+    public function testPropertyId()
     {
     }
 
@@ -107,16 +107,44 @@ class MovementMovementTest extends TestCase
     }
 
     /**
-     * Test attribute "date"
+     * Test attribute "scheduledDate"
      */
-    public function testPropertyDate()
+    public function testPropertyScheduledDate()
     {
     }
 
     /**
-     * Test attribute "detail"
+     * Test attribute "processedDate"
      */
-    public function testPropertyDetail()
+    public function testPropertyProcessedDate()
+    {
+    }
+
+    /**
+     * Test attribute "addedDate"
+     */
+    public function testPropertyAddedDate()
+    {
+    }
+
+    /**
+     * Test attribute "addedBy"
+     */
+    public function testPropertyAddedBy()
+    {
+    }
+
+    /**
+     * Test attribute "cancelledDate"
+     */
+    public function testPropertyCancelledDate()
+    {
+    }
+
+    /**
+     * Test attribute "cancelledBy"
+     */
+    public function testPropertyCancelledBy()
     {
     }
 }

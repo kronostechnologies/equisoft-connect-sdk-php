@@ -86,6 +86,13 @@ class LegacyProvisioningUserItemTest extends TestCase
     }
 
     /**
+     * Test attribute "uuid"
+     */
+    public function testPropertyUuid()
+    {
+    }
+
+    /**
      * Test attribute "userId"
      */
     public function testPropertyUserId()

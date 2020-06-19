@@ -1,6 +1,6 @@
 <?php
 /**
- * GatewaysAccessesPatchAccessPayload
+ * GatewaysCredentialsWithSsn
  *
  * PHP version 5
  *
@@ -33,26 +33,23 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * GatewaysAccessesPatchAccessPayload Class Doc Comment
+ * GatewaysCredentialsWithSsn Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class GatewaysAccessesPatchAccessPayload implements ModelInterface, ArrayAccess
+class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess
 {
-    const DISCRIMINATOR = 'type';
-    const DISCRIMINATOR_MAP = [
-        "EQUISOFT_ANALYZE" => "GatewaysAccessesPatchEquisoftAnalyzeAccessPayload",
-    ];
+    const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
       *
       * @var string
       */
-    protected static $openAPIModelName = 'gateways.accesses.PatchAccessPayload';
+    protected static $openAPIModelName = 'gateways.CredentialsWithSsn';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -60,7 +57,9 @@ class GatewaysAccessesPatchAccessPayload implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string'
+        'username' => 'string',
+        'password' => 'string',
+        'ssnList' => 'string[]'
     ];
 
     /**
@@ -69,7 +68,9 @@ class GatewaysAccessesPatchAccessPayload implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'type' => null
+        'username' => null,
+        'password' => null,
+        'ssnList' => null
     ];
 
     /**
@@ -99,7 +100,9 @@ class GatewaysAccessesPatchAccessPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type'
+        'username' => 'username',
+        'password' => 'password',
+        'ssnList' => 'ssnList'
     ];
 
     /**
@@ -108,7 +111,9 @@ class GatewaysAccessesPatchAccessPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType'
+        'username' => 'setUsername',
+        'password' => 'setPassword',
+        'ssnList' => 'setSsnList'
     ];
 
     /**
@@ -117,7 +122,9 @@ class GatewaysAccessesPatchAccessPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType'
+        'username' => 'getUsername',
+        'password' => 'getPassword',
+        'ssnList' => 'getSsnList'
     ];
 
     /**
@@ -161,21 +168,8 @@ class GatewaysAccessesPatchAccessPayload implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    const TYPE_EQUISOFT_ANALYZE = 'EQUISOFT_ANALYZE';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getTypeAllowableValues()
-    {
-        return [
-            self::TYPE_EQUISOFT_ANALYZE,
-        ];
-    }
     
 
     /**
@@ -193,10 +187,9 @@ class GatewaysAccessesPatchAccessPayload implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-
-        // Initialize discriminator property with the model name.
-        $this->container['type'] = static::$openAPIModelName;
+        $this->container['username'] = isset($data['username']) ? $data['username'] : null;
+        $this->container['password'] = isset($data['password']) ? $data['password'] : null;
+        $this->container['ssnList'] = isset($data['ssnList']) ? $data['ssnList'] : null;
     }
 
     /**
@@ -208,17 +201,12 @@ class GatewaysAccessesPatchAccessPayload implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
+        if ($this->container['username'] === null) {
+            $invalidProperties[] = "'username' can't be null";
         }
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'type', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
+        if ($this->container['password'] === null) {
+            $invalidProperties[] = "'password' can't be null";
         }
-
         return $invalidProperties;
     }
 
@@ -235,34 +223,73 @@ class GatewaysAccessesPatchAccessPayload implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets type
+     * Gets username
      *
      * @return string
      */
-    public function getType()
+    public function getUsername()
     {
-        return $this->container['type'];
+        return $this->container['username'];
     }
 
     /**
-     * Sets type
+     * Sets username
      *
-     * @param string $type type
+     * @param string $username username
      *
      * @return $this
      */
-    public function setType($type)
+    public function setUsername($username)
     {
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!in_array($type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'type', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['type'] = $type;
+        $this->container['username'] = $username;
+
+        return $this;
+    }
+
+    /**
+     * Gets password
+     *
+     * @return string
+     */
+    public function getPassword()
+    {
+        return $this->container['password'];
+    }
+
+    /**
+     * Sets password
+     *
+     * @param string $password password
+     *
+     * @return $this
+     */
+    public function setPassword($password)
+    {
+        $this->container['password'] = $password;
+
+        return $this;
+    }
+
+    /**
+     * Gets ssnList
+     *
+     * @return string[]|null
+     */
+    public function getSsnList()
+    {
+        return $this->container['ssnList'];
+    }
+
+    /**
+     * Sets ssnList
+     *
+     * @param string[]|null $ssnList The list will contain formatted SSNs, i.e. \"123 456 789\"
+     *
+     * @return $this
+     */
+    public function setSsnList($ssnList)
+    {
+        $this->container['ssnList'] = $ssnList;
 
         return $this;
     }

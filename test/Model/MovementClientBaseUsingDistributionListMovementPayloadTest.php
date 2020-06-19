@@ -79,9 +79,9 @@ class MovementClientBaseUsingDistributionListMovementPayloadTest extends TestCas
     }
 
     /**
-     * Test attribute "movementType"
+     * Test attribute "type"
      */
-    public function testPropertyMovementType()
+    public function testPropertyType()
     {
     }
 
@@ -100,9 +100,9 @@ class MovementClientBaseUsingDistributionListMovementPayloadTest extends TestCas
     }
 
     /**
-     * Test attribute "sourceDistList"
+     * Test attribute "sourceDistributionList"
      */
-    public function testPropertySourceDistList()
+    public function testPropertySourceDistributionList()
     {
     }
 

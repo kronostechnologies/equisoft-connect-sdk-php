@@ -1150,14 +1150,15 @@ class GatewaysApi
      * Operation listGenericCredentials
      *
      * @param  string $gatewayName gatewayName (required)
+     * @param  bool $includeSsn Include the list of SSN for each credentials. Defaults to false (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Equisoft\SDK\EquisoftConnect\Model\GatewaysListCredentialsResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
-    public function listGenericCredentials($gatewayName)
+    public function listGenericCredentials($gatewayName, $includeSsn = null)
     {
-        list($response) = $this->listGenericCredentialsWithHttpInfo($gatewayName);
+        list($response) = $this->listGenericCredentialsWithHttpInfo($gatewayName, $includeSsn);
         return $response;
     }
 
@@ -1165,14 +1166,15 @@ class GatewaysApi
      * Operation listGenericCredentialsWithHttpInfo
      *
      * @param  string $gatewayName (required)
+     * @param  bool $includeSsn Include the list of SSN for each credentials. Defaults to false (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Equisoft\SDK\EquisoftConnect\Model\GatewaysListCredentialsResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listGenericCredentialsWithHttpInfo($gatewayName)
+    public function listGenericCredentialsWithHttpInfo($gatewayName, $includeSsn = null)
     {
-        $request = $this->listGenericCredentialsRequest($gatewayName);
+        $request = $this->listGenericCredentialsRequest($gatewayName, $includeSsn);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1293,13 +1295,14 @@ class GatewaysApi
      * 
      *
      * @param  string $gatewayName (required)
+     * @param  bool $includeSsn Include the list of SSN for each credentials. Defaults to false (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listGenericCredentialsAsync($gatewayName)
+    public function listGenericCredentialsAsync($gatewayName, $includeSsn = null)
     {
-        return $this->listGenericCredentialsAsyncWithHttpInfo($gatewayName)
+        return $this->listGenericCredentialsAsyncWithHttpInfo($gatewayName, $includeSsn)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1313,14 +1316,15 @@ class GatewaysApi
      * 
      *
      * @param  string $gatewayName (required)
+     * @param  bool $includeSsn Include the list of SSN for each credentials. Defaults to false (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listGenericCredentialsAsyncWithHttpInfo($gatewayName)
+    public function listGenericCredentialsAsyncWithHttpInfo($gatewayName, $includeSsn = null)
     {
         $returnType = '\Equisoft\SDK\EquisoftConnect\Model\GatewaysListCredentialsResponse';
-        $request = $this->listGenericCredentialsRequest($gatewayName);
+        $request = $this->listGenericCredentialsRequest($gatewayName, $includeSsn);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1360,11 +1364,12 @@ class GatewaysApi
      * Create request for operation 'listGenericCredentials'
      *
      * @param  string $gatewayName (required)
+     * @param  bool $includeSsn Include the list of SSN for each credentials. Defaults to false (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function listGenericCredentialsRequest($gatewayName)
+    protected function listGenericCredentialsRequest($gatewayName, $includeSsn = null)
     {
         // verify the required parameter 'gatewayName' is set
         if ($gatewayName === null || (is_array($gatewayName) && count($gatewayName) === 0)) {
@@ -1380,6 +1385,17 @@ class GatewaysApi
         $httpBody = '';
         $multipart = false;
 
+        // query params
+        if ($includeSsn !== null) {
+            if('form' === 'form' && is_array($includeSsn)) {
+                foreach($includeSsn as $key => $value) {
+                    $queryParams[$key] = $value;
+                }
+            }
+            else {
+                $queryParams['includeSsn'] = $includeSsn;
+            }
+        }
 
 
         // path params

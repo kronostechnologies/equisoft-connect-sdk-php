@@ -84,11 +84,4 @@ class GatewaysAccessesPatchEquisoftAnalyzeAccessPayloadTest extends TestCase
     public function testPropertyClientKey()
     {
     }
-
-    /**
-     * Test attribute "anzlyzeUserName"
-     */
-    public function testPropertyAnzlyzeUserName()
-    {
-    }
 }

@@ -79,6 +79,13 @@ class MovementMoveMovementTest extends TestCase
     }
 
     /**
+     * Test attribute "type"
+     */
+    public function testPropertyType()
+    {
+    }
+
+    /**
      * Test attribute "sourceDatabase"
      */
     public function testPropertySourceDatabase()
