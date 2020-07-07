@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 
 ## deleteEvent
 
-> AnyType deleteEvent($eventId)
+> object deleteEvent($eventId)
 
 Delete an event.
 
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AnyType**](../Model/AnyType.md)
+**object**
 
 ### Authorization
 

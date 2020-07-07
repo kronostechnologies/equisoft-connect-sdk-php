@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Unique id | [optional] 
-**uuid** | [**AnyType**](.md) | Contact UUID | [optional] 
+**uuid** | **string** | Contact UUID | [optional] 
 **typeContact** | **string** | type of the contact | [optional] 
 **indOrg** | **string** | type INDIVIDUAL OR ORGANIZATION | [optional] 
 **displayName** | **string** | display name of the contact | [optional] 

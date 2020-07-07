@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 
 ## deleteTask
 
-> AnyType deleteTask($taskId)
+> object deleteTask($taskId)
 
 Delete a task.
 
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AnyType**](../Model/AnyType.md)
+**object**
 
 ### Authorization
 

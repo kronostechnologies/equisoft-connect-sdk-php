@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Unique id | [optional] 
-**uuid** | [**AnyType**](.md) | Contact UUID | [optional] 
+**uuid** | **string** | Contact UUID | [optional] 
 **typeContact** | **string** | type of the contact | [optional] 
 **indOrg** | **string** | type INDIVIDUAL OR ORGANIZATION | [optional] 
 **displayName** | **string** | display name of the contact | [optional] 
@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 **sin** | **string** | sin of the contact | [optional] 
 **birthdate** | **string** | birthdate of the contact | [optional] 
 **smoker** | **string** | Smoker status of the contact. | [optional] 
-**smokerSince** | [**AnyType**](.md) | Smoker status since date. | [optional] 
+**smokerSince** | **string** | Smoker status since date. | [optional] 
 **phoneHome** | **string** | phone number of the contact at home | [optional] 
 **phoneHomeSecond** | **string** | second phone number of the contact at home | [optional] 
 **phoneAssistant** | **string** | assistant phone number of the contact | [optional] 

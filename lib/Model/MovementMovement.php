@@ -64,7 +64,6 @@ class MovementMovement implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string',
         'id' => 'int',
         'status' => 'string',
         'availableAction' => 'string',
@@ -82,7 +81,6 @@ class MovementMovement implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'type' => null,
         'id' => null,
         'status' => null,
         'availableAction' => null,
@@ -121,7 +119,6 @@ class MovementMovement implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type',
         'id' => 'id',
         'status' => 'status',
         'availableAction' => 'availableAction',
@@ -139,7 +136,6 @@ class MovementMovement implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType',
         'id' => 'setId',
         'status' => 'setStatus',
         'availableAction' => 'setAvailableAction',
@@ -157,7 +153,6 @@ class MovementMovement implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType',
         'id' => 'getId',
         'status' => 'getStatus',
         'availableAction' => 'getAvailableAction',
@@ -210,29 +205,8 @@ class MovementMovement implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    const TYPE_MOVE = 'MOVE';
-    const TYPE_COPY = 'COPY';
-    const TYPE_REASSIGNMENT = 'REASSIGNMENT';
-    const TYPE_CLIENTBASE_USING_FILE = 'CLIENTBASE_USING_FILE';
-    const TYPE_CLIENTBASE_USING_DISTLIST = 'CLIENTBASE_USING_DISTLIST';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getTypeAllowableValues()
-    {
-        return [
-            self::TYPE_MOVE,
-            self::TYPE_COPY,
-            self::TYPE_REASSIGNMENT,
-            self::TYPE_CLIENTBASE_USING_FILE,
-            self::TYPE_CLIENTBASE_USING_DISTLIST,
-        ];
-    }
     
 
     /**
@@ -250,7 +224,6 @@ class MovementMovement implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['availableAction'] = isset($data['availableAction']) ? $data['availableAction'] : null;
@@ -274,14 +247,6 @@ class MovementMovement implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'type', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
         return $invalidProperties;
     }
 
@@ -296,39 +261,6 @@ class MovementMovement implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets type
-     *
-     * @return string|null
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param string|null $type type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($type) && !in_array($type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'type', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['type'] = $type;
-
-        return $this;
-    }
 
     /**
      * Gets id

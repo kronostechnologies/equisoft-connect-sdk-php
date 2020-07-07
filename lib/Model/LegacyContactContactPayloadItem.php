@@ -58,7 +58,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'id' => 'string',
-        'uuid' => 'AnyType',
+        'uuid' => 'string',
         'typeContact' => 'string',
         'indOrg' => 'string',
         'displayName' => 'string',
@@ -74,7 +74,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess
         'sin' => 'string',
         'birthdate' => 'string',
         'smoker' => 'string',
-        'smokerSince' => 'AnyType',
+        'smokerSince' => 'string',
         'phoneHome' => 'string',
         'phoneHomeSecond' => 'string',
         'phoneAssistant' => 'string',
@@ -549,7 +549,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess
     /**
      * Gets uuid
      *
-     * @return AnyType|null
+     * @return string|null
      */
     public function getUuid()
     {
@@ -559,7 +559,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess
     /**
      * Sets uuid
      *
-     * @param AnyType|null $uuid Contact UUID
+     * @param string|null $uuid Contact UUID
      *
      * @return $this
      */
@@ -933,7 +933,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess
     /**
      * Gets smokerSince
      *
-     * @return AnyType|null
+     * @return string|null
      */
     public function getSmokerSince()
     {
@@ -943,7 +943,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess
     /**
      * Sets smokerSince
      *
-     * @param AnyType|null $smokerSince Smoker status since date.
+     * @param string|null $smokerSince Smoker status since date.
      *
      * @return $this
      */
