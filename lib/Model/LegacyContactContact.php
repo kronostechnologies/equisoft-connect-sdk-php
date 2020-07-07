@@ -58,7 +58,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'id' => 'string',
-        'uuid' => 'AnyType',
+        'uuid' => 'string',
         'typeContact' => 'string',
         'indOrg' => 'string',
         'displayName' => 'string',
@@ -291,7 +291,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
     /**
      * Gets uuid
      *
-     * @return AnyType|null
+     * @return string|null
      */
     public function getUuid()
     {
@@ -301,7 +301,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
     /**
      * Sets uuid
      *
-     * @param AnyType|null $uuid Contact UUID
+     * @param string|null $uuid Contact UUID
      *
      * @return $this
      */

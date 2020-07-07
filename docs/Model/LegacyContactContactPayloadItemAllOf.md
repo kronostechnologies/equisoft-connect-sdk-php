@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **sin** | **string** | sin of the contact | [optional] 
 **birthdate** | **string** | birthdate of the contact | [optional] 
 **smoker** | **string** | Smoker status of the contact. | [optional] 
-**smokerSince** | [**AnyType**](.md) | Smoker status since date. | [optional] 
+**smokerSince** | **string** | Smoker status since date. | [optional] 
 **phoneHome** | **string** | phone number of the contact at home | [optional] 
 **phoneHomeSecond** | **string** | second phone number of the contact at home | [optional] 
 **phoneAssistant** | **string** | assistant phone number of the contact | [optional] 

@@ -4,7 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **string** |  | [optional] 
 **id** | **int** |  | [optional] 
 **status** | **string** |  | [optional] 
 **availableAction** | **string** |  | [optional] 

@@ -63,7 +63,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
         'sin' => 'string',
         'birthdate' => 'string',
         'smoker' => 'string',
-        'smokerSince' => 'AnyType',
+        'smokerSince' => 'string',
         'phoneHome' => 'string',
         'phoneHomeSecond' => 'string',
         'phoneAssistant' => 'string',
@@ -603,7 +603,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
     /**
      * Gets smokerSince
      *
-     * @return AnyType|null
+     * @return string|null
      */
     public function getSmokerSince()
     {
@@ -613,7 +613,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
     /**
      * Sets smokerSince
      *
-     * @param AnyType|null $smokerSince Smoker status since date.
+     * @param string|null $smokerSince Smoker status since date.
      *
      * @return $this
      */
