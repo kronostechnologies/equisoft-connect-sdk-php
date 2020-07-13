@@ -1,6 +1,6 @@
 <?php
 /**
- * InternalNotesAuthor
+ * InternalNotesPatchNotePayload
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * InternalNotesAuthor Class Doc Comment
+ * InternalNotesPatchNotePayload Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class InternalNotesAuthor implements ModelInterface, ArrayAccess
+class InternalNotesPatchNotePayload implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class InternalNotesAuthor implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'internalNotes.Author';
+    protected static $openAPIModelName = 'internalNotes.PatchNotePayload';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +57,7 @@ class InternalNotesAuthor implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'int',
-        'uuid' => 'string',
-        'displayName' => 'string'
+        'content' => 'string'
     ];
 
     /**
@@ -68,9 +66,7 @@ class InternalNotesAuthor implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'id' => null,
-        'uuid' => null,
-        'displayName' => null
+        'content' => null
     ];
 
     /**
@@ -100,9 +96,7 @@ class InternalNotesAuthor implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'uuid' => 'uuid',
-        'displayName' => 'displayName'
+        'content' => 'content'
     ];
 
     /**
@@ -111,9 +105,7 @@ class InternalNotesAuthor implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'uuid' => 'setUuid',
-        'displayName' => 'setDisplayName'
+        'content' => 'setContent'
     ];
 
     /**
@@ -122,9 +114,7 @@ class InternalNotesAuthor implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'uuid' => 'getUuid',
-        'displayName' => 'getDisplayName'
+        'content' => 'getContent'
     ];
 
     /**
@@ -187,9 +177,7 @@ class InternalNotesAuthor implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
-        $this->container['displayName'] = isset($data['displayName']) ? $data['displayName'] : null;
+        $this->container['content'] = isset($data['content']) ? $data['content'] : null;
     }
 
     /**
@@ -201,11 +189,8 @@ class InternalNotesAuthor implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['uuid'] === null) {
-            $invalidProperties[] = "'uuid' can't be null";
-        }
-        if ($this->container['displayName'] === null) {
-            $invalidProperties[] = "'displayName' can't be null";
+        if ($this->container['content'] === null) {
+            $invalidProperties[] = "'content' can't be null";
         }
         return $invalidProperties;
     }
@@ -223,73 +208,25 @@ class InternalNotesAuthor implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets id
-     *
-     * @return int|null
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param int|null $id Unique numerical identifier.
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets uuid
+     * Gets content
      *
      * @return string
      */
-    public function getUuid()
+    public function getContent()
     {
-        return $this->container['uuid'];
+        return $this->container['content'];
     }
 
     /**
-     * Sets uuid
+     * Sets content
      *
-     * @param string $uuid Globally unique identifier.
+     * @param string $content content
      *
      * @return $this
      */
-    public function setUuid($uuid)
+    public function setContent($content)
     {
-        $this->container['uuid'] = $uuid;
-
-        return $this;
-    }
-
-    /**
-     * Gets displayName
-     *
-     * @return string
-     */
-    public function getDisplayName()
-    {
-        return $this->container['displayName'];
-    }
-
-    /**
-     * Sets displayName
-     *
-     * @param string $displayName Author name
-     *
-     * @return $this
-     */
-    public function setDisplayName($displayName)
-    {
-        $this->container['displayName'] = $displayName;
+        $this->container['content'] = $content;
 
         return $this;
     }

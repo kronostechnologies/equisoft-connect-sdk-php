@@ -1,6 +1,6 @@
 <?php
 /**
- * InternalNotesNoteRevisionTest
+ * InternalNotesCreateNoteResponseTest
  *
  * PHP version 5
  *
@@ -32,15 +32,15 @@ namespace Equisoft\SDK\EquisoftConnect;
 use PHPUnit\Framework\TestCase;
 
 /**
- * InternalNotesNoteRevisionTest Class Doc Comment
+ * InternalNotesCreateNoteResponseTest Class Doc Comment
  *
  * @category    Class
- * @description InternalNotesNoteRevision
+ * @description InternalNotesCreateNoteResponse
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class InternalNotesNoteRevisionTest extends TestCase
+class InternalNotesCreateNoteResponseTest extends TestCase
 {
 
     /**
@@ -72,9 +72,9 @@ class InternalNotesNoteRevisionTest extends TestCase
     }
 
     /**
-     * Test "InternalNotesNoteRevision"
+     * Test "InternalNotesCreateNoteResponse"
      */
-    public function testInternalNotesNoteRevision()
+    public function testInternalNotesCreateNoteResponse()
     {
     }
 
@@ -82,27 +82,6 @@ class InternalNotesNoteRevisionTest extends TestCase
      * Test attribute "id"
      */
     public function testPropertyId()
-    {
-    }
-
-    /**
-     * Test attribute "type"
-     */
-    public function testPropertyType()
-    {
-    }
-
-    /**
-     * Test attribute "content"
-     */
-    public function testPropertyContent()
-    {
-    }
-
-    /**
-     * Test attribute "createdAt"
-     */
-    public function testPropertyCreatedAt()
     {
     }
 }

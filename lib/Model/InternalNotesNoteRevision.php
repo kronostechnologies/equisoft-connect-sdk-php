@@ -57,7 +57,8 @@ class InternalNotesNoteRevision implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'string',
+        'id' => 'int',
+        'type' => 'string',
         'content' => 'string',
         'createdAt' => '\DateTime'
     ];
@@ -69,6 +70,7 @@ class InternalNotesNoteRevision implements ModelInterface, ArrayAccess
       */
     protected static $openAPIFormats = [
         'id' => null,
+        'type' => null,
         'content' => null,
         'createdAt' => 'date-time'
     ];
@@ -101,6 +103,7 @@ class InternalNotesNoteRevision implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'type' => 'type',
         'content' => 'content',
         'createdAt' => 'createdAt'
     ];
@@ -112,6 +115,7 @@ class InternalNotesNoteRevision implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'type' => 'setType',
         'content' => 'setContent',
         'createdAt' => 'setCreatedAt'
     ];
@@ -123,6 +127,7 @@ class InternalNotesNoteRevision implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'type' => 'getType',
         'content' => 'getContent',
         'createdAt' => 'getCreatedAt'
     ];
@@ -188,6 +193,7 @@ class InternalNotesNoteRevision implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['content'] = isset($data['content']) ? $data['content'] : null;
         $this->container['createdAt'] = isset($data['createdAt']) ? $data['createdAt'] : null;
     }
@@ -228,7 +234,7 @@ class InternalNotesNoteRevision implements ModelInterface, ArrayAccess
     /**
      * Gets id
      *
-     * @return string
+     * @return int
      */
     public function getId()
     {
@@ -238,13 +244,37 @@ class InternalNotesNoteRevision implements ModelInterface, ArrayAccess
     /**
      * Sets id
      *
-     * @param string $id Unique numerical identifier.
+     * @param int $id Unique numerical identifier.
      *
      * @return $this
      */
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets type
+     *
+     * @return string|null
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param string|null $type type
+     *
+     * @return $this
+     */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
 
         return $this;
     }

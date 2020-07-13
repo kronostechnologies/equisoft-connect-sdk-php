@@ -1,6 +1,6 @@
 <?php
 /**
- * InternalNotesNote
+ * InternalNotesPatchNoteResponse
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * InternalNotesNote Class Doc Comment
+ * InternalNotesPatchNoteResponse Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class InternalNotesNote implements ModelInterface, ArrayAccess
+class InternalNotesPatchNoteResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class InternalNotesNote implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'internalNotes.Note';
+    protected static $openAPIModelName = 'internalNotes.PatchNoteResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,12 +57,7 @@ class InternalNotesNote implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'int',
-        'author' => '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesAuthor',
-        'firstRevisionCreatedAt' => '\DateTime',
-        'accessRights' => '\Equisoft\SDK\EquisoftConnect\Model\AccessRights',
-        'currentRevision' => '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteRevision',
-        'previousRevisions' => '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteRevision[]'
+        'id' => 'string'
     ];
 
     /**
@@ -71,12 +66,7 @@ class InternalNotesNote implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'id' => null,
-        'author' => null,
-        'firstRevisionCreatedAt' => 'date-time',
-        'accessRights' => null,
-        'currentRevision' => null,
-        'previousRevisions' => null
+        'id' => null
     ];
 
     /**
@@ -106,12 +96,7 @@ class InternalNotesNote implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'author' => 'author',
-        'firstRevisionCreatedAt' => 'firstRevisionCreatedAt',
-        'accessRights' => 'accessRights',
-        'currentRevision' => 'currentRevision',
-        'previousRevisions' => 'previousRevisions'
+        'id' => 'id'
     ];
 
     /**
@@ -120,12 +105,7 @@ class InternalNotesNote implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'author' => 'setAuthor',
-        'firstRevisionCreatedAt' => 'setFirstRevisionCreatedAt',
-        'accessRights' => 'setAccessRights',
-        'currentRevision' => 'setCurrentRevision',
-        'previousRevisions' => 'setPreviousRevisions'
+        'id' => 'setId'
     ];
 
     /**
@@ -134,12 +114,7 @@ class InternalNotesNote implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'author' => 'getAuthor',
-        'firstRevisionCreatedAt' => 'getFirstRevisionCreatedAt',
-        'accessRights' => 'getAccessRights',
-        'currentRevision' => 'getCurrentRevision',
-        'previousRevisions' => 'getPreviousRevisions'
+        'id' => 'getId'
     ];
 
     /**
@@ -203,11 +178,6 @@ class InternalNotesNote implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['author'] = isset($data['author']) ? $data['author'] : null;
-        $this->container['firstRevisionCreatedAt'] = isset($data['firstRevisionCreatedAt']) ? $data['firstRevisionCreatedAt'] : null;
-        $this->container['accessRights'] = isset($data['accessRights']) ? $data['accessRights'] : null;
-        $this->container['currentRevision'] = isset($data['currentRevision']) ? $data['currentRevision'] : null;
-        $this->container['previousRevisions'] = isset($data['previousRevisions']) ? $data['previousRevisions'] : null;
     }
 
     /**
@@ -219,17 +189,8 @@ class InternalNotesNote implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['author'] === null) {
-            $invalidProperties[] = "'author' can't be null";
-        }
-        if ($this->container['firstRevisionCreatedAt'] === null) {
-            $invalidProperties[] = "'firstRevisionCreatedAt' can't be null";
-        }
-        if ($this->container['accessRights'] === null) {
-            $invalidProperties[] = "'accessRights' can't be null";
-        }
-        if ($this->container['currentRevision'] === null) {
-            $invalidProperties[] = "'currentRevision' can't be null";
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
         }
         return $invalidProperties;
     }
@@ -249,7 +210,7 @@ class InternalNotesNote implements ModelInterface, ArrayAccess
     /**
      * Gets id
      *
-     * @return int|null
+     * @return string
      */
     public function getId()
     {
@@ -259,133 +220,13 @@ class InternalNotesNote implements ModelInterface, ArrayAccess
     /**
      * Sets id
      *
-     * @param int|null $id Unique numerical identifier.
+     * @param string $id Unique numerical identifier of the note.
      *
      * @return $this
      */
     public function setId($id)
     {
         $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets author
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\InternalNotesAuthor
-     */
-    public function getAuthor()
-    {
-        return $this->container['author'];
-    }
-
-    /**
-     * Sets author
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\InternalNotesAuthor $author author
-     *
-     * @return $this
-     */
-    public function setAuthor($author)
-    {
-        $this->container['author'] = $author;
-
-        return $this;
-    }
-
-    /**
-     * Gets firstRevisionCreatedAt
-     *
-     * @return \DateTime
-     */
-    public function getFirstRevisionCreatedAt()
-    {
-        return $this->container['firstRevisionCreatedAt'];
-    }
-
-    /**
-     * Sets firstRevisionCreatedAt
-     *
-     * @param \DateTime $firstRevisionCreatedAt firstRevisionCreatedAt
-     *
-     * @return $this
-     */
-    public function setFirstRevisionCreatedAt($firstRevisionCreatedAt)
-    {
-        $this->container['firstRevisionCreatedAt'] = $firstRevisionCreatedAt;
-
-        return $this;
-    }
-
-    /**
-     * Gets accessRights
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\AccessRights
-     */
-    public function getAccessRights()
-    {
-        return $this->container['accessRights'];
-    }
-
-    /**
-     * Sets accessRights
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\AccessRights $accessRights accessRights
-     *
-     * @return $this
-     */
-    public function setAccessRights($accessRights)
-    {
-        $this->container['accessRights'] = $accessRights;
-
-        return $this;
-    }
-
-    /**
-     * Gets currentRevision
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteRevision
-     */
-    public function getCurrentRevision()
-    {
-        return $this->container['currentRevision'];
-    }
-
-    /**
-     * Sets currentRevision
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteRevision $currentRevision currentRevision
-     *
-     * @return $this
-     */
-    public function setCurrentRevision($currentRevision)
-    {
-        $this->container['currentRevision'] = $currentRevision;
-
-        return $this;
-    }
-
-    /**
-     * Gets previousRevisions
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteRevision[]|null
-     */
-    public function getPreviousRevisions()
-    {
-        return $this->container['previousRevisions'];
-    }
-
-    /**
-     * Sets previousRevisions
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteRevision[]|null $previousRevisions previousRevisions
-     *
-     * @return $this
-     */
-    public function setPreviousRevisions($previousRevisions)
-    {
-        $this->container['previousRevisions'] = $previousRevisions;
 
         return $this;
     }

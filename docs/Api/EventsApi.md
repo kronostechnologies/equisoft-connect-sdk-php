@@ -5,6 +5,7 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createEvent**](EventsApi.md#createEvent) | **POST** /crm/api/v1/events | Create an event.
+[**createEventInternalNote**](EventsApi.md#createEventInternalNote) | **POST** /crm/api/v1/events/{eventId}/notes | Add an internal note to and event.
 [**deleteEvent**](EventsApi.md#deleteEvent) | **DELETE** /crm/api/v1/events/{eventId} | Delete an event.
 [**getCalendar**](EventsApi.md#getCalendar) | **GET** /crm/api/v1/calendars/{calendarId} | Get informations about a calendar or a default calendar.
 [**getEvent**](EventsApi.md#getEvent) | **GET** /crm/api/v1/events/{eventId} | Return the detail of an event.
@@ -13,6 +14,8 @@ Method | HTTP request | Description
 [**listCalendars**](EventsApi.md#listCalendars) | **GET** /crm/api/v1/calendars | Get the list of available calendars.
 [**listEvents**](EventsApi.md#listEvents) | **GET** /crm/api/v1/events | List or search events.
 [**patchEvent**](EventsApi.md#patchEvent) | **PATCH** /crm/api/v1/events/{eventId} | Partially update an event.
+[**patchEventInternalNote**](EventsApi.md#patchEventInternalNote) | **PATCH** /crm/api/v1/events/{eventId}/notes/{noteId} | Add an internal note to and event.
+[**softDeleteEventInternalNote**](EventsApi.md#softDeleteEventInternalNote) | **POST** /crm/api/v1/events/{eventId}/notes/{noteId}/softDelete | Soft delete an internal note for and event.
 [**transferEventToCompleted**](EventsApi.md#transferEventToCompleted) | **POST** /crm/api/v1/events/{eventId}/transferToCompleted | Transfer an event to the completed/done calendar.
 
 
@@ -63,6 +66,69 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Equisoft\SDK\EquisoftConnect\Model\EventsCreateEventResponse**](../Model/EventsCreateEventResponse.md)
+
+### Authorization
+
+[OAuth2](../../README.md#OAuth2)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
+
+
+## createEventInternalNote
+
+> \Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNoteResponse createEventInternalNote($eventId, $internalNotesCreateNotePayload, $acceptLanguage)
+
+Add an internal note to and event.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Equisoft\SDK\EquisoftConnect\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\EventsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$eventId = 'eventId_example'; // string | Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101.
+$internalNotesCreateNotePayload = new \Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNotePayload(); // \Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNotePayload | 
+$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
+
+try {
+    $result = $apiInstance->createEventInternalNote($eventId, $internalNotesCreateNotePayload, $acceptLanguage);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling EventsApi->createEventInternalNote: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **eventId** | **string**| Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. |
+ **internalNotesCreateNotePayload** | [**\Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNotePayload**](../Model/InternalNotesCreateNotePayload.md)|  |
+ **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 | [optional]
+
+### Return type
+
+[**\Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNoteResponse**](../Model/InternalNotesCreateNoteResponse.md)
 
 ### Authorization
 
@@ -332,7 +398,7 @@ Name | Type | Description  | Notes
 
 ## getEventInternalNoteList
 
-> \Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteList getEventInternalNoteList($eventId, $acceptLanguage)
+> \Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteList getEventInternalNoteList($eventId, $history, $acceptLanguage)
 
 Get the internal notes list for an event.
 
@@ -354,10 +420,11 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\EventsApi(
     $config
 );
 $eventId = 'eventId_example'; // string | Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101.
+$history = new \Equisoft\SDK\EquisoftConnect\Model\\Equisoft\SDK\EquisoftConnect\Model\InternalNotesHistoryType(); // \Equisoft\SDK\EquisoftConnect\Model\InternalNotesHistoryType | Query all revisions or not.
 $acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
 
 try {
-    $result = $apiInstance->getEventInternalNoteList($eventId, $acceptLanguage);
+    $result = $apiInstance->getEventInternalNoteList($eventId, $history, $acceptLanguage);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->getEventInternalNoteList: ', $e->getMessage(), PHP_EOL;
@@ -371,6 +438,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **eventId** | **string**| Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. |
+ **history** | [**\Equisoft\SDK\EquisoftConnect\Model\InternalNotesHistoryType**](../Model/.md)| Query all revisions or not. | [optional]
  **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 | [optional]
 
 ### Return type
@@ -587,6 +655,134 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
+
+
+## patchEventInternalNote
+
+> \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNoteResponse patchEventInternalNote($eventId, $noteId, $internalNotesPatchNotePayload, $acceptLanguage)
+
+Add an internal note to and event.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Equisoft\SDK\EquisoftConnect\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\EventsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$eventId = 'eventId_example'; // string | Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101.
+$noteId = 'noteId_example'; // string | Note unique identifier.
+$internalNotesPatchNotePayload = new \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNotePayload(); // \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNotePayload | 
+$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
+
+try {
+    $result = $apiInstance->patchEventInternalNote($eventId, $noteId, $internalNotesPatchNotePayload, $acceptLanguage);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling EventsApi->patchEventInternalNote: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **eventId** | **string**| Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. |
+ **noteId** | **string**| Note unique identifier. |
+ **internalNotesPatchNotePayload** | [**\Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNotePayload**](../Model/InternalNotesPatchNotePayload.md)|  |
+ **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 | [optional]
+
+### Return type
+
+[**\Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNoteResponse**](../Model/InternalNotesPatchNoteResponse.md)
+
+### Authorization
+
+[OAuth2](../../README.md#OAuth2)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
+
+
+## softDeleteEventInternalNote
+
+> object softDeleteEventInternalNote($eventId, $noteId, $acceptLanguage)
+
+Soft delete an internal note for and event.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Equisoft\SDK\EquisoftConnect\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\EventsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$eventId = 'eventId_example'; // string | Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101.
+$noteId = 'noteId_example'; // string | Note unique identifier.
+$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
+
+try {
+    $result = $apiInstance->softDeleteEventInternalNote($eventId, $noteId, $acceptLanguage);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling EventsApi->softDeleteEventInternalNote: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **eventId** | **string**| Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. |
+ **noteId** | **string**| Note unique identifier. |
+ **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 | [optional]
+
+### Return type
+
+**object**
+
+### Authorization
+
+[OAuth2](../../README.md#OAuth2)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)

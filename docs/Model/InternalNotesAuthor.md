@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **string** | Unique numerical identifier. | [optional] 
+**id** | **int** | Unique numerical identifier. | [optional] 
 **uuid** | **string** | Globally unique identifier. | 
 **displayName** | **string** | Author name | 
 
