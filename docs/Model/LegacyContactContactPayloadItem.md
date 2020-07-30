@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **indOrg** | **string** | type INDIVIDUAL OR ORGANIZATION | [optional] 
 **displayName** | **string** | display name of the contact | [optional] 
 **firstName** | **string** | first name of the contact | [optional] 
+**nickname** | **string** | nickname of the contact | [optional] 
 **middleName** | **string** | middle name of the contact | [optional] 
 **lastName** | **string** | last name of the contact | [optional] 
 **corporationName** | **string** | first line of corporation name (Organization) | [optional] 

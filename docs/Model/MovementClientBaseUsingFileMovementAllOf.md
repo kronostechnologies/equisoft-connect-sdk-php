@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **destinationUser** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementUser**](MovementUser.md) |  | 
 **capsil** | **bool** |  | [optional] 
 **univeris** | **bool** |  | [optional] 
+**dataphile** | **bool** |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
