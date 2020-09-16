@@ -91,4 +91,11 @@ class GatewaysCredentialsTest extends TestCase
     public function testPropertyPassword()
     {
     }
+
+    /**
+     * Test attribute "isADealerCode"
+     */
+    public function testPropertyIsADealerCode()
+    {
+    }
 }

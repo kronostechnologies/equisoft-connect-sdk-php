@@ -93,6 +93,13 @@ class GatewaysCredentialsWithSsnTest extends TestCase
     }
 
     /**
+     * Test attribute "isADealerCode"
+     */
+    public function testPropertyIsADealerCode()
+    {
+    }
+
+    /**
      * Test attribute "ssnList"
      */
     public function testPropertySsnList()

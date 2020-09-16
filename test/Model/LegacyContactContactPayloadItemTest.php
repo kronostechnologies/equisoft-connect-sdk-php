@@ -462,4 +462,18 @@ class LegacyContactContactPayloadItemTest extends TestCase
     public function testPropertyOrgProvNo()
     {
     }
+
+    /**
+     * Test attribute "orgStateId"
+     */
+    public function testPropertyOrgStateId()
+    {
+    }
+
+    /**
+     * Test attribute "orgEin"
+     */
+    public function testPropertyOrgEin()
+    {
+    }
 }

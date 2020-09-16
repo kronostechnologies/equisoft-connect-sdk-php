@@ -73,6 +73,16 @@ class TasksApiTest extends TestCase
     }
 
     /**
+     * Test case for archiveTaskInternalNote
+     *
+     * Archive an internal note for a task..
+     *
+     */
+    public function testArchiveTaskInternalNote()
+    {
+    }
+
+    /**
      * Test case for createTask
      *
      * Create a task..
@@ -149,16 +159,6 @@ class TasksApiTest extends TestCase
      *
      */
     public function testPatchTaskInternalNote()
-    {
-    }
-
-    /**
-     * Test case for softDeleteTaskInternalNote
-     *
-     * Soft delete an internal note for a task..
-     *
-     */
-    public function testSoftDeleteTaskInternalNote()
     {
     }
 

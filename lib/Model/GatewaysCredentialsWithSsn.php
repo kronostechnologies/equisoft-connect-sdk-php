@@ -59,6 +59,7 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
         'username' => 'string',
         'password' => 'string',
+        'isADealerCode' => 'bool',
         'ssnList' => 'string[]'
     ];
 
@@ -70,6 +71,7 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'username' => null,
         'password' => null,
+        'isADealerCode' => null,
         'ssnList' => null
     ];
 
@@ -102,6 +104,7 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'username' => 'username',
         'password' => 'password',
+        'isADealerCode' => 'isADealerCode',
         'ssnList' => 'ssnList'
     ];
 
@@ -113,6 +116,7 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess
     protected static $setters = [
         'username' => 'setUsername',
         'password' => 'setPassword',
+        'isADealerCode' => 'setIsADealerCode',
         'ssnList' => 'setSsnList'
     ];
 
@@ -124,6 +128,7 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess
     protected static $getters = [
         'username' => 'getUsername',
         'password' => 'getPassword',
+        'isADealerCode' => 'getIsADealerCode',
         'ssnList' => 'getSsnList'
     ];
 
@@ -189,6 +194,7 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess
     {
         $this->container['username'] = isset($data['username']) ? $data['username'] : null;
         $this->container['password'] = isset($data['password']) ? $data['password'] : null;
+        $this->container['isADealerCode'] = isset($data['isADealerCode']) ? $data['isADealerCode'] : null;
         $this->container['ssnList'] = isset($data['ssnList']) ? $data['ssnList'] : null;
     }
 
@@ -266,6 +272,30 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess
     public function setPassword($password)
     {
         $this->container['password'] = $password;
+
+        return $this;
+    }
+
+    /**
+     * Gets isADealerCode
+     *
+     * @return bool|null
+     */
+    public function getIsADealerCode()
+    {
+        return $this->container['isADealerCode'];
+    }
+
+    /**
+     * Sets isADealerCode
+     *
+     * @param bool|null $isADealerCode isADealerCode
+     *
+     * @return $this
+     */
+    public function setIsADealerCode($isADealerCode)
+    {
+        $this->container['isADealerCode'] = $isADealerCode;
 
         return $this;
     }

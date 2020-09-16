@@ -57,7 +57,7 @@ class InternalNotesCreateNoteResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'string'
+        'id' => 'int'
     ];
 
     /**
@@ -210,7 +210,7 @@ class InternalNotesCreateNoteResponse implements ModelInterface, ArrayAccess
     /**
      * Gets id
      *
-     * @return string
+     * @return int
      */
     public function getId()
     {
@@ -220,7 +220,7 @@ class InternalNotesCreateNoteResponse implements ModelInterface, ArrayAccess
     /**
      * Sets id
      *
-     * @param string $id Unique numerical identifier of the created note.
+     * @param int $id Unique numerical identifier of the created note.
      *
      * @return $this
      */

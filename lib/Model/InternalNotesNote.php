@@ -219,6 +219,9 @@ class InternalNotesNote implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
+        }
         if ($this->container['author'] === null) {
             $invalidProperties[] = "'author' can't be null";
         }
@@ -249,7 +252,7 @@ class InternalNotesNote implements ModelInterface, ArrayAccess
     /**
      * Gets id
      *
-     * @return int|null
+     * @return int
      */
     public function getId()
     {
@@ -259,7 +262,7 @@ class InternalNotesNote implements ModelInterface, ArrayAccess
     /**
      * Sets id
      *
-     * @param int|null $id Unique numerical identifier.
+     * @param int $id Unique numerical identifier.
      *
      * @return $this
      */

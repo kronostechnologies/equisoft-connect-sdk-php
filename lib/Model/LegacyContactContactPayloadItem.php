@@ -111,7 +111,9 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess
         'dateEndFinancialYear' => 'string',
         'orgIdNo' => 'string',
         'orgFedNo' => 'string',
-        'orgProvNo' => 'string'
+        'orgProvNo' => 'string',
+        'orgStateId' => 'string',
+        'orgEin' => 'string'
     ];
 
     /**
@@ -174,7 +176,9 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess
         'dateEndFinancialYear' => null,
         'orgIdNo' => null,
         'orgFedNo' => null,
-        'orgProvNo' => null
+        'orgProvNo' => null,
+        'orgStateId' => null,
+        'orgEin' => null
     ];
 
     /**
@@ -258,7 +262,9 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess
         'dateEndFinancialYear' => 'dateEndFinancialYear',
         'orgIdNo' => 'orgIdNo',
         'orgFedNo' => 'orgFedNo',
-        'orgProvNo' => 'orgProvNo'
+        'orgProvNo' => 'orgProvNo',
+        'orgStateId' => 'orgStateId',
+        'orgEin' => 'orgEin'
     ];
 
     /**
@@ -321,7 +327,9 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess
         'dateEndFinancialYear' => 'setDateEndFinancialYear',
         'orgIdNo' => 'setOrgIdNo',
         'orgFedNo' => 'setOrgFedNo',
-        'orgProvNo' => 'setOrgProvNo'
+        'orgProvNo' => 'setOrgProvNo',
+        'orgStateId' => 'setOrgStateId',
+        'orgEin' => 'setOrgEin'
     ];
 
     /**
@@ -384,7 +392,9 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess
         'dateEndFinancialYear' => 'getDateEndFinancialYear',
         'orgIdNo' => 'getOrgIdNo',
         'orgFedNo' => 'getOrgFedNo',
-        'orgProvNo' => 'getOrgProvNo'
+        'orgProvNo' => 'getOrgProvNo',
+        'orgStateId' => 'getOrgStateId',
+        'orgEin' => 'getOrgEin'
     ];
 
     /**
@@ -502,6 +512,8 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess
         $this->container['orgIdNo'] = isset($data['orgIdNo']) ? $data['orgIdNo'] : null;
         $this->container['orgFedNo'] = isset($data['orgFedNo']) ? $data['orgFedNo'] : null;
         $this->container['orgProvNo'] = isset($data['orgProvNo']) ? $data['orgProvNo'] : null;
+        $this->container['orgStateId'] = isset($data['orgStateId']) ? $data['orgStateId'] : null;
+        $this->container['orgEin'] = isset($data['orgEin']) ? $data['orgEin'] : null;
     }
 
     /**
@@ -1844,6 +1856,54 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess
     public function setOrgProvNo($orgProvNo)
     {
         $this->container['orgProvNo'] = $orgProvNo;
+
+        return $this;
+    }
+
+    /**
+     * Gets orgStateId
+     *
+     * @return string|null
+     */
+    public function getOrgStateId()
+    {
+        return $this->container['orgStateId'];
+    }
+
+    /**
+     * Sets orgStateId
+     *
+     * @param string|null $orgStateId orgStateId
+     *
+     * @return $this
+     */
+    public function setOrgStateId($orgStateId)
+    {
+        $this->container['orgStateId'] = $orgStateId;
+
+        return $this;
+    }
+
+    /**
+     * Gets orgEin
+     *
+     * @return string|null
+     */
+    public function getOrgEin()
+    {
+        return $this->container['orgEin'];
+    }
+
+    /**
+     * Sets orgEin
+     *
+     * @param string|null $orgEin orgEin
+     *
+     * @return $this
+     */
+    public function setOrgEin($orgEin)
+    {
+        $this->container['orgEin'] = $orgEin;
 
         return $this;
     }

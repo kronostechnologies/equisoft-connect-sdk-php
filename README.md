@@ -70,14 +70,15 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\EventsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$eventsCreateEventPayload = new \Equisoft\SDK\EquisoftConnect\Model\EventsCreateEventPayload(); // \Equisoft\SDK\EquisoftConnect\Model\EventsCreateEventPayload | 
+$eventId = 'eventId_example'; // string | Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101.
+$noteId = 56; // int | Note unique identifier.
 $acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
 
 try {
-    $result = $apiInstance->createEvent($eventsCreateEventPayload, $acceptLanguage);
+    $result = $apiInstance->archiveEventInternalNote($eventId, $noteId, $acceptLanguage);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EventsApi->createEvent: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling EventsApi->archiveEventInternalNote: ', $e->getMessage(), PHP_EOL;
 }
 
 ?>
@@ -89,6 +90,7 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*EventsApi* | [**archiveEventInternalNote**](docs/Api/EventsApi.md#archiveeventinternalnote) | **POST** /crm/api/v1/events/{eventId}/notes/{noteId}/archive | Archive an internal note for and event.
 *EventsApi* | [**createEvent**](docs/Api/EventsApi.md#createevent) | **POST** /crm/api/v1/events | Create an event.
 *EventsApi* | [**createEventInternalNote**](docs/Api/EventsApi.md#createeventinternalnote) | **POST** /crm/api/v1/events/{eventId}/notes | Add an internal note to and event.
 *EventsApi* | [**deleteEvent**](docs/Api/EventsApi.md#deleteevent) | **DELETE** /crm/api/v1/events/{eventId} | Delete an event.
@@ -100,7 +102,6 @@ Class | Method | HTTP request | Description
 *EventsApi* | [**listEvents**](docs/Api/EventsApi.md#listevents) | **GET** /crm/api/v1/events | List or search events.
 *EventsApi* | [**patchEvent**](docs/Api/EventsApi.md#patchevent) | **PATCH** /crm/api/v1/events/{eventId} | Partially update an event.
 *EventsApi* | [**patchEventInternalNote**](docs/Api/EventsApi.md#patcheventinternalnote) | **PATCH** /crm/api/v1/events/{eventId}/notes/{noteId} | Add an internal note to and event.
-*EventsApi* | [**softDeleteEventInternalNote**](docs/Api/EventsApi.md#softdeleteeventinternalnote) | **POST** /crm/api/v1/events/{eventId}/notes/{noteId}/softDelete | Soft delete an internal note for and event.
 *EventsApi* | [**transferEventToCompleted**](docs/Api/EventsApi.md#transfereventtocompleted) | **POST** /crm/api/v1/events/{eventId}/transferToCompleted | Transfer an event to the completed/done calendar.
 *GatewaysApi* | [**createEquisoftAnalyzeAccess**](docs/Api/GatewaysApi.md#createequisoftanalyzeaccess) | **POST** /crm/api/v1/gateways/equisoftAnalyze/accesses | 
 *GatewaysApi* | [**deleteEquisoftAnalyzeAccess**](docs/Api/GatewaysApi.md#deleteequisoftanalyzeaccess) | **DELETE** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} | 
@@ -122,6 +123,7 @@ Class | Method | HTTP request | Description
 *MovementApi* | [**deleteMovement**](docs/Api/MovementApi.md#deletemovement) | **DELETE** /crm/api/v1/movements/{movementId} | 
 *MovementApi* | [**getMovementStatus**](docs/Api/MovementApi.md#getmovementstatus) | **GET** /crm/api/v1/movements/{movementId}/status | 
 *MovementApi* | [**listMovements**](docs/Api/MovementApi.md#listmovements) | **GET** /crm/api/v1/movements | 
+*TasksApi* | [**archiveTaskInternalNote**](docs/Api/TasksApi.md#archivetaskinternalnote) | **POST** /crm/api/v1/tasks/{taskId}/notes/{noteId}/archive | Archive an internal note for a task.
 *TasksApi* | [**createTask**](docs/Api/TasksApi.md#createtask) | **POST** /crm/api/v1/tasks | Create a task.
 *TasksApi* | [**createTaskInternalNote**](docs/Api/TasksApi.md#createtaskinternalnote) | **POST** /crm/api/v1/tasks/{taskId}/notes | Add an internal note to a task.
 *TasksApi* | [**deleteTask**](docs/Api/TasksApi.md#deletetask) | **DELETE** /crm/api/v1/tasks/{taskId} | Delete a task.
@@ -130,7 +132,6 @@ Class | Method | HTTP request | Description
 *TasksApi* | [**listTasks**](docs/Api/TasksApi.md#listtasks) | **GET** /crm/api/v1/tasks | List or search tasks.
 *TasksApi* | [**patchTask**](docs/Api/TasksApi.md#patchtask) | **PATCH** /crm/api/v1/tasks/{taskId} | Partially update a task.
 *TasksApi* | [**patchTaskInternalNote**](docs/Api/TasksApi.md#patchtaskinternalnote) | **PATCH** /crm/api/v1/tasks/{taskId}/notes/{noteId} | Add an internal note to a task.
-*TasksApi* | [**softDeleteTaskInternalNote**](docs/Api/TasksApi.md#softdeletetaskinternalnote) | **POST** /crm/api/v1/tasks/{taskId}/notes/{noteId}/softDelete | Soft delete an internal note for a task.
 *TasksApi* | [**transferTaskToCompleted**](docs/Api/TasksApi.md#transfertasktocompleted) | **POST** /crm/api/v1/tasks/{taskId}/transferToCompleted | Transfer a task to completed/done.
 *UsersApi* | [**getCurrentUser**](docs/Api/UsersApi.md#getcurrentuser) | **GET** /crm/api/v1/users/me | Get informations about the current user
 

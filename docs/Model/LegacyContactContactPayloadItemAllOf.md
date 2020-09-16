@@ -47,6 +47,8 @@ Name | Type | Description | Notes
 **orgIdNo** | **string** |  | [optional] 
 **orgFedNo** | **string** |  | [optional] 
 **orgProvNo** | **string** |  | [optional] 
+**orgStateId** | **string** |  | [optional] 
+**orgEin** | **string** |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

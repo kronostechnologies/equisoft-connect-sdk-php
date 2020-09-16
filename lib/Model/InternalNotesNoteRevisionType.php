@@ -45,7 +45,7 @@ class InternalNotesNoteRevisionType
      */
     const CREATE = 'CREATE';
     const MODIFY = 'MODIFY';
-    const DELETE = 'DELETE';
+    const ARCHIVE = 'ARCHIVE';
     
     /**
      * Gets allowable values of the enum
@@ -56,7 +56,7 @@ class InternalNotesNoteRevisionType
         return [
             self::CREATE,
             self::MODIFY,
-            self::DELETE,
+            self::ARCHIVE,
         ];
     }
 }

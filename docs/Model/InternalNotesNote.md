@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | Unique numerical identifier. | [optional] 
+**id** | **int** | Unique numerical identifier. | 
 **author** | [**\Equisoft\SDK\EquisoftConnect\Model\InternalNotesAuthor**](InternalNotesAuthor.md) |  | 
 **firstRevisionCreatedAt** | [**\DateTime**](\DateTime.md) |  | 
 **accessRights** | [**\Equisoft\SDK\EquisoftConnect\Model\AccessRights**](AccessRights.md) |  | 

@@ -73,6 +73,16 @@ class EventsApiTest extends TestCase
     }
 
     /**
+     * Test case for archiveEventInternalNote
+     *
+     * Archive an internal note for and event..
+     *
+     */
+    public function testArchiveEventInternalNote()
+    {
+    }
+
+    /**
      * Test case for createEvent
      *
      * Create an event..
@@ -179,16 +189,6 @@ class EventsApiTest extends TestCase
      *
      */
     public function testPatchEventInternalNote()
-    {
-    }
-
-    /**
-     * Test case for softDeleteEventInternalNote
-     *
-     * Soft delete an internal note for and event..
-     *
-     */
-    public function testSoftDeleteEventInternalNote()
     {
     }
 

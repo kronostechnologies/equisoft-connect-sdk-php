@@ -4,6 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**archiveTaskInternalNote**](TasksApi.md#archiveTaskInternalNote) | **POST** /crm/api/v1/tasks/{taskId}/notes/{noteId}/archive | Archive an internal note for a task.
 [**createTask**](TasksApi.md#createTask) | **POST** /crm/api/v1/tasks | Create a task.
 [**createTaskInternalNote**](TasksApi.md#createTaskInternalNote) | **POST** /crm/api/v1/tasks/{taskId}/notes | Add an internal note to a task.
 [**deleteTask**](TasksApi.md#deleteTask) | **DELETE** /crm/api/v1/tasks/{taskId} | Delete a task.
@@ -12,9 +13,71 @@ Method | HTTP request | Description
 [**listTasks**](TasksApi.md#listTasks) | **GET** /crm/api/v1/tasks | List or search tasks.
 [**patchTask**](TasksApi.md#patchTask) | **PATCH** /crm/api/v1/tasks/{taskId} | Partially update a task.
 [**patchTaskInternalNote**](TasksApi.md#patchTaskInternalNote) | **PATCH** /crm/api/v1/tasks/{taskId}/notes/{noteId} | Add an internal note to a task.
-[**softDeleteTaskInternalNote**](TasksApi.md#softDeleteTaskInternalNote) | **POST** /crm/api/v1/tasks/{taskId}/notes/{noteId}/softDelete | Soft delete an internal note for a task.
 [**transferTaskToCompleted**](TasksApi.md#transferTaskToCompleted) | **POST** /crm/api/v1/tasks/{taskId}/transferToCompleted | Transfer a task to completed/done.
 
+
+
+## archiveTaskInternalNote
+
+> object archiveTaskInternalNote($taskId, $noteId, $acceptLanguage)
+
+Archive an internal note for a task.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Equisoft\SDK\EquisoftConnect\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\TasksApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$taskId = 'taskId_example'; // string | Task unique identifier.
+$noteId = 56; // int | Note unique identifier.
+$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
+
+try {
+    $result = $apiInstance->archiveTaskInternalNote($taskId, $noteId, $acceptLanguage);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TasksApi->archiveTaskInternalNote: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **taskId** | **string**| Task unique identifier. |
+ **noteId** | **int**| Note unique identifier. |
+ **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 | [optional]
+
+### Return type
+
+**object**
+
+### Authorization
+
+[OAuth2](../../README.md#OAuth2)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
 
 ## createTask
@@ -488,7 +551,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\TasksApi(
     $config
 );
 $taskId = 'taskId_example'; // string | Task unique identifier.
-$noteId = 'noteId_example'; // string | Note unique identifier.
+$noteId = 56; // int | Note unique identifier.
 $internalNotesPatchNotePayload = new \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNotePayload(); // \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNotePayload | 
 $acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
 
@@ -507,7 +570,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **taskId** | **string**| Task unique identifier. |
- **noteId** | **string**| Note unique identifier. |
+ **noteId** | **int**| Note unique identifier. |
  **internalNotesPatchNotePayload** | [**\Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNotePayload**](../Model/InternalNotesPatchNotePayload.md)|  |
  **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 | [optional]
 
@@ -522,69 +585,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
-[[Back to README]](../../README.md)
-
-
-## softDeleteTaskInternalNote
-
-> object softDeleteTaskInternalNote($taskId, $noteId, $acceptLanguage)
-
-Soft delete an internal note for a task.
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure OAuth2 access token for authorization: OAuth2
-$config = Equisoft\SDK\EquisoftConnect\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\TasksApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$taskId = 'taskId_example'; // string | Task unique identifier.
-$noteId = 'noteId_example'; // string | Note unique identifier.
-$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
-
-try {
-    $result = $apiInstance->softDeleteTaskInternalNote($taskId, $noteId, $acceptLanguage);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling TasksApi->softDeleteTaskInternalNote: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **taskId** | **string**| Task unique identifier. |
- **noteId** | **string**| Note unique identifier. |
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 | [optional]
-
-### Return type
-
-**object**
-
-### Authorization
-
-[OAuth2](../../README.md#OAuth2)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
