@@ -102,6 +102,7 @@ Class | Method | HTTP request | Description
 *EventsApi* | [**listEvents**](docs/Api/EventsApi.md#listevents) | **GET** /crm/api/v1/events | List or search events.
 *EventsApi* | [**patchEvent**](docs/Api/EventsApi.md#patchevent) | **PATCH** /crm/api/v1/events/{eventId} | Partially update an event.
 *EventsApi* | [**patchEventInternalNote**](docs/Api/EventsApi.md#patcheventinternalnote) | **PATCH** /crm/api/v1/events/{eventId}/notes/{noteId} | Add an internal note to and event.
+*EventsApi* | [**restoreEventInternalNote**](docs/Api/EventsApi.md#restoreeventinternalnote) | **POST** /crm/api/v1/events/{eventId}/notes/{noteId}/restore | Restore an archived internal note for an event.
 *EventsApi* | [**transferEventToCompleted**](docs/Api/EventsApi.md#transfereventtocompleted) | **POST** /crm/api/v1/events/{eventId}/transferToCompleted | Transfer an event to the completed/done calendar.
 *GatewaysApi* | [**createEquisoftAnalyzeAccess**](docs/Api/GatewaysApi.md#createequisoftanalyzeaccess) | **POST** /crm/api/v1/gateways/equisoftAnalyze/accesses | 
 *GatewaysApi* | [**deleteEquisoftAnalyzeAccess**](docs/Api/GatewaysApi.md#deleteequisoftanalyzeaccess) | **DELETE** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} | 
@@ -132,6 +133,7 @@ Class | Method | HTTP request | Description
 *TasksApi* | [**listTasks**](docs/Api/TasksApi.md#listtasks) | **GET** /crm/api/v1/tasks | List or search tasks.
 *TasksApi* | [**patchTask**](docs/Api/TasksApi.md#patchtask) | **PATCH** /crm/api/v1/tasks/{taskId} | Partially update a task.
 *TasksApi* | [**patchTaskInternalNote**](docs/Api/TasksApi.md#patchtaskinternalnote) | **PATCH** /crm/api/v1/tasks/{taskId}/notes/{noteId} | Add an internal note to a task.
+*TasksApi* | [**restoreTaskInternalNote**](docs/Api/TasksApi.md#restoretaskinternalnote) | **POST** /crm/api/v1/tasks/{taskId}/notes/{noteId}/restore | Restore an archived internal note for a task.
 *TasksApi* | [**transferTaskToCompleted**](docs/Api/TasksApi.md#transfertasktocompleted) | **POST** /crm/api/v1/tasks/{taskId}/transferToCompleted | Transfer a task to completed/done.
 *UsersApi* | [**getCurrentUser**](docs/Api/UsersApi.md#getcurrentuser) | **GET** /crm/api/v1/users/me | Get informations about the current user
 
