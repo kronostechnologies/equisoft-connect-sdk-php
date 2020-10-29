@@ -25,6 +25,8 @@ Name | Type | Description | Notes
 **creationTime** | [**\DateTime**](\DateTime.md) | Creation time. As defined by date-time - RFC3339 | [optional] 
 **updateTime** | [**\DateTime**](\DateTime.md) | Date time of last modification. As defined by date-time - RFC3339 | [optional] 
 **calendarId** | **int** | ID of the calendar owning this Event. If owned by many users, calendarId will be - The primary ( or completed depending on state) calendar ID of the connected user if the user is the he is one of the owners. - Any primary ( or completed depending on state) completed calendar ID of one of the owners. | 
+**color** | **string** | hex color of this event background | [optional] 
+**textColor** | **string** | hex text color of this event | [optional] 
 **contactIds** | **int[]** | IDs of the contacts linked to this Event | [optional] 
 **accessRights** | [**\Equisoft\SDK\EquisoftConnect\Model\AccessRights**](AccessRights.md) |  | 
 
