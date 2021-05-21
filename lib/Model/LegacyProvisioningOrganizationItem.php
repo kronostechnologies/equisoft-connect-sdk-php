@@ -60,7 +60,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
         'orgId' => 'string',
         'displayName' => 'string',
         'status' => 'string',
-        'diskUsageQuota' => 'int',
+        'diskUsageQuota' => 'string',
         'lang' => 'string',
         'mainPhone' => 'string',
         'tollFree' => 'string',
@@ -381,7 +381,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
     /**
      * Gets diskUsageQuota
      *
-     * @return int|null
+     * @return string|null
      */
     public function getDiskUsageQuota()
     {
@@ -391,7 +391,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
     /**
      * Sets diskUsageQuota
      *
-     * @param int|null $diskUsageQuota Organization disk usage quota. Deprecated. Always empty.
+     * @param string|null $diskUsageQuota Organization disk usage quota. Deprecated. Always empty.
      *
      * @return $this
      */

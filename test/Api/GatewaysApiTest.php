@@ -93,12 +93,52 @@ class GatewaysApiTest extends TestCase
     }
 
     /**
+     * Test case for gatewayAdminLogin
+     *
+     * .
+     *
+     */
+    public function testGatewayAdminLogin()
+    {
+    }
+
+    /**
+     * Test case for listAssetBookCredentials
+     *
+     * .
+     *
+     */
+    public function testListAssetBookCredentials()
+    {
+    }
+
+    /**
+     * Test case for listCredentials
+     *
+     * .
+     *
+     */
+    public function testListCredentials()
+    {
+    }
+
+    /**
      * Test case for listEquisoftAnalyzeAccesses
      *
      * .
      *
      */
     public function testListEquisoftAnalyzeAccesses()
+    {
+    }
+
+    /**
+     * Test case for listGatewayConfigurations
+     *
+     * .
+     *
+     */
+    public function testListGatewayConfigurations()
     {
     }
 
@@ -119,6 +159,16 @@ class GatewaysApiTest extends TestCase
      *
      */
     public function testPatchEquisoftAnalyzeAccess()
+    {
+    }
+
+    /**
+     * Test case for updateCredentials
+     *
+     * .
+     *
+     */
+    public function testUpdateCredentials()
     {
     }
 }

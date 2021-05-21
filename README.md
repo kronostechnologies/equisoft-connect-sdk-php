@@ -64,21 +64,19 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = Equisoft\SDK\EquisoftConnect\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\EventsApi(
+$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\DSFApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$eventId = 'eventId_example'; // string | Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101.
-$noteId = 56; // int | Note unique identifier.
-$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
+$dsfFinancialCenterPayload = new \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload(); // \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload | 
 
 try {
-    $result = $apiInstance->archiveEventInternalNote($eventId, $noteId, $acceptLanguage);
+    $result = $apiInstance->createDsfFinancialCenter($dsfFinancialCenterPayload);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling EventsApi->archiveEventInternalNote: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DSFApi->createDsfFinancialCenter: ', $e->getMessage(), PHP_EOL;
 }
 
 ?>
@@ -90,6 +88,10 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*DSFApi* | [**createDsfFinancialCenter**](docs/Api/DSFApi.md#createdsffinancialcenter) | **POST** /crm/api/v1/dsf/financialCenters | 
+*DSFApi* | [**deleteDsfFinancialCenter**](docs/Api/DSFApi.md#deletedsffinancialcenter) | **DELETE** /crm/api/v1/dsf/financialCenters/{financialCenterId} | 
+*DSFApi* | [**listDsfFinancialCenters**](docs/Api/DSFApi.md#listdsffinancialcenters) | **GET** /crm/api/v1/dsf/financialCenters | 
+*DSFApi* | [**updateDsfFinancialCenter**](docs/Api/DSFApi.md#updatedsffinancialcenter) | **POST** /crm/api/v1/dsf/financialCenters/{financialCenterId} | 
 *EventsApi* | [**archiveEventInternalNote**](docs/Api/EventsApi.md#archiveeventinternalnote) | **POST** /crm/api/v1/events/{eventId}/notes/{noteId}/archive | Archive an internal note for and event.
 *EventsApi* | [**createEvent**](docs/Api/EventsApi.md#createevent) | **POST** /crm/api/v1/events | Create an event.
 *EventsApi* | [**createEventInternalNote**](docs/Api/EventsApi.md#createeventinternalnote) | **POST** /crm/api/v1/events/{eventId}/notes | Add an internal note to and event.
@@ -106,9 +108,16 @@ Class | Method | HTTP request | Description
 *EventsApi* | [**transferEventToCompleted**](docs/Api/EventsApi.md#transfereventtocompleted) | **POST** /crm/api/v1/events/{eventId}/transferToCompleted | Transfer an event to the completed/done calendar.
 *GatewaysApi* | [**createEquisoftAnalyzeAccess**](docs/Api/GatewaysApi.md#createequisoftanalyzeaccess) | **POST** /crm/api/v1/gateways/equisoftAnalyze/accesses | 
 *GatewaysApi* | [**deleteEquisoftAnalyzeAccess**](docs/Api/GatewaysApi.md#deleteequisoftanalyzeaccess) | **DELETE** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} | 
+*GatewaysApi* | [**gatewayAdminLogin**](docs/Api/GatewaysApi.md#gatewayadminlogin) | **POST** /crm/api/v1/gateways/credentials-validation/{gatewayName}/admin-credentials/login | 
+*GatewaysApi* | [**listAssetBookCredentials**](docs/Api/GatewaysApi.md#listassetbookcredentials) | **GET** /crm/api/v1/gateways/assetbook/credentials | 
+*GatewaysApi* | [**listCredentials**](docs/Api/GatewaysApi.md#listcredentials) | **GET** /crm/api/v1/gateways/credentials-validation/{gatewayId}/credentials/{status} | 
 *GatewaysApi* | [**listEquisoftAnalyzeAccesses**](docs/Api/GatewaysApi.md#listequisoftanalyzeaccesses) | **GET** /crm/api/v1/gateways/equisoftAnalyze/accesses | 
+*GatewaysApi* | [**listGatewayConfigurations**](docs/Api/GatewaysApi.md#listgatewayconfigurations) | **GET** /crm/api/v1/gateways/generic/{gatewayName}/configuration | 
 *GatewaysApi* | [**listGenericCredentials**](docs/Api/GatewaysApi.md#listgenericcredentials) | **GET** /crm/api/v1/gateways/generic/{gatewayName}/credentials | 
 *GatewaysApi* | [**patchEquisoftAnalyzeAccess**](docs/Api/GatewaysApi.md#patchequisoftanalyzeaccess) | **PATCH** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} | 
+*GatewaysApi* | [**updateCredentials**](docs/Api/GatewaysApi.md#updatecredentials) | **PUT** /crm/api/v1/gateways/credentials-validation/{gatewayId}/credentials/{status} | 
+*IntegrationsApi* | [**downloadLaserAppEnterpriseContactData**](docs/Api/IntegrationsApi.md#downloadlaserappenterprisecontactdata) | **GET** /crm/api/app/integrations/laserapp/enterprise/{contactId} | Download contact data for LaserApp Enterprise.
+*IntegrationsApi* | [**redirectContactToLaserAppAnywhere**](docs/Api/IntegrationsApi.md#redirectcontacttolaserappanywhere) | **GET** /crm/api/app/integrations/laserapp/anywhere/{contactId} | Redirect contact to LaserApp Anywhere.
 *LegacyDocumentApi* | [**addDocument**](docs/Api/LegacyDocumentApi.md#adddocument) | **POST** /apps/api/kronos.document.add | Create a new document.
 *LegacyDocumentApi* | [**deleteDocument**](docs/Api/LegacyDocumentApi.md#deletedocument) | **POST** /apps/api/kronos.document.delete | Delete a document and it&#39;s related files.
 *LegacyDocumentApi* | [**deleteDocumentFile**](docs/Api/LegacyDocumentApi.md#deletedocumentfile) | **POST** /apps/api/kronos.document.deleteFile | Delete one file from a document
@@ -124,6 +133,7 @@ Class | Method | HTTP request | Description
 *MovementApi* | [**deleteMovement**](docs/Api/MovementApi.md#deletemovement) | **DELETE** /crm/api/v1/movements/{movementId} | 
 *MovementApi* | [**getMovementStatus**](docs/Api/MovementApi.md#getmovementstatus) | **GET** /crm/api/v1/movements/{movementId}/status | 
 *MovementApi* | [**listMovements**](docs/Api/MovementApi.md#listmovements) | **GET** /crm/api/v1/movements | 
+*MxApi* | [**validateRecipients**](docs/Api/MxApi.md#validaterecipients) | **POST** /crm/api/app/mail/validateRecipients | Validate recipients
 *TasksApi* | [**archiveTaskInternalNote**](docs/Api/TasksApi.md#archivetaskinternalnote) | **POST** /crm/api/v1/tasks/{taskId}/notes/{noteId}/archive | Archive an internal note for a task.
 *TasksApi* | [**createTask**](docs/Api/TasksApi.md#createtask) | **POST** /crm/api/v1/tasks | Create a task.
 *TasksApi* | [**createTaskInternalNote**](docs/Api/TasksApi.md#createtaskinternalnote) | **POST** /crm/api/v1/tasks/{taskId}/notes | Add an internal note to a task.
@@ -136,15 +146,31 @@ Class | Method | HTTP request | Description
 *TasksApi* | [**restoreTaskInternalNote**](docs/Api/TasksApi.md#restoretaskinternalnote) | **POST** /crm/api/v1/tasks/{taskId}/notes/{noteId}/restore | Restore an archived internal note for a task.
 *TasksApi* | [**transferTaskToCompleted**](docs/Api/TasksApi.md#transfertasktocompleted) | **POST** /crm/api/v1/tasks/{taskId}/transferToCompleted | Transfer a task to completed/done.
 *UsersApi* | [**getCurrentUser**](docs/Api/UsersApi.md#getcurrentuser) | **GET** /crm/api/v1/users/me | Get informations about the current user
+*UsersApi* | [**getUserContext**](docs/Api/UsersApi.md#getusercontext) | **GET** /crm/api/v1/context | Get user context metadata.
 
 
 ## Documentation For Models
 
  - [AccessRights](docs/Model/AccessRights.md)
+ - [AdminCredentialPayload](docs/Model/AdminCredentialPayload.md)
+ - [AdminCredentialResponse](docs/Model/AdminCredentialResponse.md)
  - [CalendarDefaultCalendarId](docs/Model/CalendarDefaultCalendarId.md)
  - [CalendarsCalendar](docs/Model/CalendarsCalendar.md)
  - [CalendarsListCalendarResponse](docs/Model/CalendarsListCalendarResponse.md)
+ - [ContextActor](docs/Model/ContextActor.md)
+ - [ContextEquisoftConnect](docs/Model/ContextEquisoftConnect.md)
+ - [ContextEquisoftConnectUser](docs/Model/ContextEquisoftConnectUser.md)
+ - [ContextInstance](docs/Model/ContextInstance.md)
+ - [ContextPreferences](docs/Model/ContextPreferences.md)
+ - [ContextUser](docs/Model/ContextUser.md)
+ - [ContextUserContext](docs/Model/ContextUserContext.md)
+ - [CredentialDto](docs/Model/CredentialDto.md)
+ - [CredentialsResponse](docs/Model/CredentialsResponse.md)
  - [DateOrDateTime](docs/Model/DateOrDateTime.md)
+ - [DsfCreateOrUpdateFinancialCenterResponse](docs/Model/DsfCreateOrUpdateFinancialCenterResponse.md)
+ - [DsfFinancialCenter](docs/Model/DsfFinancialCenter.md)
+ - [DsfFinancialCenterPayload](docs/Model/DsfFinancialCenterPayload.md)
+ - [DsfListFinancialCenterResponse](docs/Model/DsfListFinancialCenterResponse.md)
  - [ErrorResponse](docs/Model/ErrorResponse.md)
  - [EventsCreateEventPayload](docs/Model/EventsCreateEventPayload.md)
  - [EventsCreateEventResponse](docs/Model/EventsCreateEventResponse.md)
@@ -172,6 +198,7 @@ Class | Method | HTTP request | Description
  - [GatewaysGatewayName](docs/Model/GatewaysGatewayName.md)
  - [GatewaysGatewayType](docs/Model/GatewaysGatewayType.md)
  - [GatewaysListCredentialsResponse](docs/Model/GatewaysListCredentialsResponse.md)
+ - [HandlersOauth2AssetbookAssetBookTokenPostBody](docs/Model/HandlersOauth2AssetbookAssetBookTokenPostBody.md)
  - [InternalNotesAuthor](docs/Model/InternalNotesAuthor.md)
  - [InternalNotesCreateNotePayload](docs/Model/InternalNotesCreateNotePayload.md)
  - [InternalNotesCreateNoteResponse](docs/Model/InternalNotesCreateNoteResponse.md)
@@ -183,6 +210,8 @@ Class | Method | HTTP request | Description
  - [InternalNotesNoteRevisionType](docs/Model/InternalNotesNoteRevisionType.md)
  - [InternalNotesPatchNotePayload](docs/Model/InternalNotesPatchNotePayload.md)
  - [InternalNotesPatchNoteResponse](docs/Model/InternalNotesPatchNoteResponse.md)
+ - [LaserAppLaserAppAnywhereError](docs/Model/LaserAppLaserAppAnywhereError.md)
+ - [LaserAppLaserAppAnywhereResponse](docs/Model/LaserAppLaserAppAnywhereResponse.md)
  - [LegacyAddUpdateItem](docs/Model/LegacyAddUpdateItem.md)
  - [LegacyAddUpdateResponse](docs/Model/LegacyAddUpdateResponse.md)
  - [LegacyAddUpdateResponseAllOf](docs/Model/LegacyAddUpdateResponseAllOf.md)
@@ -254,6 +283,9 @@ Class | Method | HTTP request | Description
  - [MovementUserTuplePayload](docs/Model/MovementUserTuplePayload.md)
  - [MovementValidationError](docs/Model/MovementValidationError.md)
  - [MovementValidationErrorResponse](docs/Model/MovementValidationErrorResponse.md)
+ - [MxRecipient](docs/Model/MxRecipient.md)
+ - [MxRecipientsPayload](docs/Model/MxRecipientsPayload.md)
+ - [MxValidateRecipientsResponse](docs/Model/MxValidateRecipientsResponse.md)
  - [TasksCreateTaskPayload](docs/Model/TasksCreateTaskPayload.md)
  - [TasksCreateTaskResponse](docs/Model/TasksCreateTaskResponse.md)
  - [TasksDueDateFilter](docs/Model/TasksDueDateFilter.md)

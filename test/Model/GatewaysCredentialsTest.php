@@ -93,6 +93,13 @@ class GatewaysCredentialsTest extends TestCase
     }
 
     /**
+     * Test attribute "repcode"
+     */
+    public function testPropertyRepcode()
+    {
+    }
+
+    /**
      * Test attribute "isADealerCode"
      */
     public function testPropertyIsADealerCode()

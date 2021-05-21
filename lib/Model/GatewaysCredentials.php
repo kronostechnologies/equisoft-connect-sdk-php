@@ -59,6 +59,7 @@ class GatewaysCredentials implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
         'username' => 'string',
         'password' => 'string',
+        'repcode' => 'string',
         'isADealerCode' => 'bool'
     ];
 
@@ -70,6 +71,7 @@ class GatewaysCredentials implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'username' => null,
         'password' => null,
+        'repcode' => null,
         'isADealerCode' => null
     ];
 
@@ -102,6 +104,7 @@ class GatewaysCredentials implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'username' => 'username',
         'password' => 'password',
+        'repcode' => 'repcode',
         'isADealerCode' => 'isADealerCode'
     ];
 
@@ -113,6 +116,7 @@ class GatewaysCredentials implements ModelInterface, ArrayAccess
     protected static $setters = [
         'username' => 'setUsername',
         'password' => 'setPassword',
+        'repcode' => 'setRepcode',
         'isADealerCode' => 'setIsADealerCode'
     ];
 
@@ -124,6 +128,7 @@ class GatewaysCredentials implements ModelInterface, ArrayAccess
     protected static $getters = [
         'username' => 'getUsername',
         'password' => 'getPassword',
+        'repcode' => 'getRepcode',
         'isADealerCode' => 'getIsADealerCode'
     ];
 
@@ -189,6 +194,7 @@ class GatewaysCredentials implements ModelInterface, ArrayAccess
     {
         $this->container['username'] = isset($data['username']) ? $data['username'] : null;
         $this->container['password'] = isset($data['password']) ? $data['password'] : null;
+        $this->container['repcode'] = isset($data['repcode']) ? $data['repcode'] : null;
         $this->container['isADealerCode'] = isset($data['isADealerCode']) ? $data['isADealerCode'] : null;
     }
 
@@ -235,7 +241,7 @@ class GatewaysCredentials implements ModelInterface, ArrayAccess
     /**
      * Sets username
      *
-     * @param string $username username
+     * @param string $username | null
      *
      * @return $this
      */
@@ -259,13 +265,37 @@ class GatewaysCredentials implements ModelInterface, ArrayAccess
     /**
      * Sets password
      *
-     * @param string $password password
+     * @param string $password | null
      *
      * @return $this
      */
     public function setPassword($password)
     {
         $this->container['password'] = $password;
+
+        return $this;
+    }
+
+    /**
+     * Gets repcode
+     *
+     * @return string|null
+     */
+    public function getRepcode()
+    {
+        return $this->container['repcode'];
+    }
+
+    /**
+     * Sets repcode
+     *
+     * @param string|null $repcode repcode
+     *
+     * @return $this
+     */
+    public function setRepcode($repcode)
+    {
+        $this->container['repcode'] = $repcode;
 
         return $this;
     }
