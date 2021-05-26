@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**username** | **string** |  | 
-**password** | **string** |  | 
+**username** | **string** | | null | 
+**password** | **string** | | null | 
+**repcode** | **string** |  | [optional] 
 **isADealerCode** | **bool** |  | [optional] 
 **ssnList** | **string[]** | The list will contain formatted SSNs, i.e. \&quot;123 456 789\&quot; | [optional] 
 

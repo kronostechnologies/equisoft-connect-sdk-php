@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **orgId** | **string** | Unique identifier for the organization | [optional] 
 **displayName** | **string** | Organization Name | [optional] 
 **status** | **string** | Organization status In creation, Active, Maintenance | [optional] 
-**diskUsageQuota** | **int** | Organization disk usage quota. Deprecated. Always empty. | [optional] 
+**diskUsageQuota** | **string** | Organization disk usage quota. Deprecated. Always empty. | [optional] 
 **lang** | **string** | Default language | [optional] 
 **mainPhone** | **string** | Organization main phone number | [optional] 
 **tollFree** | **string** | Organization tollFree phone number | [optional] 

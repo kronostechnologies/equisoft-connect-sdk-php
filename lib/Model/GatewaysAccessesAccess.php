@@ -60,7 +60,6 @@ class GatewaysAccessesAccess implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string',
         'id' => 'int',
         'users' => '\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesUser[]'
     ];
@@ -71,7 +70,6 @@ class GatewaysAccessesAccess implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'type' => null,
         'id' => null,
         'users' => null
     ];
@@ -103,7 +101,6 @@ class GatewaysAccessesAccess implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type',
         'id' => 'id',
         'users' => 'users'
     ];
@@ -114,7 +111,6 @@ class GatewaysAccessesAccess implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType',
         'id' => 'setId',
         'users' => 'setUsers'
     ];
@@ -125,7 +121,6 @@ class GatewaysAccessesAccess implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType',
         'id' => 'getId',
         'users' => 'getUsers'
     ];
@@ -171,21 +166,8 @@ class GatewaysAccessesAccess implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    const TYPE_EQUISOFT_ANALYZE = 'EQUISOFT_ANALYZE';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getTypeAllowableValues()
-    {
-        return [
-            self::TYPE_EQUISOFT_ANALYZE,
-        ];
-    }
     
 
     /**
@@ -203,7 +185,6 @@ class GatewaysAccessesAccess implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['users'] = isset($data['users']) ? $data['users'] : null;
 
@@ -219,14 +200,6 @@ class GatewaysAccessesAccess implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'type', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
 
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
@@ -248,39 +221,6 @@ class GatewaysAccessesAccess implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets type
-     *
-     * @return string|null
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param string|null $type type
-     *
-     * @return $this
-     */
-    public function setType($type)
-    {
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($type) && !in_array($type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'type', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['type'] = $type;
-
-        return $this;
-    }
 
     /**
      * Gets id

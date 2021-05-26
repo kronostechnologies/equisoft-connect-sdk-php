@@ -79,13 +79,6 @@ class GatewaysAccessesAccessTest extends TestCase
     }
 
     /**
-     * Test attribute "type"
-     */
-    public function testPropertyType()
-    {
-    }
-
-    /**
      * Test attribute "id"
      */
     public function testPropertyId()

@@ -4,7 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **string** |  | [optional] 
 **id** | **int** |  | 
 **users** | [**\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesUser[]**](GatewaysAccessesUser.md) |  | 
 

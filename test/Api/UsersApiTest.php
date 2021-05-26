@@ -81,4 +81,14 @@ class UsersApiTest extends TestCase
     public function testGetCurrentUser()
     {
     }
+
+    /**
+     * Test case for getUserContext
+     *
+     * Get user context metadata..
+     *
+     */
+    public function testGetUserContext()
+    {
+    }
 }
