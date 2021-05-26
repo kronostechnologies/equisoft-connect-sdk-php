@@ -62,6 +62,7 @@ class DsfFinancialCenter implements ModelInterface, ArrayAccess
         'nameEn' => 'string',
         'network' => 'string',
         'code' => 'string',
+        'organizationUuid' => 'string',
         'databaseCount' => 'int'
     ];
 
@@ -76,6 +77,7 @@ class DsfFinancialCenter implements ModelInterface, ArrayAccess
         'nameEn' => null,
         'network' => null,
         'code' => null,
+        'organizationUuid' => null,
         'databaseCount' => null
     ];
 
@@ -111,6 +113,7 @@ class DsfFinancialCenter implements ModelInterface, ArrayAccess
         'nameEn' => 'nameEn',
         'network' => 'network',
         'code' => 'code',
+        'organizationUuid' => 'organizationUuid',
         'databaseCount' => 'databaseCount'
     ];
 
@@ -125,6 +128,7 @@ class DsfFinancialCenter implements ModelInterface, ArrayAccess
         'nameEn' => 'setNameEn',
         'network' => 'setNetwork',
         'code' => 'setCode',
+        'organizationUuid' => 'setOrganizationUuid',
         'databaseCount' => 'setDatabaseCount'
     ];
 
@@ -139,6 +143,7 @@ class DsfFinancialCenter implements ModelInterface, ArrayAccess
         'nameEn' => 'getNameEn',
         'network' => 'getNetwork',
         'code' => 'getCode',
+        'organizationUuid' => 'getOrganizationUuid',
         'databaseCount' => 'getDatabaseCount'
     ];
 
@@ -207,6 +212,7 @@ class DsfFinancialCenter implements ModelInterface, ArrayAccess
         $this->container['nameEn'] = isset($data['nameEn']) ? $data['nameEn'] : null;
         $this->container['network'] = isset($data['network']) ? $data['network'] : null;
         $this->container['code'] = isset($data['code']) ? $data['code'] : null;
+        $this->container['organizationUuid'] = isset($data['organizationUuid']) ? $data['organizationUuid'] : null;
         $this->container['databaseCount'] = isset($data['databaseCount']) ? $data['databaseCount'] : null;
     }
 
@@ -365,6 +371,30 @@ class DsfFinancialCenter implements ModelInterface, ArrayAccess
     public function setCode($code)
     {
         $this->container['code'] = $code;
+
+        return $this;
+    }
+
+    /**
+     * Gets organizationUuid
+     *
+     * @return string|null
+     */
+    public function getOrganizationUuid()
+    {
+        return $this->container['organizationUuid'];
+    }
+
+    /**
+     * Sets organizationUuid
+     *
+     * @param string|null $organizationUuid Organization Unique Id
+     *
+     * @return $this
+     */
+    public function setOrganizationUuid($organizationUuid)
+    {
+        $this->container['organizationUuid'] = $organizationUuid;
 
         return $this;
     }

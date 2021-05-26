@@ -114,6 +114,13 @@ class DsfFinancialCenterTest extends TestCase
     }
 
     /**
+     * Test attribute "organizationUuid"
+     */
+    public function testPropertyOrganizationUuid()
+    {
+    }
+
+    /**
      * Test attribute "databaseCount"
      */
     public function testPropertyDatabaseCount()
