@@ -1,6 +1,6 @@
 <?php
 /**
- * UsersUser
+ * DatabasesDatabase
  *
  * PHP version 7.2
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * UsersUser Class Doc Comment
+ * DatabasesDatabase Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
@@ -42,7 +42,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class UsersUser implements ModelInterface, ArrayAccess
+class DatabasesDatabase implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class UsersUser implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'users.User';
+    protected static $openAPIModelName = 'databases.Database';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,7 @@ class UsersUser implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'int''displayName' => 'string''email' => 'string''firstName' => 'string''lastName' => 'string''locale' => 'string''role' => 'string'
+        'id' => 'int''uuid' => 'string''databaseName' => 'string''displayName' => 'string''profileName' => 'string''state' => 'string''organizationUuid' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class UsersUser implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'id' => null'displayName' => null'email' => null'firstName' => null'lastName' => null'locale' => null'role' => null
+        'id' => null'uuid' => null'databaseName' => null'displayName' => null'profileName' => null'state' => null'organizationUuid' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class UsersUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id''displayName' => 'displayName''email' => 'email''firstName' => 'firstName''lastName' => 'lastName''locale' => 'locale''role' => 'role'
+        'id' => 'id''uuid' => 'uuid''databaseName' => 'databaseName''displayName' => 'displayName''profileName' => 'profileName''state' => 'state''organizationUuid' => 'organizationUuid'
     ];
 
     /**
@@ -107,7 +107,7 @@ class UsersUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId''displayName' => 'setDisplayName''email' => 'setEmail''firstName' => 'setFirstName''lastName' => 'setLastName''locale' => 'setLocale''role' => 'setRole'
+        'id' => 'setId''uuid' => 'setUuid''databaseName' => 'setDatabaseName''displayName' => 'setDisplayName''profileName' => 'setProfileName''state' => 'setState''organizationUuid' => 'setOrganizationUuid'
     ];
 
     /**
@@ -116,7 +116,7 @@ class UsersUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId''displayName' => 'getDisplayName''email' => 'getEmail''firstName' => 'getFirstName''lastName' => 'getLastName''locale' => 'getLocale''role' => 'getRole'
+        'id' => 'getId''uuid' => 'getUuid''databaseName' => 'getDatabaseName''displayName' => 'getDisplayName''profileName' => 'getProfileName''state' => 'getState''organizationUuid' => 'getOrganizationUuid'
     ];
 
     /**
@@ -180,12 +180,12 @@ class UsersUser implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
+        $this->container['databaseName'] = isset($data['databaseName']) ? $data['databaseName'] : null;
         $this->container['displayName'] = isset($data['displayName']) ? $data['displayName'] : null;
-        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
-        $this->container['firstName'] = isset($data['firstName']) ? $data['firstName'] : null;
-        $this->container['lastName'] = isset($data['lastName']) ? $data['lastName'] : null;
-        $this->container['locale'] = isset($data['locale']) ? $data['locale'] : null;
-        $this->container['role'] = isset($data['role']) ? $data['role'] : null;
+        $this->container['profileName'] = isset($data['profileName']) ? $data['profileName'] : null;
+        $this->container['state'] = isset($data['state']) ? $data['state'] : null;
+        $this->container['organizationUuid'] = isset($data['organizationUuid']) ? $data['organizationUuid'] : null;
     }
 
     /**
@@ -197,6 +197,24 @@ class UsersUser implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
+        }
+        if ($this->container['uuid'] === null) {
+            $invalidProperties[] = "'uuid' can't be null";
+        }
+        if ($this->container['databaseName'] === null) {
+            $invalidProperties[] = "'databaseName' can't be null";
+        }
+        if ($this->container['displayName'] === null) {
+            $invalidProperties[] = "'displayName' can't be null";
+        }
+        if ($this->container['profileName'] === null) {
+            $invalidProperties[] = "'profileName' can't be null";
+        }
+        if ($this->container['state'] === null) {
+            $invalidProperties[] = "'state' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -215,7 +233,7 @@ class UsersUser implements ModelInterface, ArrayAccess
     /**
      * Gets id
      *
-     * @return int|null
+     * @return int
      */
     public function getId()
     {
@@ -225,7 +243,7 @@ class UsersUser implements ModelInterface, ArrayAccess
     /**
      * Sets id
      *
-     * @param int|null $id The user's unique identifier (ID).
+     * @param int $id Id
      *
      * @return $this
      */
@@ -237,9 +255,57 @@ class UsersUser implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets uuid
+     *
+     * @return string
+     */
+    public function getUuid()
+    {
+        return $this->container['uuid'];
+    }
+
+    /**
+     * Sets uuid
+     *
+     * @param string $uuid Uuid
+     *
+     * @return $this
+     */
+    public function setUuid($uuid)
+    {
+        $this->container['uuid'] = $uuid;
+
+        return $this;
+    }
+
+    /**
+     * Gets databaseName
+     *
+     * @return string
+     */
+    public function getDatabaseName()
+    {
+        return $this->container['databaseName'];
+    }
+
+    /**
+     * Sets databaseName
+     *
+     * @param string $databaseName Database name
+     *
+     * @return $this
+     */
+    public function setDatabaseName($databaseName)
+    {
+        $this->container['databaseName'] = $databaseName;
+
+        return $this;
+    }
+
+    /**
      * Gets displayName
      *
-     * @return string|null
+     * @return string
      */
     public function getDisplayName()
     {
@@ -249,7 +315,7 @@ class UsersUser implements ModelInterface, ArrayAccess
     /**
      * Sets displayName
      *
-     * @param string|null $displayName The user's full display name.
+     * @param string $displayName Display name
      *
      * @return $this
      */
@@ -261,121 +327,73 @@ class UsersUser implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets email
+     * Gets profileName
      *
-     * @return string|null
+     * @return string
      */
-    public function getEmail()
+    public function getProfileName()
     {
-        return $this->container['email'];
+        return $this->container['profileName'];
     }
 
     /**
-     * Sets email
+     * Sets profileName
      *
-     * @param string|null $email The user's eMail address.
+     * @param string $profileName Profile
      *
      * @return $this
      */
-    public function setEmail($email)
+    public function setProfileName($profileName)
     {
-        $this->container['email'] = $email;
+        $this->container['profileName'] = $profileName;
 
         return $this;
     }
 
     /**
-     * Gets firstName
+     * Gets state
      *
-     * @return string|null
+     * @return string
      */
-    public function getFirstName()
+    public function getState()
     {
-        return $this->container['firstName'];
+        return $this->container['state'];
     }
 
     /**
-     * Sets firstName
+     * Sets state
      *
-     * @param string|null $firstName The user's first name.
+     * @param string $state Database state
      *
      * @return $this
      */
-    public function setFirstName($firstName)
+    public function setState($state)
     {
-        $this->container['firstName'] = $firstName;
+        $this->container['state'] = $state;
 
         return $this;
     }
 
     /**
-     * Gets lastName
+     * Gets organizationUuid
      *
      * @return string|null
      */
-    public function getLastName()
+    public function getOrganizationUuid()
     {
-        return $this->container['lastName'];
+        return $this->container['organizationUuid'];
     }
 
     /**
-     * Sets lastName
+     * Sets organizationUuid
      *
-     * @param string|null $lastName The user's last name.
+     * @param string|null $organizationUuid Organization uuid
      *
      * @return $this
      */
-    public function setLastName($lastName)
+    public function setOrganizationUuid($organizationUuid)
     {
-        $this->container['lastName'] = $lastName;
-
-        return $this;
-    }
-
-    /**
-     * Gets locale
-     *
-     * @return string|null
-     */
-    public function getLocale()
-    {
-        return $this->container['locale'];
-    }
-
-    /**
-     * Sets locale
-     *
-     * @param string|null $locale The user's preferred locale.
-     *
-     * @return $this
-     */
-    public function setLocale($locale)
-    {
-        $this->container['locale'] = $locale;
-
-        return $this;
-    }
-
-    /**
-     * Gets role
-     *
-     * @return string|null
-     */
-    public function getRole()
-    {
-        return $this->container['role'];
-    }
-
-    /**
-     * Sets role
-     *
-     * @param string|null $role The user's role.
-     *
-     * @return $this
-     */
-    public function setRole($role)
-    {
-        $this->container['role'] = $role;
+        $this->container['organizationUuid'] = $organizationUuid;
 
         return $this;
     }

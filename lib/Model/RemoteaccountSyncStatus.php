@@ -1,6 +1,6 @@
 <?php
 /**
- * UsersUser
+ * RemoteaccountSyncStatus
  *
  * PHP version 7.2
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * UsersUser Class Doc Comment
+ * RemoteaccountSyncStatus Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
@@ -42,7 +42,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class UsersUser implements ModelInterface, ArrayAccess
+class RemoteaccountSyncStatus implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class UsersUser implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'users.User';
+    protected static $openAPIModelName = 'remoteaccount.SyncStatus';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,7 @@ class UsersUser implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'int''displayName' => 'string''email' => 'string''firstName' => 'string''lastName' => 'string''locale' => 'string''role' => 'string'
+        'taskStatus' => '\Equisoft\SDK\EquisoftConnect\Model\RemoteaccountSyncTaskStatus[]''errors' => 'string[]'
     ];
 
     /**
@@ -68,7 +68,7 @@ class UsersUser implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'id' => null'displayName' => null'email' => null'firstName' => null'lastName' => null'locale' => null'role' => null
+        'taskStatus' => null'errors' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class UsersUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id''displayName' => 'displayName''email' => 'email''firstName' => 'firstName''lastName' => 'lastName''locale' => 'locale''role' => 'role'
+        'taskStatus' => 'taskStatus''errors' => 'errors'
     ];
 
     /**
@@ -107,7 +107,7 @@ class UsersUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId''displayName' => 'setDisplayName''email' => 'setEmail''firstName' => 'setFirstName''lastName' => 'setLastName''locale' => 'setLocale''role' => 'setRole'
+        'taskStatus' => 'setTaskStatus''errors' => 'setErrors'
     ];
 
     /**
@@ -116,7 +116,7 @@ class UsersUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId''displayName' => 'getDisplayName''email' => 'getEmail''firstName' => 'getFirstName''lastName' => 'getLastName''locale' => 'getLocale''role' => 'getRole'
+        'taskStatus' => 'getTaskStatus''errors' => 'getErrors'
     ];
 
     /**
@@ -179,13 +179,8 @@ class UsersUser implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['displayName'] = isset($data['displayName']) ? $data['displayName'] : null;
-        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
-        $this->container['firstName'] = isset($data['firstName']) ? $data['firstName'] : null;
-        $this->container['lastName'] = isset($data['lastName']) ? $data['lastName'] : null;
-        $this->container['locale'] = isset($data['locale']) ? $data['locale'] : null;
-        $this->container['role'] = isset($data['role']) ? $data['role'] : null;
+        $this->container['taskStatus'] = isset($data['taskStatus']) ? $data['taskStatus'] : null;
+        $this->container['errors'] = isset($data['errors']) ? $data['errors'] : null;
     }
 
     /**
@@ -213,169 +208,49 @@ class UsersUser implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets id
+     * Gets taskStatus
      *
-     * @return int|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\RemoteaccountSyncTaskStatus[]|null
      */
-    public function getId()
+    public function getTaskStatus()
     {
-        return $this->container['id'];
+        return $this->container['taskStatus'];
     }
 
     /**
-     * Sets id
+     * Sets taskStatus
      *
-     * @param int|null $id The user's unique identifier (ID).
+     * @param \Equisoft\SDK\EquisoftConnect\Model\RemoteaccountSyncTaskStatus[]|null $taskStatus The task started to synchronize the account
      *
      * @return $this
      */
-    public function setId($id)
+    public function setTaskStatus($taskStatus)
     {
-        $this->container['id'] = $id;
+        $this->container['taskStatus'] = $taskStatus;
 
         return $this;
     }
 
     /**
-     * Gets displayName
+     * Gets errors
      *
-     * @return string|null
+     * @return string[]|null
      */
-    public function getDisplayName()
+    public function getErrors()
     {
-        return $this->container['displayName'];
+        return $this->container['errors'];
     }
 
     /**
-     * Sets displayName
+     * Sets errors
      *
-     * @param string|null $displayName The user's full display name.
+     * @param string[]|null $errors The errors encountered while starting synchronization tasks
      *
      * @return $this
      */
-    public function setDisplayName($displayName)
+    public function setErrors($errors)
     {
-        $this->container['displayName'] = $displayName;
-
-        return $this;
-    }
-
-    /**
-     * Gets email
-     *
-     * @return string|null
-     */
-    public function getEmail()
-    {
-        return $this->container['email'];
-    }
-
-    /**
-     * Sets email
-     *
-     * @param string|null $email The user's eMail address.
-     *
-     * @return $this
-     */
-    public function setEmail($email)
-    {
-        $this->container['email'] = $email;
-
-        return $this;
-    }
-
-    /**
-     * Gets firstName
-     *
-     * @return string|null
-     */
-    public function getFirstName()
-    {
-        return $this->container['firstName'];
-    }
-
-    /**
-     * Sets firstName
-     *
-     * @param string|null $firstName The user's first name.
-     *
-     * @return $this
-     */
-    public function setFirstName($firstName)
-    {
-        $this->container['firstName'] = $firstName;
-
-        return $this;
-    }
-
-    /**
-     * Gets lastName
-     *
-     * @return string|null
-     */
-    public function getLastName()
-    {
-        return $this->container['lastName'];
-    }
-
-    /**
-     * Sets lastName
-     *
-     * @param string|null $lastName The user's last name.
-     *
-     * @return $this
-     */
-    public function setLastName($lastName)
-    {
-        $this->container['lastName'] = $lastName;
-
-        return $this;
-    }
-
-    /**
-     * Gets locale
-     *
-     * @return string|null
-     */
-    public function getLocale()
-    {
-        return $this->container['locale'];
-    }
-
-    /**
-     * Sets locale
-     *
-     * @param string|null $locale The user's preferred locale.
-     *
-     * @return $this
-     */
-    public function setLocale($locale)
-    {
-        $this->container['locale'] = $locale;
-
-        return $this;
-    }
-
-    /**
-     * Gets role
-     *
-     * @return string|null
-     */
-    public function getRole()
-    {
-        return $this->container['role'];
-    }
-
-    /**
-     * Sets role
-     *
-     * @param string|null $role The user's role.
-     *
-     * @return $this
-     */
-    public function setRole($role)
-    {
-        $this->container['role'] = $role;
+        $this->container['errors'] = $errors;
 
         return $this;
     }

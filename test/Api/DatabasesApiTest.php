@@ -1,6 +1,6 @@
 <?php
 /**
- * UsersApiTest
+ * DatabasesApiTest
  * PHP version 7.2
  *
  * @category Class
@@ -33,14 +33,14 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**
- * UsersApiTest Class Doc Comment
+ * DatabasesApiTest Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class UsersApiTest extends TestCase
+class DatabasesApiTest extends TestCase
 {
 
     /**
@@ -72,48 +72,12 @@ class UsersApiTest extends TestCase
     }
 
     /**
-     * Test case for getCurrentUser
-     *
-     * Get informations about the current user.
-     *
-     */
-    public function testGetCurrentUser()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for getUser
+     * Test case for listDatabases
      *
      * .
      *
      */
-    public function testGetUser()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for getUserContext
-     *
-     * Get user context metadata..
-     *
-     */
-    public function testGetUserContext()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for listUsers
-     *
-     * .
-     *
-     */
-    public function testListUsers()
+    public function testListDatabases()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

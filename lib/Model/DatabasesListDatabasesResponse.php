@@ -1,6 +1,6 @@
 <?php
 /**
- * UsersUser
+ * DatabasesListDatabasesResponse
  *
  * PHP version 7.2
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * UsersUser Class Doc Comment
+ * DatabasesListDatabasesResponse Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
@@ -42,7 +42,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class UsersUser implements ModelInterface, ArrayAccess
+class DatabasesListDatabasesResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class UsersUser implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $openAPIModelName = 'users.User';
+    protected static $openAPIModelName = 'databases.ListDatabasesResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,7 @@ class UsersUser implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'int''displayName' => 'string''email' => 'string''firstName' => 'string''lastName' => 'string''locale' => 'string''role' => 'string'
+        'items' => '\Equisoft\SDK\EquisoftConnect\Model\DatabasesDatabase[]'
     ];
 
     /**
@@ -68,7 +68,7 @@ class UsersUser implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'id' => null'displayName' => null'email' => null'firstName' => null'lastName' => null'locale' => null'role' => null
+        'items' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class UsersUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id''displayName' => 'displayName''email' => 'email''firstName' => 'firstName''lastName' => 'lastName''locale' => 'locale''role' => 'role'
+        'items' => 'items'
     ];
 
     /**
@@ -107,7 +107,7 @@ class UsersUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId''displayName' => 'setDisplayName''email' => 'setEmail''firstName' => 'setFirstName''lastName' => 'setLastName''locale' => 'setLocale''role' => 'setRole'
+        'items' => 'setItems'
     ];
 
     /**
@@ -116,7 +116,7 @@ class UsersUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId''displayName' => 'getDisplayName''email' => 'getEmail''firstName' => 'getFirstName''lastName' => 'getLastName''locale' => 'getLocale''role' => 'getRole'
+        'items' => 'getItems'
     ];
 
     /**
@@ -179,13 +179,7 @@ class UsersUser implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['displayName'] = isset($data['displayName']) ? $data['displayName'] : null;
-        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
-        $this->container['firstName'] = isset($data['firstName']) ? $data['firstName'] : null;
-        $this->container['lastName'] = isset($data['lastName']) ? $data['lastName'] : null;
-        $this->container['locale'] = isset($data['locale']) ? $data['locale'] : null;
-        $this->container['role'] = isset($data['role']) ? $data['role'] : null;
+        $this->container['items'] = isset($data['items']) ? $data['items'] : null;
     }
 
     /**
@@ -197,6 +191,9 @@ class UsersUser implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['items'] === null) {
+            $invalidProperties[] = "'items' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -213,169 +210,25 @@ class UsersUser implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets id
+     * Gets items
      *
-     * @return int|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\DatabasesDatabase[]
      */
-    public function getId()
+    public function getItems()
     {
-        return $this->container['id'];
+        return $this->container['items'];
     }
 
     /**
-     * Sets id
+     * Sets items
      *
-     * @param int|null $id The user's unique identifier (ID).
+     * @param \Equisoft\SDK\EquisoftConnect\Model\DatabasesDatabase[] $items items
      *
      * @return $this
      */
-    public function setId($id)
+    public function setItems($items)
     {
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets displayName
-     *
-     * @return string|null
-     */
-    public function getDisplayName()
-    {
-        return $this->container['displayName'];
-    }
-
-    /**
-     * Sets displayName
-     *
-     * @param string|null $displayName The user's full display name.
-     *
-     * @return $this
-     */
-    public function setDisplayName($displayName)
-    {
-        $this->container['displayName'] = $displayName;
-
-        return $this;
-    }
-
-    /**
-     * Gets email
-     *
-     * @return string|null
-     */
-    public function getEmail()
-    {
-        return $this->container['email'];
-    }
-
-    /**
-     * Sets email
-     *
-     * @param string|null $email The user's eMail address.
-     *
-     * @return $this
-     */
-    public function setEmail($email)
-    {
-        $this->container['email'] = $email;
-
-        return $this;
-    }
-
-    /**
-     * Gets firstName
-     *
-     * @return string|null
-     */
-    public function getFirstName()
-    {
-        return $this->container['firstName'];
-    }
-
-    /**
-     * Sets firstName
-     *
-     * @param string|null $firstName The user's first name.
-     *
-     * @return $this
-     */
-    public function setFirstName($firstName)
-    {
-        $this->container['firstName'] = $firstName;
-
-        return $this;
-    }
-
-    /**
-     * Gets lastName
-     *
-     * @return string|null
-     */
-    public function getLastName()
-    {
-        return $this->container['lastName'];
-    }
-
-    /**
-     * Sets lastName
-     *
-     * @param string|null $lastName The user's last name.
-     *
-     * @return $this
-     */
-    public function setLastName($lastName)
-    {
-        $this->container['lastName'] = $lastName;
-
-        return $this;
-    }
-
-    /**
-     * Gets locale
-     *
-     * @return string|null
-     */
-    public function getLocale()
-    {
-        return $this->container['locale'];
-    }
-
-    /**
-     * Sets locale
-     *
-     * @param string|null $locale The user's preferred locale.
-     *
-     * @return $this
-     */
-    public function setLocale($locale)
-    {
-        $this->container['locale'] = $locale;
-
-        return $this;
-    }
-
-    /**
-     * Gets role
-     *
-     * @return string|null
-     */
-    public function getRole()
-    {
-        return $this->container['role'];
-    }
-
-    /**
-     * Sets role
-     *
-     * @param string|null $role The user's role.
-     *
-     * @return $this
-     */
-    public function setRole($role)
-    {
-        $this->container['role'] = $role;
+        $this->container['items'] = $items;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * UsersApiTest
+ * RemoteAccountApiTest
  * PHP version 7.2
  *
  * @category Class
@@ -33,14 +33,14 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**
- * UsersApiTest Class Doc Comment
+ * RemoteAccountApiTest Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class UsersApiTest extends TestCase
+class RemoteAccountApiTest extends TestCase
 {
 
     /**
@@ -72,48 +72,24 @@ class UsersApiTest extends TestCase
     }
 
     /**
-     * Test case for getCurrentUser
+     * Test case for synchronizeCalendars
      *
-     * Get informations about the current user.
+     * Synchronize calendars with remote account.
      *
      */
-    public function testGetCurrentUser()
+    public function testSynchronizeCalendars()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for getUser
+     * Test case for synchronizeTasks
      *
-     * .
-     *
-     */
-    public function testGetUser()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for getUserContext
-     *
-     * Get user context metadata..
+     * Synchronize tasks with remote account.
      *
      */
-    public function testGetUserContext()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for listUsers
-     *
-     * .
-     *
-     */
-    public function testListUsers()
+    public function testSynchronizeTasks()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

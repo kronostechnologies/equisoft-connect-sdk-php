@@ -165,6 +165,7 @@ docs/Model/TasksPatchTaskResponse.md
 docs/Model/TasksTask.md
 docs/Model/TasksTransferToCompletedResponse.md
 docs/Model/TasksVisibilityType.md
+docs/Model/UsersListUsersResponse.md
 docs/Model/UsersUser.md
 git_push.sh
 lib/Api/DSFApi.php
@@ -333,6 +334,7 @@ lib/Model/TasksPatchTaskResponse.php
 lib/Model/TasksTask.php
 lib/Model/TasksTransferToCompletedResponse.php
 lib/Model/TasksVisibilityType.php
+lib/Model/UsersListUsersResponse.php
 lib/Model/UsersUser.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
@@ -498,4 +500,5 @@ test/Model/TasksPatchTaskResponseTest.php
 test/Model/TasksTaskTest.php
 test/Model/TasksTransferToCompletedResponseTest.php
 test/Model/TasksVisibilityTypeTest.php
+test/Model/UsersListUsersResponseTest.php
 test/Model/UsersUserTest.php

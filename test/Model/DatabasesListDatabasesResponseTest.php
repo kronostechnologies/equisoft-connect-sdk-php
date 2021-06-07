@@ -1,6 +1,6 @@
 <?php
 /**
- * UsersUserTest
+ * DatabasesListDatabasesResponseTest
  *
  * PHP version 7.2
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * UsersUserTest Class Doc Comment
+ * DatabasesListDatabasesResponseTest Class Doc Comment
  *
  * @category    Class
- * @description UsersUser
+ * @description DatabasesListDatabasesResponse
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class UsersUserTest extends TestCase
+class DatabasesListDatabasesResponseTest extends TestCase
 {
 
     /**
@@ -71,72 +71,18 @@ class UsersUserTest extends TestCase
     }
 
     /**
-     * Test "UsersUser"
+     * Test "DatabasesListDatabasesResponse"
      */
-    public function testUsersUser()
+    public function testDatabasesListDatabasesResponse()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "items"
      */
-    public function testPropertyId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "displayName"
-     */
-    public function testPropertyDisplayName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "email"
-     */
-    public function testPropertyEmail()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "firstName"
-     */
-    public function testPropertyFirstName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "lastName"
-     */
-    public function testPropertyLastName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "locale"
-     */
-    public function testPropertyLocale()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "role"
-     */
-    public function testPropertyRole()
+    public function testPropertyItems()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

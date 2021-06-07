@@ -10,5 +10,6 @@ Name | Type | Description | Notes
 **firstName** | **string** | The user&#39;s first name. | [optional]
 **lastName** | **string** | The user&#39;s last name. | [optional]
 **locale** | **string** | The user&#39;s preferred locale. | [optional]
+**role** | **string** | The user&#39;s role. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -1,6 +1,6 @@
 <?php
 /**
- * UsersUserTest
+ * DatabasesDatabaseTest
  *
  * PHP version 7.2
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * UsersUserTest Class Doc Comment
+ * DatabasesDatabaseTest Class Doc Comment
  *
  * @category    Class
- * @description UsersUser
+ * @description DatabasesDatabase
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class UsersUserTest extends TestCase
+class DatabasesDatabaseTest extends TestCase
 {
 
     /**
@@ -71,9 +71,9 @@ class UsersUserTest extends TestCase
     }
 
     /**
-     * Test "UsersUser"
+     * Test "DatabasesDatabase"
      */
-    public function testUsersUser()
+    public function testDatabasesDatabase()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -89,6 +89,24 @@ class UsersUserTest extends TestCase
     }
 
     /**
+     * Test attribute "uuid"
+     */
+    public function testPropertyUuid()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "databaseName"
+     */
+    public function testPropertyDatabaseName()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "displayName"
      */
     public function testPropertyDisplayName()
@@ -98,45 +116,27 @@ class UsersUserTest extends TestCase
     }
 
     /**
-     * Test attribute "email"
+     * Test attribute "profileName"
      */
-    public function testPropertyEmail()
+    public function testPropertyProfileName()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "firstName"
+     * Test attribute "state"
      */
-    public function testPropertyFirstName()
+    public function testPropertyState()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "lastName"
+     * Test attribute "organizationUuid"
      */
-    public function testPropertyLastName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "locale"
-     */
-    public function testPropertyLocale()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "role"
-     */
-    public function testPropertyRole()
+    public function testPropertyOrganizationUuid()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

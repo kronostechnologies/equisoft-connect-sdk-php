@@ -136,7 +136,9 @@ Class | Method | HTTP request | Description
 *TasksApi* | [**restoreTaskInternalNote**](docs/Api/TasksApi.md#restoretaskinternalnote) | **POST** /crm/api/v1/tasks/{taskId}/notes/{noteId}/restore | Restore an archived internal note for a task.
 *TasksApi* | [**transferTaskToCompleted**](docs/Api/TasksApi.md#transfertasktocompleted) | **POST** /crm/api/v1/tasks/{taskId}/transferToCompleted | Transfer a task to completed/done.
 *UsersApi* | [**getCurrentUser**](docs/Api/UsersApi.md#getcurrentuser) | **GET** /crm/api/v1/users/me | Get informations about the current user
+*UsersApi* | [**getUser**](docs/Api/UsersApi.md#getuser) | **POST** /crm/api/v1/databases/{uuid}/users/{id} | 
 *UsersApi* | [**getUserContext**](docs/Api/UsersApi.md#getusercontext) | **GET** /crm/api/v1/context | Get user context metadata.
+*UsersApi* | [**listUsers**](docs/Api/UsersApi.md#listusers) | **POST** /crm/api/v1/databases/{uuid}/users | 
 
 ## Models
 
@@ -290,6 +292,7 @@ Class | Method | HTTP request | Description
 - [TasksTask](docs/Model/TasksTask.md)
 - [TasksTransferToCompletedResponse](docs/Model/TasksTransferToCompletedResponse.md)
 - [TasksVisibilityType](docs/Model/TasksVisibilityType.md)
+- [UsersListUsersResponse](docs/Model/UsersListUsersResponse.md)
 - [UsersUser](docs/Model/UsersUser.md)
 
 ## Authorization
