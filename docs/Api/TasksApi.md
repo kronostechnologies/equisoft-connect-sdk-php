@@ -1,26 +1,27 @@
 # Equisoft\SDK\EquisoftConnect\TasksApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**archiveTaskInternalNote**](TasksApi.md#archiveTaskInternalNote) | **POST** /crm/api/v1/tasks/{taskId}/notes/{noteId}/archive | Archive an internal note for a task.
-[**createTask**](TasksApi.md#createTask) | **POST** /crm/api/v1/tasks | Create a task.
-[**createTaskInternalNote**](TasksApi.md#createTaskInternalNote) | **POST** /crm/api/v1/tasks/{taskId}/notes | Add an internal note to a task.
-[**deleteTask**](TasksApi.md#deleteTask) | **DELETE** /crm/api/v1/tasks/{taskId} | Delete a task.
-[**getTask**](TasksApi.md#getTask) | **GET** /crm/api/v1/tasks/{taskId} | Return the detail of a task.
-[**getTaskInternalNoteList**](TasksApi.md#getTaskInternalNoteList) | **GET** /crm/api/v1/tasks/{taskId}/notes | Get the internal notes list for a task.
-[**listTasks**](TasksApi.md#listTasks) | **GET** /crm/api/v1/tasks | List or search tasks.
-[**patchTask**](TasksApi.md#patchTask) | **PATCH** /crm/api/v1/tasks/{taskId} | Partially update a task.
-[**patchTaskInternalNote**](TasksApi.md#patchTaskInternalNote) | **PATCH** /crm/api/v1/tasks/{taskId}/notes/{noteId} | Add an internal note to a task.
-[**restoreTaskInternalNote**](TasksApi.md#restoreTaskInternalNote) | **POST** /crm/api/v1/tasks/{taskId}/notes/{noteId}/restore | Restore an archived internal note for a task.
-[**transferTaskToCompleted**](TasksApi.md#transferTaskToCompleted) | **POST** /crm/api/v1/tasks/{taskId}/transferToCompleted | Transfer a task to completed/done.
+[**archiveTaskInternalNote()**](TasksApi.md#archiveTaskInternalNote) | **POST** /crm/api/v1/tasks/{taskId}/notes/{noteId}/archive | Archive an internal note for a task.
+[**createTask()**](TasksApi.md#createTask) | **POST** /crm/api/v1/tasks | Create a task.
+[**createTaskInternalNote()**](TasksApi.md#createTaskInternalNote) | **POST** /crm/api/v1/tasks/{taskId}/notes | Add an internal note to a task.
+[**deleteTask()**](TasksApi.md#deleteTask) | **DELETE** /crm/api/v1/tasks/{taskId} | Delete a task.
+[**getTask()**](TasksApi.md#getTask) | **GET** /crm/api/v1/tasks/{taskId} | Return the detail of a task.
+[**getTaskInternalNoteList()**](TasksApi.md#getTaskInternalNoteList) | **GET** /crm/api/v1/tasks/{taskId}/notes | Get the internal notes list for a task.
+[**listTasks()**](TasksApi.md#listTasks) | **GET** /crm/api/v1/tasks | List or search tasks.
+[**patchTask()**](TasksApi.md#patchTask) | **PATCH** /crm/api/v1/tasks/{taskId} | Partially update a task.
+[**patchTaskInternalNote()**](TasksApi.md#patchTaskInternalNote) | **PATCH** /crm/api/v1/tasks/{taskId}/notes/{noteId} | Add an internal note to a task.
+[**restoreTaskInternalNote()**](TasksApi.md#restoreTaskInternalNote) | **POST** /crm/api/v1/tasks/{taskId}/notes/{noteId}/restore | Restore an archived internal note for a task.
+[**transferTaskToCompleted()**](TasksApi.md#transferTaskToCompleted) | **POST** /crm/api/v1/tasks/{taskId}/transferToCompleted | Transfer a task to completed/done.
 
 
+## `archiveTaskInternalNote()`
 
-## archiveTaskInternalNote
-
-> object archiveTaskInternalNote($taskId, $noteId, $acceptLanguage)
+```php
+archiveTaskInternalNote($taskId, $noteId, $acceptLanguage): object
+```
 
 Archive an internal note for a task.
 
@@ -51,11 +52,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->archiveTaskInternalNote: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -74,16 +73,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `createTask()`
 
-## createTask
-
-> \Equisoft\SDK\EquisoftConnect\Model\TasksCreateTaskResponse createTask($tasksCreateTaskPayload, $acceptLanguage)
+```php
+createTask($tasksCreateTaskPayload, $acceptLanguage): \Equisoft\SDK\EquisoftConnect\Model\TasksCreateTaskResponse
+```
 
 Create a task.
 
@@ -104,7 +104,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\TasksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$tasksCreateTaskPayload = new \Equisoft\SDK\EquisoftConnect\Model\TasksCreateTaskPayload(); // \Equisoft\SDK\EquisoftConnect\Model\TasksCreateTaskPayload | 
+$tasksCreateTaskPayload = new \Equisoft\SDK\EquisoftConnect\Model\TasksCreateTaskPayload(); // \Equisoft\SDK\EquisoftConnect\Model\TasksCreateTaskPayload
 $acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
 
 try {
@@ -113,11 +113,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->createTask: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -134,17 +132,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `createTaskInternalNote()`
 
-## createTaskInternalNote
-
-> \Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNoteResponse createTaskInternalNote($taskId, $internalNotesCreateNotePayload, $acceptLanguage)
+```php
+createTaskInternalNote($taskId, $internalNotesCreateNotePayload, $acceptLanguage): \Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNoteResponse
+```
 
 Add an internal note to a task.
 
@@ -166,7 +165,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\TasksApi(
     $config
 );
 $taskId = 'taskId_example'; // string | Task unique identifier.
-$internalNotesCreateNotePayload = new \Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNotePayload(); // \Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNotePayload | 
+$internalNotesCreateNotePayload = new \Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNotePayload(); // \Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNotePayload
 $acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
 
 try {
@@ -175,11 +174,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->createTaskInternalNote: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -197,17 +194,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `deleteTask()`
 
-## deleteTask
-
-> object deleteTask($taskId)
+```php
+deleteTask($taskId): object
+```
 
 Delete a task.
 
@@ -228,7 +226,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\TasksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$taskId = 'taskId_example'; // string | 
+$taskId = 'taskId_example'; // string
 
 try {
     $result = $apiInstance->deleteTask($taskId);
@@ -236,11 +234,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->deleteTask: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -257,16 +253,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getTask()`
 
-## getTask
-
-> \Equisoft\SDK\EquisoftConnect\Model\TasksTask getTask($taskId, $acceptLanguage)
+```php
+getTask($taskId, $acceptLanguage): \Equisoft\SDK\EquisoftConnect\Model\TasksTask
+```
 
 Return the detail of a task.
 
@@ -287,7 +284,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\TasksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$taskId = 'taskId_example'; // string | 
+$taskId = 'taskId_example'; // string
 $acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
 
 try {
@@ -296,11 +293,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->getTask: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -318,16 +313,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getTaskInternalNoteList()`
 
-## getTaskInternalNoteList
-
-> \Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteList getTaskInternalNoteList($taskId, $history, $acceptLanguage)
+```php
+getTaskInternalNoteList($taskId, $history, $acceptLanguage): \Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteList
+```
 
 Get the internal notes list for a task.
 
@@ -348,7 +344,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\TasksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$taskId = 'taskId_example'; // string | 
+$taskId = 'taskId_example'; // string
 $history = new \Equisoft\SDK\EquisoftConnect\Model\\Equisoft\SDK\EquisoftConnect\Model\InternalNotesHistoryType(); // \Equisoft\SDK\EquisoftConnect\Model\InternalNotesHistoryType | Query all revisions or not.
 $acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
 
@@ -358,11 +354,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->getTaskInternalNoteList: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -381,16 +375,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `listTasks()`
 
-## listTasks
-
-> \Equisoft\SDK\EquisoftConnect\Model\TasksListTaskResponse listTasks($ownerId, $contactIds, $minDueDate, $maxDueDate, $isCompleted, $dueDateFilter, $orderBy, $pageToken, $maxResults, $acceptLanguage)
+```php
+listTasks($ownerId, $contactIds, $minDueDate, $maxDueDate, $isCompleted, $dueDateFilter, $orderBy, $pageToken, $maxResults, $acceptLanguage): \Equisoft\SDK\EquisoftConnect\Model\TasksListTaskResponse
+```
 
 List or search tasks.
 
@@ -428,11 +423,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->listTasks: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -458,16 +451,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `patchTask()`
 
-## patchTask
-
-> \Equisoft\SDK\EquisoftConnect\Model\TasksPatchTaskResponse patchTask($taskId, $tasksPatchTaskPayload, $acceptLanguage)
+```php
+patchTask($taskId, $tasksPatchTaskPayload, $acceptLanguage): \Equisoft\SDK\EquisoftConnect\Model\TasksPatchTaskResponse
+```
 
 Partially update a task.
 
@@ -498,11 +492,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->patchTask: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -520,17 +512,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `patchTaskInternalNote()`
 
-## patchTaskInternalNote
-
-> \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNoteResponse patchTaskInternalNote($taskId, $noteId, $internalNotesPatchNotePayload, $acceptLanguage)
+```php
+patchTaskInternalNote($taskId, $noteId, $internalNotesPatchNotePayload, $acceptLanguage): \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNoteResponse
+```
 
 Add an internal note to a task.
 
@@ -553,7 +546,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\TasksApi(
 );
 $taskId = 'taskId_example'; // string | Task unique identifier.
 $noteId = 56; // int | Note unique identifier.
-$internalNotesPatchNotePayload = new \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNotePayload(); // \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNotePayload | 
+$internalNotesPatchNotePayload = new \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNotePayload(); // \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNotePayload
 $acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
 
 try {
@@ -562,11 +555,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->patchTaskInternalNote: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -585,17 +576,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `restoreTaskInternalNote()`
 
-## restoreTaskInternalNote
-
-> object restoreTaskInternalNote($taskId, $noteId, $acceptLanguage)
+```php
+restoreTaskInternalNote($taskId, $noteId, $acceptLanguage): object
+```
 
 Restore an archived internal note for a task.
 
@@ -626,11 +618,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->restoreTaskInternalNote: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -649,16 +639,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `transferTaskToCompleted()`
 
-## transferTaskToCompleted
-
-> \Equisoft\SDK\EquisoftConnect\Model\TasksTransferToCompletedResponse transferTaskToCompleted($taskId)
+```php
+transferTaskToCompleted($taskId): \Equisoft\SDK\EquisoftConnect\Model\TasksTransferToCompletedResponse
+```
 
 Transfer a task to completed/done.
 
@@ -687,11 +678,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->transferTaskToCompleted: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -708,9 +697,8 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

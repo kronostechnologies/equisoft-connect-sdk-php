@@ -1,19 +1,20 @@
 # Equisoft\SDK\EquisoftConnect\DSFApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createDsfFinancialCenter**](DSFApi.md#createDsfFinancialCenter) | **POST** /crm/api/v1/dsf/financialCenters | 
-[**deleteDsfFinancialCenter**](DSFApi.md#deleteDsfFinancialCenter) | **DELETE** /crm/api/v1/dsf/financialCenters/{financialCenterId} | 
-[**listDsfFinancialCenters**](DSFApi.md#listDsfFinancialCenters) | **GET** /crm/api/v1/dsf/financialCenters | 
-[**updateDsfFinancialCenter**](DSFApi.md#updateDsfFinancialCenter) | **POST** /crm/api/v1/dsf/financialCenters/{financialCenterId} | 
+[**createDsfFinancialCenter()**](DSFApi.md#createDsfFinancialCenter) | **POST** /crm/api/v1/dsf/financialCenters | 
+[**deleteDsfFinancialCenter()**](DSFApi.md#deleteDsfFinancialCenter) | **DELETE** /crm/api/v1/dsf/financialCenters/{financialCenterId} | 
+[**listDsfFinancialCenters()**](DSFApi.md#listDsfFinancialCenters) | **GET** /crm/api/v1/dsf/financialCenters | 
+[**updateDsfFinancialCenter()**](DSFApi.md#updateDsfFinancialCenter) | **POST** /crm/api/v1/dsf/financialCenters/{financialCenterId} | 
 
 
+## `createDsfFinancialCenter()`
 
-## createDsfFinancialCenter
-
-> \Equisoft\SDK\EquisoftConnect\Model\DsfCreateOrUpdateFinancialCenterResponse createDsfFinancialCenter($dsfFinancialCenterPayload)
+```php
+createDsfFinancialCenter($dsfFinancialCenterPayload): \Equisoft\SDK\EquisoftConnect\Model\DsfCreateOrUpdateFinancialCenterResponse
+```
 
 
 
@@ -34,7 +35,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\DSFApi(
     new GuzzleHttp\Client(),
     $config
 );
-$dsfFinancialCenterPayload = new \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload(); // \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload | 
+$dsfFinancialCenterPayload = new \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload(); // \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload
 
 try {
     $result = $apiInstance->createDsfFinancialCenter($dsfFinancialCenterPayload);
@@ -42,11 +43,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling DSFApi->createDsfFinancialCenter: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -62,17 +61,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `deleteDsfFinancialCenter()`
 
-## deleteDsfFinancialCenter
-
-> deleteDsfFinancialCenter($financialCenterId)
+```php
+deleteDsfFinancialCenter($financialCenterId)
+```
 
 
 
@@ -93,18 +93,16 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\DSFApi(
     new GuzzleHttp\Client(),
     $config
 );
-$financialCenterId = 56; // int | 
+$financialCenterId = 56; // int
 
 try {
     $apiInstance->deleteDsfFinancialCenter($financialCenterId);
 } catch (Exception $e) {
     echo 'Exception when calling DSFApi->deleteDsfFinancialCenter: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -121,16 +119,17 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `listDsfFinancialCenters()`
 
-## listDsfFinancialCenters
-
-> \Equisoft\SDK\EquisoftConnect\Model\DsfListFinancialCenterResponse listDsfFinancialCenters()
+```php
+listDsfFinancialCenters(): \Equisoft\SDK\EquisoftConnect\Model\DsfListFinancialCenterResponse
+```
 
 
 
@@ -158,7 +157,6 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling DSFApi->listDsfFinancialCenters: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
@@ -176,16 +174,17 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `updateDsfFinancialCenter()`
 
-## updateDsfFinancialCenter
-
-> \Equisoft\SDK\EquisoftConnect\Model\DsfCreateOrUpdateFinancialCenterResponse updateDsfFinancialCenter($financialCenterId, $dsfFinancialCenterPayload)
+```php
+updateDsfFinancialCenter($financialCenterId, $dsfFinancialCenterPayload): \Equisoft\SDK\EquisoftConnect\Model\DsfCreateOrUpdateFinancialCenterResponse
+```
 
 
 
@@ -206,8 +205,8 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\DSFApi(
     new GuzzleHttp\Client(),
     $config
 );
-$financialCenterId = 56; // int | 
-$dsfFinancialCenterPayload = new \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload(); // \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload | 
+$financialCenterId = 56; // int
+$dsfFinancialCenterPayload = new \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload(); // \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload
 
 try {
     $result = $apiInstance->updateDsfFinancialCenter($financialCenterId, $dsfFinancialCenterPayload);
@@ -215,11 +214,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling DSFApi->updateDsfFinancialCenter: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -236,10 +233,9 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

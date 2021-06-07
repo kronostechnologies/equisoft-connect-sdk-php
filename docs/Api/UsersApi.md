@@ -1,17 +1,18 @@
 # Equisoft\SDK\EquisoftConnect\UsersApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCurrentUser**](UsersApi.md#getCurrentUser) | **GET** /crm/api/v1/users/me | Get informations about the current user
-[**getUserContext**](UsersApi.md#getUserContext) | **GET** /crm/api/v1/context | Get user context metadata.
+[**getCurrentUser()**](UsersApi.md#getCurrentUser) | **GET** /crm/api/v1/users/me | Get informations about the current user
+[**getUserContext()**](UsersApi.md#getUserContext) | **GET** /crm/api/v1/context | Get user context metadata.
 
 
+## `getCurrentUser()`
 
-## getCurrentUser
-
-> \Equisoft\SDK\EquisoftConnect\Model\UsersUser getCurrentUser($acceptLanguage)
+```php
+getCurrentUser($acceptLanguage): \Equisoft\SDK\EquisoftConnect\Model\UsersUser
+```
 
 Get informations about the current user
 
@@ -40,11 +41,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->getCurrentUser: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -61,16 +60,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getUserContext()`
 
-## getUserContext
-
-> \Equisoft\SDK\EquisoftConnect\Model\ContextUserContext getUserContext()
+```php
+getUserContext(): \Equisoft\SDK\EquisoftConnect\Model\ContextUserContext
+```
 
 Get user context metadata.
 
@@ -98,7 +98,6 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->getUserContext: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
@@ -116,9 +115,8 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

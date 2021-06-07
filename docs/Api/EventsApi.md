@@ -1,29 +1,30 @@
 # Equisoft\SDK\EquisoftConnect\EventsApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**archiveEventInternalNote**](EventsApi.md#archiveEventInternalNote) | **POST** /crm/api/v1/events/{eventId}/notes/{noteId}/archive | Archive an internal note for and event.
-[**createEvent**](EventsApi.md#createEvent) | **POST** /crm/api/v1/events | Create an event.
-[**createEventInternalNote**](EventsApi.md#createEventInternalNote) | **POST** /crm/api/v1/events/{eventId}/notes | Add an internal note to and event.
-[**deleteEvent**](EventsApi.md#deleteEvent) | **DELETE** /crm/api/v1/events/{eventId} | Delete an event.
-[**getCalendar**](EventsApi.md#getCalendar) | **GET** /crm/api/v1/calendars/{calendarId} | Get informations about a calendar or a default calendar.
-[**getEvent**](EventsApi.md#getEvent) | **GET** /crm/api/v1/events/{eventId} | Return the detail of an event.
-[**getEventInstances**](EventsApi.md#getEventInstances) | **GET** /crm/api/v1/events/{eventId}/instances | Get a recurring event instances.
-[**getEventInternalNoteList**](EventsApi.md#getEventInternalNoteList) | **GET** /crm/api/v1/events/{eventId}/notes | Get the internal notes list for an event.
-[**listCalendars**](EventsApi.md#listCalendars) | **GET** /crm/api/v1/calendars | Get the list of available calendars.
-[**listEvents**](EventsApi.md#listEvents) | **GET** /crm/api/v1/events | List or search events.
-[**patchEvent**](EventsApi.md#patchEvent) | **PATCH** /crm/api/v1/events/{eventId} | Partially update an event.
-[**patchEventInternalNote**](EventsApi.md#patchEventInternalNote) | **PATCH** /crm/api/v1/events/{eventId}/notes/{noteId} | Add an internal note to and event.
-[**restoreEventInternalNote**](EventsApi.md#restoreEventInternalNote) | **POST** /crm/api/v1/events/{eventId}/notes/{noteId}/restore | Restore an archived internal note for an event.
-[**transferEventToCompleted**](EventsApi.md#transferEventToCompleted) | **POST** /crm/api/v1/events/{eventId}/transferToCompleted | Transfer an event to the completed/done calendar.
+[**archiveEventInternalNote()**](EventsApi.md#archiveEventInternalNote) | **POST** /crm/api/v1/events/{eventId}/notes/{noteId}/archive | Archive an internal note for and event.
+[**createEvent()**](EventsApi.md#createEvent) | **POST** /crm/api/v1/events | Create an event.
+[**createEventInternalNote()**](EventsApi.md#createEventInternalNote) | **POST** /crm/api/v1/events/{eventId}/notes | Add an internal note to and event.
+[**deleteEvent()**](EventsApi.md#deleteEvent) | **DELETE** /crm/api/v1/events/{eventId} | Delete an event.
+[**getCalendar()**](EventsApi.md#getCalendar) | **GET** /crm/api/v1/calendars/{calendarId} | Get informations about a calendar or a default calendar.
+[**getEvent()**](EventsApi.md#getEvent) | **GET** /crm/api/v1/events/{eventId} | Return the detail of an event.
+[**getEventInstances()**](EventsApi.md#getEventInstances) | **GET** /crm/api/v1/events/{eventId}/instances | Get a recurring event instances.
+[**getEventInternalNoteList()**](EventsApi.md#getEventInternalNoteList) | **GET** /crm/api/v1/events/{eventId}/notes | Get the internal notes list for an event.
+[**listCalendars()**](EventsApi.md#listCalendars) | **GET** /crm/api/v1/calendars | Get the list of available calendars.
+[**listEvents()**](EventsApi.md#listEvents) | **GET** /crm/api/v1/events | List or search events.
+[**patchEvent()**](EventsApi.md#patchEvent) | **PATCH** /crm/api/v1/events/{eventId} | Partially update an event.
+[**patchEventInternalNote()**](EventsApi.md#patchEventInternalNote) | **PATCH** /crm/api/v1/events/{eventId}/notes/{noteId} | Add an internal note to and event.
+[**restoreEventInternalNote()**](EventsApi.md#restoreEventInternalNote) | **POST** /crm/api/v1/events/{eventId}/notes/{noteId}/restore | Restore an archived internal note for an event.
+[**transferEventToCompleted()**](EventsApi.md#transferEventToCompleted) | **POST** /crm/api/v1/events/{eventId}/transferToCompleted | Transfer an event to the completed/done calendar.
 
 
+## `archiveEventInternalNote()`
 
-## archiveEventInternalNote
-
-> object archiveEventInternalNote($eventId, $noteId, $acceptLanguage)
+```php
+archiveEventInternalNote($eventId, $noteId, $acceptLanguage): object
+```
 
 Archive an internal note for and event.
 
@@ -54,11 +55,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->archiveEventInternalNote: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -77,16 +76,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `createEvent()`
 
-## createEvent
-
-> \Equisoft\SDK\EquisoftConnect\Model\EventsCreateEventResponse createEvent($eventsCreateEventPayload, $acceptLanguage)
+```php
+createEvent($eventsCreateEventPayload, $acceptLanguage): \Equisoft\SDK\EquisoftConnect\Model\EventsCreateEventResponse
+```
 
 Create an event.
 
@@ -107,7 +107,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\EventsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$eventsCreateEventPayload = new \Equisoft\SDK\EquisoftConnect\Model\EventsCreateEventPayload(); // \Equisoft\SDK\EquisoftConnect\Model\EventsCreateEventPayload | 
+$eventsCreateEventPayload = new \Equisoft\SDK\EquisoftConnect\Model\EventsCreateEventPayload(); // \Equisoft\SDK\EquisoftConnect\Model\EventsCreateEventPayload
 $acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
 
 try {
@@ -116,11 +116,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->createEvent: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -137,17 +135,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `createEventInternalNote()`
 
-## createEventInternalNote
-
-> \Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNoteResponse createEventInternalNote($eventId, $internalNotesCreateNotePayload, $acceptLanguage)
+```php
+createEventInternalNote($eventId, $internalNotesCreateNotePayload, $acceptLanguage): \Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNoteResponse
+```
 
 Add an internal note to and event.
 
@@ -169,7 +168,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\EventsApi(
     $config
 );
 $eventId = 'eventId_example'; // string | Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101.
-$internalNotesCreateNotePayload = new \Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNotePayload(); // \Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNotePayload | 
+$internalNotesCreateNotePayload = new \Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNotePayload(); // \Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNotePayload
 $acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
 
 try {
@@ -178,11 +177,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->createEventInternalNote: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -200,17 +197,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `deleteEvent()`
 
-## deleteEvent
-
-> object deleteEvent($eventId)
+```php
+deleteEvent($eventId): object
+```
 
 Delete an event.
 
@@ -241,11 +239,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->deleteEvent: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -262,16 +258,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getCalendar()`
 
-## getCalendar
-
-> \Equisoft\SDK\EquisoftConnect\Model\CalendarsCalendar getCalendar($calendarId, $acceptLanguage)
+```php
+getCalendar($calendarId, $acceptLanguage): \Equisoft\SDK\EquisoftConnect\Model\CalendarsCalendar
+```
 
 Get informations about a calendar or a default calendar.
 
@@ -301,11 +298,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->getCalendar: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -323,16 +318,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getEvent()`
 
-## getEvent
-
-> \Equisoft\SDK\EquisoftConnect\Model\EventsEvent getEvent($eventId, $acceptLanguage)
+```php
+getEvent($eventId, $acceptLanguage): \Equisoft\SDK\EquisoftConnect\Model\EventsEvent
+```
 
 Return the detail of an event.
 
@@ -362,11 +358,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->getEvent: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -384,16 +378,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getEventInstances()`
 
-## getEventInstances
-
-> \Equisoft\SDK\EquisoftConnect\Model\EventsGetEventInstancesResponse getEventInstances($eventId, $minTime, $maxTime, $pageToken, $maxResults, $acceptLanguage)
+```php
+getEventInstances($eventId, $minTime, $maxTime, $pageToken, $maxResults, $acceptLanguage): \Equisoft\SDK\EquisoftConnect\Model\EventsGetEventInstancesResponse
+```
 
 Get a recurring event instances.
 
@@ -427,11 +422,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->getEventInstances: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -453,16 +446,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getEventInternalNoteList()`
 
-## getEventInternalNoteList
-
-> \Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteList getEventInternalNoteList($eventId, $history, $acceptLanguage)
+```php
+getEventInternalNoteList($eventId, $history, $acceptLanguage): \Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteList
+```
 
 Get the internal notes list for an event.
 
@@ -493,11 +487,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->getEventInternalNoteList: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -516,16 +508,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `listCalendars()`
 
-## listCalendars
-
-> \Equisoft\SDK\EquisoftConnect\Model\CalendarsListCalendarResponse listCalendars($acceptLanguage)
+```php
+listCalendars($acceptLanguage): \Equisoft\SDK\EquisoftConnect\Model\CalendarsListCalendarResponse
+```
 
 Get the list of available calendars.
 
@@ -554,11 +547,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->listCalendars: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -575,16 +566,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `listEvents()`
 
-## listEvents
-
-> \Equisoft\SDK\EquisoftConnect\Model\EventsListEventResponse listEvents($calendarId, $ownerId, $contactIds, $minTime, $maxTime, $singleEvents, $isCompleted, $orderBy, $pageToken, $maxResults, $acceptLanguage)
+```php
+listEvents($calendarId, $ownerId, $contactIds, $minTime, $maxTime, $singleEvents, $isCompleted, $orderBy, $pageToken, $maxResults, $acceptLanguage): \Equisoft\SDK\EquisoftConnect\Model\EventsListEventResponse
+```
 
 List or search events.
 
@@ -623,11 +615,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->listEvents: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -654,16 +644,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `patchEvent()`
 
-## patchEvent
-
-> \Equisoft\SDK\EquisoftConnect\Model\EventsPatchEventResponse patchEvent($eventId, $eventsPatchEventPayload, $acceptLanguage)
+```php
+patchEvent($eventId, $eventsPatchEventPayload, $acceptLanguage): \Equisoft\SDK\EquisoftConnect\Model\EventsPatchEventResponse
+```
 
 Partially update an event.
 
@@ -696,11 +687,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->patchEvent: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -718,17 +707,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `patchEventInternalNote()`
 
-## patchEventInternalNote
-
-> \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNoteResponse patchEventInternalNote($eventId, $noteId, $internalNotesPatchNotePayload, $acceptLanguage)
+```php
+patchEventInternalNote($eventId, $noteId, $internalNotesPatchNotePayload, $acceptLanguage): \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNoteResponse
+```
 
 Add an internal note to and event.
 
@@ -751,7 +741,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\EventsApi(
 );
 $eventId = 'eventId_example'; // string | Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101.
 $noteId = 56; // int | Note unique identifier.
-$internalNotesPatchNotePayload = new \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNotePayload(); // \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNotePayload | 
+$internalNotesPatchNotePayload = new \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNotePayload(); // \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNotePayload
 $acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
 
 try {
@@ -760,11 +750,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->patchEventInternalNote: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -783,17 +771,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `restoreEventInternalNote()`
 
-## restoreEventInternalNote
-
-> object restoreEventInternalNote($eventId, $noteId, $acceptLanguage)
+```php
+restoreEventInternalNote($eventId, $noteId, $acceptLanguage): object
+```
 
 Restore an archived internal note for an event.
 
@@ -824,11 +813,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->restoreEventInternalNote: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -847,16 +834,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `transferEventToCompleted()`
 
-## transferEventToCompleted
-
-> \Equisoft\SDK\EquisoftConnect\Model\EventsTransferToCompletedResponse transferEventToCompleted($eventId)
+```php
+transferEventToCompleted($eventId): \Equisoft\SDK\EquisoftConnect\Model\EventsTransferToCompletedResponse
+```
 
 Transfer an event to the completed/done calendar.
 
@@ -885,11 +873,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->transferEventToCompleted: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -906,9 +892,8 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

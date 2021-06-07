@@ -33,6 +33,6 @@
         "psr-4": { "Equisoft\\SDK\\EquisoftConnect\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "Equisoft\\SDK\\EquisoftConnect\\" : "test/" }
+        "psr-4": { "Equisoft\\SDK\\EquisoftConnect\\Test\\" : "test/" }
     }
 }

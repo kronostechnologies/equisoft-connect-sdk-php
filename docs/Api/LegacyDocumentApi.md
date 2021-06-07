@@ -1,23 +1,24 @@
 # Equisoft\SDK\EquisoftConnect\LegacyDocumentApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addDocument**](LegacyDocumentApi.md#addDocument) | **POST** /apps/api/kronos.document.add | Create a new document.
-[**deleteDocument**](LegacyDocumentApi.md#deleteDocument) | **POST** /apps/api/kronos.document.delete | Delete a document and it&#39;s related files.
-[**deleteDocumentFile**](LegacyDocumentApi.md#deleteDocumentFile) | **POST** /apps/api/kronos.document.deleteFile | Delete one file from a document
-[**downloadDocumentFile**](LegacyDocumentApi.md#downloadDocumentFile) | **GET** /apps/api/kronos.document.downloadFile | Download a file. File data is encoded in base64.
-[**getDocument**](LegacyDocumentApi.md#getDocument) | **GET** /apps/api/kronos.document.get | Get all data for a document record.
-[**getDocumentList**](LegacyDocumentApi.md#getDocumentList) | **GET** /apps/api/kronos.document.getList | Get a list of all documents. This will return basic information about the document.
-[**updateDocument**](LegacyDocumentApi.md#updateDocument) | **POST** /apps/api/kronos.document.update | Update a document.
-[**uploadDocumentFile**](LegacyDocumentApi.md#uploadDocumentFile) | **POST** /apps/api/kronos.document.uploadFile | Upload a new file in a document
+[**addDocument()**](LegacyDocumentApi.md#addDocument) | **POST** /apps/api/kronos.document.add | Create a new document.
+[**deleteDocument()**](LegacyDocumentApi.md#deleteDocument) | **POST** /apps/api/kronos.document.delete | Delete a document and it&#39;s related files.
+[**deleteDocumentFile()**](LegacyDocumentApi.md#deleteDocumentFile) | **POST** /apps/api/kronos.document.deleteFile | Delete one file from a document
+[**downloadDocumentFile()**](LegacyDocumentApi.md#downloadDocumentFile) | **GET** /apps/api/kronos.document.downloadFile | Download a file. File data is encoded in base64.
+[**getDocument()**](LegacyDocumentApi.md#getDocument) | **GET** /apps/api/kronos.document.get | Get all data for a document record.
+[**getDocumentList()**](LegacyDocumentApi.md#getDocumentList) | **GET** /apps/api/kronos.document.getList | Get a list of all documents. This will return basic information about the document.
+[**updateDocument()**](LegacyDocumentApi.md#updateDocument) | **POST** /apps/api/kronos.document.update | Update a document.
+[**uploadDocumentFile()**](LegacyDocumentApi.md#uploadDocumentFile) | **POST** /apps/api/kronos.document.uploadFile | Upload a new file in a document
 
 
+## `addDocument()`
 
-## addDocument
-
-> \Equisoft\SDK\EquisoftConnect\Model\LegacyAddUpdateResponse addDocument($legacyDocumentDocumentPayloadRequest)
+```php
+addDocument($legacyDocumentDocumentPayloadRequest): \Equisoft\SDK\EquisoftConnect\Model\LegacyAddUpdateResponse
+```
 
 Create a new document.
 
@@ -38,7 +39,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\LegacyDocumentApi(
     new GuzzleHttp\Client(),
     $config
 );
-$legacyDocumentDocumentPayloadRequest = new \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentPayloadRequest(); // \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentPayloadRequest | 
+$legacyDocumentDocumentPayloadRequest = new \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentPayloadRequest(); // \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentPayloadRequest
 
 try {
     $result = $apiInstance->addDocument($legacyDocumentDocumentPayloadRequest);
@@ -46,11 +47,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LegacyDocumentApi->addDocument: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -66,17 +65,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `deleteDocument()`
 
-## deleteDocument
-
-> \Equisoft\SDK\EquisoftConnect\Model\LegacyResponse deleteDocument($id)
+```php
+deleteDocument($id): \Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
+```
 
 Delete a document and it's related files.
 
@@ -105,11 +105,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LegacyDocumentApi->deleteDocument: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -126,16 +124,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `deleteDocumentFile()`
 
-## deleteDocumentFile
-
-> \Equisoft\SDK\EquisoftConnect\Model\LegacyResponse deleteDocumentFile($id)
+```php
+deleteDocumentFile($id): \Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
+```
 
 Delete one file from a document
 
@@ -164,11 +163,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LegacyDocumentApi->deleteDocumentFile: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -185,16 +182,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `downloadDocumentFile()`
 
-## downloadDocumentFile
-
-> \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDownloadFileResponse downloadDocumentFile($id)
+```php
+downloadDocumentFile($id): \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDownloadFileResponse
+```
 
 Download a file. File data is encoded in base64.
 
@@ -223,11 +221,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LegacyDocumentApi->downloadDocumentFile: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -244,16 +240,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getDocument()`
 
-## getDocument
-
-> \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentGetResponse getDocument($id)
+```php
+getDocument($id): \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentGetResponse
+```
 
 Get all data for a document record.
 
@@ -282,11 +279,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LegacyDocumentApi->getDocument: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -303,16 +298,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getDocumentList()`
 
-## getDocumentList
-
-> \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentGetListResponse getDocumentList()
+```php
+getDocumentList(): \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentGetListResponse
+```
 
 Get a list of all documents. This will return basic information about the document.
 
@@ -342,7 +338,6 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LegacyDocumentApi->getDocumentList: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
@@ -360,16 +355,17 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `updateDocument()`
 
-## updateDocument
-
-> \Equisoft\SDK\EquisoftConnect\Model\LegacyAddUpdateResponse updateDocument($legacyDocumentDocumentPayloadRequest)
+```php
+updateDocument($legacyDocumentDocumentPayloadRequest): \Equisoft\SDK\EquisoftConnect\Model\LegacyAddUpdateResponse
+```
 
 Update a document.
 
@@ -390,7 +386,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\LegacyDocumentApi(
     new GuzzleHttp\Client(),
     $config
 );
-$legacyDocumentDocumentPayloadRequest = new \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentPayloadRequest(); // \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentPayloadRequest | 
+$legacyDocumentDocumentPayloadRequest = new \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentPayloadRequest(); // \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentPayloadRequest
 
 try {
     $result = $apiInstance->updateDocument($legacyDocumentDocumentPayloadRequest);
@@ -398,11 +394,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LegacyDocumentApi->updateDocument: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -418,17 +412,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `uploadDocumentFile()`
 
-## uploadDocumentFile
-
-> \Equisoft\SDK\EquisoftConnect\Model\LegacyAddUpdateResponse uploadDocumentFile($id, $legacyDocumentUploadDocumentFileRequest)
+```php
+uploadDocumentFile($id, $legacyDocumentUploadDocumentFileRequest): \Equisoft\SDK\EquisoftConnect\Model\LegacyAddUpdateResponse
+```
 
 Upload a new file in a document
 
@@ -450,7 +445,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\LegacyDocumentApi(
     $config
 );
 $id = 'id_example'; // string | Document File Id
-$legacyDocumentUploadDocumentFileRequest = new \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentUploadDocumentFileRequest(); // \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentUploadDocumentFileRequest | 
+$legacyDocumentUploadDocumentFileRequest = new \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentUploadDocumentFileRequest(); // \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentUploadDocumentFileRequest
 
 try {
     $result = $apiInstance->uploadDocumentFile($id, $legacyDocumentUploadDocumentFileRequest);
@@ -458,11 +453,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LegacyDocumentApi->uploadDocumentFile: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -479,10 +472,9 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

@@ -1,16 +1,17 @@
 # Equisoft\SDK\EquisoftConnect\MxApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**validateRecipients**](MxApi.md#validateRecipients) | **POST** /crm/api/app/mail/validateRecipients | Validate recipients
+[**validateRecipients()**](MxApi.md#validateRecipients) | **POST** /crm/api/app/mail/validateRecipients | Validate recipients
 
 
+## `validateRecipients()`
 
-## validateRecipients
-
-> \Equisoft\SDK\EquisoftConnect\Model\MxValidateRecipientsResponse validateRecipients($mxRecipientsPayload)
+```php
+validateRecipients($mxRecipientsPayload): \Equisoft\SDK\EquisoftConnect\Model\MxValidateRecipientsResponse
+```
 
 Validate recipients
 
@@ -31,7 +32,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\MxApi(
     new GuzzleHttp\Client(),
     $config
 );
-$mxRecipientsPayload = new \Equisoft\SDK\EquisoftConnect\Model\MxRecipientsPayload(); // \Equisoft\SDK\EquisoftConnect\Model\MxRecipientsPayload | 
+$mxRecipientsPayload = new \Equisoft\SDK\EquisoftConnect\Model\MxRecipientsPayload(); // \Equisoft\SDK\EquisoftConnect\Model\MxRecipientsPayload
 
 try {
     $result = $apiInstance->validateRecipients($mxRecipientsPayload);
@@ -39,11 +40,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling MxApi->validateRecipients: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -59,10 +58,9 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

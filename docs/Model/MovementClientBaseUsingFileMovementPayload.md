@@ -4,15 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **string** |  | [default to 'CLIENTBASE_USING_FILE']
-**sourceDatabase** | **string** |  | 
-**sourceUser** | **string** |  | 
-**destinationDatabase** | **string** |  | 
-**destinationUser** | **string** |  | 
-**capsilFile** | **string** |  | [optional] 
-**univerisFile** | **string** |  | [optional] 
-**dataphileFile** | **string** |  | [optional] 
+**type** | **string** |  | [default to TYPE_CLIENTBASE_USING_FILE]
+**sourceDatabase** | **string** |  |
+**sourceUser** | **string** |  |
+**destinationDatabase** | **string** |  |
+**destinationUser** | **string** |  |
+**capsilFile** | **string** |  | [optional]
+**univerisFile** | **string** |  | [optional]
+**dataphileFile** | **string** |  | [optional]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

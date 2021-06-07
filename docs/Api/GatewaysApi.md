@@ -1,25 +1,26 @@
 # Equisoft\SDK\EquisoftConnect\GatewaysApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createEquisoftAnalyzeAccess**](GatewaysApi.md#createEquisoftAnalyzeAccess) | **POST** /crm/api/v1/gateways/equisoftAnalyze/accesses | 
-[**deleteEquisoftAnalyzeAccess**](GatewaysApi.md#deleteEquisoftAnalyzeAccess) | **DELETE** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} | 
-[**gatewayAdminLogin**](GatewaysApi.md#gatewayAdminLogin) | **POST** /crm/api/v1/gateways/credentials-validation/{gatewayName}/admin-credentials/login | 
-[**listAssetBookCredentials**](GatewaysApi.md#listAssetBookCredentials) | **GET** /crm/api/v1/gateways/assetbook/credentials | 
-[**listCredentials**](GatewaysApi.md#listCredentials) | **GET** /crm/api/v1/gateways/credentials-validation/{gatewayId}/credentials/{status} | 
-[**listEquisoftAnalyzeAccesses**](GatewaysApi.md#listEquisoftAnalyzeAccesses) | **GET** /crm/api/v1/gateways/equisoftAnalyze/accesses | 
-[**listGatewayConfigurations**](GatewaysApi.md#listGatewayConfigurations) | **GET** /crm/api/v1/gateways/generic/{gatewayName}/configuration | 
-[**listGenericCredentials**](GatewaysApi.md#listGenericCredentials) | **GET** /crm/api/v1/gateways/generic/{gatewayName}/credentials | 
-[**patchEquisoftAnalyzeAccess**](GatewaysApi.md#patchEquisoftAnalyzeAccess) | **PATCH** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} | 
-[**updateCredentials**](GatewaysApi.md#updateCredentials) | **PUT** /crm/api/v1/gateways/credentials-validation/{gatewayId}/credentials/{status} | 
+[**createEquisoftAnalyzeAccess()**](GatewaysApi.md#createEquisoftAnalyzeAccess) | **POST** /crm/api/v1/gateways/equisoftAnalyze/accesses | 
+[**deleteEquisoftAnalyzeAccess()**](GatewaysApi.md#deleteEquisoftAnalyzeAccess) | **DELETE** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} | 
+[**gatewayAdminLogin()**](GatewaysApi.md#gatewayAdminLogin) | **POST** /crm/api/v1/gateways/credentials-validation/{gatewayName}/admin-credentials/login | 
+[**listAssetBookCredentials()**](GatewaysApi.md#listAssetBookCredentials) | **GET** /crm/api/v1/gateways/assetbook/credentials | 
+[**listCredentials()**](GatewaysApi.md#listCredentials) | **GET** /crm/api/v1/gateways/credentials-validation/{gatewayId}/credentials/{status} | 
+[**listEquisoftAnalyzeAccesses()**](GatewaysApi.md#listEquisoftAnalyzeAccesses) | **GET** /crm/api/v1/gateways/equisoftAnalyze/accesses | 
+[**listGatewayConfigurations()**](GatewaysApi.md#listGatewayConfigurations) | **GET** /crm/api/v1/gateways/generic/{gatewayName}/configuration | 
+[**listGenericCredentials()**](GatewaysApi.md#listGenericCredentials) | **GET** /crm/api/v1/gateways/generic/{gatewayName}/credentials | 
+[**patchEquisoftAnalyzeAccess()**](GatewaysApi.md#patchEquisoftAnalyzeAccess) | **PATCH** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} | 
+[**updateCredentials()**](GatewaysApi.md#updateCredentials) | **PUT** /crm/api/v1/gateways/credentials-validation/{gatewayId}/credentials/{status} | 
 
 
+## `createEquisoftAnalyzeAccess()`
 
-## createEquisoftAnalyzeAccess
-
-> \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateAccessResponse createEquisoftAnalyzeAccess($gatewaysAccessesCreateEquisoftAnalyzeAccessPayload)
+```php
+createEquisoftAnalyzeAccess($gatewaysAccessesCreateEquisoftAnalyzeAccessPayload): \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateAccessResponse
+```
 
 
 
@@ -42,7 +43,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\GatewaysApi(
     new GuzzleHttp\Client(),
     $config
 );
-$gatewaysAccessesCreateEquisoftAnalyzeAccessPayload = new \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateEquisoftAnalyzeAccessPayload(); // \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateEquisoftAnalyzeAccessPayload | 
+$gatewaysAccessesCreateEquisoftAnalyzeAccessPayload = new \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateEquisoftAnalyzeAccessPayload(); // \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateEquisoftAnalyzeAccessPayload
 
 try {
     $result = $apiInstance->createEquisoftAnalyzeAccess($gatewaysAccessesCreateEquisoftAnalyzeAccessPayload);
@@ -50,11 +51,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling GatewaysApi->createEquisoftAnalyzeAccess: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -70,17 +69,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `deleteEquisoftAnalyzeAccess()`
 
-## deleteEquisoftAnalyzeAccess
-
-> object deleteEquisoftAnalyzeAccess($accessId)
+```php
+deleteEquisoftAnalyzeAccess($accessId): object
+```
 
 
 
@@ -103,7 +103,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\GatewaysApi(
     new GuzzleHttp\Client(),
     $config
 );
-$accessId = 56; // int | 
+$accessId = 56; // int
 
 try {
     $result = $apiInstance->deleteEquisoftAnalyzeAccess($accessId);
@@ -111,11 +111,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling GatewaysApi->deleteEquisoftAnalyzeAccess: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -132,16 +130,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `gatewayAdminLogin()`
 
-## gatewayAdminLogin
-
-> \Equisoft\SDK\EquisoftConnect\Model\AdminCredentialResponse gatewayAdminLogin($gatewayName, $authorization, $adminCredentialPayload)
+```php
+gatewayAdminLogin($gatewayName, $authorization, $adminCredentialPayload): \Equisoft\SDK\EquisoftConnect\Model\AdminCredentialResponse
+```
 
 
 
@@ -162,9 +161,9 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\GatewaysApi(
     new GuzzleHttp\Client(),
     $config
 );
-$gatewayName = 'gatewayName_example'; // string | 
+$gatewayName = 'gatewayName_example'; // string
 $authorization = 'authorization_example'; // string | Authorization header using the Bearer scheme
-$adminCredentialPayload = new \Equisoft\SDK\EquisoftConnect\Model\AdminCredentialPayload(); // \Equisoft\SDK\EquisoftConnect\Model\AdminCredentialPayload | 
+$adminCredentialPayload = new \Equisoft\SDK\EquisoftConnect\Model\AdminCredentialPayload(); // \Equisoft\SDK\EquisoftConnect\Model\AdminCredentialPayload
 
 try {
     $result = $apiInstance->gatewayAdminLogin($gatewayName, $authorization, $adminCredentialPayload);
@@ -172,11 +171,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling GatewaysApi->gatewayAdminLogin: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -194,17 +191,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `listAssetBookCredentials()`
 
-## listAssetBookCredentials
-
-> \Equisoft\SDK\EquisoftConnect\Model\GatewaysListCredentialsResponse listAssetBookCredentials()
+```php
+listAssetBookCredentials(): \Equisoft\SDK\EquisoftConnect\Model\GatewaysListCredentialsResponse
+```
 
 
 
@@ -232,7 +230,6 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling GatewaysApi->listAssetBookCredentials: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
@@ -250,16 +247,17 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `listCredentials()`
 
-## listCredentials
-
-> \Equisoft\SDK\EquisoftConnect\Model\CredentialsResponse listCredentials($gatewayId, $status, $authorization)
+```php
+listCredentials($gatewayId, $status, $authorization): \Equisoft\SDK\EquisoftConnect\Model\CredentialsResponse
+```
 
 
 
@@ -280,8 +278,8 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\GatewaysApi(
     new GuzzleHttp\Client(),
     $config
 );
-$gatewayId = 'gatewayId_example'; // string | 
-$status = 'status_example'; // string | 
+$gatewayId = 'gatewayId_example'; // string
+$status = 'status_example'; // string
 $authorization = 'authorization_example'; // string | Authorization header using the Bearer scheme
 
 try {
@@ -290,11 +288,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling GatewaysApi->listCredentials: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -313,16 +309,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `listEquisoftAnalyzeAccesses()`
 
-## listEquisoftAnalyzeAccesses
-
-> \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListGatewayAccessesResponse listEquisoftAnalyzeAccesses($userUuid)
+```php
+listEquisoftAnalyzeAccesses($userUuid): \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListGatewayAccessesResponse
+```
 
 
 
@@ -345,7 +342,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\GatewaysApi(
     new GuzzleHttp\Client(),
     $config
 );
-$userUuid = d2507338-78f2-4299-8bec-e82b1d242d4c; // string | 
+$userUuid = d2507338-78f2-4299-8bec-e82b1d242d4c; // string
 
 try {
     $result = $apiInstance->listEquisoftAnalyzeAccesses($userUuid);
@@ -353,11 +350,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling GatewaysApi->listEquisoftAnalyzeAccesses: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -374,16 +369,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `listGatewayConfigurations()`
 
-## listGatewayConfigurations
-
-> listGatewayConfigurations($gatewayName)
+```php
+listGatewayConfigurations($gatewayName)
+```
 
 
 
@@ -404,18 +400,16 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\GatewaysApi(
     new GuzzleHttp\Client(),
     $config
 );
-$gatewayName = 'gatewayName_example'; // string | 
+$gatewayName = 'gatewayName_example'; // string
 
 try {
     $apiInstance->listGatewayConfigurations($gatewayName);
 } catch (Exception $e) {
     echo 'Exception when calling GatewaysApi->listGatewayConfigurations: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -432,16 +426,17 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `listGenericCredentials()`
 
-## listGenericCredentials
-
-> \Equisoft\SDK\EquisoftConnect\Model\GatewaysListCredentialsResponse listGenericCredentials($gatewayName, $includeSsn)
+```php
+listGenericCredentials($gatewayName, $includeSsn): \Equisoft\SDK\EquisoftConnect\Model\GatewaysListCredentialsResponse
+```
 
 
 
@@ -462,7 +457,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\GatewaysApi(
     new GuzzleHttp\Client(),
     $config
 );
-$gatewayName = 'gatewayName_example'; // string | 
+$gatewayName = 'gatewayName_example'; // string
 $includeSsn = True; // bool | Include the list of SSN for each credentials. Defaults to false
 
 try {
@@ -471,11 +466,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling GatewaysApi->listGenericCredentials: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -493,16 +486,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `patchEquisoftAnalyzeAccess()`
 
-## patchEquisoftAnalyzeAccess
-
-> object patchEquisoftAnalyzeAccess($accessId, $gatewaysAccessesPatchEquisoftAnalyzeAccessPayload)
+```php
+patchEquisoftAnalyzeAccess($accessId, $gatewaysAccessesPatchEquisoftAnalyzeAccessPayload): object
+```
 
 
 
@@ -525,8 +519,8 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\GatewaysApi(
     new GuzzleHttp\Client(),
     $config
 );
-$accessId = 56; // int | 
-$gatewaysAccessesPatchEquisoftAnalyzeAccessPayload = new \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesPatchEquisoftAnalyzeAccessPayload(); // \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesPatchEquisoftAnalyzeAccessPayload | 
+$accessId = 56; // int
+$gatewaysAccessesPatchEquisoftAnalyzeAccessPayload = new \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesPatchEquisoftAnalyzeAccessPayload(); // \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesPatchEquisoftAnalyzeAccessPayload
 
 try {
     $result = $apiInstance->patchEquisoftAnalyzeAccess($accessId, $gatewaysAccessesPatchEquisoftAnalyzeAccessPayload);
@@ -534,11 +528,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling GatewaysApi->patchEquisoftAnalyzeAccess: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -555,17 +547,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `updateCredentials()`
 
-## updateCredentials
-
-> \Equisoft\SDK\EquisoftConnect\Model\CredentialsResponse updateCredentials($gatewayId, $status, $authorization, $credentialIds)
+```php
+updateCredentials($gatewayId, $status, $authorization, $credentialIds): \Equisoft\SDK\EquisoftConnect\Model\CredentialsResponse
+```
 
 
 
@@ -586,8 +579,8 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\GatewaysApi(
     new GuzzleHttp\Client(),
     $config
 );
-$gatewayId = 'gatewayId_example'; // string | 
-$status = 'status_example'; // string | 
+$gatewayId = 'gatewayId_example'; // string
+$status = 'status_example'; // string
 $authorization = 'authorization_example'; // string | Authorization header using the Bearer scheme
 $credentialIds = array(56); // int[] | Many ids can be passed to this argument separated by coma. Ex: '?credentialIds=1,2,3'.
 
@@ -597,11 +590,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling GatewaysApi->updateCredentials: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -621,9 +612,8 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

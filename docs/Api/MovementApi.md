@@ -1,20 +1,21 @@
 # Equisoft\SDK\EquisoftConnect\MovementApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addMovement**](MovementApi.md#addMovement) | **POST** /crm/api/v1/movements | 
-[**cancelMovement**](MovementApi.md#cancelMovement) | **POST** /crm/api/v1/movements/{movementId}/cancel | 
-[**deleteMovement**](MovementApi.md#deleteMovement) | **DELETE** /crm/api/v1/movements/{movementId} | 
-[**getMovementStatus**](MovementApi.md#getMovementStatus) | **GET** /crm/api/v1/movements/{movementId}/status | 
-[**listMovements**](MovementApi.md#listMovements) | **GET** /crm/api/v1/movements | 
+[**addMovement()**](MovementApi.md#addMovement) | **POST** /crm/api/v1/movements | 
+[**cancelMovement()**](MovementApi.md#cancelMovement) | **POST** /crm/api/v1/movements/{movementId}/cancel | 
+[**deleteMovement()**](MovementApi.md#deleteMovement) | **DELETE** /crm/api/v1/movements/{movementId} | 
+[**getMovementStatus()**](MovementApi.md#getMovementStatus) | **GET** /crm/api/v1/movements/{movementId}/status | 
+[**listMovements()**](MovementApi.md#listMovements) | **GET** /crm/api/v1/movements | 
 
 
+## `addMovement()`
 
-## addMovement
-
-> \Equisoft\SDK\EquisoftConnect\Model\MovementAddMovementResponse addMovement($movementMovementPayload)
+```php
+addMovement($movementMovementPayload): \Equisoft\SDK\EquisoftConnect\Model\MovementAddMovementResponse
+```
 
 
 
@@ -35,7 +36,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\MovementApi(
     new GuzzleHttp\Client(),
     $config
 );
-$movementMovementPayload = new \Equisoft\SDK\EquisoftConnect\Model\MovementMovementPayload(); // \Equisoft\SDK\EquisoftConnect\Model\MovementMovementPayload | 
+$movementMovementPayload = new \Equisoft\SDK\EquisoftConnect\Model\MovementMovementPayload(); // \Equisoft\SDK\EquisoftConnect\Model\MovementMovementPayload
 
 try {
     $result = $apiInstance->addMovement($movementMovementPayload);
@@ -43,11 +44,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling MovementApi->addMovement: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -63,17 +62,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `cancelMovement()`
 
-## cancelMovement
-
-> object cancelMovement($movementId)
+```php
+cancelMovement($movementId): object
+```
 
 
 
@@ -94,7 +94,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\MovementApi(
     new GuzzleHttp\Client(),
     $config
 );
-$movementId = 56; // int | 
+$movementId = 56; // int
 
 try {
     $result = $apiInstance->cancelMovement($movementId);
@@ -102,11 +102,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling MovementApi->cancelMovement: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -123,16 +121,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `deleteMovement()`
 
-## deleteMovement
-
-> object deleteMovement($movementId)
+```php
+deleteMovement($movementId): object
+```
 
 
 
@@ -153,7 +152,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\MovementApi(
     new GuzzleHttp\Client(),
     $config
 );
-$movementId = 56; // int | 
+$movementId = 56; // int
 
 try {
     $result = $apiInstance->deleteMovement($movementId);
@@ -161,11 +160,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling MovementApi->deleteMovement: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -182,16 +179,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getMovementStatus()`
 
-## getMovementStatus
-
-> \Equisoft\SDK\EquisoftConnect\Model\MovementGetStatusResponse getMovementStatus($movementId)
+```php
+getMovementStatus($movementId): \Equisoft\SDK\EquisoftConnect\Model\MovementGetStatusResponse
+```
 
 
 
@@ -212,7 +210,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\MovementApi(
     new GuzzleHttp\Client(),
     $config
 );
-$movementId = 56; // int | 
+$movementId = 56; // int
 
 try {
     $result = $apiInstance->getMovementStatus($movementId);
@@ -220,11 +218,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling MovementApi->getMovementStatus: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -241,16 +237,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `listMovements()`
 
-## listMovements
-
-> \Equisoft\SDK\EquisoftConnect\Model\MovementListMovementResponse listMovements()
+```php
+listMovements(): \Equisoft\SDK\EquisoftConnect\Model\MovementListMovementResponse
+```
 
 
 
@@ -278,7 +275,6 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling MovementApi->listMovements: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
@@ -296,9 +292,8 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

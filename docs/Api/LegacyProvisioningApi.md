@@ -1,17 +1,18 @@
 # Equisoft\SDK\EquisoftConnect\LegacyProvisioningApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getOrganization**](LegacyProvisioningApi.md#getOrganization) | **GET** /apps/provisioning/kronos.provisioning.getOrganization | Get all informations about an organization.
-[**getOrganizationList**](LegacyProvisioningApi.md#getOrganizationList) | **GET** /apps/provisioning/kronos.provisioning.getOrganizationList | List all organizations
+[**getOrganization()**](LegacyProvisioningApi.md#getOrganization) | **GET** /apps/provisioning/kronos.provisioning.getOrganization | Get all informations about an organization.
+[**getOrganizationList()**](LegacyProvisioningApi.md#getOrganizationList) | **GET** /apps/provisioning/kronos.provisioning.getOrganizationList | List all organizations
 
 
+## `getOrganization()`
 
-## getOrganization
-
-> \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetOrganizationResponse getOrganization($orgId)
+```php
+getOrganization($orgId): \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetOrganizationResponse
+```
 
 Get all informations about an organization.
 
@@ -40,11 +41,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LegacyProvisioningApi->getOrganization: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -61,16 +60,17 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getOrganizationList()`
 
-## getOrganizationList
-
-> \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetOrganizationListResponse getOrganizationList()
+```php
+getOrganizationList(): \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetOrganizationListResponse
+```
 
 List all organizations
 
@@ -98,7 +98,6 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling LegacyProvisioningApi->getOrganizationList: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
@@ -116,9 +115,8 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

@@ -1,17 +1,18 @@
 # Equisoft\SDK\EquisoftConnect\IntegrationsApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**downloadLaserAppEnterpriseContactData**](IntegrationsApi.md#downloadLaserAppEnterpriseContactData) | **GET** /crm/api/app/integrations/laserapp/enterprise/{contactId} | Download contact data for LaserApp Enterprise.
-[**redirectContactToLaserAppAnywhere**](IntegrationsApi.md#redirectContactToLaserAppAnywhere) | **GET** /crm/api/app/integrations/laserapp/anywhere/{contactId} | Redirect contact to LaserApp Anywhere.
+[**downloadLaserAppEnterpriseContactData()**](IntegrationsApi.md#downloadLaserAppEnterpriseContactData) | **GET** /crm/api/app/integrations/laserapp/enterprise/{contactId} | Download contact data for LaserApp Enterprise.
+[**redirectContactToLaserAppAnywhere()**](IntegrationsApi.md#redirectContactToLaserAppAnywhere) | **GET** /crm/api/app/integrations/laserapp/anywhere/{contactId} | Redirect contact to LaserApp Anywhere.
 
 
+## `downloadLaserAppEnterpriseContactData()`
 
-## downloadLaserAppEnterpriseContactData
-
-> downloadLaserAppEnterpriseContactData($contactId)
+```php
+downloadLaserAppEnterpriseContactData($contactId)
+```
 
 Download contact data for LaserApp Enterprise.
 
@@ -32,18 +33,16 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\IntegrationsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$contactId = 56; // int | 
+$contactId = 56; // int
 
 try {
     $apiInstance->downloadLaserAppEnterpriseContactData($contactId);
 } catch (Exception $e) {
     echo 'Exception when calling IntegrationsApi->downloadLaserAppEnterpriseContactData: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -60,16 +59,17 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `redirectContactToLaserAppAnywhere()`
 
-## redirectContactToLaserAppAnywhere
-
-> \Equisoft\SDK\EquisoftConnect\Model\LaserAppLaserAppAnywhereResponse redirectContactToLaserAppAnywhere($contactId)
+```php
+redirectContactToLaserAppAnywhere($contactId): \Equisoft\SDK\EquisoftConnect\Model\LaserAppLaserAppAnywhereResponse
+```
 
 Redirect contact to LaserApp Anywhere.
 
@@ -90,7 +90,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\IntegrationsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$contactId = 56; // int | 
+$contactId = 56; // int
 
 try {
     $result = $apiInstance->redirectContactToLaserAppAnywhere($contactId);
@@ -98,11 +98,9 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling IntegrationsApi->redirectContactToLaserAppAnywhere: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -119,9 +117,8 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

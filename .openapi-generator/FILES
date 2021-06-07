@@ -4,6 +4,7 @@
 README.md
 composer.json
 docs/Api/DSFApi.md
+docs/Api/DatabasesApi.md
 docs/Api/EventsApi.md
 docs/Api/GatewaysApi.md
 docs/Api/IntegrationsApi.md
@@ -11,6 +12,7 @@ docs/Api/LegacyDocumentApi.md
 docs/Api/LegacyProvisioningApi.md
 docs/Api/MovementApi.md
 docs/Api/MxApi.md
+docs/Api/RemoteAccountApi.md
 docs/Api/TasksApi.md
 docs/Api/UsersApi.md
 docs/Model/AccessRights.md
@@ -28,6 +30,8 @@ docs/Model/ContextUser.md
 docs/Model/ContextUserContext.md
 docs/Model/CredentialDto.md
 docs/Model/CredentialsResponse.md
+docs/Model/DatabasesDatabase.md
+docs/Model/DatabasesListDatabasesResponse.md
 docs/Model/DateOrDateTime.md
 docs/Model/DsfCreateOrUpdateFinancialCenterResponse.md
 docs/Model/DsfFinancialCenter.md
@@ -148,6 +152,9 @@ docs/Model/MovementValidationErrorResponse.md
 docs/Model/MxRecipient.md
 docs/Model/MxRecipientsPayload.md
 docs/Model/MxValidateRecipientsResponse.md
+docs/Model/RemoteaccountAccountSyncResponse.md
+docs/Model/RemoteaccountSyncStatus.md
+docs/Model/RemoteaccountSyncTaskStatus.md
 docs/Model/TasksCreateTaskPayload.md
 docs/Model/TasksCreateTaskResponse.md
 docs/Model/TasksDueDateFilter.md
@@ -161,6 +168,7 @@ docs/Model/TasksVisibilityType.md
 docs/Model/UsersUser.md
 git_push.sh
 lib/Api/DSFApi.php
+lib/Api/DatabasesApi.php
 lib/Api/EventsApi.php
 lib/Api/GatewaysApi.php
 lib/Api/IntegrationsApi.php
@@ -168,6 +176,7 @@ lib/Api/LegacyDocumentApi.php
 lib/Api/LegacyProvisioningApi.php
 lib/Api/MovementApi.php
 lib/Api/MxApi.php
+lib/Api/RemoteAccountApi.php
 lib/Api/TasksApi.php
 lib/Api/UsersApi.php
 lib/ApiException.php
@@ -188,6 +197,8 @@ lib/Model/ContextUser.php
 lib/Model/ContextUserContext.php
 lib/Model/CredentialDto.php
 lib/Model/CredentialsResponse.php
+lib/Model/DatabasesDatabase.php
+lib/Model/DatabasesListDatabasesResponse.php
 lib/Model/DateOrDateTime.php
 lib/Model/DsfCreateOrUpdateFinancialCenterResponse.php
 lib/Model/DsfFinancialCenter.php
@@ -309,6 +320,9 @@ lib/Model/MovementValidationErrorResponse.php
 lib/Model/MxRecipient.php
 lib/Model/MxRecipientsPayload.php
 lib/Model/MxValidateRecipientsResponse.php
+lib/Model/RemoteaccountAccountSyncResponse.php
+lib/Model/RemoteaccountSyncStatus.php
+lib/Model/RemoteaccountSyncTaskStatus.php
 lib/Model/TasksCreateTaskPayload.php
 lib/Model/TasksCreateTaskResponse.php
 lib/Model/TasksDueDateFilter.php
@@ -323,6 +337,7 @@ lib/Model/UsersUser.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
 test/Api/DSFApiTest.php
+test/Api/DatabasesApiTest.php
 test/Api/EventsApiTest.php
 test/Api/GatewaysApiTest.php
 test/Api/IntegrationsApiTest.php
@@ -330,6 +345,7 @@ test/Api/LegacyDocumentApiTest.php
 test/Api/LegacyProvisioningApiTest.php
 test/Api/MovementApiTest.php
 test/Api/MxApiTest.php
+test/Api/RemoteAccountApiTest.php
 test/Api/TasksApiTest.php
 test/Api/UsersApiTest.php
 test/Model/AccessRightsTest.php
@@ -347,6 +363,8 @@ test/Model/ContextUserContextTest.php
 test/Model/ContextUserTest.php
 test/Model/CredentialDtoTest.php
 test/Model/CredentialsResponseTest.php
+test/Model/DatabasesDatabaseTest.php
+test/Model/DatabasesListDatabasesResponseTest.php
 test/Model/DateOrDateTimeTest.php
 test/Model/DsfCreateOrUpdateFinancialCenterResponseTest.php
 test/Model/DsfFinancialCenterPayloadTest.php
@@ -467,6 +485,9 @@ test/Model/MovementValidationErrorTest.php
 test/Model/MxRecipientTest.php
 test/Model/MxRecipientsPayloadTest.php
 test/Model/MxValidateRecipientsResponseTest.php
+test/Model/RemoteaccountAccountSyncResponseTest.php
+test/Model/RemoteaccountSyncStatusTest.php
+test/Model/RemoteaccountSyncTaskStatusTest.php
 test/Model/TasksCreateTaskPayloadTest.php
 test/Model/TasksCreateTaskResponseTest.php
 test/Model/TasksDueDateFilterTest.php

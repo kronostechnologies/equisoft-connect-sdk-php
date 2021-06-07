@@ -4,8 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**errors** | [**map[string,\Equisoft\SDK\EquisoftConnect\Model\MovementValidationError]**](MovementValidationError.md) |  | [optional] 
+**errors** | [**array<string,\Equisoft\SDK\EquisoftConnect\Model\MovementValidationError>**](MovementValidationError.md) |  | [optional]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
