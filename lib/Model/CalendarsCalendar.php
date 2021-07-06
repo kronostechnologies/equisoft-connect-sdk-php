@@ -42,9 +42,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class CalendarsCalendar implements ModelInterface, ArrayAccess
+class CalendarsCalendar implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -59,16 +59,30 @@ class CalendarsCalendar implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'calendarId' => 'int''ownerId' => 'int''label' => 'string''isCompleted' => 'bool''accessRights' => '\Equisoft\SDK\EquisoftConnect\Model\AccessRights''color' => 'string''textColor' => 'string'
+        'calendarId' => 'int',
+        'ownerId' => 'int',
+        'label' => 'string',
+        'isCompleted' => 'bool',
+        'accessRights' => '\Equisoft\SDK\EquisoftConnect\Model\AccessRights',
+        'color' => 'string',
+        'textColor' => 'string'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'calendarId' => null'ownerId' => null'label' => null'isCompleted' => null'accessRights' => null'color' => null'textColor' => null
+        'calendarId' => null,
+        'ownerId' => null,
+        'label' => null,
+        'isCompleted' => null,
+        'accessRights' => null,
+        'color' => null,
+        'textColor' => null
     ];
 
     /**
@@ -98,7 +112,13 @@ class CalendarsCalendar implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'calendarId' => 'calendarId''ownerId' => 'ownerId''label' => 'label''isCompleted' => 'isCompleted''accessRights' => 'accessRights''color' => 'color''textColor' => 'textColor'
+        'calendarId' => 'calendarId',
+        'ownerId' => 'ownerId',
+        'label' => 'label',
+        'isCompleted' => 'isCompleted',
+        'accessRights' => 'accessRights',
+        'color' => 'color',
+        'textColor' => 'textColor'
     ];
 
     /**
@@ -107,7 +127,13 @@ class CalendarsCalendar implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'calendarId' => 'setCalendarId''ownerId' => 'setOwnerId''label' => 'setLabel''isCompleted' => 'setIsCompleted''accessRights' => 'setAccessRights''color' => 'setColor''textColor' => 'setTextColor'
+        'calendarId' => 'setCalendarId',
+        'ownerId' => 'setOwnerId',
+        'label' => 'setLabel',
+        'isCompleted' => 'setIsCompleted',
+        'accessRights' => 'setAccessRights',
+        'color' => 'setColor',
+        'textColor' => 'setTextColor'
     ];
 
     /**
@@ -116,7 +142,13 @@ class CalendarsCalendar implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'calendarId' => 'getCalendarId''ownerId' => 'getOwnerId''label' => 'getLabel''isCompleted' => 'getIsCompleted''accessRights' => 'getAccessRights''color' => 'getColor''textColor' => 'getTextColor'
+        'calendarId' => 'getCalendarId',
+        'ownerId' => 'getOwnerId',
+        'label' => 'getLabel',
+        'isCompleted' => 'getIsCompleted',
+        'accessRights' => 'getAccessRights',
+        'color' => 'getColor',
+        'textColor' => 'getTextColor'
     ];
 
     /**
@@ -160,9 +192,6 @@ class CalendarsCalendar implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -179,13 +208,13 @@ class CalendarsCalendar implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['calendarId'] = isset($data['calendarId']) ? $data['calendarId'] : null;
-        $this->container['ownerId'] = isset($data['ownerId']) ? $data['ownerId'] : null;
-        $this->container['label'] = isset($data['label']) ? $data['label'] : null;
-        $this->container['isCompleted'] = isset($data['isCompleted']) ? $data['isCompleted'] : null;
-        $this->container['accessRights'] = isset($data['accessRights']) ? $data['accessRights'] : null;
-        $this->container['color'] = isset($data['color']) ? $data['color'] : null;
-        $this->container['textColor'] = isset($data['textColor']) ? $data['textColor'] : null;
+        $this->container['calendarId'] = $data['calendarId'] ?? null;
+        $this->container['ownerId'] = $data['ownerId'] ?? null;
+        $this->container['label'] = $data['label'] ?? null;
+        $this->container['isCompleted'] = $data['isCompleted'] ?? null;
+        $this->container['accessRights'] = $data['accessRights'] ?? null;
+        $this->container['color'] = $data['color'] ?? null;
+        $this->container['textColor'] = $data['textColor'] ?? null;
     }
 
     /**
@@ -242,7 +271,7 @@ class CalendarsCalendar implements ModelInterface, ArrayAccess
      *
      * @param int $calendarId Unique identifier of the calendar.
      *
-     * @return $this
+     * @return self
      */
     public function setCalendarId($calendarId)
     {
@@ -266,7 +295,7 @@ class CalendarsCalendar implements ModelInterface, ArrayAccess
      *
      * @param int $ownerId Unique identifier of the owner user of the calendar.
      *
-     * @return $this
+     * @return self
      */
     public function setOwnerId($ownerId)
     {
@@ -290,7 +319,7 @@ class CalendarsCalendar implements ModelInterface, ArrayAccess
      *
      * @param string $label Summary label of the calendar.
      *
-     * @return $this
+     * @return self
      */
     public function setLabel($label)
     {
@@ -314,7 +343,7 @@ class CalendarsCalendar implements ModelInterface, ArrayAccess
      *
      * @param bool $isCompleted Is this the calendar for completed events.
      *
-     * @return $this
+     * @return self
      */
     public function setIsCompleted($isCompleted)
     {
@@ -338,7 +367,7 @@ class CalendarsCalendar implements ModelInterface, ArrayAccess
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\AccessRights $accessRights accessRights
      *
-     * @return $this
+     * @return self
      */
     public function setAccessRights($accessRights)
     {
@@ -362,7 +391,7 @@ class CalendarsCalendar implements ModelInterface, ArrayAccess
      *
      * @param string|null $color hex color of the calendar.
      *
-     * @return $this
+     * @return self
      */
     public function setColor($color)
     {
@@ -386,7 +415,7 @@ class CalendarsCalendar implements ModelInterface, ArrayAccess
      *
      * @param string|null $textColor hex text color of the calendar.
      *
-     * @return $this
+     * @return self
      */
     public function setTextColor($textColor)
     {
@@ -411,18 +440,18 @@ class CalendarsCalendar implements ModelInterface, ArrayAccess
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -445,6 +474,18 @@ class CalendarsCalendar implements ModelInterface, ArrayAccess
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

@@ -42,9 +42,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class TasksTask implements ModelInterface, ArrayAccess
+class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -59,16 +59,50 @@ class TasksTask implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'string''subject' => 'string''isCompleted' => 'bool''dueDate' => 'string''initialDate' => 'string''completedDate' => 'string''description' => 'string''internalNotes' => 'string''category' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue''subCategory' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue''priority' => 'int''visibility' => 'string''creationTime' => '\DateTime''updateTime' => '\DateTime''completionTime' => '\DateTime''contactIds' => 'int[]''accessRights' => '\Equisoft\SDK\EquisoftConnect\Model\AccessRights'
+        'id' => 'string',
+        'subject' => 'string',
+        'isCompleted' => 'bool',
+        'dueDate' => 'string',
+        'initialDate' => 'string',
+        'completedDate' => 'string',
+        'description' => 'string',
+        'internalNotes' => 'string',
+        'category' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue',
+        'subCategory' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue',
+        'priority' => 'int',
+        'visibility' => 'string',
+        'creationTime' => '\DateTime',
+        'updateTime' => '\DateTime',
+        'completionTime' => '\DateTime',
+        'contactIds' => 'int[]',
+        'accessRights' => '\Equisoft\SDK\EquisoftConnect\Model\AccessRights'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null'subject' => null'isCompleted' => null'dueDate' => null'initialDate' => null'completedDate' => null'description' => null'internalNotes' => null'category' => null'subCategory' => null'priority' => null'visibility' => null'creationTime' => 'date-time''updateTime' => 'date-time''completionTime' => 'date-time''contactIds' => null'accessRights' => null
+        'id' => null,
+        'subject' => null,
+        'isCompleted' => null,
+        'dueDate' => null,
+        'initialDate' => null,
+        'completedDate' => null,
+        'description' => null,
+        'internalNotes' => null,
+        'category' => null,
+        'subCategory' => null,
+        'priority' => null,
+        'visibility' => null,
+        'creationTime' => 'date-time',
+        'updateTime' => 'date-time',
+        'completionTime' => 'date-time',
+        'contactIds' => null,
+        'accessRights' => null
     ];
 
     /**
@@ -98,7 +132,23 @@ class TasksTask implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id''subject' => 'subject''isCompleted' => 'isCompleted''dueDate' => 'dueDate''initialDate' => 'initialDate''completedDate' => 'completedDate''description' => 'description''internalNotes' => 'internalNotes''category' => 'category''subCategory' => 'subCategory''priority' => 'priority''visibility' => 'visibility''creationTime' => 'creationTime''updateTime' => 'updateTime''completionTime' => 'completionTime''contactIds' => 'contactIds''accessRights' => 'accessRights'
+        'id' => 'id',
+        'subject' => 'subject',
+        'isCompleted' => 'isCompleted',
+        'dueDate' => 'dueDate',
+        'initialDate' => 'initialDate',
+        'completedDate' => 'completedDate',
+        'description' => 'description',
+        'internalNotes' => 'internalNotes',
+        'category' => 'category',
+        'subCategory' => 'subCategory',
+        'priority' => 'priority',
+        'visibility' => 'visibility',
+        'creationTime' => 'creationTime',
+        'updateTime' => 'updateTime',
+        'completionTime' => 'completionTime',
+        'contactIds' => 'contactIds',
+        'accessRights' => 'accessRights'
     ];
 
     /**
@@ -107,7 +157,23 @@ class TasksTask implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId''subject' => 'setSubject''isCompleted' => 'setIsCompleted''dueDate' => 'setDueDate''initialDate' => 'setInitialDate''completedDate' => 'setCompletedDate''description' => 'setDescription''internalNotes' => 'setInternalNotes''category' => 'setCategory''subCategory' => 'setSubCategory''priority' => 'setPriority''visibility' => 'setVisibility''creationTime' => 'setCreationTime''updateTime' => 'setUpdateTime''completionTime' => 'setCompletionTime''contactIds' => 'setContactIds''accessRights' => 'setAccessRights'
+        'id' => 'setId',
+        'subject' => 'setSubject',
+        'isCompleted' => 'setIsCompleted',
+        'dueDate' => 'setDueDate',
+        'initialDate' => 'setInitialDate',
+        'completedDate' => 'setCompletedDate',
+        'description' => 'setDescription',
+        'internalNotes' => 'setInternalNotes',
+        'category' => 'setCategory',
+        'subCategory' => 'setSubCategory',
+        'priority' => 'setPriority',
+        'visibility' => 'setVisibility',
+        'creationTime' => 'setCreationTime',
+        'updateTime' => 'setUpdateTime',
+        'completionTime' => 'setCompletionTime',
+        'contactIds' => 'setContactIds',
+        'accessRights' => 'setAccessRights'
     ];
 
     /**
@@ -116,7 +182,23 @@ class TasksTask implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId''subject' => 'getSubject''isCompleted' => 'getIsCompleted''dueDate' => 'getDueDate''initialDate' => 'getInitialDate''completedDate' => 'getCompletedDate''description' => 'getDescription''internalNotes' => 'getInternalNotes''category' => 'getCategory''subCategory' => 'getSubCategory''priority' => 'getPriority''visibility' => 'getVisibility''creationTime' => 'getCreationTime''updateTime' => 'getUpdateTime''completionTime' => 'getCompletionTime''contactIds' => 'getContactIds''accessRights' => 'getAccessRights'
+        'id' => 'getId',
+        'subject' => 'getSubject',
+        'isCompleted' => 'getIsCompleted',
+        'dueDate' => 'getDueDate',
+        'initialDate' => 'getInitialDate',
+        'completedDate' => 'getCompletedDate',
+        'description' => 'getDescription',
+        'internalNotes' => 'getInternalNotes',
+        'category' => 'getCategory',
+        'subCategory' => 'getSubCategory',
+        'priority' => 'getPriority',
+        'visibility' => 'getVisibility',
+        'creationTime' => 'getCreationTime',
+        'updateTime' => 'getUpdateTime',
+        'completionTime' => 'getCompletionTime',
+        'contactIds' => 'getContactIds',
+        'accessRights' => 'getAccessRights'
     ];
 
     /**
@@ -160,9 +242,6 @@ class TasksTask implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -179,23 +258,23 @@ class TasksTask implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['subject'] = isset($data['subject']) ? $data['subject'] : null;
-        $this->container['isCompleted'] = isset($data['isCompleted']) ? $data['isCompleted'] : null;
-        $this->container['dueDate'] = isset($data['dueDate']) ? $data['dueDate'] : null;
-        $this->container['initialDate'] = isset($data['initialDate']) ? $data['initialDate'] : null;
-        $this->container['completedDate'] = isset($data['completedDate']) ? $data['completedDate'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['internalNotes'] = isset($data['internalNotes']) ? $data['internalNotes'] : null;
-        $this->container['category'] = isset($data['category']) ? $data['category'] : null;
-        $this->container['subCategory'] = isset($data['subCategory']) ? $data['subCategory'] : null;
-        $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
-        $this->container['visibility'] = isset($data['visibility']) ? $data['visibility'] : null;
-        $this->container['creationTime'] = isset($data['creationTime']) ? $data['creationTime'] : null;
-        $this->container['updateTime'] = isset($data['updateTime']) ? $data['updateTime'] : null;
-        $this->container['completionTime'] = isset($data['completionTime']) ? $data['completionTime'] : null;
-        $this->container['contactIds'] = isset($data['contactIds']) ? $data['contactIds'] : null;
-        $this->container['accessRights'] = isset($data['accessRights']) ? $data['accessRights'] : null;
+        $this->container['id'] = $data['id'] ?? null;
+        $this->container['subject'] = $data['subject'] ?? null;
+        $this->container['isCompleted'] = $data['isCompleted'] ?? null;
+        $this->container['dueDate'] = $data['dueDate'] ?? null;
+        $this->container['initialDate'] = $data['initialDate'] ?? null;
+        $this->container['completedDate'] = $data['completedDate'] ?? null;
+        $this->container['description'] = $data['description'] ?? null;
+        $this->container['internalNotes'] = $data['internalNotes'] ?? null;
+        $this->container['category'] = $data['category'] ?? null;
+        $this->container['subCategory'] = $data['subCategory'] ?? null;
+        $this->container['priority'] = $data['priority'] ?? null;
+        $this->container['visibility'] = $data['visibility'] ?? null;
+        $this->container['creationTime'] = $data['creationTime'] ?? null;
+        $this->container['updateTime'] = $data['updateTime'] ?? null;
+        $this->container['completionTime'] = $data['completionTime'] ?? null;
+        $this->container['contactIds'] = $data['contactIds'] ?? null;
+        $this->container['accessRights'] = $data['accessRights'] ?? null;
     }
 
     /**
@@ -249,7 +328,7 @@ class TasksTask implements ModelInterface, ArrayAccess
      *
      * @param string $id Unique numerical identifier.
      *
-     * @return $this
+     * @return self
      */
     public function setId($id)
     {
@@ -273,7 +352,7 @@ class TasksTask implements ModelInterface, ArrayAccess
      *
      * @param string $subject Subject/Title of the Event.
      *
-     * @return $this
+     * @return self
      */
     public function setSubject($subject)
     {
@@ -297,7 +376,7 @@ class TasksTask implements ModelInterface, ArrayAccess
      *
      * @param bool $isCompleted Is the task completed/done.
      *
-     * @return $this
+     * @return self
      */
     public function setIsCompleted($isCompleted)
     {
@@ -321,7 +400,7 @@ class TasksTask implements ModelInterface, ArrayAccess
      *
      * @param string|null $dueDate Date the task is expected to be done. As defined by full-date - RFC3339
      *
-     * @return $this
+     * @return self
      */
     public function setDueDate($dueDate)
     {
@@ -345,7 +424,7 @@ class TasksTask implements ModelInterface, ArrayAccess
      *
      * @param string|null $initialDate Date the task was initially started. As defined by full-date - RFC3339
      *
-     * @return $this
+     * @return self
      */
     public function setInitialDate($initialDate)
     {
@@ -369,7 +448,7 @@ class TasksTask implements ModelInterface, ArrayAccess
      *
      * @param string|null $completedDate Date the task was completed / done. As defined by full-date - RFC3339
      *
-     * @return $this
+     * @return self
      */
     public function setCompletedDate($completedDate)
     {
@@ -393,7 +472,7 @@ class TasksTask implements ModelInterface, ArrayAccess
      *
      * @param string|null $description Public description of the Event.
      *
-     * @return $this
+     * @return self
      */
     public function setDescription($description)
     {
@@ -417,7 +496,7 @@ class TasksTask implements ModelInterface, ArrayAccess
      *
      * @param string|null $internalNotes Internal notes on the Event. Not synced on remote sources.
      *
-     * @return $this
+     * @return self
      */
     public function setInternalNotes($internalNotes)
     {
@@ -441,7 +520,7 @@ class TasksTask implements ModelInterface, ArrayAccess
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $category category
      *
-     * @return $this
+     * @return self
      */
     public function setCategory($category)
     {
@@ -465,7 +544,7 @@ class TasksTask implements ModelInterface, ArrayAccess
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $subCategory subCategory
      *
-     * @return $this
+     * @return self
      */
     public function setSubCategory($subCategory)
     {
@@ -489,7 +568,7 @@ class TasksTask implements ModelInterface, ArrayAccess
      *
      * @param int|null $priority Importance/Priority of an event or task. 5 is the most important.
      *
-     * @return $this
+     * @return self
      */
     public function setPriority($priority)
     {
@@ -513,7 +592,7 @@ class TasksTask implements ModelInterface, ArrayAccess
      *
      * @param string|null $visibility Confidentiality level of the Event (private or not). [NORMAL, PRIVATE]
      *
-     * @return $this
+     * @return self
      */
     public function setVisibility($visibility)
     {
@@ -537,7 +616,7 @@ class TasksTask implements ModelInterface, ArrayAccess
      *
      * @param \DateTime|null $creationTime Creation time. As defined by date-time - RFC3339
      *
-     * @return $this
+     * @return self
      */
     public function setCreationTime($creationTime)
     {
@@ -561,7 +640,7 @@ class TasksTask implements ModelInterface, ArrayAccess
      *
      * @param \DateTime|null $updateTime Date time of last modification. As defined by date-time - RFC3339
      *
-     * @return $this
+     * @return self
      */
     public function setUpdateTime($updateTime)
     {
@@ -585,7 +664,7 @@ class TasksTask implements ModelInterface, ArrayAccess
      *
      * @param \DateTime|null $completionTime Completion time. As defined by date-time - RFC3339
      *
-     * @return $this
+     * @return self
      */
     public function setCompletionTime($completionTime)
     {
@@ -609,7 +688,7 @@ class TasksTask implements ModelInterface, ArrayAccess
      *
      * @param int[]|null $contactIds IDs of the contacts linked to this Task
      *
-     * @return $this
+     * @return self
      */
     public function setContactIds($contactIds)
     {
@@ -633,7 +712,7 @@ class TasksTask implements ModelInterface, ArrayAccess
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\AccessRights $accessRights accessRights
      *
-     * @return $this
+     * @return self
      */
     public function setAccessRights($accessRights)
     {
@@ -658,18 +737,18 @@ class TasksTask implements ModelInterface, ArrayAccess
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -692,6 +771,18 @@ class TasksTask implements ModelInterface, ArrayAccess
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

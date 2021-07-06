@@ -42,9 +42,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
+class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -59,16 +59,26 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string''sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase''sourceUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser''destinationUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser''accessCode' => '\Equisoft\SDK\EquisoftConnect\Model\MovementGatewayAccessCode'
+        'type' => 'string',
+        'sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
+        'sourceUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
+        'destinationUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
+        'accessCode' => '\Equisoft\SDK\EquisoftConnect\Model\MovementGatewayAccessCode'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'type' => null'sourceDatabase' => null'sourceUser' => null'destinationUser' => null'accessCode' => null
+        'type' => null,
+        'sourceDatabase' => null,
+        'sourceUser' => null,
+        'destinationUser' => null,
+        'accessCode' => null
     ];
 
     /**
@@ -98,7 +108,11 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type''sourceDatabase' => 'sourceDatabase''sourceUser' => 'sourceUser''destinationUser' => 'destinationUser''accessCode' => 'accessCode'
+        'type' => 'type',
+        'sourceDatabase' => 'sourceDatabase',
+        'sourceUser' => 'sourceUser',
+        'destinationUser' => 'destinationUser',
+        'accessCode' => 'accessCode'
     ];
 
     /**
@@ -107,7 +121,11 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType''sourceDatabase' => 'setSourceDatabase''sourceUser' => 'setSourceUser''destinationUser' => 'setDestinationUser''accessCode' => 'setAccessCode'
+        'type' => 'setType',
+        'sourceDatabase' => 'setSourceDatabase',
+        'sourceUser' => 'setSourceUser',
+        'destinationUser' => 'setDestinationUser',
+        'accessCode' => 'setAccessCode'
     ];
 
     /**
@@ -116,7 +134,11 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType''sourceDatabase' => 'getSourceDatabase''sourceUser' => 'getSourceUser''destinationUser' => 'getDestinationUser''accessCode' => 'getAccessCode'
+        'type' => 'getType',
+        'sourceDatabase' => 'getSourceDatabase',
+        'sourceUser' => 'getSourceUser',
+        'destinationUser' => 'getDestinationUser',
+        'accessCode' => 'getAccessCode'
     ];
 
     /**
@@ -161,9 +183,7 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
     }
 
     const TYPE_REASSIGNMENT = 'REASSIGNMENT';
-    
 
-    
     /**
      * Gets allowable values of the enum
      *
@@ -175,7 +195,6 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
             self::TYPE_REASSIGNMENT,
         ];
     }
-    
 
     /**
      * Associative array for storing property values
@@ -192,11 +211,11 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['type'] = isset($data['type']) ? $data['type'] : TYPE_REASSIGNMENT;
-        $this->container['sourceDatabase'] = isset($data['sourceDatabase']) ? $data['sourceDatabase'] : null;
-        $this->container['sourceUser'] = isset($data['sourceUser']) ? $data['sourceUser'] : null;
-        $this->container['destinationUser'] = isset($data['destinationUser']) ? $data['destinationUser'] : null;
-        $this->container['accessCode'] = isset($data['accessCode']) ? $data['accessCode'] : null;
+        $this->container['type'] = $data['type'] ?? TYPE_REASSIGNMENT;
+        $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
+        $this->container['sourceUser'] = $data['sourceUser'] ?? null;
+        $this->container['destinationUser'] = $data['destinationUser'] ?? null;
+        $this->container['accessCode'] = $data['accessCode'] ?? null;
     }
 
     /**
@@ -214,7 +233,8 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
         $allowedValues = $this->getTypeAllowableValues();
         if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value for 'type', must be one of '%s'",
+                "invalid value '%s' for 'type', must be one of '%s'",
+                $this->container['type'],
                 implode("', '", $allowedValues)
             );
         }
@@ -261,7 +281,7 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
      *
      * @param string $type type
      *
-     * @return $this
+     * @return self
      */
     public function setType($type)
     {
@@ -269,7 +289,8 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
         if (!in_array($type, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value for 'type', must be one of '%s'",
+                    "Invalid value '%s' for 'type', must be one of '%s'",
+                    $type,
                     implode("', '", $allowedValues)
                 )
             );
@@ -294,7 +315,7 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase $sourceDatabase sourceDatabase
      *
-     * @return $this
+     * @return self
      */
     public function setSourceDatabase($sourceDatabase)
     {
@@ -318,7 +339,7 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser $sourceUser sourceUser
      *
-     * @return $this
+     * @return self
      */
     public function setSourceUser($sourceUser)
     {
@@ -342,7 +363,7 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser $destinationUser destinationUser
      *
-     * @return $this
+     * @return self
      */
     public function setDestinationUser($destinationUser)
     {
@@ -366,7 +387,7 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\MovementGatewayAccessCode $accessCode accessCode
      *
-     * @return $this
+     * @return self
      */
     public function setAccessCode($accessCode)
     {
@@ -391,18 +412,18 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -425,6 +446,18 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

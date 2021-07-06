@@ -42,9 +42,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class InternalNotesNoteList implements ModelInterface, ArrayAccess
+class InternalNotesNoteList implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -59,16 +59,20 @@ class InternalNotesNoteList implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'notes' => '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesNote[]''legacyNote' => '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesLegacyNote'
+        'notes' => '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesNote[]',
+        'legacyNote' => '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesLegacyNote'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'notes' => null'legacyNote' => null
+        'notes' => null,
+        'legacyNote' => null
     ];
 
     /**
@@ -98,7 +102,8 @@ class InternalNotesNoteList implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'notes' => 'notes''legacyNote' => 'legacyNote'
+        'notes' => 'notes',
+        'legacyNote' => 'legacyNote'
     ];
 
     /**
@@ -107,7 +112,8 @@ class InternalNotesNoteList implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'notes' => 'setNotes''legacyNote' => 'setLegacyNote'
+        'notes' => 'setNotes',
+        'legacyNote' => 'setLegacyNote'
     ];
 
     /**
@@ -116,7 +122,8 @@ class InternalNotesNoteList implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'notes' => 'getNotes''legacyNote' => 'getLegacyNote'
+        'notes' => 'getNotes',
+        'legacyNote' => 'getLegacyNote'
     ];
 
     /**
@@ -160,9 +167,6 @@ class InternalNotesNoteList implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -179,8 +183,8 @@ class InternalNotesNoteList implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['notes'] = isset($data['notes']) ? $data['notes'] : null;
-        $this->container['legacyNote'] = isset($data['legacyNote']) ? $data['legacyNote'] : null;
+        $this->container['notes'] = $data['notes'] ?? null;
+        $this->container['legacyNote'] = $data['legacyNote'] ?? null;
     }
 
     /**
@@ -225,7 +229,7 @@ class InternalNotesNoteList implements ModelInterface, ArrayAccess
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\InternalNotesNote[] $notes notes
      *
-     * @return $this
+     * @return self
      */
     public function setNotes($notes)
     {
@@ -249,7 +253,7 @@ class InternalNotesNoteList implements ModelInterface, ArrayAccess
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\InternalNotesLegacyNote|null $legacyNote legacyNote
      *
-     * @return $this
+     * @return self
      */
     public function setLegacyNote($legacyNote)
     {
@@ -274,18 +278,18 @@ class InternalNotesNoteList implements ModelInterface, ArrayAccess
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -308,6 +312,18 @@ class InternalNotesNoteList implements ModelInterface, ArrayAccess
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

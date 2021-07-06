@@ -42,9 +42,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class MxRecipientsPayload implements ModelInterface, ArrayAccess
+class MxRecipientsPayload implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -59,16 +59,26 @@ class MxRecipientsPayload implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'to' => 'string''cc' => 'string''bcc' => 'string''groups' => 'int[]''contacts' => 'int[]'
+        'to' => 'string',
+        'cc' => 'string',
+        'bcc' => 'string',
+        'groups' => 'int[]',
+        'contacts' => 'int[]'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'to' => null'cc' => null'bcc' => null'groups' => null'contacts' => null
+        'to' => null,
+        'cc' => null,
+        'bcc' => null,
+        'groups' => null,
+        'contacts' => null
     ];
 
     /**
@@ -98,7 +108,11 @@ class MxRecipientsPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'to' => 'to''cc' => 'cc''bcc' => 'bcc''groups' => 'groups''contacts' => 'contacts'
+        'to' => 'to',
+        'cc' => 'cc',
+        'bcc' => 'bcc',
+        'groups' => 'groups',
+        'contacts' => 'contacts'
     ];
 
     /**
@@ -107,7 +121,11 @@ class MxRecipientsPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'to' => 'setTo''cc' => 'setCc''bcc' => 'setBcc''groups' => 'setGroups''contacts' => 'setContacts'
+        'to' => 'setTo',
+        'cc' => 'setCc',
+        'bcc' => 'setBcc',
+        'groups' => 'setGroups',
+        'contacts' => 'setContacts'
     ];
 
     /**
@@ -116,7 +134,11 @@ class MxRecipientsPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'to' => 'getTo''cc' => 'getCc''bcc' => 'getBcc''groups' => 'getGroups''contacts' => 'getContacts'
+        'to' => 'getTo',
+        'cc' => 'getCc',
+        'bcc' => 'getBcc',
+        'groups' => 'getGroups',
+        'contacts' => 'getContacts'
     ];
 
     /**
@@ -160,9 +182,6 @@ class MxRecipientsPayload implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -179,11 +198,11 @@ class MxRecipientsPayload implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['to'] = isset($data['to']) ? $data['to'] : null;
-        $this->container['cc'] = isset($data['cc']) ? $data['cc'] : null;
-        $this->container['bcc'] = isset($data['bcc']) ? $data['bcc'] : null;
-        $this->container['groups'] = isset($data['groups']) ? $data['groups'] : null;
-        $this->container['contacts'] = isset($data['contacts']) ? $data['contacts'] : null;
+        $this->container['to'] = $data['to'] ?? null;
+        $this->container['cc'] = $data['cc'] ?? null;
+        $this->container['bcc'] = $data['bcc'] ?? null;
+        $this->container['groups'] = $data['groups'] ?? null;
+        $this->container['contacts'] = $data['contacts'] ?? null;
     }
 
     /**
@@ -240,7 +259,7 @@ class MxRecipientsPayload implements ModelInterface, ArrayAccess
      *
      * @param string $to to recipients
      *
-     * @return $this
+     * @return self
      */
     public function setTo($to)
     {
@@ -264,7 +283,7 @@ class MxRecipientsPayload implements ModelInterface, ArrayAccess
      *
      * @param string $cc cc recipients
      *
-     * @return $this
+     * @return self
      */
     public function setCc($cc)
     {
@@ -288,7 +307,7 @@ class MxRecipientsPayload implements ModelInterface, ArrayAccess
      *
      * @param string $bcc bcc recipients
      *
-     * @return $this
+     * @return self
      */
     public function setBcc($bcc)
     {
@@ -312,7 +331,7 @@ class MxRecipientsPayload implements ModelInterface, ArrayAccess
      *
      * @param int[] $groups group recipients
      *
-     * @return $this
+     * @return self
      */
     public function setGroups($groups)
     {
@@ -336,7 +355,7 @@ class MxRecipientsPayload implements ModelInterface, ArrayAccess
      *
      * @param int[] $contacts contact recipients
      *
-     * @return $this
+     * @return self
      */
     public function setContacts($contacts)
     {
@@ -361,18 +380,18 @@ class MxRecipientsPayload implements ModelInterface, ArrayAccess
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -395,6 +414,18 @@ class MxRecipientsPayload implements ModelInterface, ArrayAccess
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

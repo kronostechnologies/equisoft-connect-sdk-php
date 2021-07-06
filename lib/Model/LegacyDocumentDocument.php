@@ -42,9 +42,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class LegacyDocumentDocument implements ModelInterface, ArrayAccess
+class LegacyDocumentDocument implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -59,16 +59,50 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'files' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentFile[]''contacts' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyContactContact[]''createdBy' => 'string''createdOn' => 'string''modifiedBy' => 'string''modifiedOn' => 'string''externalKey' => 'string''dateStart' => 'string''dateEnd' => 'string''dateSignature' => 'string''writtenBy' => 'string''notes' => 'string''users' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyUser[]''id' => 'string''type' => 'string''subType' => 'string''name' => 'string'
+        'files' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentFile[]',
+        'contacts' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyContactContact[]',
+        'createdBy' => 'string',
+        'createdOn' => 'string',
+        'modifiedBy' => 'string',
+        'modifiedOn' => 'string',
+        'externalKey' => 'string',
+        'dateStart' => 'string',
+        'dateEnd' => 'string',
+        'dateSignature' => 'string',
+        'writtenBy' => 'string',
+        'notes' => 'string',
+        'users' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyUser[]',
+        'id' => 'string',
+        'type' => 'string',
+        'subType' => 'string',
+        'name' => 'string'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'files' => null'contacts' => null'createdBy' => null'createdOn' => null'modifiedBy' => null'modifiedOn' => null'externalKey' => null'dateStart' => null'dateEnd' => null'dateSignature' => null'writtenBy' => null'notes' => null'users' => null'id' => null'type' => null'subType' => null'name' => null
+        'files' => null,
+        'contacts' => null,
+        'createdBy' => null,
+        'createdOn' => null,
+        'modifiedBy' => null,
+        'modifiedOn' => null,
+        'externalKey' => null,
+        'dateStart' => null,
+        'dateEnd' => null,
+        'dateSignature' => null,
+        'writtenBy' => null,
+        'notes' => null,
+        'users' => null,
+        'id' => null,
+        'type' => null,
+        'subType' => null,
+        'name' => null
     ];
 
     /**
@@ -98,7 +132,23 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'files' => 'files''contacts' => 'contacts''createdBy' => 'createdBy''createdOn' => 'createdOn''modifiedBy' => 'modifiedBy''modifiedOn' => 'modifiedOn''externalKey' => 'externalKey''dateStart' => 'dateStart''dateEnd' => 'dateEnd''dateSignature' => 'dateSignature''writtenBy' => 'writtenBy''notes' => 'notes''users' => 'users''id' => 'id''type' => 'type''subType' => 'subType''name' => 'name'
+        'files' => 'files',
+        'contacts' => 'contacts',
+        'createdBy' => 'createdBy',
+        'createdOn' => 'createdOn',
+        'modifiedBy' => 'modifiedBy',
+        'modifiedOn' => 'modifiedOn',
+        'externalKey' => 'externalKey',
+        'dateStart' => 'dateStart',
+        'dateEnd' => 'dateEnd',
+        'dateSignature' => 'dateSignature',
+        'writtenBy' => 'writtenBy',
+        'notes' => 'notes',
+        'users' => 'users',
+        'id' => 'id',
+        'type' => 'type',
+        'subType' => 'subType',
+        'name' => 'name'
     ];
 
     /**
@@ -107,7 +157,23 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'files' => 'setFiles''contacts' => 'setContacts''createdBy' => 'setCreatedBy''createdOn' => 'setCreatedOn''modifiedBy' => 'setModifiedBy''modifiedOn' => 'setModifiedOn''externalKey' => 'setExternalKey''dateStart' => 'setDateStart''dateEnd' => 'setDateEnd''dateSignature' => 'setDateSignature''writtenBy' => 'setWrittenBy''notes' => 'setNotes''users' => 'setUsers''id' => 'setId''type' => 'setType''subType' => 'setSubType''name' => 'setName'
+        'files' => 'setFiles',
+        'contacts' => 'setContacts',
+        'createdBy' => 'setCreatedBy',
+        'createdOn' => 'setCreatedOn',
+        'modifiedBy' => 'setModifiedBy',
+        'modifiedOn' => 'setModifiedOn',
+        'externalKey' => 'setExternalKey',
+        'dateStart' => 'setDateStart',
+        'dateEnd' => 'setDateEnd',
+        'dateSignature' => 'setDateSignature',
+        'writtenBy' => 'setWrittenBy',
+        'notes' => 'setNotes',
+        'users' => 'setUsers',
+        'id' => 'setId',
+        'type' => 'setType',
+        'subType' => 'setSubType',
+        'name' => 'setName'
     ];
 
     /**
@@ -116,7 +182,23 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'files' => 'getFiles''contacts' => 'getContacts''createdBy' => 'getCreatedBy''createdOn' => 'getCreatedOn''modifiedBy' => 'getModifiedBy''modifiedOn' => 'getModifiedOn''externalKey' => 'getExternalKey''dateStart' => 'getDateStart''dateEnd' => 'getDateEnd''dateSignature' => 'getDateSignature''writtenBy' => 'getWrittenBy''notes' => 'getNotes''users' => 'getUsers''id' => 'getId''type' => 'getType''subType' => 'getSubType''name' => 'getName'
+        'files' => 'getFiles',
+        'contacts' => 'getContacts',
+        'createdBy' => 'getCreatedBy',
+        'createdOn' => 'getCreatedOn',
+        'modifiedBy' => 'getModifiedBy',
+        'modifiedOn' => 'getModifiedOn',
+        'externalKey' => 'getExternalKey',
+        'dateStart' => 'getDateStart',
+        'dateEnd' => 'getDateEnd',
+        'dateSignature' => 'getDateSignature',
+        'writtenBy' => 'getWrittenBy',
+        'notes' => 'getNotes',
+        'users' => 'getUsers',
+        'id' => 'getId',
+        'type' => 'getType',
+        'subType' => 'getSubType',
+        'name' => 'getName'
     ];
 
     /**
@@ -160,9 +242,6 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -179,23 +258,23 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['files'] = isset($data['files']) ? $data['files'] : null;
-        $this->container['contacts'] = isset($data['contacts']) ? $data['contacts'] : null;
-        $this->container['createdBy'] = isset($data['createdBy']) ? $data['createdBy'] : null;
-        $this->container['createdOn'] = isset($data['createdOn']) ? $data['createdOn'] : null;
-        $this->container['modifiedBy'] = isset($data['modifiedBy']) ? $data['modifiedBy'] : null;
-        $this->container['modifiedOn'] = isset($data['modifiedOn']) ? $data['modifiedOn'] : null;
-        $this->container['externalKey'] = isset($data['externalKey']) ? $data['externalKey'] : null;
-        $this->container['dateStart'] = isset($data['dateStart']) ? $data['dateStart'] : null;
-        $this->container['dateEnd'] = isset($data['dateEnd']) ? $data['dateEnd'] : null;
-        $this->container['dateSignature'] = isset($data['dateSignature']) ? $data['dateSignature'] : null;
-        $this->container['writtenBy'] = isset($data['writtenBy']) ? $data['writtenBy'] : null;
-        $this->container['notes'] = isset($data['notes']) ? $data['notes'] : null;
-        $this->container['users'] = isset($data['users']) ? $data['users'] : null;
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['subType'] = isset($data['subType']) ? $data['subType'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['files'] = $data['files'] ?? null;
+        $this->container['contacts'] = $data['contacts'] ?? null;
+        $this->container['createdBy'] = $data['createdBy'] ?? null;
+        $this->container['createdOn'] = $data['createdOn'] ?? null;
+        $this->container['modifiedBy'] = $data['modifiedBy'] ?? null;
+        $this->container['modifiedOn'] = $data['modifiedOn'] ?? null;
+        $this->container['externalKey'] = $data['externalKey'] ?? null;
+        $this->container['dateStart'] = $data['dateStart'] ?? null;
+        $this->container['dateEnd'] = $data['dateEnd'] ?? null;
+        $this->container['dateSignature'] = $data['dateSignature'] ?? null;
+        $this->container['writtenBy'] = $data['writtenBy'] ?? null;
+        $this->container['notes'] = $data['notes'] ?? null;
+        $this->container['users'] = $data['users'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
+        $this->container['type'] = $data['type'] ?? null;
+        $this->container['subType'] = $data['subType'] ?? null;
+        $this->container['name'] = $data['name'] ?? null;
     }
 
     /**
@@ -237,7 +316,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentFile[]|null $files Files contained inside the document
      *
-     * @return $this
+     * @return self
      */
     public function setFiles($files)
     {
@@ -261,7 +340,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyContactContact[]|null $contacts List of linked contacts
      *
-     * @return $this
+     * @return self
      */
     public function setContacts($contacts)
     {
@@ -285,7 +364,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess
      *
      * @param string|null $createdBy email of user who created the document
      *
-     * @return $this
+     * @return self
      */
     public function setCreatedBy($createdBy)
     {
@@ -309,7 +388,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess
      *
      * @param string|null $createdOn date of creation of the document
      *
-     * @return $this
+     * @return self
      */
     public function setCreatedOn($createdOn)
     {
@@ -333,7 +412,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess
      *
      * @param string|null $modifiedBy email of user who last modified the document
      *
-     * @return $this
+     * @return self
      */
     public function setModifiedBy($modifiedBy)
     {
@@ -357,7 +436,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess
      *
      * @param string|null $modifiedOn date of the last modification of the document
      *
-     * @return $this
+     * @return self
      */
     public function setModifiedOn($modifiedOn)
     {
@@ -381,7 +460,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess
      *
      * @param string|null $externalKey external key of the document
      *
-     * @return $this
+     * @return self
      */
     public function setExternalKey($externalKey)
     {
@@ -405,7 +484,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess
      *
      * @param string|null $dateStart date start of the document
      *
-     * @return $this
+     * @return self
      */
     public function setDateStart($dateStart)
     {
@@ -429,7 +508,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess
      *
      * @param string|null $dateEnd date end of the document
      *
-     * @return $this
+     * @return self
      */
     public function setDateEnd($dateEnd)
     {
@@ -453,7 +532,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess
      *
      * @param string|null $dateSignature date signature of the document
      *
-     * @return $this
+     * @return self
      */
     public function setDateSignature($dateSignature)
     {
@@ -477,7 +556,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess
      *
      * @param string|null $writtenBy author of the document
      *
-     * @return $this
+     * @return self
      */
     public function setWrittenBy($writtenBy)
     {
@@ -501,7 +580,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess
      *
      * @param string|null $notes notes of the document
      *
-     * @return $this
+     * @return self
      */
     public function setNotes($notes)
     {
@@ -525,7 +604,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyUser[]|null $users users related to the document
      *
-     * @return $this
+     * @return self
      */
     public function setUsers($users)
     {
@@ -549,7 +628,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess
      *
      * @param string|null $id id of the document
      *
-     * @return $this
+     * @return self
      */
     public function setId($id)
     {
@@ -573,7 +652,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess
      *
      * @param string|null $type type of the document
      *
-     * @return $this
+     * @return self
      */
     public function setType($type)
     {
@@ -597,7 +676,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess
      *
      * @param string|null $subType subtype of the document
      *
-     * @return $this
+     * @return self
      */
     public function setSubType($subType)
     {
@@ -621,7 +700,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess
      *
      * @param string|null $name name of the document
      *
-     * @return $this
+     * @return self
      */
     public function setName($name)
     {
@@ -646,18 +725,18 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -680,6 +759,18 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

@@ -42,9 +42,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class LegacyUser implements ModelInterface, ArrayAccess
+class LegacyUser implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -59,16 +59,22 @@ class LegacyUser implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'string''displayName' => 'string''email' => 'string'
+        'id' => 'string',
+        'displayName' => 'string',
+        'email' => 'string'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null'displayName' => null'email' => null
+        'id' => null,
+        'displayName' => null,
+        'email' => null
     ];
 
     /**
@@ -98,7 +104,9 @@ class LegacyUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id''displayName' => 'displayName''email' => 'email'
+        'id' => 'id',
+        'displayName' => 'displayName',
+        'email' => 'email'
     ];
 
     /**
@@ -107,7 +115,9 @@ class LegacyUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId''displayName' => 'setDisplayName''email' => 'setEmail'
+        'id' => 'setId',
+        'displayName' => 'setDisplayName',
+        'email' => 'setEmail'
     ];
 
     /**
@@ -116,7 +126,9 @@ class LegacyUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId''displayName' => 'getDisplayName''email' => 'getEmail'
+        'id' => 'getId',
+        'displayName' => 'getDisplayName',
+        'email' => 'getEmail'
     ];
 
     /**
@@ -160,9 +172,6 @@ class LegacyUser implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -179,9 +188,9 @@ class LegacyUser implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['displayName'] = isset($data['displayName']) ? $data['displayName'] : null;
-        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['id'] = $data['id'] ?? null;
+        $this->container['displayName'] = $data['displayName'] ?? null;
+        $this->container['email'] = $data['email'] ?? null;
     }
 
     /**
@@ -223,7 +232,7 @@ class LegacyUser implements ModelInterface, ArrayAccess
      *
      * @param string|null $id id of the user
      *
-     * @return $this
+     * @return self
      */
     public function setId($id)
     {
@@ -247,7 +256,7 @@ class LegacyUser implements ModelInterface, ArrayAccess
      *
      * @param string|null $displayName display name of the user
      *
-     * @return $this
+     * @return self
      */
     public function setDisplayName($displayName)
     {
@@ -271,7 +280,7 @@ class LegacyUser implements ModelInterface, ArrayAccess
      *
      * @param string|null $email email of the user
      *
-     * @return $this
+     * @return self
      */
     public function setEmail($email)
     {
@@ -296,18 +305,18 @@ class LegacyUser implements ModelInterface, ArrayAccess
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -330,6 +339,18 @@ class LegacyUser implements ModelInterface, ArrayAccess
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

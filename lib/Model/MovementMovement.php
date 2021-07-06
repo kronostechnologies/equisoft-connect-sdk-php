@@ -42,10 +42,10 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class MovementMovement implements ModelInterface, ArrayAccess
+class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = 'type';
-    const DISCRIMINATOR_MAP = [
+    public const DISCRIMINATOR = 'type';
+    public const DISCRIMINATOR_MAP = [
         "CLIENTBASE_USING_DISTLIST" => "MovementClientBaseUsingDistributionListMovement",
         "CLIENTBASE_USING_FILE" => "MovementClientBaseUsingFileMovement",
         "COPY" => "MovementCopyMovement",
@@ -66,16 +66,34 @@ class MovementMovement implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'int''status' => 'string''availableAction' => 'string''scheduledDate' => 'string''processedDate' => 'string''addedDate' => 'string''addedBy' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser''cancelledDate' => 'string''cancelledBy' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser'
+        'id' => 'int',
+        'status' => 'string',
+        'availableAction' => 'string',
+        'scheduledDate' => 'string',
+        'processedDate' => 'string',
+        'addedDate' => 'string',
+        'addedBy' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
+        'cancelledDate' => 'string',
+        'cancelledBy' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null'status' => null'availableAction' => null'scheduledDate' => null'processedDate' => null'addedDate' => null'addedBy' => null'cancelledDate' => null'cancelledBy' => null
+        'id' => null,
+        'status' => null,
+        'availableAction' => null,
+        'scheduledDate' => null,
+        'processedDate' => null,
+        'addedDate' => null,
+        'addedBy' => null,
+        'cancelledDate' => null,
+        'cancelledBy' => null
     ];
 
     /**
@@ -105,7 +123,15 @@ class MovementMovement implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id''status' => 'status''availableAction' => 'availableAction''scheduledDate' => 'scheduledDate''processedDate' => 'processedDate''addedDate' => 'addedDate''addedBy' => 'addedBy''cancelledDate' => 'cancelledDate''cancelledBy' => 'cancelledBy'
+        'id' => 'id',
+        'status' => 'status',
+        'availableAction' => 'availableAction',
+        'scheduledDate' => 'scheduledDate',
+        'processedDate' => 'processedDate',
+        'addedDate' => 'addedDate',
+        'addedBy' => 'addedBy',
+        'cancelledDate' => 'cancelledDate',
+        'cancelledBy' => 'cancelledBy'
     ];
 
     /**
@@ -114,7 +140,15 @@ class MovementMovement implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId''status' => 'setStatus''availableAction' => 'setAvailableAction''scheduledDate' => 'setScheduledDate''processedDate' => 'setProcessedDate''addedDate' => 'setAddedDate''addedBy' => 'setAddedBy''cancelledDate' => 'setCancelledDate''cancelledBy' => 'setCancelledBy'
+        'id' => 'setId',
+        'status' => 'setStatus',
+        'availableAction' => 'setAvailableAction',
+        'scheduledDate' => 'setScheduledDate',
+        'processedDate' => 'setProcessedDate',
+        'addedDate' => 'setAddedDate',
+        'addedBy' => 'setAddedBy',
+        'cancelledDate' => 'setCancelledDate',
+        'cancelledBy' => 'setCancelledBy'
     ];
 
     /**
@@ -123,7 +157,15 @@ class MovementMovement implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId''status' => 'getStatus''availableAction' => 'getAvailableAction''scheduledDate' => 'getScheduledDate''processedDate' => 'getProcessedDate''addedDate' => 'getAddedDate''addedBy' => 'getAddedBy''cancelledDate' => 'getCancelledDate''cancelledBy' => 'getCancelledBy'
+        'id' => 'getId',
+        'status' => 'getStatus',
+        'availableAction' => 'getAvailableAction',
+        'scheduledDate' => 'getScheduledDate',
+        'processedDate' => 'getProcessedDate',
+        'addedDate' => 'getAddedDate',
+        'addedBy' => 'getAddedBy',
+        'cancelledDate' => 'getCancelledDate',
+        'cancelledBy' => 'getCancelledBy'
     ];
 
     /**
@@ -167,9 +209,6 @@ class MovementMovement implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -186,15 +225,15 @@ class MovementMovement implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['availableAction'] = isset($data['availableAction']) ? $data['availableAction'] : null;
-        $this->container['scheduledDate'] = isset($data['scheduledDate']) ? $data['scheduledDate'] : null;
-        $this->container['processedDate'] = isset($data['processedDate']) ? $data['processedDate'] : null;
-        $this->container['addedDate'] = isset($data['addedDate']) ? $data['addedDate'] : null;
-        $this->container['addedBy'] = isset($data['addedBy']) ? $data['addedBy'] : null;
-        $this->container['cancelledDate'] = isset($data['cancelledDate']) ? $data['cancelledDate'] : null;
-        $this->container['cancelledBy'] = isset($data['cancelledBy']) ? $data['cancelledBy'] : null;
+        $this->container['id'] = $data['id'] ?? null;
+        $this->container['status'] = $data['status'] ?? null;
+        $this->container['availableAction'] = $data['availableAction'] ?? null;
+        $this->container['scheduledDate'] = $data['scheduledDate'] ?? null;
+        $this->container['processedDate'] = $data['processedDate'] ?? null;
+        $this->container['addedDate'] = $data['addedDate'] ?? null;
+        $this->container['addedBy'] = $data['addedBy'] ?? null;
+        $this->container['cancelledDate'] = $data['cancelledDate'] ?? null;
+        $this->container['cancelledBy'] = $data['cancelledBy'] ?? null;
 
         // Initialize discriminator property with the model name.
         $this->container['type'] = static::$openAPIModelName;
@@ -239,7 +278,7 @@ class MovementMovement implements ModelInterface, ArrayAccess
      *
      * @param int|null $id id
      *
-     * @return $this
+     * @return self
      */
     public function setId($id)
     {
@@ -263,7 +302,7 @@ class MovementMovement implements ModelInterface, ArrayAccess
      *
      * @param string|null $status status
      *
-     * @return $this
+     * @return self
      */
     public function setStatus($status)
     {
@@ -287,7 +326,7 @@ class MovementMovement implements ModelInterface, ArrayAccess
      *
      * @param string|null $availableAction availableAction
      *
-     * @return $this
+     * @return self
      */
     public function setAvailableAction($availableAction)
     {
@@ -311,7 +350,7 @@ class MovementMovement implements ModelInterface, ArrayAccess
      *
      * @param string|null $scheduledDate scheduledDate
      *
-     * @return $this
+     * @return self
      */
     public function setScheduledDate($scheduledDate)
     {
@@ -335,7 +374,7 @@ class MovementMovement implements ModelInterface, ArrayAccess
      *
      * @param string|null $processedDate processedDate
      *
-     * @return $this
+     * @return self
      */
     public function setProcessedDate($processedDate)
     {
@@ -359,7 +398,7 @@ class MovementMovement implements ModelInterface, ArrayAccess
      *
      * @param string|null $addedDate addedDate
      *
-     * @return $this
+     * @return self
      */
     public function setAddedDate($addedDate)
     {
@@ -383,7 +422,7 @@ class MovementMovement implements ModelInterface, ArrayAccess
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null $addedBy addedBy
      *
-     * @return $this
+     * @return self
      */
     public function setAddedBy($addedBy)
     {
@@ -407,7 +446,7 @@ class MovementMovement implements ModelInterface, ArrayAccess
      *
      * @param string|null $cancelledDate cancelledDate
      *
-     * @return $this
+     * @return self
      */
     public function setCancelledDate($cancelledDate)
     {
@@ -431,7 +470,7 @@ class MovementMovement implements ModelInterface, ArrayAccess
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null $cancelledBy cancelledBy
      *
-     * @return $this
+     * @return self
      */
     public function setCancelledBy($cancelledBy)
     {
@@ -456,18 +495,18 @@ class MovementMovement implements ModelInterface, ArrayAccess
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -490,6 +529,18 @@ class MovementMovement implements ModelInterface, ArrayAccess
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

@@ -42,9 +42,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class LegacyDocumentGetResponse implements ModelInterface, ArrayAccess
+class LegacyDocumentGetResponse implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -59,16 +59,24 @@ class LegacyDocumentGetResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'stat' => 'string''errorCode' => 'string''errorMsg' => 'string''documents' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocument[]'
+        'stat' => 'string',
+        'errorCode' => 'string',
+        'errorMsg' => 'string',
+        'documents' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocument[]'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'stat' => null'errorCode' => null'errorMsg' => null'documents' => null
+        'stat' => null,
+        'errorCode' => null,
+        'errorMsg' => null,
+        'documents' => null
     ];
 
     /**
@@ -98,7 +106,10 @@ class LegacyDocumentGetResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'stat' => 'stat''errorCode' => 'error_code''errorMsg' => 'error_msg''documents' => 'documents'
+        'stat' => 'stat',
+        'errorCode' => 'error_code',
+        'errorMsg' => 'error_msg',
+        'documents' => 'documents'
     ];
 
     /**
@@ -107,7 +118,10 @@ class LegacyDocumentGetResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'stat' => 'setStat''errorCode' => 'setErrorCode''errorMsg' => 'setErrorMsg''documents' => 'setDocuments'
+        'stat' => 'setStat',
+        'errorCode' => 'setErrorCode',
+        'errorMsg' => 'setErrorMsg',
+        'documents' => 'setDocuments'
     ];
 
     /**
@@ -116,7 +130,10 @@ class LegacyDocumentGetResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'stat' => 'getStat''errorCode' => 'getErrorCode''errorMsg' => 'getErrorMsg''documents' => 'getDocuments'
+        'stat' => 'getStat',
+        'errorCode' => 'getErrorCode',
+        'errorMsg' => 'getErrorMsg',
+        'documents' => 'getDocuments'
     ];
 
     /**
@@ -160,9 +177,6 @@ class LegacyDocumentGetResponse implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -179,10 +193,10 @@ class LegacyDocumentGetResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['stat'] = isset($data['stat']) ? $data['stat'] : null;
-        $this->container['errorCode'] = isset($data['errorCode']) ? $data['errorCode'] : null;
-        $this->container['errorMsg'] = isset($data['errorMsg']) ? $data['errorMsg'] : null;
-        $this->container['documents'] = isset($data['documents']) ? $data['documents'] : null;
+        $this->container['stat'] = $data['stat'] ?? null;
+        $this->container['errorCode'] = $data['errorCode'] ?? null;
+        $this->container['errorMsg'] = $data['errorMsg'] ?? null;
+        $this->container['documents'] = $data['documents'] ?? null;
     }
 
     /**
@@ -227,7 +241,7 @@ class LegacyDocumentGetResponse implements ModelInterface, ArrayAccess
      *
      * @param string|null $stat Status of the request that has been made. Can be 'ok' or 'fail'
      *
-     * @return $this
+     * @return self
      */
     public function setStat($stat)
     {
@@ -251,7 +265,7 @@ class LegacyDocumentGetResponse implements ModelInterface, ArrayAccess
      *
      * @param string|null $errorCode If the request has failed, this element will contain the error code related to the problem encountered.
      *
-     * @return $this
+     * @return self
      */
     public function setErrorCode($errorCode)
     {
@@ -275,7 +289,7 @@ class LegacyDocumentGetResponse implements ModelInterface, ArrayAccess
      *
      * @param string|null $errorMsg If the request has failed, this element will contain the error message related to the problem encountered.
      *
-     * @return $this
+     * @return self
      */
     public function setErrorMsg($errorMsg)
     {
@@ -299,7 +313,7 @@ class LegacyDocumentGetResponse implements ModelInterface, ArrayAccess
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocument[] $documents Array of documents
      *
-     * @return $this
+     * @return self
      */
     public function setDocuments($documents)
     {
@@ -324,18 +338,18 @@ class LegacyDocumentGetResponse implements ModelInterface, ArrayAccess
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -358,6 +372,18 @@ class LegacyDocumentGetResponse implements ModelInterface, ArrayAccess
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

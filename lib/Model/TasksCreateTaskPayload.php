@@ -42,9 +42,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class TasksCreateTaskPayload implements ModelInterface, ArrayAccess
+class TasksCreateTaskPayload implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -59,16 +59,42 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'ownerIds' => 'int[]''isCompleted' => 'bool''subject' => 'string''dueDate' => 'string''initialDate' => 'string''completedDate' => 'string''description' => 'string''internalNotes' => 'string''categoryId' => 'int''subCategoryId' => 'int''priority' => 'int''visibility' => 'string''contactIds' => 'int[]'
+        'ownerIds' => 'int[]',
+        'isCompleted' => 'bool',
+        'subject' => 'string',
+        'dueDate' => 'string',
+        'initialDate' => 'string',
+        'completedDate' => 'string',
+        'description' => 'string',
+        'internalNotes' => 'string',
+        'categoryId' => 'int',
+        'subCategoryId' => 'int',
+        'priority' => 'int',
+        'visibility' => 'string',
+        'contactIds' => 'int[]'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'ownerIds' => null'isCompleted' => null'subject' => null'dueDate' => null'initialDate' => null'completedDate' => null'description' => null'internalNotes' => null'categoryId' => null'subCategoryId' => null'priority' => null'visibility' => null'contactIds' => null
+        'ownerIds' => null,
+        'isCompleted' => null,
+        'subject' => null,
+        'dueDate' => null,
+        'initialDate' => null,
+        'completedDate' => null,
+        'description' => null,
+        'internalNotes' => null,
+        'categoryId' => null,
+        'subCategoryId' => null,
+        'priority' => null,
+        'visibility' => null,
+        'contactIds' => null
     ];
 
     /**
@@ -98,7 +124,19 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'ownerIds' => 'ownerIds''isCompleted' => 'isCompleted''subject' => 'subject''dueDate' => 'dueDate''initialDate' => 'initialDate''completedDate' => 'completedDate''description' => 'description''internalNotes' => 'internalNotes''categoryId' => 'categoryId''subCategoryId' => 'subCategoryId''priority' => 'priority''visibility' => 'visibility''contactIds' => 'contactIds'
+        'ownerIds' => 'ownerIds',
+        'isCompleted' => 'isCompleted',
+        'subject' => 'subject',
+        'dueDate' => 'dueDate',
+        'initialDate' => 'initialDate',
+        'completedDate' => 'completedDate',
+        'description' => 'description',
+        'internalNotes' => 'internalNotes',
+        'categoryId' => 'categoryId',
+        'subCategoryId' => 'subCategoryId',
+        'priority' => 'priority',
+        'visibility' => 'visibility',
+        'contactIds' => 'contactIds'
     ];
 
     /**
@@ -107,7 +145,19 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'ownerIds' => 'setOwnerIds''isCompleted' => 'setIsCompleted''subject' => 'setSubject''dueDate' => 'setDueDate''initialDate' => 'setInitialDate''completedDate' => 'setCompletedDate''description' => 'setDescription''internalNotes' => 'setInternalNotes''categoryId' => 'setCategoryId''subCategoryId' => 'setSubCategoryId''priority' => 'setPriority''visibility' => 'setVisibility''contactIds' => 'setContactIds'
+        'ownerIds' => 'setOwnerIds',
+        'isCompleted' => 'setIsCompleted',
+        'subject' => 'setSubject',
+        'dueDate' => 'setDueDate',
+        'initialDate' => 'setInitialDate',
+        'completedDate' => 'setCompletedDate',
+        'description' => 'setDescription',
+        'internalNotes' => 'setInternalNotes',
+        'categoryId' => 'setCategoryId',
+        'subCategoryId' => 'setSubCategoryId',
+        'priority' => 'setPriority',
+        'visibility' => 'setVisibility',
+        'contactIds' => 'setContactIds'
     ];
 
     /**
@@ -116,7 +166,19 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'ownerIds' => 'getOwnerIds''isCompleted' => 'getIsCompleted''subject' => 'getSubject''dueDate' => 'getDueDate''initialDate' => 'getInitialDate''completedDate' => 'getCompletedDate''description' => 'getDescription''internalNotes' => 'getInternalNotes''categoryId' => 'getCategoryId''subCategoryId' => 'getSubCategoryId''priority' => 'getPriority''visibility' => 'getVisibility''contactIds' => 'getContactIds'
+        'ownerIds' => 'getOwnerIds',
+        'isCompleted' => 'getIsCompleted',
+        'subject' => 'getSubject',
+        'dueDate' => 'getDueDate',
+        'initialDate' => 'getInitialDate',
+        'completedDate' => 'getCompletedDate',
+        'description' => 'getDescription',
+        'internalNotes' => 'getInternalNotes',
+        'categoryId' => 'getCategoryId',
+        'subCategoryId' => 'getSubCategoryId',
+        'priority' => 'getPriority',
+        'visibility' => 'getVisibility',
+        'contactIds' => 'getContactIds'
     ];
 
     /**
@@ -160,9 +222,6 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -179,19 +238,19 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['ownerIds'] = isset($data['ownerIds']) ? $data['ownerIds'] : null;
-        $this->container['isCompleted'] = isset($data['isCompleted']) ? $data['isCompleted'] : null;
-        $this->container['subject'] = isset($data['subject']) ? $data['subject'] : null;
-        $this->container['dueDate'] = isset($data['dueDate']) ? $data['dueDate'] : null;
-        $this->container['initialDate'] = isset($data['initialDate']) ? $data['initialDate'] : null;
-        $this->container['completedDate'] = isset($data['completedDate']) ? $data['completedDate'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['internalNotes'] = isset($data['internalNotes']) ? $data['internalNotes'] : null;
-        $this->container['categoryId'] = isset($data['categoryId']) ? $data['categoryId'] : null;
-        $this->container['subCategoryId'] = isset($data['subCategoryId']) ? $data['subCategoryId'] : null;
-        $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
-        $this->container['visibility'] = isset($data['visibility']) ? $data['visibility'] : null;
-        $this->container['contactIds'] = isset($data['contactIds']) ? $data['contactIds'] : null;
+        $this->container['ownerIds'] = $data['ownerIds'] ?? null;
+        $this->container['isCompleted'] = $data['isCompleted'] ?? null;
+        $this->container['subject'] = $data['subject'] ?? null;
+        $this->container['dueDate'] = $data['dueDate'] ?? null;
+        $this->container['initialDate'] = $data['initialDate'] ?? null;
+        $this->container['completedDate'] = $data['completedDate'] ?? null;
+        $this->container['description'] = $data['description'] ?? null;
+        $this->container['internalNotes'] = $data['internalNotes'] ?? null;
+        $this->container['categoryId'] = $data['categoryId'] ?? null;
+        $this->container['subCategoryId'] = $data['subCategoryId'] ?? null;
+        $this->container['priority'] = $data['priority'] ?? null;
+        $this->container['visibility'] = $data['visibility'] ?? null;
+        $this->container['contactIds'] = $data['contactIds'] ?? null;
     }
 
     /**
@@ -236,7 +295,7 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess
      *
      * @param int[]|null $ownerIds Ids of the owner users of the task.
      *
-     * @return $this
+     * @return self
      */
     public function setOwnerIds($ownerIds)
     {
@@ -260,7 +319,7 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess
      *
      * @param bool|null $isCompleted Is the task completed.
      *
-     * @return $this
+     * @return self
      */
     public function setIsCompleted($isCompleted)
     {
@@ -284,7 +343,7 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess
      *
      * @param string $subject Subject/Title of the Event.
      *
-     * @return $this
+     * @return self
      */
     public function setSubject($subject)
     {
@@ -308,7 +367,7 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess
      *
      * @param string|null $dueDate Date the task is expected to be done. As defined by full-date - RFC3339
      *
-     * @return $this
+     * @return self
      */
     public function setDueDate($dueDate)
     {
@@ -332,7 +391,7 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess
      *
      * @param string|null $initialDate Date the task was initially started. As defined by full-date - RFC3339
      *
-     * @return $this
+     * @return self
      */
     public function setInitialDate($initialDate)
     {
@@ -356,7 +415,7 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess
      *
      * @param string|null $completedDate Date the task was completed / done. As defined by full-date - RFC3339
      *
-     * @return $this
+     * @return self
      */
     public function setCompletedDate($completedDate)
     {
@@ -380,7 +439,7 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess
      *
      * @param string|null $description Public description of the Event.
      *
-     * @return $this
+     * @return self
      */
     public function setDescription($description)
     {
@@ -404,7 +463,7 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess
      *
      * @param string|null $internalNotes Internal notes on the Event. Not synced on remote sources.
      *
-     * @return $this
+     * @return self
      */
     public function setInternalNotes($internalNotes)
     {
@@ -428,7 +487,7 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess
      *
      * @param int|null $categoryId ID of the field value to use as category.
      *
-     * @return $this
+     * @return self
      */
     public function setCategoryId($categoryId)
     {
@@ -452,7 +511,7 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess
      *
      * @param int|null $subCategoryId ID of the field value to use as sub-category.
      *
-     * @return $this
+     * @return self
      */
     public function setSubCategoryId($subCategoryId)
     {
@@ -476,7 +535,7 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess
      *
      * @param int|null $priority Importance/Priority of an event or task. 5 is the most important.
      *
-     * @return $this
+     * @return self
      */
     public function setPriority($priority)
     {
@@ -500,7 +559,7 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess
      *
      * @param string|null $visibility Confidentiality level of the Event (private or not). [NORMAL, PRIVATE]
      *
-     * @return $this
+     * @return self
      */
     public function setVisibility($visibility)
     {
@@ -524,7 +583,7 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess
      *
      * @param int[]|null $contactIds Allow to link the task to one or many contacts.
      *
-     * @return $this
+     * @return self
      */
     public function setContactIds($contactIds)
     {
@@ -549,18 +608,18 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -583,6 +642,18 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

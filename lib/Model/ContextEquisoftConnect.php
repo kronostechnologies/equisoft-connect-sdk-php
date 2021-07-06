@@ -42,9 +42,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class ContextEquisoftConnect implements ModelInterface, ArrayAccess
+class ContextEquisoftConnect implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -59,16 +59,26 @@ class ContextEquisoftConnect implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'profile' => 'string''appVersion' => 'string''instance' => '\Equisoft\SDK\EquisoftConnect\Model\ContextInstance''user' => '\Equisoft\SDK\EquisoftConnect\Model\ContextEquisoftConnectUser''preferences' => '\Equisoft\SDK\EquisoftConnect\Model\ContextPreferences'
+        'profile' => 'string',
+        'appVersion' => 'string',
+        'instance' => '\Equisoft\SDK\EquisoftConnect\Model\ContextInstance',
+        'user' => '\Equisoft\SDK\EquisoftConnect\Model\ContextEquisoftConnectUser',
+        'preferences' => '\Equisoft\SDK\EquisoftConnect\Model\ContextPreferences'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'profile' => null'appVersion' => null'instance' => null'user' => null'preferences' => null
+        'profile' => null,
+        'appVersion' => null,
+        'instance' => null,
+        'user' => null,
+        'preferences' => null
     ];
 
     /**
@@ -98,7 +108,11 @@ class ContextEquisoftConnect implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'profile' => 'profile''appVersion' => 'appVersion''instance' => 'instance''user' => 'user''preferences' => 'preferences'
+        'profile' => 'profile',
+        'appVersion' => 'appVersion',
+        'instance' => 'instance',
+        'user' => 'user',
+        'preferences' => 'preferences'
     ];
 
     /**
@@ -107,7 +121,11 @@ class ContextEquisoftConnect implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'profile' => 'setProfile''appVersion' => 'setAppVersion''instance' => 'setInstance''user' => 'setUser''preferences' => 'setPreferences'
+        'profile' => 'setProfile',
+        'appVersion' => 'setAppVersion',
+        'instance' => 'setInstance',
+        'user' => 'setUser',
+        'preferences' => 'setPreferences'
     ];
 
     /**
@@ -116,7 +134,11 @@ class ContextEquisoftConnect implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'profile' => 'getProfile''appVersion' => 'getAppVersion''instance' => 'getInstance''user' => 'getUser''preferences' => 'getPreferences'
+        'profile' => 'getProfile',
+        'appVersion' => 'getAppVersion',
+        'instance' => 'getInstance',
+        'user' => 'getUser',
+        'preferences' => 'getPreferences'
     ];
 
     /**
@@ -160,9 +182,6 @@ class ContextEquisoftConnect implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -179,11 +198,11 @@ class ContextEquisoftConnect implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['profile'] = isset($data['profile']) ? $data['profile'] : null;
-        $this->container['appVersion'] = isset($data['appVersion']) ? $data['appVersion'] : null;
-        $this->container['instance'] = isset($data['instance']) ? $data['instance'] : null;
-        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
-        $this->container['preferences'] = isset($data['preferences']) ? $data['preferences'] : null;
+        $this->container['profile'] = $data['profile'] ?? null;
+        $this->container['appVersion'] = $data['appVersion'] ?? null;
+        $this->container['instance'] = $data['instance'] ?? null;
+        $this->container['user'] = $data['user'] ?? null;
+        $this->container['preferences'] = $data['preferences'] ?? null;
     }
 
     /**
@@ -240,7 +259,7 @@ class ContextEquisoftConnect implements ModelInterface, ArrayAccess
      *
      * @param string $profile $profile
      *
-     * @return $this
+     * @return self
      */
     public function setProfile($profile)
     {
@@ -264,7 +283,7 @@ class ContextEquisoftConnect implements ModelInterface, ArrayAccess
      *
      * @param string $appVersion $appVersion
      *
-     * @return $this
+     * @return self
      */
     public function setAppVersion($appVersion)
     {
@@ -288,7 +307,7 @@ class ContextEquisoftConnect implements ModelInterface, ArrayAccess
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\ContextInstance $instance instance
      *
-     * @return $this
+     * @return self
      */
     public function setInstance($instance)
     {
@@ -312,7 +331,7 @@ class ContextEquisoftConnect implements ModelInterface, ArrayAccess
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\ContextEquisoftConnectUser $user user
      *
-     * @return $this
+     * @return self
      */
     public function setUser($user)
     {
@@ -336,7 +355,7 @@ class ContextEquisoftConnect implements ModelInterface, ArrayAccess
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\ContextPreferences $preferences preferences
      *
-     * @return $this
+     * @return self
      */
     public function setPreferences($preferences)
     {
@@ -361,18 +380,18 @@ class ContextEquisoftConnect implements ModelInterface, ArrayAccess
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -395,6 +414,18 @@ class ContextEquisoftConnect implements ModelInterface, ArrayAccess
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

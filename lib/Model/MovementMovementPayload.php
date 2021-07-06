@@ -42,10 +42,10 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class MovementMovementPayload implements ModelInterface, ArrayAccess
+class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = 'type';
-    const DISCRIMINATOR_MAP = [
+    public const DISCRIMINATOR = 'type';
+    public const DISCRIMINATOR_MAP = [
         "CLIENTBASE_USING_DISTLIST" => "MovementClientBaseUsingDistributionListMovementPayload",
         "CLIENTBASE_USING_FILE" => "MovementClientBaseUsingFileMovementPayload",
         "COPY" => "MovementCopyMovementPayload",
@@ -66,16 +66,20 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'date' => 'string''now' => 'bool'
+        'date' => 'string',
+        'now' => 'bool'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'date' => null'now' => null
+        'date' => null,
+        'now' => null
     ];
 
     /**
@@ -105,7 +109,8 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'date' => 'date''now' => 'now'
+        'date' => 'date',
+        'now' => 'now'
     ];
 
     /**
@@ -114,7 +119,8 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'date' => 'setDate''now' => 'setNow'
+        'date' => 'setDate',
+        'now' => 'setNow'
     ];
 
     /**
@@ -123,7 +129,8 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'date' => 'getDate''now' => 'getNow'
+        'date' => 'getDate',
+        'now' => 'getNow'
     ];
 
     /**
@@ -167,9 +174,6 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -186,8 +190,8 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['date'] = isset($data['date']) ? $data['date'] : null;
-        $this->container['now'] = isset($data['now']) ? $data['now'] : null;
+        $this->container['date'] = $data['date'] ?? null;
+        $this->container['now'] = $data['now'] ?? null;
 
         // Initialize discriminator property with the model name.
         $this->container['type'] = static::$openAPIModelName;
@@ -232,7 +236,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess
      *
      * @param string|null $date date
      *
-     * @return $this
+     * @return self
      */
     public function setDate($date)
     {
@@ -256,7 +260,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess
      *
      * @param bool|null $now now
      *
-     * @return $this
+     * @return self
      */
     public function setNow($now)
     {
@@ -281,18 +285,18 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -315,6 +319,18 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

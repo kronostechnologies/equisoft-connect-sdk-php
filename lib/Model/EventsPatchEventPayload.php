@@ -42,9 +42,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class EventsPatchEventPayload implements ModelInterface, ArrayAccess
+class EventsPatchEventPayload implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -59,16 +59,44 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'subject' => 'string''start' => '\Equisoft\SDK\EquisoftConnect\Model\DateOrDateTime''end' => '\Equisoft\SDK\EquisoftConnect\Model\DateOrDateTime''allDay' => 'bool''initialDate' => 'string''description' => 'string''internalNotes' => 'string''location' => 'string''type' => 'string''categoryId' => 'int''subCategoryId' => 'int''priority' => 'int''visibility' => 'string''contactIds' => 'int[]'
+        'subject' => 'string',
+        'start' => '\Equisoft\SDK\EquisoftConnect\Model\DateOrDateTime',
+        'end' => '\Equisoft\SDK\EquisoftConnect\Model\DateOrDateTime',
+        'allDay' => 'bool',
+        'initialDate' => 'string',
+        'description' => 'string',
+        'internalNotes' => 'string',
+        'location' => 'string',
+        'type' => 'string',
+        'categoryId' => 'int',
+        'subCategoryId' => 'int',
+        'priority' => 'int',
+        'visibility' => 'string',
+        'contactIds' => 'int[]'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'subject' => null'start' => null'end' => null'allDay' => null'initialDate' => null'description' => null'internalNotes' => null'location' => null'type' => null'categoryId' => null'subCategoryId' => null'priority' => null'visibility' => null'contactIds' => null
+        'subject' => null,
+        'start' => null,
+        'end' => null,
+        'allDay' => null,
+        'initialDate' => null,
+        'description' => null,
+        'internalNotes' => null,
+        'location' => null,
+        'type' => null,
+        'categoryId' => null,
+        'subCategoryId' => null,
+        'priority' => null,
+        'visibility' => null,
+        'contactIds' => null
     ];
 
     /**
@@ -98,7 +126,20 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'subject' => 'subject''start' => 'start''end' => 'end''allDay' => 'allDay''initialDate' => 'initialDate''description' => 'description''internalNotes' => 'internalNotes''location' => 'location''type' => 'type''categoryId' => 'categoryId''subCategoryId' => 'subCategoryId''priority' => 'priority''visibility' => 'visibility''contactIds' => 'contactIds'
+        'subject' => 'subject',
+        'start' => 'start',
+        'end' => 'end',
+        'allDay' => 'allDay',
+        'initialDate' => 'initialDate',
+        'description' => 'description',
+        'internalNotes' => 'internalNotes',
+        'location' => 'location',
+        'type' => 'type',
+        'categoryId' => 'categoryId',
+        'subCategoryId' => 'subCategoryId',
+        'priority' => 'priority',
+        'visibility' => 'visibility',
+        'contactIds' => 'contactIds'
     ];
 
     /**
@@ -107,7 +148,20 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'subject' => 'setSubject''start' => 'setStart''end' => 'setEnd''allDay' => 'setAllDay''initialDate' => 'setInitialDate''description' => 'setDescription''internalNotes' => 'setInternalNotes''location' => 'setLocation''type' => 'setType''categoryId' => 'setCategoryId''subCategoryId' => 'setSubCategoryId''priority' => 'setPriority''visibility' => 'setVisibility''contactIds' => 'setContactIds'
+        'subject' => 'setSubject',
+        'start' => 'setStart',
+        'end' => 'setEnd',
+        'allDay' => 'setAllDay',
+        'initialDate' => 'setInitialDate',
+        'description' => 'setDescription',
+        'internalNotes' => 'setInternalNotes',
+        'location' => 'setLocation',
+        'type' => 'setType',
+        'categoryId' => 'setCategoryId',
+        'subCategoryId' => 'setSubCategoryId',
+        'priority' => 'setPriority',
+        'visibility' => 'setVisibility',
+        'contactIds' => 'setContactIds'
     ];
 
     /**
@@ -116,7 +170,20 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'subject' => 'getSubject''start' => 'getStart''end' => 'getEnd''allDay' => 'getAllDay''initialDate' => 'getInitialDate''description' => 'getDescription''internalNotes' => 'getInternalNotes''location' => 'getLocation''type' => 'getType''categoryId' => 'getCategoryId''subCategoryId' => 'getSubCategoryId''priority' => 'getPriority''visibility' => 'getVisibility''contactIds' => 'getContactIds'
+        'subject' => 'getSubject',
+        'start' => 'getStart',
+        'end' => 'getEnd',
+        'allDay' => 'getAllDay',
+        'initialDate' => 'getInitialDate',
+        'description' => 'getDescription',
+        'internalNotes' => 'getInternalNotes',
+        'location' => 'getLocation',
+        'type' => 'getType',
+        'categoryId' => 'getCategoryId',
+        'subCategoryId' => 'getSubCategoryId',
+        'priority' => 'getPriority',
+        'visibility' => 'getVisibility',
+        'contactIds' => 'getContactIds'
     ];
 
     /**
@@ -160,9 +227,6 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -179,20 +243,20 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['subject'] = isset($data['subject']) ? $data['subject'] : null;
-        $this->container['start'] = isset($data['start']) ? $data['start'] : null;
-        $this->container['end'] = isset($data['end']) ? $data['end'] : null;
-        $this->container['allDay'] = isset($data['allDay']) ? $data['allDay'] : null;
-        $this->container['initialDate'] = isset($data['initialDate']) ? $data['initialDate'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
-        $this->container['internalNotes'] = isset($data['internalNotes']) ? $data['internalNotes'] : null;
-        $this->container['location'] = isset($data['location']) ? $data['location'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['categoryId'] = isset($data['categoryId']) ? $data['categoryId'] : null;
-        $this->container['subCategoryId'] = isset($data['subCategoryId']) ? $data['subCategoryId'] : null;
-        $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
-        $this->container['visibility'] = isset($data['visibility']) ? $data['visibility'] : null;
-        $this->container['contactIds'] = isset($data['contactIds']) ? $data['contactIds'] : null;
+        $this->container['subject'] = $data['subject'] ?? null;
+        $this->container['start'] = $data['start'] ?? null;
+        $this->container['end'] = $data['end'] ?? null;
+        $this->container['allDay'] = $data['allDay'] ?? null;
+        $this->container['initialDate'] = $data['initialDate'] ?? null;
+        $this->container['description'] = $data['description'] ?? null;
+        $this->container['internalNotes'] = $data['internalNotes'] ?? null;
+        $this->container['location'] = $data['location'] ?? null;
+        $this->container['type'] = $data['type'] ?? null;
+        $this->container['categoryId'] = $data['categoryId'] ?? null;
+        $this->container['subCategoryId'] = $data['subCategoryId'] ?? null;
+        $this->container['priority'] = $data['priority'] ?? null;
+        $this->container['visibility'] = $data['visibility'] ?? null;
+        $this->container['contactIds'] = $data['contactIds'] ?? null;
     }
 
     /**
@@ -234,7 +298,7 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess
      *
      * @param string|null $subject Subject/Title of the Event.
      *
-     * @return $this
+     * @return self
      */
     public function setSubject($subject)
     {
@@ -258,7 +322,7 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\DateOrDateTime|null $start start
      *
-     * @return $this
+     * @return self
      */
     public function setStart($start)
     {
@@ -282,7 +346,7 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\DateOrDateTime|null $end end
      *
-     * @return $this
+     * @return self
      */
     public function setEnd($end)
     {
@@ -306,7 +370,7 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess
      *
      * @param bool|null $allDay Indicate if the event is an all-day event or a timed event.
      *
-     * @return $this
+     * @return self
      */
     public function setAllDay($allDay)
     {
@@ -330,7 +394,7 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess
      *
      * @param string|null $initialDate Date the Event was initially scheduled. As defined by full-date - RFC3339
      *
-     * @return $this
+     * @return self
      */
     public function setInitialDate($initialDate)
     {
@@ -354,7 +418,7 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess
      *
      * @param string|null $description Public description of the Event.
      *
-     * @return $this
+     * @return self
      */
     public function setDescription($description)
     {
@@ -378,7 +442,7 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess
      *
      * @param string|null $internalNotes Internal notes on the Event. Not synced on remote sources.
      *
-     * @return $this
+     * @return self
      */
     public function setInternalNotes($internalNotes)
     {
@@ -402,7 +466,7 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess
      *
      * @param string|null $location Location of the event in free-text form.
      *
-     * @return $this
+     * @return self
      */
     public function setLocation($location)
     {
@@ -426,7 +490,7 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess
      *
      * @param string|null $type Event type (CALL, LETTER, MEETING, VACATION, FILE, NOTE)
      *
-     * @return $this
+     * @return self
      */
     public function setType($type)
     {
@@ -450,7 +514,7 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess
      *
      * @param int|null $categoryId ID of the field value to use as category.
      *
-     * @return $this
+     * @return self
      */
     public function setCategoryId($categoryId)
     {
@@ -474,7 +538,7 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess
      *
      * @param int|null $subCategoryId ID of the field value to use as sub-category.
      *
-     * @return $this
+     * @return self
      */
     public function setSubCategoryId($subCategoryId)
     {
@@ -498,7 +562,7 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess
      *
      * @param int|null $priority Importance/Priority of an event or task. 5 is the most important.
      *
-     * @return $this
+     * @return self
      */
     public function setPriority($priority)
     {
@@ -522,7 +586,7 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess
      *
      * @param string|null $visibility Confidentiality level of the Event (private or not). [NORMAL, PRIVATE]
      *
-     * @return $this
+     * @return self
      */
     public function setVisibility($visibility)
     {
@@ -546,7 +610,7 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess
      *
      * @param int[]|null $contactIds Allow to link the event to one or many contacts.
      *
-     * @return $this
+     * @return self
      */
     public function setContactIds($contactIds)
     {
@@ -571,18 +635,18 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -605,6 +669,18 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

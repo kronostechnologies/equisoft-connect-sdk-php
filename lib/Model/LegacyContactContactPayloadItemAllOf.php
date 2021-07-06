@@ -42,9 +42,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAccess
+class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -59,16 +59,106 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $openAPITypes = [
-        'externalKey' => 'string''externalKeyType' => 'string''gender' => 'string''sin' => 'string''birthdate' => 'string''smoker' => 'string''smokerSince' => 'string''phoneHome' => 'string''phoneHomeSecond' => 'string''phoneAssistant' => 'string''phoneOffice' => 'string''phoneOfficeSecond' => 'string''phoneCell' => 'string''phonePager' => 'string''phoneFax' => 'string''mainEmail' => 'string''emailPersonal' => 'string''webSite' => 'string''emailBusiness' => 'string''emailOther' => 'string''notes' => 'string''peculiarity' => 'string''endFinancialYear' => 'string''language' => 'string''active' => 'string''publish' => 'string''title' => 'string''suffix' => 'string''civility' => 'string''civilityId' => 'int''personAddressed' => 'string''organizationLine1' => 'string''organizationLine2' => 'string''department' => 'string''customerNumber' => 'string''birthPlace' => 'string''nationality' => 'string''orgDateCreated' => 'string''orgDateClosed' => 'string''dateEndFinancialYear' => 'string''orgIdNo' => 'string''orgFedNo' => 'string''orgProvNo' => 'string''orgStateId' => 'string''orgEin' => 'string'
+        'externalKey' => 'string',
+        'externalKeyType' => 'string',
+        'gender' => 'string',
+        'sin' => 'string',
+        'birthdate' => 'string',
+        'smoker' => 'string',
+        'smokerSince' => 'string',
+        'phoneHome' => 'string',
+        'phoneHomeSecond' => 'string',
+        'phoneAssistant' => 'string',
+        'phoneOffice' => 'string',
+        'phoneOfficeSecond' => 'string',
+        'phoneCell' => 'string',
+        'phonePager' => 'string',
+        'phoneFax' => 'string',
+        'mainEmail' => 'string',
+        'emailPersonal' => 'string',
+        'webSite' => 'string',
+        'emailBusiness' => 'string',
+        'emailOther' => 'string',
+        'notes' => 'string',
+        'peculiarity' => 'string',
+        'endFinancialYear' => 'string',
+        'language' => 'string',
+        'active' => 'string',
+        'publish' => 'string',
+        'title' => 'string',
+        'suffix' => 'string',
+        'civility' => 'string',
+        'civilityId' => 'int',
+        'personAddressed' => 'string',
+        'organizationLine1' => 'string',
+        'organizationLine2' => 'string',
+        'department' => 'string',
+        'customerNumber' => 'string',
+        'birthPlace' => 'string',
+        'nationality' => 'string',
+        'orgDateCreated' => 'string',
+        'orgDateClosed' => 'string',
+        'dateEndFinancialYear' => 'string',
+        'orgIdNo' => 'string',
+        'orgFedNo' => 'string',
+        'orgProvNo' => 'string',
+        'orgStateId' => 'string',
+        'orgEin' => 'string'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'externalKey' => null'externalKeyType' => null'gender' => null'sin' => null'birthdate' => null'smoker' => null'smokerSince' => null'phoneHome' => null'phoneHomeSecond' => null'phoneAssistant' => null'phoneOffice' => null'phoneOfficeSecond' => null'phoneCell' => null'phonePager' => null'phoneFax' => null'mainEmail' => null'emailPersonal' => null'webSite' => null'emailBusiness' => null'emailOther' => null'notes' => null'peculiarity' => null'endFinancialYear' => null'language' => null'active' => null'publish' => null'title' => null'suffix' => null'civility' => null'civilityId' => null'personAddressed' => null'organizationLine1' => null'organizationLine2' => null'department' => null'customerNumber' => null'birthPlace' => null'nationality' => null'orgDateCreated' => null'orgDateClosed' => null'dateEndFinancialYear' => null'orgIdNo' => null'orgFedNo' => null'orgProvNo' => null'orgStateId' => null'orgEin' => null
+        'externalKey' => null,
+        'externalKeyType' => null,
+        'gender' => null,
+        'sin' => null,
+        'birthdate' => null,
+        'smoker' => null,
+        'smokerSince' => null,
+        'phoneHome' => null,
+        'phoneHomeSecond' => null,
+        'phoneAssistant' => null,
+        'phoneOffice' => null,
+        'phoneOfficeSecond' => null,
+        'phoneCell' => null,
+        'phonePager' => null,
+        'phoneFax' => null,
+        'mainEmail' => null,
+        'emailPersonal' => null,
+        'webSite' => null,
+        'emailBusiness' => null,
+        'emailOther' => null,
+        'notes' => null,
+        'peculiarity' => null,
+        'endFinancialYear' => null,
+        'language' => null,
+        'active' => null,
+        'publish' => null,
+        'title' => null,
+        'suffix' => null,
+        'civility' => null,
+        'civilityId' => null,
+        'personAddressed' => null,
+        'organizationLine1' => null,
+        'organizationLine2' => null,
+        'department' => null,
+        'customerNumber' => null,
+        'birthPlace' => null,
+        'nationality' => null,
+        'orgDateCreated' => null,
+        'orgDateClosed' => null,
+        'dateEndFinancialYear' => null,
+        'orgIdNo' => null,
+        'orgFedNo' => null,
+        'orgProvNo' => null,
+        'orgStateId' => null,
+        'orgEin' => null
     ];
 
     /**
@@ -98,7 +188,51 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $attributeMap = [
-        'externalKey' => 'externalKey''externalKeyType' => 'externalKeyType''gender' => 'gender''sin' => 'sin''birthdate' => 'birthdate''smoker' => 'smoker''smokerSince' => 'smokerSince''phoneHome' => 'phoneHome''phoneHomeSecond' => 'phoneHomeSecond''phoneAssistant' => 'phoneAssistant''phoneOffice' => 'phoneOffice''phoneOfficeSecond' => 'phoneOfficeSecond''phoneCell' => 'phoneCell''phonePager' => 'phonePager''phoneFax' => 'phoneFax''mainEmail' => 'mainEmail''emailPersonal' => 'emailPersonal''webSite' => 'webSite''emailBusiness' => 'emailBusiness''emailOther' => 'emailOther''notes' => 'notes''peculiarity' => 'peculiarity''endFinancialYear' => 'endFinancialYear''language' => 'language''active' => 'active''publish' => 'publish''title' => 'title''suffix' => 'suffix''civility' => 'civility''civilityId' => 'civilityId''personAddressed' => 'personAddressed''organizationLine1' => 'organizationLine1''organizationLine2' => 'organizationLine2''department' => 'department''customerNumber' => 'customerNumber''birthPlace' => 'birthPlace''nationality' => 'nationality''orgDateCreated' => 'orgDateCreated''orgDateClosed' => 'orgDateClosed''dateEndFinancialYear' => 'dateEndFinancialYear''orgIdNo' => 'orgIdNo''orgFedNo' => 'orgFedNo''orgProvNo' => 'orgProvNo''orgStateId' => 'orgStateId''orgEin' => 'orgEin'
+        'externalKey' => 'externalKey',
+        'externalKeyType' => 'externalKeyType',
+        'gender' => 'gender',
+        'sin' => 'sin',
+        'birthdate' => 'birthdate',
+        'smoker' => 'smoker',
+        'smokerSince' => 'smokerSince',
+        'phoneHome' => 'phoneHome',
+        'phoneHomeSecond' => 'phoneHomeSecond',
+        'phoneAssistant' => 'phoneAssistant',
+        'phoneOffice' => 'phoneOffice',
+        'phoneOfficeSecond' => 'phoneOfficeSecond',
+        'phoneCell' => 'phoneCell',
+        'phonePager' => 'phonePager',
+        'phoneFax' => 'phoneFax',
+        'mainEmail' => 'mainEmail',
+        'emailPersonal' => 'emailPersonal',
+        'webSite' => 'webSite',
+        'emailBusiness' => 'emailBusiness',
+        'emailOther' => 'emailOther',
+        'notes' => 'notes',
+        'peculiarity' => 'peculiarity',
+        'endFinancialYear' => 'endFinancialYear',
+        'language' => 'language',
+        'active' => 'active',
+        'publish' => 'publish',
+        'title' => 'title',
+        'suffix' => 'suffix',
+        'civility' => 'civility',
+        'civilityId' => 'civilityId',
+        'personAddressed' => 'personAddressed',
+        'organizationLine1' => 'organizationLine1',
+        'organizationLine2' => 'organizationLine2',
+        'department' => 'department',
+        'customerNumber' => 'customerNumber',
+        'birthPlace' => 'birthPlace',
+        'nationality' => 'nationality',
+        'orgDateCreated' => 'orgDateCreated',
+        'orgDateClosed' => 'orgDateClosed',
+        'dateEndFinancialYear' => 'dateEndFinancialYear',
+        'orgIdNo' => 'orgIdNo',
+        'orgFedNo' => 'orgFedNo',
+        'orgProvNo' => 'orgProvNo',
+        'orgStateId' => 'orgStateId',
+        'orgEin' => 'orgEin'
     ];
 
     /**
@@ -107,7 +241,51 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $setters = [
-        'externalKey' => 'setExternalKey''externalKeyType' => 'setExternalKeyType''gender' => 'setGender''sin' => 'setSin''birthdate' => 'setBirthdate''smoker' => 'setSmoker''smokerSince' => 'setSmokerSince''phoneHome' => 'setPhoneHome''phoneHomeSecond' => 'setPhoneHomeSecond''phoneAssistant' => 'setPhoneAssistant''phoneOffice' => 'setPhoneOffice''phoneOfficeSecond' => 'setPhoneOfficeSecond''phoneCell' => 'setPhoneCell''phonePager' => 'setPhonePager''phoneFax' => 'setPhoneFax''mainEmail' => 'setMainEmail''emailPersonal' => 'setEmailPersonal''webSite' => 'setWebSite''emailBusiness' => 'setEmailBusiness''emailOther' => 'setEmailOther''notes' => 'setNotes''peculiarity' => 'setPeculiarity''endFinancialYear' => 'setEndFinancialYear''language' => 'setLanguage''active' => 'setActive''publish' => 'setPublish''title' => 'setTitle''suffix' => 'setSuffix''civility' => 'setCivility''civilityId' => 'setCivilityId''personAddressed' => 'setPersonAddressed''organizationLine1' => 'setOrganizationLine1''organizationLine2' => 'setOrganizationLine2''department' => 'setDepartment''customerNumber' => 'setCustomerNumber''birthPlace' => 'setBirthPlace''nationality' => 'setNationality''orgDateCreated' => 'setOrgDateCreated''orgDateClosed' => 'setOrgDateClosed''dateEndFinancialYear' => 'setDateEndFinancialYear''orgIdNo' => 'setOrgIdNo''orgFedNo' => 'setOrgFedNo''orgProvNo' => 'setOrgProvNo''orgStateId' => 'setOrgStateId''orgEin' => 'setOrgEin'
+        'externalKey' => 'setExternalKey',
+        'externalKeyType' => 'setExternalKeyType',
+        'gender' => 'setGender',
+        'sin' => 'setSin',
+        'birthdate' => 'setBirthdate',
+        'smoker' => 'setSmoker',
+        'smokerSince' => 'setSmokerSince',
+        'phoneHome' => 'setPhoneHome',
+        'phoneHomeSecond' => 'setPhoneHomeSecond',
+        'phoneAssistant' => 'setPhoneAssistant',
+        'phoneOffice' => 'setPhoneOffice',
+        'phoneOfficeSecond' => 'setPhoneOfficeSecond',
+        'phoneCell' => 'setPhoneCell',
+        'phonePager' => 'setPhonePager',
+        'phoneFax' => 'setPhoneFax',
+        'mainEmail' => 'setMainEmail',
+        'emailPersonal' => 'setEmailPersonal',
+        'webSite' => 'setWebSite',
+        'emailBusiness' => 'setEmailBusiness',
+        'emailOther' => 'setEmailOther',
+        'notes' => 'setNotes',
+        'peculiarity' => 'setPeculiarity',
+        'endFinancialYear' => 'setEndFinancialYear',
+        'language' => 'setLanguage',
+        'active' => 'setActive',
+        'publish' => 'setPublish',
+        'title' => 'setTitle',
+        'suffix' => 'setSuffix',
+        'civility' => 'setCivility',
+        'civilityId' => 'setCivilityId',
+        'personAddressed' => 'setPersonAddressed',
+        'organizationLine1' => 'setOrganizationLine1',
+        'organizationLine2' => 'setOrganizationLine2',
+        'department' => 'setDepartment',
+        'customerNumber' => 'setCustomerNumber',
+        'birthPlace' => 'setBirthPlace',
+        'nationality' => 'setNationality',
+        'orgDateCreated' => 'setOrgDateCreated',
+        'orgDateClosed' => 'setOrgDateClosed',
+        'dateEndFinancialYear' => 'setDateEndFinancialYear',
+        'orgIdNo' => 'setOrgIdNo',
+        'orgFedNo' => 'setOrgFedNo',
+        'orgProvNo' => 'setOrgProvNo',
+        'orgStateId' => 'setOrgStateId',
+        'orgEin' => 'setOrgEin'
     ];
 
     /**
@@ -116,7 +294,51 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $getters = [
-        'externalKey' => 'getExternalKey''externalKeyType' => 'getExternalKeyType''gender' => 'getGender''sin' => 'getSin''birthdate' => 'getBirthdate''smoker' => 'getSmoker''smokerSince' => 'getSmokerSince''phoneHome' => 'getPhoneHome''phoneHomeSecond' => 'getPhoneHomeSecond''phoneAssistant' => 'getPhoneAssistant''phoneOffice' => 'getPhoneOffice''phoneOfficeSecond' => 'getPhoneOfficeSecond''phoneCell' => 'getPhoneCell''phonePager' => 'getPhonePager''phoneFax' => 'getPhoneFax''mainEmail' => 'getMainEmail''emailPersonal' => 'getEmailPersonal''webSite' => 'getWebSite''emailBusiness' => 'getEmailBusiness''emailOther' => 'getEmailOther''notes' => 'getNotes''peculiarity' => 'getPeculiarity''endFinancialYear' => 'getEndFinancialYear''language' => 'getLanguage''active' => 'getActive''publish' => 'getPublish''title' => 'getTitle''suffix' => 'getSuffix''civility' => 'getCivility''civilityId' => 'getCivilityId''personAddressed' => 'getPersonAddressed''organizationLine1' => 'getOrganizationLine1''organizationLine2' => 'getOrganizationLine2''department' => 'getDepartment''customerNumber' => 'getCustomerNumber''birthPlace' => 'getBirthPlace''nationality' => 'getNationality''orgDateCreated' => 'getOrgDateCreated''orgDateClosed' => 'getOrgDateClosed''dateEndFinancialYear' => 'getDateEndFinancialYear''orgIdNo' => 'getOrgIdNo''orgFedNo' => 'getOrgFedNo''orgProvNo' => 'getOrgProvNo''orgStateId' => 'getOrgStateId''orgEin' => 'getOrgEin'
+        'externalKey' => 'getExternalKey',
+        'externalKeyType' => 'getExternalKeyType',
+        'gender' => 'getGender',
+        'sin' => 'getSin',
+        'birthdate' => 'getBirthdate',
+        'smoker' => 'getSmoker',
+        'smokerSince' => 'getSmokerSince',
+        'phoneHome' => 'getPhoneHome',
+        'phoneHomeSecond' => 'getPhoneHomeSecond',
+        'phoneAssistant' => 'getPhoneAssistant',
+        'phoneOffice' => 'getPhoneOffice',
+        'phoneOfficeSecond' => 'getPhoneOfficeSecond',
+        'phoneCell' => 'getPhoneCell',
+        'phonePager' => 'getPhonePager',
+        'phoneFax' => 'getPhoneFax',
+        'mainEmail' => 'getMainEmail',
+        'emailPersonal' => 'getEmailPersonal',
+        'webSite' => 'getWebSite',
+        'emailBusiness' => 'getEmailBusiness',
+        'emailOther' => 'getEmailOther',
+        'notes' => 'getNotes',
+        'peculiarity' => 'getPeculiarity',
+        'endFinancialYear' => 'getEndFinancialYear',
+        'language' => 'getLanguage',
+        'active' => 'getActive',
+        'publish' => 'getPublish',
+        'title' => 'getTitle',
+        'suffix' => 'getSuffix',
+        'civility' => 'getCivility',
+        'civilityId' => 'getCivilityId',
+        'personAddressed' => 'getPersonAddressed',
+        'organizationLine1' => 'getOrganizationLine1',
+        'organizationLine2' => 'getOrganizationLine2',
+        'department' => 'getDepartment',
+        'customerNumber' => 'getCustomerNumber',
+        'birthPlace' => 'getBirthPlace',
+        'nationality' => 'getNationality',
+        'orgDateCreated' => 'getOrgDateCreated',
+        'orgDateClosed' => 'getOrgDateClosed',
+        'dateEndFinancialYear' => 'getDateEndFinancialYear',
+        'orgIdNo' => 'getOrgIdNo',
+        'orgFedNo' => 'getOrgFedNo',
+        'orgProvNo' => 'getOrgProvNo',
+        'orgStateId' => 'getOrgStateId',
+        'orgEin' => 'getOrgEin'
     ];
 
     /**
@@ -160,9 +382,6 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
         return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -179,51 +398,51 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      */
     public function __construct(array $data = null)
     {
-        $this->container['externalKey'] = isset($data['externalKey']) ? $data['externalKey'] : null;
-        $this->container['externalKeyType'] = isset($data['externalKeyType']) ? $data['externalKeyType'] : null;
-        $this->container['gender'] = isset($data['gender']) ? $data['gender'] : null;
-        $this->container['sin'] = isset($data['sin']) ? $data['sin'] : null;
-        $this->container['birthdate'] = isset($data['birthdate']) ? $data['birthdate'] : null;
-        $this->container['smoker'] = isset($data['smoker']) ? $data['smoker'] : null;
-        $this->container['smokerSince'] = isset($data['smokerSince']) ? $data['smokerSince'] : null;
-        $this->container['phoneHome'] = isset($data['phoneHome']) ? $data['phoneHome'] : null;
-        $this->container['phoneHomeSecond'] = isset($data['phoneHomeSecond']) ? $data['phoneHomeSecond'] : null;
-        $this->container['phoneAssistant'] = isset($data['phoneAssistant']) ? $data['phoneAssistant'] : null;
-        $this->container['phoneOffice'] = isset($data['phoneOffice']) ? $data['phoneOffice'] : null;
-        $this->container['phoneOfficeSecond'] = isset($data['phoneOfficeSecond']) ? $data['phoneOfficeSecond'] : null;
-        $this->container['phoneCell'] = isset($data['phoneCell']) ? $data['phoneCell'] : null;
-        $this->container['phonePager'] = isset($data['phonePager']) ? $data['phonePager'] : null;
-        $this->container['phoneFax'] = isset($data['phoneFax']) ? $data['phoneFax'] : null;
-        $this->container['mainEmail'] = isset($data['mainEmail']) ? $data['mainEmail'] : null;
-        $this->container['emailPersonal'] = isset($data['emailPersonal']) ? $data['emailPersonal'] : null;
-        $this->container['webSite'] = isset($data['webSite']) ? $data['webSite'] : null;
-        $this->container['emailBusiness'] = isset($data['emailBusiness']) ? $data['emailBusiness'] : null;
-        $this->container['emailOther'] = isset($data['emailOther']) ? $data['emailOther'] : null;
-        $this->container['notes'] = isset($data['notes']) ? $data['notes'] : null;
-        $this->container['peculiarity'] = isset($data['peculiarity']) ? $data['peculiarity'] : null;
-        $this->container['endFinancialYear'] = isset($data['endFinancialYear']) ? $data['endFinancialYear'] : null;
-        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
-        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
-        $this->container['publish'] = isset($data['publish']) ? $data['publish'] : null;
-        $this->container['title'] = isset($data['title']) ? $data['title'] : null;
-        $this->container['suffix'] = isset($data['suffix']) ? $data['suffix'] : null;
-        $this->container['civility'] = isset($data['civility']) ? $data['civility'] : null;
-        $this->container['civilityId'] = isset($data['civilityId']) ? $data['civilityId'] : null;
-        $this->container['personAddressed'] = isset($data['personAddressed']) ? $data['personAddressed'] : null;
-        $this->container['organizationLine1'] = isset($data['organizationLine1']) ? $data['organizationLine1'] : null;
-        $this->container['organizationLine2'] = isset($data['organizationLine2']) ? $data['organizationLine2'] : null;
-        $this->container['department'] = isset($data['department']) ? $data['department'] : null;
-        $this->container['customerNumber'] = isset($data['customerNumber']) ? $data['customerNumber'] : null;
-        $this->container['birthPlace'] = isset($data['birthPlace']) ? $data['birthPlace'] : null;
-        $this->container['nationality'] = isset($data['nationality']) ? $data['nationality'] : null;
-        $this->container['orgDateCreated'] = isset($data['orgDateCreated']) ? $data['orgDateCreated'] : null;
-        $this->container['orgDateClosed'] = isset($data['orgDateClosed']) ? $data['orgDateClosed'] : null;
-        $this->container['dateEndFinancialYear'] = isset($data['dateEndFinancialYear']) ? $data['dateEndFinancialYear'] : null;
-        $this->container['orgIdNo'] = isset($data['orgIdNo']) ? $data['orgIdNo'] : null;
-        $this->container['orgFedNo'] = isset($data['orgFedNo']) ? $data['orgFedNo'] : null;
-        $this->container['orgProvNo'] = isset($data['orgProvNo']) ? $data['orgProvNo'] : null;
-        $this->container['orgStateId'] = isset($data['orgStateId']) ? $data['orgStateId'] : null;
-        $this->container['orgEin'] = isset($data['orgEin']) ? $data['orgEin'] : null;
+        $this->container['externalKey'] = $data['externalKey'] ?? null;
+        $this->container['externalKeyType'] = $data['externalKeyType'] ?? null;
+        $this->container['gender'] = $data['gender'] ?? null;
+        $this->container['sin'] = $data['sin'] ?? null;
+        $this->container['birthdate'] = $data['birthdate'] ?? null;
+        $this->container['smoker'] = $data['smoker'] ?? null;
+        $this->container['smokerSince'] = $data['smokerSince'] ?? null;
+        $this->container['phoneHome'] = $data['phoneHome'] ?? null;
+        $this->container['phoneHomeSecond'] = $data['phoneHomeSecond'] ?? null;
+        $this->container['phoneAssistant'] = $data['phoneAssistant'] ?? null;
+        $this->container['phoneOffice'] = $data['phoneOffice'] ?? null;
+        $this->container['phoneOfficeSecond'] = $data['phoneOfficeSecond'] ?? null;
+        $this->container['phoneCell'] = $data['phoneCell'] ?? null;
+        $this->container['phonePager'] = $data['phonePager'] ?? null;
+        $this->container['phoneFax'] = $data['phoneFax'] ?? null;
+        $this->container['mainEmail'] = $data['mainEmail'] ?? null;
+        $this->container['emailPersonal'] = $data['emailPersonal'] ?? null;
+        $this->container['webSite'] = $data['webSite'] ?? null;
+        $this->container['emailBusiness'] = $data['emailBusiness'] ?? null;
+        $this->container['emailOther'] = $data['emailOther'] ?? null;
+        $this->container['notes'] = $data['notes'] ?? null;
+        $this->container['peculiarity'] = $data['peculiarity'] ?? null;
+        $this->container['endFinancialYear'] = $data['endFinancialYear'] ?? null;
+        $this->container['language'] = $data['language'] ?? null;
+        $this->container['active'] = $data['active'] ?? null;
+        $this->container['publish'] = $data['publish'] ?? null;
+        $this->container['title'] = $data['title'] ?? null;
+        $this->container['suffix'] = $data['suffix'] ?? null;
+        $this->container['civility'] = $data['civility'] ?? null;
+        $this->container['civilityId'] = $data['civilityId'] ?? null;
+        $this->container['personAddressed'] = $data['personAddressed'] ?? null;
+        $this->container['organizationLine1'] = $data['organizationLine1'] ?? null;
+        $this->container['organizationLine2'] = $data['organizationLine2'] ?? null;
+        $this->container['department'] = $data['department'] ?? null;
+        $this->container['customerNumber'] = $data['customerNumber'] ?? null;
+        $this->container['birthPlace'] = $data['birthPlace'] ?? null;
+        $this->container['nationality'] = $data['nationality'] ?? null;
+        $this->container['orgDateCreated'] = $data['orgDateCreated'] ?? null;
+        $this->container['orgDateClosed'] = $data['orgDateClosed'] ?? null;
+        $this->container['dateEndFinancialYear'] = $data['dateEndFinancialYear'] ?? null;
+        $this->container['orgIdNo'] = $data['orgIdNo'] ?? null;
+        $this->container['orgFedNo'] = $data['orgFedNo'] ?? null;
+        $this->container['orgProvNo'] = $data['orgProvNo'] ?? null;
+        $this->container['orgStateId'] = $data['orgStateId'] ?? null;
+        $this->container['orgEin'] = $data['orgEin'] ?? null;
     }
 
     /**
@@ -265,7 +484,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $externalKey external key
      *
-     * @return $this
+     * @return self
      */
     public function setExternalKey($externalKey)
     {
@@ -289,7 +508,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $externalKeyType External key type
      *
-     * @return $this
+     * @return self
      */
     public function setExternalKeyType($externalKeyType)
     {
@@ -313,7 +532,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $gender Gender of the contact. Either MALE or FEMALE
      *
-     * @return $this
+     * @return self
      */
     public function setGender($gender)
     {
@@ -337,7 +556,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $sin sin of the contact
      *
-     * @return $this
+     * @return self
      */
     public function setSin($sin)
     {
@@ -361,7 +580,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $birthdate birthdate of the contact
      *
-     * @return $this
+     * @return self
      */
     public function setBirthdate($birthdate)
     {
@@ -385,7 +604,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $smoker Smoker status of the contact.
      *
-     * @return $this
+     * @return self
      */
     public function setSmoker($smoker)
     {
@@ -409,7 +628,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $smokerSince Smoker status since date.
      *
-     * @return $this
+     * @return self
      */
     public function setSmokerSince($smokerSince)
     {
@@ -433,7 +652,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $phoneHome phone number of the contact at home
      *
-     * @return $this
+     * @return self
      */
     public function setPhoneHome($phoneHome)
     {
@@ -457,7 +676,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $phoneHomeSecond second phone number of the contact at home
      *
-     * @return $this
+     * @return self
      */
     public function setPhoneHomeSecond($phoneHomeSecond)
     {
@@ -481,7 +700,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $phoneAssistant assistant phone number of the contact
      *
-     * @return $this
+     * @return self
      */
     public function setPhoneAssistant($phoneAssistant)
     {
@@ -505,7 +724,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $phoneOffice office phone number of the contact
      *
-     * @return $this
+     * @return self
      */
     public function setPhoneOffice($phoneOffice)
     {
@@ -529,7 +748,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $phoneOfficeSecond second office phone number of the contact
      *
-     * @return $this
+     * @return self
      */
     public function setPhoneOfficeSecond($phoneOfficeSecond)
     {
@@ -553,7 +772,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $phoneCell cell phone number of the contact
      *
-     * @return $this
+     * @return self
      */
     public function setPhoneCell($phoneCell)
     {
@@ -577,7 +796,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $phonePager Pager phone number of the contact
      *
-     * @return $this
+     * @return self
      */
     public function setPhonePager($phonePager)
     {
@@ -601,7 +820,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $phoneFax fax phone number of the contact
      *
-     * @return $this
+     * @return self
      */
     public function setPhoneFax($phoneFax)
     {
@@ -625,7 +844,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $mainEmail main email of the contact
      *
-     * @return $this
+     * @return self
      */
     public function setMainEmail($mainEmail)
     {
@@ -649,7 +868,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $emailPersonal personal email of the contact
      *
-     * @return $this
+     * @return self
      */
     public function setEmailPersonal($emailPersonal)
     {
@@ -673,7 +892,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $webSite Web Site URL. This represent the main website for the contact.
      *
-     * @return $this
+     * @return self
      */
     public function setWebSite($webSite)
     {
@@ -697,7 +916,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $emailBusiness business email of the contact
      *
-     * @return $this
+     * @return self
      */
     public function setEmailBusiness($emailBusiness)
     {
@@ -721,7 +940,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $emailOther business email of the contact
      *
-     * @return $this
+     * @return self
      */
     public function setEmailOther($emailOther)
     {
@@ -745,7 +964,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $notes notes of the contact
      *
-     * @return $this
+     * @return self
      */
     public function setNotes($notes)
     {
@@ -769,7 +988,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $peculiarity peculiarity of the contact
      *
-     * @return $this
+     * @return self
      */
     public function setPeculiarity($peculiarity)
     {
@@ -793,7 +1012,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $endFinancialYear End of the financial year (for organization)
      *
-     * @return $this
+     * @return self
      */
     public function setEndFinancialYear($endFinancialYear)
     {
@@ -817,7 +1036,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $language Language
      *
-     * @return $this
+     * @return self
      */
     public function setLanguage($language)
     {
@@ -841,7 +1060,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $active Active (boolean)
      *
-     * @return $this
+     * @return self
      */
     public function setActive($active)
     {
@@ -865,7 +1084,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $publish Publish (boolean)
      *
-     * @return $this
+     * @return self
      */
     public function setPublish($publish)
     {
@@ -889,7 +1108,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $title Title
      *
-     * @return $this
+     * @return self
      */
     public function setTitle($title)
     {
@@ -913,7 +1132,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $suffix Suffix
      *
-     * @return $this
+     * @return self
      */
     public function setSuffix($suffix)
     {
@@ -937,7 +1156,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $civility Civility
      *
-     * @return $this
+     * @return self
      */
     public function setCivility($civility)
     {
@@ -961,7 +1180,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param int|null $civilityId Civility id
      *
-     * @return $this
+     * @return self
      */
     public function setCivilityId($civilityId)
     {
@@ -985,7 +1204,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $personAddressed Person Addressed (Correspondance)
      *
-     * @return $this
+     * @return self
      */
     public function setPersonAddressed($personAddressed)
     {
@@ -1009,7 +1228,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $organizationLine1 Organization name (Correspondance)
      *
-     * @return $this
+     * @return self
      */
     public function setOrganizationLine1($organizationLine1)
     {
@@ -1033,7 +1252,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $organizationLine2 Organization name - second line (Correspondance)
      *
-     * @return $this
+     * @return self
      */
     public function setOrganizationLine2($organizationLine2)
     {
@@ -1057,7 +1276,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $department Department (Correspondance)
      *
-     * @return $this
+     * @return self
      */
     public function setDepartment($department)
     {
@@ -1081,7 +1300,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $customerNumber Customer Number
      *
-     * @return $this
+     * @return self
      */
     public function setCustomerNumber($customerNumber)
     {
@@ -1105,7 +1324,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $birthPlace Birth Place
      *
-     * @return $this
+     * @return self
      */
     public function setBirthPlace($birthPlace)
     {
@@ -1129,7 +1348,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $nationality Nationality
      *
-     * @return $this
+     * @return self
      */
     public function setNationality($nationality)
     {
@@ -1153,7 +1372,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $orgDateCreated orgDateCreated
      *
-     * @return $this
+     * @return self
      */
     public function setOrgDateCreated($orgDateCreated)
     {
@@ -1177,7 +1396,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $orgDateClosed orgDateClosed
      *
-     * @return $this
+     * @return self
      */
     public function setOrgDateClosed($orgDateClosed)
     {
@@ -1201,7 +1420,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $dateEndFinancialYear dateEndFinancialYear
      *
-     * @return $this
+     * @return self
      */
     public function setDateEndFinancialYear($dateEndFinancialYear)
     {
@@ -1225,7 +1444,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $orgIdNo orgIdNo
      *
-     * @return $this
+     * @return self
      */
     public function setOrgIdNo($orgIdNo)
     {
@@ -1249,7 +1468,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $orgFedNo orgFedNo
      *
-     * @return $this
+     * @return self
      */
     public function setOrgFedNo($orgFedNo)
     {
@@ -1273,7 +1492,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $orgProvNo orgProvNo
      *
-     * @return $this
+     * @return self
      */
     public function setOrgProvNo($orgProvNo)
     {
@@ -1297,7 +1516,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $orgStateId orgStateId
      *
-     * @return $this
+     * @return self
      */
     public function setOrgStateId($orgStateId)
     {
@@ -1321,7 +1540,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param string|null $orgEin orgEin
      *
-     * @return $this
+     * @return self
      */
     public function setOrgEin($orgEin)
     {
@@ -1346,18 +1565,18 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -1380,6 +1599,18 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

@@ -40,9 +40,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class MovementMoveMovementPayload extends MovementMovementPayload 
+class MovementMoveMovementPayload extends MovementMovementPayload
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -57,16 +57,24 @@ class MovementMoveMovementPayload extends MovementMovementPayload
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string''sourceDatabase' => 'string''destinationDatabase' => 'string''users' => 'string[]'
+        'type' => 'string',
+        'sourceDatabase' => 'string',
+        'destinationDatabase' => 'string',
+        'users' => 'string[]'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'type' => null'sourceDatabase' => null'destinationDatabase' => null'users' => null
+        'type' => null,
+        'sourceDatabase' => null,
+        'destinationDatabase' => null,
+        'users' => null
     ];
 
     /**
@@ -96,7 +104,10 @@ class MovementMoveMovementPayload extends MovementMovementPayload
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type''sourceDatabase' => 'sourceDatabase''destinationDatabase' => 'destinationDatabase''users' => 'users'
+        'type' => 'type',
+        'sourceDatabase' => 'sourceDatabase',
+        'destinationDatabase' => 'destinationDatabase',
+        'users' => 'users'
     ];
 
     /**
@@ -105,7 +116,10 @@ class MovementMoveMovementPayload extends MovementMovementPayload
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType''sourceDatabase' => 'setSourceDatabase''destinationDatabase' => 'setDestinationDatabase''users' => 'setUsers'
+        'type' => 'setType',
+        'sourceDatabase' => 'setSourceDatabase',
+        'destinationDatabase' => 'setDestinationDatabase',
+        'users' => 'setUsers'
     ];
 
     /**
@@ -114,7 +128,10 @@ class MovementMoveMovementPayload extends MovementMovementPayload
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType''sourceDatabase' => 'getSourceDatabase''destinationDatabase' => 'getDestinationDatabase''users' => 'getUsers'
+        'type' => 'getType',
+        'sourceDatabase' => 'getSourceDatabase',
+        'destinationDatabase' => 'getDestinationDatabase',
+        'users' => 'getUsers'
     ];
 
     /**
@@ -159,9 +176,7 @@ class MovementMoveMovementPayload extends MovementMovementPayload
     }
 
     const TYPE_MOVE = 'MOVE';
-    
 
-    
     /**
      * Gets allowable values of the enum
      *
@@ -173,7 +188,6 @@ class MovementMoveMovementPayload extends MovementMovementPayload
             self::TYPE_MOVE,
         ];
     }
-    
 
 
     /**
@@ -186,10 +200,10 @@ class MovementMoveMovementPayload extends MovementMovementPayload
     {
         parent::__construct($data);
 
-        $this->container['type'] = isset($data['type']) ? $data['type'] : TYPE_MOVE;
-        $this->container['sourceDatabase'] = isset($data['sourceDatabase']) ? $data['sourceDatabase'] : null;
-        $this->container['destinationDatabase'] = isset($data['destinationDatabase']) ? $data['destinationDatabase'] : null;
-        $this->container['users'] = isset($data['users']) ? $data['users'] : null;
+        $this->container['type'] = $data['type'] ?? TYPE_MOVE;
+        $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
+        $this->container['destinationDatabase'] = $data['destinationDatabase'] ?? null;
+        $this->container['users'] = $data['users'] ?? null;
     }
 
     /**
@@ -207,7 +221,8 @@ class MovementMoveMovementPayload extends MovementMovementPayload
         $allowedValues = $this->getTypeAllowableValues();
         if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value for 'type', must be one of '%s'",
+                "invalid value '%s' for 'type', must be one of '%s'",
+                $this->container['type'],
                 implode("', '", $allowedValues)
             );
         }
@@ -251,7 +266,7 @@ class MovementMoveMovementPayload extends MovementMovementPayload
      *
      * @param string $type type
      *
-     * @return $this
+     * @return self
      */
     public function setType($type)
     {
@@ -259,7 +274,8 @@ class MovementMoveMovementPayload extends MovementMovementPayload
         if (!in_array($type, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value for 'type', must be one of '%s'",
+                    "Invalid value '%s' for 'type', must be one of '%s'",
+                    $type,
                     implode("', '", $allowedValues)
                 )
             );
@@ -284,7 +300,7 @@ class MovementMoveMovementPayload extends MovementMovementPayload
      *
      * @param string $sourceDatabase sourceDatabase
      *
-     * @return $this
+     * @return self
      */
     public function setSourceDatabase($sourceDatabase)
     {
@@ -308,7 +324,7 @@ class MovementMoveMovementPayload extends MovementMovementPayload
      *
      * @param string $destinationDatabase destinationDatabase
      *
-     * @return $this
+     * @return self
      */
     public function setDestinationDatabase($destinationDatabase)
     {
@@ -332,7 +348,7 @@ class MovementMoveMovementPayload extends MovementMovementPayload
      *
      * @param string[] $users users
      *
-     * @return $this
+     * @return self
      */
     public function setUsers($users)
     {
@@ -357,18 +373,18 @@ class MovementMoveMovementPayload extends MovementMovementPayload
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -391,6 +407,18 @@ class MovementMoveMovementPayload extends MovementMovementPayload
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

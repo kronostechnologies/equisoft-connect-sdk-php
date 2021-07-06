@@ -42,9 +42,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class ContextUser implements ModelInterface, ArrayAccess
+class ContextUser implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -59,16 +59,22 @@ class ContextUser implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'uuid' => 'string''displayName' => 'string''email' => 'string'
+        'uuid' => 'string',
+        'displayName' => 'string',
+        'email' => 'string'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'uuid' => null'displayName' => null'email' => null
+        'uuid' => null,
+        'displayName' => null,
+        'email' => null
     ];
 
     /**
@@ -98,7 +104,9 @@ class ContextUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'uuid' => 'uuid''displayName' => 'displayName''email' => 'email'
+        'uuid' => 'uuid',
+        'displayName' => 'displayName',
+        'email' => 'email'
     ];
 
     /**
@@ -107,7 +115,9 @@ class ContextUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'uuid' => 'setUuid''displayName' => 'setDisplayName''email' => 'setEmail'
+        'uuid' => 'setUuid',
+        'displayName' => 'setDisplayName',
+        'email' => 'setEmail'
     ];
 
     /**
@@ -116,7 +126,9 @@ class ContextUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'uuid' => 'getUuid''displayName' => 'getDisplayName''email' => 'getEmail'
+        'uuid' => 'getUuid',
+        'displayName' => 'getDisplayName',
+        'email' => 'getEmail'
     ];
 
     /**
@@ -160,9 +172,6 @@ class ContextUser implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -179,9 +188,9 @@ class ContextUser implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
-        $this->container['displayName'] = isset($data['displayName']) ? $data['displayName'] : null;
-        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['uuid'] = $data['uuid'] ?? null;
+        $this->container['displayName'] = $data['displayName'] ?? null;
+        $this->container['email'] = $data['email'] ?? null;
     }
 
     /**
@@ -232,7 +241,7 @@ class ContextUser implements ModelInterface, ArrayAccess
      *
      * @param string $uuid environment name
      *
-     * @return $this
+     * @return self
      */
     public function setUuid($uuid)
     {
@@ -256,7 +265,7 @@ class ContextUser implements ModelInterface, ArrayAccess
      *
      * @param string $displayName environment name
      *
-     * @return $this
+     * @return self
      */
     public function setDisplayName($displayName)
     {
@@ -280,7 +289,7 @@ class ContextUser implements ModelInterface, ArrayAccess
      *
      * @param string $email environment name
      *
-     * @return $this
+     * @return self
      */
     public function setEmail($email)
     {
@@ -305,18 +314,18 @@ class ContextUser implements ModelInterface, ArrayAccess
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -339,6 +348,18 @@ class ContextUser implements ModelInterface, ArrayAccess
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

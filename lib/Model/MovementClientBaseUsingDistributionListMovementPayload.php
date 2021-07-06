@@ -40,9 +40,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class MovementClientBaseUsingDistributionListMovementPayload extends MovementMovementPayload 
+class MovementClientBaseUsingDistributionListMovementPayload extends MovementMovementPayload
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -57,16 +57,32 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string''sourceDatabase' => 'string''sourceUser' => 'string''sourceDistributionList' => 'string''destinationDatabase' => 'string''destinationUser' => 'string''datagatewayAccessMappings' => 'array<string,string>''transferOption' => 'string'
+        'type' => 'string',
+        'sourceDatabase' => 'string',
+        'sourceUser' => 'string',
+        'sourceDistributionList' => 'string',
+        'destinationDatabase' => 'string',
+        'destinationUser' => 'string',
+        'datagatewayAccessMappings' => 'array<string,string>',
+        'transferOption' => 'string'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'type' => null'sourceDatabase' => null'sourceUser' => null'sourceDistributionList' => null'destinationDatabase' => null'destinationUser' => null'datagatewayAccessMappings' => null'transferOption' => null
+        'type' => null,
+        'sourceDatabase' => null,
+        'sourceUser' => null,
+        'sourceDistributionList' => null,
+        'destinationDatabase' => null,
+        'destinationUser' => null,
+        'datagatewayAccessMappings' => null,
+        'transferOption' => null
     ];
 
     /**
@@ -96,7 +112,14 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type''sourceDatabase' => 'sourceDatabase''sourceUser' => 'sourceUser''sourceDistributionList' => 'sourceDistributionList''destinationDatabase' => 'destinationDatabase''destinationUser' => 'destinationUser''datagatewayAccessMappings' => 'datagatewayAccessMappings''transferOption' => 'transferOption'
+        'type' => 'type',
+        'sourceDatabase' => 'sourceDatabase',
+        'sourceUser' => 'sourceUser',
+        'sourceDistributionList' => 'sourceDistributionList',
+        'destinationDatabase' => 'destinationDatabase',
+        'destinationUser' => 'destinationUser',
+        'datagatewayAccessMappings' => 'datagatewayAccessMappings',
+        'transferOption' => 'transferOption'
     ];
 
     /**
@@ -105,7 +128,14 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType''sourceDatabase' => 'setSourceDatabase''sourceUser' => 'setSourceUser''sourceDistributionList' => 'setSourceDistributionList''destinationDatabase' => 'setDestinationDatabase''destinationUser' => 'setDestinationUser''datagatewayAccessMappings' => 'setDatagatewayAccessMappings''transferOption' => 'setTransferOption'
+        'type' => 'setType',
+        'sourceDatabase' => 'setSourceDatabase',
+        'sourceUser' => 'setSourceUser',
+        'sourceDistributionList' => 'setSourceDistributionList',
+        'destinationDatabase' => 'setDestinationDatabase',
+        'destinationUser' => 'setDestinationUser',
+        'datagatewayAccessMappings' => 'setDatagatewayAccessMappings',
+        'transferOption' => 'setTransferOption'
     ];
 
     /**
@@ -114,7 +144,14 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType''sourceDatabase' => 'getSourceDatabase''sourceUser' => 'getSourceUser''sourceDistributionList' => 'getSourceDistributionList''destinationDatabase' => 'getDestinationDatabase''destinationUser' => 'getDestinationUser''datagatewayAccessMappings' => 'getDatagatewayAccessMappings''transferOption' => 'getTransferOption'
+        'type' => 'getType',
+        'sourceDatabase' => 'getSourceDatabase',
+        'sourceUser' => 'getSourceUser',
+        'sourceDistributionList' => 'getSourceDistributionList',
+        'destinationDatabase' => 'getDestinationDatabase',
+        'destinationUser' => 'getDestinationUser',
+        'datagatewayAccessMappings' => 'getDatagatewayAccessMappings',
+        'transferOption' => 'getTransferOption'
     ];
 
     /**
@@ -159,9 +196,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
     }
 
     const TYPE_CLIENTBASE_USING_DISTLIST = 'CLIENTBASE_USING_DISTLIST';
-    
 
-    
     /**
      * Gets allowable values of the enum
      *
@@ -173,7 +208,6 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
             self::TYPE_CLIENTBASE_USING_DISTLIST,
         ];
     }
-    
 
 
     /**
@@ -186,14 +220,14 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
     {
         parent::__construct($data);
 
-        $this->container['type'] = isset($data['type']) ? $data['type'] : TYPE_CLIENTBASE_USING_DISTLIST;
-        $this->container['sourceDatabase'] = isset($data['sourceDatabase']) ? $data['sourceDatabase'] : null;
-        $this->container['sourceUser'] = isset($data['sourceUser']) ? $data['sourceUser'] : null;
-        $this->container['sourceDistributionList'] = isset($data['sourceDistributionList']) ? $data['sourceDistributionList'] : null;
-        $this->container['destinationDatabase'] = isset($data['destinationDatabase']) ? $data['destinationDatabase'] : null;
-        $this->container['destinationUser'] = isset($data['destinationUser']) ? $data['destinationUser'] : null;
-        $this->container['datagatewayAccessMappings'] = isset($data['datagatewayAccessMappings']) ? $data['datagatewayAccessMappings'] : null;
-        $this->container['transferOption'] = isset($data['transferOption']) ? $data['transferOption'] : null;
+        $this->container['type'] = $data['type'] ?? TYPE_CLIENTBASE_USING_DISTLIST;
+        $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
+        $this->container['sourceUser'] = $data['sourceUser'] ?? null;
+        $this->container['sourceDistributionList'] = $data['sourceDistributionList'] ?? null;
+        $this->container['destinationDatabase'] = $data['destinationDatabase'] ?? null;
+        $this->container['destinationUser'] = $data['destinationUser'] ?? null;
+        $this->container['datagatewayAccessMappings'] = $data['datagatewayAccessMappings'] ?? null;
+        $this->container['transferOption'] = $data['transferOption'] ?? null;
     }
 
     /**
@@ -211,7 +245,8 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
         $allowedValues = $this->getTypeAllowableValues();
         if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value for 'type', must be one of '%s'",
+                "invalid value '%s' for 'type', must be one of '%s'",
+                $this->container['type'],
                 implode("', '", $allowedValues)
             );
         }
@@ -261,7 +296,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
      *
      * @param string $type type
      *
-     * @return $this
+     * @return self
      */
     public function setType($type)
     {
@@ -269,7 +304,8 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
         if (!in_array($type, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value for 'type', must be one of '%s'",
+                    "Invalid value '%s' for 'type', must be one of '%s'",
+                    $type,
                     implode("', '", $allowedValues)
                 )
             );
@@ -294,7 +330,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
      *
      * @param string $sourceDatabase sourceDatabase
      *
-     * @return $this
+     * @return self
      */
     public function setSourceDatabase($sourceDatabase)
     {
@@ -318,7 +354,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
      *
      * @param string $sourceUser sourceUser
      *
-     * @return $this
+     * @return self
      */
     public function setSourceUser($sourceUser)
     {
@@ -342,7 +378,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
      *
      * @param string|null $sourceDistributionList sourceDistributionList
      *
-     * @return $this
+     * @return self
      */
     public function setSourceDistributionList($sourceDistributionList)
     {
@@ -366,7 +402,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
      *
      * @param string $destinationDatabase destinationDatabase
      *
-     * @return $this
+     * @return self
      */
     public function setDestinationDatabase($destinationDatabase)
     {
@@ -390,7 +426,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
      *
      * @param string $destinationUser destinationUser
      *
-     * @return $this
+     * @return self
      */
     public function setDestinationUser($destinationUser)
     {
@@ -402,7 +438,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
     /**
      * Gets datagatewayAccessMappings
      *
-     * @return array&lt;string,string&gt;|null
+     * @return array<string,string>|null
      */
     public function getDatagatewayAccessMappings()
     {
@@ -412,9 +448,9 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
     /**
      * Sets datagatewayAccessMappings
      *
-     * @param array&lt;string,string&gt;|null $datagatewayAccessMappings datagatewayAccessMappings
+     * @param array<string,string>|null $datagatewayAccessMappings datagatewayAccessMappings
      *
-     * @return $this
+     * @return self
      */
     public function setDatagatewayAccessMappings($datagatewayAccessMappings)
     {
@@ -438,7 +474,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
      *
      * @param string $transferOption transferOption
      *
-     * @return $this
+     * @return self
      */
     public function setTransferOption($transferOption)
     {
@@ -463,18 +499,18 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -497,6 +533,18 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

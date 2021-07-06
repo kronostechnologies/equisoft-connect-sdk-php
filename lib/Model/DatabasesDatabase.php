@@ -42,9 +42,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class DatabasesDatabase implements ModelInterface, ArrayAccess
+class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -59,16 +59,30 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'int''uuid' => 'string''databaseName' => 'string''displayName' => 'string''profileName' => 'string''state' => 'string''organizationUuid' => 'string'
+        'id' => 'int',
+        'uuid' => 'string',
+        'databaseName' => 'string',
+        'displayName' => 'string',
+        'profileName' => 'string',
+        'state' => 'string',
+        'organizationUuid' => 'string'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null'uuid' => null'databaseName' => null'displayName' => null'profileName' => null'state' => null'organizationUuid' => null
+        'id' => null,
+        'uuid' => null,
+        'databaseName' => null,
+        'displayName' => null,
+        'profileName' => null,
+        'state' => null,
+        'organizationUuid' => null
     ];
 
     /**
@@ -98,7 +112,13 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id''uuid' => 'uuid''databaseName' => 'databaseName''displayName' => 'displayName''profileName' => 'profileName''state' => 'state''organizationUuid' => 'organizationUuid'
+        'id' => 'id',
+        'uuid' => 'uuid',
+        'databaseName' => 'databaseName',
+        'displayName' => 'displayName',
+        'profileName' => 'profileName',
+        'state' => 'state',
+        'organizationUuid' => 'organizationUuid'
     ];
 
     /**
@@ -107,7 +127,13 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId''uuid' => 'setUuid''databaseName' => 'setDatabaseName''displayName' => 'setDisplayName''profileName' => 'setProfileName''state' => 'setState''organizationUuid' => 'setOrganizationUuid'
+        'id' => 'setId',
+        'uuid' => 'setUuid',
+        'databaseName' => 'setDatabaseName',
+        'displayName' => 'setDisplayName',
+        'profileName' => 'setProfileName',
+        'state' => 'setState',
+        'organizationUuid' => 'setOrganizationUuid'
     ];
 
     /**
@@ -116,7 +142,13 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId''uuid' => 'getUuid''databaseName' => 'getDatabaseName''displayName' => 'getDisplayName''profileName' => 'getProfileName''state' => 'getState''organizationUuid' => 'getOrganizationUuid'
+        'id' => 'getId',
+        'uuid' => 'getUuid',
+        'databaseName' => 'getDatabaseName',
+        'displayName' => 'getDisplayName',
+        'profileName' => 'getProfileName',
+        'state' => 'getState',
+        'organizationUuid' => 'getOrganizationUuid'
     ];
 
     /**
@@ -160,9 +192,6 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -179,13 +208,13 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
-        $this->container['databaseName'] = isset($data['databaseName']) ? $data['databaseName'] : null;
-        $this->container['displayName'] = isset($data['displayName']) ? $data['displayName'] : null;
-        $this->container['profileName'] = isset($data['profileName']) ? $data['profileName'] : null;
-        $this->container['state'] = isset($data['state']) ? $data['state'] : null;
-        $this->container['organizationUuid'] = isset($data['organizationUuid']) ? $data['organizationUuid'] : null;
+        $this->container['id'] = $data['id'] ?? null;
+        $this->container['uuid'] = $data['uuid'] ?? null;
+        $this->container['databaseName'] = $data['databaseName'] ?? null;
+        $this->container['displayName'] = $data['displayName'] ?? null;
+        $this->container['profileName'] = $data['profileName'] ?? null;
+        $this->container['state'] = $data['state'] ?? null;
+        $this->container['organizationUuid'] = $data['organizationUuid'] ?? null;
     }
 
     /**
@@ -245,7 +274,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess
      *
      * @param int $id Id
      *
-     * @return $this
+     * @return self
      */
     public function setId($id)
     {
@@ -269,7 +298,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess
      *
      * @param string $uuid Uuid
      *
-     * @return $this
+     * @return self
      */
     public function setUuid($uuid)
     {
@@ -293,7 +322,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess
      *
      * @param string $databaseName Database name
      *
-     * @return $this
+     * @return self
      */
     public function setDatabaseName($databaseName)
     {
@@ -317,7 +346,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess
      *
      * @param string $displayName Display name
      *
-     * @return $this
+     * @return self
      */
     public function setDisplayName($displayName)
     {
@@ -341,7 +370,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess
      *
      * @param string $profileName Profile
      *
-     * @return $this
+     * @return self
      */
     public function setProfileName($profileName)
     {
@@ -365,7 +394,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess
      *
      * @param string $state Database state
      *
-     * @return $this
+     * @return self
      */
     public function setState($state)
     {
@@ -389,7 +418,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess
      *
      * @param string|null $organizationUuid Organization uuid
      *
-     * @return $this
+     * @return self
      */
     public function setOrganizationUuid($organizationUuid)
     {
@@ -414,18 +443,18 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -448,6 +477,18 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

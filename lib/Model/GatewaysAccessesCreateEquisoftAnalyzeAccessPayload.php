@@ -42,9 +42,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterface, ArrayAccess
+class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -59,16 +59,20 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'userUuid' => 'string''clientKey' => 'string'
+        'userUuid' => 'string',
+        'clientKey' => 'string'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'userUuid' => null'clientKey' => null
+        'userUuid' => null,
+        'clientKey' => null
     ];
 
     /**
@@ -98,7 +102,8 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
      * @var string[]
      */
     protected static $attributeMap = [
-        'userUuid' => 'userUuid''clientKey' => 'clientKey'
+        'userUuid' => 'userUuid',
+        'clientKey' => 'clientKey'
     ];
 
     /**
@@ -107,7 +112,8 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
      * @var string[]
      */
     protected static $setters = [
-        'userUuid' => 'setUserUuid''clientKey' => 'setClientKey'
+        'userUuid' => 'setUserUuid',
+        'clientKey' => 'setClientKey'
     ];
 
     /**
@@ -116,7 +122,8 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
      * @var string[]
      */
     protected static $getters = [
-        'userUuid' => 'getUserUuid''clientKey' => 'getClientKey'
+        'userUuid' => 'getUserUuid',
+        'clientKey' => 'getClientKey'
     ];
 
     /**
@@ -160,9 +167,6 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
         return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -179,8 +183,8 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
      */
     public function __construct(array $data = null)
     {
-        $this->container['userUuid'] = isset($data['userUuid']) ? $data['userUuid'] : null;
-        $this->container['clientKey'] = isset($data['clientKey']) ? $data['clientKey'] : null;
+        $this->container['userUuid'] = $data['userUuid'] ?? null;
+        $this->container['clientKey'] = $data['clientKey'] ?? null;
     }
 
     /**
@@ -228,7 +232,7 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
      *
      * @param string $userUuid Uuid of the user attached to the gateway access
      *
-     * @return $this
+     * @return self
      */
     public function setUserUuid($userUuid)
     {
@@ -252,7 +256,7 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
      *
      * @param string $clientKey clientKey
      *
-     * @return $this
+     * @return self
      */
     public function setClientKey($clientKey)
     {
@@ -277,18 +281,18 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -311,6 +315,18 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

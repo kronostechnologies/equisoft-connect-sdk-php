@@ -42,9 +42,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class LegacyContactAddress implements ModelInterface, ArrayAccess
+class LegacyContactAddress implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -59,16 +59,50 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'int''main' => 'string''postal' => 'string''type' => 'string''typeId' => 'int''line1' => 'string''line2' => 'string''city' => 'string''stateProvince' => 'string''country' => 'string''postalCode' => 'string''civicNumber' => 'string''road' => 'string''extType' => 'string''extNumber' => 'string''notes' => 'string''locked' => 'string'
+        'id' => 'int',
+        'main' => 'string',
+        'postal' => 'string',
+        'type' => 'string',
+        'typeId' => 'int',
+        'line1' => 'string',
+        'line2' => 'string',
+        'city' => 'string',
+        'stateProvince' => 'string',
+        'country' => 'string',
+        'postalCode' => 'string',
+        'civicNumber' => 'string',
+        'road' => 'string',
+        'extType' => 'string',
+        'extNumber' => 'string',
+        'notes' => 'string',
+        'locked' => 'string'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null'main' => null'postal' => null'type' => null'typeId' => null'line1' => null'line2' => null'city' => null'stateProvince' => null'country' => null'postalCode' => null'civicNumber' => null'road' => null'extType' => null'extNumber' => null'notes' => null'locked' => null
+        'id' => null,
+        'main' => null,
+        'postal' => null,
+        'type' => null,
+        'typeId' => null,
+        'line1' => null,
+        'line2' => null,
+        'city' => null,
+        'stateProvince' => null,
+        'country' => null,
+        'postalCode' => null,
+        'civicNumber' => null,
+        'road' => null,
+        'extType' => null,
+        'extNumber' => null,
+        'notes' => null,
+        'locked' => null
     ];
 
     /**
@@ -98,7 +132,23 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id''main' => 'main''postal' => 'postal''type' => 'type''typeId' => 'typeId''line1' => 'line1''line2' => 'line2''city' => 'city''stateProvince' => 'stateProvince''country' => 'country''postalCode' => 'postalCode''civicNumber' => 'civicNumber''road' => 'road''extType' => 'extType''extNumber' => 'extNumber''notes' => 'notes''locked' => 'locked'
+        'id' => 'id',
+        'main' => 'main',
+        'postal' => 'postal',
+        'type' => 'type',
+        'typeId' => 'typeId',
+        'line1' => 'line1',
+        'line2' => 'line2',
+        'city' => 'city',
+        'stateProvince' => 'stateProvince',
+        'country' => 'country',
+        'postalCode' => 'postalCode',
+        'civicNumber' => 'civicNumber',
+        'road' => 'road',
+        'extType' => 'extType',
+        'extNumber' => 'extNumber',
+        'notes' => 'notes',
+        'locked' => 'locked'
     ];
 
     /**
@@ -107,7 +157,23 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId''main' => 'setMain''postal' => 'setPostal''type' => 'setType''typeId' => 'setTypeId''line1' => 'setLine1''line2' => 'setLine2''city' => 'setCity''stateProvince' => 'setStateProvince''country' => 'setCountry''postalCode' => 'setPostalCode''civicNumber' => 'setCivicNumber''road' => 'setRoad''extType' => 'setExtType''extNumber' => 'setExtNumber''notes' => 'setNotes''locked' => 'setLocked'
+        'id' => 'setId',
+        'main' => 'setMain',
+        'postal' => 'setPostal',
+        'type' => 'setType',
+        'typeId' => 'setTypeId',
+        'line1' => 'setLine1',
+        'line2' => 'setLine2',
+        'city' => 'setCity',
+        'stateProvince' => 'setStateProvince',
+        'country' => 'setCountry',
+        'postalCode' => 'setPostalCode',
+        'civicNumber' => 'setCivicNumber',
+        'road' => 'setRoad',
+        'extType' => 'setExtType',
+        'extNumber' => 'setExtNumber',
+        'notes' => 'setNotes',
+        'locked' => 'setLocked'
     ];
 
     /**
@@ -116,7 +182,23 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId''main' => 'getMain''postal' => 'getPostal''type' => 'getType''typeId' => 'getTypeId''line1' => 'getLine1''line2' => 'getLine2''city' => 'getCity''stateProvince' => 'getStateProvince''country' => 'getCountry''postalCode' => 'getPostalCode''civicNumber' => 'getCivicNumber''road' => 'getRoad''extType' => 'getExtType''extNumber' => 'getExtNumber''notes' => 'getNotes''locked' => 'getLocked'
+        'id' => 'getId',
+        'main' => 'getMain',
+        'postal' => 'getPostal',
+        'type' => 'getType',
+        'typeId' => 'getTypeId',
+        'line1' => 'getLine1',
+        'line2' => 'getLine2',
+        'city' => 'getCity',
+        'stateProvince' => 'getStateProvince',
+        'country' => 'getCountry',
+        'postalCode' => 'getPostalCode',
+        'civicNumber' => 'getCivicNumber',
+        'road' => 'getRoad',
+        'extType' => 'getExtType',
+        'extNumber' => 'getExtNumber',
+        'notes' => 'getNotes',
+        'locked' => 'getLocked'
     ];
 
     /**
@@ -160,9 +242,6 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -179,23 +258,23 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['main'] = isset($data['main']) ? $data['main'] : null;
-        $this->container['postal'] = isset($data['postal']) ? $data['postal'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['typeId'] = isset($data['typeId']) ? $data['typeId'] : null;
-        $this->container['line1'] = isset($data['line1']) ? $data['line1'] : null;
-        $this->container['line2'] = isset($data['line2']) ? $data['line2'] : null;
-        $this->container['city'] = isset($data['city']) ? $data['city'] : null;
-        $this->container['stateProvince'] = isset($data['stateProvince']) ? $data['stateProvince'] : null;
-        $this->container['country'] = isset($data['country']) ? $data['country'] : null;
-        $this->container['postalCode'] = isset($data['postalCode']) ? $data['postalCode'] : null;
-        $this->container['civicNumber'] = isset($data['civicNumber']) ? $data['civicNumber'] : null;
-        $this->container['road'] = isset($data['road']) ? $data['road'] : null;
-        $this->container['extType'] = isset($data['extType']) ? $data['extType'] : null;
-        $this->container['extNumber'] = isset($data['extNumber']) ? $data['extNumber'] : null;
-        $this->container['notes'] = isset($data['notes']) ? $data['notes'] : null;
-        $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
+        $this->container['id'] = $data['id'] ?? null;
+        $this->container['main'] = $data['main'] ?? null;
+        $this->container['postal'] = $data['postal'] ?? null;
+        $this->container['type'] = $data['type'] ?? null;
+        $this->container['typeId'] = $data['typeId'] ?? null;
+        $this->container['line1'] = $data['line1'] ?? null;
+        $this->container['line2'] = $data['line2'] ?? null;
+        $this->container['city'] = $data['city'] ?? null;
+        $this->container['stateProvince'] = $data['stateProvince'] ?? null;
+        $this->container['country'] = $data['country'] ?? null;
+        $this->container['postalCode'] = $data['postalCode'] ?? null;
+        $this->container['civicNumber'] = $data['civicNumber'] ?? null;
+        $this->container['road'] = $data['road'] ?? null;
+        $this->container['extType'] = $data['extType'] ?? null;
+        $this->container['extNumber'] = $data['extNumber'] ?? null;
+        $this->container['notes'] = $data['notes'] ?? null;
+        $this->container['locked'] = $data['locked'] ?? null;
     }
 
     /**
@@ -237,7 +316,7 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess
      *
      * @param int|null $id Unique Identifier
      *
-     * @return $this
+     * @return self
      */
     public function setId($id)
     {
@@ -261,7 +340,7 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess
      *
      * @param string|null $main If the address is the main address or not (true|false)
      *
-     * @return $this
+     * @return self
      */
     public function setMain($main)
     {
@@ -285,7 +364,7 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess
      *
      * @param string|null $postal If the address is the postal address or not (true|false)
      *
-     * @return $this
+     * @return self
      */
     public function setPostal($postal)
     {
@@ -309,7 +388,7 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess
      *
      * @param string|null $type Address type (HOME, OFFICE, HOME2, OTHER, Custom Type Label)
      *
-     * @return $this
+     * @return self
      */
     public function setType($type)
     {
@@ -333,7 +412,7 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess
      *
      * @param int|null $typeId Address type fieldValue id
      *
-     * @return $this
+     * @return self
      */
     public function setTypeId($typeId)
     {
@@ -357,7 +436,7 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess
      *
      * @param string|null $line1 First line of address of the contact
      *
-     * @return $this
+     * @return self
      */
     public function setLine1($line1)
     {
@@ -381,7 +460,7 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess
      *
      * @param string|null $line2 second line of address of the contact
      *
-     * @return $this
+     * @return self
      */
     public function setLine2($line2)
     {
@@ -405,7 +484,7 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess
      *
      * @param string|null $city city of the contact
      *
-     * @return $this
+     * @return self
      */
     public function setCity($city)
     {
@@ -429,7 +508,7 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess
      *
      * @param string|null $stateProvince state or province of the contact
      *
-     * @return $this
+     * @return self
      */
     public function setStateProvince($stateProvince)
     {
@@ -453,7 +532,7 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess
      *
      * @param string|null $country country of the contact
      *
-     * @return $this
+     * @return self
      */
     public function setCountry($country)
     {
@@ -477,7 +556,7 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess
      *
      * @param string|null $postalCode postalCode of the contact
      *
-     * @return $this
+     * @return self
      */
     public function setPostalCode($postalCode)
     {
@@ -501,7 +580,7 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess
      *
      * @param string|null $civicNumber Industrielle Alliance Only
      *
-     * @return $this
+     * @return self
      */
     public function setCivicNumber($civicNumber)
     {
@@ -525,7 +604,7 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess
      *
      * @param string|null $road Industrielle Alliance Only
      *
-     * @return $this
+     * @return self
      */
     public function setRoad($road)
     {
@@ -549,7 +628,7 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess
      *
      * @param string|null $extType Industrielle Alliance Only
      *
-     * @return $this
+     * @return self
      */
     public function setExtType($extType)
     {
@@ -573,7 +652,7 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess
      *
      * @param string|null $extNumber Industrielle Alliance Only
      *
-     * @return $this
+     * @return self
      */
     public function setExtNumber($extNumber)
     {
@@ -597,7 +676,7 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess
      *
      * @param string|null $notes notes
      *
-     * @return $this
+     * @return self
      */
     public function setNotes($notes)
     {
@@ -621,7 +700,7 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess
      *
      * @param string|null $locked true or false
      *
-     * @return $this
+     * @return self
      */
     public function setLocked($locked)
     {
@@ -646,18 +725,18 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -680,6 +759,18 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

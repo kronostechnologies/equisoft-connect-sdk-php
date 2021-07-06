@@ -84,36 +84,12 @@ class UsersApiTest extends TestCase
     }
 
     /**
-     * Test case for getUser
-     *
-     * .
-     *
-     */
-    public function testGetUser()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for getUserContext
      *
      * Get user context metadata..
      *
      */
     public function testGetUserContext()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for listUsers
-     *
-     * .
-     *
-     */
-    public function testListUsers()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

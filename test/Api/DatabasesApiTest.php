@@ -72,12 +72,36 @@ class DatabasesApiTest extends TestCase
     }
 
     /**
+     * Test case for getUser
+     *
+     * .
+     *
+     */
+    public function testGetUser()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for listDatabases
      *
      * .
      *
      */
     public function testListDatabases()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for listUsers
+     *
+     * .
+     *
+     */
+    public function testListUsers()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

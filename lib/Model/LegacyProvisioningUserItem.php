@@ -42,9 +42,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
+class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -59,16 +59,66 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'orgId' => 'string''uuid' => 'string''userId' => 'string''displayName' => 'string''firstName' => 'string''lastName' => 'string''initials' => 'string''email' => 'string''role' => 'string''lang' => 'string''concurrentAccess' => 'int''active' => 'string''locked' => 'string''enableMobile' => 'string''gender' => 'string''phoneWork' => 'string''phoneWorkExtension' => 'string''phoneHome' => 'string''phoneCell' => 'string''phoneFax' => 'string''address' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyContactAddress[]''groups' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGroupItem[]''externalIdentifiers' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserIdentifier[]''allowDelegation' => 'string''deletable' => 'string'
+        'orgId' => 'string',
+        'uuid' => 'string',
+        'userId' => 'string',
+        'displayName' => 'string',
+        'firstName' => 'string',
+        'lastName' => 'string',
+        'initials' => 'string',
+        'email' => 'string',
+        'role' => 'string',
+        'lang' => 'string',
+        'concurrentAccess' => 'int',
+        'active' => 'string',
+        'locked' => 'string',
+        'enableMobile' => 'string',
+        'gender' => 'string',
+        'phoneWork' => 'string',
+        'phoneWorkExtension' => 'string',
+        'phoneHome' => 'string',
+        'phoneCell' => 'string',
+        'phoneFax' => 'string',
+        'address' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyContactAddress[]',
+        'groups' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGroupItem[]',
+        'externalIdentifiers' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserIdentifier[]',
+        'allowDelegation' => 'string',
+        'deletable' => 'string'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'orgId' => null'uuid' => null'userId' => null'displayName' => null'firstName' => null'lastName' => null'initials' => null'email' => null'role' => null'lang' => null'concurrentAccess' => null'active' => null'locked' => null'enableMobile' => null'gender' => null'phoneWork' => null'phoneWorkExtension' => null'phoneHome' => null'phoneCell' => null'phoneFax' => null'address' => null'groups' => null'externalIdentifiers' => null'allowDelegation' => null'deletable' => null
+        'orgId' => null,
+        'uuid' => null,
+        'userId' => null,
+        'displayName' => null,
+        'firstName' => null,
+        'lastName' => null,
+        'initials' => null,
+        'email' => null,
+        'role' => null,
+        'lang' => null,
+        'concurrentAccess' => null,
+        'active' => null,
+        'locked' => null,
+        'enableMobile' => null,
+        'gender' => null,
+        'phoneWork' => null,
+        'phoneWorkExtension' => null,
+        'phoneHome' => null,
+        'phoneCell' => null,
+        'phoneFax' => null,
+        'address' => null,
+        'groups' => null,
+        'externalIdentifiers' => null,
+        'allowDelegation' => null,
+        'deletable' => null
     ];
 
     /**
@@ -98,7 +148,31 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'orgId' => 'orgId''uuid' => 'uuid''userId' => 'userId''displayName' => 'displayName''firstName' => 'firstName''lastName' => 'lastName''initials' => 'initials''email' => 'email''role' => 'role''lang' => 'lang''concurrentAccess' => 'concurrentAccess''active' => 'active''locked' => 'locked''enableMobile' => 'enableMobile''gender' => 'gender''phoneWork' => 'phoneWork''phoneWorkExtension' => 'phoneWorkExtension''phoneHome' => 'phoneHome''phoneCell' => 'phoneCell''phoneFax' => 'phoneFax''address' => 'address''groups' => 'groups''externalIdentifiers' => 'externalIdentifiers''allowDelegation' => 'allowDelegation''deletable' => 'deletable'
+        'orgId' => 'orgId',
+        'uuid' => 'uuid',
+        'userId' => 'userId',
+        'displayName' => 'displayName',
+        'firstName' => 'firstName',
+        'lastName' => 'lastName',
+        'initials' => 'initials',
+        'email' => 'email',
+        'role' => 'role',
+        'lang' => 'lang',
+        'concurrentAccess' => 'concurrentAccess',
+        'active' => 'active',
+        'locked' => 'locked',
+        'enableMobile' => 'enableMobile',
+        'gender' => 'gender',
+        'phoneWork' => 'phoneWork',
+        'phoneWorkExtension' => 'phoneWorkExtension',
+        'phoneHome' => 'phoneHome',
+        'phoneCell' => 'phoneCell',
+        'phoneFax' => 'phoneFax',
+        'address' => 'address',
+        'groups' => 'groups',
+        'externalIdentifiers' => 'externalIdentifiers',
+        'allowDelegation' => 'allowDelegation',
+        'deletable' => 'deletable'
     ];
 
     /**
@@ -107,7 +181,31 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'orgId' => 'setOrgId''uuid' => 'setUuid''userId' => 'setUserId''displayName' => 'setDisplayName''firstName' => 'setFirstName''lastName' => 'setLastName''initials' => 'setInitials''email' => 'setEmail''role' => 'setRole''lang' => 'setLang''concurrentAccess' => 'setConcurrentAccess''active' => 'setActive''locked' => 'setLocked''enableMobile' => 'setEnableMobile''gender' => 'setGender''phoneWork' => 'setPhoneWork''phoneWorkExtension' => 'setPhoneWorkExtension''phoneHome' => 'setPhoneHome''phoneCell' => 'setPhoneCell''phoneFax' => 'setPhoneFax''address' => 'setAddress''groups' => 'setGroups''externalIdentifiers' => 'setExternalIdentifiers''allowDelegation' => 'setAllowDelegation''deletable' => 'setDeletable'
+        'orgId' => 'setOrgId',
+        'uuid' => 'setUuid',
+        'userId' => 'setUserId',
+        'displayName' => 'setDisplayName',
+        'firstName' => 'setFirstName',
+        'lastName' => 'setLastName',
+        'initials' => 'setInitials',
+        'email' => 'setEmail',
+        'role' => 'setRole',
+        'lang' => 'setLang',
+        'concurrentAccess' => 'setConcurrentAccess',
+        'active' => 'setActive',
+        'locked' => 'setLocked',
+        'enableMobile' => 'setEnableMobile',
+        'gender' => 'setGender',
+        'phoneWork' => 'setPhoneWork',
+        'phoneWorkExtension' => 'setPhoneWorkExtension',
+        'phoneHome' => 'setPhoneHome',
+        'phoneCell' => 'setPhoneCell',
+        'phoneFax' => 'setPhoneFax',
+        'address' => 'setAddress',
+        'groups' => 'setGroups',
+        'externalIdentifiers' => 'setExternalIdentifiers',
+        'allowDelegation' => 'setAllowDelegation',
+        'deletable' => 'setDeletable'
     ];
 
     /**
@@ -116,7 +214,31 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'orgId' => 'getOrgId''uuid' => 'getUuid''userId' => 'getUserId''displayName' => 'getDisplayName''firstName' => 'getFirstName''lastName' => 'getLastName''initials' => 'getInitials''email' => 'getEmail''role' => 'getRole''lang' => 'getLang''concurrentAccess' => 'getConcurrentAccess''active' => 'getActive''locked' => 'getLocked''enableMobile' => 'getEnableMobile''gender' => 'getGender''phoneWork' => 'getPhoneWork''phoneWorkExtension' => 'getPhoneWorkExtension''phoneHome' => 'getPhoneHome''phoneCell' => 'getPhoneCell''phoneFax' => 'getPhoneFax''address' => 'getAddress''groups' => 'getGroups''externalIdentifiers' => 'getExternalIdentifiers''allowDelegation' => 'getAllowDelegation''deletable' => 'getDeletable'
+        'orgId' => 'getOrgId',
+        'uuid' => 'getUuid',
+        'userId' => 'getUserId',
+        'displayName' => 'getDisplayName',
+        'firstName' => 'getFirstName',
+        'lastName' => 'getLastName',
+        'initials' => 'getInitials',
+        'email' => 'getEmail',
+        'role' => 'getRole',
+        'lang' => 'getLang',
+        'concurrentAccess' => 'getConcurrentAccess',
+        'active' => 'getActive',
+        'locked' => 'getLocked',
+        'enableMobile' => 'getEnableMobile',
+        'gender' => 'getGender',
+        'phoneWork' => 'getPhoneWork',
+        'phoneWorkExtension' => 'getPhoneWorkExtension',
+        'phoneHome' => 'getPhoneHome',
+        'phoneCell' => 'getPhoneCell',
+        'phoneFax' => 'getPhoneFax',
+        'address' => 'getAddress',
+        'groups' => 'getGroups',
+        'externalIdentifiers' => 'getExternalIdentifiers',
+        'allowDelegation' => 'getAllowDelegation',
+        'deletable' => 'getDeletable'
     ];
 
     /**
@@ -160,9 +282,6 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -179,31 +298,31 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['orgId'] = isset($data['orgId']) ? $data['orgId'] : null;
-        $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
-        $this->container['userId'] = isset($data['userId']) ? $data['userId'] : null;
-        $this->container['displayName'] = isset($data['displayName']) ? $data['displayName'] : null;
-        $this->container['firstName'] = isset($data['firstName']) ? $data['firstName'] : null;
-        $this->container['lastName'] = isset($data['lastName']) ? $data['lastName'] : null;
-        $this->container['initials'] = isset($data['initials']) ? $data['initials'] : null;
-        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
-        $this->container['role'] = isset($data['role']) ? $data['role'] : null;
-        $this->container['lang'] = isset($data['lang']) ? $data['lang'] : null;
-        $this->container['concurrentAccess'] = isset($data['concurrentAccess']) ? $data['concurrentAccess'] : null;
-        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
-        $this->container['locked'] = isset($data['locked']) ? $data['locked'] : null;
-        $this->container['enableMobile'] = isset($data['enableMobile']) ? $data['enableMobile'] : null;
-        $this->container['gender'] = isset($data['gender']) ? $data['gender'] : null;
-        $this->container['phoneWork'] = isset($data['phoneWork']) ? $data['phoneWork'] : null;
-        $this->container['phoneWorkExtension'] = isset($data['phoneWorkExtension']) ? $data['phoneWorkExtension'] : null;
-        $this->container['phoneHome'] = isset($data['phoneHome']) ? $data['phoneHome'] : null;
-        $this->container['phoneCell'] = isset($data['phoneCell']) ? $data['phoneCell'] : null;
-        $this->container['phoneFax'] = isset($data['phoneFax']) ? $data['phoneFax'] : null;
-        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
-        $this->container['groups'] = isset($data['groups']) ? $data['groups'] : null;
-        $this->container['externalIdentifiers'] = isset($data['externalIdentifiers']) ? $data['externalIdentifiers'] : null;
-        $this->container['allowDelegation'] = isset($data['allowDelegation']) ? $data['allowDelegation'] : null;
-        $this->container['deletable'] = isset($data['deletable']) ? $data['deletable'] : null;
+        $this->container['orgId'] = $data['orgId'] ?? null;
+        $this->container['uuid'] = $data['uuid'] ?? null;
+        $this->container['userId'] = $data['userId'] ?? null;
+        $this->container['displayName'] = $data['displayName'] ?? null;
+        $this->container['firstName'] = $data['firstName'] ?? null;
+        $this->container['lastName'] = $data['lastName'] ?? null;
+        $this->container['initials'] = $data['initials'] ?? null;
+        $this->container['email'] = $data['email'] ?? null;
+        $this->container['role'] = $data['role'] ?? null;
+        $this->container['lang'] = $data['lang'] ?? null;
+        $this->container['concurrentAccess'] = $data['concurrentAccess'] ?? null;
+        $this->container['active'] = $data['active'] ?? null;
+        $this->container['locked'] = $data['locked'] ?? null;
+        $this->container['enableMobile'] = $data['enableMobile'] ?? null;
+        $this->container['gender'] = $data['gender'] ?? null;
+        $this->container['phoneWork'] = $data['phoneWork'] ?? null;
+        $this->container['phoneWorkExtension'] = $data['phoneWorkExtension'] ?? null;
+        $this->container['phoneHome'] = $data['phoneHome'] ?? null;
+        $this->container['phoneCell'] = $data['phoneCell'] ?? null;
+        $this->container['phoneFax'] = $data['phoneFax'] ?? null;
+        $this->container['address'] = $data['address'] ?? null;
+        $this->container['groups'] = $data['groups'] ?? null;
+        $this->container['externalIdentifiers'] = $data['externalIdentifiers'] ?? null;
+        $this->container['allowDelegation'] = $data['allowDelegation'] ?? null;
+        $this->container['deletable'] = $data['deletable'] ?? null;
     }
 
     /**
@@ -245,7 +364,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $orgId User organization id
      *
-     * @return $this
+     * @return self
      */
     public function setOrgId($orgId)
     {
@@ -269,7 +388,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $uuid User globaly unique identifier
      *
-     * @return $this
+     * @return self
      */
     public function setUuid($uuid)
     {
@@ -293,7 +412,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $userId User unique identifier
      *
-     * @return $this
+     * @return self
      */
     public function setUserId($userId)
     {
@@ -317,7 +436,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $displayName User display name
      *
-     * @return $this
+     * @return self
      */
     public function setDisplayName($displayName)
     {
@@ -341,7 +460,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $firstName First name
      *
-     * @return $this
+     * @return self
      */
     public function setFirstName($firstName)
     {
@@ -365,7 +484,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $lastName Last name
      *
-     * @return $this
+     * @return self
      */
     public function setLastName($lastName)
     {
@@ -389,7 +508,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $initials Initials
      *
-     * @return $this
+     * @return self
      */
     public function setInitials($initials)
     {
@@ -413,7 +532,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $email Email address used for login
      *
-     * @return $this
+     * @return self
      */
     public function setEmail($email)
     {
@@ -437,7 +556,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $role User role. Accepts USER or ADMIN
      *
-     * @return $this
+     * @return self
      */
     public function setRole($role)
     {
@@ -461,7 +580,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $lang User language. Organisation default lang will be used if not provided. Accepts FR or EN.
      *
-     * @return $this
+     * @return self
      */
     public function setLang($lang)
     {
@@ -485,7 +604,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      *
      * @param int|null $concurrentAccess Number of allowed concurrent accesses with this user. Default 1.
      *
-     * @return $this
+     * @return self
      */
     public function setConcurrentAccess($concurrentAccess)
     {
@@ -509,7 +628,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $active User is active or not (true or false)
      *
-     * @return $this
+     * @return self
      */
     public function setActive($active)
     {
@@ -533,7 +652,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $locked User is locked or not (true or false)
      *
-     * @return $this
+     * @return self
      */
     public function setLocked($locked)
     {
@@ -557,7 +676,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $enableMobile Enable Mobile version. Accepts true or false. Default false
      *
-     * @return $this
+     * @return self
      */
     public function setEnableMobile($enableMobile)
     {
@@ -581,7 +700,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $gender Gender of this user. Accepts M or F.
      *
-     * @return $this
+     * @return self
      */
     public function setGender($gender)
     {
@@ -605,7 +724,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $phoneWork Work phone number of this user
      *
-     * @return $this
+     * @return self
      */
     public function setPhoneWork($phoneWork)
     {
@@ -629,7 +748,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $phoneWorkExtension Extension of work phone number of this user.
      *
-     * @return $this
+     * @return self
      */
     public function setPhoneWorkExtension($phoneWorkExtension)
     {
@@ -653,7 +772,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $phoneHome Home phone number of this user.
      *
-     * @return $this
+     * @return self
      */
     public function setPhoneHome($phoneHome)
     {
@@ -677,7 +796,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $phoneCell Cellphone number of this user.
      *
-     * @return $this
+     * @return self
      */
     public function setPhoneCell($phoneCell)
     {
@@ -701,7 +820,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $phoneFax Fax phone number of this user.
      *
-     * @return $this
+     * @return self
      */
     public function setPhoneFax($phoneFax)
     {
@@ -725,7 +844,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyContactAddress[]|null $address Address of this user.
      *
-     * @return $this
+     * @return self
      */
     public function setAddress($address)
     {
@@ -749,7 +868,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGroupItem[]|null $groups Groups the user is a member of.
      *
-     * @return $this
+     * @return self
      */
     public function setGroups($groups)
     {
@@ -773,7 +892,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserIdentifier[]|null $externalIdentifiers List of identifier to uniquely identify the user. (Ex: Extranet2 or domain userId)
      *
-     * @return $this
+     * @return self
      */
     public function setExternalIdentifiers($externalIdentifiers)
     {
@@ -797,7 +916,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $allowDelegation Allow the user to delegate access to his data Accepts true or false.
      *
-     * @return $this
+     * @return self
      */
     public function setAllowDelegation($allowDelegation)
     {
@@ -821,7 +940,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $deletable Can the user be deleted Accepts true or false.
      *
-     * @return $this
+     * @return self
      */
     public function setDeletable($deletable)
     {
@@ -846,18 +965,18 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -880,6 +999,18 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

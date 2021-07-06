@@ -42,9 +42,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess
+class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -59,16 +59,26 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'string''files' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentFile[]''type' => 'string''subType' => 'string''name' => 'string'
+        'id' => 'string',
+        'files' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentFile[]',
+        'type' => 'string',
+        'subType' => 'string',
+        'name' => 'string'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null'files' => null'type' => null'subType' => null'name' => null
+        'id' => null,
+        'files' => null,
+        'type' => null,
+        'subType' => null,
+        'name' => null
     ];
 
     /**
@@ -98,7 +108,11 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id''files' => 'files''type' => 'type''subType' => 'subType''name' => 'name'
+        'id' => 'id',
+        'files' => 'files',
+        'type' => 'type',
+        'subType' => 'subType',
+        'name' => 'name'
     ];
 
     /**
@@ -107,7 +121,11 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId''files' => 'setFiles''type' => 'setType''subType' => 'setSubType''name' => 'setName'
+        'id' => 'setId',
+        'files' => 'setFiles',
+        'type' => 'setType',
+        'subType' => 'setSubType',
+        'name' => 'setName'
     ];
 
     /**
@@ -116,7 +134,11 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId''files' => 'getFiles''type' => 'getType''subType' => 'getSubType''name' => 'getName'
+        'id' => 'getId',
+        'files' => 'getFiles',
+        'type' => 'getType',
+        'subType' => 'getSubType',
+        'name' => 'getName'
     ];
 
     /**
@@ -160,9 +182,6 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -179,11 +198,11 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['files'] = isset($data['files']) ? $data['files'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['subType'] = isset($data['subType']) ? $data['subType'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['id'] = $data['id'] ?? null;
+        $this->container['files'] = $data['files'] ?? null;
+        $this->container['type'] = $data['type'] ?? null;
+        $this->container['subType'] = $data['subType'] ?? null;
+        $this->container['name'] = $data['name'] ?? null;
     }
 
     /**
@@ -225,7 +244,7 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $id id of the document
      *
-     * @return $this
+     * @return self
      */
     public function setId($id)
     {
@@ -249,7 +268,7 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentFile[]|null $files Files contained inside the document
      *
-     * @return $this
+     * @return self
      */
     public function setFiles($files)
     {
@@ -273,7 +292,7 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $type type of the document
      *
-     * @return $this
+     * @return self
      */
     public function setType($type)
     {
@@ -297,7 +316,7 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $subType subtype of the document
      *
-     * @return $this
+     * @return self
      */
     public function setSubType($subType)
     {
@@ -321,7 +340,7 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $name name of the document
      *
-     * @return $this
+     * @return self
      */
     public function setName($name)
     {
@@ -346,18 +365,18 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -380,6 +399,18 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

@@ -40,9 +40,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class MovementClientBaseUsingFileMovement extends MovementMovement 
+class MovementClientBaseUsingFileMovement extends MovementMovement
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -57,16 +57,32 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string''sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase''sourceUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser''destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase''destinationUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser''capsil' => 'bool''univeris' => 'bool''dataphile' => 'bool'
+        'type' => 'string',
+        'sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
+        'sourceUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
+        'destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
+        'destinationUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
+        'capsil' => 'bool',
+        'univeris' => 'bool',
+        'dataphile' => 'bool'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'type' => null'sourceDatabase' => null'sourceUser' => null'destinationDatabase' => null'destinationUser' => null'capsil' => null'univeris' => null'dataphile' => null
+        'type' => null,
+        'sourceDatabase' => null,
+        'sourceUser' => null,
+        'destinationDatabase' => null,
+        'destinationUser' => null,
+        'capsil' => null,
+        'univeris' => null,
+        'dataphile' => null
     ];
 
     /**
@@ -96,7 +112,14 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type''sourceDatabase' => 'sourceDatabase''sourceUser' => 'sourceUser''destinationDatabase' => 'destinationDatabase''destinationUser' => 'destinationUser''capsil' => 'capsil''univeris' => 'univeris''dataphile' => 'dataphile'
+        'type' => 'type',
+        'sourceDatabase' => 'sourceDatabase',
+        'sourceUser' => 'sourceUser',
+        'destinationDatabase' => 'destinationDatabase',
+        'destinationUser' => 'destinationUser',
+        'capsil' => 'capsil',
+        'univeris' => 'univeris',
+        'dataphile' => 'dataphile'
     ];
 
     /**
@@ -105,7 +128,14 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType''sourceDatabase' => 'setSourceDatabase''sourceUser' => 'setSourceUser''destinationDatabase' => 'setDestinationDatabase''destinationUser' => 'setDestinationUser''capsil' => 'setCapsil''univeris' => 'setUniveris''dataphile' => 'setDataphile'
+        'type' => 'setType',
+        'sourceDatabase' => 'setSourceDatabase',
+        'sourceUser' => 'setSourceUser',
+        'destinationDatabase' => 'setDestinationDatabase',
+        'destinationUser' => 'setDestinationUser',
+        'capsil' => 'setCapsil',
+        'univeris' => 'setUniveris',
+        'dataphile' => 'setDataphile'
     ];
 
     /**
@@ -114,7 +144,14 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType''sourceDatabase' => 'getSourceDatabase''sourceUser' => 'getSourceUser''destinationDatabase' => 'getDestinationDatabase''destinationUser' => 'getDestinationUser''capsil' => 'getCapsil''univeris' => 'getUniveris''dataphile' => 'getDataphile'
+        'type' => 'getType',
+        'sourceDatabase' => 'getSourceDatabase',
+        'sourceUser' => 'getSourceUser',
+        'destinationDatabase' => 'getDestinationDatabase',
+        'destinationUser' => 'getDestinationUser',
+        'capsil' => 'getCapsil',
+        'univeris' => 'getUniveris',
+        'dataphile' => 'getDataphile'
     ];
 
     /**
@@ -159,9 +196,7 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
     }
 
     const TYPE_CLIENTBASE_USING_FILE = 'CLIENTBASE_USING_FILE';
-    
 
-    
     /**
      * Gets allowable values of the enum
      *
@@ -173,7 +208,6 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
             self::TYPE_CLIENTBASE_USING_FILE,
         ];
     }
-    
 
 
     /**
@@ -186,14 +220,14 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
     {
         parent::__construct($data);
 
-        $this->container['type'] = isset($data['type']) ? $data['type'] : TYPE_CLIENTBASE_USING_FILE;
-        $this->container['sourceDatabase'] = isset($data['sourceDatabase']) ? $data['sourceDatabase'] : null;
-        $this->container['sourceUser'] = isset($data['sourceUser']) ? $data['sourceUser'] : null;
-        $this->container['destinationDatabase'] = isset($data['destinationDatabase']) ? $data['destinationDatabase'] : null;
-        $this->container['destinationUser'] = isset($data['destinationUser']) ? $data['destinationUser'] : null;
-        $this->container['capsil'] = isset($data['capsil']) ? $data['capsil'] : null;
-        $this->container['univeris'] = isset($data['univeris']) ? $data['univeris'] : null;
-        $this->container['dataphile'] = isset($data['dataphile']) ? $data['dataphile'] : null;
+        $this->container['type'] = $data['type'] ?? TYPE_CLIENTBASE_USING_FILE;
+        $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
+        $this->container['sourceUser'] = $data['sourceUser'] ?? null;
+        $this->container['destinationDatabase'] = $data['destinationDatabase'] ?? null;
+        $this->container['destinationUser'] = $data['destinationUser'] ?? null;
+        $this->container['capsil'] = $data['capsil'] ?? null;
+        $this->container['univeris'] = $data['univeris'] ?? null;
+        $this->container['dataphile'] = $data['dataphile'] ?? null;
     }
 
     /**
@@ -211,7 +245,8 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
         $allowedValues = $this->getTypeAllowableValues();
         if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value for 'type', must be one of '%s'",
+                "invalid value '%s' for 'type', must be one of '%s'",
+                $this->container['type'],
                 implode("', '", $allowedValues)
             );
         }
@@ -258,7 +293,7 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
      *
      * @param string $type type
      *
-     * @return $this
+     * @return self
      */
     public function setType($type)
     {
@@ -266,7 +301,8 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
         if (!in_array($type, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value for 'type', must be one of '%s'",
+                    "Invalid value '%s' for 'type', must be one of '%s'",
+                    $type,
                     implode("', '", $allowedValues)
                 )
             );
@@ -291,7 +327,7 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase $sourceDatabase sourceDatabase
      *
-     * @return $this
+     * @return self
      */
     public function setSourceDatabase($sourceDatabase)
     {
@@ -315,7 +351,7 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser $sourceUser sourceUser
      *
-     * @return $this
+     * @return self
      */
     public function setSourceUser($sourceUser)
     {
@@ -339,7 +375,7 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase $destinationDatabase destinationDatabase
      *
-     * @return $this
+     * @return self
      */
     public function setDestinationDatabase($destinationDatabase)
     {
@@ -363,7 +399,7 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser $destinationUser destinationUser
      *
-     * @return $this
+     * @return self
      */
     public function setDestinationUser($destinationUser)
     {
@@ -387,7 +423,7 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
      *
      * @param bool|null $capsil capsil
      *
-     * @return $this
+     * @return self
      */
     public function setCapsil($capsil)
     {
@@ -411,7 +447,7 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
      *
      * @param bool|null $univeris univeris
      *
-     * @return $this
+     * @return self
      */
     public function setUniveris($univeris)
     {
@@ -435,7 +471,7 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
      *
      * @param bool|null $dataphile dataphile
      *
-     * @return $this
+     * @return self
      */
     public function setDataphile($dataphile)
     {
@@ -460,18 +496,18 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -494,6 +530,18 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

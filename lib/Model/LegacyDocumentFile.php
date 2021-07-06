@@ -42,9 +42,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class LegacyDocumentFile implements ModelInterface, ArrayAccess
+class LegacyDocumentFile implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -59,16 +59,24 @@ class LegacyDocumentFile implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'string''fileName' => 'string''mimeType' => 'string''sizeBytes' => 'string'
+        'id' => 'string',
+        'fileName' => 'string',
+        'mimeType' => 'string',
+        'sizeBytes' => 'string'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null'fileName' => null'mimeType' => null'sizeBytes' => null
+        'id' => null,
+        'fileName' => null,
+        'mimeType' => null,
+        'sizeBytes' => null
     ];
 
     /**
@@ -98,7 +106,10 @@ class LegacyDocumentFile implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id''fileName' => 'fileName''mimeType' => 'mimeType''sizeBytes' => 'sizeBytes'
+        'id' => 'id',
+        'fileName' => 'fileName',
+        'mimeType' => 'mimeType',
+        'sizeBytes' => 'sizeBytes'
     ];
 
     /**
@@ -107,7 +118,10 @@ class LegacyDocumentFile implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId''fileName' => 'setFileName''mimeType' => 'setMimeType''sizeBytes' => 'setSizeBytes'
+        'id' => 'setId',
+        'fileName' => 'setFileName',
+        'mimeType' => 'setMimeType',
+        'sizeBytes' => 'setSizeBytes'
     ];
 
     /**
@@ -116,7 +130,10 @@ class LegacyDocumentFile implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId''fileName' => 'getFileName''mimeType' => 'getMimeType''sizeBytes' => 'getSizeBytes'
+        'id' => 'getId',
+        'fileName' => 'getFileName',
+        'mimeType' => 'getMimeType',
+        'sizeBytes' => 'getSizeBytes'
     ];
 
     /**
@@ -160,9 +177,6 @@ class LegacyDocumentFile implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -179,10 +193,10 @@ class LegacyDocumentFile implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['fileName'] = isset($data['fileName']) ? $data['fileName'] : null;
-        $this->container['mimeType'] = isset($data['mimeType']) ? $data['mimeType'] : null;
-        $this->container['sizeBytes'] = isset($data['sizeBytes']) ? $data['sizeBytes'] : null;
+        $this->container['id'] = $data['id'] ?? null;
+        $this->container['fileName'] = $data['fileName'] ?? null;
+        $this->container['mimeType'] = $data['mimeType'] ?? null;
+        $this->container['sizeBytes'] = $data['sizeBytes'] ?? null;
     }
 
     /**
@@ -224,7 +238,7 @@ class LegacyDocumentFile implements ModelInterface, ArrayAccess
      *
      * @param string|null $id id of the file
      *
-     * @return $this
+     * @return self
      */
     public function setId($id)
     {
@@ -248,7 +262,7 @@ class LegacyDocumentFile implements ModelInterface, ArrayAccess
      *
      * @param string|null $fileName File name
      *
-     * @return $this
+     * @return self
      */
     public function setFileName($fileName)
     {
@@ -272,7 +286,7 @@ class LegacyDocumentFile implements ModelInterface, ArrayAccess
      *
      * @param string|null $mimeType Mime Type of the file
      *
-     * @return $this
+     * @return self
      */
     public function setMimeType($mimeType)
     {
@@ -296,7 +310,7 @@ class LegacyDocumentFile implements ModelInterface, ArrayAccess
      *
      * @param string|null $sizeBytes Size of the file(in bytes)
      *
-     * @return $this
+     * @return self
      */
     public function setSizeBytes($sizeBytes)
     {
@@ -321,18 +335,18 @@ class LegacyDocumentFile implements ModelInterface, ArrayAccess
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -355,6 +369,18 @@ class LegacyDocumentFile implements ModelInterface, ArrayAccess
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

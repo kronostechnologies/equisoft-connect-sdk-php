@@ -42,9 +42,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, ArrayAccess
+class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -59,16 +59,20 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
       * @var string[]
       */
     protected static $openAPITypes = [
-        'clientKey' => 'string''version' => 'string'
+        'clientKey' => 'string',
+        'version' => 'string'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'clientKey' => null'version' => null
+        'clientKey' => null,
+        'version' => null
     ];
 
     /**
@@ -98,7 +102,8 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
      * @var string[]
      */
     protected static $attributeMap = [
-        'clientKey' => 'clientKey''version' => 'version'
+        'clientKey' => 'clientKey',
+        'version' => 'version'
     ];
 
     /**
@@ -107,7 +112,8 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
      * @var string[]
      */
     protected static $setters = [
-        'clientKey' => 'setClientKey''version' => 'setVersion'
+        'clientKey' => 'setClientKey',
+        'version' => 'setVersion'
     ];
 
     /**
@@ -116,7 +122,8 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
      * @var string[]
      */
     protected static $getters = [
-        'clientKey' => 'getClientKey''version' => 'getVersion'
+        'clientKey' => 'getClientKey',
+        'version' => 'getVersion'
     ];
 
     /**
@@ -162,9 +169,7 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
 
     const VERSION_NATIVE = 'NATIVE';
     const VERSION_LEGACY = 'LEGACY';
-    
 
-    
     /**
      * Gets allowable values of the enum
      *
@@ -177,7 +182,6 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
             self::VERSION_LEGACY,
         ];
     }
-    
 
     /**
      * Associative array for storing property values
@@ -194,8 +198,8 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
      */
     public function __construct(array $data = null)
     {
-        $this->container['clientKey'] = isset($data['clientKey']) ? $data['clientKey'] : null;
-        $this->container['version'] = isset($data['version']) ? $data['version'] : VERSION_NATIVE;
+        $this->container['clientKey'] = $data['clientKey'] ?? null;
+        $this->container['version'] = $data['version'] ?? VERSION_NATIVE;
     }
 
     /**
@@ -216,7 +220,8 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
         $allowedValues = $this->getVersionAllowableValues();
         if (!is_null($this->container['version']) && !in_array($this->container['version'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value for 'version', must be one of '%s'",
+                "invalid value '%s' for 'version', must be one of '%s'",
+                $this->container['version'],
                 implode("', '", $allowedValues)
             );
         }
@@ -251,7 +256,7 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
      *
      * @param string $clientKey clientKey
      *
-     * @return $this
+     * @return self
      */
     public function setClientKey($clientKey)
     {
@@ -275,7 +280,7 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
      *
      * @param string $version version
      *
-     * @return $this
+     * @return self
      */
     public function setVersion($version)
     {
@@ -283,7 +288,8 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
         if (!in_array($version, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value for 'version', must be one of '%s'",
+                    "Invalid value '%s' for 'version', must be one of '%s'",
+                    $version,
                     implode("', '", $allowedValues)
                 )
             );
@@ -309,18 +315,18 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -343,6 +349,18 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

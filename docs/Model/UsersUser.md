@@ -11,5 +11,6 @@ Name | Type | Description | Notes
 **lastName** | **string** | The user&#39;s last name. | [optional]
 **locale** | **string** | The user&#39;s preferred locale. | [optional]
 **role** | **string** | The user&#39;s role. | [optional]
+**maxConcurrentAccess** | **int** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

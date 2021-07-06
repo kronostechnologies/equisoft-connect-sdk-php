@@ -42,9 +42,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class UsersUser implements ModelInterface, ArrayAccess
+class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -59,16 +59,32 @@ class UsersUser implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'int''displayName' => 'string''email' => 'string''firstName' => 'string''lastName' => 'string''locale' => 'string''role' => 'string'
+        'id' => 'int',
+        'displayName' => 'string',
+        'email' => 'string',
+        'firstName' => 'string',
+        'lastName' => 'string',
+        'locale' => 'string',
+        'role' => 'string',
+        'maxConcurrentAccess' => 'int'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null'displayName' => null'email' => null'firstName' => null'lastName' => null'locale' => null'role' => null
+        'id' => null,
+        'displayName' => null,
+        'email' => null,
+        'firstName' => null,
+        'lastName' => null,
+        'locale' => null,
+        'role' => null,
+        'maxConcurrentAccess' => null
     ];
 
     /**
@@ -98,7 +114,14 @@ class UsersUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id''displayName' => 'displayName''email' => 'email''firstName' => 'firstName''lastName' => 'lastName''locale' => 'locale''role' => 'role'
+        'id' => 'id',
+        'displayName' => 'displayName',
+        'email' => 'email',
+        'firstName' => 'firstName',
+        'lastName' => 'lastName',
+        'locale' => 'locale',
+        'role' => 'role',
+        'maxConcurrentAccess' => 'maxConcurrentAccess'
     ];
 
     /**
@@ -107,7 +130,14 @@ class UsersUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId''displayName' => 'setDisplayName''email' => 'setEmail''firstName' => 'setFirstName''lastName' => 'setLastName''locale' => 'setLocale''role' => 'setRole'
+        'id' => 'setId',
+        'displayName' => 'setDisplayName',
+        'email' => 'setEmail',
+        'firstName' => 'setFirstName',
+        'lastName' => 'setLastName',
+        'locale' => 'setLocale',
+        'role' => 'setRole',
+        'maxConcurrentAccess' => 'setMaxConcurrentAccess'
     ];
 
     /**
@@ -116,7 +146,14 @@ class UsersUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId''displayName' => 'getDisplayName''email' => 'getEmail''firstName' => 'getFirstName''lastName' => 'getLastName''locale' => 'getLocale''role' => 'getRole'
+        'id' => 'getId',
+        'displayName' => 'getDisplayName',
+        'email' => 'getEmail',
+        'firstName' => 'getFirstName',
+        'lastName' => 'getLastName',
+        'locale' => 'getLocale',
+        'role' => 'getRole',
+        'maxConcurrentAccess' => 'getMaxConcurrentAccess'
     ];
 
     /**
@@ -160,9 +197,6 @@ class UsersUser implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -179,13 +213,14 @@ class UsersUser implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['displayName'] = isset($data['displayName']) ? $data['displayName'] : null;
-        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
-        $this->container['firstName'] = isset($data['firstName']) ? $data['firstName'] : null;
-        $this->container['lastName'] = isset($data['lastName']) ? $data['lastName'] : null;
-        $this->container['locale'] = isset($data['locale']) ? $data['locale'] : null;
-        $this->container['role'] = isset($data['role']) ? $data['role'] : null;
+        $this->container['id'] = $data['id'] ?? null;
+        $this->container['displayName'] = $data['displayName'] ?? null;
+        $this->container['email'] = $data['email'] ?? null;
+        $this->container['firstName'] = $data['firstName'] ?? null;
+        $this->container['lastName'] = $data['lastName'] ?? null;
+        $this->container['locale'] = $data['locale'] ?? null;
+        $this->container['role'] = $data['role'] ?? null;
+        $this->container['maxConcurrentAccess'] = $data['maxConcurrentAccess'] ?? null;
     }
 
     /**
@@ -227,7 +262,7 @@ class UsersUser implements ModelInterface, ArrayAccess
      *
      * @param int|null $id The user's unique identifier (ID).
      *
-     * @return $this
+     * @return self
      */
     public function setId($id)
     {
@@ -251,7 +286,7 @@ class UsersUser implements ModelInterface, ArrayAccess
      *
      * @param string|null $displayName The user's full display name.
      *
-     * @return $this
+     * @return self
      */
     public function setDisplayName($displayName)
     {
@@ -275,7 +310,7 @@ class UsersUser implements ModelInterface, ArrayAccess
      *
      * @param string|null $email The user's eMail address.
      *
-     * @return $this
+     * @return self
      */
     public function setEmail($email)
     {
@@ -299,7 +334,7 @@ class UsersUser implements ModelInterface, ArrayAccess
      *
      * @param string|null $firstName The user's first name.
      *
-     * @return $this
+     * @return self
      */
     public function setFirstName($firstName)
     {
@@ -323,7 +358,7 @@ class UsersUser implements ModelInterface, ArrayAccess
      *
      * @param string|null $lastName The user's last name.
      *
-     * @return $this
+     * @return self
      */
     public function setLastName($lastName)
     {
@@ -347,7 +382,7 @@ class UsersUser implements ModelInterface, ArrayAccess
      *
      * @param string|null $locale The user's preferred locale.
      *
-     * @return $this
+     * @return self
      */
     public function setLocale($locale)
     {
@@ -371,11 +406,35 @@ class UsersUser implements ModelInterface, ArrayAccess
      *
      * @param string|null $role The user's role.
      *
-     * @return $this
+     * @return self
      */
     public function setRole($role)
     {
         $this->container['role'] = $role;
+
+        return $this;
+    }
+
+    /**
+     * Gets maxConcurrentAccess
+     *
+     * @return int|null
+     */
+    public function getMaxConcurrentAccess()
+    {
+        return $this->container['maxConcurrentAccess'];
+    }
+
+    /**
+     * Sets maxConcurrentAccess
+     *
+     * @param int|null $maxConcurrentAccess maxConcurrentAccess
+     *
+     * @return self
+     */
+    public function setMaxConcurrentAccess($maxConcurrentAccess)
+    {
+        $this->container['maxConcurrentAccess'] = $maxConcurrentAccess;
 
         return $this;
     }
@@ -396,18 +455,18 @@ class UsersUser implements ModelInterface, ArrayAccess
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -430,6 +489,18 @@ class UsersUser implements ModelInterface, ArrayAccess
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

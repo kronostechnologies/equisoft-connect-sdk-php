@@ -42,9 +42,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class MovementGatewayAccessCode implements ModelInterface, ArrayAccess
+class MovementGatewayAccessCode implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -59,16 +59,24 @@ class MovementGatewayAccessCode implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'accessCode' => 'string''label' => 'string''code' => 'string''system' => 'string'
+        'accessCode' => 'string',
+        'label' => 'string',
+        'code' => 'string',
+        'system' => 'string'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'accessCode' => null'label' => null'code' => null'system' => null
+        'accessCode' => null,
+        'label' => null,
+        'code' => null,
+        'system' => null
     ];
 
     /**
@@ -98,7 +106,10 @@ class MovementGatewayAccessCode implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'accessCode' => 'accessCode''label' => 'label''code' => 'code''system' => 'system'
+        'accessCode' => 'accessCode',
+        'label' => 'label',
+        'code' => 'code',
+        'system' => 'system'
     ];
 
     /**
@@ -107,7 +118,10 @@ class MovementGatewayAccessCode implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'accessCode' => 'setAccessCode''label' => 'setLabel''code' => 'setCode''system' => 'setSystem'
+        'accessCode' => 'setAccessCode',
+        'label' => 'setLabel',
+        'code' => 'setCode',
+        'system' => 'setSystem'
     ];
 
     /**
@@ -116,7 +130,10 @@ class MovementGatewayAccessCode implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'accessCode' => 'getAccessCode''label' => 'getLabel''code' => 'getCode''system' => 'getSystem'
+        'accessCode' => 'getAccessCode',
+        'label' => 'getLabel',
+        'code' => 'getCode',
+        'system' => 'getSystem'
     ];
 
     /**
@@ -160,9 +177,6 @@ class MovementGatewayAccessCode implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -179,10 +193,10 @@ class MovementGatewayAccessCode implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['accessCode'] = isset($data['accessCode']) ? $data['accessCode'] : null;
-        $this->container['label'] = isset($data['label']) ? $data['label'] : null;
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['system'] = isset($data['system']) ? $data['system'] : null;
+        $this->container['accessCode'] = $data['accessCode'] ?? null;
+        $this->container['label'] = $data['label'] ?? null;
+        $this->container['code'] = $data['code'] ?? null;
+        $this->container['system'] = $data['system'] ?? null;
     }
 
     /**
@@ -224,7 +238,7 @@ class MovementGatewayAccessCode implements ModelInterface, ArrayAccess
      *
      * @param string|null $accessCode accessCode
      *
-     * @return $this
+     * @return self
      */
     public function setAccessCode($accessCode)
     {
@@ -248,7 +262,7 @@ class MovementGatewayAccessCode implements ModelInterface, ArrayAccess
      *
      * @param string|null $label label
      *
-     * @return $this
+     * @return self
      */
     public function setLabel($label)
     {
@@ -272,7 +286,7 @@ class MovementGatewayAccessCode implements ModelInterface, ArrayAccess
      *
      * @param string|null $code code
      *
-     * @return $this
+     * @return self
      */
     public function setCode($code)
     {
@@ -296,7 +310,7 @@ class MovementGatewayAccessCode implements ModelInterface, ArrayAccess
      *
      * @param string|null $system system
      *
-     * @return $this
+     * @return self
      */
     public function setSystem($system)
     {
@@ -321,18 +335,18 @@ class MovementGatewayAccessCode implements ModelInterface, ArrayAccess
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -355,6 +369,18 @@ class MovementGatewayAccessCode implements ModelInterface, ArrayAccess
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

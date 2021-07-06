@@ -42,9 +42,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
+class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -59,16 +59,52 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'orgId' => 'string''displayName' => 'string''status' => 'string''diskUsageQuota' => 'string''lang' => 'string''mainPhone' => 'string''tollFree' => 'string''fax' => 'string''address' => 'string''addressLine2' => 'string''addressCity' => 'string''addressState' => 'string''addressPostalCode' => 'string''addressCountry' => 'string''webSite' => 'string''isMultiUser' => 'string''fnaStatus' => 'string''users' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserItem[]'
+        'orgId' => 'string',
+        'displayName' => 'string',
+        'status' => 'string',
+        'diskUsageQuota' => 'string',
+        'lang' => 'string',
+        'mainPhone' => 'string',
+        'tollFree' => 'string',
+        'fax' => 'string',
+        'address' => 'string',
+        'addressLine2' => 'string',
+        'addressCity' => 'string',
+        'addressState' => 'string',
+        'addressPostalCode' => 'string',
+        'addressCountry' => 'string',
+        'webSite' => 'string',
+        'isMultiUser' => 'string',
+        'fnaStatus' => 'string',
+        'users' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserItem[]'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'orgId' => null'displayName' => null'status' => null'diskUsageQuota' => null'lang' => null'mainPhone' => null'tollFree' => null'fax' => null'address' => null'addressLine2' => null'addressCity' => null'addressState' => null'addressPostalCode' => null'addressCountry' => null'webSite' => null'isMultiUser' => null'fnaStatus' => null'users' => null
+        'orgId' => null,
+        'displayName' => null,
+        'status' => null,
+        'diskUsageQuota' => null,
+        'lang' => null,
+        'mainPhone' => null,
+        'tollFree' => null,
+        'fax' => null,
+        'address' => null,
+        'addressLine2' => null,
+        'addressCity' => null,
+        'addressState' => null,
+        'addressPostalCode' => null,
+        'addressCountry' => null,
+        'webSite' => null,
+        'isMultiUser' => null,
+        'fnaStatus' => null,
+        'users' => null
     ];
 
     /**
@@ -98,7 +134,24 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'orgId' => 'orgId''displayName' => 'displayName''status' => 'status''diskUsageQuota' => 'diskUsageQuota''lang' => 'lang''mainPhone' => 'mainPhone''tollFree' => 'tollFree''fax' => 'fax''address' => 'address''addressLine2' => 'addressLine2''addressCity' => 'addressCity''addressState' => 'addressState''addressPostalCode' => 'addressPostalCode''addressCountry' => 'addressCountry''webSite' => 'webSite''isMultiUser' => 'isMultiUser''fnaStatus' => 'fnaStatus''users' => 'users'
+        'orgId' => 'orgId',
+        'displayName' => 'displayName',
+        'status' => 'status',
+        'diskUsageQuota' => 'diskUsageQuota',
+        'lang' => 'lang',
+        'mainPhone' => 'mainPhone',
+        'tollFree' => 'tollFree',
+        'fax' => 'fax',
+        'address' => 'address',
+        'addressLine2' => 'addressLine2',
+        'addressCity' => 'addressCity',
+        'addressState' => 'addressState',
+        'addressPostalCode' => 'addressPostalCode',
+        'addressCountry' => 'addressCountry',
+        'webSite' => 'webSite',
+        'isMultiUser' => 'isMultiUser',
+        'fnaStatus' => 'fnaStatus',
+        'users' => 'users'
     ];
 
     /**
@@ -107,7 +160,24 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'orgId' => 'setOrgId''displayName' => 'setDisplayName''status' => 'setStatus''diskUsageQuota' => 'setDiskUsageQuota''lang' => 'setLang''mainPhone' => 'setMainPhone''tollFree' => 'setTollFree''fax' => 'setFax''address' => 'setAddress''addressLine2' => 'setAddressLine2''addressCity' => 'setAddressCity''addressState' => 'setAddressState''addressPostalCode' => 'setAddressPostalCode''addressCountry' => 'setAddressCountry''webSite' => 'setWebSite''isMultiUser' => 'setIsMultiUser''fnaStatus' => 'setFnaStatus''users' => 'setUsers'
+        'orgId' => 'setOrgId',
+        'displayName' => 'setDisplayName',
+        'status' => 'setStatus',
+        'diskUsageQuota' => 'setDiskUsageQuota',
+        'lang' => 'setLang',
+        'mainPhone' => 'setMainPhone',
+        'tollFree' => 'setTollFree',
+        'fax' => 'setFax',
+        'address' => 'setAddress',
+        'addressLine2' => 'setAddressLine2',
+        'addressCity' => 'setAddressCity',
+        'addressState' => 'setAddressState',
+        'addressPostalCode' => 'setAddressPostalCode',
+        'addressCountry' => 'setAddressCountry',
+        'webSite' => 'setWebSite',
+        'isMultiUser' => 'setIsMultiUser',
+        'fnaStatus' => 'setFnaStatus',
+        'users' => 'setUsers'
     ];
 
     /**
@@ -116,7 +186,24 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'orgId' => 'getOrgId''displayName' => 'getDisplayName''status' => 'getStatus''diskUsageQuota' => 'getDiskUsageQuota''lang' => 'getLang''mainPhone' => 'getMainPhone''tollFree' => 'getTollFree''fax' => 'getFax''address' => 'getAddress''addressLine2' => 'getAddressLine2''addressCity' => 'getAddressCity''addressState' => 'getAddressState''addressPostalCode' => 'getAddressPostalCode''addressCountry' => 'getAddressCountry''webSite' => 'getWebSite''isMultiUser' => 'getIsMultiUser''fnaStatus' => 'getFnaStatus''users' => 'getUsers'
+        'orgId' => 'getOrgId',
+        'displayName' => 'getDisplayName',
+        'status' => 'getStatus',
+        'diskUsageQuota' => 'getDiskUsageQuota',
+        'lang' => 'getLang',
+        'mainPhone' => 'getMainPhone',
+        'tollFree' => 'getTollFree',
+        'fax' => 'getFax',
+        'address' => 'getAddress',
+        'addressLine2' => 'getAddressLine2',
+        'addressCity' => 'getAddressCity',
+        'addressState' => 'getAddressState',
+        'addressPostalCode' => 'getAddressPostalCode',
+        'addressCountry' => 'getAddressCountry',
+        'webSite' => 'getWebSite',
+        'isMultiUser' => 'getIsMultiUser',
+        'fnaStatus' => 'getFnaStatus',
+        'users' => 'getUsers'
     ];
 
     /**
@@ -160,9 +247,6 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -179,24 +263,24 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['orgId'] = isset($data['orgId']) ? $data['orgId'] : null;
-        $this->container['displayName'] = isset($data['displayName']) ? $data['displayName'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['diskUsageQuota'] = isset($data['diskUsageQuota']) ? $data['diskUsageQuota'] : null;
-        $this->container['lang'] = isset($data['lang']) ? $data['lang'] : null;
-        $this->container['mainPhone'] = isset($data['mainPhone']) ? $data['mainPhone'] : null;
-        $this->container['tollFree'] = isset($data['tollFree']) ? $data['tollFree'] : null;
-        $this->container['fax'] = isset($data['fax']) ? $data['fax'] : null;
-        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
-        $this->container['addressLine2'] = isset($data['addressLine2']) ? $data['addressLine2'] : null;
-        $this->container['addressCity'] = isset($data['addressCity']) ? $data['addressCity'] : null;
-        $this->container['addressState'] = isset($data['addressState']) ? $data['addressState'] : null;
-        $this->container['addressPostalCode'] = isset($data['addressPostalCode']) ? $data['addressPostalCode'] : null;
-        $this->container['addressCountry'] = isset($data['addressCountry']) ? $data['addressCountry'] : null;
-        $this->container['webSite'] = isset($data['webSite']) ? $data['webSite'] : null;
-        $this->container['isMultiUser'] = isset($data['isMultiUser']) ? $data['isMultiUser'] : null;
-        $this->container['fnaStatus'] = isset($data['fnaStatus']) ? $data['fnaStatus'] : null;
-        $this->container['users'] = isset($data['users']) ? $data['users'] : null;
+        $this->container['orgId'] = $data['orgId'] ?? null;
+        $this->container['displayName'] = $data['displayName'] ?? null;
+        $this->container['status'] = $data['status'] ?? null;
+        $this->container['diskUsageQuota'] = $data['diskUsageQuota'] ?? null;
+        $this->container['lang'] = $data['lang'] ?? null;
+        $this->container['mainPhone'] = $data['mainPhone'] ?? null;
+        $this->container['tollFree'] = $data['tollFree'] ?? null;
+        $this->container['fax'] = $data['fax'] ?? null;
+        $this->container['address'] = $data['address'] ?? null;
+        $this->container['addressLine2'] = $data['addressLine2'] ?? null;
+        $this->container['addressCity'] = $data['addressCity'] ?? null;
+        $this->container['addressState'] = $data['addressState'] ?? null;
+        $this->container['addressPostalCode'] = $data['addressPostalCode'] ?? null;
+        $this->container['addressCountry'] = $data['addressCountry'] ?? null;
+        $this->container['webSite'] = $data['webSite'] ?? null;
+        $this->container['isMultiUser'] = $data['isMultiUser'] ?? null;
+        $this->container['fnaStatus'] = $data['fnaStatus'] ?? null;
+        $this->container['users'] = $data['users'] ?? null;
     }
 
     /**
@@ -238,7 +322,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $orgId Unique identifier for the organization
      *
-     * @return $this
+     * @return self
      */
     public function setOrgId($orgId)
     {
@@ -262,7 +346,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $displayName Organization Name
      *
-     * @return $this
+     * @return self
      */
     public function setDisplayName($displayName)
     {
@@ -286,7 +370,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $status Organization status In creation, Active, Maintenance
      *
-     * @return $this
+     * @return self
      */
     public function setStatus($status)
     {
@@ -310,7 +394,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $diskUsageQuota Organization disk usage quota. Deprecated. Always empty.
      *
-     * @return $this
+     * @return self
      */
     public function setDiskUsageQuota($diskUsageQuota)
     {
@@ -334,7 +418,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $lang Default language
      *
-     * @return $this
+     * @return self
      */
     public function setLang($lang)
     {
@@ -358,7 +442,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $mainPhone Organization main phone number
      *
-     * @return $this
+     * @return self
      */
     public function setMainPhone($mainPhone)
     {
@@ -382,7 +466,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $tollFree Organization tollFree phone number
      *
-     * @return $this
+     * @return self
      */
     public function setTollFree($tollFree)
     {
@@ -406,7 +490,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $fax Organization fax phone number
      *
-     * @return $this
+     * @return self
      */
     public function setFax($fax)
     {
@@ -430,7 +514,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $address Organization address first line
      *
-     * @return $this
+     * @return self
      */
     public function setAddress($address)
     {
@@ -454,7 +538,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $addressLine2 Organization address second line
      *
-     * @return $this
+     * @return self
      */
     public function setAddressLine2($addressLine2)
     {
@@ -478,7 +562,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $addressCity Organization address city
      *
-     * @return $this
+     * @return self
      */
     public function setAddressCity($addressCity)
     {
@@ -502,7 +586,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $addressState Organization address state/province
      *
-     * @return $this
+     * @return self
      */
     public function setAddressState($addressState)
     {
@@ -526,7 +610,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $addressPostalCode Organization address postal code
      *
-     * @return $this
+     * @return self
      */
     public function setAddressPostalCode($addressPostalCode)
     {
@@ -550,7 +634,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $addressCountry Organization address country
      *
-     * @return $this
+     * @return self
      */
     public function setAddressCountry($addressCountry)
     {
@@ -574,7 +658,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $webSite Organization website url
      *
-     * @return $this
+     * @return self
      */
     public function setWebSite($webSite)
     {
@@ -598,7 +682,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $isMultiUser Is the organization in single user mode or mutil user mode
      *
-     * @return $this
+     * @return self
      */
     public function setIsMultiUser($isMultiUser)
     {
@@ -622,7 +706,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
      *
      * @param string|null $fnaStatus Is FNA enabled for the organization
      *
-     * @return $this
+     * @return self
      */
     public function setFnaStatus($fnaStatus)
     {
@@ -646,7 +730,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserItem[]|null $users Organization users
      *
-     * @return $this
+     * @return self
      */
     public function setUsers($users)
     {
@@ -671,18 +755,18 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -705,6 +789,18 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

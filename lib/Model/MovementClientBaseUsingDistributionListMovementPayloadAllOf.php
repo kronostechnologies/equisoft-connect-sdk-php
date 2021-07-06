@@ -42,9 +42,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements ModelInterface, ArrayAccess
+class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -59,16 +59,32 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string''sourceDatabase' => 'string''sourceUser' => 'string''sourceDistributionList' => 'string''destinationDatabase' => 'string''destinationUser' => 'string''datagatewayAccessMappings' => 'array<string,string>''transferOption' => 'string'
+        'type' => 'string',
+        'sourceDatabase' => 'string',
+        'sourceUser' => 'string',
+        'sourceDistributionList' => 'string',
+        'destinationDatabase' => 'string',
+        'destinationUser' => 'string',
+        'datagatewayAccessMappings' => 'array<string,string>',
+        'transferOption' => 'string'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'type' => null'sourceDatabase' => null'sourceUser' => null'sourceDistributionList' => null'destinationDatabase' => null'destinationUser' => null'datagatewayAccessMappings' => null'transferOption' => null
+        'type' => null,
+        'sourceDatabase' => null,
+        'sourceUser' => null,
+        'sourceDistributionList' => null,
+        'destinationDatabase' => null,
+        'destinationUser' => null,
+        'datagatewayAccessMappings' => null,
+        'transferOption' => null
     ];
 
     /**
@@ -98,7 +114,14 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type''sourceDatabase' => 'sourceDatabase''sourceUser' => 'sourceUser''sourceDistributionList' => 'sourceDistributionList''destinationDatabase' => 'destinationDatabase''destinationUser' => 'destinationUser''datagatewayAccessMappings' => 'datagatewayAccessMappings''transferOption' => 'transferOption'
+        'type' => 'type',
+        'sourceDatabase' => 'sourceDatabase',
+        'sourceUser' => 'sourceUser',
+        'sourceDistributionList' => 'sourceDistributionList',
+        'destinationDatabase' => 'destinationDatabase',
+        'destinationUser' => 'destinationUser',
+        'datagatewayAccessMappings' => 'datagatewayAccessMappings',
+        'transferOption' => 'transferOption'
     ];
 
     /**
@@ -107,7 +130,14 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType''sourceDatabase' => 'setSourceDatabase''sourceUser' => 'setSourceUser''sourceDistributionList' => 'setSourceDistributionList''destinationDatabase' => 'setDestinationDatabase''destinationUser' => 'setDestinationUser''datagatewayAccessMappings' => 'setDatagatewayAccessMappings''transferOption' => 'setTransferOption'
+        'type' => 'setType',
+        'sourceDatabase' => 'setSourceDatabase',
+        'sourceUser' => 'setSourceUser',
+        'sourceDistributionList' => 'setSourceDistributionList',
+        'destinationDatabase' => 'setDestinationDatabase',
+        'destinationUser' => 'setDestinationUser',
+        'datagatewayAccessMappings' => 'setDatagatewayAccessMappings',
+        'transferOption' => 'setTransferOption'
     ];
 
     /**
@@ -116,7 +146,14 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType''sourceDatabase' => 'getSourceDatabase''sourceUser' => 'getSourceUser''sourceDistributionList' => 'getSourceDistributionList''destinationDatabase' => 'getDestinationDatabase''destinationUser' => 'getDestinationUser''datagatewayAccessMappings' => 'getDatagatewayAccessMappings''transferOption' => 'getTransferOption'
+        'type' => 'getType',
+        'sourceDatabase' => 'getSourceDatabase',
+        'sourceUser' => 'getSourceUser',
+        'sourceDistributionList' => 'getSourceDistributionList',
+        'destinationDatabase' => 'getDestinationDatabase',
+        'destinationUser' => 'getDestinationUser',
+        'datagatewayAccessMappings' => 'getDatagatewayAccessMappings',
+        'transferOption' => 'getTransferOption'
     ];
 
     /**
@@ -161,9 +198,7 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
     }
 
     const TYPE_CLIENTBASE_USING_DISTLIST = 'CLIENTBASE_USING_DISTLIST';
-    
 
-    
     /**
      * Gets allowable values of the enum
      *
@@ -175,7 +210,6 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
             self::TYPE_CLIENTBASE_USING_DISTLIST,
         ];
     }
-    
 
     /**
      * Associative array for storing property values
@@ -192,14 +226,14 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
      */
     public function __construct(array $data = null)
     {
-        $this->container['type'] = isset($data['type']) ? $data['type'] : TYPE_CLIENTBASE_USING_DISTLIST;
-        $this->container['sourceDatabase'] = isset($data['sourceDatabase']) ? $data['sourceDatabase'] : null;
-        $this->container['sourceUser'] = isset($data['sourceUser']) ? $data['sourceUser'] : null;
-        $this->container['sourceDistributionList'] = isset($data['sourceDistributionList']) ? $data['sourceDistributionList'] : null;
-        $this->container['destinationDatabase'] = isset($data['destinationDatabase']) ? $data['destinationDatabase'] : null;
-        $this->container['destinationUser'] = isset($data['destinationUser']) ? $data['destinationUser'] : null;
-        $this->container['datagatewayAccessMappings'] = isset($data['datagatewayAccessMappings']) ? $data['datagatewayAccessMappings'] : null;
-        $this->container['transferOption'] = isset($data['transferOption']) ? $data['transferOption'] : null;
+        $this->container['type'] = $data['type'] ?? TYPE_CLIENTBASE_USING_DISTLIST;
+        $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
+        $this->container['sourceUser'] = $data['sourceUser'] ?? null;
+        $this->container['sourceDistributionList'] = $data['sourceDistributionList'] ?? null;
+        $this->container['destinationDatabase'] = $data['destinationDatabase'] ?? null;
+        $this->container['destinationUser'] = $data['destinationUser'] ?? null;
+        $this->container['datagatewayAccessMappings'] = $data['datagatewayAccessMappings'] ?? null;
+        $this->container['transferOption'] = $data['transferOption'] ?? null;
     }
 
     /**
@@ -217,7 +251,8 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
         $allowedValues = $this->getTypeAllowableValues();
         if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
-                "invalid value for 'type', must be one of '%s'",
+                "invalid value '%s' for 'type', must be one of '%s'",
+                $this->container['type'],
                 implode("', '", $allowedValues)
             );
         }
@@ -267,7 +302,7 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
      *
      * @param string $type type
      *
-     * @return $this
+     * @return self
      */
     public function setType($type)
     {
@@ -275,7 +310,8 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
         if (!in_array($type, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
-                    "Invalid value for 'type', must be one of '%s'",
+                    "Invalid value '%s' for 'type', must be one of '%s'",
+                    $type,
                     implode("', '", $allowedValues)
                 )
             );
@@ -300,7 +336,7 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
      *
      * @param string $sourceDatabase sourceDatabase
      *
-     * @return $this
+     * @return self
      */
     public function setSourceDatabase($sourceDatabase)
     {
@@ -324,7 +360,7 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
      *
      * @param string $sourceUser sourceUser
      *
-     * @return $this
+     * @return self
      */
     public function setSourceUser($sourceUser)
     {
@@ -348,7 +384,7 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
      *
      * @param string|null $sourceDistributionList sourceDistributionList
      *
-     * @return $this
+     * @return self
      */
     public function setSourceDistributionList($sourceDistributionList)
     {
@@ -372,7 +408,7 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
      *
      * @param string $destinationDatabase destinationDatabase
      *
-     * @return $this
+     * @return self
      */
     public function setDestinationDatabase($destinationDatabase)
     {
@@ -396,7 +432,7 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
      *
      * @param string $destinationUser destinationUser
      *
-     * @return $this
+     * @return self
      */
     public function setDestinationUser($destinationUser)
     {
@@ -408,7 +444,7 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
     /**
      * Gets datagatewayAccessMappings
      *
-     * @return array&lt;string,string&gt;|null
+     * @return array<string,string>|null
      */
     public function getDatagatewayAccessMappings()
     {
@@ -418,9 +454,9 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
     /**
      * Sets datagatewayAccessMappings
      *
-     * @param array&lt;string,string&gt;|null $datagatewayAccessMappings datagatewayAccessMappings
+     * @param array<string,string>|null $datagatewayAccessMappings datagatewayAccessMappings
      *
-     * @return $this
+     * @return self
      */
     public function setDatagatewayAccessMappings($datagatewayAccessMappings)
     {
@@ -444,7 +480,7 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
      *
      * @param string $transferOption transferOption
      *
-     * @return $this
+     * @return self
      */
     public function setTransferOption($transferOption)
     {
@@ -469,18 +505,18 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -503,6 +539,18 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

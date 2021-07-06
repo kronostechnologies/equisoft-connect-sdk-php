@@ -42,9 +42,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class TasksListTaskResponse implements ModelInterface, ArrayAccess
+class TasksListTaskResponse implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -59,16 +59,20 @@ class TasksListTaskResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'nextPageToken' => 'string''items' => '\Equisoft\SDK\EquisoftConnect\Model\TasksTask[]'
+        'nextPageToken' => 'string',
+        'items' => '\Equisoft\SDK\EquisoftConnect\Model\TasksTask[]'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'nextPageToken' => null'items' => null
+        'nextPageToken' => null,
+        'items' => null
     ];
 
     /**
@@ -98,7 +102,8 @@ class TasksListTaskResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'nextPageToken' => 'nextPageToken''items' => 'items'
+        'nextPageToken' => 'nextPageToken',
+        'items' => 'items'
     ];
 
     /**
@@ -107,7 +112,8 @@ class TasksListTaskResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'nextPageToken' => 'setNextPageToken''items' => 'setItems'
+        'nextPageToken' => 'setNextPageToken',
+        'items' => 'setItems'
     ];
 
     /**
@@ -116,7 +122,8 @@ class TasksListTaskResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'nextPageToken' => 'getNextPageToken''items' => 'getItems'
+        'nextPageToken' => 'getNextPageToken',
+        'items' => 'getItems'
     ];
 
     /**
@@ -160,9 +167,6 @@ class TasksListTaskResponse implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -179,8 +183,8 @@ class TasksListTaskResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['nextPageToken'] = isset($data['nextPageToken']) ? $data['nextPageToken'] : null;
-        $this->container['items'] = isset($data['items']) ? $data['items'] : null;
+        $this->container['nextPageToken'] = $data['nextPageToken'] ?? null;
+        $this->container['items'] = $data['items'] ?? null;
     }
 
     /**
@@ -225,7 +229,7 @@ class TasksListTaskResponse implements ModelInterface, ArrayAccess
      *
      * @param string|null $nextPageToken Opaque token used to get the next page of the result. Omitted if no more results.
      *
-     * @return $this
+     * @return self
      */
     public function setNextPageToken($nextPageToken)
     {
@@ -249,7 +253,7 @@ class TasksListTaskResponse implements ModelInterface, ArrayAccess
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\TasksTask[] $items items
      *
-     * @return $this
+     * @return self
      */
     public function setItems($items)
     {
@@ -274,18 +278,18 @@ class TasksListTaskResponse implements ModelInterface, ArrayAccess
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -308,6 +312,18 @@ class TasksListTaskResponse implements ModelInterface, ArrayAccess
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

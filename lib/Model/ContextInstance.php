@@ -42,9 +42,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class ContextInstance implements ModelInterface, ArrayAccess
+class ContextInstance implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -59,16 +59,20 @@ class ContextInstance implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'uuid' => 'string''databaseName' => 'string'
+        'uuid' => 'string',
+        'databaseName' => 'string'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'uuid' => null'databaseName' => null
+        'uuid' => null,
+        'databaseName' => null
     ];
 
     /**
@@ -98,7 +102,8 @@ class ContextInstance implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'uuid' => 'uuid''databaseName' => 'databaseName'
+        'uuid' => 'uuid',
+        'databaseName' => 'databaseName'
     ];
 
     /**
@@ -107,7 +112,8 @@ class ContextInstance implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'uuid' => 'setUuid''databaseName' => 'setDatabaseName'
+        'uuid' => 'setUuid',
+        'databaseName' => 'setDatabaseName'
     ];
 
     /**
@@ -116,7 +122,8 @@ class ContextInstance implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'uuid' => 'getUuid''databaseName' => 'getDatabaseName'
+        'uuid' => 'getUuid',
+        'databaseName' => 'getDatabaseName'
     ];
 
     /**
@@ -160,9 +167,6 @@ class ContextInstance implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -179,8 +183,8 @@ class ContextInstance implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
-        $this->container['databaseName'] = isset($data['databaseName']) ? $data['databaseName'] : null;
+        $this->container['uuid'] = $data['uuid'] ?? null;
+        $this->container['databaseName'] = $data['databaseName'] ?? null;
     }
 
     /**
@@ -228,7 +232,7 @@ class ContextInstance implements ModelInterface, ArrayAccess
      *
      * @param string $uuid $uuid
      *
-     * @return $this
+     * @return self
      */
     public function setUuid($uuid)
     {
@@ -252,7 +256,7 @@ class ContextInstance implements ModelInterface, ArrayAccess
      *
      * @param string $databaseName $databaseName
      *
-     * @return $this
+     * @return self
      */
     public function setDatabaseName($databaseName)
     {
@@ -277,18 +281,18 @@ class ContextInstance implements ModelInterface, ArrayAccess
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -311,6 +315,18 @@ class ContextInstance implements ModelInterface, ArrayAccess
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

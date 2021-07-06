@@ -42,9 +42,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class DsfFinancialCenter implements ModelInterface, ArrayAccess
+class DsfFinancialCenter implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -59,16 +59,30 @@ class DsfFinancialCenter implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'int''nameFr' => 'string''nameEn' => 'string''network' => 'string''code' => 'string''organizationUuid' => 'string''databaseCount' => 'int'
+        'id' => 'int',
+        'nameFr' => 'string',
+        'nameEn' => 'string',
+        'network' => 'string',
+        'code' => 'string',
+        'organizationUuid' => 'string',
+        'databaseCount' => 'int'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null'nameFr' => null'nameEn' => null'network' => null'code' => null'organizationUuid' => null'databaseCount' => null
+        'id' => null,
+        'nameFr' => null,
+        'nameEn' => null,
+        'network' => null,
+        'code' => null,
+        'organizationUuid' => null,
+        'databaseCount' => null
     ];
 
     /**
@@ -98,7 +112,13 @@ class DsfFinancialCenter implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id''nameFr' => 'nameFr''nameEn' => 'nameEn''network' => 'network''code' => 'code''organizationUuid' => 'organizationUuid''databaseCount' => 'databaseCount'
+        'id' => 'id',
+        'nameFr' => 'nameFr',
+        'nameEn' => 'nameEn',
+        'network' => 'network',
+        'code' => 'code',
+        'organizationUuid' => 'organizationUuid',
+        'databaseCount' => 'databaseCount'
     ];
 
     /**
@@ -107,7 +127,13 @@ class DsfFinancialCenter implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId''nameFr' => 'setNameFr''nameEn' => 'setNameEn''network' => 'setNetwork''code' => 'setCode''organizationUuid' => 'setOrganizationUuid''databaseCount' => 'setDatabaseCount'
+        'id' => 'setId',
+        'nameFr' => 'setNameFr',
+        'nameEn' => 'setNameEn',
+        'network' => 'setNetwork',
+        'code' => 'setCode',
+        'organizationUuid' => 'setOrganizationUuid',
+        'databaseCount' => 'setDatabaseCount'
     ];
 
     /**
@@ -116,7 +142,13 @@ class DsfFinancialCenter implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId''nameFr' => 'getNameFr''nameEn' => 'getNameEn''network' => 'getNetwork''code' => 'getCode''organizationUuid' => 'getOrganizationUuid''databaseCount' => 'getDatabaseCount'
+        'id' => 'getId',
+        'nameFr' => 'getNameFr',
+        'nameEn' => 'getNameEn',
+        'network' => 'getNetwork',
+        'code' => 'getCode',
+        'organizationUuid' => 'getOrganizationUuid',
+        'databaseCount' => 'getDatabaseCount'
     ];
 
     /**
@@ -160,9 +192,6 @@ class DsfFinancialCenter implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -179,13 +208,13 @@ class DsfFinancialCenter implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['nameFr'] = isset($data['nameFr']) ? $data['nameFr'] : null;
-        $this->container['nameEn'] = isset($data['nameEn']) ? $data['nameEn'] : null;
-        $this->container['network'] = isset($data['network']) ? $data['network'] : null;
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['organizationUuid'] = isset($data['organizationUuid']) ? $data['organizationUuid'] : null;
-        $this->container['databaseCount'] = isset($data['databaseCount']) ? $data['databaseCount'] : null;
+        $this->container['id'] = $data['id'] ?? null;
+        $this->container['nameFr'] = $data['nameFr'] ?? null;
+        $this->container['nameEn'] = $data['nameEn'] ?? null;
+        $this->container['network'] = $data['network'] ?? null;
+        $this->container['code'] = $data['code'] ?? null;
+        $this->container['organizationUuid'] = $data['organizationUuid'] ?? null;
+        $this->container['databaseCount'] = $data['databaseCount'] ?? null;
     }
 
     /**
@@ -242,7 +271,7 @@ class DsfFinancialCenter implements ModelInterface, ArrayAccess
      *
      * @param int $id Id
      *
-     * @return $this
+     * @return self
      */
     public function setId($id)
     {
@@ -266,7 +295,7 @@ class DsfFinancialCenter implements ModelInterface, ArrayAccess
      *
      * @param string $nameFr French name
      *
-     * @return $this
+     * @return self
      */
     public function setNameFr($nameFr)
     {
@@ -290,7 +319,7 @@ class DsfFinancialCenter implements ModelInterface, ArrayAccess
      *
      * @param string $nameEn English name
      *
-     * @return $this
+     * @return self
      */
     public function setNameEn($nameEn)
     {
@@ -314,7 +343,7 @@ class DsfFinancialCenter implements ModelInterface, ArrayAccess
      *
      * @param string $network SFL|DFSI|DFSIN|VMD
      *
-     * @return $this
+     * @return self
      */
     public function setNetwork($network)
     {
@@ -338,7 +367,7 @@ class DsfFinancialCenter implements ModelInterface, ArrayAccess
      *
      * @param string|null $code Code
      *
-     * @return $this
+     * @return self
      */
     public function setCode($code)
     {
@@ -362,7 +391,7 @@ class DsfFinancialCenter implements ModelInterface, ArrayAccess
      *
      * @param string|null $organizationUuid Organization Unique Id
      *
-     * @return $this
+     * @return self
      */
     public function setOrganizationUuid($organizationUuid)
     {
@@ -386,7 +415,7 @@ class DsfFinancialCenter implements ModelInterface, ArrayAccess
      *
      * @param int $databaseCount Code
      *
-     * @return $this
+     * @return self
      */
     public function setDatabaseCount($databaseCount)
     {
@@ -411,18 +440,18 @@ class DsfFinancialCenter implements ModelInterface, ArrayAccess
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -445,6 +474,18 @@ class DsfFinancialCenter implements ModelInterface, ArrayAccess
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

@@ -42,9 +42,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess
+class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -59,16 +59,58 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'firstName' => 'string''lastName' => 'string''email' => 'string''lang' => 'string''role' => 'string''concurrentAccess' => 'int''password' => 'string''noPassword' => 'string''requirePasswordChange' => 'string''enableMobile' => 'string''externalIdentifiers' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserIdentifier[]''allowDelegation' => 'string''gender' => 'string''phoneWork' => 'string''phoneWorkExtension' => 'string''phoneHome' => 'string''phoneCell' => 'string''phoneFax' => 'string''phoneMain' => 'string''address' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyContactAddress[]''noFNA' => 'string'
+        'firstName' => 'string',
+        'lastName' => 'string',
+        'email' => 'string',
+        'lang' => 'string',
+        'role' => 'string',
+        'concurrentAccess' => 'int',
+        'password' => 'string',
+        'noPassword' => 'string',
+        'requirePasswordChange' => 'string',
+        'enableMobile' => 'string',
+        'externalIdentifiers' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserIdentifier[]',
+        'allowDelegation' => 'string',
+        'gender' => 'string',
+        'phoneWork' => 'string',
+        'phoneWorkExtension' => 'string',
+        'phoneHome' => 'string',
+        'phoneCell' => 'string',
+        'phoneFax' => 'string',
+        'phoneMain' => 'string',
+        'address' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyContactAddress[]',
+        'noFNA' => 'string'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'firstName' => null'lastName' => null'email' => null'lang' => null'role' => null'concurrentAccess' => null'password' => null'noPassword' => null'requirePasswordChange' => null'enableMobile' => null'externalIdentifiers' => null'allowDelegation' => null'gender' => null'phoneWork' => null'phoneWorkExtension' => null'phoneHome' => null'phoneCell' => null'phoneFax' => null'phoneMain' => null'address' => null'noFNA' => null
+        'firstName' => null,
+        'lastName' => null,
+        'email' => null,
+        'lang' => null,
+        'role' => null,
+        'concurrentAccess' => null,
+        'password' => null,
+        'noPassword' => null,
+        'requirePasswordChange' => null,
+        'enableMobile' => null,
+        'externalIdentifiers' => null,
+        'allowDelegation' => null,
+        'gender' => null,
+        'phoneWork' => null,
+        'phoneWorkExtension' => null,
+        'phoneHome' => null,
+        'phoneCell' => null,
+        'phoneFax' => null,
+        'phoneMain' => null,
+        'address' => null,
+        'noFNA' => null
     ];
 
     /**
@@ -98,7 +140,27 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'firstName' => 'firstName''lastName' => 'lastName''email' => 'email''lang' => 'lang''role' => 'role''concurrentAccess' => 'concurrentAccess''password' => 'password''noPassword' => 'noPassword''requirePasswordChange' => 'requirePasswordChange''enableMobile' => 'enableMobile''externalIdentifiers' => 'externalIdentifiers''allowDelegation' => 'allowDelegation''gender' => 'gender''phoneWork' => 'phoneWork''phoneWorkExtension' => 'phoneWorkExtension''phoneHome' => 'phoneHome''phoneCell' => 'phoneCell''phoneFax' => 'phoneFax''phoneMain' => 'phoneMain''address' => 'address''noFNA' => 'noFNA'
+        'firstName' => 'firstName',
+        'lastName' => 'lastName',
+        'email' => 'email',
+        'lang' => 'lang',
+        'role' => 'role',
+        'concurrentAccess' => 'concurrentAccess',
+        'password' => 'password',
+        'noPassword' => 'noPassword',
+        'requirePasswordChange' => 'requirePasswordChange',
+        'enableMobile' => 'enableMobile',
+        'externalIdentifiers' => 'externalIdentifiers',
+        'allowDelegation' => 'allowDelegation',
+        'gender' => 'gender',
+        'phoneWork' => 'phoneWork',
+        'phoneWorkExtension' => 'phoneWorkExtension',
+        'phoneHome' => 'phoneHome',
+        'phoneCell' => 'phoneCell',
+        'phoneFax' => 'phoneFax',
+        'phoneMain' => 'phoneMain',
+        'address' => 'address',
+        'noFNA' => 'noFNA'
     ];
 
     /**
@@ -107,7 +169,27 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'firstName' => 'setFirstName''lastName' => 'setLastName''email' => 'setEmail''lang' => 'setLang''role' => 'setRole''concurrentAccess' => 'setConcurrentAccess''password' => 'setPassword''noPassword' => 'setNoPassword''requirePasswordChange' => 'setRequirePasswordChange''enableMobile' => 'setEnableMobile''externalIdentifiers' => 'setExternalIdentifiers''allowDelegation' => 'setAllowDelegation''gender' => 'setGender''phoneWork' => 'setPhoneWork''phoneWorkExtension' => 'setPhoneWorkExtension''phoneHome' => 'setPhoneHome''phoneCell' => 'setPhoneCell''phoneFax' => 'setPhoneFax''phoneMain' => 'setPhoneMain''address' => 'setAddress''noFNA' => 'setNoFNA'
+        'firstName' => 'setFirstName',
+        'lastName' => 'setLastName',
+        'email' => 'setEmail',
+        'lang' => 'setLang',
+        'role' => 'setRole',
+        'concurrentAccess' => 'setConcurrentAccess',
+        'password' => 'setPassword',
+        'noPassword' => 'setNoPassword',
+        'requirePasswordChange' => 'setRequirePasswordChange',
+        'enableMobile' => 'setEnableMobile',
+        'externalIdentifiers' => 'setExternalIdentifiers',
+        'allowDelegation' => 'setAllowDelegation',
+        'gender' => 'setGender',
+        'phoneWork' => 'setPhoneWork',
+        'phoneWorkExtension' => 'setPhoneWorkExtension',
+        'phoneHome' => 'setPhoneHome',
+        'phoneCell' => 'setPhoneCell',
+        'phoneFax' => 'setPhoneFax',
+        'phoneMain' => 'setPhoneMain',
+        'address' => 'setAddress',
+        'noFNA' => 'setNoFNA'
     ];
 
     /**
@@ -116,7 +198,27 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'firstName' => 'getFirstName''lastName' => 'getLastName''email' => 'getEmail''lang' => 'getLang''role' => 'getRole''concurrentAccess' => 'getConcurrentAccess''password' => 'getPassword''noPassword' => 'getNoPassword''requirePasswordChange' => 'getRequirePasswordChange''enableMobile' => 'getEnableMobile''externalIdentifiers' => 'getExternalIdentifiers''allowDelegation' => 'getAllowDelegation''gender' => 'getGender''phoneWork' => 'getPhoneWork''phoneWorkExtension' => 'getPhoneWorkExtension''phoneHome' => 'getPhoneHome''phoneCell' => 'getPhoneCell''phoneFax' => 'getPhoneFax''phoneMain' => 'getPhoneMain''address' => 'getAddress''noFNA' => 'getNoFNA'
+        'firstName' => 'getFirstName',
+        'lastName' => 'getLastName',
+        'email' => 'getEmail',
+        'lang' => 'getLang',
+        'role' => 'getRole',
+        'concurrentAccess' => 'getConcurrentAccess',
+        'password' => 'getPassword',
+        'noPassword' => 'getNoPassword',
+        'requirePasswordChange' => 'getRequirePasswordChange',
+        'enableMobile' => 'getEnableMobile',
+        'externalIdentifiers' => 'getExternalIdentifiers',
+        'allowDelegation' => 'getAllowDelegation',
+        'gender' => 'getGender',
+        'phoneWork' => 'getPhoneWork',
+        'phoneWorkExtension' => 'getPhoneWorkExtension',
+        'phoneHome' => 'getPhoneHome',
+        'phoneCell' => 'getPhoneCell',
+        'phoneFax' => 'getPhoneFax',
+        'phoneMain' => 'getPhoneMain',
+        'address' => 'getAddress',
+        'noFNA' => 'getNoFNA'
     ];
 
     /**
@@ -160,9 +262,6 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -179,27 +278,27 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['firstName'] = isset($data['firstName']) ? $data['firstName'] : null;
-        $this->container['lastName'] = isset($data['lastName']) ? $data['lastName'] : null;
-        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
-        $this->container['lang'] = isset($data['lang']) ? $data['lang'] : null;
-        $this->container['role'] = isset($data['role']) ? $data['role'] : null;
-        $this->container['concurrentAccess'] = isset($data['concurrentAccess']) ? $data['concurrentAccess'] : null;
-        $this->container['password'] = isset($data['password']) ? $data['password'] : null;
-        $this->container['noPassword'] = isset($data['noPassword']) ? $data['noPassword'] : null;
-        $this->container['requirePasswordChange'] = isset($data['requirePasswordChange']) ? $data['requirePasswordChange'] : null;
-        $this->container['enableMobile'] = isset($data['enableMobile']) ? $data['enableMobile'] : null;
-        $this->container['externalIdentifiers'] = isset($data['externalIdentifiers']) ? $data['externalIdentifiers'] : null;
-        $this->container['allowDelegation'] = isset($data['allowDelegation']) ? $data['allowDelegation'] : null;
-        $this->container['gender'] = isset($data['gender']) ? $data['gender'] : null;
-        $this->container['phoneWork'] = isset($data['phoneWork']) ? $data['phoneWork'] : null;
-        $this->container['phoneWorkExtension'] = isset($data['phoneWorkExtension']) ? $data['phoneWorkExtension'] : null;
-        $this->container['phoneHome'] = isset($data['phoneHome']) ? $data['phoneHome'] : null;
-        $this->container['phoneCell'] = isset($data['phoneCell']) ? $data['phoneCell'] : null;
-        $this->container['phoneFax'] = isset($data['phoneFax']) ? $data['phoneFax'] : null;
-        $this->container['phoneMain'] = isset($data['phoneMain']) ? $data['phoneMain'] : null;
-        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
-        $this->container['noFNA'] = isset($data['noFNA']) ? $data['noFNA'] : null;
+        $this->container['firstName'] = $data['firstName'] ?? null;
+        $this->container['lastName'] = $data['lastName'] ?? null;
+        $this->container['email'] = $data['email'] ?? null;
+        $this->container['lang'] = $data['lang'] ?? null;
+        $this->container['role'] = $data['role'] ?? null;
+        $this->container['concurrentAccess'] = $data['concurrentAccess'] ?? null;
+        $this->container['password'] = $data['password'] ?? null;
+        $this->container['noPassword'] = $data['noPassword'] ?? null;
+        $this->container['requirePasswordChange'] = $data['requirePasswordChange'] ?? null;
+        $this->container['enableMobile'] = $data['enableMobile'] ?? null;
+        $this->container['externalIdentifiers'] = $data['externalIdentifiers'] ?? null;
+        $this->container['allowDelegation'] = $data['allowDelegation'] ?? null;
+        $this->container['gender'] = $data['gender'] ?? null;
+        $this->container['phoneWork'] = $data['phoneWork'] ?? null;
+        $this->container['phoneWorkExtension'] = $data['phoneWorkExtension'] ?? null;
+        $this->container['phoneHome'] = $data['phoneHome'] ?? null;
+        $this->container['phoneCell'] = $data['phoneCell'] ?? null;
+        $this->container['phoneFax'] = $data['phoneFax'] ?? null;
+        $this->container['phoneMain'] = $data['phoneMain'] ?? null;
+        $this->container['address'] = $data['address'] ?? null;
+        $this->container['noFNA'] = $data['noFNA'] ?? null;
     }
 
     /**
@@ -241,7 +340,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess
      *
      * @param string|null $firstName First name
      *
-     * @return $this
+     * @return self
      */
     public function setFirstName($firstName)
     {
@@ -265,7 +364,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess
      *
      * @param string|null $lastName Last name
      *
-     * @return $this
+     * @return self
      */
     public function setLastName($lastName)
     {
@@ -289,7 +388,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess
      *
      * @param string|null $email Email address used for login
      *
-     * @return $this
+     * @return self
      */
     public function setEmail($email)
     {
@@ -313,7 +412,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess
      *
      * @param string|null $lang User language. Organisation default lang will be used if not provided. Accepts FR or EN.
      *
-     * @return $this
+     * @return self
      */
     public function setLang($lang)
     {
@@ -337,7 +436,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess
      *
      * @param string|null $role User role. Accepts USER or ADMIN
      *
-     * @return $this
+     * @return self
      */
     public function setRole($role)
     {
@@ -361,7 +460,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess
      *
      * @param int|null $concurrentAccess Number of allowed concurrent accesses with this user. Default 1.
      *
-     * @return $this
+     * @return self
      */
     public function setConcurrentAccess($concurrentAccess)
     {
@@ -385,7 +484,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess
      *
      * @param string|null $password User initial password. A random password will be set if none is specified and noPassword option is not used.
      *
-     * @return $this
+     * @return self
      */
     public function setPassword($password)
     {
@@ -409,7 +508,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess
      *
      * @param string|null $noPassword Disable password authentication. Accepts true or false. Default false
      *
-     * @return $this
+     * @return self
      */
     public function setNoPassword($noPassword)
     {
@@ -433,7 +532,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess
      *
      * @param string|null $requirePasswordChange The user will be ask to define a new password on the first login Accepts true or false. Default true
      *
-     * @return $this
+     * @return self
      */
     public function setRequirePasswordChange($requirePasswordChange)
     {
@@ -457,7 +556,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess
      *
      * @param string|null $enableMobile Enable Mobile version. Deprecated: the mobile is not enabled per user anymore. Accepts true or false. Default false
      *
-     * @return $this
+     * @return self
      */
     public function setEnableMobile($enableMobile)
     {
@@ -481,7 +580,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserIdentifier[]|null $externalIdentifiers List of identifier to uniquely identify the user.
      *
-     * @return $this
+     * @return self
      */
     public function setExternalIdentifiers($externalIdentifiers)
     {
@@ -505,7 +604,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess
      *
      * @param string|null $allowDelegation Allow the user to delegate access to his data Accepts true or false. Default false
      *
-     * @return $this
+     * @return self
      */
     public function setAllowDelegation($allowDelegation)
     {
@@ -529,7 +628,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess
      *
      * @param string|null $gender Gender of this user. Accepts M or F.
      *
-     * @return $this
+     * @return self
      */
     public function setGender($gender)
     {
@@ -553,7 +652,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess
      *
      * @param string|null $phoneWork Work phone number of this user
      *
-     * @return $this
+     * @return self
      */
     public function setPhoneWork($phoneWork)
     {
@@ -577,7 +676,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess
      *
      * @param string|null $phoneWorkExtension Extension of work phone number of this user.
      *
-     * @return $this
+     * @return self
      */
     public function setPhoneWorkExtension($phoneWorkExtension)
     {
@@ -601,7 +700,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess
      *
      * @param string|null $phoneHome Home phone number of this user.
      *
-     * @return $this
+     * @return self
      */
     public function setPhoneHome($phoneHome)
     {
@@ -625,7 +724,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess
      *
      * @param string|null $phoneCell Cellphone number of this user.
      *
-     * @return $this
+     * @return self
      */
     public function setPhoneCell($phoneCell)
     {
@@ -649,7 +748,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess
      *
      * @param string|null $phoneFax Fax phone number of this user.
      *
-     * @return $this
+     * @return self
      */
     public function setPhoneFax($phoneFax)
     {
@@ -673,7 +772,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess
      *
      * @param string|null $phoneMain The phone type to be the main phone number. Accepts fax, cell, home, work. Default work
      *
-     * @return $this
+     * @return self
      */
     public function setPhoneMain($phoneMain)
     {
@@ -697,7 +796,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess
      *
      * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyContactAddress[]|null $address Address of this user.
      *
-     * @return $this
+     * @return self
      */
     public function setAddress($address)
     {
@@ -721,7 +820,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess
      *
      * @param string|null $noFNA Accepts true or false. Default false
      *
-     * @return $this
+     * @return self
      */
     public function setNoFNA($noFNA)
     {
@@ -746,18 +845,18 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -780,6 +879,18 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

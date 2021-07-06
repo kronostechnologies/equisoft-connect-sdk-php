@@ -42,9 +42,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class HandlersOauth2AssetbookAssetBookTokenPostBody implements ModelInterface, ArrayAccess
+class HandlersOauth2AssetbookAssetBookTokenPostBody implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -59,16 +59,20 @@ class HandlersOauth2AssetbookAssetBookTokenPostBody implements ModelInterface, A
       * @var string[]
       */
     protected static $openAPITypes = [
-        'username' => 'string''refreshToken' => 'string'
+        'username' => 'string',
+        'refreshToken' => 'string'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'username' => null'refreshToken' => null
+        'username' => null,
+        'refreshToken' => null
     ];
 
     /**
@@ -98,7 +102,8 @@ class HandlersOauth2AssetbookAssetBookTokenPostBody implements ModelInterface, A
      * @var string[]
      */
     protected static $attributeMap = [
-        'username' => 'Username''refreshToken' => 'RefreshToken'
+        'username' => 'Username',
+        'refreshToken' => 'RefreshToken'
     ];
 
     /**
@@ -107,7 +112,8 @@ class HandlersOauth2AssetbookAssetBookTokenPostBody implements ModelInterface, A
      * @var string[]
      */
     protected static $setters = [
-        'username' => 'setUsername''refreshToken' => 'setRefreshToken'
+        'username' => 'setUsername',
+        'refreshToken' => 'setRefreshToken'
     ];
 
     /**
@@ -116,7 +122,8 @@ class HandlersOauth2AssetbookAssetBookTokenPostBody implements ModelInterface, A
      * @var string[]
      */
     protected static $getters = [
-        'username' => 'getUsername''refreshToken' => 'getRefreshToken'
+        'username' => 'getUsername',
+        'refreshToken' => 'getRefreshToken'
     ];
 
     /**
@@ -160,9 +167,6 @@ class HandlersOauth2AssetbookAssetBookTokenPostBody implements ModelInterface, A
         return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -179,8 +183,8 @@ class HandlersOauth2AssetbookAssetBookTokenPostBody implements ModelInterface, A
      */
     public function __construct(array $data = null)
     {
-        $this->container['username'] = isset($data['username']) ? $data['username'] : null;
-        $this->container['refreshToken'] = isset($data['refreshToken']) ? $data['refreshToken'] : null;
+        $this->container['username'] = $data['username'] ?? null;
+        $this->container['refreshToken'] = $data['refreshToken'] ?? null;
     }
 
     /**
@@ -228,7 +232,7 @@ class HandlersOauth2AssetbookAssetBookTokenPostBody implements ModelInterface, A
      *
      * @param string $username username
      *
-     * @return $this
+     * @return self
      */
     public function setUsername($username)
     {
@@ -252,7 +256,7 @@ class HandlersOauth2AssetbookAssetBookTokenPostBody implements ModelInterface, A
      *
      * @param string $refreshToken refreshToken
      *
-     * @return $this
+     * @return self
      */
     public function setRefreshToken($refreshToken)
     {
@@ -277,18 +281,18 @@ class HandlersOauth2AssetbookAssetBookTokenPostBody implements ModelInterface, A
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -311,6 +315,18 @@ class HandlersOauth2AssetbookAssetBookTokenPostBody implements ModelInterface, A
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

@@ -42,9 +42,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class LegacyDocumentBase64FilePayloadItemAllOf implements ModelInterface, ArrayAccess
+class LegacyDocumentBase64FilePayloadItemAllOf implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -59,16 +59,20 @@ class LegacyDocumentBase64FilePayloadItemAllOf implements ModelInterface, ArrayA
       * @var string[]
       */
     protected static $openAPITypes = [
-        'externalKey' => 'string''base64EncodedData' => 'string'
+        'externalKey' => 'string',
+        'base64EncodedData' => 'string'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'externalKey' => null'base64EncodedData' => null
+        'externalKey' => null,
+        'base64EncodedData' => null
     ];
 
     /**
@@ -98,7 +102,8 @@ class LegacyDocumentBase64FilePayloadItemAllOf implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $attributeMap = [
-        'externalKey' => 'externalKey''base64EncodedData' => 'base64EncodedData'
+        'externalKey' => 'externalKey',
+        'base64EncodedData' => 'base64EncodedData'
     ];
 
     /**
@@ -107,7 +112,8 @@ class LegacyDocumentBase64FilePayloadItemAllOf implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $setters = [
-        'externalKey' => 'setExternalKey''base64EncodedData' => 'setBase64EncodedData'
+        'externalKey' => 'setExternalKey',
+        'base64EncodedData' => 'setBase64EncodedData'
     ];
 
     /**
@@ -116,7 +122,8 @@ class LegacyDocumentBase64FilePayloadItemAllOf implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $getters = [
-        'externalKey' => 'getExternalKey''base64EncodedData' => 'getBase64EncodedData'
+        'externalKey' => 'getExternalKey',
+        'base64EncodedData' => 'getBase64EncodedData'
     ];
 
     /**
@@ -160,9 +167,6 @@ class LegacyDocumentBase64FilePayloadItemAllOf implements ModelInterface, ArrayA
         return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -179,8 +183,8 @@ class LegacyDocumentBase64FilePayloadItemAllOf implements ModelInterface, ArrayA
      */
     public function __construct(array $data = null)
     {
-        $this->container['externalKey'] = isset($data['externalKey']) ? $data['externalKey'] : null;
-        $this->container['base64EncodedData'] = isset($data['base64EncodedData']) ? $data['base64EncodedData'] : null;
+        $this->container['externalKey'] = $data['externalKey'] ?? null;
+        $this->container['base64EncodedData'] = $data['base64EncodedData'] ?? null;
     }
 
     /**
@@ -222,7 +226,7 @@ class LegacyDocumentBase64FilePayloadItemAllOf implements ModelInterface, ArrayA
      *
      * @param string|null $externalKey The file external key
      *
-     * @return $this
+     * @return self
      */
     public function setExternalKey($externalKey)
     {
@@ -246,7 +250,7 @@ class LegacyDocumentBase64FilePayloadItemAllOf implements ModelInterface, ArrayA
      *
      * @param string|null $base64EncodedData file data encoded in base 64
      *
-     * @return $this
+     * @return self
      */
     public function setBase64EncodedData($base64EncodedData)
     {
@@ -271,18 +275,18 @@ class LegacyDocumentBase64FilePayloadItemAllOf implements ModelInterface, ArrayA
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -305,6 +309,18 @@ class LegacyDocumentBase64FilePayloadItemAllOf implements ModelInterface, ArrayA
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

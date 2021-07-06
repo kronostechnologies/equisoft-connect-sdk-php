@@ -42,9 +42,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class LegacyContactContact implements ModelInterface, ArrayAccess
+class LegacyContactContact implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -59,16 +59,40 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'string''uuid' => 'string''typeContact' => 'string''indOrg' => 'string''displayName' => 'string''firstName' => 'string''nickname' => 'string''middleName' => 'string''lastName' => 'string''corporationName' => 'string''corporationNameLine2' => 'string''rank' => 'string'
+        'id' => 'string',
+        'uuid' => 'string',
+        'typeContact' => 'string',
+        'indOrg' => 'string',
+        'displayName' => 'string',
+        'firstName' => 'string',
+        'nickname' => 'string',
+        'middleName' => 'string',
+        'lastName' => 'string',
+        'corporationName' => 'string',
+        'corporationNameLine2' => 'string',
+        'rank' => 'string'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null'uuid' => null'typeContact' => null'indOrg' => null'displayName' => null'firstName' => null'nickname' => null'middleName' => null'lastName' => null'corporationName' => null'corporationNameLine2' => null'rank' => null
+        'id' => null,
+        'uuid' => null,
+        'typeContact' => null,
+        'indOrg' => null,
+        'displayName' => null,
+        'firstName' => null,
+        'nickname' => null,
+        'middleName' => null,
+        'lastName' => null,
+        'corporationName' => null,
+        'corporationNameLine2' => null,
+        'rank' => null
     ];
 
     /**
@@ -98,7 +122,18 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id''uuid' => 'uuid''typeContact' => 'typeContact''indOrg' => 'indOrg''displayName' => 'displayName''firstName' => 'firstName''nickname' => 'nickname''middleName' => 'middleName''lastName' => 'lastName''corporationName' => 'corporationName''corporationNameLine2' => 'corporationNameLine2''rank' => 'rank'
+        'id' => 'id',
+        'uuid' => 'uuid',
+        'typeContact' => 'typeContact',
+        'indOrg' => 'indOrg',
+        'displayName' => 'displayName',
+        'firstName' => 'firstName',
+        'nickname' => 'nickname',
+        'middleName' => 'middleName',
+        'lastName' => 'lastName',
+        'corporationName' => 'corporationName',
+        'corporationNameLine2' => 'corporationNameLine2',
+        'rank' => 'rank'
     ];
 
     /**
@@ -107,7 +142,18 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId''uuid' => 'setUuid''typeContact' => 'setTypeContact''indOrg' => 'setIndOrg''displayName' => 'setDisplayName''firstName' => 'setFirstName''nickname' => 'setNickname''middleName' => 'setMiddleName''lastName' => 'setLastName''corporationName' => 'setCorporationName''corporationNameLine2' => 'setCorporationNameLine2''rank' => 'setRank'
+        'id' => 'setId',
+        'uuid' => 'setUuid',
+        'typeContact' => 'setTypeContact',
+        'indOrg' => 'setIndOrg',
+        'displayName' => 'setDisplayName',
+        'firstName' => 'setFirstName',
+        'nickname' => 'setNickname',
+        'middleName' => 'setMiddleName',
+        'lastName' => 'setLastName',
+        'corporationName' => 'setCorporationName',
+        'corporationNameLine2' => 'setCorporationNameLine2',
+        'rank' => 'setRank'
     ];
 
     /**
@@ -116,7 +162,18 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId''uuid' => 'getUuid''typeContact' => 'getTypeContact''indOrg' => 'getIndOrg''displayName' => 'getDisplayName''firstName' => 'getFirstName''nickname' => 'getNickname''middleName' => 'getMiddleName''lastName' => 'getLastName''corporationName' => 'getCorporationName''corporationNameLine2' => 'getCorporationNameLine2''rank' => 'getRank'
+        'id' => 'getId',
+        'uuid' => 'getUuid',
+        'typeContact' => 'getTypeContact',
+        'indOrg' => 'getIndOrg',
+        'displayName' => 'getDisplayName',
+        'firstName' => 'getFirstName',
+        'nickname' => 'getNickname',
+        'middleName' => 'getMiddleName',
+        'lastName' => 'getLastName',
+        'corporationName' => 'getCorporationName',
+        'corporationNameLine2' => 'getCorporationNameLine2',
+        'rank' => 'getRank'
     ];
 
     /**
@@ -160,9 +217,6 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -179,18 +233,18 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
-        $this->container['typeContact'] = isset($data['typeContact']) ? $data['typeContact'] : null;
-        $this->container['indOrg'] = isset($data['indOrg']) ? $data['indOrg'] : null;
-        $this->container['displayName'] = isset($data['displayName']) ? $data['displayName'] : null;
-        $this->container['firstName'] = isset($data['firstName']) ? $data['firstName'] : null;
-        $this->container['nickname'] = isset($data['nickname']) ? $data['nickname'] : null;
-        $this->container['middleName'] = isset($data['middleName']) ? $data['middleName'] : null;
-        $this->container['lastName'] = isset($data['lastName']) ? $data['lastName'] : null;
-        $this->container['corporationName'] = isset($data['corporationName']) ? $data['corporationName'] : null;
-        $this->container['corporationNameLine2'] = isset($data['corporationNameLine2']) ? $data['corporationNameLine2'] : null;
-        $this->container['rank'] = isset($data['rank']) ? $data['rank'] : null;
+        $this->container['id'] = $data['id'] ?? null;
+        $this->container['uuid'] = $data['uuid'] ?? null;
+        $this->container['typeContact'] = $data['typeContact'] ?? null;
+        $this->container['indOrg'] = $data['indOrg'] ?? null;
+        $this->container['displayName'] = $data['displayName'] ?? null;
+        $this->container['firstName'] = $data['firstName'] ?? null;
+        $this->container['nickname'] = $data['nickname'] ?? null;
+        $this->container['middleName'] = $data['middleName'] ?? null;
+        $this->container['lastName'] = $data['lastName'] ?? null;
+        $this->container['corporationName'] = $data['corporationName'] ?? null;
+        $this->container['corporationNameLine2'] = $data['corporationNameLine2'] ?? null;
+        $this->container['rank'] = $data['rank'] ?? null;
     }
 
     /**
@@ -232,7 +286,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
      *
      * @param string|null $id Unique id
      *
-     * @return $this
+     * @return self
      */
     public function setId($id)
     {
@@ -256,7 +310,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
      *
      * @param string|null $uuid Contact UUID
      *
-     * @return $this
+     * @return self
      */
     public function setUuid($uuid)
     {
@@ -280,7 +334,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
      *
      * @param string|null $typeContact type of the contact
      *
-     * @return $this
+     * @return self
      */
     public function setTypeContact($typeContact)
     {
@@ -304,7 +358,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
      *
      * @param string|null $indOrg type INDIVIDUAL OR ORGANIZATION
      *
-     * @return $this
+     * @return self
      */
     public function setIndOrg($indOrg)
     {
@@ -328,7 +382,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
      *
      * @param string|null $displayName display name of the contact
      *
-     * @return $this
+     * @return self
      */
     public function setDisplayName($displayName)
     {
@@ -352,7 +406,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
      *
      * @param string|null $firstName first name of the contact
      *
-     * @return $this
+     * @return self
      */
     public function setFirstName($firstName)
     {
@@ -376,7 +430,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
      *
      * @param string|null $nickname nickname of the contact
      *
-     * @return $this
+     * @return self
      */
     public function setNickname($nickname)
     {
@@ -400,7 +454,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
      *
      * @param string|null $middleName middle name of the contact
      *
-     * @return $this
+     * @return self
      */
     public function setMiddleName($middleName)
     {
@@ -424,7 +478,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
      *
      * @param string|null $lastName last name of the contact
      *
-     * @return $this
+     * @return self
      */
     public function setLastName($lastName)
     {
@@ -448,7 +502,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
      *
      * @param string|null $corporationName first line of corporation name (Organization)
      *
-     * @return $this
+     * @return self
      */
     public function setCorporationName($corporationName)
     {
@@ -472,7 +526,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
      *
      * @param string|null $corporationNameLine2 second line of corporation name (Organization)
      *
-     * @return $this
+     * @return self
      */
     public function setCorporationNameLine2($corporationNameLine2)
     {
@@ -496,7 +550,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
      *
      * @param string|null $rank rank of the contact. (Industrial Alliance only)
      *
-     * @return $this
+     * @return self
      */
     public function setRank($rank)
     {
@@ -521,18 +575,18 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -555,6 +609,18 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**

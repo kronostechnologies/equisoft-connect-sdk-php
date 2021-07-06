@@ -42,9 +42,9 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess
+class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSerializable
 {
-    const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = null;
 
     /**
       * The original name of the model.
@@ -59,16 +59,26 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'username' => 'string''password' => 'string''repcode' => 'string''isADealerCode' => 'bool''ssnList' => 'string[]'
+        'username' => 'string',
+        'password' => 'string',
+        'repcode' => 'string',
+        'isADealerCode' => 'bool',
+        'ssnList' => 'string[]'
     ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
       *
       * @var string[]
+      * @phpstan-var array<string, string|null>
+      * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'username' => null'password' => null'repcode' => null'isADealerCode' => null'ssnList' => null
+        'username' => null,
+        'password' => null,
+        'repcode' => null,
+        'isADealerCode' => null,
+        'ssnList' => null
     ];
 
     /**
@@ -98,7 +108,11 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'username' => 'username''password' => 'password''repcode' => 'repcode''isADealerCode' => 'isADealerCode''ssnList' => 'ssnList'
+        'username' => 'username',
+        'password' => 'password',
+        'repcode' => 'repcode',
+        'isADealerCode' => 'isADealerCode',
+        'ssnList' => 'ssnList'
     ];
 
     /**
@@ -107,7 +121,11 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'username' => 'setUsername''password' => 'setPassword''repcode' => 'setRepcode''isADealerCode' => 'setIsADealerCode''ssnList' => 'setSsnList'
+        'username' => 'setUsername',
+        'password' => 'setPassword',
+        'repcode' => 'setRepcode',
+        'isADealerCode' => 'setIsADealerCode',
+        'ssnList' => 'setSsnList'
     ];
 
     /**
@@ -116,7 +134,11 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'username' => 'getUsername''password' => 'getPassword''repcode' => 'getRepcode''isADealerCode' => 'getIsADealerCode''ssnList' => 'getSsnList'
+        'username' => 'getUsername',
+        'password' => 'getPassword',
+        'repcode' => 'getRepcode',
+        'isADealerCode' => 'getIsADealerCode',
+        'ssnList' => 'getSsnList'
     ];
 
     /**
@@ -160,9 +182,6 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
-
-    
 
     /**
      * Associative array for storing property values
@@ -179,11 +198,11 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['username'] = isset($data['username']) ? $data['username'] : null;
-        $this->container['password'] = isset($data['password']) ? $data['password'] : null;
-        $this->container['repcode'] = isset($data['repcode']) ? $data['repcode'] : null;
-        $this->container['isADealerCode'] = isset($data['isADealerCode']) ? $data['isADealerCode'] : null;
-        $this->container['ssnList'] = isset($data['ssnList']) ? $data['ssnList'] : null;
+        $this->container['username'] = $data['username'] ?? null;
+        $this->container['password'] = $data['password'] ?? null;
+        $this->container['repcode'] = $data['repcode'] ?? null;
+        $this->container['isADealerCode'] = $data['isADealerCode'] ?? null;
+        $this->container['ssnList'] = $data['ssnList'] ?? null;
     }
 
     /**
@@ -231,7 +250,7 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess
      *
      * @param string $username | null
      *
-     * @return $this
+     * @return self
      */
     public function setUsername($username)
     {
@@ -255,7 +274,7 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess
      *
      * @param string $password | null
      *
-     * @return $this
+     * @return self
      */
     public function setPassword($password)
     {
@@ -279,7 +298,7 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess
      *
      * @param string|null $repcode repcode
      *
-     * @return $this
+     * @return self
      */
     public function setRepcode($repcode)
     {
@@ -303,7 +322,7 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess
      *
      * @param bool|null $isADealerCode isADealerCode
      *
-     * @return $this
+     * @return self
      */
     public function setIsADealerCode($isADealerCode)
     {
@@ -327,7 +346,7 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess
      *
      * @param string[]|null $ssnList The list will contain formatted SSNs, i.e. \"123 456 789\"
      *
-     * @return $this
+     * @return self
      */
     public function setSsnList($ssnList)
     {
@@ -352,18 +371,18 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess
      *
      * @param integer $offset Offset
      *
-     * @return mixed
+     * @return mixed|null
      */
     public function offsetGet($offset)
     {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
+        return $this->container[$offset] ?? null;
     }
 
     /**
      * Sets value based on offset.
      *
-     * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param int|null $offset Offset
+     * @param mixed    $value  Value to be set
      *
      * @return void
      */
@@ -386,6 +405,18 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);
+    }
+
+    /**
+     * Serializes the object to a value that can be serialized natively by json_encode().
+     * @link https://www.php.net/manual/en/jsonserializable.jsonserialize.php
+     *
+     * @return mixed Returns data which can be serialized by json_encode(), which is a value
+     * of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+       return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
