@@ -59,7 +59,7 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string''sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase''sourceUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser''destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase''destinationUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser''capsil' => 'bool''univeris' => 'bool''dataphile' => 'bool'
+        'type' => 'string','sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase','sourceUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser','destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase','destinationUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser','capsil' => 'bool','univeris' => 'bool','dataphile' => 'bool'
     ];
 
     /**
@@ -68,7 +68,7 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'type' => null'sourceDatabase' => null'sourceUser' => null'destinationDatabase' => null'destinationUser' => null'capsil' => null'univeris' => null'dataphile' => null
+        'type' => null,'sourceDatabase' => null,'sourceUser' => null,'destinationDatabase' => null,'destinationUser' => null,'capsil' => null,'univeris' => null,'dataphile' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type''sourceDatabase' => 'sourceDatabase''sourceUser' => 'sourceUser''destinationDatabase' => 'destinationDatabase''destinationUser' => 'destinationUser''capsil' => 'capsil''univeris' => 'univeris''dataphile' => 'dataphile'
+        'type' => 'type','sourceDatabase' => 'sourceDatabase','sourceUser' => 'sourceUser','destinationDatabase' => 'destinationDatabase','destinationUser' => 'destinationUser','capsil' => 'capsil','univeris' => 'univeris','dataphile' => 'dataphile'
     ];
 
     /**
@@ -107,7 +107,7 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType''sourceDatabase' => 'setSourceDatabase''sourceUser' => 'setSourceUser''destinationDatabase' => 'setDestinationDatabase''destinationUser' => 'setDestinationUser''capsil' => 'setCapsil''univeris' => 'setUniveris''dataphile' => 'setDataphile'
+        'type' => 'setType','sourceDatabase' => 'setSourceDatabase','sourceUser' => 'setSourceUser','destinationDatabase' => 'setDestinationDatabase','destinationUser' => 'setDestinationUser','capsil' => 'setCapsil','univeris' => 'setUniveris','dataphile' => 'setDataphile'
     ];
 
     /**
@@ -116,7 +116,7 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType''sourceDatabase' => 'getSourceDatabase''sourceUser' => 'getSourceUser''destinationDatabase' => 'getDestinationDatabase''destinationUser' => 'getDestinationUser''capsil' => 'getCapsil''univeris' => 'getUniveris''dataphile' => 'getDataphile'
+        'type' => 'getType','sourceDatabase' => 'getSourceDatabase','sourceUser' => 'getSourceUser','destinationDatabase' => 'getDestinationDatabase','destinationUser' => 'getDestinationUser','capsil' => 'getCapsil','univeris' => 'getUniveris','dataphile' => 'getDataphile'
     ];
 
     /**
@@ -161,9 +161,9 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
     }
 
     const TYPE_CLIENTBASE_USING_FILE = 'CLIENTBASE_USING_FILE';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -175,7 +175,7 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
             self::TYPE_CLIENTBASE_USING_FILE,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values

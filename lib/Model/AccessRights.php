@@ -59,7 +59,7 @@ class AccessRights implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'write' => 'bool''delete' => 'bool'
+        'write' => 'bool','delete' => 'bool'
     ];
 
     /**
@@ -68,7 +68,7 @@ class AccessRights implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'write' => null'delete' => null
+        'write' => null,'delete' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class AccessRights implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'write' => 'write''delete' => 'delete'
+        'write' => 'write','delete' => 'delete'
     ];
 
     /**
@@ -107,7 +107,7 @@ class AccessRights implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'write' => 'setWrite''delete' => 'setDelete'
+        'write' => 'setWrite','delete' => 'setDelete'
     ];
 
     /**
@@ -116,7 +116,7 @@ class AccessRights implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'write' => 'getWrite''delete' => 'getDelete'
+        'write' => 'getWrite','delete' => 'getDelete'
     ];
 
     /**
@@ -160,9 +160,9 @@ class AccessRights implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

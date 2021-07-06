@@ -59,7 +59,7 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string''sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase''sourceUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser''destinationUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser''accessCode' => '\Equisoft\SDK\EquisoftConnect\Model\MovementGatewayAccessCode'
+        'type' => 'string','sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase','sourceUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser','destinationUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser','accessCode' => '\Equisoft\SDK\EquisoftConnect\Model\MovementGatewayAccessCode'
     ];
 
     /**
@@ -68,7 +68,7 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'type' => null'sourceDatabase' => null'sourceUser' => null'destinationUser' => null'accessCode' => null
+        'type' => null,'sourceDatabase' => null,'sourceUser' => null,'destinationUser' => null,'accessCode' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type''sourceDatabase' => 'sourceDatabase''sourceUser' => 'sourceUser''destinationUser' => 'destinationUser''accessCode' => 'accessCode'
+        'type' => 'type','sourceDatabase' => 'sourceDatabase','sourceUser' => 'sourceUser','destinationUser' => 'destinationUser','accessCode' => 'accessCode'
     ];
 
     /**
@@ -107,7 +107,7 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType''sourceDatabase' => 'setSourceDatabase''sourceUser' => 'setSourceUser''destinationUser' => 'setDestinationUser''accessCode' => 'setAccessCode'
+        'type' => 'setType','sourceDatabase' => 'setSourceDatabase','sourceUser' => 'setSourceUser','destinationUser' => 'setDestinationUser','accessCode' => 'setAccessCode'
     ];
 
     /**
@@ -116,7 +116,7 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType''sourceDatabase' => 'getSourceDatabase''sourceUser' => 'getSourceUser''destinationUser' => 'getDestinationUser''accessCode' => 'getAccessCode'
+        'type' => 'getType','sourceDatabase' => 'getSourceDatabase','sourceUser' => 'getSourceUser','destinationUser' => 'getDestinationUser','accessCode' => 'getAccessCode'
     ];
 
     /**
@@ -161,9 +161,9 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
     }
 
     const TYPE_REASSIGNMENT = 'REASSIGNMENT';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -175,7 +175,7 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess
             self::TYPE_REASSIGNMENT,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values

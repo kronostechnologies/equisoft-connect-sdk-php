@@ -59,7 +59,7 @@ class ContextUser implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'uuid' => 'string''displayName' => 'string''email' => 'string'
+        'uuid' => 'string','displayName' => 'string','email' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class ContextUser implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'uuid' => null'displayName' => null'email' => null
+        'uuid' => null,'displayName' => null,'email' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class ContextUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'uuid' => 'uuid''displayName' => 'displayName''email' => 'email'
+        'uuid' => 'uuid','displayName' => 'displayName','email' => 'email'
     ];
 
     /**
@@ -107,7 +107,7 @@ class ContextUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'uuid' => 'setUuid''displayName' => 'setDisplayName''email' => 'setEmail'
+        'uuid' => 'setUuid','displayName' => 'setDisplayName','email' => 'setEmail'
     ];
 
     /**
@@ -116,7 +116,7 @@ class ContextUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'uuid' => 'getUuid''displayName' => 'getDisplayName''email' => 'getEmail'
+        'uuid' => 'getUuid','displayName' => 'getDisplayName','email' => 'getEmail'
     ];
 
     /**
@@ -160,9 +160,9 @@ class ContextUser implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

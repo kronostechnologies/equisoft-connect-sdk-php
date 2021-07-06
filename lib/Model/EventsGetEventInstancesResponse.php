@@ -59,7 +59,7 @@ class EventsGetEventInstancesResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'nextPageToken' => 'string''items' => '\Equisoft\SDK\EquisoftConnect\Model\EventsEvent[]'
+        'nextPageToken' => 'string','items' => '\Equisoft\SDK\EquisoftConnect\Model\EventsEvent[]'
     ];
 
     /**
@@ -68,7 +68,7 @@ class EventsGetEventInstancesResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'nextPageToken' => null'items' => null
+        'nextPageToken' => null,'items' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class EventsGetEventInstancesResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'nextPageToken' => 'nextPageToken''items' => 'items'
+        'nextPageToken' => 'nextPageToken','items' => 'items'
     ];
 
     /**
@@ -107,7 +107,7 @@ class EventsGetEventInstancesResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'nextPageToken' => 'setNextPageToken''items' => 'setItems'
+        'nextPageToken' => 'setNextPageToken','items' => 'setItems'
     ];
 
     /**
@@ -116,7 +116,7 @@ class EventsGetEventInstancesResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'nextPageToken' => 'getNextPageToken''items' => 'getItems'
+        'nextPageToken' => 'getNextPageToken','items' => 'getItems'
     ];
 
     /**
@@ -160,9 +160,9 @@ class EventsGetEventInstancesResponse implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

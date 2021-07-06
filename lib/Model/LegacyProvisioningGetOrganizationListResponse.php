@@ -59,7 +59,7 @@ class LegacyProvisioningGetOrganizationListResponse implements ModelInterface, A
       * @var string[]
       */
     protected static $openAPITypes = [
-        'stat' => 'string''errorCode' => 'string''errorMsg' => 'string''organizations' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem[]'
+        'stat' => 'string','errorCode' => 'string','errorMsg' => 'string','organizations' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem[]'
     ];
 
     /**
@@ -68,7 +68,7 @@ class LegacyProvisioningGetOrganizationListResponse implements ModelInterface, A
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'stat' => null'errorCode' => null'errorMsg' => null'organizations' => null
+        'stat' => null,'errorCode' => null,'errorMsg' => null,'organizations' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class LegacyProvisioningGetOrganizationListResponse implements ModelInterface, A
      * @var string[]
      */
     protected static $attributeMap = [
-        'stat' => 'stat''errorCode' => 'error_code''errorMsg' => 'error_msg''organizations' => 'organizations'
+        'stat' => 'stat','errorCode' => 'error_code','errorMsg' => 'error_msg','organizations' => 'organizations'
     ];
 
     /**
@@ -107,7 +107,7 @@ class LegacyProvisioningGetOrganizationListResponse implements ModelInterface, A
      * @var string[]
      */
     protected static $setters = [
-        'stat' => 'setStat''errorCode' => 'setErrorCode''errorMsg' => 'setErrorMsg''organizations' => 'setOrganizations'
+        'stat' => 'setStat','errorCode' => 'setErrorCode','errorMsg' => 'setErrorMsg','organizations' => 'setOrganizations'
     ];
 
     /**
@@ -116,7 +116,7 @@ class LegacyProvisioningGetOrganizationListResponse implements ModelInterface, A
      * @var string[]
      */
     protected static $getters = [
-        'stat' => 'getStat''errorCode' => 'getErrorCode''errorMsg' => 'getErrorMsg''organizations' => 'getOrganizations'
+        'stat' => 'getStat','errorCode' => 'getErrorCode','errorMsg' => 'getErrorMsg','organizations' => 'getOrganizations'
     ];
 
     /**
@@ -160,9 +160,9 @@ class LegacyProvisioningGetOrganizationListResponse implements ModelInterface, A
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

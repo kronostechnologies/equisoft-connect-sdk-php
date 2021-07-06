@@ -59,7 +59,7 @@ class AdminCredentialResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'gatewayId' => 'int''name' => 'string''defaultLang' => 'string'
+        'gatewayId' => 'int','name' => 'string','defaultLang' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class AdminCredentialResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'gatewayId' => null'name' => null'defaultLang' => null
+        'gatewayId' => null,'name' => null,'defaultLang' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class AdminCredentialResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'gatewayId' => 'gatewayId''name' => 'name''defaultLang' => 'defaultLang'
+        'gatewayId' => 'gatewayId','name' => 'name','defaultLang' => 'defaultLang'
     ];
 
     /**
@@ -107,7 +107,7 @@ class AdminCredentialResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'gatewayId' => 'setGatewayId''name' => 'setName''defaultLang' => 'setDefaultLang'
+        'gatewayId' => 'setGatewayId','name' => 'setName','defaultLang' => 'setDefaultLang'
     ];
 
     /**
@@ -116,7 +116,7 @@ class AdminCredentialResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'gatewayId' => 'getGatewayId''name' => 'getName''defaultLang' => 'getDefaultLang'
+        'gatewayId' => 'getGatewayId','name' => 'getName','defaultLang' => 'getDefaultLang'
     ];
 
     /**
@@ -160,9 +160,9 @@ class AdminCredentialResponse implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

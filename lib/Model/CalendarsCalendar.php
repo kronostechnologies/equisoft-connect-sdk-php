@@ -59,7 +59,7 @@ class CalendarsCalendar implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'calendarId' => 'int''ownerId' => 'int''label' => 'string''isCompleted' => 'bool''accessRights' => '\Equisoft\SDK\EquisoftConnect\Model\AccessRights''color' => 'string''textColor' => 'string'
+        'calendarId' => 'int','ownerId' => 'int','label' => 'string','isCompleted' => 'bool','accessRights' => '\Equisoft\SDK\EquisoftConnect\Model\AccessRights','color' => 'string','textColor' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class CalendarsCalendar implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'calendarId' => null'ownerId' => null'label' => null'isCompleted' => null'accessRights' => null'color' => null'textColor' => null
+        'calendarId' => null,'ownerId' => null,'label' => null,'isCompleted' => null,'accessRights' => null,'color' => null,'textColor' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class CalendarsCalendar implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'calendarId' => 'calendarId''ownerId' => 'ownerId''label' => 'label''isCompleted' => 'isCompleted''accessRights' => 'accessRights''color' => 'color''textColor' => 'textColor'
+        'calendarId' => 'calendarId','ownerId' => 'ownerId','label' => 'label','isCompleted' => 'isCompleted','accessRights' => 'accessRights','color' => 'color','textColor' => 'textColor'
     ];
 
     /**
@@ -107,7 +107,7 @@ class CalendarsCalendar implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'calendarId' => 'setCalendarId''ownerId' => 'setOwnerId''label' => 'setLabel''isCompleted' => 'setIsCompleted''accessRights' => 'setAccessRights''color' => 'setColor''textColor' => 'setTextColor'
+        'calendarId' => 'setCalendarId','ownerId' => 'setOwnerId','label' => 'setLabel','isCompleted' => 'setIsCompleted','accessRights' => 'setAccessRights','color' => 'setColor','textColor' => 'setTextColor'
     ];
 
     /**
@@ -116,7 +116,7 @@ class CalendarsCalendar implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'calendarId' => 'getCalendarId''ownerId' => 'getOwnerId''label' => 'getLabel''isCompleted' => 'getIsCompleted''accessRights' => 'getAccessRights''color' => 'getColor''textColor' => 'getTextColor'
+        'calendarId' => 'getCalendarId','ownerId' => 'getOwnerId','label' => 'getLabel','isCompleted' => 'getIsCompleted','accessRights' => 'getAccessRights','color' => 'getColor','textColor' => 'getTextColor'
     ];
 
     /**
@@ -160,9 +160,9 @@ class CalendarsCalendar implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

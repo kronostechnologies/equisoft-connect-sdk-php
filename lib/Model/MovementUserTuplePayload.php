@@ -59,7 +59,7 @@ class MovementUserTuplePayload implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'from' => 'int''to' => 'int'
+        'from' => 'int','to' => 'int'
     ];
 
     /**
@@ -68,7 +68,7 @@ class MovementUserTuplePayload implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'from' => null'to' => null
+        'from' => null,'to' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class MovementUserTuplePayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'from' => 'from''to' => 'to'
+        'from' => 'from','to' => 'to'
     ];
 
     /**
@@ -107,7 +107,7 @@ class MovementUserTuplePayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'from' => 'setFrom''to' => 'setTo'
+        'from' => 'setFrom','to' => 'setTo'
     ];
 
     /**
@@ -116,7 +116,7 @@ class MovementUserTuplePayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'from' => 'getFrom''to' => 'getTo'
+        'from' => 'getFrom','to' => 'getTo'
     ];
 
     /**
@@ -160,9 +160,9 @@ class MovementUserTuplePayload implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

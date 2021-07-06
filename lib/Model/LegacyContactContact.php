@@ -59,7 +59,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'string''uuid' => 'string''typeContact' => 'string''indOrg' => 'string''displayName' => 'string''firstName' => 'string''nickname' => 'string''middleName' => 'string''lastName' => 'string''corporationName' => 'string''corporationNameLine2' => 'string''rank' => 'string'
+        'id' => 'string','uuid' => 'string','typeContact' => 'string','indOrg' => 'string','displayName' => 'string','firstName' => 'string','nickname' => 'string','middleName' => 'string','lastName' => 'string','corporationName' => 'string','corporationNameLine2' => 'string','rank' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'id' => null'uuid' => null'typeContact' => null'indOrg' => null'displayName' => null'firstName' => null'nickname' => null'middleName' => null'lastName' => null'corporationName' => null'corporationNameLine2' => null'rank' => null
+        'id' => null,'uuid' => null,'typeContact' => null,'indOrg' => null,'displayName' => null,'firstName' => null,'nickname' => null,'middleName' => null,'lastName' => null,'corporationName' => null,'corporationNameLine2' => null,'rank' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id''uuid' => 'uuid''typeContact' => 'typeContact''indOrg' => 'indOrg''displayName' => 'displayName''firstName' => 'firstName''nickname' => 'nickname''middleName' => 'middleName''lastName' => 'lastName''corporationName' => 'corporationName''corporationNameLine2' => 'corporationNameLine2''rank' => 'rank'
+        'id' => 'id','uuid' => 'uuid','typeContact' => 'typeContact','indOrg' => 'indOrg','displayName' => 'displayName','firstName' => 'firstName','nickname' => 'nickname','middleName' => 'middleName','lastName' => 'lastName','corporationName' => 'corporationName','corporationNameLine2' => 'corporationNameLine2','rank' => 'rank'
     ];
 
     /**
@@ -107,7 +107,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId''uuid' => 'setUuid''typeContact' => 'setTypeContact''indOrg' => 'setIndOrg''displayName' => 'setDisplayName''firstName' => 'setFirstName''nickname' => 'setNickname''middleName' => 'setMiddleName''lastName' => 'setLastName''corporationName' => 'setCorporationName''corporationNameLine2' => 'setCorporationNameLine2''rank' => 'setRank'
+        'id' => 'setId','uuid' => 'setUuid','typeContact' => 'setTypeContact','indOrg' => 'setIndOrg','displayName' => 'setDisplayName','firstName' => 'setFirstName','nickname' => 'setNickname','middleName' => 'setMiddleName','lastName' => 'setLastName','corporationName' => 'setCorporationName','corporationNameLine2' => 'setCorporationNameLine2','rank' => 'setRank'
     ];
 
     /**
@@ -116,7 +116,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId''uuid' => 'getUuid''typeContact' => 'getTypeContact''indOrg' => 'getIndOrg''displayName' => 'getDisplayName''firstName' => 'getFirstName''nickname' => 'getNickname''middleName' => 'getMiddleName''lastName' => 'getLastName''corporationName' => 'getCorporationName''corporationNameLine2' => 'getCorporationNameLine2''rank' => 'getRank'
+        'id' => 'getId','uuid' => 'getUuid','typeContact' => 'getTypeContact','indOrg' => 'getIndOrg','displayName' => 'getDisplayName','firstName' => 'getFirstName','nickname' => 'getNickname','middleName' => 'getMiddleName','lastName' => 'getLastName','corporationName' => 'getCorporationName','corporationNameLine2' => 'getCorporationNameLine2','rank' => 'getRank'
     ];
 
     /**
@@ -160,9 +160,9 @@ class LegacyContactContact implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

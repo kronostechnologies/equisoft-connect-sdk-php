@@ -59,7 +59,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'int''uuid' => 'string''databaseName' => 'string''displayName' => 'string''profileName' => 'string''state' => 'string''organizationUuid' => 'string'
+        'id' => 'int','uuid' => 'string','databaseName' => 'string','displayName' => 'string','profileName' => 'string','state' => 'string','organizationUuid' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'id' => null'uuid' => null'databaseName' => null'displayName' => null'profileName' => null'state' => null'organizationUuid' => null
+        'id' => null,'uuid' => null,'databaseName' => null,'displayName' => null,'profileName' => null,'state' => null,'organizationUuid' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id''uuid' => 'uuid''databaseName' => 'databaseName''displayName' => 'displayName''profileName' => 'profileName''state' => 'state''organizationUuid' => 'organizationUuid'
+        'id' => 'id','uuid' => 'uuid','databaseName' => 'databaseName','displayName' => 'displayName','profileName' => 'profileName','state' => 'state','organizationUuid' => 'organizationUuid'
     ];
 
     /**
@@ -107,7 +107,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId''uuid' => 'setUuid''databaseName' => 'setDatabaseName''displayName' => 'setDisplayName''profileName' => 'setProfileName''state' => 'setState''organizationUuid' => 'setOrganizationUuid'
+        'id' => 'setId','uuid' => 'setUuid','databaseName' => 'setDatabaseName','displayName' => 'setDisplayName','profileName' => 'setProfileName','state' => 'setState','organizationUuid' => 'setOrganizationUuid'
     ];
 
     /**
@@ -116,7 +116,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId''uuid' => 'getUuid''databaseName' => 'getDatabaseName''displayName' => 'getDisplayName''profileName' => 'getProfileName''state' => 'getState''organizationUuid' => 'getOrganizationUuid'
+        'id' => 'getId','uuid' => 'getUuid','databaseName' => 'getDatabaseName','displayName' => 'getDisplayName','profileName' => 'getProfileName','state' => 'getState','organizationUuid' => 'getOrganizationUuid'
     ];
 
     /**
@@ -160,9 +160,9 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

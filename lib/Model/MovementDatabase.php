@@ -59,7 +59,7 @@ class MovementDatabase implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'name' => 'string''displayName' => 'string'
+        'name' => 'string','displayName' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class MovementDatabase implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'name' => null'displayName' => null
+        'name' => null,'displayName' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class MovementDatabase implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'name' => 'name''displayName' => 'displayName'
+        'name' => 'name','displayName' => 'displayName'
     ];
 
     /**
@@ -107,7 +107,7 @@ class MovementDatabase implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'name' => 'setName''displayName' => 'setDisplayName'
+        'name' => 'setName','displayName' => 'setDisplayName'
     ];
 
     /**
@@ -116,7 +116,7 @@ class MovementDatabase implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'name' => 'getName''displayName' => 'getDisplayName'
+        'name' => 'getName','displayName' => 'getDisplayName'
     ];
 
     /**
@@ -160,9 +160,9 @@ class MovementDatabase implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

@@ -59,7 +59,7 @@ class LegacyDocumentGetListResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'stat' => 'string''errorCode' => 'string''errorMsg' => 'string''documents' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentListItem[]'
+        'stat' => 'string','errorCode' => 'string','errorMsg' => 'string','documents' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentListItem[]'
     ];
 
     /**
@@ -68,7 +68,7 @@ class LegacyDocumentGetListResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'stat' => null'errorCode' => null'errorMsg' => null'documents' => null
+        'stat' => null,'errorCode' => null,'errorMsg' => null,'documents' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class LegacyDocumentGetListResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'stat' => 'stat''errorCode' => 'error_code''errorMsg' => 'error_msg''documents' => 'documents'
+        'stat' => 'stat','errorCode' => 'error_code','errorMsg' => 'error_msg','documents' => 'documents'
     ];
 
     /**
@@ -107,7 +107,7 @@ class LegacyDocumentGetListResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'stat' => 'setStat''errorCode' => 'setErrorCode''errorMsg' => 'setErrorMsg''documents' => 'setDocuments'
+        'stat' => 'setStat','errorCode' => 'setErrorCode','errorMsg' => 'setErrorMsg','documents' => 'setDocuments'
     ];
 
     /**
@@ -116,7 +116,7 @@ class LegacyDocumentGetListResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'stat' => 'getStat''errorCode' => 'getErrorCode''errorMsg' => 'getErrorMsg''documents' => 'getDocuments'
+        'stat' => 'getStat','errorCode' => 'getErrorCode','errorMsg' => 'getErrorMsg','documents' => 'getDocuments'
     ];
 
     /**
@@ -160,9 +160,9 @@ class LegacyDocumentGetListResponse implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

@@ -59,7 +59,7 @@ class LegacyAddUpdateItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'string''externalKey' => 'string''result' => 'string'
+        'id' => 'string','externalKey' => 'string','result' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class LegacyAddUpdateItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'id' => null'externalKey' => null'result' => null
+        'id' => null,'externalKey' => null,'result' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class LegacyAddUpdateItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id''externalKey' => 'externalKey''result' => 'result'
+        'id' => 'id','externalKey' => 'externalKey','result' => 'result'
     ];
 
     /**
@@ -107,7 +107,7 @@ class LegacyAddUpdateItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId''externalKey' => 'setExternalKey''result' => 'setResult'
+        'id' => 'setId','externalKey' => 'setExternalKey','result' => 'setResult'
     ];
 
     /**
@@ -116,7 +116,7 @@ class LegacyAddUpdateItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId''externalKey' => 'getExternalKey''result' => 'getResult'
+        'id' => 'getId','externalKey' => 'getExternalKey','result' => 'getResult'
     ];
 
     /**
@@ -160,9 +160,9 @@ class LegacyAddUpdateItem implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

@@ -40,7 +40,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class MovementClientBaseUsingDistributionListMovementPayload extends MovementMovementPayload 
+class MovementClientBaseUsingDistributionListMovementPayload extends MovementMovementPayload
 {
     const DISCRIMINATOR = null;
 
@@ -57,7 +57,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string''sourceDatabase' => 'string''sourceUser' => 'string''sourceDistributionList' => 'string''destinationDatabase' => 'string''destinationUser' => 'string''datagatewayAccessMappings' => 'array<string,string>''transferOption' => 'string'
+        'type' => 'string','sourceDatabase' => 'string','sourceUser' => 'string','sourceDistributionList' => 'string','destinationDatabase' => 'string','destinationUser' => 'string','datagatewayAccessMappings' => 'array<string,string>','transferOption' => 'string'
     ];
 
     /**
@@ -66,7 +66,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'type' => null'sourceDatabase' => null'sourceUser' => null'sourceDistributionList' => null'destinationDatabase' => null'destinationUser' => null'datagatewayAccessMappings' => null'transferOption' => null
+        'type' => null,'sourceDatabase' => null,'sourceUser' => null,'sourceDistributionList' => null,'destinationDatabase' => null,'destinationUser' => null,'datagatewayAccessMappings' => null,'transferOption' => null
     ];
 
     /**
@@ -96,7 +96,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type''sourceDatabase' => 'sourceDatabase''sourceUser' => 'sourceUser''sourceDistributionList' => 'sourceDistributionList''destinationDatabase' => 'destinationDatabase''destinationUser' => 'destinationUser''datagatewayAccessMappings' => 'datagatewayAccessMappings''transferOption' => 'transferOption'
+        'type' => 'type','sourceDatabase' => 'sourceDatabase','sourceUser' => 'sourceUser','sourceDistributionList' => 'sourceDistributionList','destinationDatabase' => 'destinationDatabase','destinationUser' => 'destinationUser','datagatewayAccessMappings' => 'datagatewayAccessMappings','transferOption' => 'transferOption'
     ];
 
     /**
@@ -105,7 +105,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType''sourceDatabase' => 'setSourceDatabase''sourceUser' => 'setSourceUser''sourceDistributionList' => 'setSourceDistributionList''destinationDatabase' => 'setDestinationDatabase''destinationUser' => 'setDestinationUser''datagatewayAccessMappings' => 'setDatagatewayAccessMappings''transferOption' => 'setTransferOption'
+        'type' => 'setType','sourceDatabase' => 'setSourceDatabase','sourceUser' => 'setSourceUser','sourceDistributionList' => 'setSourceDistributionList','destinationDatabase' => 'setDestinationDatabase','destinationUser' => 'setDestinationUser','datagatewayAccessMappings' => 'setDatagatewayAccessMappings','transferOption' => 'setTransferOption'
     ];
 
     /**
@@ -114,7 +114,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType''sourceDatabase' => 'getSourceDatabase''sourceUser' => 'getSourceUser''sourceDistributionList' => 'getSourceDistributionList''destinationDatabase' => 'getDestinationDatabase''destinationUser' => 'getDestinationUser''datagatewayAccessMappings' => 'getDatagatewayAccessMappings''transferOption' => 'getTransferOption'
+        'type' => 'getType','sourceDatabase' => 'getSourceDatabase','sourceUser' => 'getSourceUser','sourceDistributionList' => 'getSourceDistributionList','destinationDatabase' => 'getDestinationDatabase','destinationUser' => 'getDestinationUser','datagatewayAccessMappings' => 'getDatagatewayAccessMappings','transferOption' => 'getTransferOption'
     ];
 
     /**
@@ -159,9 +159,9 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
     }
 
     const TYPE_CLIENTBASE_USING_DISTLIST = 'CLIENTBASE_USING_DISTLIST';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -173,7 +173,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
             self::TYPE_CLIENTBASE_USING_DISTLIST,
         ];
     }
-    
+
 
 
     /**

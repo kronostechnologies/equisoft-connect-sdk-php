@@ -40,7 +40,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class MovementMoveMovement extends MovementMovement 
+class MovementMoveMovement extends MovementMovement
 {
     const DISCRIMINATOR = null;
 
@@ -57,7 +57,7 @@ class MovementMoveMovement extends MovementMovement
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string''sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase''destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase''users' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser[]'
+        'type' => 'string','sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase','destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase','users' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser[]'
     ];
 
     /**
@@ -66,7 +66,7 @@ class MovementMoveMovement extends MovementMovement
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'type' => null'sourceDatabase' => null'destinationDatabase' => null'users' => null
+        'type' => null,'sourceDatabase' => null,'destinationDatabase' => null,'users' => null
     ];
 
     /**
@@ -96,7 +96,7 @@ class MovementMoveMovement extends MovementMovement
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type''sourceDatabase' => 'sourceDatabase''destinationDatabase' => 'destinationDatabase''users' => 'users'
+        'type' => 'type','sourceDatabase' => 'sourceDatabase','destinationDatabase' => 'destinationDatabase','users' => 'users'
     ];
 
     /**
@@ -105,7 +105,7 @@ class MovementMoveMovement extends MovementMovement
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType''sourceDatabase' => 'setSourceDatabase''destinationDatabase' => 'setDestinationDatabase''users' => 'setUsers'
+        'type' => 'setType','sourceDatabase' => 'setSourceDatabase','destinationDatabase' => 'setDestinationDatabase','users' => 'setUsers'
     ];
 
     /**
@@ -114,7 +114,7 @@ class MovementMoveMovement extends MovementMovement
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType''sourceDatabase' => 'getSourceDatabase''destinationDatabase' => 'getDestinationDatabase''users' => 'getUsers'
+        'type' => 'getType','sourceDatabase' => 'getSourceDatabase','destinationDatabase' => 'getDestinationDatabase','users' => 'getUsers'
     ];
 
     /**
@@ -159,9 +159,9 @@ class MovementMoveMovement extends MovementMovement
     }
 
     const TYPE_MOVE = 'MOVE';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -173,7 +173,7 @@ class MovementMoveMovement extends MovementMovement
             self::TYPE_MOVE,
         ];
     }
-    
+
 
 
     /**

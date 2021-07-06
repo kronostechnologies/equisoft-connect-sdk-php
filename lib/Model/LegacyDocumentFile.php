@@ -59,7 +59,7 @@ class LegacyDocumentFile implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'string''fileName' => 'string''mimeType' => 'string''sizeBytes' => 'string'
+        'id' => 'string','fileName' => 'string','mimeType' => 'string','sizeBytes' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class LegacyDocumentFile implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'id' => null'fileName' => null'mimeType' => null'sizeBytes' => null
+        'id' => null,'fileName' => null,'mimeType' => null,'sizeBytes' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class LegacyDocumentFile implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id''fileName' => 'fileName''mimeType' => 'mimeType''sizeBytes' => 'sizeBytes'
+        'id' => 'id','fileName' => 'fileName','mimeType' => 'mimeType','sizeBytes' => 'sizeBytes'
     ];
 
     /**
@@ -107,7 +107,7 @@ class LegacyDocumentFile implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId''fileName' => 'setFileName''mimeType' => 'setMimeType''sizeBytes' => 'setSizeBytes'
+        'id' => 'setId','fileName' => 'setFileName','mimeType' => 'setMimeType','sizeBytes' => 'setSizeBytes'
     ];
 
     /**
@@ -116,7 +116,7 @@ class LegacyDocumentFile implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId''fileName' => 'getFileName''mimeType' => 'getMimeType''sizeBytes' => 'getSizeBytes'
+        'id' => 'getId','fileName' => 'getFileName','mimeType' => 'getMimeType','sizeBytes' => 'getSizeBytes'
     ];
 
     /**
@@ -160,9 +160,9 @@ class LegacyDocumentFile implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

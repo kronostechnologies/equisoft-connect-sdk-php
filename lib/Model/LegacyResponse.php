@@ -59,7 +59,7 @@ class LegacyResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'stat' => 'string''errorCode' => 'string''errorMsg' => 'string'
+        'stat' => 'string','errorCode' => 'string','errorMsg' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class LegacyResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'stat' => null'errorCode' => null'errorMsg' => null
+        'stat' => null,'errorCode' => null,'errorMsg' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class LegacyResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'stat' => 'stat''errorCode' => 'error_code''errorMsg' => 'error_msg'
+        'stat' => 'stat','errorCode' => 'error_code','errorMsg' => 'error_msg'
     ];
 
     /**
@@ -107,7 +107,7 @@ class LegacyResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'stat' => 'setStat''errorCode' => 'setErrorCode''errorMsg' => 'setErrorMsg'
+        'stat' => 'setStat','errorCode' => 'setErrorCode','errorMsg' => 'setErrorMsg'
     ];
 
     /**
@@ -116,7 +116,7 @@ class LegacyResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'stat' => 'getStat''errorCode' => 'getErrorCode''errorMsg' => 'getErrorMsg'
+        'stat' => 'getStat','errorCode' => 'getErrorCode','errorMsg' => 'getErrorMsg'
     ];
 
     /**
@@ -160,9 +160,9 @@ class LegacyResponse implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

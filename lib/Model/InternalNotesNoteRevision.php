@@ -59,7 +59,7 @@ class InternalNotesNoteRevision implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'int''type' => 'string''content' => 'string''createdAt' => '\DateTime'
+        'id' => 'int','type' => 'string','content' => 'string','createdAt' => '\DateTime'
     ];
 
     /**
@@ -68,7 +68,7 @@ class InternalNotesNoteRevision implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'id' => null'type' => null'content' => null'createdAt' => 'date-time'
+        'id' => null,'type' => null,'content' => null,'createdAt' => 'date-time'
     ];
 
     /**
@@ -98,7 +98,7 @@ class InternalNotesNoteRevision implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id''type' => 'type''content' => 'content''createdAt' => 'createdAt'
+        'id' => 'id','type' => 'type','content' => 'content','createdAt' => 'createdAt'
     ];
 
     /**
@@ -107,7 +107,7 @@ class InternalNotesNoteRevision implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId''type' => 'setType''content' => 'setContent''createdAt' => 'setCreatedAt'
+        'id' => 'setId','type' => 'setType','content' => 'setContent','createdAt' => 'setCreatedAt'
     ];
 
     /**
@@ -116,7 +116,7 @@ class InternalNotesNoteRevision implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId''type' => 'getType''content' => 'getContent''createdAt' => 'getCreatedAt'
+        'id' => 'getId','type' => 'getType','content' => 'getContent','createdAt' => 'getCreatedAt'
     ];
 
     /**
@@ -160,9 +160,9 @@ class InternalNotesNoteRevision implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

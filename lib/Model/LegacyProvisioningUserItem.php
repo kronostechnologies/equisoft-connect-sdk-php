@@ -59,7 +59,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'orgId' => 'string''uuid' => 'string''userId' => 'string''displayName' => 'string''firstName' => 'string''lastName' => 'string''initials' => 'string''email' => 'string''role' => 'string''lang' => 'string''concurrentAccess' => 'int''active' => 'string''locked' => 'string''enableMobile' => 'string''gender' => 'string''phoneWork' => 'string''phoneWorkExtension' => 'string''phoneHome' => 'string''phoneCell' => 'string''phoneFax' => 'string''address' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyContactAddress[]''groups' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGroupItem[]''externalIdentifiers' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserIdentifier[]''allowDelegation' => 'string''deletable' => 'string'
+        'orgId' => 'string','uuid' => 'string','userId' => 'string','displayName' => 'string','firstName' => 'string','lastName' => 'string','initials' => 'string','email' => 'string','role' => 'string','lang' => 'string','concurrentAccess' => 'int','active' => 'string','locked' => 'string','enableMobile' => 'string','gender' => 'string','phoneWork' => 'string','phoneWorkExtension' => 'string','phoneHome' => 'string','phoneCell' => 'string','phoneFax' => 'string','address' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyContactAddress[]','groups' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGroupItem[]','externalIdentifiers' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserIdentifier[]','allowDelegation' => 'string','deletable' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'orgId' => null'uuid' => null'userId' => null'displayName' => null'firstName' => null'lastName' => null'initials' => null'email' => null'role' => null'lang' => null'concurrentAccess' => null'active' => null'locked' => null'enableMobile' => null'gender' => null'phoneWork' => null'phoneWorkExtension' => null'phoneHome' => null'phoneCell' => null'phoneFax' => null'address' => null'groups' => null'externalIdentifiers' => null'allowDelegation' => null'deletable' => null
+        'orgId' => null,'uuid' => null,'userId' => null,'displayName' => null,'firstName' => null,'lastName' => null,'initials' => null,'email' => null,'role' => null,'lang' => null,'concurrentAccess' => null,'active' => null,'locked' => null,'enableMobile' => null,'gender' => null,'phoneWork' => null,'phoneWorkExtension' => null,'phoneHome' => null,'phoneCell' => null,'phoneFax' => null,'address' => null,'groups' => null,'externalIdentifiers' => null,'allowDelegation' => null,'deletable' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'orgId' => 'orgId''uuid' => 'uuid''userId' => 'userId''displayName' => 'displayName''firstName' => 'firstName''lastName' => 'lastName''initials' => 'initials''email' => 'email''role' => 'role''lang' => 'lang''concurrentAccess' => 'concurrentAccess''active' => 'active''locked' => 'locked''enableMobile' => 'enableMobile''gender' => 'gender''phoneWork' => 'phoneWork''phoneWorkExtension' => 'phoneWorkExtension''phoneHome' => 'phoneHome''phoneCell' => 'phoneCell''phoneFax' => 'phoneFax''address' => 'address''groups' => 'groups''externalIdentifiers' => 'externalIdentifiers''allowDelegation' => 'allowDelegation''deletable' => 'deletable'
+        'orgId' => 'orgId','uuid' => 'uuid','userId' => 'userId','displayName' => 'displayName','firstName' => 'firstName','lastName' => 'lastName','initials' => 'initials','email' => 'email','role' => 'role','lang' => 'lang','concurrentAccess' => 'concurrentAccess','active' => 'active','locked' => 'locked','enableMobile' => 'enableMobile','gender' => 'gender','phoneWork' => 'phoneWork','phoneWorkExtension' => 'phoneWorkExtension','phoneHome' => 'phoneHome','phoneCell' => 'phoneCell','phoneFax' => 'phoneFax','address' => 'address','groups' => 'groups','externalIdentifiers' => 'externalIdentifiers','allowDelegation' => 'allowDelegation','deletable' => 'deletable'
     ];
 
     /**
@@ -107,7 +107,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'orgId' => 'setOrgId''uuid' => 'setUuid''userId' => 'setUserId''displayName' => 'setDisplayName''firstName' => 'setFirstName''lastName' => 'setLastName''initials' => 'setInitials''email' => 'setEmail''role' => 'setRole''lang' => 'setLang''concurrentAccess' => 'setConcurrentAccess''active' => 'setActive''locked' => 'setLocked''enableMobile' => 'setEnableMobile''gender' => 'setGender''phoneWork' => 'setPhoneWork''phoneWorkExtension' => 'setPhoneWorkExtension''phoneHome' => 'setPhoneHome''phoneCell' => 'setPhoneCell''phoneFax' => 'setPhoneFax''address' => 'setAddress''groups' => 'setGroups''externalIdentifiers' => 'setExternalIdentifiers''allowDelegation' => 'setAllowDelegation''deletable' => 'setDeletable'
+        'orgId' => 'setOrgId','uuid' => 'setUuid','userId' => 'setUserId','displayName' => 'setDisplayName','firstName' => 'setFirstName','lastName' => 'setLastName','initials' => 'setInitials','email' => 'setEmail','role' => 'setRole','lang' => 'setLang','concurrentAccess' => 'setConcurrentAccess','active' => 'setActive','locked' => 'setLocked','enableMobile' => 'setEnableMobile','gender' => 'setGender','phoneWork' => 'setPhoneWork','phoneWorkExtension' => 'setPhoneWorkExtension','phoneHome' => 'setPhoneHome','phoneCell' => 'setPhoneCell','phoneFax' => 'setPhoneFax','address' => 'setAddress','groups' => 'setGroups','externalIdentifiers' => 'setExternalIdentifiers','allowDelegation' => 'setAllowDelegation','deletable' => 'setDeletable'
     ];
 
     /**
@@ -116,7 +116,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'orgId' => 'getOrgId''uuid' => 'getUuid''userId' => 'getUserId''displayName' => 'getDisplayName''firstName' => 'getFirstName''lastName' => 'getLastName''initials' => 'getInitials''email' => 'getEmail''role' => 'getRole''lang' => 'getLang''concurrentAccess' => 'getConcurrentAccess''active' => 'getActive''locked' => 'getLocked''enableMobile' => 'getEnableMobile''gender' => 'getGender''phoneWork' => 'getPhoneWork''phoneWorkExtension' => 'getPhoneWorkExtension''phoneHome' => 'getPhoneHome''phoneCell' => 'getPhoneCell''phoneFax' => 'getPhoneFax''address' => 'getAddress''groups' => 'getGroups''externalIdentifiers' => 'getExternalIdentifiers''allowDelegation' => 'getAllowDelegation''deletable' => 'getDeletable'
+        'orgId' => 'getOrgId','uuid' => 'getUuid','userId' => 'getUserId','displayName' => 'getDisplayName','firstName' => 'getFirstName','lastName' => 'getLastName','initials' => 'getInitials','email' => 'getEmail','role' => 'getRole','lang' => 'getLang','concurrentAccess' => 'getConcurrentAccess','active' => 'getActive','locked' => 'getLocked','enableMobile' => 'getEnableMobile','gender' => 'getGender','phoneWork' => 'getPhoneWork','phoneWorkExtension' => 'getPhoneWorkExtension','phoneHome' => 'getPhoneHome','phoneCell' => 'getPhoneCell','phoneFax' => 'getPhoneFax','address' => 'getAddress','groups' => 'getGroups','externalIdentifiers' => 'getExternalIdentifiers','allowDelegation' => 'getAllowDelegation','deletable' => 'getDeletable'
     ];
 
     /**
@@ -160,9 +160,9 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

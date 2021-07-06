@@ -59,7 +59,7 @@ class DateOrDateTime implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'date' => 'string''dateTime' => '\DateTime'
+        'date' => 'string','dateTime' => '\DateTime'
     ];
 
     /**
@@ -68,7 +68,7 @@ class DateOrDateTime implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'date' => null'dateTime' => 'date-time'
+        'date' => null,'dateTime' => 'date-time'
     ];
 
     /**
@@ -98,7 +98,7 @@ class DateOrDateTime implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'date' => 'date''dateTime' => 'dateTime'
+        'date' => 'date','dateTime' => 'dateTime'
     ];
 
     /**
@@ -107,7 +107,7 @@ class DateOrDateTime implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'date' => 'setDate''dateTime' => 'setDateTime'
+        'date' => 'setDate','dateTime' => 'setDateTime'
     ];
 
     /**
@@ -116,7 +116,7 @@ class DateOrDateTime implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'date' => 'getDate''dateTime' => 'getDateTime'
+        'date' => 'getDate','dateTime' => 'getDateTime'
     ];
 
     /**
@@ -160,9 +160,9 @@ class DateOrDateTime implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

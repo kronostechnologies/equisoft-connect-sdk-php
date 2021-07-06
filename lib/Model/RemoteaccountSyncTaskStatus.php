@@ -59,7 +59,7 @@ class RemoteaccountSyncTaskStatus implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'uid' => 'string''status' => 'string'
+        'uid' => 'string','status' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class RemoteaccountSyncTaskStatus implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'uid' => null'status' => null
+        'uid' => null,'status' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class RemoteaccountSyncTaskStatus implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'uid' => 'uid''status' => 'status'
+        'uid' => 'uid','status' => 'status'
     ];
 
     /**
@@ -107,7 +107,7 @@ class RemoteaccountSyncTaskStatus implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'uid' => 'setUid''status' => 'setStatus'
+        'uid' => 'setUid','status' => 'setStatus'
     ];
 
     /**
@@ -116,7 +116,7 @@ class RemoteaccountSyncTaskStatus implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'uid' => 'getUid''status' => 'getStatus'
+        'uid' => 'getUid','status' => 'getStatus'
     ];
 
     /**
@@ -160,9 +160,9 @@ class RemoteaccountSyncTaskStatus implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

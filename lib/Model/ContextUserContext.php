@@ -59,7 +59,7 @@ class ContextUserContext implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'site' => 'string''environment' => 'string''user' => '\Equisoft\SDK\EquisoftConnect\Model\ContextUser''actor' => '\Equisoft\SDK\EquisoftConnect\Model\ContextActor''equisoftConnect' => '\Equisoft\SDK\EquisoftConnect\Model\ContextEquisoftConnect'
+        'site' => 'string','environment' => 'string','user' => '\Equisoft\SDK\EquisoftConnect\Model\ContextUser','actor' => '\Equisoft\SDK\EquisoftConnect\Model\ContextActor','equisoftConnect' => '\Equisoft\SDK\EquisoftConnect\Model\ContextEquisoftConnect'
     ];
 
     /**
@@ -68,7 +68,7 @@ class ContextUserContext implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'site' => null'environment' => null'user' => null'actor' => null'equisoftConnect' => null
+        'site' => null,'environment' => null,'user' => null,'actor' => null,'equisoftConnect' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class ContextUserContext implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'site' => 'site''environment' => 'environment''user' => 'user''actor' => 'actor''equisoftConnect' => 'equisoftConnect'
+        'site' => 'site','environment' => 'environment','user' => 'user','actor' => 'actor','equisoftConnect' => 'equisoftConnect'
     ];
 
     /**
@@ -107,7 +107,7 @@ class ContextUserContext implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'site' => 'setSite''environment' => 'setEnvironment''user' => 'setUser''actor' => 'setActor''equisoftConnect' => 'setEquisoftConnect'
+        'site' => 'setSite','environment' => 'setEnvironment','user' => 'setUser','actor' => 'setActor','equisoftConnect' => 'setEquisoftConnect'
     ];
 
     /**
@@ -116,7 +116,7 @@ class ContextUserContext implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'site' => 'getSite''environment' => 'getEnvironment''user' => 'getUser''actor' => 'getActor''equisoftConnect' => 'getEquisoftConnect'
+        'site' => 'getSite','environment' => 'getEnvironment','user' => 'getUser','actor' => 'getActor','equisoftConnect' => 'getEquisoftConnect'
     ];
 
     /**
@@ -160,9 +160,9 @@ class ContextUserContext implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

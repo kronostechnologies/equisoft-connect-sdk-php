@@ -59,7 +59,7 @@ class ContextActor implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'displayName' => 'string''uuid' => 'string'
+        'displayName' => 'string','uuid' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class ContextActor implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'displayName' => null'uuid' => null
+        'displayName' => null,'uuid' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class ContextActor implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'displayName' => 'displayName''uuid' => 'uuid'
+        'displayName' => 'displayName','uuid' => 'uuid'
     ];
 
     /**
@@ -107,7 +107,7 @@ class ContextActor implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'displayName' => 'setDisplayName''uuid' => 'setUuid'
+        'displayName' => 'setDisplayName','uuid' => 'setUuid'
     ];
 
     /**
@@ -116,7 +116,7 @@ class ContextActor implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'displayName' => 'getDisplayName''uuid' => 'getUuid'
+        'displayName' => 'getDisplayName','uuid' => 'getUuid'
     ];
 
     /**
@@ -160,9 +160,9 @@ class ContextActor implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

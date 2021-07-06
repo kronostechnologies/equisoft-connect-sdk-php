@@ -59,7 +59,7 @@ class TasksTask implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'string''subject' => 'string''isCompleted' => 'bool''dueDate' => 'string''initialDate' => 'string''completedDate' => 'string''description' => 'string''internalNotes' => 'string''category' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue''subCategory' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue''priority' => 'int''visibility' => 'string''creationTime' => '\DateTime''updateTime' => '\DateTime''completionTime' => '\DateTime''contactIds' => 'int[]''accessRights' => '\Equisoft\SDK\EquisoftConnect\Model\AccessRights'
+        'id' => 'string','subject' => 'string','isCompleted' => 'bool','dueDate' => 'string','initialDate' => 'string','completedDate' => 'string','description' => 'string','internalNotes' => 'string','category' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue','subCategory' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue','priority' => 'int','visibility' => 'string','creationTime' => '\DateTime','updateTime' => '\DateTime','completionTime' => '\DateTime','contactIds' => 'int[]','accessRights' => '\Equisoft\SDK\EquisoftConnect\Model\AccessRights'
     ];
 
     /**
@@ -68,7 +68,7 @@ class TasksTask implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'id' => null'subject' => null'isCompleted' => null'dueDate' => null'initialDate' => null'completedDate' => null'description' => null'internalNotes' => null'category' => null'subCategory' => null'priority' => null'visibility' => null'creationTime' => 'date-time''updateTime' => 'date-time''completionTime' => 'date-time''contactIds' => null'accessRights' => null
+        'id' => null,'subject' => null,'isCompleted' => null,'dueDate' => null,'initialDate' => null,'completedDate' => null,'description' => null,'internalNotes' => null,'category' => null,'subCategory' => null,'priority' => null,'visibility' => null,'creationTime' => 'date-time','updateTime' => 'date-time','completionTime' => 'date-time','contactIds' => null,'accessRights' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class TasksTask implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id''subject' => 'subject''isCompleted' => 'isCompleted''dueDate' => 'dueDate''initialDate' => 'initialDate''completedDate' => 'completedDate''description' => 'description''internalNotes' => 'internalNotes''category' => 'category''subCategory' => 'subCategory''priority' => 'priority''visibility' => 'visibility''creationTime' => 'creationTime''updateTime' => 'updateTime''completionTime' => 'completionTime''contactIds' => 'contactIds''accessRights' => 'accessRights'
+        'id' => 'id','subject' => 'subject','isCompleted' => 'isCompleted','dueDate' => 'dueDate','initialDate' => 'initialDate','completedDate' => 'completedDate','description' => 'description','internalNotes' => 'internalNotes','category' => 'category','subCategory' => 'subCategory','priority' => 'priority','visibility' => 'visibility','creationTime' => 'creationTime','updateTime' => 'updateTime','completionTime' => 'completionTime','contactIds' => 'contactIds','accessRights' => 'accessRights'
     ];
 
     /**
@@ -107,7 +107,7 @@ class TasksTask implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId''subject' => 'setSubject''isCompleted' => 'setIsCompleted''dueDate' => 'setDueDate''initialDate' => 'setInitialDate''completedDate' => 'setCompletedDate''description' => 'setDescription''internalNotes' => 'setInternalNotes''category' => 'setCategory''subCategory' => 'setSubCategory''priority' => 'setPriority''visibility' => 'setVisibility''creationTime' => 'setCreationTime''updateTime' => 'setUpdateTime''completionTime' => 'setCompletionTime''contactIds' => 'setContactIds''accessRights' => 'setAccessRights'
+        'id' => 'setId','subject' => 'setSubject','isCompleted' => 'setIsCompleted','dueDate' => 'setDueDate','initialDate' => 'setInitialDate','completedDate' => 'setCompletedDate','description' => 'setDescription','internalNotes' => 'setInternalNotes','category' => 'setCategory','subCategory' => 'setSubCategory','priority' => 'setPriority','visibility' => 'setVisibility','creationTime' => 'setCreationTime','updateTime' => 'setUpdateTime','completionTime' => 'setCompletionTime','contactIds' => 'setContactIds','accessRights' => 'setAccessRights'
     ];
 
     /**
@@ -116,7 +116,7 @@ class TasksTask implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId''subject' => 'getSubject''isCompleted' => 'getIsCompleted''dueDate' => 'getDueDate''initialDate' => 'getInitialDate''completedDate' => 'getCompletedDate''description' => 'getDescription''internalNotes' => 'getInternalNotes''category' => 'getCategory''subCategory' => 'getSubCategory''priority' => 'getPriority''visibility' => 'getVisibility''creationTime' => 'getCreationTime''updateTime' => 'getUpdateTime''completionTime' => 'getCompletionTime''contactIds' => 'getContactIds''accessRights' => 'getAccessRights'
+        'id' => 'getId','subject' => 'getSubject','isCompleted' => 'getIsCompleted','dueDate' => 'getDueDate','initialDate' => 'getInitialDate','completedDate' => 'getCompletedDate','description' => 'getDescription','internalNotes' => 'getInternalNotes','category' => 'getCategory','subCategory' => 'getSubCategory','priority' => 'getPriority','visibility' => 'getVisibility','creationTime' => 'getCreationTime','updateTime' => 'getUpdateTime','completionTime' => 'getCompletionTime','contactIds' => 'getContactIds','accessRights' => 'getAccessRights'
     ];
 
     /**
@@ -160,9 +160,9 @@ class TasksTask implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

@@ -59,7 +59,7 @@ class DsfFinancialCenterPayload implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'nameFr' => 'string''nameEn' => 'string''network' => 'string''code' => 'string'
+        'nameFr' => 'string','nameEn' => 'string','network' => 'string','code' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class DsfFinancialCenterPayload implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'nameFr' => null'nameEn' => null'network' => null'code' => null
+        'nameFr' => null,'nameEn' => null,'network' => null,'code' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class DsfFinancialCenterPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'nameFr' => 'nameFr''nameEn' => 'nameEn''network' => 'network''code' => 'code'
+        'nameFr' => 'nameFr','nameEn' => 'nameEn','network' => 'network','code' => 'code'
     ];
 
     /**
@@ -107,7 +107,7 @@ class DsfFinancialCenterPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'nameFr' => 'setNameFr''nameEn' => 'setNameEn''network' => 'setNetwork''code' => 'setCode'
+        'nameFr' => 'setNameFr','nameEn' => 'setNameEn','network' => 'setNetwork','code' => 'setCode'
     ];
 
     /**
@@ -116,7 +116,7 @@ class DsfFinancialCenterPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'nameFr' => 'getNameFr''nameEn' => 'getNameEn''network' => 'getNetwork''code' => 'getCode'
+        'nameFr' => 'getNameFr','nameEn' => 'getNameEn','network' => 'getNetwork','code' => 'getCode'
     ];
 
     /**
@@ -160,9 +160,9 @@ class DsfFinancialCenterPayload implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

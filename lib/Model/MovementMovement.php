@@ -66,7 +66,7 @@ class MovementMovement implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'int''status' => 'string''availableAction' => 'string''scheduledDate' => 'string''processedDate' => 'string''addedDate' => 'string''addedBy' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser''cancelledDate' => 'string''cancelledBy' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser'
+        'id' => 'int','status' => 'string','availableAction' => 'string','scheduledDate' => 'string','processedDate' => 'string','addedDate' => 'string','addedBy' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser','cancelledDate' => 'string','cancelledBy' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser'
     ];
 
     /**
@@ -75,7 +75,7 @@ class MovementMovement implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'id' => null'status' => null'availableAction' => null'scheduledDate' => null'processedDate' => null'addedDate' => null'addedBy' => null'cancelledDate' => null'cancelledBy' => null
+        'id' => null,'status' => null,'availableAction' => null,'scheduledDate' => null,'processedDate' => null,'addedDate' => null,'addedBy' => null,'cancelledDate' => null,'cancelledBy' => null
     ];
 
     /**
@@ -105,7 +105,7 @@ class MovementMovement implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id''status' => 'status''availableAction' => 'availableAction''scheduledDate' => 'scheduledDate''processedDate' => 'processedDate''addedDate' => 'addedDate''addedBy' => 'addedBy''cancelledDate' => 'cancelledDate''cancelledBy' => 'cancelledBy'
+        'id' => 'id','status' => 'status','availableAction' => 'availableAction','scheduledDate' => 'scheduledDate','processedDate' => 'processedDate','addedDate' => 'addedDate','addedBy' => 'addedBy','cancelledDate' => 'cancelledDate','cancelledBy' => 'cancelledBy'
     ];
 
     /**
@@ -114,7 +114,7 @@ class MovementMovement implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId''status' => 'setStatus''availableAction' => 'setAvailableAction''scheduledDate' => 'setScheduledDate''processedDate' => 'setProcessedDate''addedDate' => 'setAddedDate''addedBy' => 'setAddedBy''cancelledDate' => 'setCancelledDate''cancelledBy' => 'setCancelledBy'
+        'id' => 'setId','status' => 'setStatus','availableAction' => 'setAvailableAction','scheduledDate' => 'setScheduledDate','processedDate' => 'setProcessedDate','addedDate' => 'setAddedDate','addedBy' => 'setAddedBy','cancelledDate' => 'setCancelledDate','cancelledBy' => 'setCancelledBy'
     ];
 
     /**
@@ -123,7 +123,7 @@ class MovementMovement implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId''status' => 'getStatus''availableAction' => 'getAvailableAction''scheduledDate' => 'getScheduledDate''processedDate' => 'getProcessedDate''addedDate' => 'getAddedDate''addedBy' => 'getAddedBy''cancelledDate' => 'getCancelledDate''cancelledBy' => 'getCancelledBy'
+        'id' => 'getId','status' => 'getStatus','availableAction' => 'getAvailableAction','scheduledDate' => 'getScheduledDate','processedDate' => 'getProcessedDate','addedDate' => 'getAddedDate','addedBy' => 'getAddedBy','cancelledDate' => 'getCancelledDate','cancelledBy' => 'getCancelledBy'
     ];
 
     /**
@@ -167,9 +167,9 @@ class MovementMovement implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

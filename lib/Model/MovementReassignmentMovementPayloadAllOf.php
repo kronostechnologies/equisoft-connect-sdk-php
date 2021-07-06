@@ -59,7 +59,7 @@ class MovementReassignmentMovementPayloadAllOf implements ModelInterface, ArrayA
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string''sourceDatabase' => 'string''sourceUser' => 'string''destinationUser' => 'string''accessCode' => 'string'
+        'type' => 'string','sourceDatabase' => 'string','sourceUser' => 'string','destinationUser' => 'string','accessCode' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class MovementReassignmentMovementPayloadAllOf implements ModelInterface, ArrayA
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'type' => null'sourceDatabase' => null'sourceUser' => null'destinationUser' => null'accessCode' => null
+        'type' => null,'sourceDatabase' => null,'sourceUser' => null,'destinationUser' => null,'accessCode' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class MovementReassignmentMovementPayloadAllOf implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type''sourceDatabase' => 'sourceDatabase''sourceUser' => 'sourceUser''destinationUser' => 'destinationUser''accessCode' => 'accessCode'
+        'type' => 'type','sourceDatabase' => 'sourceDatabase','sourceUser' => 'sourceUser','destinationUser' => 'destinationUser','accessCode' => 'accessCode'
     ];
 
     /**
@@ -107,7 +107,7 @@ class MovementReassignmentMovementPayloadAllOf implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType''sourceDatabase' => 'setSourceDatabase''sourceUser' => 'setSourceUser''destinationUser' => 'setDestinationUser''accessCode' => 'setAccessCode'
+        'type' => 'setType','sourceDatabase' => 'setSourceDatabase','sourceUser' => 'setSourceUser','destinationUser' => 'setDestinationUser','accessCode' => 'setAccessCode'
     ];
 
     /**
@@ -116,7 +116,7 @@ class MovementReassignmentMovementPayloadAllOf implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType''sourceDatabase' => 'getSourceDatabase''sourceUser' => 'getSourceUser''destinationUser' => 'getDestinationUser''accessCode' => 'getAccessCode'
+        'type' => 'getType','sourceDatabase' => 'getSourceDatabase','sourceUser' => 'getSourceUser','destinationUser' => 'getDestinationUser','accessCode' => 'getAccessCode'
     ];
 
     /**
@@ -161,9 +161,9 @@ class MovementReassignmentMovementPayloadAllOf implements ModelInterface, ArrayA
     }
 
     const TYPE_REASSIGNMENT = 'REASSIGNMENT';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -175,7 +175,7 @@ class MovementReassignmentMovementPayloadAllOf implements ModelInterface, ArrayA
             self::TYPE_REASSIGNMENT,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values

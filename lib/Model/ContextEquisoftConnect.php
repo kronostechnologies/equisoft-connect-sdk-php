@@ -59,7 +59,7 @@ class ContextEquisoftConnect implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'profile' => 'string''appVersion' => 'string''instance' => '\Equisoft\SDK\EquisoftConnect\Model\ContextInstance''user' => '\Equisoft\SDK\EquisoftConnect\Model\ContextEquisoftConnectUser''preferences' => '\Equisoft\SDK\EquisoftConnect\Model\ContextPreferences'
+        'profile' => 'string','appVersion' => 'string','instance' => '\Equisoft\SDK\EquisoftConnect\Model\ContextInstance','user' => '\Equisoft\SDK\EquisoftConnect\Model\ContextEquisoftConnectUser','preferences' => '\Equisoft\SDK\EquisoftConnect\Model\ContextPreferences'
     ];
 
     /**
@@ -68,7 +68,7 @@ class ContextEquisoftConnect implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'profile' => null'appVersion' => null'instance' => null'user' => null'preferences' => null
+        'profile' => null,'appVersion' => null,'instance' => null,'user' => null,'preferences' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class ContextEquisoftConnect implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'profile' => 'profile''appVersion' => 'appVersion''instance' => 'instance''user' => 'user''preferences' => 'preferences'
+        'profile' => 'profile','appVersion' => 'appVersion','instance' => 'instance','user' => 'user','preferences' => 'preferences'
     ];
 
     /**
@@ -107,7 +107,7 @@ class ContextEquisoftConnect implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'profile' => 'setProfile''appVersion' => 'setAppVersion''instance' => 'setInstance''user' => 'setUser''preferences' => 'setPreferences'
+        'profile' => 'setProfile','appVersion' => 'setAppVersion','instance' => 'setInstance','user' => 'setUser','preferences' => 'setPreferences'
     ];
 
     /**
@@ -116,7 +116,7 @@ class ContextEquisoftConnect implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'profile' => 'getProfile''appVersion' => 'getAppVersion''instance' => 'getInstance''user' => 'getUser''preferences' => 'getPreferences'
+        'profile' => 'getProfile','appVersion' => 'getAppVersion','instance' => 'getInstance','user' => 'getUser','preferences' => 'getPreferences'
     ];
 
     /**
@@ -160,9 +160,9 @@ class ContextEquisoftConnect implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

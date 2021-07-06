@@ -59,7 +59,7 @@ class GatewaysAccessesUser implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'int''uuid' => 'string''displayName' => 'string'
+        'id' => 'int','uuid' => 'string','displayName' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class GatewaysAccessesUser implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'id' => null'uuid' => null'displayName' => null
+        'id' => null,'uuid' => null,'displayName' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class GatewaysAccessesUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id''uuid' => 'uuid''displayName' => 'displayName'
+        'id' => 'id','uuid' => 'uuid','displayName' => 'displayName'
     ];
 
     /**
@@ -107,7 +107,7 @@ class GatewaysAccessesUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId''uuid' => 'setUuid''displayName' => 'setDisplayName'
+        'id' => 'setId','uuid' => 'setUuid','displayName' => 'setDisplayName'
     ];
 
     /**
@@ -116,7 +116,7 @@ class GatewaysAccessesUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId''uuid' => 'getUuid''displayName' => 'getDisplayName'
+        'id' => 'getId','uuid' => 'getUuid','displayName' => 'getDisplayName'
     ];
 
     /**
@@ -160,9 +160,9 @@ class GatewaysAccessesUser implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

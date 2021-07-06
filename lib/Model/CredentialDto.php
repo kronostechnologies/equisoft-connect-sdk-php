@@ -59,7 +59,7 @@ class CredentialDto implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'int''dealerCode' => 'string''repCode' => 'string''status' => 'string''district' => 'string''us' => 'string''creationDate' => 'string''approvalDate' => 'string''refusalDate' => 'string''revocationDate' => 'string''isActive' => 'bool''webUserName' => 'string''webUserEmail' => 'string'
+        'id' => 'int','dealerCode' => 'string','repCode' => 'string','status' => 'string','district' => 'string','us' => 'string','creationDate' => 'string','approvalDate' => 'string','refusalDate' => 'string','revocationDate' => 'string','isActive' => 'bool','webUserName' => 'string','webUserEmail' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class CredentialDto implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'id' => null'dealerCode' => null'repCode' => null'status' => null'district' => null'us' => null'creationDate' => null'approvalDate' => null'refusalDate' => null'revocationDate' => null'isActive' => null'webUserName' => null'webUserEmail' => null
+        'id' => null,'dealerCode' => null,'repCode' => null,'status' => null,'district' => null,'us' => null,'creationDate' => null,'approvalDate' => null,'refusalDate' => null,'revocationDate' => null,'isActive' => null,'webUserName' => null,'webUserEmail' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class CredentialDto implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id''dealerCode' => 'dealerCode''repCode' => 'repCode''status' => 'status''district' => 'district''us' => 'us''creationDate' => 'creationDate''approvalDate' => 'approvalDate''refusalDate' => 'refusalDate''revocationDate' => 'revocationDate''isActive' => 'isActive''webUserName' => 'webUserName''webUserEmail' => 'webUserEmail'
+        'id' => 'id','dealerCode' => 'dealerCode','repCode' => 'repCode','status' => 'status','district' => 'district','us' => 'us','creationDate' => 'creationDate','approvalDate' => 'approvalDate','refusalDate' => 'refusalDate','revocationDate' => 'revocationDate','isActive' => 'isActive','webUserName' => 'webUserName','webUserEmail' => 'webUserEmail'
     ];
 
     /**
@@ -107,7 +107,7 @@ class CredentialDto implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId''dealerCode' => 'setDealerCode''repCode' => 'setRepCode''status' => 'setStatus''district' => 'setDistrict''us' => 'setUs''creationDate' => 'setCreationDate''approvalDate' => 'setApprovalDate''refusalDate' => 'setRefusalDate''revocationDate' => 'setRevocationDate''isActive' => 'setIsActive''webUserName' => 'setWebUserName''webUserEmail' => 'setWebUserEmail'
+        'id' => 'setId','dealerCode' => 'setDealerCode','repCode' => 'setRepCode','status' => 'setStatus','district' => 'setDistrict','us' => 'setUs','creationDate' => 'setCreationDate','approvalDate' => 'setApprovalDate','refusalDate' => 'setRefusalDate','revocationDate' => 'setRevocationDate','isActive' => 'setIsActive','webUserName' => 'setWebUserName','webUserEmail' => 'setWebUserEmail'
     ];
 
     /**
@@ -116,7 +116,7 @@ class CredentialDto implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId''dealerCode' => 'getDealerCode''repCode' => 'getRepCode''status' => 'getStatus''district' => 'getDistrict''us' => 'getUs''creationDate' => 'getCreationDate''approvalDate' => 'getApprovalDate''refusalDate' => 'getRefusalDate''revocationDate' => 'getRevocationDate''isActive' => 'getIsActive''webUserName' => 'getWebUserName''webUserEmail' => 'getWebUserEmail'
+        'id' => 'getId','dealerCode' => 'getDealerCode','repCode' => 'getRepCode','status' => 'getStatus','district' => 'getDistrict','us' => 'getUs','creationDate' => 'getCreationDate','approvalDate' => 'getApprovalDate','refusalDate' => 'getRefusalDate','revocationDate' => 'getRevocationDate','isActive' => 'getIsActive','webUserName' => 'getWebUserName','webUserEmail' => 'getWebUserEmail'
     ];
 
     /**
@@ -160,9 +160,9 @@ class CredentialDto implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

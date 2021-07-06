@@ -59,7 +59,7 @@ class UsersUser implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'int''displayName' => 'string''email' => 'string''firstName' => 'string''lastName' => 'string''locale' => 'string''role' => 'string'
+        'id' => 'int','displayName' => 'string','email' => 'string','firstName' => 'string','lastName' => 'string','locale' => 'string','role' => 'string','maxConcurrentAccess' => 'int'
     ];
 
     /**
@@ -68,7 +68,7 @@ class UsersUser implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'id' => null'displayName' => null'email' => null'firstName' => null'lastName' => null'locale' => null'role' => null
+        'id' => null,'displayName' => null,'email' => null,'firstName' => null,'lastName' => null,'locale' => null,'role' => null,'maxConcurrentAccess' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class UsersUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id''displayName' => 'displayName''email' => 'email''firstName' => 'firstName''lastName' => 'lastName''locale' => 'locale''role' => 'role'
+        'id' => 'id','displayName' => 'displayName','email' => 'email','firstName' => 'firstName','lastName' => 'lastName','locale' => 'locale','role' => 'role','maxConcurrentAccess' => 'maxConcurrentAccess'
     ];
 
     /**
@@ -107,7 +107,7 @@ class UsersUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId''displayName' => 'setDisplayName''email' => 'setEmail''firstName' => 'setFirstName''lastName' => 'setLastName''locale' => 'setLocale''role' => 'setRole'
+        'id' => 'setId','displayName' => 'setDisplayName','email' => 'setEmail','firstName' => 'setFirstName','lastName' => 'setLastName','locale' => 'setLocale','role' => 'setRole','maxConcurrentAccess' => 'setMaxConcurrentAccess'
     ];
 
     /**
@@ -116,7 +116,7 @@ class UsersUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId''displayName' => 'getDisplayName''email' => 'getEmail''firstName' => 'getFirstName''lastName' => 'getLastName''locale' => 'getLocale''role' => 'getRole'
+        'id' => 'getId','displayName' => 'getDisplayName','email' => 'getEmail','firstName' => 'getFirstName','lastName' => 'getLastName','locale' => 'getLocale','role' => 'getRole','maxConcurrentAccess' => 'getMaxConcurrentAccess'
     ];
 
     /**
@@ -160,9 +160,9 @@ class UsersUser implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
@@ -186,6 +186,7 @@ class UsersUser implements ModelInterface, ArrayAccess
         $this->container['lastName'] = isset($data['lastName']) ? $data['lastName'] : null;
         $this->container['locale'] = isset($data['locale']) ? $data['locale'] : null;
         $this->container['role'] = isset($data['role']) ? $data['role'] : null;
+        $this->container['maxConcurrentAccess'] = isset($data['maxConcurrentAccess']) ? $data['maxConcurrentAccess'] : null;
     }
 
     /**
@@ -376,6 +377,30 @@ class UsersUser implements ModelInterface, ArrayAccess
     public function setRole($role)
     {
         $this->container['role'] = $role;
+
+        return $this;
+    }
+
+    /**
+     * Gets maxConcurrentAccess
+     *
+     * @return int|null
+     */
+    public function getMaxConcurrentAccess()
+    {
+        return $this->container['maxConcurrentAccess'];
+    }
+
+    /**
+     * Sets maxConcurrentAccess
+     *
+     * @param int|null $maxConcurrentAccess maxConcurrentAccess
+     *
+     * @return $this
+     */
+    public function setMaxConcurrentAccess($maxConcurrentAccess)
+    {
+        $this->container['maxConcurrentAccess'] = $maxConcurrentAccess;
 
         return $this;
     }

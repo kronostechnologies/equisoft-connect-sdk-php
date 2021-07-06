@@ -40,7 +40,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class MovementClientBaseUsingFileMovementPayload extends MovementMovementPayload 
+class MovementClientBaseUsingFileMovementPayload extends MovementMovementPayload
 {
     const DISCRIMINATOR = null;
 
@@ -57,7 +57,7 @@ class MovementClientBaseUsingFileMovementPayload extends MovementMovementPayload
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string''sourceDatabase' => 'string''sourceUser' => 'string''destinationDatabase' => 'string''destinationUser' => 'string''capsilFile' => 'string''univerisFile' => 'string''dataphileFile' => 'string'
+        'type' => 'string','sourceDatabase' => 'string','sourceUser' => 'string','destinationDatabase' => 'string','destinationUser' => 'string','capsilFile' => 'string','univerisFile' => 'string','dataphileFile' => 'string'
     ];
 
     /**
@@ -66,7 +66,7 @@ class MovementClientBaseUsingFileMovementPayload extends MovementMovementPayload
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'type' => null'sourceDatabase' => null'sourceUser' => null'destinationDatabase' => null'destinationUser' => null'capsilFile' => null'univerisFile' => null'dataphileFile' => null
+        'type' => null,'sourceDatabase' => null,'sourceUser' => null,'destinationDatabase' => null,'destinationUser' => null,'capsilFile' => null,'univerisFile' => null,'dataphileFile' => null
     ];
 
     /**
@@ -96,7 +96,7 @@ class MovementClientBaseUsingFileMovementPayload extends MovementMovementPayload
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type''sourceDatabase' => 'sourceDatabase''sourceUser' => 'sourceUser''destinationDatabase' => 'destinationDatabase''destinationUser' => 'destinationUser''capsilFile' => 'capsilFile''univerisFile' => 'univerisFile''dataphileFile' => 'dataphileFile'
+        'type' => 'type','sourceDatabase' => 'sourceDatabase','sourceUser' => 'sourceUser','destinationDatabase' => 'destinationDatabase','destinationUser' => 'destinationUser','capsilFile' => 'capsilFile','univerisFile' => 'univerisFile','dataphileFile' => 'dataphileFile'
     ];
 
     /**
@@ -105,7 +105,7 @@ class MovementClientBaseUsingFileMovementPayload extends MovementMovementPayload
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType''sourceDatabase' => 'setSourceDatabase''sourceUser' => 'setSourceUser''destinationDatabase' => 'setDestinationDatabase''destinationUser' => 'setDestinationUser''capsilFile' => 'setCapsilFile''univerisFile' => 'setUniverisFile''dataphileFile' => 'setDataphileFile'
+        'type' => 'setType','sourceDatabase' => 'setSourceDatabase','sourceUser' => 'setSourceUser','destinationDatabase' => 'setDestinationDatabase','destinationUser' => 'setDestinationUser','capsilFile' => 'setCapsilFile','univerisFile' => 'setUniverisFile','dataphileFile' => 'setDataphileFile'
     ];
 
     /**
@@ -114,7 +114,7 @@ class MovementClientBaseUsingFileMovementPayload extends MovementMovementPayload
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType''sourceDatabase' => 'getSourceDatabase''sourceUser' => 'getSourceUser''destinationDatabase' => 'getDestinationDatabase''destinationUser' => 'getDestinationUser''capsilFile' => 'getCapsilFile''univerisFile' => 'getUniverisFile''dataphileFile' => 'getDataphileFile'
+        'type' => 'getType','sourceDatabase' => 'getSourceDatabase','sourceUser' => 'getSourceUser','destinationDatabase' => 'getDestinationDatabase','destinationUser' => 'getDestinationUser','capsilFile' => 'getCapsilFile','univerisFile' => 'getUniverisFile','dataphileFile' => 'getDataphileFile'
     ];
 
     /**
@@ -159,9 +159,9 @@ class MovementClientBaseUsingFileMovementPayload extends MovementMovementPayload
     }
 
     const TYPE_CLIENTBASE_USING_FILE = 'CLIENTBASE_USING_FILE';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -173,7 +173,7 @@ class MovementClientBaseUsingFileMovementPayload extends MovementMovementPayload
             self::TYPE_CLIENTBASE_USING_FILE,
         ];
     }
-    
+
 
 
     /**

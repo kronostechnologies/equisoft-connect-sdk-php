@@ -59,7 +59,7 @@ class HandlersOauth2AssetbookAssetBookTokenPostBody implements ModelInterface, A
       * @var string[]
       */
     protected static $openAPITypes = [
-        'username' => 'string''refreshToken' => 'string'
+        'username' => 'string','refreshToken' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class HandlersOauth2AssetbookAssetBookTokenPostBody implements ModelInterface, A
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'username' => null'refreshToken' => null
+        'username' => null,'refreshToken' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class HandlersOauth2AssetbookAssetBookTokenPostBody implements ModelInterface, A
      * @var string[]
      */
     protected static $attributeMap = [
-        'username' => 'Username''refreshToken' => 'RefreshToken'
+        'username' => 'Username','refreshToken' => 'RefreshToken'
     ];
 
     /**
@@ -107,7 +107,7 @@ class HandlersOauth2AssetbookAssetBookTokenPostBody implements ModelInterface, A
      * @var string[]
      */
     protected static $setters = [
-        'username' => 'setUsername''refreshToken' => 'setRefreshToken'
+        'username' => 'setUsername','refreshToken' => 'setRefreshToken'
     ];
 
     /**
@@ -116,7 +116,7 @@ class HandlersOauth2AssetbookAssetBookTokenPostBody implements ModelInterface, A
      * @var string[]
      */
     protected static $getters = [
-        'username' => 'getUsername''refreshToken' => 'getRefreshToken'
+        'username' => 'getUsername','refreshToken' => 'getRefreshToken'
     ];
 
     /**
@@ -160,9 +160,9 @@ class HandlersOauth2AssetbookAssetBookTokenPostBody implements ModelInterface, A
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

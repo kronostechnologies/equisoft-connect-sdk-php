@@ -59,7 +59,7 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'string''files' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentFile[]''type' => 'string''subType' => 'string''name' => 'string'
+        'id' => 'string','files' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentFile[]','type' => 'string','subType' => 'string','name' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'id' => null'files' => null'type' => null'subType' => null'name' => null
+        'id' => null,'files' => null,'type' => null,'subType' => null,'name' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id''files' => 'files''type' => 'type''subType' => 'subType''name' => 'name'
+        'id' => 'id','files' => 'files','type' => 'type','subType' => 'subType','name' => 'name'
     ];
 
     /**
@@ -107,7 +107,7 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId''files' => 'setFiles''type' => 'setType''subType' => 'setSubType''name' => 'setName'
+        'id' => 'setId','files' => 'setFiles','type' => 'setType','subType' => 'setSubType','name' => 'setName'
     ];
 
     /**
@@ -116,7 +116,7 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId''files' => 'getFiles''type' => 'getType''subType' => 'getSubType''name' => 'getName'
+        'id' => 'getId','files' => 'getFiles','type' => 'getType','subType' => 'getSubType','name' => 'getName'
     ];
 
     /**
@@ -160,9 +160,9 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

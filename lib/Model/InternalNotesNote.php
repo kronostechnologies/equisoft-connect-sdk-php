@@ -59,7 +59,7 @@ class InternalNotesNote implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'int''author' => '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesAuthor[]''firstRevisionCreatedAt' => '\DateTime''accessRights' => '\Equisoft\SDK\EquisoftConnect\Model\AccessRights[]''currentRevision' => '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteRevision[]''previousRevisions' => '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteRevision[]'
+        'id' => 'int','author' => '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesAuthor[]','firstRevisionCreatedAt' => '\DateTime','accessRights' => '\Equisoft\SDK\EquisoftConnect\Model\AccessRights[]','currentRevision' => '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteRevision[]','previousRevisions' => '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteRevision[]'
     ];
 
     /**
@@ -68,7 +68,7 @@ class InternalNotesNote implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'id' => null'author' => null'firstRevisionCreatedAt' => 'date-time''accessRights' => null'currentRevision' => null'previousRevisions' => null
+        'id' => null,'author' => null,'firstRevisionCreatedAt' => 'date-time','accessRights' => null,'currentRevision' => null,'previousRevisions' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class InternalNotesNote implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id''author' => 'author''firstRevisionCreatedAt' => 'firstRevisionCreatedAt''accessRights' => 'accessRights''currentRevision' => 'currentRevision''previousRevisions' => 'previousRevisions'
+        'id' => 'id','author' => 'author','firstRevisionCreatedAt' => 'firstRevisionCreatedAt','accessRights' => 'accessRights','currentRevision' => 'currentRevision','previousRevisions' => 'previousRevisions'
     ];
 
     /**
@@ -107,7 +107,7 @@ class InternalNotesNote implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId''author' => 'setAuthor''firstRevisionCreatedAt' => 'setFirstRevisionCreatedAt''accessRights' => 'setAccessRights''currentRevision' => 'setCurrentRevision''previousRevisions' => 'setPreviousRevisions'
+        'id' => 'setId','author' => 'setAuthor','firstRevisionCreatedAt' => 'setFirstRevisionCreatedAt','accessRights' => 'setAccessRights','currentRevision' => 'setCurrentRevision','previousRevisions' => 'setPreviousRevisions'
     ];
 
     /**
@@ -116,7 +116,7 @@ class InternalNotesNote implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId''author' => 'getAuthor''firstRevisionCreatedAt' => 'getFirstRevisionCreatedAt''accessRights' => 'getAccessRights''currentRevision' => 'getCurrentRevision''previousRevisions' => 'getPreviousRevisions'
+        'id' => 'getId','author' => 'getAuthor','firstRevisionCreatedAt' => 'getFirstRevisionCreatedAt','accessRights' => 'getAccessRights','currentRevision' => 'getCurrentRevision','previousRevisions' => 'getPreviousRevisions'
     ];
 
     /**
@@ -160,9 +160,9 @@ class InternalNotesNote implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

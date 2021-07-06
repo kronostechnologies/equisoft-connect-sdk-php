@@ -59,7 +59,7 @@ class ContextInstance implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'uuid' => 'string''databaseName' => 'string'
+        'uuid' => 'string','databaseName' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class ContextInstance implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'uuid' => null'databaseName' => null
+        'uuid' => null,'databaseName' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class ContextInstance implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'uuid' => 'uuid''databaseName' => 'databaseName'
+        'uuid' => 'uuid','databaseName' => 'databaseName'
     ];
 
     /**
@@ -107,7 +107,7 @@ class ContextInstance implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'uuid' => 'setUuid''databaseName' => 'setDatabaseName'
+        'uuid' => 'setUuid','databaseName' => 'setDatabaseName'
     ];
 
     /**
@@ -116,7 +116,7 @@ class ContextInstance implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'uuid' => 'getUuid''databaseName' => 'getDatabaseName'
+        'uuid' => 'getUuid','databaseName' => 'getDatabaseName'
     ];
 
     /**
@@ -160,9 +160,9 @@ class ContextInstance implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

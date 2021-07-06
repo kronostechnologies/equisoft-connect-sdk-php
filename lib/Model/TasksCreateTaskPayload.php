@@ -59,7 +59,7 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'ownerIds' => 'int[]''isCompleted' => 'bool''subject' => 'string''dueDate' => 'string''initialDate' => 'string''completedDate' => 'string''description' => 'string''internalNotes' => 'string''categoryId' => 'int''subCategoryId' => 'int''priority' => 'int''visibility' => 'string''contactIds' => 'int[]'
+        'ownerIds' => 'int[]','isCompleted' => 'bool','subject' => 'string','dueDate' => 'string','initialDate' => 'string','completedDate' => 'string','description' => 'string','internalNotes' => 'string','categoryId' => 'int','subCategoryId' => 'int','priority' => 'int','visibility' => 'string','contactIds' => 'int[]'
     ];
 
     /**
@@ -68,7 +68,7 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'ownerIds' => null'isCompleted' => null'subject' => null'dueDate' => null'initialDate' => null'completedDate' => null'description' => null'internalNotes' => null'categoryId' => null'subCategoryId' => null'priority' => null'visibility' => null'contactIds' => null
+        'ownerIds' => null,'isCompleted' => null,'subject' => null,'dueDate' => null,'initialDate' => null,'completedDate' => null,'description' => null,'internalNotes' => null,'categoryId' => null,'subCategoryId' => null,'priority' => null,'visibility' => null,'contactIds' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'ownerIds' => 'ownerIds''isCompleted' => 'isCompleted''subject' => 'subject''dueDate' => 'dueDate''initialDate' => 'initialDate''completedDate' => 'completedDate''description' => 'description''internalNotes' => 'internalNotes''categoryId' => 'categoryId''subCategoryId' => 'subCategoryId''priority' => 'priority''visibility' => 'visibility''contactIds' => 'contactIds'
+        'ownerIds' => 'ownerIds','isCompleted' => 'isCompleted','subject' => 'subject','dueDate' => 'dueDate','initialDate' => 'initialDate','completedDate' => 'completedDate','description' => 'description','internalNotes' => 'internalNotes','categoryId' => 'categoryId','subCategoryId' => 'subCategoryId','priority' => 'priority','visibility' => 'visibility','contactIds' => 'contactIds'
     ];
 
     /**
@@ -107,7 +107,7 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'ownerIds' => 'setOwnerIds''isCompleted' => 'setIsCompleted''subject' => 'setSubject''dueDate' => 'setDueDate''initialDate' => 'setInitialDate''completedDate' => 'setCompletedDate''description' => 'setDescription''internalNotes' => 'setInternalNotes''categoryId' => 'setCategoryId''subCategoryId' => 'setSubCategoryId''priority' => 'setPriority''visibility' => 'setVisibility''contactIds' => 'setContactIds'
+        'ownerIds' => 'setOwnerIds','isCompleted' => 'setIsCompleted','subject' => 'setSubject','dueDate' => 'setDueDate','initialDate' => 'setInitialDate','completedDate' => 'setCompletedDate','description' => 'setDescription','internalNotes' => 'setInternalNotes','categoryId' => 'setCategoryId','subCategoryId' => 'setSubCategoryId','priority' => 'setPriority','visibility' => 'setVisibility','contactIds' => 'setContactIds'
     ];
 
     /**
@@ -116,7 +116,7 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'ownerIds' => 'getOwnerIds''isCompleted' => 'getIsCompleted''subject' => 'getSubject''dueDate' => 'getDueDate''initialDate' => 'getInitialDate''completedDate' => 'getCompletedDate''description' => 'getDescription''internalNotes' => 'getInternalNotes''categoryId' => 'getCategoryId''subCategoryId' => 'getSubCategoryId''priority' => 'getPriority''visibility' => 'getVisibility''contactIds' => 'getContactIds'
+        'ownerIds' => 'getOwnerIds','isCompleted' => 'getIsCompleted','subject' => 'getSubject','dueDate' => 'getDueDate','initialDate' => 'getInitialDate','completedDate' => 'getCompletedDate','description' => 'getDescription','internalNotes' => 'getInternalNotes','categoryId' => 'getCategoryId','subCategoryId' => 'getSubCategoryId','priority' => 'getPriority','visibility' => 'getVisibility','contactIds' => 'getContactIds'
     ];
 
     /**
@@ -160,9 +160,9 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

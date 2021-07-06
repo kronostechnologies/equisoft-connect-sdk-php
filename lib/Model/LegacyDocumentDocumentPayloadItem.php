@@ -59,7 +59,7 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'files' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentBase64FilePayloadItem[]''contacts' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyContactContactPayloadItem[]''externalKey' => 'string''dateStart' => 'string''dateEnd' => 'string''dateSignature' => 'string''writtenBy' => 'string''notes' => 'string''users' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyUser[]''id' => 'string''type' => 'string''subType' => 'string''name' => 'string'
+        'files' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentBase64FilePayloadItem[]','contacts' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyContactContactPayloadItem[]','externalKey' => 'string','dateStart' => 'string','dateEnd' => 'string','dateSignature' => 'string','writtenBy' => 'string','notes' => 'string','users' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyUser[]','id' => 'string','type' => 'string','subType' => 'string','name' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'files' => null'contacts' => null'externalKey' => null'dateStart' => null'dateEnd' => null'dateSignature' => null'writtenBy' => null'notes' => null'users' => null'id' => null'type' => null'subType' => null'name' => null
+        'files' => null,'contacts' => null,'externalKey' => null,'dateStart' => null,'dateEnd' => null,'dateSignature' => null,'writtenBy' => null,'notes' => null,'users' => null,'id' => null,'type' => null,'subType' => null,'name' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'files' => 'files''contacts' => 'contacts''externalKey' => 'externalKey''dateStart' => 'dateStart''dateEnd' => 'dateEnd''dateSignature' => 'dateSignature''writtenBy' => 'writtenBy''notes' => 'notes''users' => 'users''id' => 'id''type' => 'type''subType' => 'subType''name' => 'name'
+        'files' => 'files','contacts' => 'contacts','externalKey' => 'externalKey','dateStart' => 'dateStart','dateEnd' => 'dateEnd','dateSignature' => 'dateSignature','writtenBy' => 'writtenBy','notes' => 'notes','users' => 'users','id' => 'id','type' => 'type','subType' => 'subType','name' => 'name'
     ];
 
     /**
@@ -107,7 +107,7 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'files' => 'setFiles''contacts' => 'setContacts''externalKey' => 'setExternalKey''dateStart' => 'setDateStart''dateEnd' => 'setDateEnd''dateSignature' => 'setDateSignature''writtenBy' => 'setWrittenBy''notes' => 'setNotes''users' => 'setUsers''id' => 'setId''type' => 'setType''subType' => 'setSubType''name' => 'setName'
+        'files' => 'setFiles','contacts' => 'setContacts','externalKey' => 'setExternalKey','dateStart' => 'setDateStart','dateEnd' => 'setDateEnd','dateSignature' => 'setDateSignature','writtenBy' => 'setWrittenBy','notes' => 'setNotes','users' => 'setUsers','id' => 'setId','type' => 'setType','subType' => 'setSubType','name' => 'setName'
     ];
 
     /**
@@ -116,7 +116,7 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'files' => 'getFiles''contacts' => 'getContacts''externalKey' => 'getExternalKey''dateStart' => 'getDateStart''dateEnd' => 'getDateEnd''dateSignature' => 'getDateSignature''writtenBy' => 'getWrittenBy''notes' => 'getNotes''users' => 'getUsers''id' => 'getId''type' => 'getType''subType' => 'getSubType''name' => 'getName'
+        'files' => 'getFiles','contacts' => 'getContacts','externalKey' => 'getExternalKey','dateStart' => 'getDateStart','dateEnd' => 'getDateEnd','dateSignature' => 'getDateSignature','writtenBy' => 'getWrittenBy','notes' => 'getNotes','users' => 'getUsers','id' => 'getId','type' => 'getType','subType' => 'getSubType','name' => 'getName'
     ];
 
     /**
@@ -160,9 +160,9 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

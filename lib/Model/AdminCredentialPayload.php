@@ -59,7 +59,7 @@ class AdminCredentialPayload implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'adminEmail' => 'string''adminPassword' => 'string'
+        'adminEmail' => 'string','adminPassword' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class AdminCredentialPayload implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'adminEmail' => null'adminPassword' => null
+        'adminEmail' => null,'adminPassword' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class AdminCredentialPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'adminEmail' => 'adminEmail''adminPassword' => 'adminPassword'
+        'adminEmail' => 'adminEmail','adminPassword' => 'adminPassword'
     ];
 
     /**
@@ -107,7 +107,7 @@ class AdminCredentialPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'adminEmail' => 'setAdminEmail''adminPassword' => 'setAdminPassword'
+        'adminEmail' => 'setAdminEmail','adminPassword' => 'setAdminPassword'
     ];
 
     /**
@@ -116,7 +116,7 @@ class AdminCredentialPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'adminEmail' => 'getAdminEmail''adminPassword' => 'getAdminPassword'
+        'adminEmail' => 'getAdminEmail','adminPassword' => 'getAdminPassword'
     ];
 
     /**
@@ -160,9 +160,9 @@ class AdminCredentialPayload implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

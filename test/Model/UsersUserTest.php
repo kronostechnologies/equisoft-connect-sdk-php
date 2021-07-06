@@ -141,4 +141,13 @@ class UsersUserTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "maxConcurrentAccess"
+     */
+    public function testPropertyMaxConcurrentAccess()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

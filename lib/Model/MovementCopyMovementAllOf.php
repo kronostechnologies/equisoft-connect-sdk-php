@@ -59,7 +59,7 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string''sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase''destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase''userTuples' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUserTuple[]'
+        'type' => 'string','sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase','destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase','userTuples' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUserTuple[]'
     ];
 
     /**
@@ -68,7 +68,7 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'type' => null'sourceDatabase' => null'destinationDatabase' => null'userTuples' => null
+        'type' => null,'sourceDatabase' => null,'destinationDatabase' => null,'userTuples' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type''sourceDatabase' => 'sourceDatabase''destinationDatabase' => 'destinationDatabase''userTuples' => 'userTuples'
+        'type' => 'type','sourceDatabase' => 'sourceDatabase','destinationDatabase' => 'destinationDatabase','userTuples' => 'userTuples'
     ];
 
     /**
@@ -107,7 +107,7 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType''sourceDatabase' => 'setSourceDatabase''destinationDatabase' => 'setDestinationDatabase''userTuples' => 'setUserTuples'
+        'type' => 'setType','sourceDatabase' => 'setSourceDatabase','destinationDatabase' => 'setDestinationDatabase','userTuples' => 'setUserTuples'
     ];
 
     /**
@@ -116,7 +116,7 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType''sourceDatabase' => 'getSourceDatabase''destinationDatabase' => 'getDestinationDatabase''userTuples' => 'getUserTuples'
+        'type' => 'getType','sourceDatabase' => 'getSourceDatabase','destinationDatabase' => 'getDestinationDatabase','userTuples' => 'getUserTuples'
     ];
 
     /**
@@ -161,9 +161,9 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess
     }
 
     const TYPE_COPY = 'COPY';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -175,7 +175,7 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess
             self::TYPE_COPY,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values

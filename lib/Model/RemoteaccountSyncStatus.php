@@ -59,7 +59,7 @@ class RemoteaccountSyncStatus implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'taskStatus' => '\Equisoft\SDK\EquisoftConnect\Model\RemoteaccountSyncTaskStatus[]''errors' => 'string[]'
+        'taskStatus' => '\Equisoft\SDK\EquisoftConnect\Model\RemoteaccountSyncTaskStatus[]','errors' => 'string[]'
     ];
 
     /**
@@ -68,7 +68,7 @@ class RemoteaccountSyncStatus implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'taskStatus' => null'errors' => null
+        'taskStatus' => null,'errors' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class RemoteaccountSyncStatus implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'taskStatus' => 'taskStatus''errors' => 'errors'
+        'taskStatus' => 'taskStatus','errors' => 'errors'
     ];
 
     /**
@@ -107,7 +107,7 @@ class RemoteaccountSyncStatus implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'taskStatus' => 'setTaskStatus''errors' => 'setErrors'
+        'taskStatus' => 'setTaskStatus','errors' => 'setErrors'
     ];
 
     /**
@@ -116,7 +116,7 @@ class RemoteaccountSyncStatus implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'taskStatus' => 'getTaskStatus''errors' => 'getErrors'
+        'taskStatus' => 'getTaskStatus','errors' => 'getErrors'
     ];
 
     /**
@@ -160,9 +160,9 @@ class RemoteaccountSyncStatus implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

@@ -59,7 +59,7 @@ class ContextPreferences implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'tz' => 'string''locale' => 'string''timeFormat' => 'string''firstDayOfWeek' => 'string'
+        'tz' => 'string','locale' => 'string','timeFormat' => 'string','firstDayOfWeek' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class ContextPreferences implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'tz' => null'locale' => null'timeFormat' => null'firstDayOfWeek' => null
+        'tz' => null,'locale' => null,'timeFormat' => null,'firstDayOfWeek' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class ContextPreferences implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'tz' => 'tz''locale' => 'locale''timeFormat' => 'timeFormat''firstDayOfWeek' => 'firstDayOfWeek'
+        'tz' => 'tz','locale' => 'locale','timeFormat' => 'timeFormat','firstDayOfWeek' => 'firstDayOfWeek'
     ];
 
     /**
@@ -107,7 +107,7 @@ class ContextPreferences implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'tz' => 'setTz''locale' => 'setLocale''timeFormat' => 'setTimeFormat''firstDayOfWeek' => 'setFirstDayOfWeek'
+        'tz' => 'setTz','locale' => 'setLocale','timeFormat' => 'setTimeFormat','firstDayOfWeek' => 'setFirstDayOfWeek'
     ];
 
     /**
@@ -116,7 +116,7 @@ class ContextPreferences implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'tz' => 'getTz''locale' => 'getLocale''timeFormat' => 'getTimeFormat''firstDayOfWeek' => 'getFirstDayOfWeek'
+        'tz' => 'getTz','locale' => 'getLocale','timeFormat' => 'getTimeFormat','firstDayOfWeek' => 'getFirstDayOfWeek'
     ];
 
     /**
@@ -160,9 +160,9 @@ class ContextPreferences implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

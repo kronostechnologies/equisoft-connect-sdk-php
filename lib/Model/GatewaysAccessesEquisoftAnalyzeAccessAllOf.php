@@ -59,7 +59,7 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
       * @var string[]
       */
     protected static $openAPITypes = [
-        'clientKey' => 'string''version' => 'string'
+        'clientKey' => 'string','version' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'clientKey' => null'version' => null
+        'clientKey' => null,'version' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
      * @var string[]
      */
     protected static $attributeMap = [
-        'clientKey' => 'clientKey''version' => 'version'
+        'clientKey' => 'clientKey','version' => 'version'
     ];
 
     /**
@@ -107,7 +107,7 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
      * @var string[]
      */
     protected static $setters = [
-        'clientKey' => 'setClientKey''version' => 'setVersion'
+        'clientKey' => 'setClientKey','version' => 'setVersion'
     ];
 
     /**
@@ -116,7 +116,7 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
      * @var string[]
      */
     protected static $getters = [
-        'clientKey' => 'getClientKey''version' => 'getVersion'
+        'clientKey' => 'getClientKey','version' => 'getVersion'
     ];
 
     /**
@@ -162,9 +162,9 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
 
     const VERSION_NATIVE = 'NATIVE';
     const VERSION_LEGACY = 'LEGACY';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -177,7 +177,7 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
             self::VERSION_LEGACY,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values

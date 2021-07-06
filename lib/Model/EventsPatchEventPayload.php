@@ -59,7 +59,7 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'subject' => 'string''start' => '\Equisoft\SDK\EquisoftConnect\Model\DateOrDateTime''end' => '\Equisoft\SDK\EquisoftConnect\Model\DateOrDateTime''allDay' => 'bool''initialDate' => 'string''description' => 'string''internalNotes' => 'string''location' => 'string''type' => 'string''categoryId' => 'int''subCategoryId' => 'int''priority' => 'int''visibility' => 'string''contactIds' => 'int[]'
+        'subject' => 'string','start' => '\Equisoft\SDK\EquisoftConnect\Model\DateOrDateTime','end' => '\Equisoft\SDK\EquisoftConnect\Model\DateOrDateTime','allDay' => 'bool','initialDate' => 'string','description' => 'string','internalNotes' => 'string','location' => 'string','type' => 'string','categoryId' => 'int','subCategoryId' => 'int','priority' => 'int','visibility' => 'string','contactIds' => 'int[]'
     ];
 
     /**
@@ -68,7 +68,7 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'subject' => null'start' => null'end' => null'allDay' => null'initialDate' => null'description' => null'internalNotes' => null'location' => null'type' => null'categoryId' => null'subCategoryId' => null'priority' => null'visibility' => null'contactIds' => null
+        'subject' => null,'start' => null,'end' => null,'allDay' => null,'initialDate' => null,'description' => null,'internalNotes' => null,'location' => null,'type' => null,'categoryId' => null,'subCategoryId' => null,'priority' => null,'visibility' => null,'contactIds' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'subject' => 'subject''start' => 'start''end' => 'end''allDay' => 'allDay''initialDate' => 'initialDate''description' => 'description''internalNotes' => 'internalNotes''location' => 'location''type' => 'type''categoryId' => 'categoryId''subCategoryId' => 'subCategoryId''priority' => 'priority''visibility' => 'visibility''contactIds' => 'contactIds'
+        'subject' => 'subject','start' => 'start','end' => 'end','allDay' => 'allDay','initialDate' => 'initialDate','description' => 'description','internalNotes' => 'internalNotes','location' => 'location','type' => 'type','categoryId' => 'categoryId','subCategoryId' => 'subCategoryId','priority' => 'priority','visibility' => 'visibility','contactIds' => 'contactIds'
     ];
 
     /**
@@ -107,7 +107,7 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'subject' => 'setSubject''start' => 'setStart''end' => 'setEnd''allDay' => 'setAllDay''initialDate' => 'setInitialDate''description' => 'setDescription''internalNotes' => 'setInternalNotes''location' => 'setLocation''type' => 'setType''categoryId' => 'setCategoryId''subCategoryId' => 'setSubCategoryId''priority' => 'setPriority''visibility' => 'setVisibility''contactIds' => 'setContactIds'
+        'subject' => 'setSubject','start' => 'setStart','end' => 'setEnd','allDay' => 'setAllDay','initialDate' => 'setInitialDate','description' => 'setDescription','internalNotes' => 'setInternalNotes','location' => 'setLocation','type' => 'setType','categoryId' => 'setCategoryId','subCategoryId' => 'setSubCategoryId','priority' => 'setPriority','visibility' => 'setVisibility','contactIds' => 'setContactIds'
     ];
 
     /**
@@ -116,7 +116,7 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'subject' => 'getSubject''start' => 'getStart''end' => 'getEnd''allDay' => 'getAllDay''initialDate' => 'getInitialDate''description' => 'getDescription''internalNotes' => 'getInternalNotes''location' => 'getLocation''type' => 'getType''categoryId' => 'getCategoryId''subCategoryId' => 'getSubCategoryId''priority' => 'getPriority''visibility' => 'getVisibility''contactIds' => 'getContactIds'
+        'subject' => 'getSubject','start' => 'getStart','end' => 'getEnd','allDay' => 'getAllDay','initialDate' => 'getInitialDate','description' => 'getDescription','internalNotes' => 'getInternalNotes','location' => 'getLocation','type' => 'getType','categoryId' => 'getCategoryId','subCategoryId' => 'getSubCategoryId','priority' => 'getPriority','visibility' => 'getVisibility','contactIds' => 'getContactIds'
     ];
 
     /**
@@ -160,9 +160,9 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

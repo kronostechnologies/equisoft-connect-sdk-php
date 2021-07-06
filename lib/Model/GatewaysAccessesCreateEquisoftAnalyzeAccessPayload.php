@@ -59,7 +59,7 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'userUuid' => 'string''clientKey' => 'string'
+        'userUuid' => 'string','clientKey' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'userUuid' => null'clientKey' => null
+        'userUuid' => null,'clientKey' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
      * @var string[]
      */
     protected static $attributeMap = [
-        'userUuid' => 'userUuid''clientKey' => 'clientKey'
+        'userUuid' => 'userUuid','clientKey' => 'clientKey'
     ];
 
     /**
@@ -107,7 +107,7 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
      * @var string[]
      */
     protected static $setters = [
-        'userUuid' => 'setUserUuid''clientKey' => 'setClientKey'
+        'userUuid' => 'setUserUuid','clientKey' => 'setClientKey'
     ];
 
     /**
@@ -116,7 +116,7 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
      * @var string[]
      */
     protected static $getters = [
-        'userUuid' => 'getUserUuid''clientKey' => 'getClientKey'
+        'userUuid' => 'getUserUuid','clientKey' => 'getClientKey'
     ];
 
     /**
@@ -160,9 +160,9 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

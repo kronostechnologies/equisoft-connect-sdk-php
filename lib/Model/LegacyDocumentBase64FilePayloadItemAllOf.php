@@ -59,7 +59,7 @@ class LegacyDocumentBase64FilePayloadItemAllOf implements ModelInterface, ArrayA
       * @var string[]
       */
     protected static $openAPITypes = [
-        'externalKey' => 'string''base64EncodedData' => 'string'
+        'externalKey' => 'string','base64EncodedData' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class LegacyDocumentBase64FilePayloadItemAllOf implements ModelInterface, ArrayA
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'externalKey' => null'base64EncodedData' => null
+        'externalKey' => null,'base64EncodedData' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class LegacyDocumentBase64FilePayloadItemAllOf implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $attributeMap = [
-        'externalKey' => 'externalKey''base64EncodedData' => 'base64EncodedData'
+        'externalKey' => 'externalKey','base64EncodedData' => 'base64EncodedData'
     ];
 
     /**
@@ -107,7 +107,7 @@ class LegacyDocumentBase64FilePayloadItemAllOf implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $setters = [
-        'externalKey' => 'setExternalKey''base64EncodedData' => 'setBase64EncodedData'
+        'externalKey' => 'setExternalKey','base64EncodedData' => 'setBase64EncodedData'
     ];
 
     /**
@@ -116,7 +116,7 @@ class LegacyDocumentBase64FilePayloadItemAllOf implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $getters = [
-        'externalKey' => 'getExternalKey''base64EncodedData' => 'getBase64EncodedData'
+        'externalKey' => 'getExternalKey','base64EncodedData' => 'getBase64EncodedData'
     ];
 
     /**
@@ -160,9 +160,9 @@ class LegacyDocumentBase64FilePayloadItemAllOf implements ModelInterface, ArrayA
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

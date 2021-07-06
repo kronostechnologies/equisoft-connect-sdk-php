@@ -66,7 +66,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'date' => 'string''now' => 'bool'
+        'date' => 'string','now' => 'bool'
     ];
 
     /**
@@ -75,7 +75,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'date' => null'now' => null
+        'date' => null,'now' => null
     ];
 
     /**
@@ -105,7 +105,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'date' => 'date''now' => 'now'
+        'date' => 'date','now' => 'now'
     ];
 
     /**
@@ -114,7 +114,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'date' => 'setDate''now' => 'setNow'
+        'date' => 'setDate','now' => 'setNow'
     ];
 
     /**
@@ -123,7 +123,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'date' => 'getDate''now' => 'getNow'
+        'date' => 'getDate','now' => 'getNow'
     ];
 
     /**
@@ -167,9 +167,9 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

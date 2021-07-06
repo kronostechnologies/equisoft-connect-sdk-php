@@ -59,7 +59,7 @@ class MovementValidationError implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'message' => 'string''context' => 'array<string,string>'
+        'message' => 'string','context' => 'array<string,string>'
     ];
 
     /**
@@ -68,7 +68,7 @@ class MovementValidationError implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'message' => null'context' => null
+        'message' => null,'context' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class MovementValidationError implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'message' => 'message''context' => 'context'
+        'message' => 'message','context' => 'context'
     ];
 
     /**
@@ -107,7 +107,7 @@ class MovementValidationError implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'message' => 'setMessage''context' => 'setContext'
+        'message' => 'setMessage','context' => 'setContext'
     ];
 
     /**
@@ -116,7 +116,7 @@ class MovementValidationError implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'message' => 'getMessage''context' => 'getContext'
+        'message' => 'getMessage','context' => 'getContext'
     ];
 
     /**
@@ -160,9 +160,9 @@ class MovementValidationError implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

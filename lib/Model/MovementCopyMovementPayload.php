@@ -40,7 +40,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class MovementCopyMovementPayload extends MovementMovementPayload 
+class MovementCopyMovementPayload extends MovementMovementPayload
 {
     const DISCRIMINATOR = null;
 
@@ -57,7 +57,7 @@ class MovementCopyMovementPayload extends MovementMovementPayload
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string''sourceDatabase' => 'string''destinationDatabase' => 'string''userTuples' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUserTuplePayload[]'
+        'type' => 'string','sourceDatabase' => 'string','destinationDatabase' => 'string','userTuples' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUserTuplePayload[]'
     ];
 
     /**
@@ -66,7 +66,7 @@ class MovementCopyMovementPayload extends MovementMovementPayload
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'type' => null'sourceDatabase' => null'destinationDatabase' => null'userTuples' => null
+        'type' => null,'sourceDatabase' => null,'destinationDatabase' => null,'userTuples' => null
     ];
 
     /**
@@ -96,7 +96,7 @@ class MovementCopyMovementPayload extends MovementMovementPayload
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type''sourceDatabase' => 'sourceDatabase''destinationDatabase' => 'destinationDatabase''userTuples' => 'userTuples'
+        'type' => 'type','sourceDatabase' => 'sourceDatabase','destinationDatabase' => 'destinationDatabase','userTuples' => 'userTuples'
     ];
 
     /**
@@ -105,7 +105,7 @@ class MovementCopyMovementPayload extends MovementMovementPayload
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType''sourceDatabase' => 'setSourceDatabase''destinationDatabase' => 'setDestinationDatabase''userTuples' => 'setUserTuples'
+        'type' => 'setType','sourceDatabase' => 'setSourceDatabase','destinationDatabase' => 'setDestinationDatabase','userTuples' => 'setUserTuples'
     ];
 
     /**
@@ -114,7 +114,7 @@ class MovementCopyMovementPayload extends MovementMovementPayload
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType''sourceDatabase' => 'getSourceDatabase''destinationDatabase' => 'getDestinationDatabase''userTuples' => 'getUserTuples'
+        'type' => 'getType','sourceDatabase' => 'getSourceDatabase','destinationDatabase' => 'getDestinationDatabase','userTuples' => 'getUserTuples'
     ];
 
     /**
@@ -159,9 +159,9 @@ class MovementCopyMovementPayload extends MovementMovementPayload
     }
 
     const TYPE_COPY = 'COPY';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -173,7 +173,7 @@ class MovementCopyMovementPayload extends MovementMovementPayload
             self::TYPE_COPY,
         ];
     }
-    
+
 
 
     /**

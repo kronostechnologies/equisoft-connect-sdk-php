@@ -59,7 +59,7 @@ class GatewaysCredentials implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'username' => 'string''password' => 'string''repcode' => 'string''isADealerCode' => 'bool'
+        'username' => 'string','password' => 'string','repcode' => 'string','isADealerCode' => 'bool'
     ];
 
     /**
@@ -68,7 +68,7 @@ class GatewaysCredentials implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'username' => null'password' => null'repcode' => null'isADealerCode' => null
+        'username' => null,'password' => null,'repcode' => null,'isADealerCode' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class GatewaysCredentials implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'username' => 'username''password' => 'password''repcode' => 'repcode''isADealerCode' => 'isADealerCode'
+        'username' => 'username','password' => 'password','repcode' => 'repcode','isADealerCode' => 'isADealerCode'
     ];
 
     /**
@@ -107,7 +107,7 @@ class GatewaysCredentials implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'username' => 'setUsername''password' => 'setPassword''repcode' => 'setRepcode''isADealerCode' => 'setIsADealerCode'
+        'username' => 'setUsername','password' => 'setPassword','repcode' => 'setRepcode','isADealerCode' => 'setIsADealerCode'
     ];
 
     /**
@@ -116,7 +116,7 @@ class GatewaysCredentials implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'username' => 'getUsername''password' => 'getPassword''repcode' => 'getRepcode''isADealerCode' => 'getIsADealerCode'
+        'username' => 'getUsername','password' => 'getPassword','repcode' => 'getRepcode','isADealerCode' => 'getIsADealerCode'
     ];
 
     /**
@@ -160,9 +160,9 @@ class GatewaysCredentials implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

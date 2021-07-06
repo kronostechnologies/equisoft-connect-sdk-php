@@ -59,7 +59,7 @@ class RemoteaccountAccountSyncResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'status' => 'string''data' => '\Equisoft\SDK\EquisoftConnect\Model\RemoteaccountSyncStatus'
+        'status' => 'string','data' => '\Equisoft\SDK\EquisoftConnect\Model\RemoteaccountSyncStatus'
     ];
 
     /**
@@ -68,7 +68,7 @@ class RemoteaccountAccountSyncResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'status' => null'data' => null
+        'status' => null,'data' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class RemoteaccountAccountSyncResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'status' => 'status''data' => 'data'
+        'status' => 'status','data' => 'data'
     ];
 
     /**
@@ -107,7 +107,7 @@ class RemoteaccountAccountSyncResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'status' => 'setStatus''data' => 'setData'
+        'status' => 'setStatus','data' => 'setData'
     ];
 
     /**
@@ -116,7 +116,7 @@ class RemoteaccountAccountSyncResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'status' => 'getStatus''data' => 'getData'
+        'status' => 'getStatus','data' => 'getData'
     ];
 
     /**
@@ -160,9 +160,9 @@ class RemoteaccountAccountSyncResponse implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

@@ -59,7 +59,7 @@ class MovementGatewayAccessCode implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'accessCode' => 'string''label' => 'string''code' => 'string''system' => 'string'
+        'accessCode' => 'string','label' => 'string','code' => 'string','system' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class MovementGatewayAccessCode implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'accessCode' => null'label' => null'code' => null'system' => null
+        'accessCode' => null,'label' => null,'code' => null,'system' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class MovementGatewayAccessCode implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'accessCode' => 'accessCode''label' => 'label''code' => 'code''system' => 'system'
+        'accessCode' => 'accessCode','label' => 'label','code' => 'code','system' => 'system'
     ];
 
     /**
@@ -107,7 +107,7 @@ class MovementGatewayAccessCode implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'accessCode' => 'setAccessCode''label' => 'setLabel''code' => 'setCode''system' => 'setSystem'
+        'accessCode' => 'setAccessCode','label' => 'setLabel','code' => 'setCode','system' => 'setSystem'
     ];
 
     /**
@@ -116,7 +116,7 @@ class MovementGatewayAccessCode implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'accessCode' => 'getAccessCode''label' => 'getLabel''code' => 'getCode''system' => 'getSystem'
+        'accessCode' => 'getAccessCode','label' => 'getLabel','code' => 'getCode','system' => 'getSystem'
     ];
 
     /**
@@ -160,9 +160,9 @@ class MovementGatewayAccessCode implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

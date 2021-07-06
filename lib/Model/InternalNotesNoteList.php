@@ -59,7 +59,7 @@ class InternalNotesNoteList implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'notes' => '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesNote[]''legacyNote' => '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesLegacyNote'
+        'notes' => '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesNote[]','legacyNote' => '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesLegacyNote'
     ];
 
     /**
@@ -68,7 +68,7 @@ class InternalNotesNoteList implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'notes' => null'legacyNote' => null
+        'notes' => null,'legacyNote' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class InternalNotesNoteList implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'notes' => 'notes''legacyNote' => 'legacyNote'
+        'notes' => 'notes','legacyNote' => 'legacyNote'
     ];
 
     /**
@@ -107,7 +107,7 @@ class InternalNotesNoteList implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'notes' => 'setNotes''legacyNote' => 'setLegacyNote'
+        'notes' => 'setNotes','legacyNote' => 'setLegacyNote'
     ];
 
     /**
@@ -116,7 +116,7 @@ class InternalNotesNoteList implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'notes' => 'getNotes''legacyNote' => 'getLegacyNote'
+        'notes' => 'getNotes','legacyNote' => 'getLegacyNote'
     ];
 
     /**
@@ -160,9 +160,9 @@ class InternalNotesNoteList implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

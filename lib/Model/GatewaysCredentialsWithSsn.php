@@ -59,7 +59,7 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'username' => 'string''password' => 'string''repcode' => 'string''isADealerCode' => 'bool''ssnList' => 'string[]'
+        'username' => 'string','password' => 'string','repcode' => 'string','isADealerCode' => 'bool','ssnList' => 'string[]'
     ];
 
     /**
@@ -68,7 +68,7 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'username' => null'password' => null'repcode' => null'isADealerCode' => null'ssnList' => null
+        'username' => null,'password' => null,'repcode' => null,'isADealerCode' => null,'ssnList' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'username' => 'username''password' => 'password''repcode' => 'repcode''isADealerCode' => 'isADealerCode''ssnList' => 'ssnList'
+        'username' => 'username','password' => 'password','repcode' => 'repcode','isADealerCode' => 'isADealerCode','ssnList' => 'ssnList'
     ];
 
     /**
@@ -107,7 +107,7 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'username' => 'setUsername''password' => 'setPassword''repcode' => 'setRepcode''isADealerCode' => 'setIsADealerCode''ssnList' => 'setSsnList'
+        'username' => 'setUsername','password' => 'setPassword','repcode' => 'setRepcode','isADealerCode' => 'setIsADealerCode','ssnList' => 'setSsnList'
     ];
 
     /**
@@ -116,7 +116,7 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'username' => 'getUsername''password' => 'getPassword''repcode' => 'getRepcode''isADealerCode' => 'getIsADealerCode''ssnList' => 'getSsnList'
+        'username' => 'getUsername','password' => 'getPassword','repcode' => 'getRepcode','isADealerCode' => 'getIsADealerCode','ssnList' => 'getSsnList'
     ];
 
     /**
@@ -160,9 +160,9 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

@@ -59,7 +59,7 @@ class LegacyDocumentBase64FilePayloadItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'string''fileName' => 'string''mimeType' => 'string''sizeBytes' => 'string''externalKey' => 'string''base64EncodedData' => 'string'
+        'id' => 'string','fileName' => 'string','mimeType' => 'string','sizeBytes' => 'string','externalKey' => 'string','base64EncodedData' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class LegacyDocumentBase64FilePayloadItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'id' => null'fileName' => null'mimeType' => null'sizeBytes' => null'externalKey' => null'base64EncodedData' => null
+        'id' => null,'fileName' => null,'mimeType' => null,'sizeBytes' => null,'externalKey' => null,'base64EncodedData' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class LegacyDocumentBase64FilePayloadItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id''fileName' => 'fileName''mimeType' => 'mimeType''sizeBytes' => 'sizeBytes''externalKey' => 'externalKey''base64EncodedData' => 'base64EncodedData'
+        'id' => 'id','fileName' => 'fileName','mimeType' => 'mimeType','sizeBytes' => 'sizeBytes','externalKey' => 'externalKey','base64EncodedData' => 'base64EncodedData'
     ];
 
     /**
@@ -107,7 +107,7 @@ class LegacyDocumentBase64FilePayloadItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId''fileName' => 'setFileName''mimeType' => 'setMimeType''sizeBytes' => 'setSizeBytes''externalKey' => 'setExternalKey''base64EncodedData' => 'setBase64EncodedData'
+        'id' => 'setId','fileName' => 'setFileName','mimeType' => 'setMimeType','sizeBytes' => 'setSizeBytes','externalKey' => 'setExternalKey','base64EncodedData' => 'setBase64EncodedData'
     ];
 
     /**
@@ -116,7 +116,7 @@ class LegacyDocumentBase64FilePayloadItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId''fileName' => 'getFileName''mimeType' => 'getMimeType''sizeBytes' => 'getSizeBytes''externalKey' => 'getExternalKey''base64EncodedData' => 'getBase64EncodedData'
+        'id' => 'getId','fileName' => 'getFileName','mimeType' => 'getMimeType','sizeBytes' => 'getSizeBytes','externalKey' => 'getExternalKey','base64EncodedData' => 'getBase64EncodedData'
     ];
 
     /**
@@ -160,9 +160,9 @@ class LegacyDocumentBase64FilePayloadItem implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

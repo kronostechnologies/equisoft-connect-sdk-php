@@ -59,7 +59,7 @@ class DsfFinancialCenter implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'int''nameFr' => 'string''nameEn' => 'string''network' => 'string''code' => 'string''organizationUuid' => 'string''databaseCount' => 'int'
+        'id' => 'int','nameFr' => 'string','nameEn' => 'string','network' => 'string','code' => 'string','organizationUuid' => 'string','databaseCount' => 'int'
     ];
 
     /**
@@ -68,7 +68,7 @@ class DsfFinancialCenter implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'id' => null'nameFr' => null'nameEn' => null'network' => null'code' => null'organizationUuid' => null'databaseCount' => null
+        'id' => null,'nameFr' => null,'nameEn' => null,'network' => null,'code' => null,'organizationUuid' => null,'databaseCount' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class DsfFinancialCenter implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id''nameFr' => 'nameFr''nameEn' => 'nameEn''network' => 'network''code' => 'code''organizationUuid' => 'organizationUuid''databaseCount' => 'databaseCount'
+        'id' => 'id','nameFr' => 'nameFr','nameEn' => 'nameEn','network' => 'network','code' => 'code','organizationUuid' => 'organizationUuid','databaseCount' => 'databaseCount'
     ];
 
     /**
@@ -107,7 +107,7 @@ class DsfFinancialCenter implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId''nameFr' => 'setNameFr''nameEn' => 'setNameEn''network' => 'setNetwork''code' => 'setCode''organizationUuid' => 'setOrganizationUuid''databaseCount' => 'setDatabaseCount'
+        'id' => 'setId','nameFr' => 'setNameFr','nameEn' => 'setNameEn','network' => 'setNetwork','code' => 'setCode','organizationUuid' => 'setOrganizationUuid','databaseCount' => 'setDatabaseCount'
     ];
 
     /**
@@ -116,7 +116,7 @@ class DsfFinancialCenter implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId''nameFr' => 'getNameFr''nameEn' => 'getNameEn''network' => 'getNetwork''code' => 'getCode''organizationUuid' => 'getOrganizationUuid''databaseCount' => 'getDatabaseCount'
+        'id' => 'getId','nameFr' => 'getNameFr','nameEn' => 'getNameEn','network' => 'getNetwork','code' => 'getCode','organizationUuid' => 'getOrganizationUuid','databaseCount' => 'getDatabaseCount'
     ];
 
     /**
@@ -160,9 +160,9 @@ class DsfFinancialCenter implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

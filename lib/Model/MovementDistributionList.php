@@ -59,7 +59,7 @@ class MovementDistributionList implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'int''label' => 'string'
+        'id' => 'int','label' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class MovementDistributionList implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'id' => null'label' => null
+        'id' => null,'label' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class MovementDistributionList implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id''label' => 'label'
+        'id' => 'id','label' => 'label'
     ];
 
     /**
@@ -107,7 +107,7 @@ class MovementDistributionList implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId''label' => 'setLabel'
+        'id' => 'setId','label' => 'setLabel'
     ];
 
     /**
@@ -116,7 +116,7 @@ class MovementDistributionList implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId''label' => 'getLabel'
+        'id' => 'getId','label' => 'getLabel'
     ];
 
     /**
@@ -160,9 +160,9 @@ class MovementDistributionList implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

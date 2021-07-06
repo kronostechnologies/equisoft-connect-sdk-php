@@ -40,7 +40,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess 
+class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess
 {
     const DISCRIMINATOR = null;
 
@@ -57,7 +57,7 @@ class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'clientKey' => 'string''version' => 'string'
+        'clientKey' => 'string','version' => 'string'
     ];
 
     /**
@@ -66,7 +66,7 @@ class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'clientKey' => null'version' => null
+        'clientKey' => null,'version' => null
     ];
 
     /**
@@ -96,7 +96,7 @@ class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'clientKey' => 'clientKey''version' => 'version'
+        'clientKey' => 'clientKey','version' => 'version'
     ];
 
     /**
@@ -105,7 +105,7 @@ class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess
      * @var string[]
      */
     protected static $setters = [
-        'clientKey' => 'setClientKey''version' => 'setVersion'
+        'clientKey' => 'setClientKey','version' => 'setVersion'
     ];
 
     /**
@@ -114,7 +114,7 @@ class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess
      * @var string[]
      */
     protected static $getters = [
-        'clientKey' => 'getClientKey''version' => 'getVersion'
+        'clientKey' => 'getClientKey','version' => 'getVersion'
     ];
 
     /**
@@ -160,9 +160,9 @@ class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess
 
     const VERSION_NATIVE = 'NATIVE';
     const VERSION_LEGACY = 'LEGACY';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -175,7 +175,7 @@ class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess
             self::VERSION_LEGACY,
         ];
     }
-    
+
 
 
     /**

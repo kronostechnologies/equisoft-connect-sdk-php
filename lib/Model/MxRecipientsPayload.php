@@ -59,7 +59,7 @@ class MxRecipientsPayload implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'to' => 'string''cc' => 'string''bcc' => 'string''groups' => 'int[]''contacts' => 'int[]'
+        'to' => 'string','cc' => 'string','bcc' => 'string','groups' => 'int[]','contacts' => 'int[]'
     ];
 
     /**
@@ -68,7 +68,7 @@ class MxRecipientsPayload implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'to' => null'cc' => null'bcc' => null'groups' => null'contacts' => null
+        'to' => null,'cc' => null,'bcc' => null,'groups' => null,'contacts' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class MxRecipientsPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'to' => 'to''cc' => 'cc''bcc' => 'bcc''groups' => 'groups''contacts' => 'contacts'
+        'to' => 'to','cc' => 'cc','bcc' => 'bcc','groups' => 'groups','contacts' => 'contacts'
     ];
 
     /**
@@ -107,7 +107,7 @@ class MxRecipientsPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'to' => 'setTo''cc' => 'setCc''bcc' => 'setBcc''groups' => 'setGroups''contacts' => 'setContacts'
+        'to' => 'setTo','cc' => 'setCc','bcc' => 'setBcc','groups' => 'setGroups','contacts' => 'setContacts'
     ];
 
     /**
@@ -116,7 +116,7 @@ class MxRecipientsPayload implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'to' => 'getTo''cc' => 'getCc''bcc' => 'getBcc''groups' => 'getGroups''contacts' => 'getContacts'
+        'to' => 'getTo','cc' => 'getCc','bcc' => 'getBcc','groups' => 'getGroups','contacts' => 'getContacts'
     ];
 
     /**
@@ -160,9 +160,9 @@ class MxRecipientsPayload implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

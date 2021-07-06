@@ -59,7 +59,7 @@ class LegacyDocumentGetListOptions implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'contactId' => 'int''limit' => 'int''systemType' => 'string'
+        'contactId' => 'int','limit' => 'int','systemType' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class LegacyDocumentGetListOptions implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'contactId' => null'limit' => null'systemType' => null
+        'contactId' => null,'limit' => null,'systemType' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class LegacyDocumentGetListOptions implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'contactId' => 'contact_id''limit' => 'limit''systemType' => 'system_type'
+        'contactId' => 'contact_id','limit' => 'limit','systemType' => 'system_type'
     ];
 
     /**
@@ -107,7 +107,7 @@ class LegacyDocumentGetListOptions implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'contactId' => 'setContactId''limit' => 'setLimit''systemType' => 'setSystemType'
+        'contactId' => 'setContactId','limit' => 'setLimit','systemType' => 'setSystemType'
     ];
 
     /**
@@ -116,7 +116,7 @@ class LegacyDocumentGetListOptions implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'contactId' => 'getContactId''limit' => 'getLimit''systemType' => 'getSystemType'
+        'contactId' => 'getContactId','limit' => 'getLimit','systemType' => 'getSystemType'
     ];
 
     /**
@@ -160,9 +160,9 @@ class LegacyDocumentGetListOptions implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

@@ -59,7 +59,7 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string''sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase''sourceUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser''sourceDistributionList' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDistributionList''destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase''destinationUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser''datagatewayAccessMappings' => 'array<string,string>''transferOption' => 'string'
+        'type' => 'string','sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase','sourceUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser','sourceDistributionList' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDistributionList','destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase','destinationUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser','datagatewayAccessMappings' => 'array<string,string>','transferOption' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'type' => null'sourceDatabase' => null'sourceUser' => null'sourceDistributionList' => null'destinationDatabase' => null'destinationUser' => null'datagatewayAccessMappings' => null'transferOption' => null
+        'type' => null,'sourceDatabase' => null,'sourceUser' => null,'sourceDistributionList' => null,'destinationDatabase' => null,'destinationUser' => null,'datagatewayAccessMappings' => null,'transferOption' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type''sourceDatabase' => 'sourceDatabase''sourceUser' => 'sourceUser''sourceDistributionList' => 'sourceDistributionList''destinationDatabase' => 'destinationDatabase''destinationUser' => 'destinationUser''datagatewayAccessMappings' => 'datagatewayAccessMappings''transferOption' => 'transferOption'
+        'type' => 'type','sourceDatabase' => 'sourceDatabase','sourceUser' => 'sourceUser','sourceDistributionList' => 'sourceDistributionList','destinationDatabase' => 'destinationDatabase','destinationUser' => 'destinationUser','datagatewayAccessMappings' => 'datagatewayAccessMappings','transferOption' => 'transferOption'
     ];
 
     /**
@@ -107,7 +107,7 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType''sourceDatabase' => 'setSourceDatabase''sourceUser' => 'setSourceUser''sourceDistributionList' => 'setSourceDistributionList''destinationDatabase' => 'setDestinationDatabase''destinationUser' => 'setDestinationUser''datagatewayAccessMappings' => 'setDatagatewayAccessMappings''transferOption' => 'setTransferOption'
+        'type' => 'setType','sourceDatabase' => 'setSourceDatabase','sourceUser' => 'setSourceUser','sourceDistributionList' => 'setSourceDistributionList','destinationDatabase' => 'setDestinationDatabase','destinationUser' => 'setDestinationUser','datagatewayAccessMappings' => 'setDatagatewayAccessMappings','transferOption' => 'setTransferOption'
     ];
 
     /**
@@ -116,7 +116,7 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType''sourceDatabase' => 'getSourceDatabase''sourceUser' => 'getSourceUser''sourceDistributionList' => 'getSourceDistributionList''destinationDatabase' => 'getDestinationDatabase''destinationUser' => 'getDestinationUser''datagatewayAccessMappings' => 'getDatagatewayAccessMappings''transferOption' => 'getTransferOption'
+        'type' => 'getType','sourceDatabase' => 'getSourceDatabase','sourceUser' => 'getSourceUser','sourceDistributionList' => 'getSourceDistributionList','destinationDatabase' => 'getDestinationDatabase','destinationUser' => 'getDestinationUser','datagatewayAccessMappings' => 'getDatagatewayAccessMappings','transferOption' => 'getTransferOption'
     ];
 
     /**
@@ -161,9 +161,9 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
     }
 
     const TYPE_CLIENTBASE_USING_DISTLIST = 'CLIENTBASE_USING_DISTLIST';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -175,7 +175,7 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
             self::TYPE_CLIENTBASE_USING_DISTLIST,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values

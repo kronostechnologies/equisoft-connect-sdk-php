@@ -59,7 +59,7 @@ class MxRecipient implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'string''contactId' => 'string''email' => 'string''screenName' => 'string'
+        'id' => 'string','contactId' => 'string','email' => 'string','screenName' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class MxRecipient implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'id' => null'contactId' => null'email' => null'screenName' => null
+        'id' => null,'contactId' => null,'email' => null,'screenName' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class MxRecipient implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id''contactId' => 'contactId''email' => 'email''screenName' => 'screenName'
+        'id' => 'id','contactId' => 'contactId','email' => 'email','screenName' => 'screenName'
     ];
 
     /**
@@ -107,7 +107,7 @@ class MxRecipient implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId''contactId' => 'setContactId''email' => 'setEmail''screenName' => 'setScreenName'
+        'id' => 'setId','contactId' => 'setContactId','email' => 'setEmail','screenName' => 'setScreenName'
     ];
 
     /**
@@ -116,7 +116,7 @@ class MxRecipient implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId''contactId' => 'getContactId''email' => 'getEmail''screenName' => 'getScreenName'
+        'id' => 'getId','contactId' => 'getContactId','email' => 'getEmail','screenName' => 'getScreenName'
     ];
 
     /**
@@ -160,9 +160,9 @@ class MxRecipient implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

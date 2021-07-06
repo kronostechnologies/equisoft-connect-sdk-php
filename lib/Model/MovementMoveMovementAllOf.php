@@ -59,7 +59,7 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string''sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase''destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase''users' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser[]'
+        'type' => 'string','sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase','destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase','users' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser[]'
     ];
 
     /**
@@ -68,7 +68,7 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'type' => null'sourceDatabase' => null'destinationDatabase' => null'users' => null
+        'type' => null,'sourceDatabase' => null,'destinationDatabase' => null,'users' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type''sourceDatabase' => 'sourceDatabase''destinationDatabase' => 'destinationDatabase''users' => 'users'
+        'type' => 'type','sourceDatabase' => 'sourceDatabase','destinationDatabase' => 'destinationDatabase','users' => 'users'
     ];
 
     /**
@@ -107,7 +107,7 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType''sourceDatabase' => 'setSourceDatabase''destinationDatabase' => 'setDestinationDatabase''users' => 'setUsers'
+        'type' => 'setType','sourceDatabase' => 'setSourceDatabase','destinationDatabase' => 'setDestinationDatabase','users' => 'setUsers'
     ];
 
     /**
@@ -116,7 +116,7 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType''sourceDatabase' => 'getSourceDatabase''destinationDatabase' => 'getDestinationDatabase''users' => 'getUsers'
+        'type' => 'getType','sourceDatabase' => 'getSourceDatabase','destinationDatabase' => 'getDestinationDatabase','users' => 'getUsers'
     ];
 
     /**
@@ -161,9 +161,9 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess
     }
 
     const TYPE_MOVE = 'MOVE';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -175,7 +175,7 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess
             self::TYPE_MOVE,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values

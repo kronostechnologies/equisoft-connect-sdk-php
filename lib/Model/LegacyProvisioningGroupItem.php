@@ -59,7 +59,7 @@ class LegacyProvisioningGroupItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'groupId' => 'string''name' => 'string'
+        'groupId' => 'string','name' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class LegacyProvisioningGroupItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'groupId' => null'name' => null
+        'groupId' => null,'name' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class LegacyProvisioningGroupItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'groupId' => 'groupId''name' => 'name'
+        'groupId' => 'groupId','name' => 'name'
     ];
 
     /**
@@ -107,7 +107,7 @@ class LegacyProvisioningGroupItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'groupId' => 'setGroupId''name' => 'setName'
+        'groupId' => 'setGroupId','name' => 'setName'
     ];
 
     /**
@@ -116,7 +116,7 @@ class LegacyProvisioningGroupItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'groupId' => 'getGroupId''name' => 'getName'
+        'groupId' => 'getGroupId','name' => 'getName'
     ];
 
     /**
@@ -160,9 +160,9 @@ class LegacyProvisioningGroupItem implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

@@ -59,7 +59,7 @@ class LegacyUser implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'string''displayName' => 'string''email' => 'string'
+        'id' => 'string','displayName' => 'string','email' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class LegacyUser implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'id' => null'displayName' => null'email' => null
+        'id' => null,'displayName' => null,'email' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class LegacyUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id''displayName' => 'displayName''email' => 'email'
+        'id' => 'id','displayName' => 'displayName','email' => 'email'
     ];
 
     /**
@@ -107,7 +107,7 @@ class LegacyUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId''displayName' => 'setDisplayName''email' => 'setEmail'
+        'id' => 'setId','displayName' => 'setDisplayName','email' => 'setEmail'
     ];
 
     /**
@@ -116,7 +116,7 @@ class LegacyUser implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId''displayName' => 'getDisplayName''email' => 'getEmail'
+        'id' => 'getId','displayName' => 'getDisplayName','email' => 'getEmail'
     ];
 
     /**
@@ -160,9 +160,9 @@ class LegacyUser implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

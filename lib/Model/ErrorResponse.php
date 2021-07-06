@@ -59,7 +59,7 @@ class ErrorResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'error' => 'string''errorDescription' => 'string'
+        'error' => 'string','errorDescription' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class ErrorResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'error' => null'errorDescription' => null
+        'error' => null,'errorDescription' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class ErrorResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'error' => 'error''errorDescription' => 'error_description'
+        'error' => 'error','errorDescription' => 'error_description'
     ];
 
     /**
@@ -107,7 +107,7 @@ class ErrorResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'error' => 'setError''errorDescription' => 'setErrorDescription'
+        'error' => 'setError','errorDescription' => 'setErrorDescription'
     ];
 
     /**
@@ -116,7 +116,7 @@ class ErrorResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'error' => 'getError''errorDescription' => 'getErrorDescription'
+        'error' => 'getError','errorDescription' => 'getErrorDescription'
     ];
 
     /**
@@ -160,9 +160,9 @@ class ErrorResponse implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

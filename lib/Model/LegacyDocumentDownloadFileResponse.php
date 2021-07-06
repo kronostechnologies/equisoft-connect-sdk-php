@@ -59,7 +59,7 @@ class LegacyDocumentDownloadFileResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'stat' => 'string''errorCode' => 'string''errorMsg' => 'string''files' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentBase64FilePayloadItem[]'
+        'stat' => 'string','errorCode' => 'string','errorMsg' => 'string','files' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentBase64FilePayloadItem[]'
     ];
 
     /**
@@ -68,7 +68,7 @@ class LegacyDocumentDownloadFileResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'stat' => null'errorCode' => null'errorMsg' => null'files' => null
+        'stat' => null,'errorCode' => null,'errorMsg' => null,'files' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class LegacyDocumentDownloadFileResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'stat' => 'stat''errorCode' => 'error_code''errorMsg' => 'error_msg''files' => 'files'
+        'stat' => 'stat','errorCode' => 'error_code','errorMsg' => 'error_msg','files' => 'files'
     ];
 
     /**
@@ -107,7 +107,7 @@ class LegacyDocumentDownloadFileResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'stat' => 'setStat''errorCode' => 'setErrorCode''errorMsg' => 'setErrorMsg''files' => 'setFiles'
+        'stat' => 'setStat','errorCode' => 'setErrorCode','errorMsg' => 'setErrorMsg','files' => 'setFiles'
     ];
 
     /**
@@ -116,7 +116,7 @@ class LegacyDocumentDownloadFileResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'stat' => 'getStat''errorCode' => 'getErrorCode''errorMsg' => 'getErrorMsg''files' => 'getFiles'
+        'stat' => 'getStat','errorCode' => 'getErrorCode','errorMsg' => 'getErrorMsg','files' => 'getFiles'
     ];
 
     /**
@@ -160,9 +160,9 @@ class LegacyDocumentDownloadFileResponse implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

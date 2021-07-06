@@ -59,7 +59,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'orgId' => 'string''displayName' => 'string''status' => 'string''diskUsageQuota' => 'string''lang' => 'string''mainPhone' => 'string''tollFree' => 'string''fax' => 'string''address' => 'string''addressLine2' => 'string''addressCity' => 'string''addressState' => 'string''addressPostalCode' => 'string''addressCountry' => 'string''webSite' => 'string''isMultiUser' => 'string''fnaStatus' => 'string''users' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserItem[]'
+        'orgId' => 'string','displayName' => 'string','status' => 'string','diskUsageQuota' => 'string','lang' => 'string','mainPhone' => 'string','tollFree' => 'string','fax' => 'string','address' => 'string','addressLine2' => 'string','addressCity' => 'string','addressState' => 'string','addressPostalCode' => 'string','addressCountry' => 'string','webSite' => 'string','isMultiUser' => 'string','fnaStatus' => 'string','users' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserItem[]'
     ];
 
     /**
@@ -68,7 +68,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'orgId' => null'displayName' => null'status' => null'diskUsageQuota' => null'lang' => null'mainPhone' => null'tollFree' => null'fax' => null'address' => null'addressLine2' => null'addressCity' => null'addressState' => null'addressPostalCode' => null'addressCountry' => null'webSite' => null'isMultiUser' => null'fnaStatus' => null'users' => null
+        'orgId' => null,'displayName' => null,'status' => null,'diskUsageQuota' => null,'lang' => null,'mainPhone' => null,'tollFree' => null,'fax' => null,'address' => null,'addressLine2' => null,'addressCity' => null,'addressState' => null,'addressPostalCode' => null,'addressCountry' => null,'webSite' => null,'isMultiUser' => null,'fnaStatus' => null,'users' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'orgId' => 'orgId''displayName' => 'displayName''status' => 'status''diskUsageQuota' => 'diskUsageQuota''lang' => 'lang''mainPhone' => 'mainPhone''tollFree' => 'tollFree''fax' => 'fax''address' => 'address''addressLine2' => 'addressLine2''addressCity' => 'addressCity''addressState' => 'addressState''addressPostalCode' => 'addressPostalCode''addressCountry' => 'addressCountry''webSite' => 'webSite''isMultiUser' => 'isMultiUser''fnaStatus' => 'fnaStatus''users' => 'users'
+        'orgId' => 'orgId','displayName' => 'displayName','status' => 'status','diskUsageQuota' => 'diskUsageQuota','lang' => 'lang','mainPhone' => 'mainPhone','tollFree' => 'tollFree','fax' => 'fax','address' => 'address','addressLine2' => 'addressLine2','addressCity' => 'addressCity','addressState' => 'addressState','addressPostalCode' => 'addressPostalCode','addressCountry' => 'addressCountry','webSite' => 'webSite','isMultiUser' => 'isMultiUser','fnaStatus' => 'fnaStatus','users' => 'users'
     ];
 
     /**
@@ -107,7 +107,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'orgId' => 'setOrgId''displayName' => 'setDisplayName''status' => 'setStatus''diskUsageQuota' => 'setDiskUsageQuota''lang' => 'setLang''mainPhone' => 'setMainPhone''tollFree' => 'setTollFree''fax' => 'setFax''address' => 'setAddress''addressLine2' => 'setAddressLine2''addressCity' => 'setAddressCity''addressState' => 'setAddressState''addressPostalCode' => 'setAddressPostalCode''addressCountry' => 'setAddressCountry''webSite' => 'setWebSite''isMultiUser' => 'setIsMultiUser''fnaStatus' => 'setFnaStatus''users' => 'setUsers'
+        'orgId' => 'setOrgId','displayName' => 'setDisplayName','status' => 'setStatus','diskUsageQuota' => 'setDiskUsageQuota','lang' => 'setLang','mainPhone' => 'setMainPhone','tollFree' => 'setTollFree','fax' => 'setFax','address' => 'setAddress','addressLine2' => 'setAddressLine2','addressCity' => 'setAddressCity','addressState' => 'setAddressState','addressPostalCode' => 'setAddressPostalCode','addressCountry' => 'setAddressCountry','webSite' => 'setWebSite','isMultiUser' => 'setIsMultiUser','fnaStatus' => 'setFnaStatus','users' => 'setUsers'
     ];
 
     /**
@@ -116,7 +116,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'orgId' => 'getOrgId''displayName' => 'getDisplayName''status' => 'getStatus''diskUsageQuota' => 'getDiskUsageQuota''lang' => 'getLang''mainPhone' => 'getMainPhone''tollFree' => 'getTollFree''fax' => 'getFax''address' => 'getAddress''addressLine2' => 'getAddressLine2''addressCity' => 'getAddressCity''addressState' => 'getAddressState''addressPostalCode' => 'getAddressPostalCode''addressCountry' => 'getAddressCountry''webSite' => 'getWebSite''isMultiUser' => 'getIsMultiUser''fnaStatus' => 'getFnaStatus''users' => 'getUsers'
+        'orgId' => 'getOrgId','displayName' => 'getDisplayName','status' => 'getStatus','diskUsageQuota' => 'getDiskUsageQuota','lang' => 'getLang','mainPhone' => 'getMainPhone','tollFree' => 'getTollFree','fax' => 'getFax','address' => 'getAddress','addressLine2' => 'getAddressLine2','addressCity' => 'getAddressCity','addressState' => 'getAddressState','addressPostalCode' => 'getAddressPostalCode','addressCountry' => 'getAddressCountry','webSite' => 'getWebSite','isMultiUser' => 'getIsMultiUser','fnaStatus' => 'getFnaStatus','users' => 'getUsers'
     ];
 
     /**
@@ -160,9 +160,9 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values

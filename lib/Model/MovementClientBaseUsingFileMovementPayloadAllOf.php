@@ -59,7 +59,7 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string''sourceDatabase' => 'string''sourceUser' => 'string''destinationDatabase' => 'string''destinationUser' => 'string''capsilFile' => 'string''univerisFile' => 'string''dataphileFile' => 'string'
+        'type' => 'string','sourceDatabase' => 'string','sourceUser' => 'string','destinationDatabase' => 'string','destinationUser' => 'string','capsilFile' => 'string','univerisFile' => 'string','dataphileFile' => 'string'
     ];
 
     /**
@@ -68,7 +68,7 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'type' => null'sourceDatabase' => null'sourceUser' => null'destinationDatabase' => null'destinationUser' => null'capsilFile' => null'univerisFile' => null'dataphileFile' => null
+        'type' => null,'sourceDatabase' => null,'sourceUser' => null,'destinationDatabase' => null,'destinationUser' => null,'capsilFile' => null,'univerisFile' => null,'dataphileFile' => null
     ];
 
     /**
@@ -98,7 +98,7 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type''sourceDatabase' => 'sourceDatabase''sourceUser' => 'sourceUser''destinationDatabase' => 'destinationDatabase''destinationUser' => 'destinationUser''capsilFile' => 'capsilFile''univerisFile' => 'univerisFile''dataphileFile' => 'dataphileFile'
+        'type' => 'type','sourceDatabase' => 'sourceDatabase','sourceUser' => 'sourceUser','destinationDatabase' => 'destinationDatabase','destinationUser' => 'destinationUser','capsilFile' => 'capsilFile','univerisFile' => 'univerisFile','dataphileFile' => 'dataphileFile'
     ];
 
     /**
@@ -107,7 +107,7 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType''sourceDatabase' => 'setSourceDatabase''sourceUser' => 'setSourceUser''destinationDatabase' => 'setDestinationDatabase''destinationUser' => 'setDestinationUser''capsilFile' => 'setCapsilFile''univerisFile' => 'setUniverisFile''dataphileFile' => 'setDataphileFile'
+        'type' => 'setType','sourceDatabase' => 'setSourceDatabase','sourceUser' => 'setSourceUser','destinationDatabase' => 'setDestinationDatabase','destinationUser' => 'setDestinationUser','capsilFile' => 'setCapsilFile','univerisFile' => 'setUniverisFile','dataphileFile' => 'setDataphileFile'
     ];
 
     /**
@@ -116,7 +116,7 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType''sourceDatabase' => 'getSourceDatabase''sourceUser' => 'getSourceUser''destinationDatabase' => 'getDestinationDatabase''destinationUser' => 'getDestinationUser''capsilFile' => 'getCapsilFile''univerisFile' => 'getUniverisFile''dataphileFile' => 'getDataphileFile'
+        'type' => 'getType','sourceDatabase' => 'getSourceDatabase','sourceUser' => 'getSourceUser','destinationDatabase' => 'getDestinationDatabase','destinationUser' => 'getDestinationUser','capsilFile' => 'getCapsilFile','univerisFile' => 'getUniverisFile','dataphileFile' => 'getDataphileFile'
     ];
 
     /**
@@ -161,9 +161,9 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
     }
 
     const TYPE_CLIENTBASE_USING_FILE = 'CLIENTBASE_USING_FILE';
-    
 
-    
+
+
     /**
      * Gets allowable values of the enum
      *
@@ -175,7 +175,7 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
             self::TYPE_CLIENTBASE_USING_FILE,
         ];
     }
-    
+
 
     /**
      * Associative array for storing property values

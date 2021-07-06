@@ -62,7 +62,7 @@ class GatewaysAccessesAccess implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'int''users' => '\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesUser[]'
+        'id' => 'int','users' => '\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesUser[]'
     ];
 
     /**
@@ -71,7 +71,7 @@ class GatewaysAccessesAccess implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPIFormats = [
-        'id' => null'users' => null
+        'id' => null,'users' => null
     ];
 
     /**
@@ -101,7 +101,7 @@ class GatewaysAccessesAccess implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id''users' => 'users'
+        'id' => 'id','users' => 'users'
     ];
 
     /**
@@ -110,7 +110,7 @@ class GatewaysAccessesAccess implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId''users' => 'setUsers'
+        'id' => 'setId','users' => 'setUsers'
     ];
 
     /**
@@ -119,7 +119,7 @@ class GatewaysAccessesAccess implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId''users' => 'getUsers'
+        'id' => 'getId','users' => 'getUsers'
     ];
 
     /**
@@ -163,9 +163,9 @@ class GatewaysAccessesAccess implements ModelInterface, ArrayAccess
         return self::$openAPIModelName;
     }
 
-    
 
-    
+
+
 
     /**
      * Associative array for storing property values
