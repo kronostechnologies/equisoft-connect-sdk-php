@@ -193,7 +193,7 @@ class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess
         parent::__construct($data);
 
         $this->container['clientKey'] = $data['clientKey'] ?? null;
-        $this->container['version'] = $data['version'] ?? VERSION_NATIVE;
+        $this->container['version'] = $data['version'] ?? self::VERSION_NATIVE;
     }
 
     /**

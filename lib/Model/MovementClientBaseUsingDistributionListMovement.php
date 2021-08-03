@@ -220,7 +220,7 @@ class MovementClientBaseUsingDistributionListMovement extends MovementMovement
     {
         parent::__construct($data);
 
-        $this->container['type'] = $data['type'] ?? TYPE_CLIENTBASE_USING_DISTLIST;
+        $this->container['type'] = $data['type'] ?? self::TYPE_CLIENTBASE_USING_DISTLIST;
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['sourceUser'] = $data['sourceUser'] ?? null;
         $this->container['sourceDistributionList'] = $data['sourceDistributionList'] ?? null;
