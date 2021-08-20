@@ -206,7 +206,7 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess, \JsonSer
      */
     public function __construct(array $data = null)
     {
-        $this->container['type'] = $data['type'] ?? self::TYPE_MOVE;
+        $this->container['type'] = $data['type'] ?? TYPE_MOVE;
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['destinationDatabase'] = $data['destinationDatabase'] ?? null;
         $this->container['users'] = $data['users'] ?? null;

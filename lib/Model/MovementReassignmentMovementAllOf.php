@@ -211,7 +211,7 @@ class MovementReassignmentMovementAllOf implements ModelInterface, ArrayAccess, 
      */
     public function __construct(array $data = null)
     {
-        $this->container['type'] = $data['type'] ?? self::TYPE_REASSIGNMENT;
+        $this->container['type'] = $data['type'] ?? TYPE_REASSIGNMENT;
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['sourceUser'] = $data['sourceUser'] ?? null;
         $this->container['destinationUser'] = $data['destinationUser'] ?? null;

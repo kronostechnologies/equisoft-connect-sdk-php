@@ -199,7 +199,7 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
     public function __construct(array $data = null)
     {
         $this->container['clientKey'] = $data['clientKey'] ?? null;
-        $this->container['version'] = $data['version'] ?? self::VERSION_NATIVE;
+        $this->container['version'] = $data['version'] ?? VERSION_NATIVE;
     }
 
     /**

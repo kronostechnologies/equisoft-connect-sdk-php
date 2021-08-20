@@ -226,7 +226,7 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
      */
     public function __construct(array $data = null)
     {
-        $this->container['type'] = $data['type'] ?? self::TYPE_CLIENTBASE_USING_FILE;
+        $this->container['type'] = $data['type'] ?? TYPE_CLIENTBASE_USING_FILE;
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['sourceUser'] = $data['sourceUser'] ?? null;
         $this->container['destinationDatabase'] = $data['destinationDatabase'] ?? null;
