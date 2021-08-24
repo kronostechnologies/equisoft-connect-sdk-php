@@ -205,7 +205,7 @@ class MovementReassignmentMovement extends MovementMovement
     {
         parent::__construct($data);
 
-        $this->container['type'] = $data['type'] ?? TYPE_REASSIGNMENT;
+        $this->container['type'] = $data['type'] ?? self::TYPE_REASSIGNMENT;
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['sourceUser'] = $data['sourceUser'] ?? null;
         $this->container['destinationUser'] = $data['destinationUser'] ?? null;
