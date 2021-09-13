@@ -232,6 +232,30 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
+        }
+        if ($this->container['displayName'] === null) {
+            $invalidProperties[] = "'displayName' can't be null";
+        }
+        if ($this->container['email'] === null) {
+            $invalidProperties[] = "'email' can't be null";
+        }
+        if ($this->container['firstName'] === null) {
+            $invalidProperties[] = "'firstName' can't be null";
+        }
+        if ($this->container['lastName'] === null) {
+            $invalidProperties[] = "'lastName' can't be null";
+        }
+        if ($this->container['locale'] === null) {
+            $invalidProperties[] = "'locale' can't be null";
+        }
+        if ($this->container['role'] === null) {
+            $invalidProperties[] = "'role' can't be null";
+        }
+        if ($this->container['maxConcurrentAccess'] === null) {
+            $invalidProperties[] = "'maxConcurrentAccess' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -250,7 +274,7 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets id
      *
-     * @return int|null
+     * @return int
      */
     public function getId()
     {
@@ -260,7 +284,7 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param int|null $id The user's unique identifier (ID).
+     * @param int $id The user's unique identifier (ID).
      *
      * @return self
      */
@@ -274,7 +298,7 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets displayName
      *
-     * @return string|null
+     * @return string
      */
     public function getDisplayName()
     {
@@ -284,7 +308,7 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets displayName
      *
-     * @param string|null $displayName The user's full display name.
+     * @param string $displayName The user's full display name.
      *
      * @return self
      */
@@ -298,7 +322,7 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets email
      *
-     * @return string|null
+     * @return string
      */
     public function getEmail()
     {
@@ -308,7 +332,7 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets email
      *
-     * @param string|null $email The user's eMail address.
+     * @param string $email The user's eMail address.
      *
      * @return self
      */
@@ -322,7 +346,7 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets firstName
      *
-     * @return string|null
+     * @return string
      */
     public function getFirstName()
     {
@@ -332,7 +356,7 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets firstName
      *
-     * @param string|null $firstName The user's first name.
+     * @param string $firstName The user's first name.
      *
      * @return self
      */
@@ -346,7 +370,7 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets lastName
      *
-     * @return string|null
+     * @return string
      */
     public function getLastName()
     {
@@ -356,7 +380,7 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets lastName
      *
-     * @param string|null $lastName The user's last name.
+     * @param string $lastName The user's last name.
      *
      * @return self
      */
@@ -370,7 +394,7 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets locale
      *
-     * @return string|null
+     * @return string
      */
     public function getLocale()
     {
@@ -380,7 +404,7 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets locale
      *
-     * @param string|null $locale The user's preferred locale.
+     * @param string $locale The user's preferred locale.
      *
      * @return self
      */
@@ -394,7 +418,7 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets role
      *
-     * @return string|null
+     * @return string
      */
     public function getRole()
     {
@@ -404,7 +428,7 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets role
      *
-     * @param string|null $role The user's role.
+     * @param string $role The user's role.
      *
      * @return self
      */
@@ -418,7 +442,7 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets maxConcurrentAccess
      *
-     * @return int|null
+     * @return int
      */
     public function getMaxConcurrentAccess()
     {
@@ -428,7 +452,7 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets maxConcurrentAccess
      *
-     * @param int|null $maxConcurrentAccess maxConcurrentAccess
+     * @param int $maxConcurrentAccess maxConcurrentAccess
      *
      * @return self
      */
