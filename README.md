@@ -52,19 +52,20 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = Equisoft\SDK\EquisoftConnect\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\DSFApi(
+$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\ContactsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$dsfFinancialCenterPayload = new \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload(); // \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload
+$contactUuid = 'contactUuid_example'; // string | Contact unique identifier.
+$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
 
 try {
-    $result = $apiInstance->createDsfFinancialCenter($dsfFinancialCenterPayload);
+    $result = $apiInstance->getByUuid($contactUuid, $acceptLanguage);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DSFApi->createDsfFinancialCenter: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ContactsApi->getByUuid: ', $e->getMessage(), PHP_EOL;
 }
 
 ```
@@ -75,6 +76,7 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*ContactsApi* | [**getByUuid**](docs/Api/ContactsApi.md#getbyuuid) | **GET** /crm/api/v1/contacts/{contactUuid} | Return the detail of a contact.
 *DSFApi* | [**createDsfFinancialCenter**](docs/Api/DSFApi.md#createdsffinancialcenter) | **POST** /crm/api/v1/dsf/financialCenters | 
 *DSFApi* | [**deleteDsfFinancialCenter**](docs/Api/DSFApi.md#deletedsffinancialcenter) | **DELETE** /crm/api/v1/dsf/financialCenters/{financialCenterId} | 
 *DSFApi* | [**getDsfFinancialCenters**](docs/Api/DSFApi.md#getdsffinancialcenters) | **GET** /crm/api/v1/dsf/financialCenters/{financialCenterId} | 
@@ -149,6 +151,16 @@ Class | Method | HTTP request | Description
 - [CalendarDefaultCalendarId](docs/Model/CalendarDefaultCalendarId.md)
 - [CalendarsCalendar](docs/Model/CalendarsCalendar.md)
 - [CalendarsListCalendarResponse](docs/Model/CalendarsListCalendarResponse.md)
+- [ContactContactAdditionalInformation](docs/Model/ContactContactAdditionalInformation.md)
+- [ContactContactAddress](docs/Model/ContactContactAddress.md)
+- [ContactContactEmail](docs/Model/ContactContactEmail.md)
+- [ContactContactIdentification](docs/Model/ContactContactIdentification.md)
+- [ContactContactMaritalStatus](docs/Model/ContactContactMaritalStatus.md)
+- [ContactContactOccupation](docs/Model/ContactContactOccupation.md)
+- [ContactContactPhone](docs/Model/ContactContactPhone.md)
+- [ContactContactSegmentation](docs/Model/ContactContactSegmentation.md)
+- [ContactContactWebsite](docs/Model/ContactContactWebsite.md)
+- [ContactsContact](docs/Model/ContactsContact.md)
 - [ContextActor](docs/Model/ContextActor.md)
 - [ContextEquisoftConnect](docs/Model/ContextEquisoftConnect.md)
 - [ContextEquisoftConnectUser](docs/Model/ContextEquisoftConnectUser.md)
