@@ -123,4 +123,13 @@ class ContactContactOccupationTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "annualIncome"
+     */
+    public function testPropertyAnnualIncome()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

@@ -63,7 +63,12 @@ class ContactContactAdditionalInformation implements ModelInterface, ArrayAccess
         'deceasedDate' => '\DateTime',
         'isSmoker' => 'bool',
         'smokerEndDate' => '\DateTime',
-        'birthDate' => '\DateTime'
+        'birthDate' => '\DateTime',
+        'facebookLink' => 'string',
+        'twitterLink' => 'string',
+        'linkedInLink' => 'string',
+        'language' => 'FieldValue',
+        'pictureId' => 'int'
     ];
 
     /**
@@ -78,7 +83,12 @@ class ContactContactAdditionalInformation implements ModelInterface, ArrayAccess
         'deceasedDate' => 'date',
         'isSmoker' => null,
         'smokerEndDate' => 'date',
-        'birthDate' => 'date'
+        'birthDate' => 'date',
+        'facebookLink' => null,
+        'twitterLink' => null,
+        'linkedInLink' => null,
+        'language' => null,
+        'pictureId' => null
     ];
 
     /**
@@ -112,7 +122,12 @@ class ContactContactAdditionalInformation implements ModelInterface, ArrayAccess
         'deceasedDate' => 'deceasedDate',
         'isSmoker' => 'isSmoker',
         'smokerEndDate' => 'smokerEndDate',
-        'birthDate' => 'birthDate'
+        'birthDate' => 'birthDate',
+        'facebookLink' => 'facebookLink',
+        'twitterLink' => 'twitterLink',
+        'linkedInLink' => 'linkedInLink',
+        'language' => 'language',
+        'pictureId' => 'pictureId'
     ];
 
     /**
@@ -125,7 +140,12 @@ class ContactContactAdditionalInformation implements ModelInterface, ArrayAccess
         'deceasedDate' => 'setDeceasedDate',
         'isSmoker' => 'setIsSmoker',
         'smokerEndDate' => 'setSmokerEndDate',
-        'birthDate' => 'setBirthDate'
+        'birthDate' => 'setBirthDate',
+        'facebookLink' => 'setFacebookLink',
+        'twitterLink' => 'setTwitterLink',
+        'linkedInLink' => 'setLinkedInLink',
+        'language' => 'setLanguage',
+        'pictureId' => 'setPictureId'
     ];
 
     /**
@@ -138,7 +158,12 @@ class ContactContactAdditionalInformation implements ModelInterface, ArrayAccess
         'deceasedDate' => 'getDeceasedDate',
         'isSmoker' => 'getIsSmoker',
         'smokerEndDate' => 'getSmokerEndDate',
-        'birthDate' => 'getBirthDate'
+        'birthDate' => 'getBirthDate',
+        'facebookLink' => 'getFacebookLink',
+        'twitterLink' => 'getTwitterLink',
+        'linkedInLink' => 'getLinkedInLink',
+        'language' => 'getLanguage',
+        'pictureId' => 'getPictureId'
     ];
 
     /**
@@ -203,6 +228,11 @@ class ContactContactAdditionalInformation implements ModelInterface, ArrayAccess
         $this->container['isSmoker'] = $data['isSmoker'] ?? null;
         $this->container['smokerEndDate'] = $data['smokerEndDate'] ?? null;
         $this->container['birthDate'] = $data['birthDate'] ?? null;
+        $this->container['facebookLink'] = $data['facebookLink'] ?? null;
+        $this->container['twitterLink'] = $data['twitterLink'] ?? null;
+        $this->container['linkedInLink'] = $data['linkedInLink'] ?? null;
+        $this->container['language'] = $data['language'] ?? null;
+        $this->container['pictureId'] = $data['pictureId'] ?? null;
     }
 
     /**
@@ -345,6 +375,126 @@ class ContactContactAdditionalInformation implements ModelInterface, ArrayAccess
     public function setBirthDate($birthDate)
     {
         $this->container['birthDate'] = $birthDate;
+
+        return $this;
+    }
+
+    /**
+     * Gets facebookLink
+     *
+     * @return string|null
+     */
+    public function getFacebookLink()
+    {
+        return $this->container['facebookLink'];
+    }
+
+    /**
+     * Sets facebookLink
+     *
+     * @param string|null $facebookLink facebookLink
+     *
+     * @return self
+     */
+    public function setFacebookLink($facebookLink)
+    {
+        $this->container['facebookLink'] = $facebookLink;
+
+        return $this;
+    }
+
+    /**
+     * Gets twitterLink
+     *
+     * @return string|null
+     */
+    public function getTwitterLink()
+    {
+        return $this->container['twitterLink'];
+    }
+
+    /**
+     * Sets twitterLink
+     *
+     * @param string|null $twitterLink twitterLink
+     *
+     * @return self
+     */
+    public function setTwitterLink($twitterLink)
+    {
+        $this->container['twitterLink'] = $twitterLink;
+
+        return $this;
+    }
+
+    /**
+     * Gets linkedInLink
+     *
+     * @return string|null
+     */
+    public function getLinkedInLink()
+    {
+        return $this->container['linkedInLink'];
+    }
+
+    /**
+     * Sets linkedInLink
+     *
+     * @param string|null $linkedInLink linkedInLink
+     *
+     * @return self
+     */
+    public function setLinkedInLink($linkedInLink)
+    {
+        $this->container['linkedInLink'] = $linkedInLink;
+
+        return $this;
+    }
+
+    /**
+     * Gets language
+     *
+     * @return FieldValue|null
+     */
+    public function getLanguage()
+    {
+        return $this->container['language'];
+    }
+
+    /**
+     * Sets language
+     *
+     * @param FieldValue|null $language language
+     *
+     * @return self
+     */
+    public function setLanguage($language)
+    {
+        $this->container['language'] = $language;
+
+        return $this;
+    }
+
+    /**
+     * Gets pictureId
+     *
+     * @return int|null
+     */
+    public function getPictureId()
+    {
+        return $this->container['pictureId'];
+    }
+
+    /**
+     * Sets pictureId
+     *
+     * @param int|null $pictureId pictureId
+     *
+     * @return self
+     */
+    public function setPictureId($pictureId)
+    {
+        $this->container['pictureId'] = $pictureId;
 
         return $this;
     }

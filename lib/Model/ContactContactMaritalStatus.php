@@ -62,7 +62,8 @@ class ContactContactMaritalStatus implements ModelInterface, ArrayAccess, \JsonS
         'id' => 'int',
         'startDate' => '\DateTime',
         'endDate' => '\DateTime',
-        'status' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue'
+        'status' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue',
+        'marriageContract' => 'FieldValue'
     ];
 
     /**
@@ -76,7 +77,8 @@ class ContactContactMaritalStatus implements ModelInterface, ArrayAccess, \JsonS
         'id' => null,
         'startDate' => 'date',
         'endDate' => 'date',
-        'status' => null
+        'status' => null,
+        'marriageContract' => null
     ];
 
     /**
@@ -109,7 +111,8 @@ class ContactContactMaritalStatus implements ModelInterface, ArrayAccess, \JsonS
         'id' => 'id',
         'startDate' => 'startDate',
         'endDate' => 'endDate',
-        'status' => 'status'
+        'status' => 'status',
+        'marriageContract' => 'marriageContract'
     ];
 
     /**
@@ -121,7 +124,8 @@ class ContactContactMaritalStatus implements ModelInterface, ArrayAccess, \JsonS
         'id' => 'setId',
         'startDate' => 'setStartDate',
         'endDate' => 'setEndDate',
-        'status' => 'setStatus'
+        'status' => 'setStatus',
+        'marriageContract' => 'setMarriageContract'
     ];
 
     /**
@@ -133,7 +137,8 @@ class ContactContactMaritalStatus implements ModelInterface, ArrayAccess, \JsonS
         'id' => 'getId',
         'startDate' => 'getStartDate',
         'endDate' => 'getEndDate',
-        'status' => 'getStatus'
+        'status' => 'getStatus',
+        'marriageContract' => 'getMarriageContract'
     ];
 
     /**
@@ -197,6 +202,7 @@ class ContactContactMaritalStatus implements ModelInterface, ArrayAccess, \JsonS
         $this->container['startDate'] = $data['startDate'] ?? null;
         $this->container['endDate'] = $data['endDate'] ?? null;
         $this->container['status'] = $data['status'] ?? null;
+        $this->container['marriageContract'] = $data['marriageContract'] ?? null;
     }
 
     /**
@@ -315,6 +321,30 @@ class ContactContactMaritalStatus implements ModelInterface, ArrayAccess, \JsonS
     public function setStatus($status)
     {
         $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets marriageContract
+     *
+     * @return FieldValue|null
+     */
+    public function getMarriageContract()
+    {
+        return $this->container['marriageContract'];
+    }
+
+    /**
+     * Sets marriageContract
+     *
+     * @param FieldValue|null $marriageContract marriageContract
+     *
+     * @return self
+     */
+    public function setMarriageContract($marriageContract)
+    {
+        $this->container['marriageContract'] = $marriageContract;
 
         return $this;
     }

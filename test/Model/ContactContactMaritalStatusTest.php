@@ -114,4 +114,13 @@ class ContactContactMaritalStatusTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "marriageContract"
+     */
+    public function testPropertyMarriageContract()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

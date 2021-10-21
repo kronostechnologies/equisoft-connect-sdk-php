@@ -9,5 +9,10 @@ Name | Type | Description | Notes
 **isSmoker** | **bool** |  | [optional]
 **smokerEndDate** | [**\DateTime**](\DateTime.md) |  | [optional]
 **birthDate** | [**\DateTime**](\DateTime.md) |  | [optional]
+**facebookLink** | **string** |  | [optional]
+**twitterLink** | **string** |  | [optional]
+**linkedInLink** | **string** |  | [optional]
+**language** | [**FieldValue**](FieldValue.md) |  | [optional]
+**pictureId** | **int** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

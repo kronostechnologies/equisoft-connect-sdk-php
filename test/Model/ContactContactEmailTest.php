@@ -123,4 +123,13 @@ class ContactContactEmailTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "locked"
+     */
+    public function testPropertyLocked()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

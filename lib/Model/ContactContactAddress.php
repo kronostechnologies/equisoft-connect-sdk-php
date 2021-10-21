@@ -69,7 +69,8 @@ class ContactContactAddress implements ModelInterface, ArrayAccess, \JsonSeriali
         'country' => 'string',
         'postalCode' => 'string',
         'dateSince' => '\DateTime',
-        'city' => 'string'
+        'city' => 'string',
+        'locked' => 'bool'
     ];
 
     /**
@@ -90,7 +91,8 @@ class ContactContactAddress implements ModelInterface, ArrayAccess, \JsonSeriali
         'country' => null,
         'postalCode' => null,
         'dateSince' => 'date',
-        'city' => null
+        'city' => null,
+        'locked' => null
     ];
 
     /**
@@ -130,7 +132,8 @@ class ContactContactAddress implements ModelInterface, ArrayAccess, \JsonSeriali
         'country' => 'country',
         'postalCode' => 'postalCode',
         'dateSince' => 'dateSince',
-        'city' => 'city'
+        'city' => 'city',
+        'locked' => 'locked'
     ];
 
     /**
@@ -149,7 +152,8 @@ class ContactContactAddress implements ModelInterface, ArrayAccess, \JsonSeriali
         'country' => 'setCountry',
         'postalCode' => 'setPostalCode',
         'dateSince' => 'setDateSince',
-        'city' => 'setCity'
+        'city' => 'setCity',
+        'locked' => 'setLocked'
     ];
 
     /**
@@ -168,7 +172,8 @@ class ContactContactAddress implements ModelInterface, ArrayAccess, \JsonSeriali
         'country' => 'getCountry',
         'postalCode' => 'getPostalCode',
         'dateSince' => 'getDateSince',
-        'city' => 'getCity'
+        'city' => 'getCity',
+        'locked' => 'getLocked'
     ];
 
     /**
@@ -239,6 +244,7 @@ class ContactContactAddress implements ModelInterface, ArrayAccess, \JsonSeriali
         $this->container['postalCode'] = $data['postalCode'] ?? null;
         $this->container['dateSince'] = $data['dateSince'] ?? null;
         $this->container['city'] = $data['city'] ?? null;
+        $this->container['locked'] = $data['locked'] ?? null;
     }
 
     /**
@@ -525,6 +531,30 @@ class ContactContactAddress implements ModelInterface, ArrayAccess, \JsonSeriali
     public function setCity($city)
     {
         $this->container['city'] = $city;
+
+        return $this;
+    }
+
+    /**
+     * Gets locked
+     *
+     * @return bool|null
+     */
+    public function getLocked()
+    {
+        return $this->container['locked'];
+    }
+
+    /**
+     * Sets locked
+     *
+     * @param bool|null $locked locked
+     *
+     * @return self
+     */
+    public function setLocked($locked)
+    {
+        $this->container['locked'] = $locked;
 
         return $this;
     }

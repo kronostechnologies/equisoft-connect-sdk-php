@@ -63,7 +63,8 @@ class ContactContactOccupation implements ModelInterface, ArrayAccess, \JsonSeri
         'occupation' => 'string',
         'employer' => 'string',
         'startDate' => '\DateTime',
-        'endDate' => '\DateTime'
+        'endDate' => '\DateTime',
+        'annualIncome' => 'float'
     ];
 
     /**
@@ -78,7 +79,8 @@ class ContactContactOccupation implements ModelInterface, ArrayAccess, \JsonSeri
         'occupation' => null,
         'employer' => null,
         'startDate' => 'date',
-        'endDate' => 'date'
+        'endDate' => 'date',
+        'annualIncome' => 'float'
     ];
 
     /**
@@ -112,7 +114,8 @@ class ContactContactOccupation implements ModelInterface, ArrayAccess, \JsonSeri
         'occupation' => 'occupation',
         'employer' => 'employer',
         'startDate' => 'startDate',
-        'endDate' => 'endDate'
+        'endDate' => 'endDate',
+        'annualIncome' => 'annualIncome'
     ];
 
     /**
@@ -125,7 +128,8 @@ class ContactContactOccupation implements ModelInterface, ArrayAccess, \JsonSeri
         'occupation' => 'setOccupation',
         'employer' => 'setEmployer',
         'startDate' => 'setStartDate',
-        'endDate' => 'setEndDate'
+        'endDate' => 'setEndDate',
+        'annualIncome' => 'setAnnualIncome'
     ];
 
     /**
@@ -138,7 +142,8 @@ class ContactContactOccupation implements ModelInterface, ArrayAccess, \JsonSeri
         'occupation' => 'getOccupation',
         'employer' => 'getEmployer',
         'startDate' => 'getStartDate',
-        'endDate' => 'getEndDate'
+        'endDate' => 'getEndDate',
+        'annualIncome' => 'getAnnualIncome'
     ];
 
     /**
@@ -203,6 +208,7 @@ class ContactContactOccupation implements ModelInterface, ArrayAccess, \JsonSeri
         $this->container['employer'] = $data['employer'] ?? null;
         $this->container['startDate'] = $data['startDate'] ?? null;
         $this->container['endDate'] = $data['endDate'] ?? null;
+        $this->container['annualIncome'] = $data['annualIncome'] ?? null;
     }
 
     /**
@@ -345,6 +351,30 @@ class ContactContactOccupation implements ModelInterface, ArrayAccess, \JsonSeri
     public function setEndDate($endDate)
     {
         $this->container['endDate'] = $endDate;
+
+        return $this;
+    }
+
+    /**
+     * Gets annualIncome
+     *
+     * @return float|null
+     */
+    public function getAnnualIncome()
+    {
+        return $this->container['annualIncome'];
+    }
+
+    /**
+     * Sets annualIncome
+     *
+     * @param float|null $annualIncome annualIncome
+     *
+     * @return self
+     */
+    public function setAnnualIncome($annualIncome)
+    {
+        $this->container['annualIncome'] = $annualIncome;
 
         return $this;
     }

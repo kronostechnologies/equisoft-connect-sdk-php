@@ -63,7 +63,8 @@ class ContactContactEmail implements ModelInterface, ArrayAccess, \JsonSerializa
         'isMain' => 'bool',
         'type' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue',
         'email' => 'string',
-        'notes' => 'string'
+        'notes' => 'string',
+        'locked' => 'bool'
     ];
 
     /**
@@ -78,7 +79,8 @@ class ContactContactEmail implements ModelInterface, ArrayAccess, \JsonSerializa
         'isMain' => null,
         'type' => null,
         'email' => null,
-        'notes' => null
+        'notes' => null,
+        'locked' => null
     ];
 
     /**
@@ -112,7 +114,8 @@ class ContactContactEmail implements ModelInterface, ArrayAccess, \JsonSerializa
         'isMain' => 'isMain',
         'type' => 'type',
         'email' => 'email',
-        'notes' => 'notes'
+        'notes' => 'notes',
+        'locked' => 'locked'
     ];
 
     /**
@@ -125,7 +128,8 @@ class ContactContactEmail implements ModelInterface, ArrayAccess, \JsonSerializa
         'isMain' => 'setIsMain',
         'type' => 'setType',
         'email' => 'setEmail',
-        'notes' => 'setNotes'
+        'notes' => 'setNotes',
+        'locked' => 'setLocked'
     ];
 
     /**
@@ -138,7 +142,8 @@ class ContactContactEmail implements ModelInterface, ArrayAccess, \JsonSerializa
         'isMain' => 'getIsMain',
         'type' => 'getType',
         'email' => 'getEmail',
-        'notes' => 'getNotes'
+        'notes' => 'getNotes',
+        'locked' => 'getLocked'
     ];
 
     /**
@@ -203,6 +208,7 @@ class ContactContactEmail implements ModelInterface, ArrayAccess, \JsonSerializa
         $this->container['type'] = $data['type'] ?? null;
         $this->container['email'] = $data['email'] ?? null;
         $this->container['notes'] = $data['notes'] ?? null;
+        $this->container['locked'] = $data['locked'] ?? null;
     }
 
     /**
@@ -345,6 +351,30 @@ class ContactContactEmail implements ModelInterface, ArrayAccess, \JsonSerializa
     public function setNotes($notes)
     {
         $this->container['notes'] = $notes;
+
+        return $this;
+    }
+
+    /**
+     * Gets locked
+     *
+     * @return bool|null
+     */
+    public function getLocked()
+    {
+        return $this->container['locked'];
+    }
+
+    /**
+     * Sets locked
+     *
+     * @param bool|null $locked locked
+     *
+     * @return self
+     */
+    public function setLocked($locked)
+    {
+        $this->container['locked'] = $locked;
 
         return $this;
     }

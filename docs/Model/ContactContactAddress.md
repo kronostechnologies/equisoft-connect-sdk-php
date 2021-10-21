@@ -15,5 +15,6 @@ Name | Type | Description | Notes
 **postalCode** | **string** |  | [optional]
 **dateSince** | [**\DateTime**](\DateTime.md) |  | [optional]
 **city** | **string** |  | [optional]
+**locked** | **bool** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

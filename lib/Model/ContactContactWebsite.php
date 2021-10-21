@@ -61,7 +61,8 @@ class ContactContactWebsite implements ModelInterface, ArrayAccess, \JsonSeriali
     protected static $openAPITypes = [
         'id' => 'int',
         'url' => 'string',
-        'isMain' => 'bool'
+        'isMain' => 'bool',
+        'locked' => 'bool'
     ];
 
     /**
@@ -74,7 +75,8 @@ class ContactContactWebsite implements ModelInterface, ArrayAccess, \JsonSeriali
     protected static $openAPIFormats = [
         'id' => null,
         'url' => null,
-        'isMain' => null
+        'isMain' => null,
+        'locked' => null
     ];
 
     /**
@@ -106,7 +108,8 @@ class ContactContactWebsite implements ModelInterface, ArrayAccess, \JsonSeriali
     protected static $attributeMap = [
         'id' => 'id',
         'url' => 'url',
-        'isMain' => 'isMain'
+        'isMain' => 'isMain',
+        'locked' => 'locked'
     ];
 
     /**
@@ -117,7 +120,8 @@ class ContactContactWebsite implements ModelInterface, ArrayAccess, \JsonSeriali
     protected static $setters = [
         'id' => 'setId',
         'url' => 'setUrl',
-        'isMain' => 'setIsMain'
+        'isMain' => 'setIsMain',
+        'locked' => 'setLocked'
     ];
 
     /**
@@ -128,7 +132,8 @@ class ContactContactWebsite implements ModelInterface, ArrayAccess, \JsonSeriali
     protected static $getters = [
         'id' => 'getId',
         'url' => 'getUrl',
-        'isMain' => 'getIsMain'
+        'isMain' => 'getIsMain',
+        'locked' => 'getLocked'
     ];
 
     /**
@@ -191,6 +196,7 @@ class ContactContactWebsite implements ModelInterface, ArrayAccess, \JsonSeriali
         $this->container['id'] = $data['id'] ?? null;
         $this->container['url'] = $data['url'] ?? null;
         $this->container['isMain'] = $data['isMain'] ?? null;
+        $this->container['locked'] = $data['locked'] ?? null;
     }
 
     /**
@@ -285,6 +291,30 @@ class ContactContactWebsite implements ModelInterface, ArrayAccess, \JsonSeriali
     public function setIsMain($isMain)
     {
         $this->container['isMain'] = $isMain;
+
+        return $this;
+    }
+
+    /**
+     * Gets locked
+     *
+     * @return bool|null
+     */
+    public function getLocked()
+    {
+        return $this->container['locked'];
+    }
+
+    /**
+     * Sets locked
+     *
+     * @param bool|null $locked locked
+     *
+     * @return self
+     */
+    public function setLocked($locked)
+    {
+        $this->container['locked'] = $locked;
 
         return $this;
     }
