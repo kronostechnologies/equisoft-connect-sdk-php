@@ -68,7 +68,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
         'description' => 'string',
         'internalNotes' => 'string',
         'category' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue',
-        'subCategory' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue',
+        'subCategory' => 'mixed',
         'priority' => 'int',
         'visibility' => 'string',
         'creationTime' => '\DateTime',
@@ -532,7 +532,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets subCategory
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null
+     * @return mixed|null
      */
     public function getSubCategory()
     {
@@ -542,7 +542,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets subCategory
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $subCategory subCategory
+     * @param mixed|null $subCategory Event sub category
      *
      * @return self
      */

@@ -71,7 +71,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
         'location' => 'string',
         'type' => 'string',
         'category' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue',
-        'subCategory' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue',
+        'subCategory' => 'mixed',
         'recurrenceRule' => 'string',
         'recurringEventId' => 'string',
         'originalStartDate' => 'string',
@@ -667,7 +667,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets subCategory
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null
+     * @return mixed|null
      */
     public function getSubCategory()
     {
@@ -677,7 +677,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets subCategory
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $subCategory subCategory
+     * @param mixed|null $subCategory Event sub category
      *
      * @return self
      */

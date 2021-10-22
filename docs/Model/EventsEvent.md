@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **location** | **string** | Location of the event in free-text form. | [optional]
 **type** | **string** | Event type (CALL, LETTER, MEETING, VACATION, FILE, NOTE) |
 **category** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValue**](FieldValue.md) |  | [optional]
-**subCategory** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValue**](FieldValue.md) |  | [optional]
+**subCategory** | **mixed** | Event sub category | [optional]
 **recurrenceRule** | **string** | The recurrence rule for this event. The recurrence is a string conform to RFC 5545 (see RRULE http://tools.ietf.org/html/rfc5545#section-3.8.5.3). | [optional]
 **recurringEventId** | **string** | For an instance of recurring event, ID of the master event. | [optional]
 **originalStartDate** | **string** | For an instance of recurring event, original start date of the event according to the recurrence rule. | [optional]

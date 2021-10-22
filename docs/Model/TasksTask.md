@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **description** | **string** | Public description of the Event. | [optional]
 **internalNotes** | **string** | Internal notes on the Event. Not synced on remote sources. | [optional]
 **category** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValue**](FieldValue.md) |  | [optional]
-**subCategory** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValue**](FieldValue.md) |  | [optional]
+**subCategory** | **mixed** | Event sub category | [optional]
 **priority** | **int** | Importance/Priority of an event or task. 5 is the most important. | [optional]
 **visibility** | **string** | Confidentiality level of the Event (private or not). [NORMAL, PRIVATE] | [optional]
 **creationTime** | [**\DateTime**](\DateTime.md) | Creation time. As defined by date-time - RFC3339 | [optional]
