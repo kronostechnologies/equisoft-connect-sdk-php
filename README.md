@@ -306,6 +306,7 @@ Class | Method | HTTP request | Description
 - [TasksTask](docs/Model/TasksTask.md)
 - [TasksTransferToCompletedResponse](docs/Model/TasksTransferToCompletedResponse.md)
 - [TasksVisibilityType](docs/Model/TasksVisibilityType.md)
+- [Translation](docs/Model/Translation.md)
 - [UsersListUsersResponse](docs/Model/UsersListUsersResponse.md)
 - [UsersUser](docs/Model/UsersUser.md)
 

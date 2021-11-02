@@ -1,6 +1,6 @@
 <?php
 /**
- * FieldValue
+ * Translation
  *
  * PHP version 7.3
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * FieldValue Class Doc Comment
+ * Translation Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
@@ -42,7 +42,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class FieldValue implements ModelInterface, ArrayAccess, \JsonSerializable
+class Translation implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class FieldValue implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'FieldValue';
+    protected static $openAPIModelName = 'Translation';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,10 +59,8 @@ class FieldValue implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'int',
-        'label' => 'string',
-        'translations' => '\Equisoft\SDK\EquisoftConnect\Model\Translation[]',
-        'systemName' => 'string'
+        'locale' => 'string',
+        'label' => 'string'
     ];
 
     /**
@@ -73,10 +71,8 @@ class FieldValue implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null,
-        'label' => null,
-        'translations' => null,
-        'systemName' => null
+        'locale' => null,
+        'label' => null
     ];
 
     /**
@@ -106,10 +102,8 @@ class FieldValue implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'label' => 'label',
-        'translations' => 'translations',
-        'systemName' => 'systemName'
+        'locale' => 'locale',
+        'label' => 'label'
     ];
 
     /**
@@ -118,10 +112,8 @@ class FieldValue implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'label' => 'setLabel',
-        'translations' => 'setTranslations',
-        'systemName' => 'setSystemName'
+        'locale' => 'setLocale',
+        'label' => 'setLabel'
     ];
 
     /**
@@ -130,10 +122,8 @@ class FieldValue implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'label' => 'getLabel',
-        'translations' => 'getTranslations',
-        'systemName' => 'getSystemName'
+        'locale' => 'getLocale',
+        'label' => 'getLabel'
     ];
 
     /**
@@ -193,10 +183,8 @@ class FieldValue implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = $data['id'] ?? null;
+        $this->container['locale'] = $data['locale'] ?? null;
         $this->container['label'] = $data['label'] ?? null;
-        $this->container['translations'] = $data['translations'] ?? null;
-        $this->container['systemName'] = $data['systemName'] ?? null;
     }
 
     /**
@@ -208,8 +196,8 @@ class FieldValue implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
+        if ($this->container['locale'] === null) {
+            $invalidProperties[] = "'locale' can't be null";
         }
         if ($this->container['label'] === null) {
             $invalidProperties[] = "'label' can't be null";
@@ -230,25 +218,25 @@ class FieldValue implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets id
+     * Gets locale
      *
-     * @return int
+     * @return string
      */
-    public function getId()
+    public function getLocale()
     {
-        return $this->container['id'];
+        return $this->container['locale'];
     }
 
     /**
-     * Sets id
+     * Sets locale
      *
-     * @param int $id Unique numerical identifier of the field value.
+     * @param string $locale locale
      *
      * @return self
      */
-    public function setId($id)
+    public function setLocale($locale)
     {
-        $this->container['id'] = $id;
+        $this->container['locale'] = $locale;
 
         return $this;
     }
@@ -266,61 +254,13 @@ class FieldValue implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets label
      *
-     * @param string $label Value label in the current language.
+     * @param string $label label
      *
      * @return self
      */
     public function setLabel($label)
     {
         $this->container['label'] = $label;
-
-        return $this;
-    }
-
-    /**
-     * Gets translations
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\Translation[]|null
-     */
-    public function getTranslations()
-    {
-        return $this->container['translations'];
-    }
-
-    /**
-     * Sets translations
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\Translation[]|null $translations Value labels in available languages.
-     *
-     * @return self
-     */
-    public function setTranslations($translations)
-    {
-        $this->container['translations'] = $translations;
-
-        return $this;
-    }
-
-    /**
-     * Gets systemName
-     *
-     * @return string|null
-     */
-    public function getSystemName()
-    {
-        return $this->container['systemName'];
-    }
-
-    /**
-     * Sets systemName
-     *
-     * @param string|null $systemName systemName
-     *
-     * @return self
-     */
-    public function setSystemName($systemName)
-    {
-        $this->container['systemName'] = $systemName;
 
         return $this;
     }
