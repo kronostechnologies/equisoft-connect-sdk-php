@@ -115,6 +115,290 @@ class RemoteAccountApi
     }
 
     /**
+     * Operation getMailAccountAccessRights
+     *
+     * Return the mail account access rights granted to the currently connected user account.
+     *
+     * @param  string $remoteAccountId Remote account id. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\AccessRights|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+     */
+    public function getMailAccountAccessRights($remoteAccountId)
+    {
+        list($response) = $this->getMailAccountAccessRightsWithHttpInfo($remoteAccountId);
+        return $response;
+    }
+
+    /**
+     * Operation getMailAccountAccessRightsWithHttpInfo
+     *
+     * Return the mail account access rights granted to the currently connected user account.
+     *
+     * @param  string $remoteAccountId Remote account id. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\AccessRights|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getMailAccountAccessRightsWithHttpInfo($remoteAccountId)
+    {
+        $request = $this->getMailAccountAccessRightsRequest($remoteAccountId);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\AccessRights' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\AccessRights', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\AccessRights';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\AccessRights',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getMailAccountAccessRightsAsync
+     *
+     * Return the mail account access rights granted to the currently connected user account.
+     *
+     * @param  string $remoteAccountId Remote account id. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getMailAccountAccessRightsAsync($remoteAccountId)
+    {
+        return $this->getMailAccountAccessRightsAsyncWithHttpInfo($remoteAccountId)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getMailAccountAccessRightsAsyncWithHttpInfo
+     *
+     * Return the mail account access rights granted to the currently connected user account.
+     *
+     * @param  string $remoteAccountId Remote account id. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getMailAccountAccessRightsAsyncWithHttpInfo($remoteAccountId)
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\AccessRights';
+        $request = $this->getMailAccountAccessRightsRequest($remoteAccountId);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getMailAccountAccessRights'
+     *
+     * @param  string $remoteAccountId Remote account id. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function getMailAccountAccessRightsRequest($remoteAccountId)
+    {
+        // verify the required parameter 'remoteAccountId' is set
+        if ($remoteAccountId === null || (is_array($remoteAccountId) && count($remoteAccountId) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $remoteAccountId when calling getMailAccountAccessRights'
+            );
+        }
+
+        $resourcePath = '/crm/api/v1/mailAccounts/{remoteAccountId}/accessRights';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if ($remoteAccountId !== null) {
+            $resourcePath = str_replace(
+                '{' . 'remoteAccountId' . '}',
+                ObjectSerializer::toPathValue($remoteAccountId),
+                $resourcePath
+            );
+        }
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation synchronizeCalendars
      *
      * Synchronize calendars with remote account

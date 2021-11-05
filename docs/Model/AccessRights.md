@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**read** | **bool** | User can read the record. |
 **write** | **bool** | User can perform modifications request on the record. |
 **delete** | **bool** | User can delete the record. |
 

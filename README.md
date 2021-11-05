@@ -130,6 +130,7 @@ Class | Method | HTTP request | Description
 *MovementApi* | [**getMovementStatus**](docs/Api/MovementApi.md#getmovementstatus) | **GET** /crm/api/v1/movements/{movementId}/status | 
 *MovementApi* | [**listMovements**](docs/Api/MovementApi.md#listmovements) | **GET** /crm/api/v1/movements | 
 *MxApi* | [**validateRecipients**](docs/Api/MxApi.md#validaterecipients) | **POST** /crm/api/app/mail/validateRecipients | Validate recipients
+*RemoteAccountApi* | [**getMailAccountAccessRights**](docs/Api/RemoteAccountApi.md#getmailaccountaccessrights) | **GET** /crm/api/v1/mailAccounts/{remoteAccountId}/accessRights | Return the mail account access rights granted to the currently connected user account.
 *RemoteAccountApi* | [**synchronizeCalendars**](docs/Api/RemoteAccountApi.md#synchronizecalendars) | **POST** /crm/api/agenda/account/calendarSync | Synchronize calendars with remote account
 *RemoteAccountApi* | [**synchronizeTasks**](docs/Api/RemoteAccountApi.md#synchronizetasks) | **POST** /crm/api/agenda/account/tasksSync | Synchronize tasks with remote account
 *TasksApi* | [**archiveTaskInternalNote**](docs/Api/TasksApi.md#archivetaskinternalnote) | **POST** /crm/api/v1/tasks/{taskId}/notes/{noteId}/archive | Archive an internal note for a task.
