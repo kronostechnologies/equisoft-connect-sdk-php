@@ -1,6 +1,6 @@
 <?php
 /**
- * FieldValueTest
+ * LegacyFinancePlanSummaryTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * FieldValueTest Class Doc Comment
+ * LegacyFinancePlanSummaryTest Class Doc Comment
  *
  * @category    Class
- * @description FieldValue
+ * @description LegacyFinancePlanSummary
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class FieldValueTest extends TestCase
+class LegacyFinancePlanSummaryTest extends TestCase
 {
 
     /**
@@ -71,45 +71,63 @@ class FieldValueTest extends TestCase
     }
 
     /**
-     * Test "FieldValue"
+     * Test "LegacyFinancePlanSummary"
      */
-    public function testFieldValue()
+    public function testLegacyFinancePlanSummary()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "name"
      */
-    public function testPropertyId()
+    public function testPropertyName()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "label"
+     * Test attribute "category"
      */
-    public function testPropertyLabel()
+    public function testPropertyCategory()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "translations"
+     * Test attribute "marketValue"
      */
-    public function testPropertyTranslations()
+    public function testPropertyMarketValue()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "systemName"
+     * Test attribute "marketValueDate"
      */
-    public function testPropertySystemName()
+    public function testPropertyMarketValueDate()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "showWarning"
+     */
+    public function testPropertyShowWarning()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "foreignCurrency"
+     */
+    public function testPropertyForeignCurrency()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

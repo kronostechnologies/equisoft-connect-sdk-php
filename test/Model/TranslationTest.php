@@ -1,6 +1,6 @@
 <?php
 /**
- * FieldValueTest
+ * TranslationTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * FieldValueTest Class Doc Comment
+ * TranslationTest Class Doc Comment
  *
  * @category    Class
- * @description FieldValue
+ * @description Translation
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class FieldValueTest extends TestCase
+class TranslationTest extends TestCase
 {
 
     /**
@@ -71,18 +71,18 @@ class FieldValueTest extends TestCase
     }
 
     /**
-     * Test "FieldValue"
+     * Test "Translation"
      */
-    public function testFieldValue()
+    public function testTranslation()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "locale"
      */
-    public function testPropertyId()
+    public function testPropertyLocale()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -92,24 +92,6 @@ class FieldValueTest extends TestCase
      * Test attribute "label"
      */
     public function testPropertyLabel()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "translations"
-     */
-    public function testPropertyTranslations()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "systemName"
-     */
-    public function testPropertySystemName()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

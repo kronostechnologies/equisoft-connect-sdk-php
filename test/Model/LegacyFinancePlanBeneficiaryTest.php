@@ -1,6 +1,6 @@
 <?php
 /**
- * FieldValueTest
+ * LegacyFinancePlanBeneficiaryTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * FieldValueTest Class Doc Comment
+ * LegacyFinancePlanBeneficiaryTest Class Doc Comment
  *
  * @category    Class
- * @description FieldValue
+ * @description LegacyFinancePlanBeneficiary
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class FieldValueTest extends TestCase
+class LegacyFinancePlanBeneficiaryTest extends TestCase
 {
 
     /**
@@ -71,45 +71,63 @@ class FieldValueTest extends TestCase
     }
 
     /**
-     * Test "FieldValue"
+     * Test "LegacyFinancePlanBeneficiary"
      */
-    public function testFieldValue()
+    public function testLegacyFinancePlanBeneficiary()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "name"
      */
-    public function testPropertyId()
+    public function testPropertyName()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "label"
+     * Test attribute "heirAtLaw"
      */
-    public function testPropertyLabel()
+    public function testPropertyHeirAtLaw()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "translations"
+     * Test attribute "familyConnection"
      */
-    public function testPropertyTranslations()
+    public function testPropertyFamilyConnection()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "systemName"
+     * Test attribute "percentage"
      */
-    public function testPropertySystemName()
+    public function testPropertyPercentage()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "revocable"
+     */
+    public function testPropertyRevocable()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "notes"
+     */
+    public function testPropertyNotes()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

@@ -1,6 +1,6 @@
 <?php
 /**
- * FieldValueTest
+ * LegacyFinancePlanInTrustTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * FieldValueTest Class Doc Comment
+ * LegacyFinancePlanInTrustTest Class Doc Comment
  *
  * @category    Class
- * @description FieldValue
+ * @description LegacyFinancePlanInTrust
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class FieldValueTest extends TestCase
+class LegacyFinancePlanInTrustTest extends TestCase
 {
 
     /**
@@ -71,45 +71,18 @@ class FieldValueTest extends TestCase
     }
 
     /**
-     * Test "FieldValue"
+     * Test "LegacyFinancePlanInTrust"
      */
-    public function testFieldValue()
+    public function testLegacyFinancePlanInTrust()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "name"
      */
-    public function testPropertyId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "label"
-     */
-    public function testPropertyLabel()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "translations"
-     */
-    public function testPropertyTranslations()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "systemName"
-     */
-    public function testPropertySystemName()
+    public function testPropertyName()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

@@ -1,6 +1,6 @@
 <?php
 /**
- * FieldValueTest
+ * LegacyFinanceTransactionTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * FieldValueTest Class Doc Comment
+ * LegacyFinanceTransactionTest Class Doc Comment
  *
  * @category    Class
- * @description FieldValue
+ * @description LegacyFinanceTransaction
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class FieldValueTest extends TestCase
+class LegacyFinanceTransactionTest extends TestCase
 {
 
     /**
@@ -71,45 +71,72 @@ class FieldValueTest extends TestCase
     }
 
     /**
-     * Test "FieldValue"
+     * Test "LegacyFinanceTransaction"
      */
-    public function testFieldValue()
+    public function testLegacyFinanceTransaction()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "type"
      */
-    public function testPropertyId()
+    public function testPropertyType()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "label"
+     * Test attribute "description"
      */
-    public function testPropertyLabel()
+    public function testPropertyDescription()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "translations"
+     * Test attribute "netAmount"
      */
-    public function testPropertyTranslations()
+    public function testPropertyNetAmount()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "systemName"
+     * Test attribute "unitPrice"
      */
-    public function testPropertySystemName()
+    public function testPropertyUnitPrice()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "units"
+     */
+    public function testPropertyUnits()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "unitBalance"
+     */
+    public function testPropertyUnitBalance()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "dateTransaction"
+     */
+    public function testPropertyDateTransaction()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

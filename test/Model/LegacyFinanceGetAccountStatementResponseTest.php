@@ -1,6 +1,6 @@
 <?php
 /**
- * FieldValueTest
+ * LegacyFinanceGetAccountStatementResponseTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * FieldValueTest Class Doc Comment
+ * LegacyFinanceGetAccountStatementResponseTest Class Doc Comment
  *
  * @category    Class
- * @description FieldValue
+ * @description LegacyFinanceGetAccountStatementResponse
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class FieldValueTest extends TestCase
+class LegacyFinanceGetAccountStatementResponseTest extends TestCase
 {
 
     /**
@@ -71,45 +71,45 @@ class FieldValueTest extends TestCase
     }
 
     /**
-     * Test "FieldValue"
+     * Test "LegacyFinanceGetAccountStatementResponse"
      */
-    public function testFieldValue()
+    public function testLegacyFinanceGetAccountStatementResponse()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "stat"
      */
-    public function testPropertyId()
+    public function testPropertyStat()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "label"
+     * Test attribute "errorCode"
      */
-    public function testPropertyLabel()
+    public function testPropertyErrorCode()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "translations"
+     * Test attribute "errorMsg"
      */
-    public function testPropertyTranslations()
+    public function testPropertyErrorMsg()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "systemName"
+     * Test attribute "accountStatement"
      */
-    public function testPropertySystemName()
+    public function testPropertyAccountStatement()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

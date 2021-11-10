@@ -120,6 +120,8 @@ Class | Method | HTTP request | Description
 *LegacyDocumentApi* | [**getDocumentList**](docs/Api/LegacyDocumentApi.md#getdocumentlist) | **GET** /apps/api/kronos.document.getList | Get a list of all documents. This will return basic information about the document.
 *LegacyDocumentApi* | [**updateDocument**](docs/Api/LegacyDocumentApi.md#updatedocument) | **POST** /apps/api/kronos.document.update | Update a document.
 *LegacyDocumentApi* | [**uploadDocumentFile**](docs/Api/LegacyDocumentApi.md#uploaddocumentfile) | **POST** /apps/api/kronos.document.uploadFile | Upload a new file in a document
+*LegacyFinanceApi* | [**getAccountStatement**](docs/Api/LegacyFinanceApi.md#getaccountstatement) | **GET** /apps/api/kronos.finance.getAccountStatement | Get Account Statement information for a contact.
+*LegacyFinanceApi* | [**getLiabilities**](docs/Api/LegacyFinanceApi.md#getliabilities) | **GET** /apps/api/kronos.finance.getLiabilities | Get Liabilities information for a contact.
 *LegacyProvisioningApi* | [**getOrganization**](docs/Api/LegacyProvisioningApi.md#getorganization) | **GET** /apps/provisioning/kronos.provisioning.getOrganization | Get all informations about an organization.
 *LegacyProvisioningApi* | [**getOrganizationList**](docs/Api/LegacyProvisioningApi.md#getorganizationlist) | **GET** /apps/provisioning/kronos.provisioning.getOrganizationList | List all organizations
 *MovementApi* | [**addMovement**](docs/Api/MovementApi.md#addmovement) | **POST** /crm/api/v1/movements | 
@@ -128,6 +130,7 @@ Class | Method | HTTP request | Description
 *MovementApi* | [**getMovementStatus**](docs/Api/MovementApi.md#getmovementstatus) | **GET** /crm/api/v1/movements/{movementId}/status | 
 *MovementApi* | [**listMovements**](docs/Api/MovementApi.md#listmovements) | **GET** /crm/api/v1/movements | 
 *MxApi* | [**validateRecipients**](docs/Api/MxApi.md#validaterecipients) | **POST** /crm/api/app/mail/validateRecipients | Validate recipients
+*RemoteAccountApi* | [**getMailAccountAccessRights**](docs/Api/RemoteAccountApi.md#getmailaccountaccessrights) | **GET** /crm/api/v1/mailAccounts/{remoteAccountId}/accessRights | Return the mail account access rights granted to the currently connected user account.
 *RemoteAccountApi* | [**synchronizeCalendars**](docs/Api/RemoteAccountApi.md#synchronizecalendars) | **POST** /crm/api/agenda/account/calendarSync | Synchronize calendars with remote account
 *RemoteAccountApi* | [**synchronizeTasks**](docs/Api/RemoteAccountApi.md#synchronizetasks) | **POST** /crm/api/agenda/account/tasksSync | Synchronize tasks with remote account
 *TasksApi* | [**archiveTaskInternalNote**](docs/Api/TasksApi.md#archivetaskinternalnote) | **POST** /crm/api/v1/tasks/{taskId}/notes/{noteId}/archive | Archive an internal note for a task.
@@ -243,6 +246,22 @@ Class | Method | HTTP request | Description
 - [LegacyDocumentGetResponse](docs/Model/LegacyDocumentGetResponse.md)
 - [LegacyDocumentGetResponseAllOf](docs/Model/LegacyDocumentGetResponseAllOf.md)
 - [LegacyDocumentUploadDocumentFileRequest](docs/Model/LegacyDocumentUploadDocumentFileRequest.md)
+- [LegacyFinanceAccountStatement](docs/Model/LegacyFinanceAccountStatement.md)
+- [LegacyFinanceAsset](docs/Model/LegacyFinanceAsset.md)
+- [LegacyFinanceGetAccountStatementResponse](docs/Model/LegacyFinanceGetAccountStatementResponse.md)
+- [LegacyFinanceGetAccountStatementResponseAllOf](docs/Model/LegacyFinanceGetAccountStatementResponseAllOf.md)
+- [LegacyFinanceGetLiabilitiesResponse](docs/Model/LegacyFinanceGetLiabilitiesResponse.md)
+- [LegacyFinanceGetLiabilitiesResponseAllOf](docs/Model/LegacyFinanceGetLiabilitiesResponseAllOf.md)
+- [LegacyFinanceLiability](docs/Model/LegacyFinanceLiability.md)
+- [LegacyFinancePlan](docs/Model/LegacyFinancePlan.md)
+- [LegacyFinancePlanBeneficiary](docs/Model/LegacyFinancePlanBeneficiary.md)
+- [LegacyFinancePlanInTrust](docs/Model/LegacyFinancePlanInTrust.md)
+- [LegacyFinancePlanSummary](docs/Model/LegacyFinancePlanSummary.md)
+- [LegacyFinancePolicy](docs/Model/LegacyFinancePolicy.md)
+- [LegacyFinancePolicyCoverage](docs/Model/LegacyFinancePolicyCoverage.md)
+- [LegacyFinancePolicyCoverageInsured](docs/Model/LegacyFinancePolicyCoverageInsured.md)
+- [LegacyFinancePolicyCoverageOption](docs/Model/LegacyFinancePolicyCoverageOption.md)
+- [LegacyFinanceTransaction](docs/Model/LegacyFinanceTransaction.md)
 - [LegacyProvisioningGetOrganizationListResponse](docs/Model/LegacyProvisioningGetOrganizationListResponse.md)
 - [LegacyProvisioningGetOrganizationListResponseAllOf](docs/Model/LegacyProvisioningGetOrganizationListResponseAllOf.md)
 - [LegacyProvisioningGetOrganizationResponse](docs/Model/LegacyProvisioningGetOrganizationResponse.md)
@@ -306,6 +325,7 @@ Class | Method | HTTP request | Description
 - [TasksTask](docs/Model/TasksTask.md)
 - [TasksTransferToCompletedResponse](docs/Model/TasksTransferToCompletedResponse.md)
 - [TasksVisibilityType](docs/Model/TasksVisibilityType.md)
+- [Translation](docs/Model/Translation.md)
 - [UsersListUsersResponse](docs/Model/UsersListUsersResponse.md)
 - [UsersUser](docs/Model/UsersUser.md)
 
@@ -340,5 +360,5 @@ vendor/bin/phpunit
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
 - API version: `latest`
-    - Package version: `10.9.7`
+    - Package version: `10.9.8-SNAPSHOT`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

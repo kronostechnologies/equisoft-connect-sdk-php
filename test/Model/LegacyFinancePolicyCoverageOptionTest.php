@@ -1,6 +1,6 @@
 <?php
 /**
- * FieldValueTest
+ * LegacyFinancePolicyCoverageOptionTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * FieldValueTest Class Doc Comment
+ * LegacyFinancePolicyCoverageOptionTest Class Doc Comment
  *
  * @category    Class
- * @description FieldValue
+ * @description LegacyFinancePolicyCoverageOption
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class FieldValueTest extends TestCase
+class LegacyFinancePolicyCoverageOptionTest extends TestCase
 {
 
     /**
@@ -71,45 +71,45 @@ class FieldValueTest extends TestCase
     }
 
     /**
-     * Test "FieldValue"
+     * Test "LegacyFinancePolicyCoverageOption"
      */
-    public function testFieldValue()
+    public function testLegacyFinancePolicyCoverageOption()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "description"
      */
-    public function testPropertyId()
+    public function testPropertyDescription()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "label"
+     * Test attribute "amount"
      */
-    public function testPropertyLabel()
+    public function testPropertyAmount()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "translations"
+     * Test attribute "percentage"
      */
-    public function testPropertyTranslations()
+    public function testPropertyPercentage()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "systemName"
+     * Test attribute "notes"
      */
-    public function testPropertySystemName()
+    public function testPropertyNotes()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

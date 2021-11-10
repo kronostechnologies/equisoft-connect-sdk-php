@@ -1,6 +1,6 @@
 <?php
 /**
- * FieldValueTest
+ * LegacyFinanceGetLiabilitiesResponseAllOfTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * FieldValueTest Class Doc Comment
+ * LegacyFinanceGetLiabilitiesResponseAllOfTest Class Doc Comment
  *
  * @category    Class
- * @description FieldValue
+ * @description LegacyFinanceGetLiabilitiesResponseAllOf
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class FieldValueTest extends TestCase
+class LegacyFinanceGetLiabilitiesResponseAllOfTest extends TestCase
 {
 
     /**
@@ -71,45 +71,18 @@ class FieldValueTest extends TestCase
     }
 
     /**
-     * Test "FieldValue"
+     * Test "LegacyFinanceGetLiabilitiesResponseAllOf"
      */
-    public function testFieldValue()
+    public function testLegacyFinanceGetLiabilitiesResponseAllOf()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "liabilities"
      */
-    public function testPropertyId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "label"
-     */
-    public function testPropertyLabel()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "translations"
-     */
-    public function testPropertyTranslations()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "systemName"
-     */
-    public function testPropertySystemName()
+    public function testPropertyLiabilities()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
