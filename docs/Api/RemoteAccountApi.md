@@ -4,64 +4,9 @@ All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getMailAccountAccessRights()**](RemoteAccountApi.md#getMailAccountAccessRights) | **GET** /crm/api/v1/mailAccounts/{remoteAccountId}/accessRights | Return the mail account access rights granted to the currently connected user account.
 [**synchronizeCalendars()**](RemoteAccountApi.md#synchronizeCalendars) | **POST** /crm/api/agenda/account/calendarSync | Synchronize calendars with remote account
 [**synchronizeTasks()**](RemoteAccountApi.md#synchronizeTasks) | **POST** /crm/api/agenda/account/tasksSync | Synchronize tasks with remote account
 
-
-## `getMailAccountAccessRights()`
-
-```php
-getMailAccountAccessRights($remoteAccountId): \Equisoft\SDK\EquisoftConnect\Model\AccessRights
-```
-
-Return the mail account access rights granted to the currently connected user account.
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
-$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\RemoteAccountApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$remoteAccountId = 'remoteAccountId_example'; // string | Remote account id.
-
-try {
-    $result = $apiInstance->getMailAccountAccessRights($remoteAccountId);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling RemoteAccountApi->getMailAccountAccessRights: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **remoteAccountId** | **string**| Remote account id. |
-
-### Return type
-
-[**\Equisoft\SDK\EquisoftConnect\Model\AccessRights**](../Model/AccessRights.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
 
 ## `synchronizeCalendars()`
 

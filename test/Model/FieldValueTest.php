@@ -96,22 +96,4 @@ class FieldValueTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
-
-    /**
-     * Test attribute "translations"
-     */
-    public function testPropertyTranslations()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "systemName"
-     */
-    public function testPropertySystemName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
 }

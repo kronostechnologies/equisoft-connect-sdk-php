@@ -60,9 +60,7 @@ class FieldValue implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'label' => 'string',
-        'translations' => '\Equisoft\SDK\EquisoftConnect\Model\Translation[]',
-        'systemName' => 'string'
+        'label' => 'string'
     ];
 
     /**
@@ -74,9 +72,7 @@ class FieldValue implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => null,
-        'label' => null,
-        'translations' => null,
-        'systemName' => null
+        'label' => null
     ];
 
     /**
@@ -107,9 +103,7 @@ class FieldValue implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'label' => 'label',
-        'translations' => 'translations',
-        'systemName' => 'systemName'
+        'label' => 'label'
     ];
 
     /**
@@ -119,9 +113,7 @@ class FieldValue implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'label' => 'setLabel',
-        'translations' => 'setTranslations',
-        'systemName' => 'setSystemName'
+        'label' => 'setLabel'
     ];
 
     /**
@@ -131,9 +123,7 @@ class FieldValue implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'label' => 'getLabel',
-        'translations' => 'getTranslations',
-        'systemName' => 'getSystemName'
+        'label' => 'getLabel'
     ];
 
     /**
@@ -195,8 +185,6 @@ class FieldValue implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->container['id'] = $data['id'] ?? null;
         $this->container['label'] = $data['label'] ?? null;
-        $this->container['translations'] = $data['translations'] ?? null;
-        $this->container['systemName'] = $data['systemName'] ?? null;
     }
 
     /**
@@ -273,54 +261,6 @@ class FieldValue implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setLabel($label)
     {
         $this->container['label'] = $label;
-
-        return $this;
-    }
-
-    /**
-     * Gets translations
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\Translation[]|null
-     */
-    public function getTranslations()
-    {
-        return $this->container['translations'];
-    }
-
-    /**
-     * Sets translations
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\Translation[]|null $translations Value labels in available languages.
-     *
-     * @return self
-     */
-    public function setTranslations($translations)
-    {
-        $this->container['translations'] = $translations;
-
-        return $this;
-    }
-
-    /**
-     * Gets systemName
-     *
-     * @return string|null
-     */
-    public function getSystemName()
-    {
-        return $this->container['systemName'];
-    }
-
-    /**
-     * Sets systemName
-     *
-     * @param string|null $systemName systemName
-     *
-     * @return self
-     */
-    public function setSystemName($systemName)
-    {
-        $this->container['systemName'] = $systemName;
 
         return $this;
     }

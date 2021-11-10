@@ -72,18 +72,6 @@ class RemoteAccountApiTest extends TestCase
     }
 
     /**
-     * Test case for getMailAccountAccessRights
-     *
-     * Return the mail account access rights granted to the currently connected user account..
-     *
-     */
-    public function testGetMailAccountAccessRights()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for synchronizeCalendars
      *
      * Synchronize calendars with remote account.

@@ -59,7 +59,7 @@ class ContactContactIdentification implements ModelInterface, ArrayAccess, \Json
       * @var string[]
       */
     protected static $openAPITypes = [
-        'title' => 'FieldValue',
+        'title' => 'string',
         'gender' => 'string',
         'firstName' => 'string',
         'middleName' => 'string',
@@ -256,7 +256,7 @@ class ContactContactIdentification implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets title
      *
-     * @return FieldValue|null
+     * @return string|null
      */
     public function getTitle()
     {
@@ -266,7 +266,7 @@ class ContactContactIdentification implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets title
      *
-     * @param FieldValue|null $title title
+     * @param string|null $title title
      *
      * @return self
      */

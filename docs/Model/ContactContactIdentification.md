@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**title** | [**FieldValue**](FieldValue.md) |  | [optional]
+**title** | **string** |  | [optional]
 **gender** | **string** |  | [optional]
 **firstName** | **string** |  | [optional]
 **middleName** | **string** |  | [optional]

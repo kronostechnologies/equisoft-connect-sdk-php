@@ -80,15 +80,6 @@ class AccessRightsTest extends TestCase
     }
 
     /**
-     * Test attribute "read"
-     */
-    public function testPropertyRead()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "write"
      */
     public function testPropertyWrite()

@@ -62,7 +62,7 @@ class ContactContactMaritalStatus implements ModelInterface, ArrayAccess, \JsonS
         'id' => 'int',
         'startDate' => '\DateTime',
         'endDate' => '\DateTime',
-        'status' => 'FieldValue',
+        'status' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue',
         'marriageContract' => 'FieldValue'
     ];
 
@@ -304,7 +304,7 @@ class ContactContactMaritalStatus implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets status
      *
-     * @return FieldValue|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null
      */
     public function getStatus()
     {
@@ -314,7 +314,7 @@ class ContactContactMaritalStatus implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets status
      *
-     * @param FieldValue|null $status status
+     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $status status
      *
      * @return self
      */

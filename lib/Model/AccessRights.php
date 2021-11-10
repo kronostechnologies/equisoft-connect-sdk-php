@@ -59,7 +59,6 @@ class AccessRights implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'read' => 'bool',
         'write' => 'bool',
         'delete' => 'bool'
     ];
@@ -72,7 +71,6 @@ class AccessRights implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'read' => null,
         'write' => null,
         'delete' => null
     ];
@@ -104,7 +102,6 @@ class AccessRights implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'read' => 'read',
         'write' => 'write',
         'delete' => 'delete'
     ];
@@ -115,7 +112,6 @@ class AccessRights implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'read' => 'setRead',
         'write' => 'setWrite',
         'delete' => 'setDelete'
     ];
@@ -126,7 +122,6 @@ class AccessRights implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'read' => 'getRead',
         'write' => 'getWrite',
         'delete' => 'getDelete'
     ];
@@ -188,7 +183,6 @@ class AccessRights implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['read'] = $data['read'] ?? null;
         $this->container['write'] = $data['write'] ?? null;
         $this->container['delete'] = $data['delete'] ?? null;
     }
@@ -202,9 +196,6 @@ class AccessRights implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['read'] === null) {
-            $invalidProperties[] = "'read' can't be null";
-        }
         if ($this->container['write'] === null) {
             $invalidProperties[] = "'write' can't be null";
         }
@@ -225,30 +216,6 @@ class AccessRights implements ModelInterface, ArrayAccess, \JsonSerializable
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets read
-     *
-     * @return bool
-     */
-    public function getRead()
-    {
-        return $this->container['read'];
-    }
-
-    /**
-     * Sets read
-     *
-     * @param bool $read User can read the record.
-     *
-     * @return self
-     */
-    public function setRead($read)
-    {
-        $this->container['read'] = $read;
-
-        return $this;
-    }
 
     /**
      * Gets write
