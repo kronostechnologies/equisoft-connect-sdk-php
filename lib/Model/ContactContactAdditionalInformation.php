@@ -67,7 +67,7 @@ class ContactContactAdditionalInformation implements ModelInterface, ArrayAccess
         'facebookLink' => 'string',
         'twitterLink' => 'string',
         'linkedInLink' => 'string',
-        'language' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue',
+        'language' => 'FieldValue',
         'pictureId' => 'int'
     ];
 
@@ -454,7 +454,7 @@ class ContactContactAdditionalInformation implements ModelInterface, ArrayAccess
     /**
      * Gets language
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null
+     * @return FieldValue|null
      */
     public function getLanguage()
     {
@@ -464,7 +464,7 @@ class ContactContactAdditionalInformation implements ModelInterface, ArrayAccess
     /**
      * Sets language
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $language language
+     * @param FieldValue|null $language language
      *
      * @return self
      */

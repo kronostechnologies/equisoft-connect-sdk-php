@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**title** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValue**](FieldValue.md) |  | [optional]
+**title** | [**FieldValue**](FieldValue.md) |  | [optional]
 **gender** | **string** |  | [optional]
 **firstName** | **string** |  | [optional]
 **middleName** | **string** |  | [optional]
