@@ -70,8 +70,8 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
         'lastUpdateDate' => '\DateTime',
         'identification' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactIdentification',
         'additionalInformation' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactAdditionalInformation',
-        'currentMaritalStatus' => 'ContactContactMaritalStatus',
-        'currentOccupation' => 'ContactContactOccupation',
+        'currentMaritalStatus' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactMaritalStatus',
+        'currentOccupation' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactOccupation',
         'segmentation' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactSegmentation',
         'addresses' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactAddress[]',
         'phones' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactPhone[]',
@@ -583,7 +583,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets currentMaritalStatus
      *
-     * @return ContactContactMaritalStatus|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactContactMaritalStatus|null
      */
     public function getCurrentMaritalStatus()
     {
@@ -593,7 +593,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets currentMaritalStatus
      *
-     * @param ContactContactMaritalStatus|null $currentMaritalStatus currentMaritalStatus
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactContactMaritalStatus|null $currentMaritalStatus currentMaritalStatus
      *
      * @return self
      */
@@ -607,7 +607,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets currentOccupation
      *
-     * @return ContactContactOccupation|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactContactOccupation|null
      */
     public function getCurrentOccupation()
     {
@@ -617,7 +617,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets currentOccupation
      *
-     * @param ContactContactOccupation|null $currentOccupation currentOccupation
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactContactOccupation|null $currentOccupation currentOccupation
      *
      * @return self
      */
