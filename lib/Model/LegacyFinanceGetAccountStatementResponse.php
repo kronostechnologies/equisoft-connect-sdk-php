@@ -62,7 +62,7 @@ class LegacyFinanceGetAccountStatementResponse implements ModelInterface, ArrayA
         'stat' => 'string',
         'errorCode' => 'string',
         'errorMsg' => 'string',
-        'accountStatement' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAccountStatement'
+        'accountStatement' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAccountStatement[]'
     ];
 
     /**
@@ -301,7 +301,7 @@ class LegacyFinanceGetAccountStatementResponse implements ModelInterface, ArrayA
     /**
      * Gets accountStatement
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAccountStatement
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAccountStatement[]
      */
     public function getAccountStatement()
     {
@@ -311,7 +311,7 @@ class LegacyFinanceGetAccountStatementResponse implements ModelInterface, ArrayA
     /**
      * Sets accountStatement
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAccountStatement $accountStatement accountStatement
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAccountStatement[] $accountStatement Array of contact
      *
      * @return self
      */

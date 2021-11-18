@@ -59,7 +59,7 @@ class LegacyFinanceGetAccountStatementResponseAllOf implements ModelInterface, A
       * @var string[]
       */
     protected static $openAPITypes = [
-        'accountStatement' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAccountStatement'
+        'accountStatement' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAccountStatement[]'
     ];
 
     /**
@@ -211,7 +211,7 @@ class LegacyFinanceGetAccountStatementResponseAllOf implements ModelInterface, A
     /**
      * Gets accountStatement
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAccountStatement
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAccountStatement[]
      */
     public function getAccountStatement()
     {
@@ -221,7 +221,7 @@ class LegacyFinanceGetAccountStatementResponseAllOf implements ModelInterface, A
     /**
      * Sets accountStatement
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAccountStatement $accountStatement accountStatement
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAccountStatement[] $accountStatement Array of contact
      *
      * @return self
      */
