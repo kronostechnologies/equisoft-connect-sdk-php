@@ -205,6 +205,8 @@ Class | Method | HTTP request | Description
 - [GatewaysCredentials](docs/Model/GatewaysCredentials.md)
 - [GatewaysCredentialsWithSsn](docs/Model/GatewaysCredentialsWithSsn.md)
 - [GatewaysCredentialsWithSsnAllOf](docs/Model/GatewaysCredentialsWithSsnAllOf.md)
+- [GatewaysFullfinanceScrapeJob](docs/Model/GatewaysFullfinanceScrapeJob.md)
+- [GatewaysFullfinanceScrapeJobStatus](docs/Model/GatewaysFullfinanceScrapeJobStatus.md)
 - [GatewaysGatewayName](docs/Model/GatewaysGatewayName.md)
 - [GatewaysGatewayType](docs/Model/GatewaysGatewayType.md)
 - [GatewaysListCredentialsResponse](docs/Model/GatewaysListCredentialsResponse.md)
