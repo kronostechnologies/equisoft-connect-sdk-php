@@ -63,7 +63,6 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
         'password' => 'string',
         'repcode' => 'string',
         'isADealerCode' => 'bool',
-        'dealerSystemName' => 'string',
         'ssnList' => 'string[]'
     ];
 
@@ -79,7 +78,6 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
         'password' => null,
         'repcode' => null,
         'isADealerCode' => null,
-        'dealerSystemName' => null,
         'ssnList' => null
     ];
 
@@ -114,7 +112,6 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
         'password' => 'password',
         'repcode' => 'repcode',
         'isADealerCode' => 'isADealerCode',
-        'dealerSystemName' => 'dealerSystemName',
         'ssnList' => 'ssnList'
     ];
 
@@ -128,7 +125,6 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
         'password' => 'setPassword',
         'repcode' => 'setRepcode',
         'isADealerCode' => 'setIsADealerCode',
-        'dealerSystemName' => 'setDealerSystemName',
         'ssnList' => 'setSsnList'
     ];
 
@@ -142,7 +138,6 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
         'password' => 'getPassword',
         'repcode' => 'getRepcode',
         'isADealerCode' => 'getIsADealerCode',
-        'dealerSystemName' => 'getDealerSystemName',
         'ssnList' => 'getSsnList'
     ];
 
@@ -207,7 +202,6 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
         $this->container['password'] = $data['password'] ?? null;
         $this->container['repcode'] = $data['repcode'] ?? null;
         $this->container['isADealerCode'] = $data['isADealerCode'] ?? null;
-        $this->container['dealerSystemName'] = $data['dealerSystemName'] ?? null;
         $this->container['ssnList'] = $data['ssnList'] ?? null;
     }
 
@@ -333,30 +327,6 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
     public function setIsADealerCode($isADealerCode)
     {
         $this->container['isADealerCode'] = $isADealerCode;
-
-        return $this;
-    }
-
-    /**
-     * Gets dealerSystemName
-     *
-     * @return string|null
-     */
-    public function getDealerSystemName()
-    {
-        return $this->container['dealerSystemName'];
-    }
-
-    /**
-     * Sets dealerSystemName
-     *
-     * @param string|null $dealerSystemName dealerSystemName
-     *
-     * @return self
-     */
-    public function setDealerSystemName($dealerSystemName)
-    {
-        $this->container['dealerSystemName'] = $dealerSystemName;
 
         return $this;
     }
