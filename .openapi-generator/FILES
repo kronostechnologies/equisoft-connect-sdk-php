@@ -71,8 +71,6 @@ docs/Model/GatewaysAccessesUser.md
 docs/Model/GatewaysCredentials.md
 docs/Model/GatewaysCredentialsWithSsn.md
 docs/Model/GatewaysCredentialsWithSsnAllOf.md
-docs/Model/GatewaysFullfinanceScrapeJob.md
-docs/Model/GatewaysFullfinanceScrapeJobStatus.md
 docs/Model/GatewaysGatewayName.md
 docs/Model/GatewaysGatewayType.md
 docs/Model/GatewaysListCredentialsResponse.md
@@ -270,8 +268,6 @@ lib/Model/GatewaysAccessesUser.php
 lib/Model/GatewaysCredentials.php
 lib/Model/GatewaysCredentialsWithSsn.php
 lib/Model/GatewaysCredentialsWithSsnAllOf.php
-lib/Model/GatewaysFullfinanceScrapeJob.php
-lib/Model/GatewaysFullfinanceScrapeJobStatus.php
 lib/Model/GatewaysGatewayName.php
 lib/Model/GatewaysGatewayType.php
 lib/Model/GatewaysListCredentialsResponse.php
@@ -468,8 +464,6 @@ test/Model/GatewaysAccessesUserTest.php
 test/Model/GatewaysCredentialsTest.php
 test/Model/GatewaysCredentialsWithSsnAllOfTest.php
 test/Model/GatewaysCredentialsWithSsnTest.php
-test/Model/GatewaysFullfinanceScrapeJobStatusTest.php
-test/Model/GatewaysFullfinanceScrapeJobTest.php
 test/Model/GatewaysGatewayNameTest.php
 test/Model/GatewaysGatewayTypeTest.php
 test/Model/GatewaysListCredentialsResponseTest.php

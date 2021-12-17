@@ -114,13 +114,4 @@ class GatewaysCredentialsTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
-
-    /**
-     * Test attribute "dealerSystemName"
-     */
-    public function testPropertyDealerSystemName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
 }
