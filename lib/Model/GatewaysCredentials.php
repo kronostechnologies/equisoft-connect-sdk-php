@@ -62,7 +62,8 @@ class GatewaysCredentials implements ModelInterface, ArrayAccess, \JsonSerializa
         'username' => 'string',
         'password' => 'string',
         'repcode' => 'string',
-        'isADealerCode' => 'bool'
+        'isADealerCode' => 'bool',
+        'dealerSystemName' => 'string'
     ];
 
     /**
@@ -76,7 +77,8 @@ class GatewaysCredentials implements ModelInterface, ArrayAccess, \JsonSerializa
         'username' => null,
         'password' => null,
         'repcode' => null,
-        'isADealerCode' => null
+        'isADealerCode' => null,
+        'dealerSystemName' => null
     ];
 
     /**
@@ -109,7 +111,8 @@ class GatewaysCredentials implements ModelInterface, ArrayAccess, \JsonSerializa
         'username' => 'username',
         'password' => 'password',
         'repcode' => 'repcode',
-        'isADealerCode' => 'isADealerCode'
+        'isADealerCode' => 'isADealerCode',
+        'dealerSystemName' => 'dealerSystemName'
     ];
 
     /**
@@ -121,7 +124,8 @@ class GatewaysCredentials implements ModelInterface, ArrayAccess, \JsonSerializa
         'username' => 'setUsername',
         'password' => 'setPassword',
         'repcode' => 'setRepcode',
-        'isADealerCode' => 'setIsADealerCode'
+        'isADealerCode' => 'setIsADealerCode',
+        'dealerSystemName' => 'setDealerSystemName'
     ];
 
     /**
@@ -133,7 +137,8 @@ class GatewaysCredentials implements ModelInterface, ArrayAccess, \JsonSerializa
         'username' => 'getUsername',
         'password' => 'getPassword',
         'repcode' => 'getRepcode',
-        'isADealerCode' => 'getIsADealerCode'
+        'isADealerCode' => 'getIsADealerCode',
+        'dealerSystemName' => 'getDealerSystemName'
     ];
 
     /**
@@ -197,6 +202,7 @@ class GatewaysCredentials implements ModelInterface, ArrayAccess, \JsonSerializa
         $this->container['password'] = $data['password'] ?? null;
         $this->container['repcode'] = $data['repcode'] ?? null;
         $this->container['isADealerCode'] = $data['isADealerCode'] ?? null;
+        $this->container['dealerSystemName'] = $data['dealerSystemName'] ?? null;
     }
 
     /**
@@ -321,6 +327,30 @@ class GatewaysCredentials implements ModelInterface, ArrayAccess, \JsonSerializa
     public function setIsADealerCode($isADealerCode)
     {
         $this->container['isADealerCode'] = $isADealerCode;
+
+        return $this;
+    }
+
+    /**
+     * Gets dealerSystemName
+     *
+     * @return string|null
+     */
+    public function getDealerSystemName()
+    {
+        return $this->container['dealerSystemName'];
+    }
+
+    /**
+     * Sets dealerSystemName
+     *
+     * @param string|null $dealerSystemName dealerSystemName
+     *
+     * @return self
+     */
+    public function setDealerSystemName($dealerSystemName)
+    {
+        $this->container['dealerSystemName'] = $dealerSystemName;
 
         return $this;
     }

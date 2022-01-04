@@ -1,6 +1,6 @@
 <?php
 /**
- * GatewaysCredentialsWithSsnTest
+ * GatewaysFullfinanceScrapeJobStatusTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * GatewaysCredentialsWithSsnTest Class Doc Comment
+ * GatewaysFullfinanceScrapeJobStatusTest Class Doc Comment
  *
  * @category    Class
- * @description GatewaysCredentialsWithSsn
+ * @description GatewaysFullfinanceScrapeJobStatus
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class GatewaysCredentialsWithSsnTest extends TestCase
+class GatewaysFullfinanceScrapeJobStatusTest extends TestCase
 {
 
     /**
@@ -71,63 +71,9 @@ class GatewaysCredentialsWithSsnTest extends TestCase
     }
 
     /**
-     * Test "GatewaysCredentialsWithSsn"
+     * Test "GatewaysFullfinanceScrapeJobStatus"
      */
-    public function testGatewaysCredentialsWithSsn()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "username"
-     */
-    public function testPropertyUsername()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "password"
-     */
-    public function testPropertyPassword()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "repcode"
-     */
-    public function testPropertyRepcode()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "isADealerCode"
-     */
-    public function testPropertyIsADealerCode()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "dealerSystemName"
-     */
-    public function testPropertyDealerSystemName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "ssnList"
-     */
-    public function testPropertySsnList()
+    public function testGatewaysFullfinanceScrapeJobStatus()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

@@ -1,6 +1,6 @@
 <?php
 /**
- * GatewaysCredentialsWithSsnTest
+ * GatewaysFullfinanceScrapeJobTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * GatewaysCredentialsWithSsnTest Class Doc Comment
+ * GatewaysFullfinanceScrapeJobTest Class Doc Comment
  *
  * @category    Class
- * @description GatewaysCredentialsWithSsn
+ * @description GatewaysFullfinanceScrapeJob
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class GatewaysCredentialsWithSsnTest extends TestCase
+class GatewaysFullfinanceScrapeJobTest extends TestCase
 {
 
     /**
@@ -71,63 +71,45 @@ class GatewaysCredentialsWithSsnTest extends TestCase
     }
 
     /**
-     * Test "GatewaysCredentialsWithSsn"
+     * Test "GatewaysFullfinanceScrapeJob"
      */
-    public function testGatewaysCredentialsWithSsn()
+    public function testGatewaysFullfinanceScrapeJob()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "username"
+     * Test attribute "id"
      */
-    public function testPropertyUsername()
+    public function testPropertyId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "password"
+     * Test attribute "completionDate"
      */
-    public function testPropertyPassword()
+    public function testPropertyCompletionDate()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "repcode"
+     * Test attribute "creationDate"
      */
-    public function testPropertyRepcode()
+    public function testPropertyCreationDate()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "isADealerCode"
+     * Test attribute "status"
      */
-    public function testPropertyIsADealerCode()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "dealerSystemName"
-     */
-    public function testPropertyDealerSystemName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "ssnList"
-     */
-    public function testPropertySsnList()
+    public function testPropertyStatus()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
