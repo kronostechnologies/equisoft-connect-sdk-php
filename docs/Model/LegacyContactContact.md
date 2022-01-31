@@ -16,9 +16,5 @@ Name | Type | Description | Notes
 **corporationName** | **string** | first line of corporation name (Organization) | [optional]
 **corporationNameLine2** | **string** | second line of corporation name (Organization) | [optional]
 **rank** | **string** | rank of the contact. (Industrial Alliance only) | [optional]
-**facebookLink** | **string** |  | [optional]
-**twitterLink** | **string** |  | [optional]
-**linkedinLink** | **string** |  | [optional]
-**avatar** | **int** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
