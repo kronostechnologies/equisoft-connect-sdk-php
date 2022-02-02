@@ -188,42 +188,6 @@ class LegacyContactContactPayloadItemTest extends TestCase
     }
 
     /**
-     * Test attribute "facebookLink"
-     */
-    public function testPropertyFacebookLink()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "twitterLink"
-     */
-    public function testPropertyTwitterLink()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "linkedinLink"
-     */
-    public function testPropertyLinkedinLink()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "avatar"
-     */
-    public function testPropertyAvatar()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "externalKey"
      */
     public function testPropertyExternalKey()

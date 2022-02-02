@@ -71,10 +71,6 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
         'corporationName' => 'string',
         'corporationNameLine2' => 'string',
         'rank' => 'string',
-        'facebookLink' => 'string',
-        'twitterLink' => 'string',
-        'linkedinLink' => 'string',
-        'avatar' => 'int',
         'externalKey' => 'string',
         'externalKeyType' => 'string',
         'gender' => 'string',
@@ -142,10 +138,6 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
         'corporationName' => null,
         'corporationNameLine2' => null,
         'rank' => null,
-        'facebookLink' => null,
-        'twitterLink' => null,
-        'linkedinLink' => null,
-        'avatar' => null,
         'externalKey' => null,
         'externalKeyType' => null,
         'gender' => null,
@@ -232,10 +224,6 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
         'corporationName' => 'corporationName',
         'corporationNameLine2' => 'corporationNameLine2',
         'rank' => 'rank',
-        'facebookLink' => 'facebookLink',
-        'twitterLink' => 'twitterLink',
-        'linkedinLink' => 'linkedinLink',
-        'avatar' => 'avatar',
         'externalKey' => 'externalKey',
         'externalKeyType' => 'externalKeyType',
         'gender' => 'gender',
@@ -301,10 +289,6 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
         'corporationName' => 'setCorporationName',
         'corporationNameLine2' => 'setCorporationNameLine2',
         'rank' => 'setRank',
-        'facebookLink' => 'setFacebookLink',
-        'twitterLink' => 'setTwitterLink',
-        'linkedinLink' => 'setLinkedinLink',
-        'avatar' => 'setAvatar',
         'externalKey' => 'setExternalKey',
         'externalKeyType' => 'setExternalKeyType',
         'gender' => 'setGender',
@@ -370,10 +354,6 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
         'corporationName' => 'getCorporationName',
         'corporationNameLine2' => 'getCorporationNameLine2',
         'rank' => 'getRank',
-        'facebookLink' => 'getFacebookLink',
-        'twitterLink' => 'getTwitterLink',
-        'linkedinLink' => 'getLinkedinLink',
-        'avatar' => 'getAvatar',
         'externalKey' => 'getExternalKey',
         'externalKeyType' => 'getExternalKeyType',
         'gender' => 'getGender',
@@ -490,10 +470,6 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
         $this->container['corporationName'] = $data['corporationName'] ?? null;
         $this->container['corporationNameLine2'] = $data['corporationNameLine2'] ?? null;
         $this->container['rank'] = $data['rank'] ?? null;
-        $this->container['facebookLink'] = $data['facebookLink'] ?? null;
-        $this->container['twitterLink'] = $data['twitterLink'] ?? null;
-        $this->container['linkedinLink'] = $data['linkedinLink'] ?? null;
-        $this->container['avatar'] = $data['avatar'] ?? null;
         $this->container['externalKey'] = $data['externalKey'] ?? null;
         $this->container['externalKeyType'] = $data['externalKeyType'] ?? null;
         $this->container['gender'] = $data['gender'] ?? null;
@@ -849,102 +825,6 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     public function setRank($rank)
     {
         $this->container['rank'] = $rank;
-
-        return $this;
-    }
-
-    /**
-     * Gets facebookLink
-     *
-     * @return string|null
-     */
-    public function getFacebookLink()
-    {
-        return $this->container['facebookLink'];
-    }
-
-    /**
-     * Sets facebookLink
-     *
-     * @param string|null $facebookLink facebookLink
-     *
-     * @return self
-     */
-    public function setFacebookLink($facebookLink)
-    {
-        $this->container['facebookLink'] = $facebookLink;
-
-        return $this;
-    }
-
-    /**
-     * Gets twitterLink
-     *
-     * @return string|null
-     */
-    public function getTwitterLink()
-    {
-        return $this->container['twitterLink'];
-    }
-
-    /**
-     * Sets twitterLink
-     *
-     * @param string|null $twitterLink twitterLink
-     *
-     * @return self
-     */
-    public function setTwitterLink($twitterLink)
-    {
-        $this->container['twitterLink'] = $twitterLink;
-
-        return $this;
-    }
-
-    /**
-     * Gets linkedinLink
-     *
-     * @return string|null
-     */
-    public function getLinkedinLink()
-    {
-        return $this->container['linkedinLink'];
-    }
-
-    /**
-     * Sets linkedinLink
-     *
-     * @param string|null $linkedinLink linkedinLink
-     *
-     * @return self
-     */
-    public function setLinkedinLink($linkedinLink)
-    {
-        $this->container['linkedinLink'] = $linkedinLink;
-
-        return $this;
-    }
-
-    /**
-     * Gets avatar
-     *
-     * @return int|null
-     */
-    public function getAvatar()
-    {
-        return $this->container['avatar'];
-    }
-
-    /**
-     * Sets avatar
-     *
-     * @param int|null $avatar avatar
-     *
-     * @return self
-     */
-    public function setAvatar($avatar)
-    {
-        $this->container['avatar'] = $avatar;
 
         return $this;
     }
