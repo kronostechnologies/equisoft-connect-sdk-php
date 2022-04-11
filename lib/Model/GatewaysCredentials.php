@@ -296,7 +296,7 @@ class GatewaysCredentials implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets repcode
      *
-     * @param string|null $repcode repcode
+     * @param string|null $repcode | null
      *
      * @return self
      */

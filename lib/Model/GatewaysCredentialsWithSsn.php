@@ -302,7 +302,7 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets repcode
      *
-     * @param string|null $repcode repcode
+     * @param string|null $repcode | null
      *
      * @return self
      */
