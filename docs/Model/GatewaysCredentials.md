@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **username** | **string** | | null |
 **password** | **string** | | null |
-**repcode** | **string** |  | [optional]
+**repcode** | **string** | | null | [optional]
 **isADealerCode** | **bool** |  | [optional]
 **dealerSystemName** | **string** |  | [optional]
 
