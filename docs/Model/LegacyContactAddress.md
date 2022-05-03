@@ -20,6 +20,6 @@ Name | Type | Description | Notes
 **extType** | **string** | Industrielle Alliance Only | [optional]
 **extNumber** | **string** | Industrielle Alliance Only | [optional]
 **notes** | **string** |  | [optional]
-**locked** | **string** | true or false | [optional]
+**locked** | **string** | address is locked or not (true or false) | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -59,14 +59,14 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string',
         'sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
         'sourceUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
         'destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
         'destinationUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
         'capsil' => 'bool',
         'univeris' => 'bool',
-        'dataphile' => 'bool'
+        'dataphile' => 'bool',
+        'type' => 'string'
     ];
 
     /**
@@ -77,14 +77,14 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'type' => null,
         'sourceDatabase' => null,
         'sourceUser' => null,
         'destinationDatabase' => null,
         'destinationUser' => null,
         'capsil' => null,
         'univeris' => null,
-        'dataphile' => null
+        'dataphile' => null,
+        'type' => null
     ];
 
     /**
@@ -114,14 +114,14 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type',
         'sourceDatabase' => 'sourceDatabase',
         'sourceUser' => 'sourceUser',
         'destinationDatabase' => 'destinationDatabase',
         'destinationUser' => 'destinationUser',
         'capsil' => 'capsil',
         'univeris' => 'univeris',
-        'dataphile' => 'dataphile'
+        'dataphile' => 'dataphile',
+        'type' => 'type'
     ];
 
     /**
@@ -130,14 +130,14 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType',
         'sourceDatabase' => 'setSourceDatabase',
         'sourceUser' => 'setSourceUser',
         'destinationDatabase' => 'setDestinationDatabase',
         'destinationUser' => 'setDestinationUser',
         'capsil' => 'setCapsil',
         'univeris' => 'setUniveris',
-        'dataphile' => 'setDataphile'
+        'dataphile' => 'setDataphile',
+        'type' => 'setType'
     ];
 
     /**
@@ -146,14 +146,14 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType',
         'sourceDatabase' => 'getSourceDatabase',
         'sourceUser' => 'getSourceUser',
         'destinationDatabase' => 'getDestinationDatabase',
         'destinationUser' => 'getDestinationUser',
         'capsil' => 'getCapsil',
         'univeris' => 'getUniveris',
-        'dataphile' => 'getDataphile'
+        'dataphile' => 'getDataphile',
+        'type' => 'getType'
     ];
 
     /**
@@ -226,7 +226,6 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
      */
     public function __construct(array $data = null)
     {
-        $this->container['type'] = $data['type'] ?? self::TYPE_CLIENTBASE_USING_FILE;
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['sourceUser'] = $data['sourceUser'] ?? null;
         $this->container['destinationDatabase'] = $data['destinationDatabase'] ?? null;
@@ -234,6 +233,7 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
         $this->container['capsil'] = $data['capsil'] ?? null;
         $this->container['univeris'] = $data['univeris'] ?? null;
         $this->container['dataphile'] = $data['dataphile'] ?? null;
+        $this->container['type'] = $data['type'] ?? self::TYPE_CLIENTBASE_USING_FILE;
     }
 
     /**
@@ -245,9 +245,6 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
     {
         $invalidProperties = [];
 
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
         $allowedValues = $this->getTypeAllowableValues();
         if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -257,18 +254,6 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
             );
         }
 
-        if ($this->container['sourceDatabase'] === null) {
-            $invalidProperties[] = "'sourceDatabase' can't be null";
-        }
-        if ($this->container['sourceUser'] === null) {
-            $invalidProperties[] = "'sourceUser' can't be null";
-        }
-        if ($this->container['destinationDatabase'] === null) {
-            $invalidProperties[] = "'destinationDatabase' can't be null";
-        }
-        if ($this->container['destinationUser'] === null) {
-            $invalidProperties[] = "'destinationUser' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -285,43 +270,9 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
 
 
     /**
-     * Gets type
-     *
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param string $type type
-     *
-     * @return self
-     */
-    public function setType($type)
-    {
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!in_array($type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'type', must be one of '%s'",
-                    $type,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
      * Gets sourceDatabase
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null
      */
     public function getSourceDatabase()
     {
@@ -331,7 +282,7 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
     /**
      * Sets sourceDatabase
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase $sourceDatabase sourceDatabase
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null $sourceDatabase sourceDatabase
      *
      * @return self
      */
@@ -345,7 +296,7 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
     /**
      * Gets sourceUser
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null
      */
     public function getSourceUser()
     {
@@ -355,7 +306,7 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
     /**
      * Sets sourceUser
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser $sourceUser sourceUser
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null $sourceUser sourceUser
      *
      * @return self
      */
@@ -369,7 +320,7 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
     /**
      * Gets destinationDatabase
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null
      */
     public function getDestinationDatabase()
     {
@@ -379,7 +330,7 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
     /**
      * Sets destinationDatabase
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase $destinationDatabase destinationDatabase
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null $destinationDatabase destinationDatabase
      *
      * @return self
      */
@@ -393,7 +344,7 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
     /**
      * Gets destinationUser
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null
      */
     public function getDestinationUser()
     {
@@ -403,7 +354,7 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
     /**
      * Sets destinationUser
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser $destinationUser destinationUser
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null $destinationUser destinationUser
      *
      * @return self
      */
@@ -482,6 +433,40 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
     public function setDataphile($dataphile)
     {
         $this->container['dataphile'] = $dataphile;
+
+        return $this;
+    }
+
+    /**
+     * Gets type
+     *
+     * @return string|null
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param string|null $type type
+     *
+     * @return self
+     */
+    public function setType($type)
+    {
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!is_null($type) && !in_array($type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'type', must be one of '%s'",
+                    $type,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['type'] = $type;
 
         return $this;
     }
