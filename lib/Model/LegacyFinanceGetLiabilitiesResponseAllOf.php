@@ -190,6 +190,9 @@ class LegacyFinanceGetLiabilitiesResponseAllOf implements ModelInterface, ArrayA
     {
         $invalidProperties = [];
 
+        if ($this->container['liabilities'] === null) {
+            $invalidProperties[] = "'liabilities' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -208,7 +211,7 @@ class LegacyFinanceGetLiabilitiesResponseAllOf implements ModelInterface, ArrayA
     /**
      * Gets liabilities
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceLiability[]|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceLiability[]
      */
     public function getLiabilities()
     {
@@ -218,7 +221,7 @@ class LegacyFinanceGetLiabilitiesResponseAllOf implements ModelInterface, ArrayA
     /**
      * Sets liabilities
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceLiability[]|null $liabilities liabilities
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceLiability[] $liabilities liabilities
      *
      * @return self
      */

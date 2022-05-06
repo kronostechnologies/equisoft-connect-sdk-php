@@ -59,10 +59,10 @@ class LegacyProvisioningGetOrganizationListResponse implements ModelInterface, A
       * @var string[]
       */
     protected static $openAPITypes = [
-        'organizations' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem[]',
         'stat' => 'string',
         'errorCode' => 'string',
-        'errorMsg' => 'string'
+        'errorMsg' => 'string',
+        'organizations' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem[]'
     ];
 
     /**
@@ -73,10 +73,10 @@ class LegacyProvisioningGetOrganizationListResponse implements ModelInterface, A
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'organizations' => null,
         'stat' => null,
         'errorCode' => null,
-        'errorMsg' => null
+        'errorMsg' => null,
+        'organizations' => null
     ];
 
     /**
@@ -106,10 +106,10 @@ class LegacyProvisioningGetOrganizationListResponse implements ModelInterface, A
      * @var string[]
      */
     protected static $attributeMap = [
-        'organizations' => 'organizations',
         'stat' => 'stat',
         'errorCode' => 'error_code',
-        'errorMsg' => 'error_msg'
+        'errorMsg' => 'error_msg',
+        'organizations' => 'organizations'
     ];
 
     /**
@@ -118,10 +118,10 @@ class LegacyProvisioningGetOrganizationListResponse implements ModelInterface, A
      * @var string[]
      */
     protected static $setters = [
-        'organizations' => 'setOrganizations',
         'stat' => 'setStat',
         'errorCode' => 'setErrorCode',
-        'errorMsg' => 'setErrorMsg'
+        'errorMsg' => 'setErrorMsg',
+        'organizations' => 'setOrganizations'
     ];
 
     /**
@@ -130,10 +130,10 @@ class LegacyProvisioningGetOrganizationListResponse implements ModelInterface, A
      * @var string[]
      */
     protected static $getters = [
-        'organizations' => 'getOrganizations',
         'stat' => 'getStat',
         'errorCode' => 'getErrorCode',
-        'errorMsg' => 'getErrorMsg'
+        'errorMsg' => 'getErrorMsg',
+        'organizations' => 'getOrganizations'
     ];
 
     /**
@@ -193,10 +193,10 @@ class LegacyProvisioningGetOrganizationListResponse implements ModelInterface, A
      */
     public function __construct(array $data = null)
     {
-        $this->container['organizations'] = $data['organizations'] ?? null;
         $this->container['stat'] = $data['stat'] ?? null;
         $this->container['errorCode'] = $data['errorCode'] ?? null;
         $this->container['errorMsg'] = $data['errorMsg'] ?? null;
+        $this->container['organizations'] = $data['organizations'] ?? null;
     }
 
     /**
@@ -225,30 +225,6 @@ class LegacyProvisioningGetOrganizationListResponse implements ModelInterface, A
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets organizations
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem[]
-     */
-    public function getOrganizations()
-    {
-        return $this->container['organizations'];
-    }
-
-    /**
-     * Sets organizations
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem[] $organizations List of organization
-     *
-     * @return self
-     */
-    public function setOrganizations($organizations)
-    {
-        $this->container['organizations'] = $organizations;
-
-        return $this;
-    }
 
     /**
      * Gets stat
@@ -318,6 +294,30 @@ class LegacyProvisioningGetOrganizationListResponse implements ModelInterface, A
     public function setErrorMsg($errorMsg)
     {
         $this->container['errorMsg'] = $errorMsg;
+
+        return $this;
+    }
+
+    /**
+     * Gets organizations
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem[]
+     */
+    public function getOrganizations()
+    {
+        return $this->container['organizations'];
+    }
+
+    /**
+     * Sets organizations
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem[] $organizations List of organization
+     *
+     * @return self
+     */
+    public function setOrganizations($organizations)
+    {
+        $this->container['organizations'] = $organizations;
 
         return $this;
     }

@@ -35,7 +35,6 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * LegacyDocumentDocumentPayloadItem Class Doc Comment
  *
  * @category Class
- * @description Payload needed by the kronos.document.add method {@example addDocumentUpload.xml} payload example
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -60,6 +59,8 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess, 
       * @var string[]
       */
     protected static $openAPITypes = [
+        'files' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentBase64FilePayloadItem[]',
+        'contacts' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyContactContactPayloadItem[]',
         'externalKey' => 'string',
         'dateStart' => 'string',
         'dateEnd' => 'string',
@@ -70,9 +71,7 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess, 
         'id' => 'string',
         'type' => 'string',
         'subType' => 'string',
-        'name' => 'string',
-        'files' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentBase64FilePayloadItem[]',
-        'contacts' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyContactContactPayloadItem[]'
+        'name' => 'string'
     ];
 
     /**
@@ -83,6 +82,8 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess, 
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'files' => null,
+        'contacts' => null,
         'externalKey' => null,
         'dateStart' => null,
         'dateEnd' => null,
@@ -93,9 +94,7 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess, 
         'id' => null,
         'type' => null,
         'subType' => null,
-        'name' => null,
-        'files' => null,
-        'contacts' => null
+        'name' => null
     ];
 
     /**
@@ -125,6 +124,8 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess, 
      * @var string[]
      */
     protected static $attributeMap = [
+        'files' => 'files',
+        'contacts' => 'contacts',
         'externalKey' => 'externalKey',
         'dateStart' => 'dateStart',
         'dateEnd' => 'dateEnd',
@@ -135,9 +136,7 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess, 
         'id' => 'id',
         'type' => 'type',
         'subType' => 'subType',
-        'name' => 'name',
-        'files' => 'files',
-        'contacts' => 'contacts'
+        'name' => 'name'
     ];
 
     /**
@@ -146,6 +145,8 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess, 
      * @var string[]
      */
     protected static $setters = [
+        'files' => 'setFiles',
+        'contacts' => 'setContacts',
         'externalKey' => 'setExternalKey',
         'dateStart' => 'setDateStart',
         'dateEnd' => 'setDateEnd',
@@ -156,9 +157,7 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess, 
         'id' => 'setId',
         'type' => 'setType',
         'subType' => 'setSubType',
-        'name' => 'setName',
-        'files' => 'setFiles',
-        'contacts' => 'setContacts'
+        'name' => 'setName'
     ];
 
     /**
@@ -167,6 +166,8 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess, 
      * @var string[]
      */
     protected static $getters = [
+        'files' => 'getFiles',
+        'contacts' => 'getContacts',
         'externalKey' => 'getExternalKey',
         'dateStart' => 'getDateStart',
         'dateEnd' => 'getDateEnd',
@@ -177,9 +178,7 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess, 
         'id' => 'getId',
         'type' => 'getType',
         'subType' => 'getSubType',
-        'name' => 'getName',
-        'files' => 'getFiles',
-        'contacts' => 'getContacts'
+        'name' => 'getName'
     ];
 
     /**
@@ -239,6 +238,8 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess, 
      */
     public function __construct(array $data = null)
     {
+        $this->container['files'] = $data['files'] ?? null;
+        $this->container['contacts'] = $data['contacts'] ?? null;
         $this->container['externalKey'] = $data['externalKey'] ?? null;
         $this->container['dateStart'] = $data['dateStart'] ?? null;
         $this->container['dateEnd'] = $data['dateEnd'] ?? null;
@@ -250,8 +251,6 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess, 
         $this->container['type'] = $data['type'] ?? null;
         $this->container['subType'] = $data['subType'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
-        $this->container['files'] = $data['files'] ?? null;
-        $this->container['contacts'] = $data['contacts'] ?? null;
     }
 
     /**
@@ -277,6 +276,54 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess, 
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets files
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentBase64FilePayloadItem[]|null
+     */
+    public function getFiles()
+    {
+        return $this->container['files'];
+    }
+
+    /**
+     * Sets files
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentBase64FilePayloadItem[]|null $files Files contained inside the document
+     *
+     * @return self
+     */
+    public function setFiles($files)
+    {
+        $this->container['files'] = $files;
+
+        return $this;
+    }
+
+    /**
+     * Gets contacts
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyContactContactPayloadItem[]|null
+     */
+    public function getContacts()
+    {
+        return $this->container['contacts'];
+    }
+
+    /**
+     * Sets contacts
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyContactContactPayloadItem[]|null $contacts List of linked contacts
+     *
+     * @return self
+     */
+    public function setContacts($contacts)
+    {
+        $this->container['contacts'] = $contacts;
+
+        return $this;
+    }
 
     /**
      * Gets externalKey
@@ -538,54 +585,6 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess, 
     public function setName($name)
     {
         $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets files
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentBase64FilePayloadItem[]|null
-     */
-    public function getFiles()
-    {
-        return $this->container['files'];
-    }
-
-    /**
-     * Sets files
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentBase64FilePayloadItem[]|null $files Files contained inside the document
-     *
-     * @return self
-     */
-    public function setFiles($files)
-    {
-        $this->container['files'] = $files;
-
-        return $this;
-    }
-
-    /**
-     * Gets contacts
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyContactContactPayloadItem[]|null
-     */
-    public function getContacts()
-    {
-        return $this->container['contacts'];
-    }
-
-    /**
-     * Sets contacts
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyContactContactPayloadItem[]|null $contacts List of linked contacts
-     *
-     * @return self
-     */
-    public function setContacts($contacts)
-    {
-        $this->container['contacts'] = $contacts;
 
         return $this;
     }

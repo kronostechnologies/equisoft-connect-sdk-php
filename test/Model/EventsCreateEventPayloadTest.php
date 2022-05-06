@@ -80,6 +80,24 @@ class EventsCreateEventPayloadTest extends TestCase
     }
 
     /**
+     * Test attribute "calendarId"
+     */
+    public function testPropertyCalendarId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "ownerIds"
+     */
+    public function testPropertyOwnerIds()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "subject"
      */
     public function testPropertySubject()
@@ -200,24 +218,6 @@ class EventsCreateEventPayloadTest extends TestCase
      * Test attribute "contactIds"
      */
     public function testPropertyContactIds()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "calendarId"
-     */
-    public function testPropertyCalendarId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "ownerIds"
-     */
-    public function testPropertyOwnerIds()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

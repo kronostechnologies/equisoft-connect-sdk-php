@@ -35,7 +35,6 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * LegacyDocumentBase64FilePayload Class Doc Comment
  *
  * @category Class
- * @description Payload needed by the kronos.document.uploadFile method {@example uploadFilePayload.xml} payload example
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech

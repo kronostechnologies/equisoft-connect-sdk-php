@@ -190,6 +190,9 @@ class LegacyFinanceGetAccountStatementResponseAllOf implements ModelInterface, A
     {
         $invalidProperties = [];
 
+        if ($this->container['accountStatement'] === null) {
+            $invalidProperties[] = "'accountStatement' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -208,7 +211,7 @@ class LegacyFinanceGetAccountStatementResponseAllOf implements ModelInterface, A
     /**
      * Gets accountStatement
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAccountStatement|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAccountStatement
      */
     public function getAccountStatement()
     {
@@ -218,7 +221,7 @@ class LegacyFinanceGetAccountStatementResponseAllOf implements ModelInterface, A
     /**
      * Sets accountStatement
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAccountStatement|null $accountStatement accountStatement
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAccountStatement $accountStatement accountStatement
      *
      * @return self
      */

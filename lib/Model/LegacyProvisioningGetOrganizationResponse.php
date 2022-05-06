@@ -59,10 +59,10 @@ class LegacyProvisioningGetOrganizationResponse implements ModelInterface, Array
       * @var string[]
       */
     protected static $openAPITypes = [
-        'organization' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem',
         'stat' => 'string',
         'errorCode' => 'string',
-        'errorMsg' => 'string'
+        'errorMsg' => 'string',
+        'organization' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem'
     ];
 
     /**
@@ -73,10 +73,10 @@ class LegacyProvisioningGetOrganizationResponse implements ModelInterface, Array
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'organization' => null,
         'stat' => null,
         'errorCode' => null,
-        'errorMsg' => null
+        'errorMsg' => null,
+        'organization' => null
     ];
 
     /**
@@ -106,10 +106,10 @@ class LegacyProvisioningGetOrganizationResponse implements ModelInterface, Array
      * @var string[]
      */
     protected static $attributeMap = [
-        'organization' => 'organization',
         'stat' => 'stat',
         'errorCode' => 'error_code',
-        'errorMsg' => 'error_msg'
+        'errorMsg' => 'error_msg',
+        'organization' => 'organization'
     ];
 
     /**
@@ -118,10 +118,10 @@ class LegacyProvisioningGetOrganizationResponse implements ModelInterface, Array
      * @var string[]
      */
     protected static $setters = [
-        'organization' => 'setOrganization',
         'stat' => 'setStat',
         'errorCode' => 'setErrorCode',
-        'errorMsg' => 'setErrorMsg'
+        'errorMsg' => 'setErrorMsg',
+        'organization' => 'setOrganization'
     ];
 
     /**
@@ -130,10 +130,10 @@ class LegacyProvisioningGetOrganizationResponse implements ModelInterface, Array
      * @var string[]
      */
     protected static $getters = [
-        'organization' => 'getOrganization',
         'stat' => 'getStat',
         'errorCode' => 'getErrorCode',
-        'errorMsg' => 'getErrorMsg'
+        'errorMsg' => 'getErrorMsg',
+        'organization' => 'getOrganization'
     ];
 
     /**
@@ -193,10 +193,10 @@ class LegacyProvisioningGetOrganizationResponse implements ModelInterface, Array
      */
     public function __construct(array $data = null)
     {
-        $this->container['organization'] = $data['organization'] ?? null;
         $this->container['stat'] = $data['stat'] ?? null;
         $this->container['errorCode'] = $data['errorCode'] ?? null;
         $this->container['errorMsg'] = $data['errorMsg'] ?? null;
+        $this->container['organization'] = $data['organization'] ?? null;
     }
 
     /**
@@ -225,30 +225,6 @@ class LegacyProvisioningGetOrganizationResponse implements ModelInterface, Array
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets organization
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem
-     */
-    public function getOrganization()
-    {
-        return $this->container['organization'];
-    }
-
-    /**
-     * Sets organization
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem $organization organization
-     *
-     * @return self
-     */
-    public function setOrganization($organization)
-    {
-        $this->container['organization'] = $organization;
-
-        return $this;
-    }
 
     /**
      * Gets stat
@@ -318,6 +294,30 @@ class LegacyProvisioningGetOrganizationResponse implements ModelInterface, Array
     public function setErrorMsg($errorMsg)
     {
         $this->container['errorMsg'] = $errorMsg;
+
+        return $this;
+    }
+
+    /**
+     * Gets organization
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem
+     */
+    public function getOrganization()
+    {
+        return $this->container['organization'];
+    }
+
+    /**
+     * Sets organization
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem $organization organization
+     *
+     * @return self
+     */
+    public function setOrganization($organization)
+    {
+        $this->container['organization'] = $organization;
 
         return $this;
     }

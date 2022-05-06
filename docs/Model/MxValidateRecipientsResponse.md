@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**invalidRecipients** | [**\Equisoft\SDK\EquisoftConnect\Model\MxRecipient[]**](MxRecipient.md) |  |
+**invalidRecipients** | [**\Equisoft\SDK\EquisoftConnect\Model\MxRecipient[]**](MxRecipient.md) | invalidRecipients |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

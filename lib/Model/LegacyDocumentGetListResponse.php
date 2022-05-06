@@ -35,7 +35,6 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * LegacyDocumentGetListResponse Class Doc Comment
  *
  * @category Class
- * @description Response datatype returned by the kronos.document.getList method  Response example: {@example getListDocumentResponse.xml}
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -60,10 +59,10 @@ class LegacyDocumentGetListResponse implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'documents' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentListItem[]',
         'stat' => 'string',
         'errorCode' => 'string',
-        'errorMsg' => 'string'
+        'errorMsg' => 'string',
+        'documents' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentListItem[]'
     ];
 
     /**
@@ -74,10 +73,10 @@ class LegacyDocumentGetListResponse implements ModelInterface, ArrayAccess, \Jso
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'documents' => null,
         'stat' => null,
         'errorCode' => null,
-        'errorMsg' => null
+        'errorMsg' => null,
+        'documents' => null
     ];
 
     /**
@@ -107,10 +106,10 @@ class LegacyDocumentGetListResponse implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $attributeMap = [
-        'documents' => 'documents',
         'stat' => 'stat',
         'errorCode' => 'error_code',
-        'errorMsg' => 'error_msg'
+        'errorMsg' => 'error_msg',
+        'documents' => 'documents'
     ];
 
     /**
@@ -119,10 +118,10 @@ class LegacyDocumentGetListResponse implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $setters = [
-        'documents' => 'setDocuments',
         'stat' => 'setStat',
         'errorCode' => 'setErrorCode',
-        'errorMsg' => 'setErrorMsg'
+        'errorMsg' => 'setErrorMsg',
+        'documents' => 'setDocuments'
     ];
 
     /**
@@ -131,10 +130,10 @@ class LegacyDocumentGetListResponse implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $getters = [
-        'documents' => 'getDocuments',
         'stat' => 'getStat',
         'errorCode' => 'getErrorCode',
-        'errorMsg' => 'getErrorMsg'
+        'errorMsg' => 'getErrorMsg',
+        'documents' => 'getDocuments'
     ];
 
     /**
@@ -194,10 +193,10 @@ class LegacyDocumentGetListResponse implements ModelInterface, ArrayAccess, \Jso
      */
     public function __construct(array $data = null)
     {
-        $this->container['documents'] = $data['documents'] ?? null;
         $this->container['stat'] = $data['stat'] ?? null;
         $this->container['errorCode'] = $data['errorCode'] ?? null;
         $this->container['errorMsg'] = $data['errorMsg'] ?? null;
+        $this->container['documents'] = $data['documents'] ?? null;
     }
 
     /**
@@ -226,30 +225,6 @@ class LegacyDocumentGetListResponse implements ModelInterface, ArrayAccess, \Jso
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets documents
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentListItem[]
-     */
-    public function getDocuments()
-    {
-        return $this->container['documents'];
-    }
-
-    /**
-     * Sets documents
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentListItem[] $documents Array of documents
-     *
-     * @return self
-     */
-    public function setDocuments($documents)
-    {
-        $this->container['documents'] = $documents;
-
-        return $this;
-    }
 
     /**
      * Gets stat
@@ -319,6 +294,30 @@ class LegacyDocumentGetListResponse implements ModelInterface, ArrayAccess, \Jso
     public function setErrorMsg($errorMsg)
     {
         $this->container['errorMsg'] = $errorMsg;
+
+        return $this;
+    }
+
+    /**
+     * Gets documents
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentListItem[]
+     */
+    public function getDocuments()
+    {
+        return $this->container['documents'];
+    }
+
+    /**
+     * Sets documents
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentListItem[] $documents Array of documents
+     *
+     * @return self
+     */
+    public function setDocuments($documents)
+    {
+        $this->container['documents'] = $documents;
 
         return $this;
     }

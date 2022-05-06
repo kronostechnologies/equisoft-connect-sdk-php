@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**sourceDatabase** | **string** |  | [optional]
-**sourceUser** | **string** |  | [optional]
+**type** | **string** |  | [default to TYPE_CLIENTBASE_USING_DISTLIST]
+**sourceDatabase** | **string** |  |
+**sourceUser** | **string** |  |
 **sourceDistributionList** | **string** |  | [optional]
-**destinationDatabase** | **string** |  | [optional]
-**destinationUser** | **string** |  | [optional]
+**destinationDatabase** | **string** |  |
+**destinationUser** | **string** |  |
 **datagatewayAccessMappings** | **array<string,string>** |  | [optional]
-**transferOption** | **string** |  | [optional]
-**type** | **string** |  | [optional] [default to TYPE_CLIENTBASE_USING_DISTLIST]
+**transferOption** | **string** |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

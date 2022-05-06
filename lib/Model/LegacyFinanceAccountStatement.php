@@ -35,7 +35,6 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * LegacyFinanceAccountStatement Class Doc Comment
  *
  * @category Class
- * @description Response datatype returned by the kronos.finance.getAccountStatement method
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
