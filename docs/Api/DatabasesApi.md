@@ -191,7 +191,7 @@ Name | Type | Description  | Notes
 ## `updateUser()`
 
 ```php
-updateUser($uuid, $id, $usersUpdateUserPayload)
+updateUser($uuid, $id, $usersUpdateUserPayload): object
 ```
 
 
@@ -218,7 +218,8 @@ $id = 56; // int
 $usersUpdateUserPayload = new \Equisoft\SDK\EquisoftConnect\Model\UsersUpdateUserPayload(); // \Equisoft\SDK\EquisoftConnect\Model\UsersUpdateUserPayload
 
 try {
-    $apiInstance->updateUser($uuid, $id, $usersUpdateUserPayload);
+    $result = $apiInstance->updateUser($uuid, $id, $usersUpdateUserPayload);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DatabasesApi->updateUser: ', $e->getMessage(), PHP_EOL;
 }
@@ -234,7 +235,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
