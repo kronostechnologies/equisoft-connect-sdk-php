@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * LegacyDocumentBase64FilePayloadTest Class Doc Comment
  *
  * @category    Class
- * @description LegacyDocumentBase64FilePayload
+ * @description Payload needed by the kronos.document.uploadFile method {@example uploadFilePayload.xml} payload example
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

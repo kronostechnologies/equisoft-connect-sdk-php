@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **string** |  | [default to TYPE_MOVE]
-**sourceDatabase** | **string** |  |
-**destinationDatabase** | **string** |  |
-**users** | **string[]** |  |
+**sourceDatabase** | **string** |  | [optional]
+**destinationDatabase** | **string** |  | [optional]
+**users** | **string[]** |  | [optional]
+**type** | **string** |  | [optional] [default to TYPE_MOVE]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **string** |  | [default to TYPE_REASSIGNMENT]
-**sourceDatabase** | **string** |  |
-**sourceUser** | **string** |  |
-**destinationUser** | **string** |  |
-**accessCode** | **string** |  |
+**sourceDatabase** | **string** |  | [optional]
+**sourceUser** | **string** |  | [optional]
+**destinationUser** | **string** |  | [optional]
+**accessCode** | **string** |  | [optional]
+**type** | **string** |  | [optional] [default to TYPE_REASSIGNMENT]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -190,9 +190,6 @@ class LegacyAddUpdateResponseAllOf implements ModelInterface, ArrayAccess, \Json
     {
         $invalidProperties = [];
 
-        if ($this->container['items'] === null) {
-            $invalidProperties[] = "'items' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -211,7 +208,7 @@ class LegacyAddUpdateResponseAllOf implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets items
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyAddUpdateItem[]
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyAddUpdateItem[]|null
      */
     public function getItems()
     {
@@ -221,7 +218,7 @@ class LegacyAddUpdateResponseAllOf implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets items
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyAddUpdateItem[] $items List all items status for the Add or Update operation
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyAddUpdateItem[]|null $items List all items status for the Add or Update operation
      *
      * @return self
      */

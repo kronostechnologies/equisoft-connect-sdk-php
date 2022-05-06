@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * LegacyDocumentDocumentTest Class Doc Comment
  *
  * @category    Class
- * @description LegacyDocumentDocument
+ * @description Payload needed by the kronos.document.add method {@example addDocumentUpload.xml} payload example
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
@@ -74,60 +74,6 @@ class LegacyDocumentDocumentTest extends TestCase
      * Test "LegacyDocumentDocument"
      */
     public function testLegacyDocumentDocument()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "files"
-     */
-    public function testPropertyFiles()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "contacts"
-     */
-    public function testPropertyContacts()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "createdBy"
-     */
-    public function testPropertyCreatedBy()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "createdOn"
-     */
-    public function testPropertyCreatedOn()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "modifiedBy"
-     */
-    public function testPropertyModifiedBy()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "modifiedOn"
-     */
-    public function testPropertyModifiedOn()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -227,6 +173,60 @@ class LegacyDocumentDocumentTest extends TestCase
      * Test attribute "name"
      */
     public function testPropertyName()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "files"
+     */
+    public function testPropertyFiles()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "contacts"
+     */
+    public function testPropertyContacts()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "createdBy"
+     */
+    public function testPropertyCreatedBy()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "createdOn"
+     */
+    public function testPropertyCreatedOn()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "modifiedBy"
+     */
+    public function testPropertyModifiedBy()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "modifiedOn"
+     */
+    public function testPropertyModifiedOn()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

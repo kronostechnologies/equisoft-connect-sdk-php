@@ -698,7 +698,7 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets locked
      *
-     * @param string|null $locked true or false
+     * @param string|null $locked address is locked or not (true or false)
      *
      * @return self
      */

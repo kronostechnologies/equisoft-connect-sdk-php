@@ -59,10 +59,10 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string',
         'sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
         'destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
-        'users' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser[]'
+        'users' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser[]',
+        'type' => 'string'
     ];
 
     /**
@@ -73,10 +73,10 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess, \JsonSer
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'type' => null,
         'sourceDatabase' => null,
         'destinationDatabase' => null,
-        'users' => null
+        'users' => null,
+        'type' => null
     ];
 
     /**
@@ -106,10 +106,10 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type',
         'sourceDatabase' => 'sourceDatabase',
         'destinationDatabase' => 'destinationDatabase',
-        'users' => 'users'
+        'users' => 'users',
+        'type' => 'type'
     ];
 
     /**
@@ -118,10 +118,10 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType',
         'sourceDatabase' => 'setSourceDatabase',
         'destinationDatabase' => 'setDestinationDatabase',
-        'users' => 'setUsers'
+        'users' => 'setUsers',
+        'type' => 'setType'
     ];
 
     /**
@@ -130,10 +130,10 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType',
         'sourceDatabase' => 'getSourceDatabase',
         'destinationDatabase' => 'getDestinationDatabase',
-        'users' => 'getUsers'
+        'users' => 'getUsers',
+        'type' => 'getType'
     ];
 
     /**
@@ -206,10 +206,10 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess, \JsonSer
      */
     public function __construct(array $data = null)
     {
-        $this->container['type'] = $data['type'] ?? self::TYPE_MOVE;
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['destinationDatabase'] = $data['destinationDatabase'] ?? null;
         $this->container['users'] = $data['users'] ?? null;
+        $this->container['type'] = $data['type'] ?? self::TYPE_MOVE;
     }
 
     /**
@@ -221,9 +221,6 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess, \JsonSer
     {
         $invalidProperties = [];
 
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
         $allowedValues = $this->getTypeAllowableValues();
         if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -233,15 +230,6 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess, \JsonSer
             );
         }
 
-        if ($this->container['sourceDatabase'] === null) {
-            $invalidProperties[] = "'sourceDatabase' can't be null";
-        }
-        if ($this->container['destinationDatabase'] === null) {
-            $invalidProperties[] = "'destinationDatabase' can't be null";
-        }
-        if ($this->container['users'] === null) {
-            $invalidProperties[] = "'users' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -258,43 +246,9 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess, \JsonSer
 
 
     /**
-     * Gets type
-     *
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param string $type type
-     *
-     * @return self
-     */
-    public function setType($type)
-    {
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!in_array($type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'type', must be one of '%s'",
-                    $type,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
      * Gets sourceDatabase
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null
      */
     public function getSourceDatabase()
     {
@@ -304,7 +258,7 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets sourceDatabase
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase $sourceDatabase sourceDatabase
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null $sourceDatabase sourceDatabase
      *
      * @return self
      */
@@ -318,7 +272,7 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets destinationDatabase
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null
      */
     public function getDestinationDatabase()
     {
@@ -328,7 +282,7 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets destinationDatabase
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase $destinationDatabase destinationDatabase
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase|null $destinationDatabase destinationDatabase
      *
      * @return self
      */
@@ -342,7 +296,7 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets users
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser[]
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser[]|null
      */
     public function getUsers()
     {
@@ -352,13 +306,47 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets users
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser[] $users users
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser[]|null $users users
      *
      * @return self
      */
     public function setUsers($users)
     {
         $this->container['users'] = $users;
+
+        return $this;
+    }
+
+    /**
+     * Gets type
+     *
+     * @return string|null
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param string|null $type type
+     *
+     * @return self
+     */
+    public function setType($type)
+    {
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!is_null($type) && !in_array($type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'type', must be one of '%s'",
+                    $type,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['type'] = $type;
 
         return $this;
     }
