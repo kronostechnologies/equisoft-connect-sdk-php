@@ -57,10 +57,10 @@ class MovementMoveMovement extends MovementMovement
       * @var string[]
       */
     protected static $openAPITypes = [
+        'type' => 'string',
         'sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
         'destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
-        'users' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser[]',
-        'type' => 'string'
+        'users' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser[]'
     ];
 
     /**
@@ -71,10 +71,10 @@ class MovementMoveMovement extends MovementMovement
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'type' => null,
         'sourceDatabase' => null,
         'destinationDatabase' => null,
-        'users' => null,
-        'type' => null
+        'users' => null
     ];
 
     /**
@@ -104,10 +104,10 @@ class MovementMoveMovement extends MovementMovement
      * @var string[]
      */
     protected static $attributeMap = [
+        'type' => 'type',
         'sourceDatabase' => 'sourceDatabase',
         'destinationDatabase' => 'destinationDatabase',
-        'users' => 'users',
-        'type' => 'type'
+        'users' => 'users'
     ];
 
     /**
@@ -116,10 +116,10 @@ class MovementMoveMovement extends MovementMovement
      * @var string[]
      */
     protected static $setters = [
+        'type' => 'setType',
         'sourceDatabase' => 'setSourceDatabase',
         'destinationDatabase' => 'setDestinationDatabase',
-        'users' => 'setUsers',
-        'type' => 'setType'
+        'users' => 'setUsers'
     ];
 
     /**
@@ -128,10 +128,10 @@ class MovementMoveMovement extends MovementMovement
      * @var string[]
      */
     protected static $getters = [
+        'type' => 'getType',
         'sourceDatabase' => 'getSourceDatabase',
         'destinationDatabase' => 'getDestinationDatabase',
-        'users' => 'getUsers',
-        'type' => 'getType'
+        'users' => 'getUsers'
     ];
 
     /**
@@ -200,10 +200,10 @@ class MovementMoveMovement extends MovementMovement
     {
         parent::__construct($data);
 
+        $this->container['type'] = $data['type'] ?? self::TYPE_MOVE;
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['destinationDatabase'] = $data['destinationDatabase'] ?? null;
         $this->container['users'] = $data['users'] ?? null;
-        $this->container['type'] = $data['type'] ?? self::TYPE_MOVE;
     }
 
     /**
@@ -215,15 +215,6 @@ class MovementMoveMovement extends MovementMovement
     {
         $invalidProperties = parent::listInvalidProperties();
 
-        if ($this->container['sourceDatabase'] === null) {
-            $invalidProperties[] = "'sourceDatabase' can't be null";
-        }
-        if ($this->container['destinationDatabase'] === null) {
-            $invalidProperties[] = "'destinationDatabase' can't be null";
-        }
-        if ($this->container['users'] === null) {
-            $invalidProperties[] = "'users' can't be null";
-        }
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
         }
@@ -236,6 +227,15 @@ class MovementMoveMovement extends MovementMovement
             );
         }
 
+        if ($this->container['sourceDatabase'] === null) {
+            $invalidProperties[] = "'sourceDatabase' can't be null";
+        }
+        if ($this->container['destinationDatabase'] === null) {
+            $invalidProperties[] = "'destinationDatabase' can't be null";
+        }
+        if ($this->container['users'] === null) {
+            $invalidProperties[] = "'users' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -250,6 +250,40 @@ class MovementMoveMovement extends MovementMovement
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets type
+     *
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param string $type type
+     *
+     * @return self
+     */
+    public function setType($type)
+    {
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!in_array($type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'type', must be one of '%s'",
+                    $type,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['type'] = $type;
+
+        return $this;
+    }
 
     /**
      * Gets sourceDatabase
@@ -319,40 +353,6 @@ class MovementMoveMovement extends MovementMovement
     public function setUsers($users)
     {
         $this->container['users'] = $users;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     *
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param string $type type
-     *
-     * @return self
-     */
-    public function setType($type)
-    {
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!in_array($type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'type', must be one of '%s'",
-                    $type,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['type'] = $type;
 
         return $this;
     }

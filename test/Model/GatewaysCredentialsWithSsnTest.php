@@ -80,15 +80,6 @@ class GatewaysCredentialsWithSsnTest extends TestCase
     }
 
     /**
-     * Test attribute "ssnList"
-     */
-    public function testPropertySsnList()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "username"
      */
     public function testPropertyUsername()
@@ -128,6 +119,15 @@ class GatewaysCredentialsWithSsnTest extends TestCase
      * Test attribute "dealerSystemName"
      */
     public function testPropertyDealerSystemName()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "ssnList"
+     */
+    public function testPropertySsnList()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

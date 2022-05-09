@@ -80,6 +80,15 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOfTest extends Te
     }
 
     /**
+     * Test attribute "type"
+     */
+    public function testPropertyType()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "sourceDatabase"
      */
     public function testPropertySourceDatabase()
@@ -137,15 +146,6 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOfTest extends Te
      * Test attribute "transferOption"
      */
     public function testPropertyTransferOption()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "type"
-     */
-    public function testPropertyType()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

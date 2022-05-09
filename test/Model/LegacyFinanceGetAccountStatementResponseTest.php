@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * LegacyFinanceGetAccountStatementResponseTest Class Doc Comment
  *
  * @category    Class
- * @description Response datatype returned by the kronos.finance.getAccountStatement method
+ * @description LegacyFinanceGetAccountStatementResponse
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
@@ -80,15 +80,6 @@ class LegacyFinanceGetAccountStatementResponseTest extends TestCase
     }
 
     /**
-     * Test attribute "accountStatement"
-     */
-    public function testPropertyAccountStatement()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "stat"
      */
     public function testPropertyStat()
@@ -110,6 +101,15 @@ class LegacyFinanceGetAccountStatementResponseTest extends TestCase
      * Test attribute "errorMsg"
      */
     public function testPropertyErrorMsg()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "accountStatement"
+     */
+    public function testPropertyAccountStatement()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
