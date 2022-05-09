@@ -59,8 +59,6 @@ class EventsCreateEventPayload implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'calendarId' => 'string',
-        'ownerIds' => 'int[]',
         'subject' => 'string',
         'start' => '\Equisoft\SDK\EquisoftConnect\Model\DateOrDateTime',
         'end' => '\Equisoft\SDK\EquisoftConnect\Model\DateOrDateTime',
@@ -74,7 +72,9 @@ class EventsCreateEventPayload implements ModelInterface, ArrayAccess, \JsonSeri
         'subCategoryId' => 'int',
         'priority' => 'mixed',
         'visibility' => 'string',
-        'contactIds' => 'int[]'
+        'contactIds' => 'int[]',
+        'calendarId' => 'string',
+        'ownerIds' => 'int[]'
     ];
 
     /**
@@ -85,8 +85,6 @@ class EventsCreateEventPayload implements ModelInterface, ArrayAccess, \JsonSeri
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'calendarId' => null,
-        'ownerIds' => null,
         'subject' => null,
         'start' => null,
         'end' => null,
@@ -100,7 +98,9 @@ class EventsCreateEventPayload implements ModelInterface, ArrayAccess, \JsonSeri
         'subCategoryId' => null,
         'priority' => null,
         'visibility' => null,
-        'contactIds' => null
+        'contactIds' => null,
+        'calendarId' => null,
+        'ownerIds' => null
     ];
 
     /**
@@ -130,8 +130,6 @@ class EventsCreateEventPayload implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $attributeMap = [
-        'calendarId' => 'calendarId',
-        'ownerIds' => 'ownerIds',
         'subject' => 'subject',
         'start' => 'start',
         'end' => 'end',
@@ -145,7 +143,9 @@ class EventsCreateEventPayload implements ModelInterface, ArrayAccess, \JsonSeri
         'subCategoryId' => 'subCategoryId',
         'priority' => 'priority',
         'visibility' => 'visibility',
-        'contactIds' => 'contactIds'
+        'contactIds' => 'contactIds',
+        'calendarId' => 'calendarId',
+        'ownerIds' => 'ownerIds'
     ];
 
     /**
@@ -154,8 +154,6 @@ class EventsCreateEventPayload implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $setters = [
-        'calendarId' => 'setCalendarId',
-        'ownerIds' => 'setOwnerIds',
         'subject' => 'setSubject',
         'start' => 'setStart',
         'end' => 'setEnd',
@@ -169,7 +167,9 @@ class EventsCreateEventPayload implements ModelInterface, ArrayAccess, \JsonSeri
         'subCategoryId' => 'setSubCategoryId',
         'priority' => 'setPriority',
         'visibility' => 'setVisibility',
-        'contactIds' => 'setContactIds'
+        'contactIds' => 'setContactIds',
+        'calendarId' => 'setCalendarId',
+        'ownerIds' => 'setOwnerIds'
     ];
 
     /**
@@ -178,8 +178,6 @@ class EventsCreateEventPayload implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $getters = [
-        'calendarId' => 'getCalendarId',
-        'ownerIds' => 'getOwnerIds',
         'subject' => 'getSubject',
         'start' => 'getStart',
         'end' => 'getEnd',
@@ -193,7 +191,9 @@ class EventsCreateEventPayload implements ModelInterface, ArrayAccess, \JsonSeri
         'subCategoryId' => 'getSubCategoryId',
         'priority' => 'getPriority',
         'visibility' => 'getVisibility',
-        'contactIds' => 'getContactIds'
+        'contactIds' => 'getContactIds',
+        'calendarId' => 'getCalendarId',
+        'ownerIds' => 'getOwnerIds'
     ];
 
     /**
@@ -253,8 +253,6 @@ class EventsCreateEventPayload implements ModelInterface, ArrayAccess, \JsonSeri
      */
     public function __construct(array $data = null)
     {
-        $this->container['calendarId'] = $data['calendarId'] ?? null;
-        $this->container['ownerIds'] = $data['ownerIds'] ?? null;
         $this->container['subject'] = $data['subject'] ?? null;
         $this->container['start'] = $data['start'] ?? null;
         $this->container['end'] = $data['end'] ?? null;
@@ -269,6 +267,8 @@ class EventsCreateEventPayload implements ModelInterface, ArrayAccess, \JsonSeri
         $this->container['priority'] = $data['priority'] ?? null;
         $this->container['visibility'] = $data['visibility'] ?? null;
         $this->container['contactIds'] = $data['contactIds'] ?? null;
+        $this->container['calendarId'] = $data['calendarId'] ?? null;
+        $this->container['ownerIds'] = $data['ownerIds'] ?? null;
     }
 
     /**
@@ -303,54 +303,6 @@ class EventsCreateEventPayload implements ModelInterface, ArrayAccess, \JsonSeri
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets calendarId
-     *
-     * @return string|null
-     */
-    public function getCalendarId()
-    {
-        return $this->container['calendarId'];
-    }
-
-    /**
-     * Sets calendarId
-     *
-     * @param string|null $calendarId Calendar the Event will be created for. A numerical ID returned by listCalendars. The string `primary` for the current connected user primary ('TODO') calendar. The string `completed` for the current connected user completed ('DONE') calendar. The `calendarId` parameter can't be used with the `ownerId` parameter.
-     *
-     * @return self
-     */
-    public function setCalendarId($calendarId)
-    {
-        $this->container['calendarId'] = $calendarId;
-
-        return $this;
-    }
-
-    /**
-     * Gets ownerIds
-     *
-     * @return int[]|null
-     */
-    public function getOwnerIds()
-    {
-        return $this->container['ownerIds'];
-    }
-
-    /**
-     * Sets ownerIds
-     *
-     * @param int[]|null $ownerIds For local legacy events, `ownerIds` can be used instead of calendarId to create an Event for many user at once. Cannot be used with `calendarId`. Cannot be used for users with remote calendar (Exchange, Office365, Outlook.com).
-     *
-     * @return self
-     */
-    public function setOwnerIds($ownerIds)
-    {
-        $this->container['ownerIds'] = $ownerIds;
-
-        return $this;
-    }
 
     /**
      * Gets subject
@@ -684,6 +636,54 @@ class EventsCreateEventPayload implements ModelInterface, ArrayAccess, \JsonSeri
     public function setContactIds($contactIds)
     {
         $this->container['contactIds'] = $contactIds;
+
+        return $this;
+    }
+
+    /**
+     * Gets calendarId
+     *
+     * @return string|null
+     */
+    public function getCalendarId()
+    {
+        return $this->container['calendarId'];
+    }
+
+    /**
+     * Sets calendarId
+     *
+     * @param string|null $calendarId Calendar the Event will be created for. A numerical ID returned by listCalendars. The string `primary` for the current connected user primary ('TODO') calendar. The string `completed` for the current connected user completed ('DONE') calendar. The `calendarId` parameter can't be used with the `ownerId` parameter.
+     *
+     * @return self
+     */
+    public function setCalendarId($calendarId)
+    {
+        $this->container['calendarId'] = $calendarId;
+
+        return $this;
+    }
+
+    /**
+     * Gets ownerIds
+     *
+     * @return int[]|null
+     */
+    public function getOwnerIds()
+    {
+        return $this->container['ownerIds'];
+    }
+
+    /**
+     * Sets ownerIds
+     *
+     * @param int[]|null $ownerIds For local legacy events, `ownerIds` can be used instead of calendarId to create an Event for many user at once. Cannot be used with `calendarId`. Cannot be used for users with remote calendar (Exchange, Office365, Outlook.com).
+     *
+     * @return self
+     */
+    public function setOwnerIds($ownerIds)
+    {
+        $this->container['ownerIds'] = $ownerIds;
 
         return $this;
     }

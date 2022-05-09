@@ -106,4 +106,16 @@ class DatabasesApiTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test case for updateUser
+     *
+     * .
+     *
+     */
+    public function testUpdateUser()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

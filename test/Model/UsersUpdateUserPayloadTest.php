@@ -1,6 +1,6 @@
 <?php
 /**
- * MovementMoveMovementPayloadTest
+ * UsersUpdateUserPayloadTest
  *
  * PHP version 7.3
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * MovementMoveMovementPayloadTest Class Doc Comment
+ * UsersUpdateUserPayloadTest Class Doc Comment
  *
  * @category    Class
- * @description MovementMoveMovementPayload
+ * @description UsersUpdateUserPayload
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class MovementMoveMovementPayloadTest extends TestCase
+class UsersUpdateUserPayloadTest extends TestCase
 {
 
     /**
@@ -71,45 +71,18 @@ class MovementMoveMovementPayloadTest extends TestCase
     }
 
     /**
-     * Test "MovementMoveMovementPayload"
+     * Test "UsersUpdateUserPayload"
      */
-    public function testMovementMoveMovementPayload()
+    public function testUsersUpdateUserPayload()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "sourceDatabase"
+     * Test attribute "role"
      */
-    public function testPropertySourceDatabase()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "destinationDatabase"
-     */
-    public function testPropertyDestinationDatabase()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "users"
-     */
-    public function testPropertyUsers()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "type"
-     */
-    public function testPropertyType()
+    public function testPropertyRole()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

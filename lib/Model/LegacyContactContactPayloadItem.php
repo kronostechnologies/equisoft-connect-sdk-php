@@ -59,22 +59,6 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'string',
-        'uuid' => 'string',
-        'typeContact' => 'string',
-        'indOrg' => 'string',
-        'displayName' => 'string',
-        'firstName' => 'string',
-        'nickname' => 'string',
-        'middleName' => 'string',
-        'lastName' => 'string',
-        'corporationName' => 'string',
-        'corporationNameLine2' => 'string',
-        'rank' => 'string',
-        'facebookLink' => 'string',
-        'twitterLink' => 'string',
-        'linkedinLink' => 'string',
-        'avatar' => 'int',
         'externalKey' => 'string',
         'externalKeyType' => 'string',
         'gender' => 'string',
@@ -119,7 +103,23 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
         'orgFedNo' => 'string',
         'orgProvNo' => 'string',
         'orgStateId' => 'string',
-        'orgEin' => 'string'
+        'orgEin' => 'string',
+        'id' => 'string',
+        'uuid' => 'string',
+        'typeContact' => 'string',
+        'indOrg' => 'string',
+        'displayName' => 'string',
+        'firstName' => 'string',
+        'nickname' => 'string',
+        'middleName' => 'string',
+        'lastName' => 'string',
+        'corporationName' => 'string',
+        'corporationNameLine2' => 'string',
+        'rank' => 'string',
+        'facebookLink' => 'string',
+        'twitterLink' => 'string',
+        'linkedinLink' => 'string',
+        'avatar' => 'int'
     ];
 
     /**
@@ -130,22 +130,6 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null,
-        'uuid' => null,
-        'typeContact' => null,
-        'indOrg' => null,
-        'displayName' => null,
-        'firstName' => null,
-        'nickname' => null,
-        'middleName' => null,
-        'lastName' => null,
-        'corporationName' => null,
-        'corporationNameLine2' => null,
-        'rank' => null,
-        'facebookLink' => null,
-        'twitterLink' => null,
-        'linkedinLink' => null,
-        'avatar' => null,
         'externalKey' => null,
         'externalKeyType' => null,
         'gender' => null,
@@ -190,7 +174,23 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
         'orgFedNo' => null,
         'orgProvNo' => null,
         'orgStateId' => null,
-        'orgEin' => null
+        'orgEin' => null,
+        'id' => null,
+        'uuid' => null,
+        'typeContact' => null,
+        'indOrg' => null,
+        'displayName' => null,
+        'firstName' => null,
+        'nickname' => null,
+        'middleName' => null,
+        'lastName' => null,
+        'corporationName' => null,
+        'corporationNameLine2' => null,
+        'rank' => null,
+        'facebookLink' => null,
+        'twitterLink' => null,
+        'linkedinLink' => null,
+        'avatar' => null
     ];
 
     /**
@@ -220,22 +220,6 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'uuid' => 'uuid',
-        'typeContact' => 'typeContact',
-        'indOrg' => 'indOrg',
-        'displayName' => 'displayName',
-        'firstName' => 'firstName',
-        'nickname' => 'nickname',
-        'middleName' => 'middleName',
-        'lastName' => 'lastName',
-        'corporationName' => 'corporationName',
-        'corporationNameLine2' => 'corporationNameLine2',
-        'rank' => 'rank',
-        'facebookLink' => 'facebookLink',
-        'twitterLink' => 'twitterLink',
-        'linkedinLink' => 'linkedinLink',
-        'avatar' => 'avatar',
         'externalKey' => 'externalKey',
         'externalKeyType' => 'externalKeyType',
         'gender' => 'gender',
@@ -280,7 +264,23 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
         'orgFedNo' => 'orgFedNo',
         'orgProvNo' => 'orgProvNo',
         'orgStateId' => 'orgStateId',
-        'orgEin' => 'orgEin'
+        'orgEin' => 'orgEin',
+        'id' => 'id',
+        'uuid' => 'uuid',
+        'typeContact' => 'typeContact',
+        'indOrg' => 'indOrg',
+        'displayName' => 'displayName',
+        'firstName' => 'firstName',
+        'nickname' => 'nickname',
+        'middleName' => 'middleName',
+        'lastName' => 'lastName',
+        'corporationName' => 'corporationName',
+        'corporationNameLine2' => 'corporationNameLine2',
+        'rank' => 'rank',
+        'facebookLink' => 'facebookLink',
+        'twitterLink' => 'twitterLink',
+        'linkedinLink' => 'linkedinLink',
+        'avatar' => 'avatar'
     ];
 
     /**
@@ -289,22 +289,6 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'uuid' => 'setUuid',
-        'typeContact' => 'setTypeContact',
-        'indOrg' => 'setIndOrg',
-        'displayName' => 'setDisplayName',
-        'firstName' => 'setFirstName',
-        'nickname' => 'setNickname',
-        'middleName' => 'setMiddleName',
-        'lastName' => 'setLastName',
-        'corporationName' => 'setCorporationName',
-        'corporationNameLine2' => 'setCorporationNameLine2',
-        'rank' => 'setRank',
-        'facebookLink' => 'setFacebookLink',
-        'twitterLink' => 'setTwitterLink',
-        'linkedinLink' => 'setLinkedinLink',
-        'avatar' => 'setAvatar',
         'externalKey' => 'setExternalKey',
         'externalKeyType' => 'setExternalKeyType',
         'gender' => 'setGender',
@@ -349,7 +333,23 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
         'orgFedNo' => 'setOrgFedNo',
         'orgProvNo' => 'setOrgProvNo',
         'orgStateId' => 'setOrgStateId',
-        'orgEin' => 'setOrgEin'
+        'orgEin' => 'setOrgEin',
+        'id' => 'setId',
+        'uuid' => 'setUuid',
+        'typeContact' => 'setTypeContact',
+        'indOrg' => 'setIndOrg',
+        'displayName' => 'setDisplayName',
+        'firstName' => 'setFirstName',
+        'nickname' => 'setNickname',
+        'middleName' => 'setMiddleName',
+        'lastName' => 'setLastName',
+        'corporationName' => 'setCorporationName',
+        'corporationNameLine2' => 'setCorporationNameLine2',
+        'rank' => 'setRank',
+        'facebookLink' => 'setFacebookLink',
+        'twitterLink' => 'setTwitterLink',
+        'linkedinLink' => 'setLinkedinLink',
+        'avatar' => 'setAvatar'
     ];
 
     /**
@@ -358,22 +358,6 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'uuid' => 'getUuid',
-        'typeContact' => 'getTypeContact',
-        'indOrg' => 'getIndOrg',
-        'displayName' => 'getDisplayName',
-        'firstName' => 'getFirstName',
-        'nickname' => 'getNickname',
-        'middleName' => 'getMiddleName',
-        'lastName' => 'getLastName',
-        'corporationName' => 'getCorporationName',
-        'corporationNameLine2' => 'getCorporationNameLine2',
-        'rank' => 'getRank',
-        'facebookLink' => 'getFacebookLink',
-        'twitterLink' => 'getTwitterLink',
-        'linkedinLink' => 'getLinkedinLink',
-        'avatar' => 'getAvatar',
         'externalKey' => 'getExternalKey',
         'externalKeyType' => 'getExternalKeyType',
         'gender' => 'getGender',
@@ -418,7 +402,23 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
         'orgFedNo' => 'getOrgFedNo',
         'orgProvNo' => 'getOrgProvNo',
         'orgStateId' => 'getOrgStateId',
-        'orgEin' => 'getOrgEin'
+        'orgEin' => 'getOrgEin',
+        'id' => 'getId',
+        'uuid' => 'getUuid',
+        'typeContact' => 'getTypeContact',
+        'indOrg' => 'getIndOrg',
+        'displayName' => 'getDisplayName',
+        'firstName' => 'getFirstName',
+        'nickname' => 'getNickname',
+        'middleName' => 'getMiddleName',
+        'lastName' => 'getLastName',
+        'corporationName' => 'getCorporationName',
+        'corporationNameLine2' => 'getCorporationNameLine2',
+        'rank' => 'getRank',
+        'facebookLink' => 'getFacebookLink',
+        'twitterLink' => 'getTwitterLink',
+        'linkedinLink' => 'getLinkedinLink',
+        'avatar' => 'getAvatar'
     ];
 
     /**
@@ -478,22 +478,6 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = $data['id'] ?? null;
-        $this->container['uuid'] = $data['uuid'] ?? null;
-        $this->container['typeContact'] = $data['typeContact'] ?? null;
-        $this->container['indOrg'] = $data['indOrg'] ?? null;
-        $this->container['displayName'] = $data['displayName'] ?? null;
-        $this->container['firstName'] = $data['firstName'] ?? null;
-        $this->container['nickname'] = $data['nickname'] ?? null;
-        $this->container['middleName'] = $data['middleName'] ?? null;
-        $this->container['lastName'] = $data['lastName'] ?? null;
-        $this->container['corporationName'] = $data['corporationName'] ?? null;
-        $this->container['corporationNameLine2'] = $data['corporationNameLine2'] ?? null;
-        $this->container['rank'] = $data['rank'] ?? null;
-        $this->container['facebookLink'] = $data['facebookLink'] ?? null;
-        $this->container['twitterLink'] = $data['twitterLink'] ?? null;
-        $this->container['linkedinLink'] = $data['linkedinLink'] ?? null;
-        $this->container['avatar'] = $data['avatar'] ?? null;
         $this->container['externalKey'] = $data['externalKey'] ?? null;
         $this->container['externalKeyType'] = $data['externalKeyType'] ?? null;
         $this->container['gender'] = $data['gender'] ?? null;
@@ -539,6 +523,22 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
         $this->container['orgProvNo'] = $data['orgProvNo'] ?? null;
         $this->container['orgStateId'] = $data['orgStateId'] ?? null;
         $this->container['orgEin'] = $data['orgEin'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
+        $this->container['uuid'] = $data['uuid'] ?? null;
+        $this->container['typeContact'] = $data['typeContact'] ?? null;
+        $this->container['indOrg'] = $data['indOrg'] ?? null;
+        $this->container['displayName'] = $data['displayName'] ?? null;
+        $this->container['firstName'] = $data['firstName'] ?? null;
+        $this->container['nickname'] = $data['nickname'] ?? null;
+        $this->container['middleName'] = $data['middleName'] ?? null;
+        $this->container['lastName'] = $data['lastName'] ?? null;
+        $this->container['corporationName'] = $data['corporationName'] ?? null;
+        $this->container['corporationNameLine2'] = $data['corporationNameLine2'] ?? null;
+        $this->container['rank'] = $data['rank'] ?? null;
+        $this->container['facebookLink'] = $data['facebookLink'] ?? null;
+        $this->container['twitterLink'] = $data['twitterLink'] ?? null;
+        $this->container['linkedinLink'] = $data['linkedinLink'] ?? null;
+        $this->container['avatar'] = $data['avatar'] ?? null;
     }
 
     /**
@@ -564,390 +564,6 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets id
-     *
-     * @return string|null
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param string|null $id Unique id
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets uuid
-     *
-     * @return string|null
-     */
-    public function getUuid()
-    {
-        return $this->container['uuid'];
-    }
-
-    /**
-     * Sets uuid
-     *
-     * @param string|null $uuid Contact UUID
-     *
-     * @return self
-     */
-    public function setUuid($uuid)
-    {
-        $this->container['uuid'] = $uuid;
-
-        return $this;
-    }
-
-    /**
-     * Gets typeContact
-     *
-     * @return string|null
-     */
-    public function getTypeContact()
-    {
-        return $this->container['typeContact'];
-    }
-
-    /**
-     * Sets typeContact
-     *
-     * @param string|null $typeContact type of the contact
-     *
-     * @return self
-     */
-    public function setTypeContact($typeContact)
-    {
-        $this->container['typeContact'] = $typeContact;
-
-        return $this;
-    }
-
-    /**
-     * Gets indOrg
-     *
-     * @return string|null
-     */
-    public function getIndOrg()
-    {
-        return $this->container['indOrg'];
-    }
-
-    /**
-     * Sets indOrg
-     *
-     * @param string|null $indOrg type INDIVIDUAL OR ORGANIZATION
-     *
-     * @return self
-     */
-    public function setIndOrg($indOrg)
-    {
-        $this->container['indOrg'] = $indOrg;
-
-        return $this;
-    }
-
-    /**
-     * Gets displayName
-     *
-     * @return string|null
-     */
-    public function getDisplayName()
-    {
-        return $this->container['displayName'];
-    }
-
-    /**
-     * Sets displayName
-     *
-     * @param string|null $displayName display name of the contact
-     *
-     * @return self
-     */
-    public function setDisplayName($displayName)
-    {
-        $this->container['displayName'] = $displayName;
-
-        return $this;
-    }
-
-    /**
-     * Gets firstName
-     *
-     * @return string|null
-     */
-    public function getFirstName()
-    {
-        return $this->container['firstName'];
-    }
-
-    /**
-     * Sets firstName
-     *
-     * @param string|null $firstName first name of the contact
-     *
-     * @return self
-     */
-    public function setFirstName($firstName)
-    {
-        $this->container['firstName'] = $firstName;
-
-        return $this;
-    }
-
-    /**
-     * Gets nickname
-     *
-     * @return string|null
-     */
-    public function getNickname()
-    {
-        return $this->container['nickname'];
-    }
-
-    /**
-     * Sets nickname
-     *
-     * @param string|null $nickname nickname of the contact
-     *
-     * @return self
-     */
-    public function setNickname($nickname)
-    {
-        $this->container['nickname'] = $nickname;
-
-        return $this;
-    }
-
-    /**
-     * Gets middleName
-     *
-     * @return string|null
-     */
-    public function getMiddleName()
-    {
-        return $this->container['middleName'];
-    }
-
-    /**
-     * Sets middleName
-     *
-     * @param string|null $middleName middle name of the contact
-     *
-     * @return self
-     */
-    public function setMiddleName($middleName)
-    {
-        $this->container['middleName'] = $middleName;
-
-        return $this;
-    }
-
-    /**
-     * Gets lastName
-     *
-     * @return string|null
-     */
-    public function getLastName()
-    {
-        return $this->container['lastName'];
-    }
-
-    /**
-     * Sets lastName
-     *
-     * @param string|null $lastName last name of the contact
-     *
-     * @return self
-     */
-    public function setLastName($lastName)
-    {
-        $this->container['lastName'] = $lastName;
-
-        return $this;
-    }
-
-    /**
-     * Gets corporationName
-     *
-     * @return string|null
-     */
-    public function getCorporationName()
-    {
-        return $this->container['corporationName'];
-    }
-
-    /**
-     * Sets corporationName
-     *
-     * @param string|null $corporationName first line of corporation name (Organization)
-     *
-     * @return self
-     */
-    public function setCorporationName($corporationName)
-    {
-        $this->container['corporationName'] = $corporationName;
-
-        return $this;
-    }
-
-    /**
-     * Gets corporationNameLine2
-     *
-     * @return string|null
-     */
-    public function getCorporationNameLine2()
-    {
-        return $this->container['corporationNameLine2'];
-    }
-
-    /**
-     * Sets corporationNameLine2
-     *
-     * @param string|null $corporationNameLine2 second line of corporation name (Organization)
-     *
-     * @return self
-     */
-    public function setCorporationNameLine2($corporationNameLine2)
-    {
-        $this->container['corporationNameLine2'] = $corporationNameLine2;
-
-        return $this;
-    }
-
-    /**
-     * Gets rank
-     *
-     * @return string|null
-     */
-    public function getRank()
-    {
-        return $this->container['rank'];
-    }
-
-    /**
-     * Sets rank
-     *
-     * @param string|null $rank rank of the contact. (Industrial Alliance only)
-     *
-     * @return self
-     */
-    public function setRank($rank)
-    {
-        $this->container['rank'] = $rank;
-
-        return $this;
-    }
-
-    /**
-     * Gets facebookLink
-     *
-     * @return string|null
-     */
-    public function getFacebookLink()
-    {
-        return $this->container['facebookLink'];
-    }
-
-    /**
-     * Sets facebookLink
-     *
-     * @param string|null $facebookLink facebookLink
-     *
-     * @return self
-     */
-    public function setFacebookLink($facebookLink)
-    {
-        $this->container['facebookLink'] = $facebookLink;
-
-        return $this;
-    }
-
-    /**
-     * Gets twitterLink
-     *
-     * @return string|null
-     */
-    public function getTwitterLink()
-    {
-        return $this->container['twitterLink'];
-    }
-
-    /**
-     * Sets twitterLink
-     *
-     * @param string|null $twitterLink twitterLink
-     *
-     * @return self
-     */
-    public function setTwitterLink($twitterLink)
-    {
-        $this->container['twitterLink'] = $twitterLink;
-
-        return $this;
-    }
-
-    /**
-     * Gets linkedinLink
-     *
-     * @return string|null
-     */
-    public function getLinkedinLink()
-    {
-        return $this->container['linkedinLink'];
-    }
-
-    /**
-     * Sets linkedinLink
-     *
-     * @param string|null $linkedinLink linkedinLink
-     *
-     * @return self
-     */
-    public function setLinkedinLink($linkedinLink)
-    {
-        $this->container['linkedinLink'] = $linkedinLink;
-
-        return $this;
-    }
-
-    /**
-     * Gets avatar
-     *
-     * @return int|null
-     */
-    public function getAvatar()
-    {
-        return $this->container['avatar'];
-    }
-
-    /**
-     * Sets avatar
-     *
-     * @param int|null $avatar avatar
-     *
-     * @return self
-     */
-    public function setAvatar($avatar)
-    {
-        $this->container['avatar'] = $avatar;
-
-        return $this;
-    }
 
     /**
      * Gets externalKey
@@ -2025,6 +1641,390 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     public function setOrgEin($orgEin)
     {
         $this->container['orgEin'] = $orgEin;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id Unique id
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets uuid
+     *
+     * @return string|null
+     */
+    public function getUuid()
+    {
+        return $this->container['uuid'];
+    }
+
+    /**
+     * Sets uuid
+     *
+     * @param string|null $uuid Contact UUID
+     *
+     * @return self
+     */
+    public function setUuid($uuid)
+    {
+        $this->container['uuid'] = $uuid;
+
+        return $this;
+    }
+
+    /**
+     * Gets typeContact
+     *
+     * @return string|null
+     */
+    public function getTypeContact()
+    {
+        return $this->container['typeContact'];
+    }
+
+    /**
+     * Sets typeContact
+     *
+     * @param string|null $typeContact type of the contact
+     *
+     * @return self
+     */
+    public function setTypeContact($typeContact)
+    {
+        $this->container['typeContact'] = $typeContact;
+
+        return $this;
+    }
+
+    /**
+     * Gets indOrg
+     *
+     * @return string|null
+     */
+    public function getIndOrg()
+    {
+        return $this->container['indOrg'];
+    }
+
+    /**
+     * Sets indOrg
+     *
+     * @param string|null $indOrg type INDIVIDUAL OR ORGANIZATION
+     *
+     * @return self
+     */
+    public function setIndOrg($indOrg)
+    {
+        $this->container['indOrg'] = $indOrg;
+
+        return $this;
+    }
+
+    /**
+     * Gets displayName
+     *
+     * @return string|null
+     */
+    public function getDisplayName()
+    {
+        return $this->container['displayName'];
+    }
+
+    /**
+     * Sets displayName
+     *
+     * @param string|null $displayName display name of the contact
+     *
+     * @return self
+     */
+    public function setDisplayName($displayName)
+    {
+        $this->container['displayName'] = $displayName;
+
+        return $this;
+    }
+
+    /**
+     * Gets firstName
+     *
+     * @return string|null
+     */
+    public function getFirstName()
+    {
+        return $this->container['firstName'];
+    }
+
+    /**
+     * Sets firstName
+     *
+     * @param string|null $firstName first name of the contact
+     *
+     * @return self
+     */
+    public function setFirstName($firstName)
+    {
+        $this->container['firstName'] = $firstName;
+
+        return $this;
+    }
+
+    /**
+     * Gets nickname
+     *
+     * @return string|null
+     */
+    public function getNickname()
+    {
+        return $this->container['nickname'];
+    }
+
+    /**
+     * Sets nickname
+     *
+     * @param string|null $nickname nickname of the contact
+     *
+     * @return self
+     */
+    public function setNickname($nickname)
+    {
+        $this->container['nickname'] = $nickname;
+
+        return $this;
+    }
+
+    /**
+     * Gets middleName
+     *
+     * @return string|null
+     */
+    public function getMiddleName()
+    {
+        return $this->container['middleName'];
+    }
+
+    /**
+     * Sets middleName
+     *
+     * @param string|null $middleName middle name of the contact
+     *
+     * @return self
+     */
+    public function setMiddleName($middleName)
+    {
+        $this->container['middleName'] = $middleName;
+
+        return $this;
+    }
+
+    /**
+     * Gets lastName
+     *
+     * @return string|null
+     */
+    public function getLastName()
+    {
+        return $this->container['lastName'];
+    }
+
+    /**
+     * Sets lastName
+     *
+     * @param string|null $lastName last name of the contact
+     *
+     * @return self
+     */
+    public function setLastName($lastName)
+    {
+        $this->container['lastName'] = $lastName;
+
+        return $this;
+    }
+
+    /**
+     * Gets corporationName
+     *
+     * @return string|null
+     */
+    public function getCorporationName()
+    {
+        return $this->container['corporationName'];
+    }
+
+    /**
+     * Sets corporationName
+     *
+     * @param string|null $corporationName first line of corporation name (Organization)
+     *
+     * @return self
+     */
+    public function setCorporationName($corporationName)
+    {
+        $this->container['corporationName'] = $corporationName;
+
+        return $this;
+    }
+
+    /**
+     * Gets corporationNameLine2
+     *
+     * @return string|null
+     */
+    public function getCorporationNameLine2()
+    {
+        return $this->container['corporationNameLine2'];
+    }
+
+    /**
+     * Sets corporationNameLine2
+     *
+     * @param string|null $corporationNameLine2 second line of corporation name (Organization)
+     *
+     * @return self
+     */
+    public function setCorporationNameLine2($corporationNameLine2)
+    {
+        $this->container['corporationNameLine2'] = $corporationNameLine2;
+
+        return $this;
+    }
+
+    /**
+     * Gets rank
+     *
+     * @return string|null
+     */
+    public function getRank()
+    {
+        return $this->container['rank'];
+    }
+
+    /**
+     * Sets rank
+     *
+     * @param string|null $rank rank of the contact. (Industrial Alliance only)
+     *
+     * @return self
+     */
+    public function setRank($rank)
+    {
+        $this->container['rank'] = $rank;
+
+        return $this;
+    }
+
+    /**
+     * Gets facebookLink
+     *
+     * @return string|null
+     */
+    public function getFacebookLink()
+    {
+        return $this->container['facebookLink'];
+    }
+
+    /**
+     * Sets facebookLink
+     *
+     * @param string|null $facebookLink facebookLink
+     *
+     * @return self
+     */
+    public function setFacebookLink($facebookLink)
+    {
+        $this->container['facebookLink'] = $facebookLink;
+
+        return $this;
+    }
+
+    /**
+     * Gets twitterLink
+     *
+     * @return string|null
+     */
+    public function getTwitterLink()
+    {
+        return $this->container['twitterLink'];
+    }
+
+    /**
+     * Sets twitterLink
+     *
+     * @param string|null $twitterLink twitterLink
+     *
+     * @return self
+     */
+    public function setTwitterLink($twitterLink)
+    {
+        $this->container['twitterLink'] = $twitterLink;
+
+        return $this;
+    }
+
+    /**
+     * Gets linkedinLink
+     *
+     * @return string|null
+     */
+    public function getLinkedinLink()
+    {
+        return $this->container['linkedinLink'];
+    }
+
+    /**
+     * Sets linkedinLink
+     *
+     * @param string|null $linkedinLink linkedinLink
+     *
+     * @return self
+     */
+    public function setLinkedinLink($linkedinLink)
+    {
+        $this->container['linkedinLink'] = $linkedinLink;
+
+        return $this;
+    }
+
+    /**
+     * Gets avatar
+     *
+     * @return int|null
+     */
+    public function getAvatar()
+    {
+        return $this->container['avatar'];
+    }
+
+    /**
+     * Sets avatar
+     *
+     * @param int|null $avatar avatar
+     *
+     * @return self
+     */
+    public function setAvatar($avatar)
+    {
+        $this->container['avatar'] = $avatar;
 
         return $this;
     }

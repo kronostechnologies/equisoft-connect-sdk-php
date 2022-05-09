@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **string** |  | [default to TYPE_COPY]
-**sourceDatabase** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase**](MovementDatabase.md) |  |
-**destinationDatabase** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase**](MovementDatabase.md) |  |
-**userTuples** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementUserTuple[]**](MovementUserTuple.md) |  |
+**sourceDatabase** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase**](MovementDatabase.md) |  | [optional]
+**destinationDatabase** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase**](MovementDatabase.md) |  | [optional]
+**userTuples** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementUserTuple[]**](MovementUserTuple.md) |  | [optional]
+**type** | **string** |  | [optional] [default to TYPE_COPY]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

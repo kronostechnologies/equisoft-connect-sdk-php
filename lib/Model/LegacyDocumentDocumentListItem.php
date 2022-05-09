@@ -60,10 +60,10 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess, \Js
       */
     protected static $openAPITypes = [
         'id' => 'string',
-        'files' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentFile[]',
         'type' => 'string',
         'subType' => 'string',
-        'name' => 'string'
+        'name' => 'string',
+        'files' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentFile[]'
     ];
 
     /**
@@ -75,10 +75,10 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess, \Js
       */
     protected static $openAPIFormats = [
         'id' => null,
-        'files' => null,
         'type' => null,
         'subType' => null,
-        'name' => null
+        'name' => null,
+        'files' => null
     ];
 
     /**
@@ -109,10 +109,10 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess, \Js
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'files' => 'files',
         'type' => 'type',
         'subType' => 'subType',
-        'name' => 'name'
+        'name' => 'name',
+        'files' => 'files'
     ];
 
     /**
@@ -122,10 +122,10 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess, \Js
      */
     protected static $setters = [
         'id' => 'setId',
-        'files' => 'setFiles',
         'type' => 'setType',
         'subType' => 'setSubType',
-        'name' => 'setName'
+        'name' => 'setName',
+        'files' => 'setFiles'
     ];
 
     /**
@@ -135,10 +135,10 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess, \Js
      */
     protected static $getters = [
         'id' => 'getId',
-        'files' => 'getFiles',
         'type' => 'getType',
         'subType' => 'getSubType',
-        'name' => 'getName'
+        'name' => 'getName',
+        'files' => 'getFiles'
     ];
 
     /**
@@ -199,10 +199,10 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess, \Js
     public function __construct(array $data = null)
     {
         $this->container['id'] = $data['id'] ?? null;
-        $this->container['files'] = $data['files'] ?? null;
         $this->container['type'] = $data['type'] ?? null;
         $this->container['subType'] = $data['subType'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
+        $this->container['files'] = $data['files'] ?? null;
     }
 
     /**
@@ -249,30 +249,6 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess, \Js
     public function setId($id)
     {
         $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets files
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentFile[]|null
-     */
-    public function getFiles()
-    {
-        return $this->container['files'];
-    }
-
-    /**
-     * Sets files
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentFile[]|null $files Files contained inside the document
-     *
-     * @return self
-     */
-    public function setFiles($files)
-    {
-        $this->container['files'] = $files;
 
         return $this;
     }
@@ -345,6 +321,30 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess, \Js
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets files
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentFile[]|null
+     */
+    public function getFiles()
+    {
+        return $this->container['files'];
+    }
+
+    /**
+     * Sets files
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentFile[]|null $files Files contained inside the document
+     *
+     * @return self
+     */
+    public function setFiles($files)
+    {
+        $this->container['files'] = $files;
 
         return $this;
     }
