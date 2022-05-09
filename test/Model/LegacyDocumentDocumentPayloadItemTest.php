@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * LegacyDocumentDocumentPayloadItemTest Class Doc Comment
  *
  * @category    Class
- * @description LegacyDocumentDocumentPayloadItem
+ * @description Payload needed by the kronos.document.add method {@example addDocumentUpload.xml} payload example
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
@@ -74,24 +74,6 @@ class LegacyDocumentDocumentPayloadItemTest extends TestCase
      * Test "LegacyDocumentDocumentPayloadItem"
      */
     public function testLegacyDocumentDocumentPayloadItem()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "files"
-     */
-    public function testPropertyFiles()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "contacts"
-     */
-    public function testPropertyContacts()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -191,6 +173,24 @@ class LegacyDocumentDocumentPayloadItemTest extends TestCase
      * Test attribute "name"
      */
     public function testPropertyName()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "files"
+     */
+    public function testPropertyFiles()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "contacts"
+     */
+    public function testPropertyContacts()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

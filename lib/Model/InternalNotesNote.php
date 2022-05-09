@@ -60,10 +60,10 @@ class InternalNotesNote implements ModelInterface, ArrayAccess, \JsonSerializabl
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'author' => '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesAuthor[]',
+        'author' => '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesAuthor',
         'firstRevisionCreatedAt' => '\DateTime',
-        'accessRights' => '\Equisoft\SDK\EquisoftConnect\Model\AccessRights[]',
-        'currentRevision' => '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteRevision[]',
+        'accessRights' => '\Equisoft\SDK\EquisoftConnect\Model\AccessRights',
+        'currentRevision' => '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteRevision',
         'previousRevisions' => '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteRevision[]'
     ];
 
@@ -277,7 +277,7 @@ class InternalNotesNote implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets author
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\InternalNotesAuthor[]
+     * @return \Equisoft\SDK\EquisoftConnect\Model\InternalNotesAuthor
      */
     public function getAuthor()
     {
@@ -287,7 +287,7 @@ class InternalNotesNote implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets author
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\InternalNotesAuthor[] $author author
+     * @param \Equisoft\SDK\EquisoftConnect\Model\InternalNotesAuthor $author author
      *
      * @return self
      */
@@ -325,7 +325,7 @@ class InternalNotesNote implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets accessRights
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\AccessRights[]
+     * @return \Equisoft\SDK\EquisoftConnect\Model\AccessRights
      */
     public function getAccessRights()
     {
@@ -335,7 +335,7 @@ class InternalNotesNote implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets accessRights
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\AccessRights[] $accessRights accessRights
+     * @param \Equisoft\SDK\EquisoftConnect\Model\AccessRights $accessRights accessRights
      *
      * @return self
      */
@@ -349,7 +349,7 @@ class InternalNotesNote implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets currentRevision
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteRevision[]
+     * @return \Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteRevision
      */
     public function getCurrentRevision()
     {
@@ -359,7 +359,7 @@ class InternalNotesNote implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets currentRevision
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteRevision[] $currentRevision currentRevision
+     * @param \Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteRevision $currentRevision currentRevision
      *
      * @return self
      */

@@ -195,6 +195,8 @@ docs/Model/TasksTransferToCompletedResponse.md
 docs/Model/TasksVisibilityType.md
 docs/Model/Translation.md
 docs/Model/UsersListUsersResponse.md
+docs/Model/UsersRole.md
+docs/Model/UsersUpdateUserPayload.md
 docs/Model/UsersUser.md
 git_push.sh
 lib/Api/ContactsApi.php
@@ -395,6 +397,8 @@ lib/Model/TasksTransferToCompletedResponse.php
 lib/Model/TasksVisibilityType.php
 lib/Model/Translation.php
 lib/Model/UsersListUsersResponse.php
+lib/Model/UsersRole.php
+lib/Model/UsersUpdateUserPayload.php
 lib/Model/UsersUser.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
@@ -592,4 +596,6 @@ test/Model/TasksTransferToCompletedResponseTest.php
 test/Model/TasksVisibilityTypeTest.php
 test/Model/TranslationTest.php
 test/Model/UsersListUsersResponseTest.php
+test/Model/UsersRoleTest.php
+test/Model/UsersUpdateUserPayloadTest.php
 test/Model/UsersUserTest.php
