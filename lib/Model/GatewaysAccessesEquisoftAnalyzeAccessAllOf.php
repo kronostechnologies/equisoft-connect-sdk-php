@@ -211,6 +211,12 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
     {
         $invalidProperties = [];
 
+        if ($this->container['clientKey'] === null) {
+            $invalidProperties[] = "'clientKey' can't be null";
+        }
+        if ($this->container['version'] === null) {
+            $invalidProperties[] = "'version' can't be null";
+        }
         $allowedValues = $this->getVersionAllowableValues();
         if (!is_null($this->container['version']) && !in_array($this->container['version'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -238,7 +244,7 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
     /**
      * Gets clientKey
      *
-     * @return string|null
+     * @return string
      */
     public function getClientKey()
     {
@@ -248,7 +254,7 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
     /**
      * Sets clientKey
      *
-     * @param string|null $clientKey clientKey
+     * @param string $clientKey clientKey
      *
      * @return self
      */
@@ -262,7 +268,7 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
     /**
      * Gets version
      *
-     * @return string|null
+     * @return string
      */
     public function getVersion()
     {
@@ -272,14 +278,14 @@ class GatewaysAccessesEquisoftAnalyzeAccessAllOf implements ModelInterface, Arra
     /**
      * Sets version
      *
-     * @param string|null $version version
+     * @param string $version version
      *
      * @return self
      */
     public function setVersion($version)
     {
         $allowedValues = $this->getVersionAllowableValues();
-        if (!is_null($version) && !in_array($version, $allowedValues, true)) {
+        if (!in_array($version, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
                     "Invalid value '%s' for 'version', must be one of '%s'",

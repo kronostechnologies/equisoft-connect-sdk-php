@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * LegacyFinanceAccountStatementTest Class Doc Comment
  *
  * @category    Class
- * @description Response datatype returned by the kronos.finance.getAccountStatement method
+ * @description LegacyFinanceAccountStatement
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

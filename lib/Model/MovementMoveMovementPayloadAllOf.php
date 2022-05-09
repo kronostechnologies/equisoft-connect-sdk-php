@@ -59,10 +59,10 @@ class MovementMoveMovementPayloadAllOf implements ModelInterface, ArrayAccess, \
       * @var string[]
       */
     protected static $openAPITypes = [
+        'type' => 'string',
         'sourceDatabase' => 'string',
         'destinationDatabase' => 'string',
-        'users' => 'string[]',
-        'type' => 'string'
+        'users' => 'string[]'
     ];
 
     /**
@@ -73,10 +73,10 @@ class MovementMoveMovementPayloadAllOf implements ModelInterface, ArrayAccess, \
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'type' => null,
         'sourceDatabase' => null,
         'destinationDatabase' => null,
-        'users' => null,
-        'type' => null
+        'users' => null
     ];
 
     /**
@@ -106,10 +106,10 @@ class MovementMoveMovementPayloadAllOf implements ModelInterface, ArrayAccess, \
      * @var string[]
      */
     protected static $attributeMap = [
+        'type' => 'type',
         'sourceDatabase' => 'sourceDatabase',
         'destinationDatabase' => 'destinationDatabase',
-        'users' => 'users',
-        'type' => 'type'
+        'users' => 'users'
     ];
 
     /**
@@ -118,10 +118,10 @@ class MovementMoveMovementPayloadAllOf implements ModelInterface, ArrayAccess, \
      * @var string[]
      */
     protected static $setters = [
+        'type' => 'setType',
         'sourceDatabase' => 'setSourceDatabase',
         'destinationDatabase' => 'setDestinationDatabase',
-        'users' => 'setUsers',
-        'type' => 'setType'
+        'users' => 'setUsers'
     ];
 
     /**
@@ -130,10 +130,10 @@ class MovementMoveMovementPayloadAllOf implements ModelInterface, ArrayAccess, \
      * @var string[]
      */
     protected static $getters = [
+        'type' => 'getType',
         'sourceDatabase' => 'getSourceDatabase',
         'destinationDatabase' => 'getDestinationDatabase',
-        'users' => 'getUsers',
-        'type' => 'getType'
+        'users' => 'getUsers'
     ];
 
     /**
@@ -206,10 +206,10 @@ class MovementMoveMovementPayloadAllOf implements ModelInterface, ArrayAccess, \
      */
     public function __construct(array $data = null)
     {
+        $this->container['type'] = $data['type'] ?? self::TYPE_MOVE;
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['destinationDatabase'] = $data['destinationDatabase'] ?? null;
         $this->container['users'] = $data['users'] ?? null;
-        $this->container['type'] = $data['type'] ?? self::TYPE_MOVE;
     }
 
     /**
@@ -221,6 +221,9 @@ class MovementMoveMovementPayloadAllOf implements ModelInterface, ArrayAccess, \
     {
         $invalidProperties = [];
 
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
         $allowedValues = $this->getTypeAllowableValues();
         if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -230,6 +233,15 @@ class MovementMoveMovementPayloadAllOf implements ModelInterface, ArrayAccess, \
             );
         }
 
+        if ($this->container['sourceDatabase'] === null) {
+            $invalidProperties[] = "'sourceDatabase' can't be null";
+        }
+        if ($this->container['destinationDatabase'] === null) {
+            $invalidProperties[] = "'destinationDatabase' can't be null";
+        }
+        if ($this->container['users'] === null) {
+            $invalidProperties[] = "'users' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -246,9 +258,43 @@ class MovementMoveMovementPayloadAllOf implements ModelInterface, ArrayAccess, \
 
 
     /**
+     * Gets type
+     *
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param string $type type
+     *
+     * @return self
+     */
+    public function setType($type)
+    {
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!in_array($type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'type', must be one of '%s'",
+                    $type,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
      * Gets sourceDatabase
      *
-     * @return string|null
+     * @return string
      */
     public function getSourceDatabase()
     {
@@ -258,7 +304,7 @@ class MovementMoveMovementPayloadAllOf implements ModelInterface, ArrayAccess, \
     /**
      * Sets sourceDatabase
      *
-     * @param string|null $sourceDatabase sourceDatabase
+     * @param string $sourceDatabase sourceDatabase
      *
      * @return self
      */
@@ -272,7 +318,7 @@ class MovementMoveMovementPayloadAllOf implements ModelInterface, ArrayAccess, \
     /**
      * Gets destinationDatabase
      *
-     * @return string|null
+     * @return string
      */
     public function getDestinationDatabase()
     {
@@ -282,7 +328,7 @@ class MovementMoveMovementPayloadAllOf implements ModelInterface, ArrayAccess, \
     /**
      * Sets destinationDatabase
      *
-     * @param string|null $destinationDatabase destinationDatabase
+     * @param string $destinationDatabase destinationDatabase
      *
      * @return self
      */
@@ -296,7 +342,7 @@ class MovementMoveMovementPayloadAllOf implements ModelInterface, ArrayAccess, \
     /**
      * Gets users
      *
-     * @return string[]|null
+     * @return string[]
      */
     public function getUsers()
     {
@@ -306,47 +352,13 @@ class MovementMoveMovementPayloadAllOf implements ModelInterface, ArrayAccess, \
     /**
      * Sets users
      *
-     * @param string[]|null $users users
+     * @param string[] $users users
      *
      * @return self
      */
     public function setUsers($users)
     {
         $this->container['users'] = $users;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     *
-     * @return string|null
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param string|null $type type
-     *
-     * @return self
-     */
-    public function setType($type)
-    {
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($type) && !in_array($type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'type', must be one of '%s'",
-                    $type,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['type'] = $type;
 
         return $this;
     }

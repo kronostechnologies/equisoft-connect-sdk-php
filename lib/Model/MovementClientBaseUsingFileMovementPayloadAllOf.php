@@ -59,14 +59,14 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
       * @var string[]
       */
     protected static $openAPITypes = [
+        'type' => 'string',
         'sourceDatabase' => 'string',
         'sourceUser' => 'string',
         'destinationDatabase' => 'string',
         'destinationUser' => 'string',
         'capsilFile' => 'string',
         'univerisFile' => 'string',
-        'dataphileFile' => 'string',
-        'type' => 'string'
+        'dataphileFile' => 'string'
     ];
 
     /**
@@ -77,14 +77,14 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'type' => null,
         'sourceDatabase' => null,
         'sourceUser' => null,
         'destinationDatabase' => null,
         'destinationUser' => null,
         'capsilFile' => null,
         'univerisFile' => null,
-        'dataphileFile' => null,
-        'type' => null
+        'dataphileFile' => null
     ];
 
     /**
@@ -114,14 +114,14 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
      * @var string[]
      */
     protected static $attributeMap = [
+        'type' => 'type',
         'sourceDatabase' => 'sourceDatabase',
         'sourceUser' => 'sourceUser',
         'destinationDatabase' => 'destinationDatabase',
         'destinationUser' => 'destinationUser',
         'capsilFile' => 'capsilFile',
         'univerisFile' => 'univerisFile',
-        'dataphileFile' => 'dataphileFile',
-        'type' => 'type'
+        'dataphileFile' => 'dataphileFile'
     ];
 
     /**
@@ -130,14 +130,14 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
      * @var string[]
      */
     protected static $setters = [
+        'type' => 'setType',
         'sourceDatabase' => 'setSourceDatabase',
         'sourceUser' => 'setSourceUser',
         'destinationDatabase' => 'setDestinationDatabase',
         'destinationUser' => 'setDestinationUser',
         'capsilFile' => 'setCapsilFile',
         'univerisFile' => 'setUniverisFile',
-        'dataphileFile' => 'setDataphileFile',
-        'type' => 'setType'
+        'dataphileFile' => 'setDataphileFile'
     ];
 
     /**
@@ -146,14 +146,14 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
      * @var string[]
      */
     protected static $getters = [
+        'type' => 'getType',
         'sourceDatabase' => 'getSourceDatabase',
         'sourceUser' => 'getSourceUser',
         'destinationDatabase' => 'getDestinationDatabase',
         'destinationUser' => 'getDestinationUser',
         'capsilFile' => 'getCapsilFile',
         'univerisFile' => 'getUniverisFile',
-        'dataphileFile' => 'getDataphileFile',
-        'type' => 'getType'
+        'dataphileFile' => 'getDataphileFile'
     ];
 
     /**
@@ -226,6 +226,7 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
      */
     public function __construct(array $data = null)
     {
+        $this->container['type'] = $data['type'] ?? self::TYPE_CLIENTBASE_USING_FILE;
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['sourceUser'] = $data['sourceUser'] ?? null;
         $this->container['destinationDatabase'] = $data['destinationDatabase'] ?? null;
@@ -233,7 +234,6 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
         $this->container['capsilFile'] = $data['capsilFile'] ?? null;
         $this->container['univerisFile'] = $data['univerisFile'] ?? null;
         $this->container['dataphileFile'] = $data['dataphileFile'] ?? null;
-        $this->container['type'] = $data['type'] ?? self::TYPE_CLIENTBASE_USING_FILE;
     }
 
     /**
@@ -245,6 +245,9 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
     {
         $invalidProperties = [];
 
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
         $allowedValues = $this->getTypeAllowableValues();
         if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
             $invalidProperties[] = sprintf(
@@ -254,6 +257,18 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
             );
         }
 
+        if ($this->container['sourceDatabase'] === null) {
+            $invalidProperties[] = "'sourceDatabase' can't be null";
+        }
+        if ($this->container['sourceUser'] === null) {
+            $invalidProperties[] = "'sourceUser' can't be null";
+        }
+        if ($this->container['destinationDatabase'] === null) {
+            $invalidProperties[] = "'destinationDatabase' can't be null";
+        }
+        if ($this->container['destinationUser'] === null) {
+            $invalidProperties[] = "'destinationUser' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -270,9 +285,43 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
 
 
     /**
+     * Gets type
+     *
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param string $type type
+     *
+     * @return self
+     */
+    public function setType($type)
+    {
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!in_array($type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'type', must be one of '%s'",
+                    $type,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
      * Gets sourceDatabase
      *
-     * @return string|null
+     * @return string
      */
     public function getSourceDatabase()
     {
@@ -282,7 +331,7 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
     /**
      * Sets sourceDatabase
      *
-     * @param string|null $sourceDatabase sourceDatabase
+     * @param string $sourceDatabase sourceDatabase
      *
      * @return self
      */
@@ -296,7 +345,7 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
     /**
      * Gets sourceUser
      *
-     * @return string|null
+     * @return string
      */
     public function getSourceUser()
     {
@@ -306,7 +355,7 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
     /**
      * Sets sourceUser
      *
-     * @param string|null $sourceUser sourceUser
+     * @param string $sourceUser sourceUser
      *
      * @return self
      */
@@ -320,7 +369,7 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
     /**
      * Gets destinationDatabase
      *
-     * @return string|null
+     * @return string
      */
     public function getDestinationDatabase()
     {
@@ -330,7 +379,7 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
     /**
      * Sets destinationDatabase
      *
-     * @param string|null $destinationDatabase destinationDatabase
+     * @param string $destinationDatabase destinationDatabase
      *
      * @return self
      */
@@ -344,7 +393,7 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
     /**
      * Gets destinationUser
      *
-     * @return string|null
+     * @return string
      */
     public function getDestinationUser()
     {
@@ -354,7 +403,7 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
     /**
      * Sets destinationUser
      *
-     * @param string|null $destinationUser destinationUser
+     * @param string $destinationUser destinationUser
      *
      * @return self
      */
@@ -433,40 +482,6 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
     public function setDataphileFile($dataphileFile)
     {
         $this->container['dataphileFile'] = $dataphileFile;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     *
-     * @return string|null
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param string|null $type type
-     *
-     * @return self
-     */
-    public function setType($type)
-    {
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($type) && !in_array($type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'type', must be one of '%s'",
-                    $type,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['type'] = $type;
 
         return $this;
     }

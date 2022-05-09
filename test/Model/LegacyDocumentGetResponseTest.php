@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * LegacyDocumentGetResponseTest Class Doc Comment
  *
  * @category    Class
- * @description Response datatype returned by the kronos.document.get method {@example getDocumentResponse.xml} response example
+ * @description LegacyDocumentGetResponse
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
@@ -80,15 +80,6 @@ class LegacyDocumentGetResponseTest extends TestCase
     }
 
     /**
-     * Test attribute "documents"
-     */
-    public function testPropertyDocuments()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "stat"
      */
     public function testPropertyStat()
@@ -110,6 +101,15 @@ class LegacyDocumentGetResponseTest extends TestCase
      * Test attribute "errorMsg"
      */
     public function testPropertyErrorMsg()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "documents"
+     */
+    public function testPropertyDocuments()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

@@ -59,12 +59,12 @@ class LegacyDocumentBase64FilePayloadItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'externalKey' => 'string',
-        'base64EncodedData' => 'string',
         'id' => 'string',
         'fileName' => 'string',
         'mimeType' => 'string',
-        'sizeBytes' => 'string'
+        'sizeBytes' => 'string',
+        'externalKey' => 'string',
+        'base64EncodedData' => 'string'
     ];
 
     /**
@@ -75,12 +75,12 @@ class LegacyDocumentBase64FilePayloadItem implements ModelInterface, ArrayAccess
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'externalKey' => null,
-        'base64EncodedData' => null,
         'id' => null,
         'fileName' => null,
         'mimeType' => null,
-        'sizeBytes' => null
+        'sizeBytes' => null,
+        'externalKey' => null,
+        'base64EncodedData' => null
     ];
 
     /**
@@ -110,12 +110,12 @@ class LegacyDocumentBase64FilePayloadItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'externalKey' => 'externalKey',
-        'base64EncodedData' => 'base64EncodedData',
         'id' => 'id',
         'fileName' => 'fileName',
         'mimeType' => 'mimeType',
-        'sizeBytes' => 'sizeBytes'
+        'sizeBytes' => 'sizeBytes',
+        'externalKey' => 'externalKey',
+        'base64EncodedData' => 'base64EncodedData'
     ];
 
     /**
@@ -124,12 +124,12 @@ class LegacyDocumentBase64FilePayloadItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'externalKey' => 'setExternalKey',
-        'base64EncodedData' => 'setBase64EncodedData',
         'id' => 'setId',
         'fileName' => 'setFileName',
         'mimeType' => 'setMimeType',
-        'sizeBytes' => 'setSizeBytes'
+        'sizeBytes' => 'setSizeBytes',
+        'externalKey' => 'setExternalKey',
+        'base64EncodedData' => 'setBase64EncodedData'
     ];
 
     /**
@@ -138,12 +138,12 @@ class LegacyDocumentBase64FilePayloadItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'externalKey' => 'getExternalKey',
-        'base64EncodedData' => 'getBase64EncodedData',
         'id' => 'getId',
         'fileName' => 'getFileName',
         'mimeType' => 'getMimeType',
-        'sizeBytes' => 'getSizeBytes'
+        'sizeBytes' => 'getSizeBytes',
+        'externalKey' => 'getExternalKey',
+        'base64EncodedData' => 'getBase64EncodedData'
     ];
 
     /**
@@ -203,12 +203,12 @@ class LegacyDocumentBase64FilePayloadItem implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['externalKey'] = $data['externalKey'] ?? null;
-        $this->container['base64EncodedData'] = $data['base64EncodedData'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
         $this->container['fileName'] = $data['fileName'] ?? null;
         $this->container['mimeType'] = $data['mimeType'] ?? null;
         $this->container['sizeBytes'] = $data['sizeBytes'] ?? null;
+        $this->container['externalKey'] = $data['externalKey'] ?? null;
+        $this->container['base64EncodedData'] = $data['base64EncodedData'] ?? null;
     }
 
     /**
@@ -234,54 +234,6 @@ class LegacyDocumentBase64FilePayloadItem implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets externalKey
-     *
-     * @return string|null
-     */
-    public function getExternalKey()
-    {
-        return $this->container['externalKey'];
-    }
-
-    /**
-     * Sets externalKey
-     *
-     * @param string|null $externalKey The file external key
-     *
-     * @return self
-     */
-    public function setExternalKey($externalKey)
-    {
-        $this->container['externalKey'] = $externalKey;
-
-        return $this;
-    }
-
-    /**
-     * Gets base64EncodedData
-     *
-     * @return string|null
-     */
-    public function getBase64EncodedData()
-    {
-        return $this->container['base64EncodedData'];
-    }
-
-    /**
-     * Sets base64EncodedData
-     *
-     * @param string|null $base64EncodedData file data encoded in base 64
-     *
-     * @return self
-     */
-    public function setBase64EncodedData($base64EncodedData)
-    {
-        $this->container['base64EncodedData'] = $base64EncodedData;
-
-        return $this;
-    }
 
     /**
      * Gets id
@@ -375,6 +327,54 @@ class LegacyDocumentBase64FilePayloadItem implements ModelInterface, ArrayAccess
     public function setSizeBytes($sizeBytes)
     {
         $this->container['sizeBytes'] = $sizeBytes;
+
+        return $this;
+    }
+
+    /**
+     * Gets externalKey
+     *
+     * @return string|null
+     */
+    public function getExternalKey()
+    {
+        return $this->container['externalKey'];
+    }
+
+    /**
+     * Sets externalKey
+     *
+     * @param string|null $externalKey The file external key
+     *
+     * @return self
+     */
+    public function setExternalKey($externalKey)
+    {
+        $this->container['externalKey'] = $externalKey;
+
+        return $this;
+    }
+
+    /**
+     * Gets base64EncodedData
+     *
+     * @return string|null
+     */
+    public function getBase64EncodedData()
+    {
+        return $this->container['base64EncodedData'];
+    }
+
+    /**
+     * Sets base64EncodedData
+     *
+     * @param string|null $base64EncodedData file data encoded in base 64
+     *
+     * @return self
+     */
+    public function setBase64EncodedData($base64EncodedData)
+    {
+        $this->container['base64EncodedData'] = $base64EncodedData;
 
         return $this;
     }
