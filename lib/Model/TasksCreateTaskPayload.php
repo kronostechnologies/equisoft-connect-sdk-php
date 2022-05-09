@@ -59,6 +59,8 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
+        'ownerIds' => 'int[]',
+        'isCompleted' => 'bool',
         'subject' => 'string',
         'dueDate' => 'string',
         'initialDate' => 'string',
@@ -69,9 +71,7 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess, \JsonSerial
         'subCategoryId' => 'int',
         'priority' => 'mixed',
         'visibility' => 'string',
-        'contactIds' => 'int[]',
-        'ownerIds' => 'int[]',
-        'isCompleted' => 'bool'
+        'contactIds' => 'int[]'
     ];
 
     /**
@@ -82,6 +82,8 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'ownerIds' => null,
+        'isCompleted' => null,
         'subject' => null,
         'dueDate' => null,
         'initialDate' => null,
@@ -92,9 +94,7 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess, \JsonSerial
         'subCategoryId' => null,
         'priority' => null,
         'visibility' => null,
-        'contactIds' => null,
-        'ownerIds' => null,
-        'isCompleted' => null
+        'contactIds' => null
     ];
 
     /**
@@ -124,6 +124,8 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
+        'ownerIds' => 'ownerIds',
+        'isCompleted' => 'isCompleted',
         'subject' => 'subject',
         'dueDate' => 'dueDate',
         'initialDate' => 'initialDate',
@@ -134,9 +136,7 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess, \JsonSerial
         'subCategoryId' => 'subCategoryId',
         'priority' => 'priority',
         'visibility' => 'visibility',
-        'contactIds' => 'contactIds',
-        'ownerIds' => 'ownerIds',
-        'isCompleted' => 'isCompleted'
+        'contactIds' => 'contactIds'
     ];
 
     /**
@@ -145,6 +145,8 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
+        'ownerIds' => 'setOwnerIds',
+        'isCompleted' => 'setIsCompleted',
         'subject' => 'setSubject',
         'dueDate' => 'setDueDate',
         'initialDate' => 'setInitialDate',
@@ -155,9 +157,7 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess, \JsonSerial
         'subCategoryId' => 'setSubCategoryId',
         'priority' => 'setPriority',
         'visibility' => 'setVisibility',
-        'contactIds' => 'setContactIds',
-        'ownerIds' => 'setOwnerIds',
-        'isCompleted' => 'setIsCompleted'
+        'contactIds' => 'setContactIds'
     ];
 
     /**
@@ -166,6 +166,8 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
+        'ownerIds' => 'getOwnerIds',
+        'isCompleted' => 'getIsCompleted',
         'subject' => 'getSubject',
         'dueDate' => 'getDueDate',
         'initialDate' => 'getInitialDate',
@@ -176,9 +178,7 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess, \JsonSerial
         'subCategoryId' => 'getSubCategoryId',
         'priority' => 'getPriority',
         'visibility' => 'getVisibility',
-        'contactIds' => 'getContactIds',
-        'ownerIds' => 'getOwnerIds',
-        'isCompleted' => 'getIsCompleted'
+        'contactIds' => 'getContactIds'
     ];
 
     /**
@@ -238,6 +238,8 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
+        $this->container['ownerIds'] = $data['ownerIds'] ?? null;
+        $this->container['isCompleted'] = $data['isCompleted'] ?? null;
         $this->container['subject'] = $data['subject'] ?? null;
         $this->container['dueDate'] = $data['dueDate'] ?? null;
         $this->container['initialDate'] = $data['initialDate'] ?? null;
@@ -249,8 +251,6 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess, \JsonSerial
         $this->container['priority'] = $data['priority'] ?? null;
         $this->container['visibility'] = $data['visibility'] ?? null;
         $this->container['contactIds'] = $data['contactIds'] ?? null;
-        $this->container['ownerIds'] = $data['ownerIds'] ?? null;
-        $this->container['isCompleted'] = $data['isCompleted'] ?? null;
     }
 
     /**
@@ -279,6 +279,54 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess, \JsonSerial
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets ownerIds
+     *
+     * @return int[]|null
+     */
+    public function getOwnerIds()
+    {
+        return $this->container['ownerIds'];
+    }
+
+    /**
+     * Sets ownerIds
+     *
+     * @param int[]|null $ownerIds Ids of the owner users of the task.
+     *
+     * @return self
+     */
+    public function setOwnerIds($ownerIds)
+    {
+        $this->container['ownerIds'] = $ownerIds;
+
+        return $this;
+    }
+
+    /**
+     * Gets isCompleted
+     *
+     * @return bool|null
+     */
+    public function getIsCompleted()
+    {
+        return $this->container['isCompleted'];
+    }
+
+    /**
+     * Sets isCompleted
+     *
+     * @param bool|null $isCompleted Is the task completed.
+     *
+     * @return self
+     */
+    public function setIsCompleted($isCompleted)
+    {
+        $this->container['isCompleted'] = $isCompleted;
+
+        return $this;
+    }
 
     /**
      * Gets subject
@@ -540,54 +588,6 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess, \JsonSerial
     public function setContactIds($contactIds)
     {
         $this->container['contactIds'] = $contactIds;
-
-        return $this;
-    }
-
-    /**
-     * Gets ownerIds
-     *
-     * @return int[]|null
-     */
-    public function getOwnerIds()
-    {
-        return $this->container['ownerIds'];
-    }
-
-    /**
-     * Sets ownerIds
-     *
-     * @param int[]|null $ownerIds Ids of the owner users of the task.
-     *
-     * @return self
-     */
-    public function setOwnerIds($ownerIds)
-    {
-        $this->container['ownerIds'] = $ownerIds;
-
-        return $this;
-    }
-
-    /**
-     * Gets isCompleted
-     *
-     * @return bool|null
-     */
-    public function getIsCompleted()
-    {
-        return $this->container['isCompleted'];
-    }
-
-    /**
-     * Sets isCompleted
-     *
-     * @param bool|null $isCompleted Is the task completed.
-     *
-     * @return self
-     */
-    public function setIsCompleted($isCompleted)
-    {
-        $this->container['isCompleted'] = $isCompleted;
 
         return $this;
     }

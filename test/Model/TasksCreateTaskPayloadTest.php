@@ -80,6 +80,24 @@ class TasksCreateTaskPayloadTest extends TestCase
     }
 
     /**
+     * Test attribute "ownerIds"
+     */
+    public function testPropertyOwnerIds()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "isCompleted"
+     */
+    public function testPropertyIsCompleted()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "subject"
      */
     public function testPropertySubject()
@@ -173,24 +191,6 @@ class TasksCreateTaskPayloadTest extends TestCase
      * Test attribute "contactIds"
      */
     public function testPropertyContactIds()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "ownerIds"
-     */
-    public function testPropertyOwnerIds()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "isCompleted"
-     */
-    public function testPropertyIsCompleted()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
