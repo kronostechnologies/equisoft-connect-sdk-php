@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * LegacyAddUpdateResponseTest Class Doc Comment
  *
  * @category    Class
- * @description LegacyAddUpdateResponse
+ * @description Response datatype returned by add or update methods
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
@@ -80,6 +80,15 @@ class LegacyAddUpdateResponseTest extends TestCase
     }
 
     /**
+     * Test attribute "items"
+     */
+    public function testPropertyItems()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "stat"
      */
     public function testPropertyStat()
@@ -101,15 +110,6 @@ class LegacyAddUpdateResponseTest extends TestCase
      * Test attribute "errorMsg"
      */
     public function testPropertyErrorMsg()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "items"
-     */
-    public function testPropertyItems()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

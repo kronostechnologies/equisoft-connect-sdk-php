@@ -80,6 +80,24 @@ class LegacyDocumentBase64FilePayloadItemTest extends TestCase
     }
 
     /**
+     * Test attribute "externalKey"
+     */
+    public function testPropertyExternalKey()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "base64EncodedData"
+     */
+    public function testPropertyBase64EncodedData()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "id"
      */
     public function testPropertyId()
@@ -110,24 +128,6 @@ class LegacyDocumentBase64FilePayloadItemTest extends TestCase
      * Test attribute "sizeBytes"
      */
     public function testPropertySizeBytes()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "externalKey"
-     */
-    public function testPropertyExternalKey()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "base64EncodedData"
-     */
-    public function testPropertyBase64EncodedData()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
