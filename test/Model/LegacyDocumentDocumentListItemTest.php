@@ -89,6 +89,15 @@ class LegacyDocumentDocumentListItemTest extends TestCase
     }
 
     /**
+     * Test attribute "files"
+     */
+    public function testPropertyFiles()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "type"
      */
     public function testPropertyType()
@@ -110,15 +119,6 @@ class LegacyDocumentDocumentListItemTest extends TestCase
      * Test attribute "name"
      */
     public function testPropertyName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "files"
-     */
-    public function testPropertyFiles()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

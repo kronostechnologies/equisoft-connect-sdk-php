@@ -35,7 +35,6 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * LegacyDocumentDownloadFileResponse Class Doc Comment
  *
  * @category Class
- * @description Response datatype returned by the kronos.document.downloadFile method {@example downloadFileResponse.xml} response example
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -60,10 +59,10 @@ class LegacyDocumentDownloadFileResponse implements ModelInterface, ArrayAccess,
       * @var string[]
       */
     protected static $openAPITypes = [
-        'files' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentBase64FilePayloadItem[]',
         'stat' => 'string',
         'errorCode' => 'string',
-        'errorMsg' => 'string'
+        'errorMsg' => 'string',
+        'files' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentBase64FilePayloadItem[]'
     ];
 
     /**
@@ -74,10 +73,10 @@ class LegacyDocumentDownloadFileResponse implements ModelInterface, ArrayAccess,
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'files' => null,
         'stat' => null,
         'errorCode' => null,
-        'errorMsg' => null
+        'errorMsg' => null,
+        'files' => null
     ];
 
     /**
@@ -107,10 +106,10 @@ class LegacyDocumentDownloadFileResponse implements ModelInterface, ArrayAccess,
      * @var string[]
      */
     protected static $attributeMap = [
-        'files' => 'files',
         'stat' => 'stat',
         'errorCode' => 'error_code',
-        'errorMsg' => 'error_msg'
+        'errorMsg' => 'error_msg',
+        'files' => 'files'
     ];
 
     /**
@@ -119,10 +118,10 @@ class LegacyDocumentDownloadFileResponse implements ModelInterface, ArrayAccess,
      * @var string[]
      */
     protected static $setters = [
-        'files' => 'setFiles',
         'stat' => 'setStat',
         'errorCode' => 'setErrorCode',
-        'errorMsg' => 'setErrorMsg'
+        'errorMsg' => 'setErrorMsg',
+        'files' => 'setFiles'
     ];
 
     /**
@@ -131,10 +130,10 @@ class LegacyDocumentDownloadFileResponse implements ModelInterface, ArrayAccess,
      * @var string[]
      */
     protected static $getters = [
-        'files' => 'getFiles',
         'stat' => 'getStat',
         'errorCode' => 'getErrorCode',
-        'errorMsg' => 'getErrorMsg'
+        'errorMsg' => 'getErrorMsg',
+        'files' => 'getFiles'
     ];
 
     /**
@@ -194,10 +193,10 @@ class LegacyDocumentDownloadFileResponse implements ModelInterface, ArrayAccess,
      */
     public function __construct(array $data = null)
     {
-        $this->container['files'] = $data['files'] ?? null;
         $this->container['stat'] = $data['stat'] ?? null;
         $this->container['errorCode'] = $data['errorCode'] ?? null;
         $this->container['errorMsg'] = $data['errorMsg'] ?? null;
+        $this->container['files'] = $data['files'] ?? null;
     }
 
     /**
@@ -226,30 +225,6 @@ class LegacyDocumentDownloadFileResponse implements ModelInterface, ArrayAccess,
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets files
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentBase64FilePayloadItem[]
-     */
-    public function getFiles()
-    {
-        return $this->container['files'];
-    }
-
-    /**
-     * Sets files
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentBase64FilePayloadItem[] $files Array of documents
-     *
-     * @return self
-     */
-    public function setFiles($files)
-    {
-        $this->container['files'] = $files;
-
-        return $this;
-    }
 
     /**
      * Gets stat
@@ -319,6 +294,30 @@ class LegacyDocumentDownloadFileResponse implements ModelInterface, ArrayAccess,
     public function setErrorMsg($errorMsg)
     {
         $this->container['errorMsg'] = $errorMsg;
+
+        return $this;
+    }
+
+    /**
+     * Gets files
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentBase64FilePayloadItem[]
+     */
+    public function getFiles()
+    {
+        return $this->container['files'];
+    }
+
+    /**
+     * Sets files
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentBase64FilePayloadItem[] $files Array of documents
+     *
+     * @return self
+     */
+    public function setFiles($files)
+    {
+        $this->container['files'] = $files;
 
         return $this;
     }

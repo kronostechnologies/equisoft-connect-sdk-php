@@ -35,7 +35,6 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * LegacyDocumentDocument Class Doc Comment
  *
  * @category Class
- * @description Payload needed by the kronos.document.add method {@example addDocumentUpload.xml} payload example
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -60,6 +59,12 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
+        'files' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentFile[]',
+        'contacts' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyContactContact[]',
+        'createdBy' => 'string',
+        'createdOn' => 'string',
+        'modifiedBy' => 'string',
+        'modifiedOn' => 'string',
         'externalKey' => 'string',
         'dateStart' => 'string',
         'dateEnd' => 'string',
@@ -70,13 +75,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess, \JsonSerial
         'id' => 'string',
         'type' => 'string',
         'subType' => 'string',
-        'name' => 'string',
-        'files' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentFile[]',
-        'contacts' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyContactContact[]',
-        'createdBy' => 'string',
-        'createdOn' => 'string',
-        'modifiedBy' => 'string',
-        'modifiedOn' => 'string'
+        'name' => 'string'
     ];
 
     /**
@@ -87,6 +86,12 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'files' => null,
+        'contacts' => null,
+        'createdBy' => null,
+        'createdOn' => null,
+        'modifiedBy' => null,
+        'modifiedOn' => null,
         'externalKey' => null,
         'dateStart' => null,
         'dateEnd' => null,
@@ -97,13 +102,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess, \JsonSerial
         'id' => null,
         'type' => null,
         'subType' => null,
-        'name' => null,
-        'files' => null,
-        'contacts' => null,
-        'createdBy' => null,
-        'createdOn' => null,
-        'modifiedBy' => null,
-        'modifiedOn' => null
+        'name' => null
     ];
 
     /**
@@ -133,6 +132,12 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
+        'files' => 'files',
+        'contacts' => 'contacts',
+        'createdBy' => 'createdBy',
+        'createdOn' => 'createdOn',
+        'modifiedBy' => 'modifiedBy',
+        'modifiedOn' => 'modifiedOn',
         'externalKey' => 'externalKey',
         'dateStart' => 'dateStart',
         'dateEnd' => 'dateEnd',
@@ -143,13 +148,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess, \JsonSerial
         'id' => 'id',
         'type' => 'type',
         'subType' => 'subType',
-        'name' => 'name',
-        'files' => 'files',
-        'contacts' => 'contacts',
-        'createdBy' => 'createdBy',
-        'createdOn' => 'createdOn',
-        'modifiedBy' => 'modifiedBy',
-        'modifiedOn' => 'modifiedOn'
+        'name' => 'name'
     ];
 
     /**
@@ -158,6 +157,12 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
+        'files' => 'setFiles',
+        'contacts' => 'setContacts',
+        'createdBy' => 'setCreatedBy',
+        'createdOn' => 'setCreatedOn',
+        'modifiedBy' => 'setModifiedBy',
+        'modifiedOn' => 'setModifiedOn',
         'externalKey' => 'setExternalKey',
         'dateStart' => 'setDateStart',
         'dateEnd' => 'setDateEnd',
@@ -168,13 +173,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess, \JsonSerial
         'id' => 'setId',
         'type' => 'setType',
         'subType' => 'setSubType',
-        'name' => 'setName',
-        'files' => 'setFiles',
-        'contacts' => 'setContacts',
-        'createdBy' => 'setCreatedBy',
-        'createdOn' => 'setCreatedOn',
-        'modifiedBy' => 'setModifiedBy',
-        'modifiedOn' => 'setModifiedOn'
+        'name' => 'setName'
     ];
 
     /**
@@ -183,6 +182,12 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
+        'files' => 'getFiles',
+        'contacts' => 'getContacts',
+        'createdBy' => 'getCreatedBy',
+        'createdOn' => 'getCreatedOn',
+        'modifiedBy' => 'getModifiedBy',
+        'modifiedOn' => 'getModifiedOn',
         'externalKey' => 'getExternalKey',
         'dateStart' => 'getDateStart',
         'dateEnd' => 'getDateEnd',
@@ -193,13 +198,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess, \JsonSerial
         'id' => 'getId',
         'type' => 'getType',
         'subType' => 'getSubType',
-        'name' => 'getName',
-        'files' => 'getFiles',
-        'contacts' => 'getContacts',
-        'createdBy' => 'getCreatedBy',
-        'createdOn' => 'getCreatedOn',
-        'modifiedBy' => 'getModifiedBy',
-        'modifiedOn' => 'getModifiedOn'
+        'name' => 'getName'
     ];
 
     /**
@@ -259,6 +258,12 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(array $data = null)
     {
+        $this->container['files'] = $data['files'] ?? null;
+        $this->container['contacts'] = $data['contacts'] ?? null;
+        $this->container['createdBy'] = $data['createdBy'] ?? null;
+        $this->container['createdOn'] = $data['createdOn'] ?? null;
+        $this->container['modifiedBy'] = $data['modifiedBy'] ?? null;
+        $this->container['modifiedOn'] = $data['modifiedOn'] ?? null;
         $this->container['externalKey'] = $data['externalKey'] ?? null;
         $this->container['dateStart'] = $data['dateStart'] ?? null;
         $this->container['dateEnd'] = $data['dateEnd'] ?? null;
@@ -270,12 +275,6 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess, \JsonSerial
         $this->container['type'] = $data['type'] ?? null;
         $this->container['subType'] = $data['subType'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
-        $this->container['files'] = $data['files'] ?? null;
-        $this->container['contacts'] = $data['contacts'] ?? null;
-        $this->container['createdBy'] = $data['createdBy'] ?? null;
-        $this->container['createdOn'] = $data['createdOn'] ?? null;
-        $this->container['modifiedBy'] = $data['modifiedBy'] ?? null;
-        $this->container['modifiedOn'] = $data['modifiedOn'] ?? null;
     }
 
     /**
@@ -301,6 +300,150 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess, \JsonSerial
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets files
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentFile[]|null
+     */
+    public function getFiles()
+    {
+        return $this->container['files'];
+    }
+
+    /**
+     * Sets files
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentFile[]|null $files Files contained inside the document
+     *
+     * @return self
+     */
+    public function setFiles($files)
+    {
+        $this->container['files'] = $files;
+
+        return $this;
+    }
+
+    /**
+     * Gets contacts
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyContactContact[]|null
+     */
+    public function getContacts()
+    {
+        return $this->container['contacts'];
+    }
+
+    /**
+     * Sets contacts
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyContactContact[]|null $contacts List of linked contacts
+     *
+     * @return self
+     */
+    public function setContacts($contacts)
+    {
+        $this->container['contacts'] = $contacts;
+
+        return $this;
+    }
+
+    /**
+     * Gets createdBy
+     *
+     * @return string|null
+     */
+    public function getCreatedBy()
+    {
+        return $this->container['createdBy'];
+    }
+
+    /**
+     * Sets createdBy
+     *
+     * @param string|null $createdBy email of user who created the document
+     *
+     * @return self
+     */
+    public function setCreatedBy($createdBy)
+    {
+        $this->container['createdBy'] = $createdBy;
+
+        return $this;
+    }
+
+    /**
+     * Gets createdOn
+     *
+     * @return string|null
+     */
+    public function getCreatedOn()
+    {
+        return $this->container['createdOn'];
+    }
+
+    /**
+     * Sets createdOn
+     *
+     * @param string|null $createdOn date of creation of the document
+     *
+     * @return self
+     */
+    public function setCreatedOn($createdOn)
+    {
+        $this->container['createdOn'] = $createdOn;
+
+        return $this;
+    }
+
+    /**
+     * Gets modifiedBy
+     *
+     * @return string|null
+     */
+    public function getModifiedBy()
+    {
+        return $this->container['modifiedBy'];
+    }
+
+    /**
+     * Sets modifiedBy
+     *
+     * @param string|null $modifiedBy email of user who last modified the document
+     *
+     * @return self
+     */
+    public function setModifiedBy($modifiedBy)
+    {
+        $this->container['modifiedBy'] = $modifiedBy;
+
+        return $this;
+    }
+
+    /**
+     * Gets modifiedOn
+     *
+     * @return string|null
+     */
+    public function getModifiedOn()
+    {
+        return $this->container['modifiedOn'];
+    }
+
+    /**
+     * Sets modifiedOn
+     *
+     * @param string|null $modifiedOn date of the last modification of the document
+     *
+     * @return self
+     */
+    public function setModifiedOn($modifiedOn)
+    {
+        $this->container['modifiedOn'] = $modifiedOn;
+
+        return $this;
+    }
 
     /**
      * Gets externalKey
@@ -562,150 +705,6 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess, \JsonSerial
     public function setName($name)
     {
         $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets files
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentFile[]|null
-     */
-    public function getFiles()
-    {
-        return $this->container['files'];
-    }
-
-    /**
-     * Sets files
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentFile[]|null $files Files contained inside the document
-     *
-     * @return self
-     */
-    public function setFiles($files)
-    {
-        $this->container['files'] = $files;
-
-        return $this;
-    }
-
-    /**
-     * Gets contacts
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyContactContact[]|null
-     */
-    public function getContacts()
-    {
-        return $this->container['contacts'];
-    }
-
-    /**
-     * Sets contacts
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyContactContact[]|null $contacts List of linked contacts
-     *
-     * @return self
-     */
-    public function setContacts($contacts)
-    {
-        $this->container['contacts'] = $contacts;
-
-        return $this;
-    }
-
-    /**
-     * Gets createdBy
-     *
-     * @return string|null
-     */
-    public function getCreatedBy()
-    {
-        return $this->container['createdBy'];
-    }
-
-    /**
-     * Sets createdBy
-     *
-     * @param string|null $createdBy email of user who created the document
-     *
-     * @return self
-     */
-    public function setCreatedBy($createdBy)
-    {
-        $this->container['createdBy'] = $createdBy;
-
-        return $this;
-    }
-
-    /**
-     * Gets createdOn
-     *
-     * @return string|null
-     */
-    public function getCreatedOn()
-    {
-        return $this->container['createdOn'];
-    }
-
-    /**
-     * Sets createdOn
-     *
-     * @param string|null $createdOn date of creation of the document
-     *
-     * @return self
-     */
-    public function setCreatedOn($createdOn)
-    {
-        $this->container['createdOn'] = $createdOn;
-
-        return $this;
-    }
-
-    /**
-     * Gets modifiedBy
-     *
-     * @return string|null
-     */
-    public function getModifiedBy()
-    {
-        return $this->container['modifiedBy'];
-    }
-
-    /**
-     * Sets modifiedBy
-     *
-     * @param string|null $modifiedBy email of user who last modified the document
-     *
-     * @return self
-     */
-    public function setModifiedBy($modifiedBy)
-    {
-        $this->container['modifiedBy'] = $modifiedBy;
-
-        return $this;
-    }
-
-    /**
-     * Gets modifiedOn
-     *
-     * @return string|null
-     */
-    public function getModifiedOn()
-    {
-        return $this->container['modifiedOn'];
-    }
-
-    /**
-     * Sets modifiedOn
-     *
-     * @param string|null $modifiedOn date of the last modification of the document
-     *
-     * @return self
-     */
-    public function setModifiedOn($modifiedOn)
-    {
-        $this->container['modifiedOn'] = $modifiedOn;
 
         return $this;
     }

@@ -57,10 +57,10 @@ class MovementCopyMovementPayload extends MovementMovementPayload
       * @var string[]
       */
     protected static $openAPITypes = [
+        'type' => 'string',
         'sourceDatabase' => 'string',
         'destinationDatabase' => 'string',
-        'userTuples' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUserTuplePayload[]',
-        'type' => 'string'
+        'userTuples' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUserTuplePayload[]'
     ];
 
     /**
@@ -71,10 +71,10 @@ class MovementCopyMovementPayload extends MovementMovementPayload
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'type' => null,
         'sourceDatabase' => null,
         'destinationDatabase' => null,
-        'userTuples' => null,
-        'type' => null
+        'userTuples' => null
     ];
 
     /**
@@ -104,10 +104,10 @@ class MovementCopyMovementPayload extends MovementMovementPayload
      * @var string[]
      */
     protected static $attributeMap = [
+        'type' => 'type',
         'sourceDatabase' => 'sourceDatabase',
         'destinationDatabase' => 'destinationDatabase',
-        'userTuples' => 'userTuples',
-        'type' => 'type'
+        'userTuples' => 'userTuples'
     ];
 
     /**
@@ -116,10 +116,10 @@ class MovementCopyMovementPayload extends MovementMovementPayload
      * @var string[]
      */
     protected static $setters = [
+        'type' => 'setType',
         'sourceDatabase' => 'setSourceDatabase',
         'destinationDatabase' => 'setDestinationDatabase',
-        'userTuples' => 'setUserTuples',
-        'type' => 'setType'
+        'userTuples' => 'setUserTuples'
     ];
 
     /**
@@ -128,10 +128,10 @@ class MovementCopyMovementPayload extends MovementMovementPayload
      * @var string[]
      */
     protected static $getters = [
+        'type' => 'getType',
         'sourceDatabase' => 'getSourceDatabase',
         'destinationDatabase' => 'getDestinationDatabase',
-        'userTuples' => 'getUserTuples',
-        'type' => 'getType'
+        'userTuples' => 'getUserTuples'
     ];
 
     /**
@@ -200,10 +200,10 @@ class MovementCopyMovementPayload extends MovementMovementPayload
     {
         parent::__construct($data);
 
+        $this->container['type'] = $data['type'] ?? self::TYPE_COPY;
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['destinationDatabase'] = $data['destinationDatabase'] ?? null;
         $this->container['userTuples'] = $data['userTuples'] ?? null;
-        $this->container['type'] = $data['type'] ?? self::TYPE_COPY;
     }
 
     /**
@@ -215,12 +215,6 @@ class MovementCopyMovementPayload extends MovementMovementPayload
     {
         $invalidProperties = parent::listInvalidProperties();
 
-        if ($this->container['sourceDatabase'] === null) {
-            $invalidProperties[] = "'sourceDatabase' can't be null";
-        }
-        if ($this->container['destinationDatabase'] === null) {
-            $invalidProperties[] = "'destinationDatabase' can't be null";
-        }
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
         }
@@ -233,6 +227,12 @@ class MovementCopyMovementPayload extends MovementMovementPayload
             );
         }
 
+        if ($this->container['sourceDatabase'] === null) {
+            $invalidProperties[] = "'sourceDatabase' can't be null";
+        }
+        if ($this->container['destinationDatabase'] === null) {
+            $invalidProperties[] = "'destinationDatabase' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -247,6 +247,40 @@ class MovementCopyMovementPayload extends MovementMovementPayload
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets type
+     *
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param string $type type
+     *
+     * @return self
+     */
+    public function setType($type)
+    {
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!in_array($type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'type', must be one of '%s'",
+                    $type,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['type'] = $type;
+
+        return $this;
+    }
 
     /**
      * Gets sourceDatabase
@@ -316,40 +350,6 @@ class MovementCopyMovementPayload extends MovementMovementPayload
     public function setUserTuples($userTuples)
     {
         $this->container['userTuples'] = $userTuples;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     *
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param string $type type
-     *
-     * @return self
-     */
-    public function setType($type)
-    {
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!in_array($type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'type', must be one of '%s'",
-                    $type,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['type'] = $type;
 
         return $this;
     }
