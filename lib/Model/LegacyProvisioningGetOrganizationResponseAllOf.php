@@ -190,9 +190,6 @@ class LegacyProvisioningGetOrganizationResponseAllOf implements ModelInterface, 
     {
         $invalidProperties = [];
 
-        if ($this->container['organization'] === null) {
-            $invalidProperties[] = "'organization' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -211,7 +208,7 @@ class LegacyProvisioningGetOrganizationResponseAllOf implements ModelInterface, 
     /**
      * Gets organization
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem|null
      */
     public function getOrganization()
     {
@@ -221,7 +218,7 @@ class LegacyProvisioningGetOrganizationResponseAllOf implements ModelInterface, 
     /**
      * Sets organization
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem $organization organization
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem|null $organization organization
      *
      * @return self
      */

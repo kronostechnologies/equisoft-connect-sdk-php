@@ -80,6 +80,15 @@ class LegacyFinanceGetLiabilitiesResponseTest extends TestCase
     }
 
     /**
+     * Test attribute "liabilities"
+     */
+    public function testPropertyLiabilities()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "stat"
      */
     public function testPropertyStat()
@@ -101,15 +110,6 @@ class LegacyFinanceGetLiabilitiesResponseTest extends TestCase
      * Test attribute "errorMsg"
      */
     public function testPropertyErrorMsg()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "liabilities"
-     */
-    public function testPropertyLiabilities()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

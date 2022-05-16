@@ -4,8 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**calendarId** | **string** | Calendar the Event will be created for. A numerical ID returned by listCalendars. The string &#x60;primary&#x60; for the current connected user primary (&#39;TODO&#39;) calendar. The string &#x60;completed&#x60; for the current connected user completed (&#39;DONE&#39;) calendar. The &#x60;calendarId&#x60; parameter can&#39;t be used with the &#x60;ownerId&#x60; parameter. | [optional]
-**ownerIds** | **int[]** | For local legacy events, &#x60;ownerIds&#x60; can be used instead of calendarId to create an Event for many user at once. Cannot be used with &#x60;calendarId&#x60;. Cannot be used for users with remote calendar (Exchange, Office365, Outlook.com). | [optional]
 **subject** | **string** | Subject/Title of the Event. |
 **start** | [**\Equisoft\SDK\EquisoftConnect\Model\DateOrDateTime**](DateOrDateTime.md) |  |
 **end** | [**\Equisoft\SDK\EquisoftConnect\Model\DateOrDateTime**](DateOrDateTime.md) |  | [optional]
@@ -20,5 +18,7 @@ Name | Type | Description | Notes
 **priority** | **mixed** | Importance/Priority of an event or task. 5 is the most important. | [optional]
 **visibility** | **string** | Confidentiality level of the Event (private or not). [NORMAL, PRIVATE] | [optional]
 **contactIds** | **int[]** | Allow to link the event to one or many contacts. | [optional]
+**calendarId** | **string** | Calendar the Event will be created for. A numerical ID returned by listCalendars. The string &#x60;primary&#x60; for the current connected user primary (&#39;TODO&#39;) calendar. The string &#x60;completed&#x60; for the current connected user completed (&#39;DONE&#39;) calendar. The &#x60;calendarId&#x60; parameter can&#39;t be used with the &#x60;ownerId&#x60; parameter. | [optional]
+**ownerIds** | **int[]** | For local legacy events, &#x60;ownerIds&#x60; can be used instead of calendarId to create an Event for many user at once. Cannot be used with &#x60;calendarId&#x60;. Cannot be used for users with remote calendar (Exchange, Office365, Outlook.com). | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
