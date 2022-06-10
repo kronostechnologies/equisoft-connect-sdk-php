@@ -1,4 +1,4 @@
-.php_cs
+.php-cs-fixer.dist.php
 .travis.yml
 README.md
 docs/Api/ContactsApi.md
@@ -22,6 +22,7 @@ docs/Model/CalendarDefaultCalendarId.md
 docs/Model/CalendarsCalendar.md
 docs/Model/CalendarsListCalendarResponse.md
 docs/Model/ContactContactAdditionalInformation.md
+docs/Model/ContactContactAdditionalInformationLanguage.md
 docs/Model/ContactContactAddress.md
 docs/Model/ContactContactEmail.md
 docs/Model/ContactContactIdentification.md
@@ -31,6 +32,8 @@ docs/Model/ContactContactPhone.md
 docs/Model/ContactContactSegmentation.md
 docs/Model/ContactContactWebsite.md
 docs/Model/ContactsContact.md
+docs/Model/ContactsContactCurrentMaritalStatus.md
+docs/Model/ContactsContactCurrentOccupation.md
 docs/Model/ContextActor.md
 docs/Model/ContextEquisoftConnect.md
 docs/Model/ContextEquisoftConnectUser.md
@@ -83,6 +86,9 @@ docs/Model/InternalNotesCreateNoteResponse.md
 docs/Model/InternalNotesHistoryType.md
 docs/Model/InternalNotesLegacyNote.md
 docs/Model/InternalNotesNote.md
+docs/Model/InternalNotesNoteAccessRights.md
+docs/Model/InternalNotesNoteAuthor.md
+docs/Model/InternalNotesNoteCurrentRevision.md
 docs/Model/InternalNotesNoteList.md
 docs/Model/InternalNotesNoteRevision.md
 docs/Model/InternalNotesNoteRevisionType.md
@@ -223,6 +229,7 @@ lib/Model/CalendarDefaultCalendarId.php
 lib/Model/CalendarsCalendar.php
 lib/Model/CalendarsListCalendarResponse.php
 lib/Model/ContactContactAdditionalInformation.php
+lib/Model/ContactContactAdditionalInformationLanguage.php
 lib/Model/ContactContactAddress.php
 lib/Model/ContactContactEmail.php
 lib/Model/ContactContactIdentification.php
@@ -232,6 +239,8 @@ lib/Model/ContactContactPhone.php
 lib/Model/ContactContactSegmentation.php
 lib/Model/ContactContactWebsite.php
 lib/Model/ContactsContact.php
+lib/Model/ContactsContactCurrentMaritalStatus.php
+lib/Model/ContactsContactCurrentOccupation.php
 lib/Model/ContextActor.php
 lib/Model/ContextEquisoftConnect.php
 lib/Model/ContextEquisoftConnectUser.php
@@ -284,6 +293,9 @@ lib/Model/InternalNotesCreateNoteResponse.php
 lib/Model/InternalNotesHistoryType.php
 lib/Model/InternalNotesLegacyNote.php
 lib/Model/InternalNotesNote.php
+lib/Model/InternalNotesNoteAccessRights.php
+lib/Model/InternalNotesNoteAuthor.php
+lib/Model/InternalNotesNoteCurrentRevision.php
 lib/Model/InternalNotesNoteList.php
 lib/Model/InternalNotesNoteRevision.php
 lib/Model/InternalNotesNoteRevisionType.php
@@ -422,6 +434,7 @@ test/Model/AdminCredentialResponseTest.php
 test/Model/CalendarDefaultCalendarIdTest.php
 test/Model/CalendarsCalendarTest.php
 test/Model/CalendarsListCalendarResponseTest.php
+test/Model/ContactContactAdditionalInformationLanguageTest.php
 test/Model/ContactContactAdditionalInformationTest.php
 test/Model/ContactContactAddressTest.php
 test/Model/ContactContactEmailTest.php
@@ -431,6 +444,8 @@ test/Model/ContactContactOccupationTest.php
 test/Model/ContactContactPhoneTest.php
 test/Model/ContactContactSegmentationTest.php
 test/Model/ContactContactWebsiteTest.php
+test/Model/ContactsContactCurrentMaritalStatusTest.php
+test/Model/ContactsContactCurrentOccupationTest.php
 test/Model/ContactsContactTest.php
 test/Model/ContextActorTest.php
 test/Model/ContextEquisoftConnectTest.php
@@ -483,6 +498,9 @@ test/Model/InternalNotesCreateNotePayloadTest.php
 test/Model/InternalNotesCreateNoteResponseTest.php
 test/Model/InternalNotesHistoryTypeTest.php
 test/Model/InternalNotesLegacyNoteTest.php
+test/Model/InternalNotesNoteAccessRightsTest.php
+test/Model/InternalNotesNoteAuthorTest.php
+test/Model/InternalNotesNoteCurrentRevisionTest.php
 test/Model/InternalNotesNoteListTest.php
 test/Model/InternalNotesNoteRevisionTest.php
 test/Model/InternalNotesNoteRevisionTypeTest.php

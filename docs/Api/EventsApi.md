@@ -478,7 +478,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\EventsApi(
     $config
 );
 $eventId = 'eventId_example'; // string | Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101.
-$history = new \Equisoft\SDK\EquisoftConnect\Model\\Equisoft\SDK\EquisoftConnect\Model\InternalNotesHistoryType(); // \Equisoft\SDK\EquisoftConnect\Model\InternalNotesHistoryType | Query all revisions or not.
+$history = new \Equisoft\SDK\EquisoftConnect\Model\InternalNotesHistoryType(); // InternalNotesHistoryType | Query all revisions or not.
 $acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
 
 try {
@@ -494,7 +494,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **eventId** | **string**| Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. |
- **history** | [**\Equisoft\SDK\EquisoftConnect\Model\InternalNotesHistoryType**](../Model/.md)| Query all revisions or not. | [optional]
+ **history** | [**InternalNotesHistoryType**](../Model/.md)| Query all revisions or not. | [optional]
  **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 | [optional]
 
 ### Return type
@@ -604,7 +604,7 @@ $minTime = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Minimum (i
 $maxTime = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Maximum (exclusive) date and time of the event start time. As defined by date-time - RFC3339
 $singleEvents = True; // bool | Expand recurring events into occurrences. When singleEvents is true, master recurrences are not returned in list.
 $isCompleted = True; // bool | If true, include only completed events. If false, include only TODO event. If not set or null, include both.
-$orderBy = new \Equisoft\SDK\EquisoftConnect\Model\\Equisoft\SDK\EquisoftConnect\Model\EventsOrderByType(); // \Equisoft\SDK\EquisoftConnect\Model\EventsOrderByType | Specify the order of the results. `startTime` may result in inconsistant sort when used without the `singleEvents` option.
+$orderBy = new \Equisoft\SDK\EquisoftConnect\Model\EventsOrderByType(); // EventsOrderByType | Specify the order of the results. `startTime` may result in inconsistant sort when used without the `singleEvents` option.
 $pageToken = MjUwMDszMDAK; // string | Token to specify which page to fetch.
 $maxResults = 'maxResults_example'; // string | Maximum number of records for one result page.  If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records.
 $acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
@@ -628,7 +628,7 @@ Name | Type | Description  | Notes
  **maxTime** | **\DateTime**| Maximum (exclusive) date and time of the event start time. As defined by date-time - RFC3339 | [optional]
  **singleEvents** | **bool**| Expand recurring events into occurrences. When singleEvents is true, master recurrences are not returned in list. | [optional]
  **isCompleted** | **bool**| If true, include only completed events. If false, include only TODO event. If not set or null, include both. | [optional]
- **orderBy** | [**\Equisoft\SDK\EquisoftConnect\Model\EventsOrderByType**](../Model/.md)| Specify the order of the results. &#x60;startTime&#x60; may result in inconsistant sort when used without the &#x60;singleEvents&#x60; option. | [optional]
+ **orderBy** | [**EventsOrderByType**](../Model/.md)| Specify the order of the results. &#x60;startTime&#x60; may result in inconsistant sort when used without the &#x60;singleEvents&#x60; option. | [optional]
  **pageToken** | **string**| Token to specify which page to fetch. | [optional]
  **maxResults** | **string**| Maximum number of records for one result page.  If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. | [optional]
  **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 | [optional]
