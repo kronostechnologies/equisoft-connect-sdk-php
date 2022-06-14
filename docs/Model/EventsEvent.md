@@ -22,8 +22,8 @@ Name | Type | Description | Notes
 **originalStartDate** | **string** | For an instance of recurring event, original start date of the event according to the recurrence rule. | [optional]
 **priority** | **int** | Importance/Priority of an event or task. 5 is the most important. | [optional]
 **visibility** | **string** | Confidentiality level of the Event (private or not). [NORMAL, PRIVATE] | [optional]
-**creationTime** | [**\DateTime**](\DateTime.md) | Creation time. As defined by date-time - RFC3339 | [optional]
-**updateTime** | [**\DateTime**](\DateTime.md) | Date time of last modification. As defined by date-time - RFC3339 | [optional]
+**creationTime** | **\DateTime** | Creation time. As defined by date-time - RFC3339 | [optional]
+**updateTime** | **\DateTime** | Date time of last modification. As defined by date-time - RFC3339 | [optional]
 **calendarId** | **int** | ID of the calendar owning this Event. If owned by many users, calendarId will be - The primary ( or completed depending on state) calendar ID of the connected user if the user is the he is one of the owners. - Any primary ( or completed depending on state) completed calendar ID of one of the owners. |
 **color** | **string** | hex color of this event background | [optional]
 **textColor** | **string** | hex text color of this event | [optional]
