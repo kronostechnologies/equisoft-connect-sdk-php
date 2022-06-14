@@ -4,6 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**id** | **int** |  |
+**users** | [**\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesUser[]**](GatewaysAccessesUser.md) |  |
 **clientKey** | **string** |  |
 **version** | **string** |  | [default to 'NATIVE']
 
