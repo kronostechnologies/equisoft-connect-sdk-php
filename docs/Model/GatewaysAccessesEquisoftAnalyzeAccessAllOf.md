@@ -1,9 +1,10 @@
-# # GatewaysAccessesListGatewayAccessesResponse
+# # GatewaysAccessesEquisoftAnalyzeAccessAllOf
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**items** | [**\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesAccess[]**](GatewaysAccessesAccess.md) |  |
+**clientKey** | **string** |  | [optional]
+**version** | **string** |  | [optional] [default to VERSION_NATIVE]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
