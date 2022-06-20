@@ -59,7 +59,7 @@ class GatewaysAccessesListGatewayAccessesResponse implements ModelInterface, Arr
       * @var string[]
       */
     protected static $openAPITypes = [
-        'items' => '\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesAccess[]'
+        'items' => '\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesEquisoftAnalyzeAccess[]'
     ];
 
     /**
@@ -211,7 +211,7 @@ class GatewaysAccessesListGatewayAccessesResponse implements ModelInterface, Arr
     /**
      * Gets items
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesAccess[]
+     * @return \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesEquisoftAnalyzeAccess[]
      */
     public function getItems()
     {
@@ -221,7 +221,7 @@ class GatewaysAccessesListGatewayAccessesResponse implements ModelInterface, Arr
     /**
      * Sets items
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesAccess[] $items items
+     * @param \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesEquisoftAnalyzeAccess[] $items items
      *
      * @return self
      */

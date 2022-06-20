@@ -27,6 +27,8 @@
  */
 
 namespace Equisoft\SDK\EquisoftConnect\Model;
+
+use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
@@ -40,7 +42,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @template TKey int|null
  * @template TValue mixed|null
  */
-class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess
+class GatewaysAccessesEquisoftAnalyzeAccess implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -57,6 +59,8 @@ class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess
       * @var string[]
       */
     protected static $openAPITypes = [
+        'id' => 'int',
+        'users' => '\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesUser[]',
         'clientKey' => 'string',
         'version' => 'string'
     ];
@@ -69,6 +73,8 @@ class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'id' => null,
+        'users' => null,
         'clientKey' => null,
         'version' => null
     ];
@@ -80,7 +86,7 @@ class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess
      */
     public static function openAPITypes()
     {
-        return self::$openAPITypes + parent::openAPITypes();
+        return self::$openAPITypes;
     }
 
     /**
@@ -90,7 +96,7 @@ class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess
      */
     public static function openAPIFormats()
     {
-        return self::$openAPIFormats + parent::openAPIFormats();
+        return self::$openAPIFormats;
     }
 
     /**
@@ -100,6 +106,8 @@ class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'id' => 'id',
+        'users' => 'users',
         'clientKey' => 'clientKey',
         'version' => 'version'
     ];
@@ -110,6 +118,8 @@ class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess
      * @var string[]
      */
     protected static $setters = [
+        'id' => 'setId',
+        'users' => 'setUsers',
         'clientKey' => 'setClientKey',
         'version' => 'setVersion'
     ];
@@ -120,6 +130,8 @@ class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess
      * @var string[]
      */
     protected static $getters = [
+        'id' => 'getId',
+        'users' => 'getUsers',
         'clientKey' => 'getClientKey',
         'version' => 'getVersion'
     ];
@@ -132,7 +144,7 @@ class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess
      */
     public static function attributeMap()
     {
-        return parent::attributeMap() + self::$attributeMap;
+        return self::$attributeMap;
     }
 
     /**
@@ -142,7 +154,7 @@ class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess
      */
     public static function setters()
     {
-        return parent::setters() + self::$setters;
+        return self::$setters;
     }
 
     /**
@@ -152,7 +164,7 @@ class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess
      */
     public static function getters()
     {
-        return parent::getters() + self::$getters;
+        return self::$getters;
     }
 
     /**
@@ -181,6 +193,12 @@ class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess
         ];
     }
 
+    /**
+     * Associative array for storing property values
+     *
+     * @var mixed[]
+     */
+    protected $container = [];
 
     /**
      * Constructor
@@ -190,8 +208,8 @@ class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess
      */
     public function __construct(array $data = null)
     {
-        parent::__construct($data);
-
+        $this->container['id'] = $data['id'] ?? null;
+        $this->container['users'] = $data['users'] ?? null;
         $this->container['clientKey'] = $data['clientKey'] ?? null;
         $this->container['version'] = $data['version'] ?? self::VERSION_NATIVE;
     }
@@ -203,8 +221,14 @@ class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess
      */
     public function listInvalidProperties()
     {
-        $invalidProperties = parent::listInvalidProperties();
+        $invalidProperties = [];
 
+        if ($this->container['id'] === null) {
+            $invalidProperties[] = "'id' can't be null";
+        }
+        if ($this->container['users'] === null) {
+            $invalidProperties[] = "'users' can't be null";
+        }
         if ($this->container['clientKey'] === null) {
             $invalidProperties[] = "'clientKey' can't be null";
         }
@@ -234,6 +258,54 @@ class GatewaysAccessesEquisoftAnalyzeAccess extends GatewaysAccessesAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param int $id id
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets users
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesUser[]
+     */
+    public function getUsers()
+    {
+        return $this->container['users'];
+    }
+
+    /**
+     * Sets users
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesUser[] $users users
+     *
+     * @return self
+     */
+    public function setUsers($users)
+    {
+        $this->container['users'] = $users;
+
+        return $this;
+    }
 
     /**
      * Gets clientKey
