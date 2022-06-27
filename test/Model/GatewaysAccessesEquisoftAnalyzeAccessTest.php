@@ -80,6 +80,24 @@ class GatewaysAccessesEquisoftAnalyzeAccessTest extends TestCase
     }
 
     /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "users"
+     */
+    public function testPropertyUsers()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "clientKey"
      */
     public function testPropertyClientKey()
