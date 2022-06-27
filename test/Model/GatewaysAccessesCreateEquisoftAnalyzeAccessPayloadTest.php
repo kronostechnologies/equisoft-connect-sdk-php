@@ -96,13 +96,4 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayloadTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
-
-    /**
-     * Test attribute "billingType"
-     */
-    public function testPropertyBillingType()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
 }

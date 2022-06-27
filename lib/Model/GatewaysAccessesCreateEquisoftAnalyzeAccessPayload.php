@@ -60,8 +60,7 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
       */
     protected static $openAPITypes = [
         'userUuid' => 'string',
-        'clientKey' => 'string',
-        'billingType' => 'int'
+        'clientKey' => 'string'
     ];
 
     /**
@@ -73,8 +72,7 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
       */
     protected static $openAPIFormats = [
         'userUuid' => null,
-        'clientKey' => null,
-        'billingType' => null
+        'clientKey' => null
     ];
 
     /**
@@ -105,8 +103,7 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
      */
     protected static $attributeMap = [
         'userUuid' => 'userUuid',
-        'clientKey' => 'clientKey',
-        'billingType' => 'billingType'
+        'clientKey' => 'clientKey'
     ];
 
     /**
@@ -116,8 +113,7 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
      */
     protected static $setters = [
         'userUuid' => 'setUserUuid',
-        'clientKey' => 'setClientKey',
-        'billingType' => 'setBillingType'
+        'clientKey' => 'setClientKey'
     ];
 
     /**
@@ -127,8 +123,7 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
      */
     protected static $getters = [
         'userUuid' => 'getUserUuid',
-        'clientKey' => 'getClientKey',
-        'billingType' => 'getBillingType'
+        'clientKey' => 'getClientKey'
     ];
 
     /**
@@ -190,7 +185,6 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
     {
         $this->container['userUuid'] = $data['userUuid'] ?? null;
         $this->container['clientKey'] = $data['clientKey'] ?? null;
-        $this->container['billingType'] = $data['billingType'] ?? null;
     }
 
     /**
@@ -207,9 +201,6 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
         }
         if ($this->container['clientKey'] === null) {
             $invalidProperties[] = "'clientKey' can't be null";
-        }
-        if ($this->container['billingType'] === null) {
-            $invalidProperties[] = "'billingType' can't be null";
         }
         return $invalidProperties;
     }
@@ -270,30 +261,6 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
     public function setClientKey($clientKey)
     {
         $this->container['clientKey'] = $clientKey;
-
-        return $this;
-    }
-
-    /**
-     * Gets billingType
-     *
-     * @return int
-     */
-    public function getBillingType()
-    {
-        return $this->container['billingType'];
-    }
-
-    /**
-     * Sets billingType
-     *
-     * @param int $billingType billingType
-     *
-     * @return self
-     */
-    public function setBillingType($billingType)
-    {
-        $this->container['billingType'] = $billingType;
 
         return $this;
     }
