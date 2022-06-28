@@ -61,7 +61,7 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
     protected static $openAPITypes = [
         'userUuid' => 'string',
         'clientKey' => 'string',
-        'billingType' => 'int'
+        'billingType' => 'string'
     ];
 
     /**
@@ -277,7 +277,7 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
     /**
      * Gets billingType
      *
-     * @return int
+     * @return string
      */
     public function getBillingType()
     {
@@ -287,7 +287,7 @@ class GatewaysAccessesCreateEquisoftAnalyzeAccessPayload implements ModelInterfa
     /**
      * Sets billingType
      *
-     * @param int $billingType billingType
+     * @param string $billingType billingType
      *
      * @return self
      */
