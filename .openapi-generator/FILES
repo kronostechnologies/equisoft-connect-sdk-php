@@ -1,4 +1,4 @@
-.php-cs-fixer.dist.php
+.php_cs
 .travis.yml
 README.md
 docs/Api/ContactsApi.md
@@ -60,9 +60,11 @@ docs/Model/EventsPatchEventResponse.md
 docs/Model/EventsTransferToCompletedResponse.md
 docs/Model/EventsVisibilityType.md
 docs/Model/FieldValue.md
+docs/Model/GatewaysAccessesAccess.md
 docs/Model/GatewaysAccessesCreateAccessResponse.md
 docs/Model/GatewaysAccessesCreateEquisoftAnalyzeAccessPayload.md
 docs/Model/GatewaysAccessesEquisoftAnalyzeAccess.md
+docs/Model/GatewaysAccessesEquisoftAnalyzeAccessAllOf.md
 docs/Model/GatewaysAccessesListGatewayAccessesResponse.md
 docs/Model/GatewaysAccessesPatchEquisoftAnalyzeAccessPayload.md
 docs/Model/GatewaysAccessesUser.md
@@ -259,9 +261,11 @@ lib/Model/EventsPatchEventResponse.php
 lib/Model/EventsTransferToCompletedResponse.php
 lib/Model/EventsVisibilityType.php
 lib/Model/FieldValue.php
+lib/Model/GatewaysAccessesAccess.php
 lib/Model/GatewaysAccessesCreateAccessResponse.php
 lib/Model/GatewaysAccessesCreateEquisoftAnalyzeAccessPayload.php
 lib/Model/GatewaysAccessesEquisoftAnalyzeAccess.php
+lib/Model/GatewaysAccessesEquisoftAnalyzeAccessAllOf.php
 lib/Model/GatewaysAccessesListGatewayAccessesResponse.php
 lib/Model/GatewaysAccessesPatchEquisoftAnalyzeAccessPayload.php
 lib/Model/GatewaysAccessesUser.php
@@ -457,8 +461,10 @@ test/Model/EventsPatchEventResponseTest.php
 test/Model/EventsTransferToCompletedResponseTest.php
 test/Model/EventsVisibilityTypeTest.php
 test/Model/FieldValueTest.php
+test/Model/GatewaysAccessesAccessTest.php
 test/Model/GatewaysAccessesCreateAccessResponseTest.php
 test/Model/GatewaysAccessesCreateEquisoftAnalyzeAccessPayloadTest.php
+test/Model/GatewaysAccessesEquisoftAnalyzeAccessAllOfTest.php
 test/Model/GatewaysAccessesEquisoftAnalyzeAccessTest.php
 test/Model/GatewaysAccessesListGatewayAccessesResponseTest.php
 test/Model/GatewaysAccessesPatchEquisoftAnalyzeAccessPayloadTest.php

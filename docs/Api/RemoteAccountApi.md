@@ -86,9 +86,9 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\RemoteAccountApi(
 );
 $dateTimeStart = 'dateTimeStart_example'; // string
 $dateTimeEnd = 'dateTimeEnd_example'; // string
-$webuserCalendarIds = array(56); // int[]
-$remoteFolderIds = array(56); // int[]
-$webuserIds = array(56); // int[]
+$webuserCalendarIds = 56; // int[]
+$remoteFolderIds = 56; // int[]
+$webuserIds = 56; // int[]
 
 try {
     $result = $apiInstance->synchronizeCalendars($dateTimeStart, $dateTimeEnd, $webuserCalendarIds, $remoteFolderIds, $webuserIds);
@@ -148,9 +148,9 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\RemoteAccountApi(
 );
 $dateTimeStart = 'dateTimeStart_example'; // string
 $dateTimeEnd = 'dateTimeEnd_example'; // string
-$webuserCalendarIds = array(56); // int[]
-$remoteFolderIds = array(56); // int[]
-$webuserIds = array(56); // int[]
+$webuserCalendarIds = 56; // int[]
+$remoteFolderIds = 56; // int[]
+$webuserIds = 56; // int[]
 
 try {
     $result = $apiInstance->synchronizeTasks($dateTimeStart, $dateTimeEnd, $webuserCalendarIds, $remoteFolderIds, $webuserIds);
