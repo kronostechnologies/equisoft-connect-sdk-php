@@ -16,9 +16,9 @@ Name | Type | Description | Notes
 **subCategory** | **mixed** | Event sub category | [optional]
 **priority** | **int** | Importance/Priority of an event or task. 5 is the most important. | [optional]
 **visibility** | **string** | Confidentiality level of the Event (private or not). [NORMAL, PRIVATE] | [optional]
-**creationTime** | **\DateTime** | Creation time. As defined by date-time - RFC3339 | [optional]
-**updateTime** | **\DateTime** | Date time of last modification. As defined by date-time - RFC3339 | [optional]
-**completionTime** | **\DateTime** | Completion time. As defined by date-time - RFC3339 | [optional]
+**creationTime** | [**\DateTime**](\DateTime.md) | Creation time. As defined by date-time - RFC3339 | [optional]
+**updateTime** | [**\DateTime**](\DateTime.md) | Date time of last modification. As defined by date-time - RFC3339 | [optional]
+**completionTime** | [**\DateTime**](\DateTime.md) | Completion time. As defined by date-time - RFC3339 | [optional]
 **contactIds** | **int[]** | IDs of the contacts linked to this Task | [optional]
 **accessRights** | [**\Equisoft\SDK\EquisoftConnect\Model\AccessRights**](AccessRights.md) |  |
 

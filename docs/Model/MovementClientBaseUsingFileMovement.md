@@ -11,6 +11,6 @@ Name | Type | Description | Notes
 **capsil** | **bool** |  | [optional]
 **univeris** | **bool** |  | [optional]
 **dataphile** | **bool** |  | [optional]
-**type** | **string** |  | [default to 'CLIENTBASE_USING_FILE']
+**type** | **string** |  | [default to TYPE_CLIENTBASE_USING_FILE]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
