@@ -459,12 +459,11 @@ class GatewaysApi
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return object|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+     * @return void
      */
     public function deleteEquisoftAnalyzeAccess($accessId)
     {
-        list($response) = $this->deleteEquisoftAnalyzeAccessWithHttpInfo($accessId);
-        return $response;
+        $this->deleteEquisoftAnalyzeAccessWithHttpInfo($accessId);
     }
 
     /**
@@ -474,7 +473,7 @@ class GatewaysApi
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of object|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteEquisoftAnalyzeAccessWithHttpInfo($accessId)
     {
@@ -508,80 +507,10 @@ class GatewaysApi
                 );
             }
 
-            switch($statusCode) {
-                case 200:
-                    if ('object' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, 'object', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 401:
-                    if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 404:
-                    if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 500:
-                    if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = 'object';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
+            return [null, $statusCode, $response->getHeaders()];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'object',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -639,24 +568,14 @@ class GatewaysApi
      */
     public function deleteEquisoftAnalyzeAccessAsyncWithHttpInfo($accessId)
     {
-        $returnType = 'object';
+        $returnType = '';
         $request = $this->deleteEquisoftAnalyzeAccessRequest($accessId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -2631,12 +2550,11 @@ class GatewaysApi
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return object|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+     * @return void
      */
     public function patchEquisoftAnalyzeAccess($accessId, $gatewaysAccessesPatchEquisoftAnalyzeAccessPayload)
     {
-        list($response) = $this->patchEquisoftAnalyzeAccessWithHttpInfo($accessId, $gatewaysAccessesPatchEquisoftAnalyzeAccessPayload);
-        return $response;
+        $this->patchEquisoftAnalyzeAccessWithHttpInfo($accessId, $gatewaysAccessesPatchEquisoftAnalyzeAccessPayload);
     }
 
     /**
@@ -2647,7 +2565,7 @@ class GatewaysApi
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of object|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function patchEquisoftAnalyzeAccessWithHttpInfo($accessId, $gatewaysAccessesPatchEquisoftAnalyzeAccessPayload)
     {
@@ -2681,92 +2599,10 @@ class GatewaysApi
                 );
             }
 
-            switch($statusCode) {
-                case 200:
-                    if ('object' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, 'object', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 400:
-                    if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 401:
-                    if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 404:
-                    if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 500:
-                    if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = 'object';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
+            return [null, $statusCode, $response->getHeaders()];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'object',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -2834,24 +2670,14 @@ class GatewaysApi
      */
     public function patchEquisoftAnalyzeAccessAsyncWithHttpInfo($accessId, $gatewaysAccessesPatchEquisoftAnalyzeAccessPayload)
     {
-        $returnType = 'object';
+        $returnType = '';
         $request = $this->patchEquisoftAnalyzeAccessRequest($accessId, $gatewaysAccessesPatchEquisoftAnalyzeAccessPayload);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();

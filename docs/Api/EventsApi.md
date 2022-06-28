@@ -23,7 +23,7 @@ Method | HTTP request | Description
 ## `archiveEventInternalNote()`
 
 ```php
-archiveEventInternalNote($eventId, $noteId, $acceptLanguage): object
+archiveEventInternalNote($eventId, $noteId, $acceptLanguage)
 ```
 
 Archive an internal note for and event.
@@ -50,8 +50,7 @@ $noteId = 56; // int | Note unique identifier.
 $acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
 
 try {
-    $result = $apiInstance->archiveEventInternalNote($eventId, $noteId, $acceptLanguage);
-    print_r($result);
+    $apiInstance->archiveEventInternalNote($eventId, $noteId, $acceptLanguage);
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->archiveEventInternalNote: ', $e->getMessage(), PHP_EOL;
 }
@@ -67,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 
@@ -207,7 +206,7 @@ Name | Type | Description  | Notes
 ## `deleteEvent()`
 
 ```php
-deleteEvent($eventId): object
+deleteEvent($eventId)
 ```
 
 Delete an event.
@@ -234,8 +233,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\EventsApi(
 $eventId = 'eventId_example'; // string | Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101.
 
 try {
-    $result = $apiInstance->deleteEvent($eventId);
-    print_r($result);
+    $apiInstance->deleteEvent($eventId);
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->deleteEvent: ', $e->getMessage(), PHP_EOL;
 }
@@ -249,7 +247,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 
@@ -781,7 +779,7 @@ Name | Type | Description  | Notes
 ## `restoreEventInternalNote()`
 
 ```php
-restoreEventInternalNote($eventId, $noteId, $acceptLanguage): object
+restoreEventInternalNote($eventId, $noteId, $acceptLanguage)
 ```
 
 Restore an archived internal note for an event.
@@ -808,8 +806,7 @@ $noteId = 56; // int | Note unique identifier.
 $acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
 
 try {
-    $result = $apiInstance->restoreEventInternalNote($eventId, $noteId, $acceptLanguage);
-    print_r($result);
+    $apiInstance->restoreEventInternalNote($eventId, $noteId, $acceptLanguage);
 } catch (Exception $e) {
     echo 'Exception when calling EventsApi->restoreEventInternalNote: ', $e->getMessage(), PHP_EOL;
 }
@@ -825,7 +822,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 

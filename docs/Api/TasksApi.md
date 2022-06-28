@@ -20,7 +20,7 @@ Method | HTTP request | Description
 ## `archiveTaskInternalNote()`
 
 ```php
-archiveTaskInternalNote($taskId, $noteId, $acceptLanguage): object
+archiveTaskInternalNote($taskId, $noteId, $acceptLanguage)
 ```
 
 Archive an internal note for a task.
@@ -47,8 +47,7 @@ $noteId = 56; // int | Note unique identifier.
 $acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
 
 try {
-    $result = $apiInstance->archiveTaskInternalNote($taskId, $noteId, $acceptLanguage);
-    print_r($result);
+    $apiInstance->archiveTaskInternalNote($taskId, $noteId, $acceptLanguage);
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->archiveTaskInternalNote: ', $e->getMessage(), PHP_EOL;
 }
@@ -64,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 
@@ -204,7 +203,7 @@ Name | Type | Description  | Notes
 ## `deleteTask()`
 
 ```php
-deleteTask($taskId): object
+deleteTask($taskId)
 ```
 
 Delete a task.
@@ -229,8 +228,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\TasksApi(
 $taskId = 'taskId_example'; // string
 
 try {
-    $result = $apiInstance->deleteTask($taskId);
-    print_r($result);
+    $apiInstance->deleteTask($taskId);
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->deleteTask: ', $e->getMessage(), PHP_EOL;
 }
@@ -244,7 +242,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 
@@ -586,7 +584,7 @@ Name | Type | Description  | Notes
 ## `restoreTaskInternalNote()`
 
 ```php
-restoreTaskInternalNote($taskId, $noteId, $acceptLanguage): object
+restoreTaskInternalNote($taskId, $noteId, $acceptLanguage)
 ```
 
 Restore an archived internal note for a task.
@@ -613,8 +611,7 @@ $noteId = 56; // int | Note unique identifier.
 $acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
 
 try {
-    $result = $apiInstance->restoreTaskInternalNote($taskId, $noteId, $acceptLanguage);
-    print_r($result);
+    $apiInstance->restoreTaskInternalNote($taskId, $noteId, $acceptLanguage);
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->restoreTaskInternalNote: ', $e->getMessage(), PHP_EOL;
 }
@@ -630,7 +627,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 

@@ -125,12 +125,11 @@ class TasksApi
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return object|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+     * @return void
      */
     public function archiveTaskInternalNote($taskId, $noteId, $acceptLanguage = null)
     {
-        list($response) = $this->archiveTaskInternalNoteWithHttpInfo($taskId, $noteId, $acceptLanguage);
-        return $response;
+        $this->archiveTaskInternalNoteWithHttpInfo($taskId, $noteId, $acceptLanguage);
     }
 
     /**
@@ -144,7 +143,7 @@ class TasksApi
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of object|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function archiveTaskInternalNoteWithHttpInfo($taskId, $noteId, $acceptLanguage = null)
     {
@@ -178,80 +177,10 @@ class TasksApi
                 );
             }
 
-            switch($statusCode) {
-                case 200:
-                    if ('object' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, 'object', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 401:
-                    if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 404:
-                    if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 500:
-                    if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = 'object';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
+            return [null, $statusCode, $response->getHeaders()];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'object',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -317,24 +246,14 @@ class TasksApi
      */
     public function archiveTaskInternalNoteAsyncWithHttpInfo($taskId, $noteId, $acceptLanguage = null)
     {
-        $returnType = 'object';
+        $returnType = '';
         $request = $this->archiveTaskInternalNoteRequest($taskId, $noteId, $acceptLanguage);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -1168,12 +1087,11 @@ class TasksApi
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return object|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+     * @return void
      */
     public function deleteTask($taskId)
     {
-        list($response) = $this->deleteTaskWithHttpInfo($taskId);
-        return $response;
+        $this->deleteTaskWithHttpInfo($taskId);
     }
 
     /**
@@ -1185,7 +1103,7 @@ class TasksApi
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of object|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteTaskWithHttpInfo($taskId)
     {
@@ -1219,80 +1137,10 @@ class TasksApi
                 );
             }
 
-            switch($statusCode) {
-                case 200:
-                    if ('object' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, 'object', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 401:
-                    if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 404:
-                    if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 500:
-                    if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = 'object';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
+            return [null, $statusCode, $response->getHeaders()];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'object',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -1354,24 +1202,14 @@ class TasksApi
      */
     public function deleteTaskAsyncWithHttpInfo($taskId)
     {
-        $returnType = 'object';
+        $returnType = '';
         $request = $this->deleteTaskRequest($taskId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
@@ -3377,12 +3215,11 @@ class TasksApi
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return object|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+     * @return void
      */
     public function restoreTaskInternalNote($taskId, $noteId, $acceptLanguage = null)
     {
-        list($response) = $this->restoreTaskInternalNoteWithHttpInfo($taskId, $noteId, $acceptLanguage);
-        return $response;
+        $this->restoreTaskInternalNoteWithHttpInfo($taskId, $noteId, $acceptLanguage);
     }
 
     /**
@@ -3396,7 +3233,7 @@ class TasksApi
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of object|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function restoreTaskInternalNoteWithHttpInfo($taskId, $noteId, $acceptLanguage = null)
     {
@@ -3430,80 +3267,10 @@ class TasksApi
                 );
             }
 
-            switch($statusCode) {
-                case 200:
-                    if ('object' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, 'object', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 401:
-                    if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 404:
-                    if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 500:
-                    if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = 'object';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
+            return [null, $statusCode, $response->getHeaders()];
 
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'object',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -3569,24 +3336,14 @@ class TasksApi
      */
     public function restoreTaskInternalNoteAsyncWithHttpInfo($taskId, $noteId, $acceptLanguage = null)
     {
-        $returnType = 'object';
+        $returnType = '';
         $request = $this->restoreTaskInternalNoteRequest($taskId, $noteId, $acceptLanguage);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
             ->then(
                 function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
                 },
                 function ($exception) {
                     $response = $exception->getResponse();
