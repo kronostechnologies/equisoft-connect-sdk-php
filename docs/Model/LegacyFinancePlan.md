@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **accountType** | **string** |  | [optional]
 **marketValue** | **string** |  | [optional]
 **marketValueDate** | **string** |  | [optional]
-**maturityDate** | [**\DateTime**](\DateTime.md) |  | [optional]
+**maturityDate** | **\DateTime** |  | [optional]
 **owner** | **string** |  | [optional]
 **owner2** | **string** |  | [optional]
 **accountDesignation** | **string** |  | [optional]
