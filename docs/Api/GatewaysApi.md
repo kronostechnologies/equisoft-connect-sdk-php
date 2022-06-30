@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 ## `deleteEquisoftAnalyzeAccess()`
 
 ```php
-deleteEquisoftAnalyzeAccess($accessId)
+deleteEquisoftAnalyzeAccess($accessId): object
 ```
 
 
@@ -106,7 +106,8 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\GatewaysApi(
 $accessId = 56; // int
 
 try {
-    $apiInstance->deleteEquisoftAnalyzeAccess($accessId);
+    $result = $apiInstance->deleteEquisoftAnalyzeAccess($accessId);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GatewaysApi->deleteEquisoftAnalyzeAccess: ', $e->getMessage(), PHP_EOL;
 }
@@ -120,7 +121,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -494,7 +495,7 @@ Name | Type | Description  | Notes
 ## `patchEquisoftAnalyzeAccess()`
 
 ```php
-patchEquisoftAnalyzeAccess($accessId, $gatewaysAccessesPatchEquisoftAnalyzeAccessPayload)
+patchEquisoftAnalyzeAccess($accessId, $gatewaysAccessesPatchEquisoftAnalyzeAccessPayload): object
 ```
 
 
@@ -522,7 +523,8 @@ $accessId = 56; // int
 $gatewaysAccessesPatchEquisoftAnalyzeAccessPayload = new \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesPatchEquisoftAnalyzeAccessPayload(); // \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesPatchEquisoftAnalyzeAccessPayload
 
 try {
-    $apiInstance->patchEquisoftAnalyzeAccess($accessId, $gatewaysAccessesPatchEquisoftAnalyzeAccessPayload);
+    $result = $apiInstance->patchEquisoftAnalyzeAccess($accessId, $gatewaysAccessesPatchEquisoftAnalyzeAccessPayload);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GatewaysApi->patchEquisoftAnalyzeAccess: ', $e->getMessage(), PHP_EOL;
 }
@@ -537,7 +539,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 

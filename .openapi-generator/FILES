@@ -1,4 +1,4 @@
-.php-cs-fixer.dist.php
+.php_cs
 .travis.yml
 README.md
 docs/Api/ContactsApi.md
