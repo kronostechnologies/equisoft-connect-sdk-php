@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 ## `cancelMovement()`
 
 ```php
-cancelMovement($movementId): object
+cancelMovement($movementId)
 ```
 
 
@@ -97,8 +97,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\MovementApi(
 $movementId = 56; // int
 
 try {
-    $result = $apiInstance->cancelMovement($movementId);
-    print_r($result);
+    $apiInstance->cancelMovement($movementId);
 } catch (Exception $e) {
     echo 'Exception when calling MovementApi->cancelMovement: ', $e->getMessage(), PHP_EOL;
 }
@@ -112,7 +111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 
@@ -130,7 +129,7 @@ Name | Type | Description  | Notes
 ## `deleteMovement()`
 
 ```php
-deleteMovement($movementId): object
+deleteMovement($movementId)
 ```
 
 
@@ -155,8 +154,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\MovementApi(
 $movementId = 56; // int
 
 try {
-    $result = $apiInstance->deleteMovement($movementId);
-    print_r($result);
+    $apiInstance->deleteMovement($movementId);
 } catch (Exception $e) {
     echo 'Exception when calling MovementApi->deleteMovement: ', $e->getMessage(), PHP_EOL;
 }
@@ -170,7 +168,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 

@@ -15,9 +15,9 @@ Name | Type | Description | Notes
 **pctOwnership** | **float** |  | [optional]
 **instalment** | **float** |  | [optional]
 **instalmentFrequency** | **string** |  | [optional]
-**dateStart** | [**\DateTime**](\DateTime.md) |  | [optional]
-**dateEnd** | [**\DateTime**](\DateTime.md) |  | [optional]
-**dateUpdated** | [**\DateTime**](\DateTime.md) |  | [optional]
+**dateStart** | **\DateTime** |  | [optional]
+**dateEnd** | **\DateTime** |  | [optional]
+**dateUpdated** | **\DateTime** |  | [optional]
 **notes** | **string** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
