@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional]
-**startDate** | **\DateTime** |  | [optional]
-**endDate** | **\DateTime** |  | [optional]
+**startDate** | [**\DateTime**](\DateTime.md) |  | [optional]
+**endDate** | [**\DateTime**](\DateTime.md) |  | [optional]
 **status** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValue**](FieldValue.md) |  | [optional]
 **marriageContract** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValue**](FieldValue.md) |  | [optional]
 
