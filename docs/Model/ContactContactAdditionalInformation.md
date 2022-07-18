@@ -5,10 +5,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **isDeceased** | **bool** |  | [optional]
-**deceasedDate** | [**\DateTime**](\DateTime.md) |  | [optional]
+**deceasedDate** | **\DateTime** |  | [optional]
 **isSmoker** | **bool** |  | [optional]
-**smokerEndDate** | [**\DateTime**](\DateTime.md) |  | [optional]
-**birthDate** | [**\DateTime**](\DateTime.md) |  | [optional]
+**smokerEndDate** | **\DateTime** |  | [optional]
+**birthDate** | **\DateTime** |  | [optional]
 **facebookLink** | **string** |  | [optional]
 **twitterLink** | **string** |  | [optional]
 **linkedInLink** | **string** |  | [optional]
