@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **stateProvince** | **string** |  | [optional]
 **country** | **string** |  | [optional]
 **postalCode** | **string** |  | [optional]
-**dateSince** | **\DateTime** |  | [optional]
+**dateSince** | [**\DateTime**](\DateTime.md) |  | [optional]
 **city** | **string** |  | [optional]
 **locked** | **bool** |  | [optional]
 

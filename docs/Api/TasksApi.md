@@ -20,7 +20,7 @@ Method | HTTP request | Description
 ## `archiveTaskInternalNote()`
 
 ```php
-archiveTaskInternalNote($taskId, $noteId, $acceptLanguage)
+archiveTaskInternalNote($taskId, $noteId, $acceptLanguage): object
 ```
 
 Archive an internal note for a task.
@@ -47,7 +47,8 @@ $noteId = 56; // int | Note unique identifier.
 $acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
 
 try {
-    $apiInstance->archiveTaskInternalNote($taskId, $noteId, $acceptLanguage);
+    $result = $apiInstance->archiveTaskInternalNote($taskId, $noteId, $acceptLanguage);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->archiveTaskInternalNote: ', $e->getMessage(), PHP_EOL;
 }
@@ -63,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -203,7 +204,7 @@ Name | Type | Description  | Notes
 ## `deleteTask()`
 
 ```php
-deleteTask($taskId)
+deleteTask($taskId): object
 ```
 
 Delete a task.
@@ -228,7 +229,8 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\TasksApi(
 $taskId = 'taskId_example'; // string
 
 try {
-    $apiInstance->deleteTask($taskId);
+    $result = $apiInstance->deleteTask($taskId);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->deleteTask: ', $e->getMessage(), PHP_EOL;
 }
@@ -242,7 +244,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
@@ -343,7 +345,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\TasksApi(
     $config
 );
 $taskId = 'taskId_example'; // string
-$history = new \Equisoft\SDK\EquisoftConnect\Model\InternalNotesHistoryType(); // InternalNotesHistoryType | Query all revisions or not.
+$history = new \Equisoft\SDK\EquisoftConnect\Model\\Equisoft\SDK\EquisoftConnect\Model\InternalNotesHistoryType(); // \Equisoft\SDK\EquisoftConnect\Model\InternalNotesHistoryType | Query all revisions or not.
 $acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
 
 try {
@@ -359,7 +361,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **taskId** | **string**|  |
- **history** | [**InternalNotesHistoryType**](../Model/.md)| Query all revisions or not. | [optional]
+ **history** | [**\Equisoft\SDK\EquisoftConnect\Model\InternalNotesHistoryType**](../Model/.md)| Query all revisions or not. | [optional]
  **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 | [optional]
 
 ### Return type
@@ -409,8 +411,8 @@ $contactIds = array(56); // int[] | Contact ID filter param. Many ids can be pas
 $minDueDate = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Minimum (inclusive) due date of the task.
 $maxDueDate = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Maximum (exclusive) due date of the task.
 $isCompleted = True; // bool | If true, include only completed tasks. If false, include only TODO tasks. If not set or null, include both.
-$dueDateFilter = new \Equisoft\SDK\EquisoftConnect\Model\TasksDueDateFilter(); // TasksDueDateFilter | Include or exclude tasks with or without due date.
-$orderBy = new \Equisoft\SDK\EquisoftConnect\Model\TasksOrderByType(); // TasksOrderByType | Specify the order of the results.
+$dueDateFilter = new \Equisoft\SDK\EquisoftConnect\Model\\Equisoft\SDK\EquisoftConnect\Model\TasksDueDateFilter(); // \Equisoft\SDK\EquisoftConnect\Model\TasksDueDateFilter | Include or exclude tasks with or without due date.
+$orderBy = new \Equisoft\SDK\EquisoftConnect\Model\\Equisoft\SDK\EquisoftConnect\Model\TasksOrderByType(); // \Equisoft\SDK\EquisoftConnect\Model\TasksOrderByType | Specify the order of the results.
 $pageToken = MjUwMDszMDAK; // string | Token to specify which page to fetch.
 $maxResults = 'maxResults_example'; // string | Maximum number of records for one result page.  If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records.
 $acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
@@ -432,8 +434,8 @@ Name | Type | Description  | Notes
  **minDueDate** | **\DateTime**| Minimum (inclusive) due date of the task. | [optional]
  **maxDueDate** | **\DateTime**| Maximum (exclusive) due date of the task. | [optional]
  **isCompleted** | **bool**| If true, include only completed tasks. If false, include only TODO tasks. If not set or null, include both. | [optional]
- **dueDateFilter** | [**TasksDueDateFilter**](../Model/.md)| Include or exclude tasks with or without due date. | [optional]
- **orderBy** | [**TasksOrderByType**](../Model/.md)| Specify the order of the results. | [optional]
+ **dueDateFilter** | [**\Equisoft\SDK\EquisoftConnect\Model\TasksDueDateFilter**](../Model/.md)| Include or exclude tasks with or without due date. | [optional]
+ **orderBy** | [**\Equisoft\SDK\EquisoftConnect\Model\TasksOrderByType**](../Model/.md)| Specify the order of the results. | [optional]
  **pageToken** | **string**| Token to specify which page to fetch. | [optional]
  **maxResults** | **string**| Maximum number of records for one result page.  If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. | [optional]
  **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 | [optional]
@@ -584,7 +586,7 @@ Name | Type | Description  | Notes
 ## `restoreTaskInternalNote()`
 
 ```php
-restoreTaskInternalNote($taskId, $noteId, $acceptLanguage)
+restoreTaskInternalNote($taskId, $noteId, $acceptLanguage): object
 ```
 
 Restore an archived internal note for a task.
@@ -611,7 +613,8 @@ $noteId = 56; // int | Note unique identifier.
 $acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
 
 try {
-    $apiInstance->restoreTaskInternalNote($taskId, $noteId, $acceptLanguage);
+    $result = $apiInstance->restoreTaskInternalNote($taskId, $noteId, $acceptLanguage);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling TasksApi->restoreTaskInternalNote: ', $e->getMessage(), PHP_EOL;
 }
@@ -627,7 +630,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**object**
 
 ### Authorization
 
