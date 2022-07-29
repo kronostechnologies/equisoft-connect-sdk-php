@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createEquisoftAnalyzeAccess()**](GatewaysApi.md#createEquisoftAnalyzeAccess) | **POST** /crm/api/v1/gateways/equisoftAnalyze/accesses | 
 [**deleteEquisoftAnalyzeAccess()**](GatewaysApi.md#deleteEquisoftAnalyzeAccess) | **DELETE** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} | 
-[**gatewayAdminLogin()**](GatewaysApi.md#gatewayAdminLogin) | **POST** /crm/api/v1/gateways/credentials-validation/admin-credentials/login | 
+[**gatewayAdminLogin()**](GatewaysApi.md#gatewayAdminLogin) | **POST** /crm/api/v1/gateways/credentials-validation/{gatewayName}/admin-credentials/login | 
 [**listAssetBookCredentials()**](GatewaysApi.md#listAssetBookCredentials) | **GET** /crm/api/v1/gateways/assetbook/credentials | 
 [**listCredentials()**](GatewaysApi.md#listCredentials) | **GET** /crm/api/v1/gateways/credentials-validation/{gatewayId}/credentials/{status} | 
 [**listEquisoftAnalyzeAccesses()**](GatewaysApi.md#listEquisoftAnalyzeAccesses) | **GET** /crm/api/v1/gateways/equisoftAnalyze/accesses | 
@@ -138,7 +138,7 @@ void (empty response body)
 ## `gatewayAdminLogin()`
 
 ```php
-gatewayAdminLogin($authorization, $adminCredentialPayload): \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesValidationAdminCredentialResponse
+gatewayAdminLogin($gatewayName, $authorization, $adminCredentialPayload): \Equisoft\SDK\EquisoftConnect\Model\AdminCredentialResponse
 ```
 
 
@@ -160,11 +160,12 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\GatewaysApi(
     new GuzzleHttp\Client(),
     $config
 );
+$gatewayName = 'gatewayName_example'; // string
 $authorization = 'authorization_example'; // string | Authorization header using the Bearer scheme
 $adminCredentialPayload = new \Equisoft\SDK\EquisoftConnect\Model\AdminCredentialPayload(); // \Equisoft\SDK\EquisoftConnect\Model\AdminCredentialPayload
 
 try {
-    $result = $apiInstance->gatewayAdminLogin($authorization, $adminCredentialPayload);
+    $result = $apiInstance->gatewayAdminLogin($gatewayName, $authorization, $adminCredentialPayload);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GatewaysApi->gatewayAdminLogin: ', $e->getMessage(), PHP_EOL;
@@ -175,12 +176,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **gatewayName** | **string**|  |
  **authorization** | **string**| Authorization header using the Bearer scheme |
  **adminCredentialPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\AdminCredentialPayload**](../Model/AdminCredentialPayload.md)|  |
 
 ### Return type
 
-[**\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesValidationAdminCredentialResponse**](../Model/GatewaysAccessesValidationAdminCredentialResponse.md)
+[**\Equisoft\SDK\EquisoftConnect\Model\AdminCredentialResponse**](../Model/AdminCredentialResponse.md)
 
 ### Authorization
 
