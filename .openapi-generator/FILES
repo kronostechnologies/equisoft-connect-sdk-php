@@ -17,7 +17,6 @@ docs/Api/TasksApi.md
 docs/Api/UsersApi.md
 docs/Model/AccessRights.md
 docs/Model/AdminCredentialPayload.md
-docs/Model/AdminCredentialResponse.md
 docs/Model/CalendarDefaultCalendarId.md
 docs/Model/CalendarsCalendar.md
 docs/Model/CalendarsListCalendarResponse.md
@@ -66,6 +65,8 @@ docs/Model/GatewaysAccessesEquisoftAnalyzeAccess.md
 docs/Model/GatewaysAccessesListGatewayAccessesResponse.md
 docs/Model/GatewaysAccessesPatchEquisoftAnalyzeAccessPayload.md
 docs/Model/GatewaysAccessesUser.md
+docs/Model/GatewaysAccessesValidationAdminCredentialResponse.md
+docs/Model/GatewaysAccessesValidationGatewayAdminDto.md
 docs/Model/GatewaysCredentials.md
 docs/Model/GatewaysCredentialsWithSsn.md
 docs/Model/GatewaysCredentialsWithSsnAllOf.md
@@ -216,7 +217,6 @@ lib/Configuration.php
 lib/HeaderSelector.php
 lib/Model/AccessRights.php
 lib/Model/AdminCredentialPayload.php
-lib/Model/AdminCredentialResponse.php
 lib/Model/CalendarDefaultCalendarId.php
 lib/Model/CalendarsCalendar.php
 lib/Model/CalendarsListCalendarResponse.php
@@ -265,6 +265,8 @@ lib/Model/GatewaysAccessesEquisoftAnalyzeAccess.php
 lib/Model/GatewaysAccessesListGatewayAccessesResponse.php
 lib/Model/GatewaysAccessesPatchEquisoftAnalyzeAccessPayload.php
 lib/Model/GatewaysAccessesUser.php
+lib/Model/GatewaysAccessesValidationAdminCredentialResponse.php
+lib/Model/GatewaysAccessesValidationGatewayAdminDto.php
 lib/Model/GatewaysCredentials.php
 lib/Model/GatewaysCredentialsWithSsn.php
 lib/Model/GatewaysCredentialsWithSsnAllOf.php
@@ -414,7 +416,6 @@ test/Api/TasksApiTest.php
 test/Api/UsersApiTest.php
 test/Model/AccessRightsTest.php
 test/Model/AdminCredentialPayloadTest.php
-test/Model/AdminCredentialResponseTest.php
 test/Model/CalendarDefaultCalendarIdTest.php
 test/Model/CalendarsCalendarTest.php
 test/Model/CalendarsListCalendarResponseTest.php
@@ -463,6 +464,8 @@ test/Model/GatewaysAccessesEquisoftAnalyzeAccessTest.php
 test/Model/GatewaysAccessesListGatewayAccessesResponseTest.php
 test/Model/GatewaysAccessesPatchEquisoftAnalyzeAccessPayloadTest.php
 test/Model/GatewaysAccessesUserTest.php
+test/Model/GatewaysAccessesValidationAdminCredentialResponseTest.php
+test/Model/GatewaysAccessesValidationGatewayAdminDtoTest.php
 test/Model/GatewaysCredentialsTest.php
 test/Model/GatewaysCredentialsWithSsnAllOfTest.php
 test/Model/GatewaysCredentialsWithSsnTest.php

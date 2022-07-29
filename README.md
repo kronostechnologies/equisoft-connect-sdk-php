@@ -103,7 +103,7 @@ Class | Method | HTTP request | Description
 *EventsApi* | [**transferEventToCompleted**](docs/Api/EventsApi.md#transfereventtocompleted) | **POST** /crm/api/v1/events/{eventId}/transferToCompleted | Transfer an event to the completed/done calendar.
 *GatewaysApi* | [**createEquisoftAnalyzeAccess**](docs/Api/GatewaysApi.md#createequisoftanalyzeaccess) | **POST** /crm/api/v1/gateways/equisoftAnalyze/accesses | 
 *GatewaysApi* | [**deleteEquisoftAnalyzeAccess**](docs/Api/GatewaysApi.md#deleteequisoftanalyzeaccess) | **DELETE** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} | 
-*GatewaysApi* | [**gatewayAdminLogin**](docs/Api/GatewaysApi.md#gatewayadminlogin) | **POST** /crm/api/v1/gateways/credentials-validation/{gatewayName}/admin-credentials/login | 
+*GatewaysApi* | [**gatewayAdminLogin**](docs/Api/GatewaysApi.md#gatewayadminlogin) | **POST** /crm/api/v1/gateways/credentials-validation/admin-credentials/login | 
 *GatewaysApi* | [**listAssetBookCredentials**](docs/Api/GatewaysApi.md#listassetbookcredentials) | **GET** /crm/api/v1/gateways/assetbook/credentials | 
 *GatewaysApi* | [**listCredentials**](docs/Api/GatewaysApi.md#listcredentials) | **GET** /crm/api/v1/gateways/credentials-validation/{gatewayId}/credentials/{status} | 
 *GatewaysApi* | [**listEquisoftAnalyzeAccesses**](docs/Api/GatewaysApi.md#listequisoftanalyzeaccesses) | **GET** /crm/api/v1/gateways/equisoftAnalyze/accesses | 
@@ -152,7 +152,6 @@ Class | Method | HTTP request | Description
 
 - [AccessRights](docs/Model/AccessRights.md)
 - [AdminCredentialPayload](docs/Model/AdminCredentialPayload.md)
-- [AdminCredentialResponse](docs/Model/AdminCredentialResponse.md)
 - [CalendarDefaultCalendarId](docs/Model/CalendarDefaultCalendarId.md)
 - [CalendarsCalendar](docs/Model/CalendarsCalendar.md)
 - [CalendarsListCalendarResponse](docs/Model/CalendarsListCalendarResponse.md)
@@ -201,6 +200,8 @@ Class | Method | HTTP request | Description
 - [GatewaysAccessesListGatewayAccessesResponse](docs/Model/GatewaysAccessesListGatewayAccessesResponse.md)
 - [GatewaysAccessesPatchEquisoftAnalyzeAccessPayload](docs/Model/GatewaysAccessesPatchEquisoftAnalyzeAccessPayload.md)
 - [GatewaysAccessesUser](docs/Model/GatewaysAccessesUser.md)
+- [GatewaysAccessesValidationAdminCredentialResponse](docs/Model/GatewaysAccessesValidationAdminCredentialResponse.md)
+- [GatewaysAccessesValidationGatewayAdminDto](docs/Model/GatewaysAccessesValidationGatewayAdminDto.md)
 - [GatewaysCredentials](docs/Model/GatewaysCredentials.md)
 - [GatewaysCredentialsWithSsn](docs/Model/GatewaysCredentialsWithSsn.md)
 - [GatewaysCredentialsWithSsnAllOf](docs/Model/GatewaysCredentialsWithSsnAllOf.md)

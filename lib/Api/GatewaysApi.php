@@ -730,34 +730,32 @@ class GatewaysApi
     /**
      * Operation gatewayAdminLogin
      *
-     * @param  string $gatewayName gatewayName (required)
      * @param  string $authorization Authorization header using the Bearer scheme (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\AdminCredentialPayload $adminCredentialPayload adminCredentialPayload (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Equisoft\SDK\EquisoftConnect\Model\AdminCredentialResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+     * @return \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesValidationAdminCredentialResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
-    public function gatewayAdminLogin($gatewayName, $authorization, $adminCredentialPayload)
+    public function gatewayAdminLogin($authorization, $adminCredentialPayload)
     {
-        list($response) = $this->gatewayAdminLoginWithHttpInfo($gatewayName, $authorization, $adminCredentialPayload);
+        list($response) = $this->gatewayAdminLoginWithHttpInfo($authorization, $adminCredentialPayload);
         return $response;
     }
 
     /**
      * Operation gatewayAdminLoginWithHttpInfo
      *
-     * @param  string $gatewayName (required)
      * @param  string $authorization Authorization header using the Bearer scheme (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\AdminCredentialPayload $adminCredentialPayload (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Equisoft\SDK\EquisoftConnect\Model\AdminCredentialResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesValidationAdminCredentialResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function gatewayAdminLoginWithHttpInfo($gatewayName, $authorization, $adminCredentialPayload)
+    public function gatewayAdminLoginWithHttpInfo($authorization, $adminCredentialPayload)
     {
-        $request = $this->gatewayAdminLoginRequest($gatewayName, $authorization, $adminCredentialPayload);
+        $request = $this->gatewayAdminLoginRequest($authorization, $adminCredentialPayload);
 
         try {
             $options = $this->createHttpClientOption();
@@ -796,17 +794,17 @@ class GatewaysApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Equisoft\SDK\EquisoftConnect\Model\AdminCredentialResponse' === '\SplFileObject') {
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesValidationAdminCredentialResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Equisoft\SDK\EquisoftConnect\Model\AdminCredentialResponse' !== 'string') {
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesValidationAdminCredentialResponse' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\AdminCredentialResponse', []),
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesValidationAdminCredentialResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -842,7 +840,7 @@ class GatewaysApi
                     ];
             }
 
-            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\AdminCredentialResponse';
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesValidationAdminCredentialResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -863,7 +861,7 @@ class GatewaysApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Equisoft\SDK\EquisoftConnect\Model\AdminCredentialResponse',
+                        '\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesValidationAdminCredentialResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -892,16 +890,15 @@ class GatewaysApi
     /**
      * Operation gatewayAdminLoginAsync
      *
-     * @param  string $gatewayName (required)
      * @param  string $authorization Authorization header using the Bearer scheme (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\AdminCredentialPayload $adminCredentialPayload (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function gatewayAdminLoginAsync($gatewayName, $authorization, $adminCredentialPayload)
+    public function gatewayAdminLoginAsync($authorization, $adminCredentialPayload)
     {
-        return $this->gatewayAdminLoginAsyncWithHttpInfo($gatewayName, $authorization, $adminCredentialPayload)
+        return $this->gatewayAdminLoginAsyncWithHttpInfo($authorization, $adminCredentialPayload)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -912,17 +909,16 @@ class GatewaysApi
     /**
      * Operation gatewayAdminLoginAsyncWithHttpInfo
      *
-     * @param  string $gatewayName (required)
      * @param  string $authorization Authorization header using the Bearer scheme (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\AdminCredentialPayload $adminCredentialPayload (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function gatewayAdminLoginAsyncWithHttpInfo($gatewayName, $authorization, $adminCredentialPayload)
+    public function gatewayAdminLoginAsyncWithHttpInfo($authorization, $adminCredentialPayload)
     {
-        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\AdminCredentialResponse';
-        $request = $this->gatewayAdminLoginRequest($gatewayName, $authorization, $adminCredentialPayload);
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesValidationAdminCredentialResponse';
+        $request = $this->gatewayAdminLoginRequest($authorization, $adminCredentialPayload);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -963,21 +959,14 @@ class GatewaysApi
     /**
      * Create request for operation 'gatewayAdminLogin'
      *
-     * @param  string $gatewayName (required)
      * @param  string $authorization Authorization header using the Bearer scheme (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\AdminCredentialPayload $adminCredentialPayload (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function gatewayAdminLoginRequest($gatewayName, $authorization, $adminCredentialPayload)
+    public function gatewayAdminLoginRequest($authorization, $adminCredentialPayload)
     {
-        // verify the required parameter 'gatewayName' is set
-        if ($gatewayName === null || (is_array($gatewayName) && count($gatewayName) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $gatewayName when calling gatewayAdminLogin'
-            );
-        }
         // verify the required parameter 'authorization' is set
         if ($authorization === null || (is_array($authorization) && count($authorization) === 0)) {
             throw new \InvalidArgumentException(
@@ -991,7 +980,7 @@ class GatewaysApi
             );
         }
 
-        $resourcePath = '/crm/api/v1/gateways/credentials-validation/{gatewayName}/admin-credentials/login';
+        $resourcePath = '/crm/api/v1/gateways/credentials-validation/admin-credentials/login';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1004,14 +993,6 @@ class GatewaysApi
             $headerParams['Authorization'] = ObjectSerializer::toHeaderValue($authorization);
         }
 
-        // path params
-        if ($gatewayName !== null) {
-            $resourcePath = str_replace(
-                '{' . 'gatewayName' . '}',
-                ObjectSerializer::toPathValue($gatewayName),
-                $resourcePath
-            );
-        }
 
 
         if ($multipart) {
