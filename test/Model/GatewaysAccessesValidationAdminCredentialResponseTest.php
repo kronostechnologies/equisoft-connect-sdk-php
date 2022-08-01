@@ -1,6 +1,6 @@
 <?php
 /**
- * AdminCredentialResponseTest
+ * GatewaysAccessesValidationAdminCredentialResponseTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * AdminCredentialResponseTest Class Doc Comment
+ * GatewaysAccessesValidationAdminCredentialResponseTest Class Doc Comment
  *
  * @category    Class
- * @description AdminCredentialResponse
+ * @description GatewaysAccessesValidationAdminCredentialResponse
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class AdminCredentialResponseTest extends TestCase
+class GatewaysAccessesValidationAdminCredentialResponseTest extends TestCase
 {
 
     /**
@@ -71,36 +71,18 @@ class AdminCredentialResponseTest extends TestCase
     }
 
     /**
-     * Test "AdminCredentialResponse"
+     * Test "GatewaysAccessesValidationAdminCredentialResponse"
      */
-    public function testAdminCredentialResponse()
+    public function testGatewaysAccessesValidationAdminCredentialResponse()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "gatewayId"
+     * Test attribute "adminGateways"
      */
-    public function testPropertyGatewayId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "defaultLang"
-     */
-    public function testPropertyDefaultLang()
+    public function testPropertyAdminGateways()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
