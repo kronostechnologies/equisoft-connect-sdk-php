@@ -156,6 +156,18 @@ class GatewaysApiTest extends TestCase
     }
 
     /**
+     * Test case for listGateways
+     *
+     * .
+     *
+     */
+    public function testListGateways()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for listGenericCredentials
      *
      * .

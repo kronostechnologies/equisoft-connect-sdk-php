@@ -108,6 +108,7 @@ Class | Method | HTTP request | Description
 *GatewaysApi* | [**listCredentials**](docs/Api/GatewaysApi.md#listcredentials) | **GET** /crm/api/v1/gateways/credentials-validation/{gatewayId}/credentials/{status} | 
 *GatewaysApi* | [**listEquisoftAnalyzeAccesses**](docs/Api/GatewaysApi.md#listequisoftanalyzeaccesses) | **GET** /crm/api/v1/gateways/equisoftAnalyze/accesses | 
 *GatewaysApi* | [**listGatewayConfigurations**](docs/Api/GatewaysApi.md#listgatewayconfigurations) | **GET** /crm/api/v1/gateways/generic/{gatewayName}/configuration | 
+*GatewaysApi* | [**listGateways**](docs/Api/GatewaysApi.md#listgateways) | **GET** /crm/api/v1/gateways/credentials-validation | 
 *GatewaysApi* | [**listGenericCredentials**](docs/Api/GatewaysApi.md#listgenericcredentials) | **GET** /crm/api/v1/gateways/generic/{gatewayName}/credentials | 
 *GatewaysApi* | [**patchEquisoftAnalyzeAccess**](docs/Api/GatewaysApi.md#patchequisoftanalyzeaccess) | **PATCH** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} | 
 *GatewaysApi* | [**updateCredentials**](docs/Api/GatewaysApi.md#updatecredentials) | **PUT** /crm/api/v1/gateways/credentials-validation/{gatewayId}/credentials/{status} | 
@@ -207,8 +208,10 @@ Class | Method | HTTP request | Description
 - [GatewaysCredentialsWithSsnAllOf](docs/Model/GatewaysCredentialsWithSsnAllOf.md)
 - [GatewaysFullfinanceScrapeJob](docs/Model/GatewaysFullfinanceScrapeJob.md)
 - [GatewaysFullfinanceScrapeJobStatus](docs/Model/GatewaysFullfinanceScrapeJobStatus.md)
+- [GatewaysGatewayDto](docs/Model/GatewaysGatewayDto.md)
 - [GatewaysGatewayName](docs/Model/GatewaysGatewayName.md)
 - [GatewaysGatewayType](docs/Model/GatewaysGatewayType.md)
+- [GatewaysGatewaysResponse](docs/Model/GatewaysGatewaysResponse.md)
 - [GatewaysListCredentialsResponse](docs/Model/GatewaysListCredentialsResponse.md)
 - [HandlersOauth2AssetbookAssetBookTokenPostBody](docs/Model/HandlersOauth2AssetbookAssetBookTokenPostBody.md)
 - [InternalNotesAuthor](docs/Model/InternalNotesAuthor.md)

@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**listCredentials()**](GatewaysApi.md#listCredentials) | **GET** /crm/api/v1/gateways/credentials-validation/{gatewayId}/credentials/{status} | 
 [**listEquisoftAnalyzeAccesses()**](GatewaysApi.md#listEquisoftAnalyzeAccesses) | **GET** /crm/api/v1/gateways/equisoftAnalyze/accesses | 
 [**listGatewayConfigurations()**](GatewaysApi.md#listGatewayConfigurations) | **GET** /crm/api/v1/gateways/generic/{gatewayName}/configuration | 
+[**listGateways()**](GatewaysApi.md#listGateways) | **GET** /crm/api/v1/gateways/credentials-validation | 
 [**listGenericCredentials()**](GatewaysApi.md#listGenericCredentials) | **GET** /crm/api/v1/gateways/generic/{gatewayName}/credentials | 
 [**patchEquisoftAnalyzeAccess()**](GatewaysApi.md#patchEquisoftAnalyzeAccess) | **PATCH** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} | 
 [**updateCredentials()**](GatewaysApi.md#updateCredentials) | **PUT** /crm/api/v1/gateways/credentials-validation/{gatewayId}/credentials/{status} | 
@@ -415,6 +416,66 @@ Name | Type | Description  | Notes
 ### Return type
 
 void (empty response body)
+
+### Authorization
+
+[OAuth2](../../README.md#OAuth2)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `listGateways()`
+
+```php
+listGateways($authorization, $gatewaysId): \Equisoft\SDK\EquisoftConnect\Model\GatewaysGatewaysResponse
+```
+
+
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Equisoft\SDK\EquisoftConnect\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\GatewaysApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$authorization = 'authorization_example'; // string | Authorization header using the Bearer scheme
+$gatewaysId = 'gatewaysId_example'; // string | Many ids can be passed to this argument separated by coma. Ex: '?gatewaysId=1,2,3'.
+
+try {
+    $result = $apiInstance->listGateways($authorization, $gatewaysId);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling GatewaysApi->listGateways: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **string**| Authorization header using the Bearer scheme |
+ **gatewaysId** | **string**| Many ids can be passed to this argument separated by coma. Ex: &#39;?gatewaysId&#x3D;1,2,3&#39;. | [optional]
+
+### Return type
+
+[**\Equisoft\SDK\EquisoftConnect\Model\GatewaysGatewaysResponse**](../Model/GatewaysGatewaysResponse.md)
 
 ### Authorization
 
