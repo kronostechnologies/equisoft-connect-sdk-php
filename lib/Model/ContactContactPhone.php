@@ -260,7 +260,7 @@ class ContactContactPhone implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets id
      *
-     * @param int|null $id id
+     * @param int|null $id Phone unique identifier
      *
      * @return self
      */
@@ -284,7 +284,7 @@ class ContactContactPhone implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets isMain
      *
-     * @param bool|null $isMain isMain
+     * @param bool|null $isMain Is contact's main phone
      *
      * @return self
      */
@@ -332,7 +332,7 @@ class ContactContactPhone implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets number
      *
-     * @param string|null $number number
+     * @param string|null $number Phone number
      *
      * @return self
      */
@@ -356,7 +356,7 @@ class ContactContactPhone implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets extension
      *
-     * @param string|null $extension extension
+     * @param string|null $extension Phone extension
      *
      * @return self
      */
@@ -380,7 +380,7 @@ class ContactContactPhone implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets longDistance
      *
-     * @param bool|null $longDistance longDistance
+     * @param bool|null $longDistance Is phone a long distance number
      *
      * @return self
      */
@@ -404,7 +404,7 @@ class ContactContactPhone implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets notes
      *
-     * @param string|null $notes notes
+     * @param string|null $notes Phone's notes
      *
      * @return self
      */
@@ -428,7 +428,7 @@ class ContactContactPhone implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets locked
      *
-     * @param bool|null $locked locked
+     * @param bool|null $locked Is phone locked for modifications
      *
      * @return self
      */

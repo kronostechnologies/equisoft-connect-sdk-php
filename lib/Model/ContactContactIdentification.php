@@ -266,7 +266,7 @@ class ContactContactIdentification implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets title
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $title title
+     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $title Contact's title
      *
      * @return self
      */
@@ -290,7 +290,7 @@ class ContactContactIdentification implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets gender
      *
-     * @param string|null $gender gender
+     * @param string|null $gender Contact's gender
      *
      * @return self
      */
@@ -314,7 +314,7 @@ class ContactContactIdentification implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets firstName
      *
-     * @param string|null $firstName firstName
+     * @param string|null $firstName Contact's first name
      *
      * @return self
      */
@@ -338,7 +338,7 @@ class ContactContactIdentification implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets middleName
      *
-     * @param string|null $middleName middleName
+     * @param string|null $middleName Contact's middle name
      *
      * @return self
      */
@@ -362,7 +362,7 @@ class ContactContactIdentification implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets lastName
      *
-     * @param string|null $lastName lastName
+     * @param string|null $lastName Contact's last name
      *
      * @return self
      */
@@ -386,7 +386,7 @@ class ContactContactIdentification implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets maidenName
      *
-     * @param string|null $maidenName maidenName
+     * @param string|null $maidenName Contact's maiden name
      *
      * @return self
      */
@@ -410,7 +410,7 @@ class ContactContactIdentification implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets suffix
      *
-     * @param string|null $suffix suffix
+     * @param string|null $suffix Contact's suffix
      *
      * @return self
      */
@@ -434,7 +434,7 @@ class ContactContactIdentification implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets greeting
      *
-     * @param string|null $greeting greeting
+     * @param string|null $greeting Contact's greeting
      *
      * @return self
      */
@@ -458,7 +458,7 @@ class ContactContactIdentification implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets clientNb
      *
-     * @param string|null $clientNb clientNb
+     * @param string|null $clientNb Contact's client number
      *
      * @return self
      */

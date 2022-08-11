@@ -230,7 +230,7 @@ class Translation implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets locale
      *
-     * @param string $locale locale
+     * @param string $locale Translation's locale.
      *
      * @return self
      */
@@ -254,7 +254,7 @@ class Translation implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets label
      *
-     * @param string $label label
+     * @param string $label Translation's label in associated locale.
      *
      * @return self
      */
