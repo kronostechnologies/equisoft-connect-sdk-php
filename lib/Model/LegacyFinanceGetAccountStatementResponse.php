@@ -60,10 +60,10 @@ class LegacyFinanceGetAccountStatementResponse implements ModelInterface, ArrayA
       * @var string[]
       */
     protected static $openAPITypes = [
+        'accountStatement' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAccountStatement',
         'stat' => 'string',
         'errorCode' => 'string',
-        'errorMsg' => 'string',
-        'accountStatement' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAccountStatement'
+        'errorMsg' => 'string'
     ];
 
     /**
@@ -74,10 +74,10 @@ class LegacyFinanceGetAccountStatementResponse implements ModelInterface, ArrayA
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'accountStatement' => null,
         'stat' => null,
         'errorCode' => null,
-        'errorMsg' => null,
-        'accountStatement' => null
+        'errorMsg' => null
     ];
 
     /**
@@ -107,10 +107,10 @@ class LegacyFinanceGetAccountStatementResponse implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $attributeMap = [
+        'accountStatement' => 'accountStatement',
         'stat' => 'stat',
         'errorCode' => 'error_code',
-        'errorMsg' => 'error_msg',
-        'accountStatement' => 'accountStatement'
+        'errorMsg' => 'error_msg'
     ];
 
     /**
@@ -119,10 +119,10 @@ class LegacyFinanceGetAccountStatementResponse implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $setters = [
+        'accountStatement' => 'setAccountStatement',
         'stat' => 'setStat',
         'errorCode' => 'setErrorCode',
-        'errorMsg' => 'setErrorMsg',
-        'accountStatement' => 'setAccountStatement'
+        'errorMsg' => 'setErrorMsg'
     ];
 
     /**
@@ -131,10 +131,10 @@ class LegacyFinanceGetAccountStatementResponse implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $getters = [
+        'accountStatement' => 'getAccountStatement',
         'stat' => 'getStat',
         'errorCode' => 'getErrorCode',
-        'errorMsg' => 'getErrorMsg',
-        'accountStatement' => 'getAccountStatement'
+        'errorMsg' => 'getErrorMsg'
     ];
 
     /**
@@ -194,10 +194,10 @@ class LegacyFinanceGetAccountStatementResponse implements ModelInterface, ArrayA
      */
     public function __construct(array $data = null)
     {
+        $this->container['accountStatement'] = $data['accountStatement'] ?? null;
         $this->container['stat'] = $data['stat'] ?? null;
         $this->container['errorCode'] = $data['errorCode'] ?? null;
         $this->container['errorMsg'] = $data['errorMsg'] ?? null;
-        $this->container['accountStatement'] = $data['accountStatement'] ?? null;
     }
 
     /**
@@ -226,6 +226,30 @@ class LegacyFinanceGetAccountStatementResponse implements ModelInterface, ArrayA
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets accountStatement
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAccountStatement
+     */
+    public function getAccountStatement()
+    {
+        return $this->container['accountStatement'];
+    }
+
+    /**
+     * Sets accountStatement
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAccountStatement $accountStatement accountStatement
+     *
+     * @return self
+     */
+    public function setAccountStatement($accountStatement)
+    {
+        $this->container['accountStatement'] = $accountStatement;
+
+        return $this;
+    }
 
     /**
      * Gets stat
@@ -295,30 +319,6 @@ class LegacyFinanceGetAccountStatementResponse implements ModelInterface, ArrayA
     public function setErrorMsg($errorMsg)
     {
         $this->container['errorMsg'] = $errorMsg;
-
-        return $this;
-    }
-
-    /**
-     * Gets accountStatement
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAccountStatement
-     */
-    public function getAccountStatement()
-    {
-        return $this->container['accountStatement'];
-    }
-
-    /**
-     * Sets accountStatement
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAccountStatement $accountStatement accountStatement
-     *
-     * @return self
-     */
-    public function setAccountStatement($accountStatement)
-    {
-        $this->container['accountStatement'] = $accountStatement;
 
         return $this;
     }

@@ -284,7 +284,7 @@ class ContactContactAddress implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets id
      *
-     * @param int|null $id Address unique identifier
+     * @param int|null $id id
      *
      * @return self
      */
@@ -308,7 +308,7 @@ class ContactContactAddress implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets isMain
      *
-     * @param bool|null $isMain Is the contact main address
+     * @param bool|null $isMain isMain
      *
      * @return self
      */
@@ -332,7 +332,7 @@ class ContactContactAddress implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets isPostal
      *
-     * @param bool|null $isPostal Is the contact postal address
+     * @param bool|null $isPostal isPostal
      *
      * @return self
      */
@@ -380,7 +380,7 @@ class ContactContactAddress implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets line1
      *
-     * @param string|null $line1 Address line 1
+     * @param string|null $line1 line1
      *
      * @return self
      */
@@ -404,7 +404,7 @@ class ContactContactAddress implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets line2
      *
-     * @param string|null $line2 Address line 2
+     * @param string|null $line2 line2
      *
      * @return self
      */
@@ -428,7 +428,7 @@ class ContactContactAddress implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets stateProvince
      *
-     * @param string|null $stateProvince Address state or province
+     * @param string|null $stateProvince stateProvince
      *
      * @return self
      */
@@ -452,7 +452,7 @@ class ContactContactAddress implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets country
      *
-     * @param string|null $country Country
+     * @param string|null $country country
      *
      * @return self
      */
@@ -476,7 +476,7 @@ class ContactContactAddress implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets postalCode
      *
-     * @param string|null $postalCode Postal code
+     * @param string|null $postalCode postalCode
      *
      * @return self
      */
@@ -524,7 +524,7 @@ class ContactContactAddress implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets city
      *
-     * @param string|null $city City
+     * @param string|null $city city
      *
      * @return self
      */
@@ -548,7 +548,7 @@ class ContactContactAddress implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets locked
      *
-     * @param bool|null $locked Is address locked for modifications
+     * @param bool|null $locked locked
      *
      * @return self
      */

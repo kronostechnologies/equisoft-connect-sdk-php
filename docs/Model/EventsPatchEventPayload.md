@@ -12,10 +12,10 @@ Name | Type | Description | Notes
 **description** | **string** | Public description of the Event. | [optional]
 **internalNotes** | **string** | Internal notes on the Event. Not synced on remote sources. | [optional]
 **location** | **string** | Location of the event in free-text form. | [optional]
-**type** | **string** | Event type | [optional]
+**type** | **mixed** | Event type | [optional]
 **categoryId** | **int** | ID of the field value to use as category. | [optional]
 **subCategoryId** | **int** | ID of the field value to use as sub-category. | [optional]
-**priority** | **int** | Importance/Priority of an event or task. 5 is the most important. | [optional]
+**priority** | **mixed** | Importance/Priority of an event or task. 5 is the most important. | [optional]
 **visibility** | **string** | Confidentiality level of the Event (private or not). [NORMAL, PRIVATE] | [optional]
 **contactIds** | **int[]** | Allow to link the event to one or many contacts. | [optional]
 

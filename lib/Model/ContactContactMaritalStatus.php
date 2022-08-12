@@ -242,7 +242,7 @@ class ContactContactMaritalStatus implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets id
      *
-     * @param int|null $id Marital status unique identifier
+     * @param int|null $id id
      *
      * @return self
      */
@@ -266,7 +266,7 @@ class ContactContactMaritalStatus implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets startDate
      *
-     * @param \DateTime|null $startDate Marital status start date
+     * @param \DateTime|null $startDate startDate
      *
      * @return self
      */
@@ -290,7 +290,7 @@ class ContactContactMaritalStatus implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets endDate
      *
-     * @param \DateTime|null $endDate Marital status end date
+     * @param \DateTime|null $endDate endDate
      *
      * @return self
      */
@@ -314,7 +314,7 @@ class ContactContactMaritalStatus implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets status
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $status Marital status current status
+     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $status status
      *
      * @return self
      */
@@ -338,7 +338,7 @@ class ContactContactMaritalStatus implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets marriageContract
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $marriageContract Marriage contract type
+     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $marriageContract marriageContract
      *
      * @return self
      */

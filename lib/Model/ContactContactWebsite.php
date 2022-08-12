@@ -236,7 +236,7 @@ class ContactContactWebsite implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets id
      *
-     * @param int|null $id Website unique identifier
+     * @param int|null $id id
      *
      * @return self
      */
@@ -260,7 +260,7 @@ class ContactContactWebsite implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets url
      *
-     * @param string|null $url Website's url
+     * @param string|null $url url
      *
      * @return self
      */
@@ -284,7 +284,7 @@ class ContactContactWebsite implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets isMain
      *
-     * @param bool|null $isMain Is the contact's main website
+     * @param bool|null $isMain isMain
      *
      * @return self
      */
@@ -308,7 +308,7 @@ class ContactContactWebsite implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets locked
      *
-     * @param bool|null $locked Is website locked for modifications
+     * @param bool|null $locked locked
      *
      * @return self
      */
