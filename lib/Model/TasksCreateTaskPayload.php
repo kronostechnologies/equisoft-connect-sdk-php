@@ -67,7 +67,7 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess, \JsonSerial
         'internalNotes' => 'string',
         'categoryId' => 'int',
         'subCategoryId' => 'int',
-        'priority' => 'int',
+        'priority' => 'mixed',
         'visibility' => 'string',
         'contactIds' => 'int[]',
         'ownerIds' => 'int[]',
@@ -475,7 +475,7 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets priority
      *
-     * @return int|null
+     * @return mixed|null
      */
     public function getPriority()
     {
@@ -485,7 +485,7 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets priority
      *
-     * @param int|null $priority Importance/Priority of an event or task. 5 is the most important.
+     * @param mixed|null $priority Importance/Priority of an event or task. 5 is the most important.
      *
      * @return self
      */

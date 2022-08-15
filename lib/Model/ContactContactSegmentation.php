@@ -419,7 +419,7 @@ class ContactContactSegmentation implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets segmentation1
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $segmentation1 Contact's segmentation 1
+     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $segmentation1 segmentation1
      *
      * @return self
      */
@@ -443,7 +443,7 @@ class ContactContactSegmentation implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets segmentation2
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $segmentation2 Contact's segmentation 2
+     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $segmentation2 segmentation2
      *
      * @return self
      */
@@ -467,7 +467,7 @@ class ContactContactSegmentation implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets segmentation3
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $segmentation3 Contact's segmentation 3
+     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $segmentation3 segmentation3
      *
      * @return self
      */
@@ -491,7 +491,7 @@ class ContactContactSegmentation implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets segmentation4
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $segmentation4 Contact's segmentation 4
+     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $segmentation4 segmentation4
      *
      * @return self
      */
@@ -515,7 +515,7 @@ class ContactContactSegmentation implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets segmentation5
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $segmentation5 Contact's segmentation 5
+     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $segmentation5 segmentation5
      *
      * @return self
      */
@@ -539,7 +539,7 @@ class ContactContactSegmentation implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets segmentation6
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $segmentation6 Contact's segmentation 6
+     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $segmentation6 segmentation6
      *
      * @return self
      */
@@ -563,7 +563,7 @@ class ContactContactSegmentation implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets territory
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $territory Contact's territory
+     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $territory territory
      *
      * @return self
      */

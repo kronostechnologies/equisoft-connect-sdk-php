@@ -248,7 +248,7 @@ class GatewaysCredentials implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets username
      *
-     * @param string $username User name
+     * @param string $username | null
      *
      * @return self
      */
@@ -272,7 +272,7 @@ class GatewaysCredentials implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets password
      *
-     * @param string $password Password
+     * @param string $password | null
      *
      * @return self
      */
@@ -296,7 +296,7 @@ class GatewaysCredentials implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets repcode
      *
-     * @param string|null $repcode Rep code
+     * @param string|null $repcode | null
      *
      * @return self
      */
@@ -320,7 +320,7 @@ class GatewaysCredentials implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets isADealerCode
      *
-     * @param bool|null $isADealerCode Is a dealer code
+     * @param bool|null $isADealerCode isADealerCode
      *
      * @return self
      */
@@ -344,7 +344,7 @@ class GatewaysCredentials implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets dealerSystemName
      *
-     * @param string|null $dealerSystemName Dealer system name
+     * @param string|null $dealerSystemName dealerSystemName
      *
      * @return self
      */

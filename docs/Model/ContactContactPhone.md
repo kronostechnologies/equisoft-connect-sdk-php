@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | Phone unique identifier | [optional]
-**isMain** | **bool** | Is contact&#39;s main phone | [optional]
+**id** | **int** |  | [optional]
+**isMain** | **bool** |  | [optional]
 **type** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValue**](FieldValue.md) |  | [optional]
-**number** | **string** | Phone number | [optional]
-**extension** | **string** | Phone extension | [optional]
-**longDistance** | **bool** | Is phone a long distance number | [optional]
-**notes** | **string** | Phone&#39;s notes | [optional]
-**locked** | **bool** | Is phone locked for modifications | [optional]
+**number** | **string** |  | [optional]
+**extension** | **string** |  | [optional]
+**longDistance** | **bool** |  | [optional]
+**notes** | **string** |  | [optional]
+**locked** | **bool** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -248,7 +248,7 @@ class ContactContactOccupation implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets id
      *
-     * @param int|null $id Occupation unique identifier
+     * @param int|null $id id
      *
      * @return self
      */
@@ -272,7 +272,7 @@ class ContactContactOccupation implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets occupation
      *
-     * @param string|null $occupation Occupation description
+     * @param string|null $occupation occupation
      *
      * @return self
      */
@@ -296,7 +296,7 @@ class ContactContactOccupation implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets employer
      *
-     * @param string|null $employer Employer
+     * @param string|null $employer employer
      *
      * @return self
      */
@@ -320,7 +320,7 @@ class ContactContactOccupation implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets startDate
      *
-     * @param \DateTime|null $startDate Occupation's start date
+     * @param \DateTime|null $startDate startDate
      *
      * @return self
      */
@@ -344,7 +344,7 @@ class ContactContactOccupation implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets endDate
      *
-     * @param \DateTime|null $endDate Occupation's end date
+     * @param \DateTime|null $endDate endDate
      *
      * @return self
      */
@@ -368,7 +368,7 @@ class ContactContactOccupation implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets annualIncome
      *
-     * @param float|null $annualIncome Occupation's annual income
+     * @param float|null $annualIncome annualIncome
      *
      * @return self
      */
