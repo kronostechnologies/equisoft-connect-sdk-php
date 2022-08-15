@@ -221,7 +221,7 @@ class LaserAppLaserAppAnywhereError implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets message
      *
-     * @param string $message $message;
+     * @param string $message message
      *
      * @return self
      */

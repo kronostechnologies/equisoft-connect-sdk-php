@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**profile** | **string** | $profile |
-**appVersion** | **string** | $appVersion |
+**profile** | **string** | Profile name |
+**appVersion** | **string** | Application version |
 **instance** | [**\Equisoft\SDK\EquisoftConnect\Model\ContextInstance**](ContextInstance.md) |  |
 **user** | [**\Equisoft\SDK\EquisoftConnect\Model\ContextEquisoftConnectUser**](ContextEquisoftConnectUser.md) |  |
 **preferences** | [**\Equisoft\SDK\EquisoftConnect\Model\ContextPreferences**](ContextPreferences.md) |  |
