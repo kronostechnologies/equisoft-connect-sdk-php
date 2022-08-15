@@ -59,12 +59,12 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'ssnList' => 'string[]',
         'username' => 'string',
         'password' => 'string',
         'repcode' => 'string',
         'isADealerCode' => 'bool',
-        'dealerSystemName' => 'string'
+        'dealerSystemName' => 'string',
+        'ssnList' => 'string[]'
     ];
 
     /**
@@ -75,12 +75,12 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'ssnList' => null,
         'username' => null,
         'password' => null,
         'repcode' => null,
         'isADealerCode' => null,
-        'dealerSystemName' => null
+        'dealerSystemName' => null,
+        'ssnList' => null
     ];
 
     /**
@@ -110,12 +110,12 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $attributeMap = [
-        'ssnList' => 'ssnList',
         'username' => 'username',
         'password' => 'password',
         'repcode' => 'repcode',
         'isADealerCode' => 'isADealerCode',
-        'dealerSystemName' => 'dealerSystemName'
+        'dealerSystemName' => 'dealerSystemName',
+        'ssnList' => 'ssnList'
     ];
 
     /**
@@ -124,12 +124,12 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $setters = [
-        'ssnList' => 'setSsnList',
         'username' => 'setUsername',
         'password' => 'setPassword',
         'repcode' => 'setRepcode',
         'isADealerCode' => 'setIsADealerCode',
-        'dealerSystemName' => 'setDealerSystemName'
+        'dealerSystemName' => 'setDealerSystemName',
+        'ssnList' => 'setSsnList'
     ];
 
     /**
@@ -138,12 +138,12 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $getters = [
-        'ssnList' => 'getSsnList',
         'username' => 'getUsername',
         'password' => 'getPassword',
         'repcode' => 'getRepcode',
         'isADealerCode' => 'getIsADealerCode',
-        'dealerSystemName' => 'getDealerSystemName'
+        'dealerSystemName' => 'getDealerSystemName',
+        'ssnList' => 'getSsnList'
     ];
 
     /**
@@ -203,12 +203,12 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
      */
     public function __construct(array $data = null)
     {
-        $this->container['ssnList'] = $data['ssnList'] ?? null;
         $this->container['username'] = $data['username'] ?? null;
         $this->container['password'] = $data['password'] ?? null;
         $this->container['repcode'] = $data['repcode'] ?? null;
         $this->container['isADealerCode'] = $data['isADealerCode'] ?? null;
         $this->container['dealerSystemName'] = $data['dealerSystemName'] ?? null;
+        $this->container['ssnList'] = $data['ssnList'] ?? null;
     }
 
     /**
@@ -242,30 +242,6 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
 
 
     /**
-     * Gets ssnList
-     *
-     * @return string[]|null
-     */
-    public function getSsnList()
-    {
-        return $this->container['ssnList'];
-    }
-
-    /**
-     * Sets ssnList
-     *
-     * @param string[]|null $ssnList The list will contain formatted SSNs, i.e. \"123 456 789\"
-     *
-     * @return self
-     */
-    public function setSsnList($ssnList)
-    {
-        $this->container['ssnList'] = $ssnList;
-
-        return $this;
-    }
-
-    /**
      * Gets username
      *
      * @return string
@@ -278,7 +254,7 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets username
      *
-     * @param string $username | null
+     * @param string $username User name
      *
      * @return self
      */
@@ -302,7 +278,7 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets password
      *
-     * @param string $password | null
+     * @param string $password Password
      *
      * @return self
      */
@@ -326,7 +302,7 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets repcode
      *
-     * @param string|null $repcode | null
+     * @param string|null $repcode Rep code
      *
      * @return self
      */
@@ -350,7 +326,7 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets isADealerCode
      *
-     * @param bool|null $isADealerCode isADealerCode
+     * @param bool|null $isADealerCode Is a dealer code
      *
      * @return self
      */
@@ -374,13 +350,37 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets dealerSystemName
      *
-     * @param string|null $dealerSystemName dealerSystemName
+     * @param string|null $dealerSystemName Dealer system name
      *
      * @return self
      */
     public function setDealerSystemName($dealerSystemName)
     {
         $this->container['dealerSystemName'] = $dealerSystemName;
+
+        return $this;
+    }
+
+    /**
+     * Gets ssnList
+     *
+     * @return string[]|null
+     */
+    public function getSsnList()
+    {
+        return $this->container['ssnList'];
+    }
+
+    /**
+     * Sets ssnList
+     *
+     * @param string[]|null $ssnList The list will contain formatted SSNs, i.e. \"123 456 789\"
+     *
+     * @return self
+     */
+    public function setSsnList($ssnList)
+    {
+        $this->container['ssnList'] = $ssnList;
 
         return $this;
     }

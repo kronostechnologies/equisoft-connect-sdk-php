@@ -80,15 +80,6 @@ class LegacyProvisioningGetOrganizationListResponseTest extends TestCase
     }
 
     /**
-     * Test attribute "organizations"
-     */
-    public function testPropertyOrganizations()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "stat"
      */
     public function testPropertyStat()
@@ -110,6 +101,15 @@ class LegacyProvisioningGetOrganizationListResponseTest extends TestCase
      * Test attribute "errorMsg"
      */
     public function testPropertyErrorMsg()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "organizations"
+     */
+    public function testPropertyOrganizations()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

@@ -60,10 +60,10 @@ class LegacyDocumentGetResponse implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'documents' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocument[]',
         'stat' => 'string',
         'errorCode' => 'string',
-        'errorMsg' => 'string'
+        'errorMsg' => 'string',
+        'documents' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocument[]'
     ];
 
     /**
@@ -74,10 +74,10 @@ class LegacyDocumentGetResponse implements ModelInterface, ArrayAccess, \JsonSer
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'documents' => null,
         'stat' => null,
         'errorCode' => null,
-        'errorMsg' => null
+        'errorMsg' => null,
+        'documents' => null
     ];
 
     /**
@@ -107,10 +107,10 @@ class LegacyDocumentGetResponse implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $attributeMap = [
-        'documents' => 'documents',
         'stat' => 'stat',
         'errorCode' => 'error_code',
-        'errorMsg' => 'error_msg'
+        'errorMsg' => 'error_msg',
+        'documents' => 'documents'
     ];
 
     /**
@@ -119,10 +119,10 @@ class LegacyDocumentGetResponse implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $setters = [
-        'documents' => 'setDocuments',
         'stat' => 'setStat',
         'errorCode' => 'setErrorCode',
-        'errorMsg' => 'setErrorMsg'
+        'errorMsg' => 'setErrorMsg',
+        'documents' => 'setDocuments'
     ];
 
     /**
@@ -131,10 +131,10 @@ class LegacyDocumentGetResponse implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $getters = [
-        'documents' => 'getDocuments',
         'stat' => 'getStat',
         'errorCode' => 'getErrorCode',
-        'errorMsg' => 'getErrorMsg'
+        'errorMsg' => 'getErrorMsg',
+        'documents' => 'getDocuments'
     ];
 
     /**
@@ -194,10 +194,10 @@ class LegacyDocumentGetResponse implements ModelInterface, ArrayAccess, \JsonSer
      */
     public function __construct(array $data = null)
     {
-        $this->container['documents'] = $data['documents'] ?? null;
         $this->container['stat'] = $data['stat'] ?? null;
         $this->container['errorCode'] = $data['errorCode'] ?? null;
         $this->container['errorMsg'] = $data['errorMsg'] ?? null;
+        $this->container['documents'] = $data['documents'] ?? null;
     }
 
     /**
@@ -226,30 +226,6 @@ class LegacyDocumentGetResponse implements ModelInterface, ArrayAccess, \JsonSer
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets documents
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocument[]
-     */
-    public function getDocuments()
-    {
-        return $this->container['documents'];
-    }
-
-    /**
-     * Sets documents
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocument[] $documents Array of documents
-     *
-     * @return self
-     */
-    public function setDocuments($documents)
-    {
-        $this->container['documents'] = $documents;
-
-        return $this;
-    }
 
     /**
      * Gets stat
@@ -319,6 +295,30 @@ class LegacyDocumentGetResponse implements ModelInterface, ArrayAccess, \JsonSer
     public function setErrorMsg($errorMsg)
     {
         $this->container['errorMsg'] = $errorMsg;
+
+        return $this;
+    }
+
+    /**
+     * Gets documents
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocument[]
+     */
+    public function getDocuments()
+    {
+        return $this->container['documents'];
+    }
+
+    /**
+     * Sets documents
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocument[] $documents Array of documents
+     *
+     * @return self
+     */
+    public function setDocuments($documents)
+    {
+        $this->container['documents'] = $documents;
 
         return $this;
     }

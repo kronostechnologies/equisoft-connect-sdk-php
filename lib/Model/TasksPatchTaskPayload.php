@@ -67,7 +67,7 @@ class TasksPatchTaskPayload implements ModelInterface, ArrayAccess, \JsonSeriali
         'internalNotes' => 'string',
         'categoryId' => 'int',
         'subCategoryId' => 'int',
-        'priority' => 'mixed',
+        'priority' => 'int',
         'visibility' => 'string',
         'contactIds' => 'int[]'
     ];
@@ -460,7 +460,7 @@ class TasksPatchTaskPayload implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets priority
      *
-     * @return mixed|null
+     * @return int|null
      */
     public function getPriority()
     {
@@ -470,7 +470,7 @@ class TasksPatchTaskPayload implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets priority
      *
-     * @param mixed|null $priority Importance/Priority of an event or task. 5 is the most important.
+     * @param int|null $priority Importance/Priority of an event or task. 5 is the most important.
      *
      * @return self
      */
