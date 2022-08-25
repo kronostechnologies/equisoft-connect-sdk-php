@@ -80,6 +80,150 @@ class LegacyContactContactPayloadItemTest extends TestCase
     }
 
     /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "uuid"
+     */
+    public function testPropertyUuid()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "typeContact"
+     */
+    public function testPropertyTypeContact()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "indOrg"
+     */
+    public function testPropertyIndOrg()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "displayName"
+     */
+    public function testPropertyDisplayName()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "firstName"
+     */
+    public function testPropertyFirstName()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "nickname"
+     */
+    public function testPropertyNickname()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "middleName"
+     */
+    public function testPropertyMiddleName()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "lastName"
+     */
+    public function testPropertyLastName()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "corporationName"
+     */
+    public function testPropertyCorporationName()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "corporationNameLine2"
+     */
+    public function testPropertyCorporationNameLine2()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "rank"
+     */
+    public function testPropertyRank()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "facebookLink"
+     */
+    public function testPropertyFacebookLink()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "twitterLink"
+     */
+    public function testPropertyTwitterLink()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "linkedinLink"
+     */
+    public function testPropertyLinkedinLink()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "avatar"
+     */
+    public function testPropertyAvatar()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "externalKey"
      */
     public function testPropertyExternalKey()
@@ -479,150 +623,6 @@ class LegacyContactContactPayloadItemTest extends TestCase
      * Test attribute "orgEin"
      */
     public function testPropertyOrgEin()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "id"
-     */
-    public function testPropertyId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "uuid"
-     */
-    public function testPropertyUuid()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "typeContact"
-     */
-    public function testPropertyTypeContact()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "indOrg"
-     */
-    public function testPropertyIndOrg()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "displayName"
-     */
-    public function testPropertyDisplayName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "firstName"
-     */
-    public function testPropertyFirstName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "nickname"
-     */
-    public function testPropertyNickname()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "middleName"
-     */
-    public function testPropertyMiddleName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "lastName"
-     */
-    public function testPropertyLastName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "corporationName"
-     */
-    public function testPropertyCorporationName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "corporationNameLine2"
-     */
-    public function testPropertyCorporationNameLine2()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "rank"
-     */
-    public function testPropertyRank()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "facebookLink"
-     */
-    public function testPropertyFacebookLink()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "twitterLink"
-     */
-    public function testPropertyTwitterLink()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "linkedinLink"
-     */
-    public function testPropertyLinkedinLink()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "avatar"
-     */
-    public function testPropertyAvatar()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

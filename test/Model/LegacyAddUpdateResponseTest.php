@@ -80,15 +80,6 @@ class LegacyAddUpdateResponseTest extends TestCase
     }
 
     /**
-     * Test attribute "items"
-     */
-    public function testPropertyItems()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "stat"
      */
     public function testPropertyStat()
@@ -110,6 +101,15 @@ class LegacyAddUpdateResponseTest extends TestCase
      * Test attribute "errorMsg"
      */
     public function testPropertyErrorMsg()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "items"
+     */
+    public function testPropertyItems()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

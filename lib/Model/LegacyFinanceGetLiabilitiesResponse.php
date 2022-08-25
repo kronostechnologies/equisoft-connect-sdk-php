@@ -59,10 +59,10 @@ class LegacyFinanceGetLiabilitiesResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'liabilities' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceLiability[]',
         'stat' => 'string',
         'errorCode' => 'string',
-        'errorMsg' => 'string'
+        'errorMsg' => 'string',
+        'liabilities' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceLiability[]'
     ];
 
     /**
@@ -73,10 +73,10 @@ class LegacyFinanceGetLiabilitiesResponse implements ModelInterface, ArrayAccess
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'liabilities' => null,
         'stat' => null,
         'errorCode' => null,
-        'errorMsg' => null
+        'errorMsg' => null,
+        'liabilities' => null
     ];
 
     /**
@@ -106,10 +106,10 @@ class LegacyFinanceGetLiabilitiesResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'liabilities' => 'liabilities',
         'stat' => 'stat',
         'errorCode' => 'error_code',
-        'errorMsg' => 'error_msg'
+        'errorMsg' => 'error_msg',
+        'liabilities' => 'liabilities'
     ];
 
     /**
@@ -118,10 +118,10 @@ class LegacyFinanceGetLiabilitiesResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'liabilities' => 'setLiabilities',
         'stat' => 'setStat',
         'errorCode' => 'setErrorCode',
-        'errorMsg' => 'setErrorMsg'
+        'errorMsg' => 'setErrorMsg',
+        'liabilities' => 'setLiabilities'
     ];
 
     /**
@@ -130,10 +130,10 @@ class LegacyFinanceGetLiabilitiesResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'liabilities' => 'getLiabilities',
         'stat' => 'getStat',
         'errorCode' => 'getErrorCode',
-        'errorMsg' => 'getErrorMsg'
+        'errorMsg' => 'getErrorMsg',
+        'liabilities' => 'getLiabilities'
     ];
 
     /**
@@ -193,10 +193,10 @@ class LegacyFinanceGetLiabilitiesResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['liabilities'] = $data['liabilities'] ?? null;
         $this->container['stat'] = $data['stat'] ?? null;
         $this->container['errorCode'] = $data['errorCode'] ?? null;
         $this->container['errorMsg'] = $data['errorMsg'] ?? null;
+        $this->container['liabilities'] = $data['liabilities'] ?? null;
     }
 
     /**
@@ -225,30 +225,6 @@ class LegacyFinanceGetLiabilitiesResponse implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets liabilities
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceLiability[]
-     */
-    public function getLiabilities()
-    {
-        return $this->container['liabilities'];
-    }
-
-    /**
-     * Sets liabilities
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceLiability[] $liabilities liabilities
-     *
-     * @return self
-     */
-    public function setLiabilities($liabilities)
-    {
-        $this->container['liabilities'] = $liabilities;
-
-        return $this;
-    }
 
     /**
      * Gets stat
@@ -318,6 +294,30 @@ class LegacyFinanceGetLiabilitiesResponse implements ModelInterface, ArrayAccess
     public function setErrorMsg($errorMsg)
     {
         $this->container['errorMsg'] = $errorMsg;
+
+        return $this;
+    }
+
+    /**
+     * Gets liabilities
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceLiability[]
+     */
+    public function getLiabilities()
+    {
+        return $this->container['liabilities'];
+    }
+
+    /**
+     * Sets liabilities
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceLiability[] $liabilities liabilities
+     *
+     * @return self
+     */
+    public function setLiabilities($liabilities)
+    {
+        $this->container['liabilities'] = $liabilities;
 
         return $this;
     }

@@ -71,7 +71,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
         'location' => 'string',
         'type' => 'string',
         'category' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue',
-        'subCategory' => 'mixed',
+        'subCategory' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue',
         'recurrenceRule' => 'string',
         'recurringEventId' => 'string',
         'originalStartDate' => 'string',
@@ -354,6 +354,12 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
         }
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
+        }
+        if ($this->container['priority'] === null) {
+            $invalidProperties[] = "'priority' can't be null";
+        }
+        if ($this->container['visibility'] === null) {
+            $invalidProperties[] = "'visibility' can't be null";
         }
         if ($this->container['calendarId'] === null) {
             $invalidProperties[] = "'calendarId' can't be null";
@@ -653,7 +659,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets category
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $category category
+     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $category Event category
      *
      * @return self
      */
@@ -667,7 +673,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets subCategory
      *
-     * @return mixed|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null
      */
     public function getSubCategory()
     {
@@ -677,7 +683,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets subCategory
      *
-     * @param mixed|null $subCategory Event sub category
+     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $subCategory Event sub category
      *
      * @return self
      */
@@ -749,7 +755,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets originalStartDate
      *
-     * @param string|null $originalStartDate For an instance of recurring event, original start date of the event according to the recurrence rule.
+     * @param string|null $originalStartDate For an instance of recurring event, original start date of the event according to the recurrence rule. This uniquely identify the occurrence and can be different from start date.
      *
      * @return self
      */
@@ -763,7 +769,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets priority
      *
-     * @return int|null
+     * @return int
      */
     public function getPriority()
     {
@@ -773,7 +779,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets priority
      *
-     * @param int|null $priority Importance/Priority of an event or task. 5 is the most important.
+     * @param int $priority Importance/Priority of an event or task. 5 is the most important.
      *
      * @return self
      */
@@ -787,7 +793,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets visibility
      *
-     * @return string|null
+     * @return string
      */
     public function getVisibility()
     {
@@ -797,7 +803,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets visibility
      *
-     * @param string|null $visibility Confidentiality level of the Event (private or not). [NORMAL, PRIVATE]
+     * @param string $visibility Confidentiality level of the Event (private or not). [NORMAL, PRIVATE]
      *
      * @return self
      */
@@ -869,7 +875,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets calendarId
      *
-     * @param int $calendarId ID of the calendar owning this Event. If owned by many users, calendarId will be - The primary ( or completed depending on state) calendar ID of the connected user if the user is the he is one of the owners. - Any primary ( or completed depending on state) completed calendar ID of one of the owners.
+     * @param int $calendarId ID of the calendar owning this Event. If owned by many users, calendarId will be - The primary ( or completed depending on state) calendar ID of the connected user if the user is one of the owners. - Any primary ( or completed depending on state) completed calendar ID of one of the owners.
      *
      * @return self
      */

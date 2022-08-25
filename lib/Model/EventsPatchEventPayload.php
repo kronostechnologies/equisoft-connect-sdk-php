@@ -67,10 +67,10 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess, \JsonSeria
         'description' => 'string',
         'internalNotes' => 'string',
         'location' => 'string',
-        'type' => 'mixed',
+        'type' => 'string',
         'categoryId' => 'int',
         'subCategoryId' => 'int',
-        'priority' => 'mixed',
+        'priority' => 'int',
         'visibility' => 'string',
         'contactIds' => 'int[]'
     ];
@@ -478,7 +478,7 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets type
      *
-     * @return mixed|null
+     * @return string|null
      */
     public function getType()
     {
@@ -488,7 +488,7 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets type
      *
-     * @param mixed|null $type Event type
+     * @param string|null $type Event type
      *
      * @return self
      */
@@ -550,7 +550,7 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets priority
      *
-     * @return mixed|null
+     * @return int|null
      */
     public function getPriority()
     {
@@ -560,7 +560,7 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets priority
      *
-     * @param mixed|null $priority Importance/Priority of an event or task. 5 is the most important.
+     * @param int|null $priority Importance/Priority of an event or task. 5 is the most important.
      *
      * @return self
      */

@@ -80,15 +80,6 @@ class LegacyDocumentDownloadFileResponseTest extends TestCase
     }
 
     /**
-     * Test attribute "files"
-     */
-    public function testPropertyFiles()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "stat"
      */
     public function testPropertyStat()
@@ -110,6 +101,15 @@ class LegacyDocumentDownloadFileResponseTest extends TestCase
      * Test attribute "errorMsg"
      */
     public function testPropertyErrorMsg()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "files"
+     */
+    public function testPropertyFiles()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

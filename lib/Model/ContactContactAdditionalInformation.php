@@ -272,7 +272,7 @@ class ContactContactAdditionalInformation implements ModelInterface, ArrayAccess
     /**
      * Sets isDeceased
      *
-     * @param bool|null $isDeceased isDeceased
+     * @param bool|null $isDeceased Is the contact deceased
      *
      * @return self
      */
@@ -296,7 +296,7 @@ class ContactContactAdditionalInformation implements ModelInterface, ArrayAccess
     /**
      * Sets deceasedDate
      *
-     * @param \DateTime|null $deceasedDate deceasedDate
+     * @param \DateTime|null $deceasedDate Deceased date
      *
      * @return self
      */
@@ -320,7 +320,7 @@ class ContactContactAdditionalInformation implements ModelInterface, ArrayAccess
     /**
      * Sets isSmoker
      *
-     * @param bool|null $isSmoker isSmoker
+     * @param bool|null $isSmoker Is the contact a smoker
      *
      * @return self
      */
@@ -344,7 +344,7 @@ class ContactContactAdditionalInformation implements ModelInterface, ArrayAccess
     /**
      * Sets smokerEndDate
      *
-     * @param \DateTime|null $smokerEndDate smokerEndDate
+     * @param \DateTime|null $smokerEndDate Smoker end date
      *
      * @return self
      */
@@ -368,7 +368,7 @@ class ContactContactAdditionalInformation implements ModelInterface, ArrayAccess
     /**
      * Sets birthDate
      *
-     * @param \DateTime|null $birthDate birthDate
+     * @param \DateTime|null $birthDate Birthdate
      *
      * @return self
      */
@@ -392,7 +392,7 @@ class ContactContactAdditionalInformation implements ModelInterface, ArrayAccess
     /**
      * Sets facebookLink
      *
-     * @param string|null $facebookLink facebookLink
+     * @param string|null $facebookLink Facebook link
      *
      * @return self
      */
@@ -416,7 +416,7 @@ class ContactContactAdditionalInformation implements ModelInterface, ArrayAccess
     /**
      * Sets twitterLink
      *
-     * @param string|null $twitterLink twitterLink
+     * @param string|null $twitterLink Twitter link
      *
      * @return self
      */
@@ -440,7 +440,7 @@ class ContactContactAdditionalInformation implements ModelInterface, ArrayAccess
     /**
      * Sets linkedInLink
      *
-     * @param string|null $linkedInLink linkedInLink
+     * @param string|null $linkedInLink LinkedIn link
      *
      * @return self
      */
@@ -464,7 +464,7 @@ class ContactContactAdditionalInformation implements ModelInterface, ArrayAccess
     /**
      * Sets language
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $language language
+     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $language Contact's language
      *
      * @return self
      */
@@ -488,7 +488,7 @@ class ContactContactAdditionalInformation implements ModelInterface, ArrayAccess
     /**
      * Sets pictureId
      *
-     * @param int|null $pictureId pictureId
+     * @param int|null $pictureId Contact's picture document id
      *
      * @return self
      */

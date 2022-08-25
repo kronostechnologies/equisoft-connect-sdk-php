@@ -257,7 +257,7 @@ class ContextEquisoftConnect implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets profile
      *
-     * @param string $profile $profile
+     * @param string $profile Profile name
      *
      * @return self
      */
@@ -281,7 +281,7 @@ class ContextEquisoftConnect implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets appVersion
      *
-     * @param string $appVersion $appVersion
+     * @param string $appVersion Application version
      *
      * @return self
      */
