@@ -62,13 +62,13 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'string',
         'subject' => 'string',
         'isCompleted' => 'bool',
-        'dueDate' => '\DateTime',
-        'initialDate' => '\DateTime',
-        'completedDate' => '\DateTime',
+        'dueDate' => 'string',
+        'initialDate' => 'string',
+        'completedDate' => 'string',
         'description' => 'string',
         'internalNotes' => 'string',
         'category' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue',
-        'subCategory' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue',
+        'subCategory' => 'mixed',
         'priority' => 'int',
         'visibility' => 'string',
         'creationTime' => '\DateTime',
@@ -89,9 +89,9 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => null,
         'subject' => null,
         'isCompleted' => null,
-        'dueDate' => 'date',
-        'initialDate' => 'date',
-        'completedDate' => 'date',
+        'dueDate' => null,
+        'initialDate' => null,
+        'completedDate' => null,
         'description' => null,
         'internalNotes' => null,
         'category' => null,
@@ -295,12 +295,6 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['isCompleted'] === null) {
             $invalidProperties[] = "'isCompleted' can't be null";
         }
-        if ($this->container['priority'] === null) {
-            $invalidProperties[] = "'priority' can't be null";
-        }
-        if ($this->container['visibility'] === null) {
-            $invalidProperties[] = "'visibility' can't be null";
-        }
         if ($this->container['accessRights'] === null) {
             $invalidProperties[] = "'accessRights' can't be null";
         }
@@ -394,7 +388,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets dueDate
      *
-     * @return \DateTime|null
+     * @return string|null
      */
     public function getDueDate()
     {
@@ -404,7 +398,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets dueDate
      *
-     * @param \DateTime|null $dueDate Date the task is expected to be done. As defined by full-date - RFC3339
+     * @param string|null $dueDate Date the task is expected to be done. As defined by full-date - RFC3339
      *
      * @return self
      */
@@ -418,7 +412,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets initialDate
      *
-     * @return \DateTime|null
+     * @return string|null
      */
     public function getInitialDate()
     {
@@ -428,7 +422,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets initialDate
      *
-     * @param \DateTime|null $initialDate Date the task was initially started. As defined by full-date - RFC3339
+     * @param string|null $initialDate Date the task was initially started. As defined by full-date - RFC3339
      *
      * @return self
      */
@@ -442,7 +436,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets completedDate
      *
-     * @return \DateTime|null
+     * @return string|null
      */
     public function getCompletedDate()
     {
@@ -452,7 +446,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets completedDate
      *
-     * @param \DateTime|null $completedDate Date the task was completed / done. As defined by full-date - RFC3339
+     * @param string|null $completedDate Date the task was completed / done. As defined by full-date - RFC3339
      *
      * @return self
      */
@@ -524,7 +518,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets category
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $category Event category
+     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $category category
      *
      * @return self
      */
@@ -538,7 +532,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets subCategory
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null
+     * @return mixed|null
      */
     public function getSubCategory()
     {
@@ -548,7 +542,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets subCategory
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $subCategory Event sub category
+     * @param mixed|null $subCategory Event sub category
      *
      * @return self
      */
@@ -562,7 +556,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets priority
      *
-     * @return int
+     * @return int|null
      */
     public function getPriority()
     {
@@ -572,7 +566,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets priority
      *
-     * @param int $priority Importance/Priority of an event or task. 5 is the most important.
+     * @param int|null $priority Importance/Priority of an event or task. 5 is the most important.
      *
      * @return self
      */
@@ -586,7 +580,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets visibility
      *
-     * @return string
+     * @return string|null
      */
     public function getVisibility()
     {
@@ -596,7 +590,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets visibility
      *
-     * @param string $visibility Confidentiality level of the Event (private or not). [NORMAL, PRIVATE]
+     * @param string|null $visibility Confidentiality level of the Event (private or not). [NORMAL, PRIVATE]
      *
      * @return self
      */

@@ -329,7 +329,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param int $id Contact unique numeric identifier
+     * @param int $id id
      *
      * @return self
      */
@@ -353,7 +353,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets uuid
      *
-     * @param string $uuid Contact unique string identifier
+     * @param string $uuid uuid
      *
      * @return self
      */
@@ -377,7 +377,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets contactType
      *
-     * @param string $contactType Contact type ('CUS','OTHER')
+     * @param string $contactType contactType
      *
      * @return self
      */
@@ -401,7 +401,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets displayName
      *
-     * @param string|null $displayName Contact complete name (\"[Last name] [First Name]\") or company Name for 'Organization' contact
+     * @param string|null $displayName displayName
      *
      * @return self
      */
@@ -425,7 +425,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets sortName
      *
-     * @param string|null $sortName Contact sort name
+     * @param string|null $sortName sortName
      *
      * @return self
      */
@@ -449,7 +449,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets notes
      *
-     * @param string|null $notes Contact notes
+     * @param string|null $notes notes
      *
      * @return self
      */
@@ -473,7 +473,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets notesAdditionalInformation
      *
-     * @param string|null $notesAdditionalInformation Contact additional information related to the notes
+     * @param string|null $notesAdditionalInformation notesAdditionalInformation
      *
      * @return self
      */
@@ -497,7 +497,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets creationDate
      *
-     * @param \DateTime|null $creationDate Creation time. As defined by date-time - RFC3339
+     * @param \DateTime|null $creationDate creationDate
      *
      * @return self
      */
@@ -521,7 +521,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets lastUpdateDate
      *
-     * @param \DateTime|null $lastUpdateDate Last update time. As defined by date-time - RFC3339
+     * @param \DateTime|null $lastUpdateDate lastUpdateDate
      *
      * @return self
      */
@@ -593,7 +593,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets currentMaritalStatus
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactContactMaritalStatus|null $currentMaritalStatus Contact current marital status
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactContactMaritalStatus|null $currentMaritalStatus currentMaritalStatus
      *
      * @return self
      */
@@ -617,7 +617,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets currentOccupation
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactContactOccupation|null $currentOccupation Contact current occupation
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactContactOccupation|null $currentOccupation currentOccupation
      *
      * @return self
      */

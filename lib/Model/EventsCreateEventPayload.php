@@ -67,10 +67,10 @@ class EventsCreateEventPayload implements ModelInterface, ArrayAccess, \JsonSeri
         'description' => 'string',
         'internalNotes' => 'string',
         'location' => 'string',
-        'type' => 'string',
+        'type' => 'mixed',
         'categoryId' => 'int',
         'subCategoryId' => 'int',
-        'priority' => 'int',
+        'priority' => 'mixed',
         'visibility' => 'string',
         'contactIds' => 'int[]',
         'calendarId' => 'string',
@@ -499,7 +499,7 @@ class EventsCreateEventPayload implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets type
      *
-     * @return string|null
+     * @return mixed|null
      */
     public function getType()
     {
@@ -509,7 +509,7 @@ class EventsCreateEventPayload implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets type
      *
-     * @param string|null $type Event type
+     * @param mixed|null $type Event type
      *
      * @return self
      */
@@ -571,7 +571,7 @@ class EventsCreateEventPayload implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets priority
      *
-     * @return int|null
+     * @return mixed|null
      */
     public function getPriority()
     {
@@ -581,7 +581,7 @@ class EventsCreateEventPayload implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets priority
      *
-     * @param int|null $priority Importance/Priority of an event or task. 5 is the most important.
+     * @param mixed|null $priority Importance/Priority of an event or task. 5 is the most important.
      *
      * @return self
      */

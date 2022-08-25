@@ -221,7 +221,7 @@ class LaserAppLaserAppAnywhereResponse implements ModelInterface, ArrayAccess, \
     /**
      * Sets redirectUrl
      *
-     * @param string $redirectUrl redirectUrl
+     * @param string $redirectUrl $redirectUrl
      *
      * @return self
      */

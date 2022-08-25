@@ -202,12 +202,6 @@ class MovementUser implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
-        }
-        if ($this->container['displayName'] === null) {
-            $invalidProperties[] = "'displayName' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -226,7 +220,7 @@ class MovementUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets id
      *
-     * @return int
+     * @return int|null
      */
     public function getId()
     {
@@ -236,7 +230,7 @@ class MovementUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param int $id id
+     * @param int|null $id id
      *
      * @return self
      */
@@ -274,7 +268,7 @@ class MovementUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets displayName
      *
-     * @return string
+     * @return string|null
      */
     public function getDisplayName()
     {
@@ -284,7 +278,7 @@ class MovementUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets displayName
      *
-     * @param string $displayName displayName
+     * @param string|null $displayName displayName
      *
      * @return self
      */

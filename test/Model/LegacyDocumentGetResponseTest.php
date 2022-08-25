@@ -80,6 +80,15 @@ class LegacyDocumentGetResponseTest extends TestCase
     }
 
     /**
+     * Test attribute "documents"
+     */
+    public function testPropertyDocuments()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "stat"
      */
     public function testPropertyStat()
@@ -101,15 +110,6 @@ class LegacyDocumentGetResponseTest extends TestCase
      * Test attribute "errorMsg"
      */
     public function testPropertyErrorMsg()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "documents"
-     */
-    public function testPropertyDocuments()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

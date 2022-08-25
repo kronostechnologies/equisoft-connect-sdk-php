@@ -248,7 +248,7 @@ class ContactContactEmail implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets id
      *
-     * @param int|null $id Email unique identifier
+     * @param int|null $id id
      *
      * @return self
      */
@@ -272,7 +272,7 @@ class ContactContactEmail implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets isMain
      *
-     * @param bool|null $isMain Is the main email for contact
+     * @param bool|null $isMain isMain
      *
      * @return self
      */
@@ -320,7 +320,7 @@ class ContactContactEmail implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets email
      *
-     * @param string|null $email Email address
+     * @param string|null $email email
      *
      * @return self
      */
@@ -344,7 +344,7 @@ class ContactContactEmail implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets notes
      *
-     * @param string|null $notes Email notes
+     * @param string|null $notes notes
      *
      * @return self
      */
@@ -368,7 +368,7 @@ class ContactContactEmail implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets locked
      *
-     * @param bool|null $locked Is email locked for modifications
+     * @param bool|null $locked locked
      *
      * @return self
      */
