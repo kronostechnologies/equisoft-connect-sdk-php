@@ -213,6 +213,7 @@ Class | Method | HTTP request | Description
 - [GatewaysGatewayType](docs/Model/GatewaysGatewayType.md)
 - [GatewaysGatewaysResponse](docs/Model/GatewaysGatewaysResponse.md)
 - [GatewaysListCredentialsResponse](docs/Model/GatewaysListCredentialsResponse.md)
+- [GroupUsersListGroupUsersResponse](docs/Model/GroupUsersListGroupUsersResponse.md)
 - [HandlersOauth2AssetbookAssetBookTokenPostBody](docs/Model/HandlersOauth2AssetbookAssetBookTokenPostBody.md)
 - [InternalNotesAuthor](docs/Model/InternalNotesAuthor.md)
 - [InternalNotesCreateNotePayload](docs/Model/InternalNotesCreateNotePayload.md)
