@@ -296,6 +296,15 @@ class EventsEventTest extends TestCase
     }
 
     /**
+     * Test attribute "documentIds"
+     */
+    public function testPropertyDocumentIds()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "accessRights"
      */
     public function testPropertyAccessRights()

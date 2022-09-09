@@ -83,6 +83,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
         'color' => 'string',
         'textColor' => 'string',
         'contactIds' => 'int[]',
+        'documentIds' => 'int[]',
         'accessRights' => '\Equisoft\SDK\EquisoftConnect\Model\AccessRights'
     ];
 
@@ -118,6 +119,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
         'color' => null,
         'textColor' => null,
         'contactIds' => null,
+        'documentIds' => null,
         'accessRights' => null
     ];
 
@@ -172,6 +174,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
         'color' => 'color',
         'textColor' => 'textColor',
         'contactIds' => 'contactIds',
+        'documentIds' => 'documentIds',
         'accessRights' => 'accessRights'
     ];
 
@@ -205,6 +208,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
         'color' => 'setColor',
         'textColor' => 'setTextColor',
         'contactIds' => 'setContactIds',
+        'documentIds' => 'setDocumentIds',
         'accessRights' => 'setAccessRights'
     ];
 
@@ -238,6 +242,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
         'color' => 'getColor',
         'textColor' => 'getTextColor',
         'contactIds' => 'getContactIds',
+        'documentIds' => 'getDocumentIds',
         'accessRights' => 'getAccessRights'
     ];
 
@@ -322,6 +327,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['color'] = $data['color'] ?? null;
         $this->container['textColor'] = $data['textColor'] ?? null;
         $this->container['contactIds'] = $data['contactIds'] ?? null;
+        $this->container['documentIds'] = $data['documentIds'] ?? null;
         $this->container['accessRights'] = $data['accessRights'] ?? null;
     }
 
@@ -954,6 +960,30 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setContactIds($contactIds)
     {
         $this->container['contactIds'] = $contactIds;
+
+        return $this;
+    }
+
+    /**
+     * Gets documentIds
+     *
+     * @return int[]|null
+     */
+    public function getDocumentIds()
+    {
+        return $this->container['documentIds'];
+    }
+
+    /**
+     * Sets documentIds
+     *
+     * @param int[]|null $documentIds IDs of the documents linked to this Event
+     *
+     * @return self
+     */
+    public function setDocumentIds($documentIds)
+    {
+        $this->container['documentIds'] = $documentIds;
 
         return $this;
     }
