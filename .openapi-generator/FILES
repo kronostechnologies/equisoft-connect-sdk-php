@@ -56,7 +56,6 @@ docs/Model/EventsListEventResponse.md
 docs/Model/EventsOrderByType.md
 docs/Model/EventsPatchEventPayload.md
 docs/Model/EventsPatchEventResponse.md
-docs/Model/EventsPutEventLinkDocumentsPayload.md
 docs/Model/EventsTransferToCompletedResponse.md
 docs/Model/EventsVisibilityType.md
 docs/Model/FieldValue.md
@@ -78,7 +77,6 @@ docs/Model/GatewaysGatewayName.md
 docs/Model/GatewaysGatewayType.md
 docs/Model/GatewaysGatewaysResponse.md
 docs/Model/GatewaysListCredentialsResponse.md
-docs/Model/GroupUsersListGroupUsersResponse.md
 docs/Model/HandlersOauth2AssetbookAssetBookTokenPostBody.md
 docs/Model/InternalNotesAuthor.md
 docs/Model/InternalNotesCreateNotePayload.md
@@ -193,7 +191,6 @@ docs/Model/TasksListTaskResponse.md
 docs/Model/TasksOrderByType.md
 docs/Model/TasksPatchTaskPayload.md
 docs/Model/TasksPatchTaskResponse.md
-docs/Model/TasksPutTaskLinkDocumentsPayload.md
 docs/Model/TasksTask.md
 docs/Model/TasksTransferToCompletedResponse.md
 docs/Model/TasksVisibilityType.md
@@ -261,7 +258,6 @@ lib/Model/EventsListEventResponse.php
 lib/Model/EventsOrderByType.php
 lib/Model/EventsPatchEventPayload.php
 lib/Model/EventsPatchEventResponse.php
-lib/Model/EventsPutEventLinkDocumentsPayload.php
 lib/Model/EventsTransferToCompletedResponse.php
 lib/Model/EventsVisibilityType.php
 lib/Model/FieldValue.php
@@ -283,7 +279,6 @@ lib/Model/GatewaysGatewayName.php
 lib/Model/GatewaysGatewayType.php
 lib/Model/GatewaysGatewaysResponse.php
 lib/Model/GatewaysListCredentialsResponse.php
-lib/Model/GroupUsersListGroupUsersResponse.php
 lib/Model/HandlersOauth2AssetbookAssetBookTokenPostBody.php
 lib/Model/InternalNotesAuthor.php
 lib/Model/InternalNotesCreateNotePayload.php
@@ -399,7 +394,6 @@ lib/Model/TasksListTaskResponse.php
 lib/Model/TasksOrderByType.php
 lib/Model/TasksPatchTaskPayload.php
 lib/Model/TasksPatchTaskResponse.php
-lib/Model/TasksPutTaskLinkDocumentsPayload.php
 lib/Model/TasksTask.php
 lib/Model/TasksTransferToCompletedResponse.php
 lib/Model/TasksVisibilityType.php
@@ -465,7 +459,6 @@ test/Model/EventsListEventResponseTest.php
 test/Model/EventsOrderByTypeTest.php
 test/Model/EventsPatchEventPayloadTest.php
 test/Model/EventsPatchEventResponseTest.php
-test/Model/EventsPutEventLinkDocumentsPayloadTest.php
 test/Model/EventsTransferToCompletedResponseTest.php
 test/Model/EventsVisibilityTypeTest.php
 test/Model/FieldValueTest.php
@@ -487,7 +480,6 @@ test/Model/GatewaysGatewayNameTest.php
 test/Model/GatewaysGatewayTypeTest.php
 test/Model/GatewaysGatewaysResponseTest.php
 test/Model/GatewaysListCredentialsResponseTest.php
-test/Model/GroupUsersListGroupUsersResponseTest.php
 test/Model/HandlersOauth2AssetbookAssetBookTokenPostBodyTest.php
 test/Model/InternalNotesAuthorTest.php
 test/Model/InternalNotesCreateNotePayloadTest.php
@@ -602,7 +594,6 @@ test/Model/TasksListTaskResponseTest.php
 test/Model/TasksOrderByTypeTest.php
 test/Model/TasksPatchTaskPayloadTest.php
 test/Model/TasksPatchTaskResponseTest.php
-test/Model/TasksPutTaskLinkDocumentsPayloadTest.php
 test/Model/TasksTaskTest.php
 test/Model/TasksTransferToCompletedResponseTest.php
 test/Model/TasksVisibilityTypeTest.php

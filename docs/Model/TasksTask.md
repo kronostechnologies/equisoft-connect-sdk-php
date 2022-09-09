@@ -20,7 +20,6 @@ Name | Type | Description | Notes
 **updateTime** | **\DateTime** | Date time of last modification. As defined by date-time - RFC3339 | [optional]
 **completionTime** | **\DateTime** | Completion time. As defined by date-time - RFC3339 | [optional]
 **contactIds** | **int[]** | IDs of the contacts linked to this Task | [optional]
-**documentIds** | **int[]** | IDs of the documents linked to this Task | [optional]
 **accessRights** | [**\Equisoft\SDK\EquisoftConnect\Model\AccessRights**](AccessRights.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

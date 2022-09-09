@@ -180,18 +180,6 @@ class TasksApiTest extends TestCase
     }
 
     /**
-     * Test case for putTaskLinksDocuments
-     *
-     * Update the links between a task and existing documents.
-     *
-     */
-    public function testPutTaskLinksDocuments()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for restoreTaskInternalNote
      *
      * Restore an archived internal note for a task..
