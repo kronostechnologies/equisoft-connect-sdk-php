@@ -75,6 +75,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
         'updateTime' => '\DateTime',
         'completionTime' => '\DateTime',
         'contactIds' => 'int[]',
+        'documentIds' => 'int[]',
         'accessRights' => '\Equisoft\SDK\EquisoftConnect\Model\AccessRights'
     ];
 
@@ -102,6 +103,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
         'updateTime' => 'date-time',
         'completionTime' => 'date-time',
         'contactIds' => null,
+        'documentIds' => null,
         'accessRights' => null
     ];
 
@@ -148,6 +150,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
         'updateTime' => 'updateTime',
         'completionTime' => 'completionTime',
         'contactIds' => 'contactIds',
+        'documentIds' => 'documentIds',
         'accessRights' => 'accessRights'
     ];
 
@@ -173,6 +176,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
         'updateTime' => 'setUpdateTime',
         'completionTime' => 'setCompletionTime',
         'contactIds' => 'setContactIds',
+        'documentIds' => 'setDocumentIds',
         'accessRights' => 'setAccessRights'
     ];
 
@@ -198,6 +202,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
         'updateTime' => 'getUpdateTime',
         'completionTime' => 'getCompletionTime',
         'contactIds' => 'getContactIds',
+        'documentIds' => 'getDocumentIds',
         'accessRights' => 'getAccessRights'
     ];
 
@@ -274,6 +279,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['updateTime'] = $data['updateTime'] ?? null;
         $this->container['completionTime'] = $data['completionTime'] ?? null;
         $this->container['contactIds'] = $data['contactIds'] ?? null;
+        $this->container['documentIds'] = $data['documentIds'] ?? null;
         $this->container['accessRights'] = $data['accessRights'] ?? null;
     }
 
@@ -699,6 +705,30 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setContactIds($contactIds)
     {
         $this->container['contactIds'] = $contactIds;
+
+        return $this;
+    }
+
+    /**
+     * Gets documentIds
+     *
+     * @return int[]|null
+     */
+    public function getDocumentIds()
+    {
+        return $this->container['documentIds'];
+    }
+
+    /**
+     * Sets documentIds
+     *
+     * @param int[]|null $documentIds IDs of the documents linked to this Task
+     *
+     * @return self
+     */
+    public function setDocumentIds($documentIds)
+    {
+        $this->container['documentIds'] = $documentIds;
 
         return $this;
     }

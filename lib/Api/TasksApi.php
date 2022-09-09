@@ -3375,6 +3375,286 @@ class TasksApi
     }
 
     /**
+     * Operation putTaskLinksDocuments
+     *
+     * Update the links between a task and existing documents
+     *
+     * @param  string $taskId Task unique identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload $tasksPutTaskLinkDocumentsPayload Contains an array of Ids for the documents to link with the task.  *     To remove all links, documentIds set to an empty array  Collections are always overridden if defined. (required)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function putTaskLinksDocuments($taskId, $tasksPutTaskLinkDocumentsPayload, $acceptLanguage = null)
+    {
+        $this->putTaskLinksDocumentsWithHttpInfo($taskId, $tasksPutTaskLinkDocumentsPayload, $acceptLanguage);
+    }
+
+    /**
+     * Operation putTaskLinksDocumentsWithHttpInfo
+     *
+     * Update the links between a task and existing documents
+     *
+     * @param  string $taskId Task unique identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload $tasksPutTaskLinkDocumentsPayload Contains an array of Ids for the documents to link with the task.  *     To remove all links, documentIds set to an empty array  Collections are always overridden if defined. (required)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function putTaskLinksDocumentsWithHttpInfo($taskId, $tasksPutTaskLinkDocumentsPayload, $acceptLanguage = null)
+    {
+        $request = $this->putTaskLinksDocumentsRequest($taskId, $tasksPutTaskLinkDocumentsPayload, $acceptLanguage);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation putTaskLinksDocumentsAsync
+     *
+     * Update the links between a task and existing documents
+     *
+     * @param  string $taskId Task unique identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload $tasksPutTaskLinkDocumentsPayload Contains an array of Ids for the documents to link with the task.  *     To remove all links, documentIds set to an empty array  Collections are always overridden if defined. (required)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function putTaskLinksDocumentsAsync($taskId, $tasksPutTaskLinkDocumentsPayload, $acceptLanguage = null)
+    {
+        return $this->putTaskLinksDocumentsAsyncWithHttpInfo($taskId, $tasksPutTaskLinkDocumentsPayload, $acceptLanguage)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation putTaskLinksDocumentsAsyncWithHttpInfo
+     *
+     * Update the links between a task and existing documents
+     *
+     * @param  string $taskId Task unique identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload $tasksPutTaskLinkDocumentsPayload Contains an array of Ids for the documents to link with the task.  *     To remove all links, documentIds set to an empty array  Collections are always overridden if defined. (required)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function putTaskLinksDocumentsAsyncWithHttpInfo($taskId, $tasksPutTaskLinkDocumentsPayload, $acceptLanguage = null)
+    {
+        $returnType = '';
+        $request = $this->putTaskLinksDocumentsRequest($taskId, $tasksPutTaskLinkDocumentsPayload, $acceptLanguage);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'putTaskLinksDocuments'
+     *
+     * @param  string $taskId Task unique identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload $tasksPutTaskLinkDocumentsPayload Contains an array of Ids for the documents to link with the task.  *     To remove all links, documentIds set to an empty array  Collections are always overridden if defined. (required)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function putTaskLinksDocumentsRequest($taskId, $tasksPutTaskLinkDocumentsPayload, $acceptLanguage = null)
+    {
+        // verify the required parameter 'taskId' is set
+        if ($taskId === null || (is_array($taskId) && count($taskId) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $taskId when calling putTaskLinksDocuments'
+            );
+        }
+        // verify the required parameter 'tasksPutTaskLinkDocumentsPayload' is set
+        if ($tasksPutTaskLinkDocumentsPayload === null || (is_array($tasksPutTaskLinkDocumentsPayload) && count($tasksPutTaskLinkDocumentsPayload) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $tasksPutTaskLinkDocumentsPayload when calling putTaskLinksDocuments'
+            );
+        }
+
+        $resourcePath = '/crm/api/v1/tasks/{taskId}/documents';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // header params
+        if ($acceptLanguage !== null) {
+            $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($acceptLanguage);
+        }
+
+        // path params
+        if ($taskId !== null) {
+            $resourcePath = str_replace(
+                '{' . 'taskId' . '}',
+                ObjectSerializer::toPathValue($taskId),
+                $resourcePath
+            );
+        }
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($tasksPutTaskLinkDocumentsPayload)) {
+            if ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($tasksPutTaskLinkDocumentsPayload));
+            } else {
+                $httpBody = $tasksPutTaskLinkDocumentsPayload;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'PUT',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation restoreTaskInternalNote
      *
      * Restore an archived internal note for a task.

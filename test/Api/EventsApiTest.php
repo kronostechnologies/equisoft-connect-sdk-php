@@ -216,6 +216,18 @@ class EventsApiTest extends TestCase
     }
 
     /**
+     * Test case for putEventLinksDocuments
+     *
+     * Update the links between an event and existing documents.
+     *
+     */
+    public function testPutEventLinksDocuments()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for restoreEventInternalNote
      *
      * Restore an archived internal note for an event..
