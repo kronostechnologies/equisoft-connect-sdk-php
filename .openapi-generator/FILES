@@ -56,6 +56,7 @@ docs/Model/EventsListEventResponse.md
 docs/Model/EventsOrderByType.md
 docs/Model/EventsPatchEventPayload.md
 docs/Model/EventsPatchEventResponse.md
+docs/Model/EventsPutEventLinkDocumentsPayload.md
 docs/Model/EventsTransferToCompletedResponse.md
 docs/Model/EventsVisibilityType.md
 docs/Model/FieldValue.md
@@ -192,6 +193,7 @@ docs/Model/TasksListTaskResponse.md
 docs/Model/TasksOrderByType.md
 docs/Model/TasksPatchTaskPayload.md
 docs/Model/TasksPatchTaskResponse.md
+docs/Model/TasksPutTaskLinkDocumentsPayload.md
 docs/Model/TasksTask.md
 docs/Model/TasksTransferToCompletedResponse.md
 docs/Model/TasksVisibilityType.md
@@ -259,6 +261,7 @@ lib/Model/EventsListEventResponse.php
 lib/Model/EventsOrderByType.php
 lib/Model/EventsPatchEventPayload.php
 lib/Model/EventsPatchEventResponse.php
+lib/Model/EventsPutEventLinkDocumentsPayload.php
 lib/Model/EventsTransferToCompletedResponse.php
 lib/Model/EventsVisibilityType.php
 lib/Model/FieldValue.php
@@ -396,6 +399,7 @@ lib/Model/TasksListTaskResponse.php
 lib/Model/TasksOrderByType.php
 lib/Model/TasksPatchTaskPayload.php
 lib/Model/TasksPatchTaskResponse.php
+lib/Model/TasksPutTaskLinkDocumentsPayload.php
 lib/Model/TasksTask.php
 lib/Model/TasksTransferToCompletedResponse.php
 lib/Model/TasksVisibilityType.php
@@ -461,6 +465,7 @@ test/Model/EventsListEventResponseTest.php
 test/Model/EventsOrderByTypeTest.php
 test/Model/EventsPatchEventPayloadTest.php
 test/Model/EventsPatchEventResponseTest.php
+test/Model/EventsPutEventLinkDocumentsPayloadTest.php
 test/Model/EventsTransferToCompletedResponseTest.php
 test/Model/EventsVisibilityTypeTest.php
 test/Model/FieldValueTest.php
@@ -597,6 +602,7 @@ test/Model/TasksListTaskResponseTest.php
 test/Model/TasksOrderByTypeTest.php
 test/Model/TasksPatchTaskPayloadTest.php
 test/Model/TasksPatchTaskResponseTest.php
+test/Model/TasksPutTaskLinkDocumentsPayloadTest.php
 test/Model/TasksTaskTest.php
 test/Model/TasksTransferToCompletedResponseTest.php
 test/Model/TasksVisibilityTypeTest.php
