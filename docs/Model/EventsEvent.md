@@ -28,6 +28,7 @@ Name | Type | Description | Notes
 **color** | **string** | hex color of this event background | [optional]
 **textColor** | **string** | hex text color of this event | [optional]
 **contactIds** | **int[]** | IDs of the contacts linked to this Event | [optional]
+**documentIds** | **int[]** | IDs of the documents linked to this Event | [optional]
 **accessRights** | [**\Equisoft\SDK\EquisoftConnect\Model\AccessRights**](AccessRights.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
