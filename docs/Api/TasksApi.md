@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**listTasks()**](TasksApi.md#listTasks) | **GET** /crm/api/v1/tasks | List or search tasks.
 [**patchTask()**](TasksApi.md#patchTask) | **PATCH** /crm/api/v1/tasks/{taskId} | Partially update a task.
 [**patchTaskInternalNote()**](TasksApi.md#patchTaskInternalNote) | **PATCH** /crm/api/v1/tasks/{taskId}/notes/{noteId} | Add an internal note to a task.
+[**putTaskLinksDocuments()**](TasksApi.md#putTaskLinksDocuments) | **PUT** /crm/api/v1/tasks/{taskId}/documents | Update the links between a task and existing documents
 [**restoreTaskInternalNote()**](TasksApi.md#restoreTaskInternalNote) | **POST** /crm/api/v1/tasks/{taskId}/notes/{noteId}/restore | Restore an archived internal note for a task.
 [**transferTaskToCompleted()**](TasksApi.md#transferTaskToCompleted) | **POST** /crm/api/v1/tasks/{taskId}/transferToCompleted | Transfer a task to completed/done.
 
@@ -567,6 +568,67 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNoteResponse**](../Model/InternalNotesPatchNoteResponse.md)
+
+### Authorization
+
+[OAuth2](../../README.md#OAuth2)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `putTaskLinksDocuments()`
+
+```php
+putTaskLinksDocuments($taskId, $tasksPutTaskLinkDocumentsPayload, $acceptLanguage)
+```
+
+Update the links between a task and existing documents
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Equisoft\SDK\EquisoftConnect\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\TasksApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$taskId = 'taskId_example'; // string | Task unique identifier.
+$tasksPutTaskLinkDocumentsPayload = new \Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload(); // \Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload | Contains an array of Ids for the documents to link with the task.  *     To remove all links, documentIds set to an empty array  Collections are always overridden if defined.
+$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
+
+try {
+    $apiInstance->putTaskLinksDocuments($taskId, $tasksPutTaskLinkDocumentsPayload, $acceptLanguage);
+} catch (Exception $e) {
+    echo 'Exception when calling TasksApi->putTaskLinksDocuments: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **taskId** | **string**| Task unique identifier. |
+ **tasksPutTaskLinkDocumentsPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload**](../Model/TasksPutTaskLinkDocumentsPayload.md)| Contains an array of Ids for the documents to link with the task.  *     To remove all links, documentIds set to an empty array  Collections are always overridden if defined. |
+ **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 | [optional]
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 
