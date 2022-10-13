@@ -63,8 +63,7 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
         'firstName' => 'string',
         'lastName' => 'string',
         'locale' => 'string',
-        'role' => 'string',
-        'maxConcurrentAccess' => 'int'
+        'role' => 'string'
     ];
 
     /**
@@ -81,8 +80,7 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
         'firstName' => null,
         'lastName' => null,
         'locale' => null,
-        'role' => null,
-        'maxConcurrentAccess' => null
+        'role' => null
     ];
 
     /**
@@ -118,8 +116,7 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
         'firstName' => 'firstName',
         'lastName' => 'lastName',
         'locale' => 'locale',
-        'role' => 'role',
-        'maxConcurrentAccess' => 'maxConcurrentAccess'
+        'role' => 'role'
     ];
 
     /**
@@ -134,8 +131,7 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
         'firstName' => 'setFirstName',
         'lastName' => 'setLastName',
         'locale' => 'setLocale',
-        'role' => 'setRole',
-        'maxConcurrentAccess' => 'setMaxConcurrentAccess'
+        'role' => 'setRole'
     ];
 
     /**
@@ -150,8 +146,7 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
         'firstName' => 'getFirstName',
         'lastName' => 'getLastName',
         'locale' => 'getLocale',
-        'role' => 'getRole',
-        'maxConcurrentAccess' => 'getMaxConcurrentAccess'
+        'role' => 'getRole'
     ];
 
     /**
@@ -218,7 +213,6 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['lastName'] = $data['lastName'] ?? null;
         $this->container['locale'] = $data['locale'] ?? null;
         $this->container['role'] = $data['role'] ?? null;
-        $this->container['maxConcurrentAccess'] = $data['maxConcurrentAccess'] ?? null;
     }
 
     /**
@@ -250,9 +244,6 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
         }
         if ($this->container['role'] === null) {
             $invalidProperties[] = "'role' can't be null";
-        }
-        if ($this->container['maxConcurrentAccess'] === null) {
-            $invalidProperties[] = "'maxConcurrentAccess' can't be null";
         }
         return $invalidProperties;
     }
@@ -433,30 +424,6 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setRole($role)
     {
         $this->container['role'] = $role;
-
-        return $this;
-    }
-
-    /**
-     * Gets maxConcurrentAccess
-     *
-     * @return int
-     */
-    public function getMaxConcurrentAccess()
-    {
-        return $this->container['maxConcurrentAccess'];
-    }
-
-    /**
-     * Sets maxConcurrentAccess
-     *
-     * @param int $maxConcurrentAccess maxConcurrentAccess
-     *
-     * @return self
-     */
-    public function setMaxConcurrentAccess($maxConcurrentAccess)
-    {
-        $this->container['maxConcurrentAccess'] = $maxConcurrentAccess;
 
         return $this;
     }
