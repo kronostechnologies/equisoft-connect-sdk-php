@@ -63,11 +63,6 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
         'displayName' => 'string',
         'profileName' => 'string',
         'state' => 'string',
-        'datagatewayEnabled' => 'bool',
-        'isMultiUser' => 'bool',
-        'equisoftPlanEnabled' => 'bool',
-        'distributorCode' => 'string',
-        'chargebeeCustomerId' => 'string',
         'organizationUuid' => 'string'
     ];
 
@@ -85,11 +80,6 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
         'displayName' => null,
         'profileName' => null,
         'state' => null,
-        'datagatewayEnabled' => null,
-        'isMultiUser' => null,
-        'equisoftPlanEnabled' => null,
-        'distributorCode' => null,
-        'chargebeeCustomerId' => null,
         'organizationUuid' => null
     ];
 
@@ -126,11 +116,6 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
         'displayName' => 'displayName',
         'profileName' => 'profileName',
         'state' => 'state',
-        'datagatewayEnabled' => 'datagatewayEnabled',
-        'isMultiUser' => 'isMultiUser',
-        'equisoftPlanEnabled' => 'equisoftPlanEnabled',
-        'distributorCode' => 'distributorCode',
-        'chargebeeCustomerId' => 'chargebeeCustomerId',
         'organizationUuid' => 'organizationUuid'
     ];
 
@@ -146,11 +131,6 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
         'displayName' => 'setDisplayName',
         'profileName' => 'setProfileName',
         'state' => 'setState',
-        'datagatewayEnabled' => 'setDatagatewayEnabled',
-        'isMultiUser' => 'setIsMultiUser',
-        'equisoftPlanEnabled' => 'setEquisoftPlanEnabled',
-        'distributorCode' => 'setDistributorCode',
-        'chargebeeCustomerId' => 'setChargebeeCustomerId',
         'organizationUuid' => 'setOrganizationUuid'
     ];
 
@@ -166,11 +146,6 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
         'displayName' => 'getDisplayName',
         'profileName' => 'getProfileName',
         'state' => 'getState',
-        'datagatewayEnabled' => 'getDatagatewayEnabled',
-        'isMultiUser' => 'getIsMultiUser',
-        'equisoftPlanEnabled' => 'getEquisoftPlanEnabled',
-        'distributorCode' => 'getDistributorCode',
-        'chargebeeCustomerId' => 'getChargebeeCustomerId',
         'organizationUuid' => 'getOrganizationUuid'
     ];
 
@@ -237,11 +212,6 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
         $this->container['displayName'] = $data['displayName'] ?? null;
         $this->container['profileName'] = $data['profileName'] ?? null;
         $this->container['state'] = $data['state'] ?? null;
-        $this->container['datagatewayEnabled'] = $data['datagatewayEnabled'] ?? null;
-        $this->container['isMultiUser'] = $data['isMultiUser'] ?? null;
-        $this->container['equisoftPlanEnabled'] = $data['equisoftPlanEnabled'] ?? null;
-        $this->container['distributorCode'] = $data['distributorCode'] ?? null;
-        $this->container['chargebeeCustomerId'] = $data['chargebeeCustomerId'] ?? null;
         $this->container['organizationUuid'] = $data['organizationUuid'] ?? null;
     }
 
@@ -271,15 +241,6 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
         }
         if ($this->container['state'] === null) {
             $invalidProperties[] = "'state' can't be null";
-        }
-        if ($this->container['datagatewayEnabled'] === null) {
-            $invalidProperties[] = "'datagatewayEnabled' can't be null";
-        }
-        if ($this->container['isMultiUser'] === null) {
-            $invalidProperties[] = "'isMultiUser' can't be null";
-        }
-        if ($this->container['equisoftPlanEnabled'] === null) {
-            $invalidProperties[] = "'equisoftPlanEnabled' can't be null";
         }
         return $invalidProperties;
     }
@@ -436,126 +397,6 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
     public function setState($state)
     {
         $this->container['state'] = $state;
-
-        return $this;
-    }
-
-    /**
-     * Gets datagatewayEnabled
-     *
-     * @return bool
-     */
-    public function getDatagatewayEnabled()
-    {
-        return $this->container['datagatewayEnabled'];
-    }
-
-    /**
-     * Sets datagatewayEnabled
-     *
-     * @param bool $datagatewayEnabled Datagateway Enabled
-     *
-     * @return self
-     */
-    public function setDatagatewayEnabled($datagatewayEnabled)
-    {
-        $this->container['datagatewayEnabled'] = $datagatewayEnabled;
-
-        return $this;
-    }
-
-    /**
-     * Gets isMultiUser
-     *
-     * @return bool
-     */
-    public function getIsMultiUser()
-    {
-        return $this->container['isMultiUser'];
-    }
-
-    /**
-     * Sets isMultiUser
-     *
-     * @param bool $isMultiUser Is Multi User
-     *
-     * @return self
-     */
-    public function setIsMultiUser($isMultiUser)
-    {
-        $this->container['isMultiUser'] = $isMultiUser;
-
-        return $this;
-    }
-
-    /**
-     * Gets equisoftPlanEnabled
-     *
-     * @return bool
-     */
-    public function getEquisoftPlanEnabled()
-    {
-        return $this->container['equisoftPlanEnabled'];
-    }
-
-    /**
-     * Sets equisoftPlanEnabled
-     *
-     * @param bool $equisoftPlanEnabled Is Multi User
-     *
-     * @return self
-     */
-    public function setEquisoftPlanEnabled($equisoftPlanEnabled)
-    {
-        $this->container['equisoftPlanEnabled'] = $equisoftPlanEnabled;
-
-        return $this;
-    }
-
-    /**
-     * Gets distributorCode
-     *
-     * @return string|null
-     */
-    public function getDistributorCode()
-    {
-        return $this->container['distributorCode'];
-    }
-
-    /**
-     * Sets distributorCode
-     *
-     * @param string|null $distributorCode Distributor Code
-     *
-     * @return self
-     */
-    public function setDistributorCode($distributorCode)
-    {
-        $this->container['distributorCode'] = $distributorCode;
-
-        return $this;
-    }
-
-    /**
-     * Gets chargebeeCustomerId
-     *
-     * @return string|null
-     */
-    public function getChargebeeCustomerId()
-    {
-        return $this->container['chargebeeCustomerId'];
-    }
-
-    /**
-     * Sets chargebeeCustomerId
-     *
-     * @param string|null $chargebeeCustomerId Chargebee Customer Id
-     *
-     * @return self
-     */
-    public function setChargebeeCustomerId($chargebeeCustomerId)
-    {
-        $this->container['chargebeeCustomerId'] = $chargebeeCustomerId;
 
         return $this;
     }
