@@ -134,51 +134,6 @@ class DatabasesDatabaseTest extends TestCase
     }
 
     /**
-     * Test attribute "datagatewayEnabled"
-     */
-    public function testPropertyDatagatewayEnabled()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "isMultiUser"
-     */
-    public function testPropertyIsMultiUser()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "equisoftPlanEnabled"
-     */
-    public function testPropertyEquisoftPlanEnabled()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "distributorCode"
-     */
-    public function testPropertyDistributorCode()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "chargebeeCustomerId"
-     */
-    public function testPropertyChargebeeCustomerId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "organizationUuid"
      */
     public function testPropertyOrganizationUuid()
