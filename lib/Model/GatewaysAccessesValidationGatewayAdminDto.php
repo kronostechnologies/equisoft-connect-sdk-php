@@ -59,7 +59,6 @@ class GatewaysAccessesValidationGatewayAdminDto implements ModelInterface, Array
     protected static $openAPITypes = [
         'id' => 'int',
         'name' => 'string',
-        'email' => 'string',
         'lang' => 'string'
     ];
 
@@ -73,7 +72,6 @@ class GatewaysAccessesValidationGatewayAdminDto implements ModelInterface, Array
     protected static $openAPIFormats = [
         'id' => null,
         'name' => null,
-        'email' => null,
         'lang' => null
     ];
 
@@ -106,7 +104,6 @@ class GatewaysAccessesValidationGatewayAdminDto implements ModelInterface, Array
     protected static $attributeMap = [
         'id' => 'id',
         'name' => 'name',
-        'email' => 'email',
         'lang' => 'lang'
     ];
 
@@ -118,7 +115,6 @@ class GatewaysAccessesValidationGatewayAdminDto implements ModelInterface, Array
     protected static $setters = [
         'id' => 'setId',
         'name' => 'setName',
-        'email' => 'setEmail',
         'lang' => 'setLang'
     ];
 
@@ -130,7 +126,6 @@ class GatewaysAccessesValidationGatewayAdminDto implements ModelInterface, Array
     protected static $getters = [
         'id' => 'getId',
         'name' => 'getName',
-        'email' => 'getEmail',
         'lang' => 'getLang'
     ];
 
@@ -193,7 +188,6 @@ class GatewaysAccessesValidationGatewayAdminDto implements ModelInterface, Array
     {
         $this->container['id'] = $data['id'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
-        $this->container['email'] = $data['email'] ?? null;
         $this->container['lang'] = $data['lang'] ?? null;
     }
 
@@ -211,9 +205,6 @@ class GatewaysAccessesValidationGatewayAdminDto implements ModelInterface, Array
         }
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
-        }
-        if ($this->container['email'] === null) {
-            $invalidProperties[] = "'email' can't be null";
         }
         if ($this->container['lang'] === null) {
             $invalidProperties[] = "'lang' can't be null";
@@ -277,30 +268,6 @@ class GatewaysAccessesValidationGatewayAdminDto implements ModelInterface, Array
     public function setName($name)
     {
         $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets email
-     *
-     * @return string
-     */
-    public function getEmail()
-    {
-        return $this->container['email'];
-    }
-
-    /**
-     * Sets email
-     *
-     * @param string $email email
-     *
-     * @return self
-     */
-    public function setEmail($email)
-    {
-        $this->container['email'] = $email;
 
         return $this;
     }
