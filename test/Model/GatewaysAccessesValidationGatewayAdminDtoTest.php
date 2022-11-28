@@ -98,6 +98,15 @@ class GatewaysAccessesValidationGatewayAdminDtoTest extends TestCase
     }
 
     /**
+     * Test attribute "email"
+     */
+    public function testPropertyEmail()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "lang"
      */
     public function testPropertyLang()
