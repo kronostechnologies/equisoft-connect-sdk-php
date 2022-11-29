@@ -341,6 +341,7 @@ Class | Method | HTTP request | Description
 - [UsersRole](docs/Model/UsersRole.md)
 - [UsersUpdateUserPayload](docs/Model/UsersUpdateUserPayload.md)
 - [UsersUser](docs/Model/UsersUser.md)
+- [UsersUserGroup](docs/Model/UsersUserGroup.md)
 
 ## Authorization
 
