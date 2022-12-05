@@ -202,7 +202,6 @@ docs/Model/UsersListUsersResponse.md
 docs/Model/UsersRole.md
 docs/Model/UsersUpdateUserPayload.md
 docs/Model/UsersUser.md
-docs/Model/UsersUserGroup.md
 git_push.sh
 lib/Api/ContactsApi.php
 lib/Api/DSFApi.php
@@ -409,7 +408,6 @@ lib/Model/UsersListUsersResponse.php
 lib/Model/UsersRole.php
 lib/Model/UsersUpdateUserPayload.php
 lib/Model/UsersUser.php
-lib/Model/UsersUserGroup.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
 test/Api/ContactsApiTest.php
@@ -612,5 +610,4 @@ test/Model/TranslationTest.php
 test/Model/UsersListUsersResponseTest.php
 test/Model/UsersRoleTest.php
 test/Model/UsersUpdateUserPayloadTest.php
-test/Model/UsersUserGroupTest.php
 test/Model/UsersUserTest.php
