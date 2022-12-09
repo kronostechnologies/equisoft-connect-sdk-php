@@ -59,14 +59,11 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'int',
         'displayName' => 'string',
+        'email' => 'string',
         'firstName' => 'string',
         'lastName' => 'string',
-        'initials' => 'string',
         'locale' => 'string',
-        'email' => 'string',
-        'role' => 'string',
-        'aclDelegationAllowed' => 'bool',
-        'groups' => '\Equisoft\SDK\EquisoftConnect\Model\UsersUserGroup[]'
+        'role' => 'string'
     ];
 
     /**
@@ -79,14 +76,11 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'id' => null,
         'displayName' => null,
+        'email' => null,
         'firstName' => null,
         'lastName' => null,
-        'initials' => null,
         'locale' => null,
-        'email' => null,
-        'role' => null,
-        'aclDelegationAllowed' => null,
-        'groups' => null
+        'role' => null
     ];
 
     /**
@@ -118,14 +112,11 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'id' => 'id',
         'displayName' => 'displayName',
+        'email' => 'email',
         'firstName' => 'firstName',
         'lastName' => 'lastName',
-        'initials' => 'initials',
         'locale' => 'locale',
-        'email' => 'email',
-        'role' => 'role',
-        'aclDelegationAllowed' => 'aclDelegationAllowed',
-        'groups' => 'groups'
+        'role' => 'role'
     ];
 
     /**
@@ -136,14 +127,11 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'id' => 'setId',
         'displayName' => 'setDisplayName',
+        'email' => 'setEmail',
         'firstName' => 'setFirstName',
         'lastName' => 'setLastName',
-        'initials' => 'setInitials',
         'locale' => 'setLocale',
-        'email' => 'setEmail',
-        'role' => 'setRole',
-        'aclDelegationAllowed' => 'setAclDelegationAllowed',
-        'groups' => 'setGroups'
+        'role' => 'setRole'
     ];
 
     /**
@@ -154,14 +142,11 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'id' => 'getId',
         'displayName' => 'getDisplayName',
+        'email' => 'getEmail',
         'firstName' => 'getFirstName',
         'lastName' => 'getLastName',
-        'initials' => 'getInitials',
         'locale' => 'getLocale',
-        'email' => 'getEmail',
-        'role' => 'getRole',
-        'aclDelegationAllowed' => 'getAclDelegationAllowed',
-        'groups' => 'getGroups'
+        'role' => 'getRole'
     ];
 
     /**
@@ -223,14 +208,11 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->container['id'] = $data['id'] ?? null;
         $this->container['displayName'] = $data['displayName'] ?? null;
+        $this->container['email'] = $data['email'] ?? null;
         $this->container['firstName'] = $data['firstName'] ?? null;
         $this->container['lastName'] = $data['lastName'] ?? null;
-        $this->container['initials'] = $data['initials'] ?? null;
         $this->container['locale'] = $data['locale'] ?? null;
-        $this->container['email'] = $data['email'] ?? null;
         $this->container['role'] = $data['role'] ?? null;
-        $this->container['aclDelegationAllowed'] = $data['aclDelegationAllowed'] ?? null;
-        $this->container['groups'] = $data['groups'] ?? null;
     }
 
     /**
@@ -248,6 +230,9 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['displayName'] === null) {
             $invalidProperties[] = "'displayName' can't be null";
         }
+        if ($this->container['email'] === null) {
+            $invalidProperties[] = "'email' can't be null";
+        }
         if ($this->container['firstName'] === null) {
             $invalidProperties[] = "'firstName' can't be null";
         }
@@ -256,9 +241,6 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
         }
         if ($this->container['locale'] === null) {
             $invalidProperties[] = "'locale' can't be null";
-        }
-        if ($this->container['email'] === null) {
-            $invalidProperties[] = "'email' can't be null";
         }
         if ($this->container['role'] === null) {
             $invalidProperties[] = "'role' can't be null";
@@ -327,6 +309,30 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
+     * Gets email
+     *
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->container['email'];
+    }
+
+    /**
+     * Sets email
+     *
+     * @param string $email The user's eMail address.
+     *
+     * @return self
+     */
+    public function setEmail($email)
+    {
+        $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
      * Gets firstName
      *
      * @return string
@@ -375,30 +381,6 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets initials
-     *
-     * @return string|null
-     */
-    public function getInitials()
-    {
-        return $this->container['initials'];
-    }
-
-    /**
-     * Sets initials
-     *
-     * @param string|null $initials The user's initials.
-     *
-     * @return self
-     */
-    public function setInitials($initials)
-    {
-        $this->container['initials'] = $initials;
-
-        return $this;
-    }
-
-    /**
      * Gets locale
      *
      * @return string
@@ -423,30 +405,6 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets email
-     *
-     * @return string
-     */
-    public function getEmail()
-    {
-        return $this->container['email'];
-    }
-
-    /**
-     * Sets email
-     *
-     * @param string $email The user's eMail address.
-     *
-     * @return self
-     */
-    public function setEmail($email)
-    {
-        $this->container['email'] = $email;
-
-        return $this;
-    }
-
-    /**
      * Gets role
      *
      * @return string
@@ -466,54 +424,6 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setRole($role)
     {
         $this->container['role'] = $role;
-
-        return $this;
-    }
-
-    /**
-     * Gets aclDelegationAllowed
-     *
-     * @return bool|null
-     */
-    public function getAclDelegationAllowed()
-    {
-        return $this->container['aclDelegationAllowed'];
-    }
-
-    /**
-     * Sets aclDelegationAllowed
-     *
-     * @param bool|null $aclDelegationAllowed Whether the user can delegate ACL to other users
-     *
-     * @return self
-     */
-    public function setAclDelegationAllowed($aclDelegationAllowed)
-    {
-        $this->container['aclDelegationAllowed'] = $aclDelegationAllowed;
-
-        return $this;
-    }
-
-    /**
-     * Gets groups
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\UsersUserGroup[]|null
-     */
-    public function getGroups()
-    {
-        return $this->container['groups'];
-    }
-
-    /**
-     * Sets groups
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\UsersUserGroup[]|null $groups User groups
-     *
-     * @return self
-     */
-    public function setGroups($groups)
-    {
-        $this->container['groups'] = $groups;
 
         return $this;
     }
