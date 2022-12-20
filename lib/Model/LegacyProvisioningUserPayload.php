@@ -480,7 +480,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets password
      *
-     * @param string|null $password DEPRECATED this option does nothing
+     * @param string|null $password User initial password. A random password will be set if none is specified and noPassword option is not used.
      *
      * @return self
      */
@@ -504,7 +504,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets noPassword
      *
-     * @param string|null $noPassword DEPRECATED this option does nothing
+     * @param string|null $noPassword Disable password authentication. Accepts true or false. Default false
      *
      * @return self
      */
@@ -528,7 +528,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets requirePasswordChange
      *
-     * @param string|null $requirePasswordChange DEPRECATED this option does nothing
+     * @param string|null $requirePasswordChange The user will be ask to define a new password on the first login Accepts true or false. Default true
      *
      * @return self
      */
@@ -552,7 +552,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets enableMobile
      *
-     * @param string|null $enableMobile DEPRECATED this option does nothing
+     * @param string|null $enableMobile Enable Mobile version. Deprecated: the mobile is not enabled per user anymore. Accepts true or false. Default false
      *
      * @return self
      */
