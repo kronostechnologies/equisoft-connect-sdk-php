@@ -14,7 +14,6 @@ Name | Type | Description | Notes
 **noPassword** | **string** | DEPRECATED this option does nothing | [optional]
 **requirePasswordChange** | **string** | DEPRECATED this option does nothing | [optional]
 **enableMobile** | **string** | DEPRECATED this option does nothing | [optional]
-**externalIdentifiers** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserIdentifier[]**](LegacyProvisioningUserIdentifier.md) | List of identifier to uniquely identify the user. | [optional]
 **allowDelegation** | **string** | Allow the user to delegate access to his data Accepts true or false. Default false | [optional]
 **gender** | **string** | Gender of this user. Accepts M or F. | [optional]
 **phoneWork** | **string** | Work phone number of this user | [optional]

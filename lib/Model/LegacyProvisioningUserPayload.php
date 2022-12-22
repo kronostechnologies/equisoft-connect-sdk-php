@@ -67,7 +67,6 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
         'noPassword' => 'string',
         'requirePasswordChange' => 'string',
         'enableMobile' => 'string',
-        'externalIdentifiers' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserIdentifier[]',
         'allowDelegation' => 'string',
         'gender' => 'string',
         'phoneWork' => 'string',
@@ -98,7 +97,6 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
         'noPassword' => null,
         'requirePasswordChange' => null,
         'enableMobile' => null,
-        'externalIdentifiers' => null,
         'allowDelegation' => null,
         'gender' => null,
         'phoneWork' => null,
@@ -148,7 +146,6 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
         'noPassword' => 'noPassword',
         'requirePasswordChange' => 'requirePasswordChange',
         'enableMobile' => 'enableMobile',
-        'externalIdentifiers' => 'externalIdentifiers',
         'allowDelegation' => 'allowDelegation',
         'gender' => 'gender',
         'phoneWork' => 'phoneWork',
@@ -177,7 +174,6 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
         'noPassword' => 'setNoPassword',
         'requirePasswordChange' => 'setRequirePasswordChange',
         'enableMobile' => 'setEnableMobile',
-        'externalIdentifiers' => 'setExternalIdentifiers',
         'allowDelegation' => 'setAllowDelegation',
         'gender' => 'setGender',
         'phoneWork' => 'setPhoneWork',
@@ -206,7 +202,6 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
         'noPassword' => 'getNoPassword',
         'requirePasswordChange' => 'getRequirePasswordChange',
         'enableMobile' => 'getEnableMobile',
-        'externalIdentifiers' => 'getExternalIdentifiers',
         'allowDelegation' => 'getAllowDelegation',
         'gender' => 'getGender',
         'phoneWork' => 'getPhoneWork',
@@ -286,7 +281,6 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
         $this->container['noPassword'] = $data['noPassword'] ?? null;
         $this->container['requirePasswordChange'] = $data['requirePasswordChange'] ?? null;
         $this->container['enableMobile'] = $data['enableMobile'] ?? null;
-        $this->container['externalIdentifiers'] = $data['externalIdentifiers'] ?? null;
         $this->container['allowDelegation'] = $data['allowDelegation'] ?? null;
         $this->container['gender'] = $data['gender'] ?? null;
         $this->container['phoneWork'] = $data['phoneWork'] ?? null;
@@ -559,30 +553,6 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
     public function setEnableMobile($enableMobile)
     {
         $this->container['enableMobile'] = $enableMobile;
-
-        return $this;
-    }
-
-    /**
-     * Gets externalIdentifiers
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserIdentifier[]|null
-     */
-    public function getExternalIdentifiers()
-    {
-        return $this->container['externalIdentifiers'];
-    }
-
-    /**
-     * Sets externalIdentifiers
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserIdentifier[]|null $externalIdentifiers List of identifier to uniquely identify the user.
-     *
-     * @return self
-     */
-    public function setExternalIdentifiers($externalIdentifiers)
-    {
-        $this->container['externalIdentifiers'] = $externalIdentifiers;
 
         return $this;
     }

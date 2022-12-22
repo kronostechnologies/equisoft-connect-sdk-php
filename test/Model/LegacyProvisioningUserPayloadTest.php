@@ -170,15 +170,6 @@ class LegacyProvisioningUserPayloadTest extends TestCase
     }
 
     /**
-     * Test attribute "externalIdentifiers"
-     */
-    public function testPropertyExternalIdentifiers()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "allowDelegation"
      */
     public function testPropertyAllowDelegation()
