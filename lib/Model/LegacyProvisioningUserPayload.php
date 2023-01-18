@@ -67,6 +67,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
         'noPassword' => 'string',
         'requirePasswordChange' => 'string',
         'enableMobile' => 'string',
+        'externalIdentifiers' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserIdentifier[]',
         'allowDelegation' => 'string',
         'gender' => 'string',
         'phoneWork' => 'string',
@@ -97,6 +98,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
         'noPassword' => null,
         'requirePasswordChange' => null,
         'enableMobile' => null,
+        'externalIdentifiers' => null,
         'allowDelegation' => null,
         'gender' => null,
         'phoneWork' => null,
@@ -146,6 +148,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
         'noPassword' => 'noPassword',
         'requirePasswordChange' => 'requirePasswordChange',
         'enableMobile' => 'enableMobile',
+        'externalIdentifiers' => 'externalIdentifiers',
         'allowDelegation' => 'allowDelegation',
         'gender' => 'gender',
         'phoneWork' => 'phoneWork',
@@ -174,6 +177,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
         'noPassword' => 'setNoPassword',
         'requirePasswordChange' => 'setRequirePasswordChange',
         'enableMobile' => 'setEnableMobile',
+        'externalIdentifiers' => 'setExternalIdentifiers',
         'allowDelegation' => 'setAllowDelegation',
         'gender' => 'setGender',
         'phoneWork' => 'setPhoneWork',
@@ -202,6 +206,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
         'noPassword' => 'getNoPassword',
         'requirePasswordChange' => 'getRequirePasswordChange',
         'enableMobile' => 'getEnableMobile',
+        'externalIdentifiers' => 'getExternalIdentifiers',
         'allowDelegation' => 'getAllowDelegation',
         'gender' => 'getGender',
         'phoneWork' => 'getPhoneWork',
@@ -281,6 +286,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
         $this->container['noPassword'] = $data['noPassword'] ?? null;
         $this->container['requirePasswordChange'] = $data['requirePasswordChange'] ?? null;
         $this->container['enableMobile'] = $data['enableMobile'] ?? null;
+        $this->container['externalIdentifiers'] = $data['externalIdentifiers'] ?? null;
         $this->container['allowDelegation'] = $data['allowDelegation'] ?? null;
         $this->container['gender'] = $data['gender'] ?? null;
         $this->container['phoneWork'] = $data['phoneWork'] ?? null;
@@ -474,7 +480,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets password
      *
-     * @param string|null $password DEPRECATED this option does nothing
+     * @param string|null $password User initial password. A random password will be set if none is specified and noPassword option is not used.
      *
      * @return self
      */
@@ -498,7 +504,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets noPassword
      *
-     * @param string|null $noPassword DEPRECATED this option does nothing
+     * @param string|null $noPassword Disable password authentication. Accepts true or false. Default false
      *
      * @return self
      */
@@ -522,7 +528,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets requirePasswordChange
      *
-     * @param string|null $requirePasswordChange DEPRECATED this option does nothing
+     * @param string|null $requirePasswordChange The user will be ask to define a new password on the first login Accepts true or false. Default true
      *
      * @return self
      */
@@ -546,13 +552,37 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets enableMobile
      *
-     * @param string|null $enableMobile DEPRECATED this option does nothing
+     * @param string|null $enableMobile Enable Mobile version. Deprecated: the mobile is not enabled per user anymore. Accepts true or false. Default false
      *
      * @return self
      */
     public function setEnableMobile($enableMobile)
     {
         $this->container['enableMobile'] = $enableMobile;
+
+        return $this;
+    }
+
+    /**
+     * Gets externalIdentifiers
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserIdentifier[]|null
+     */
+    public function getExternalIdentifiers()
+    {
+        return $this->container['externalIdentifiers'];
+    }
+
+    /**
+     * Sets externalIdentifiers
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserIdentifier[]|null $externalIdentifiers List of identifier to uniquely identify the user.
+     *
+     * @return self
+     */
+    public function setExternalIdentifiers($externalIdentifiers)
+    {
+        $this->container['externalIdentifiers'] = $externalIdentifiers;
 
         return $this;
     }
