@@ -59,6 +59,8 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
     protected static $openAPITypes = [
         'username' => 'string',
         'password' => 'string',
+        'firstName' => 'string',
+        'lastName' => 'string',
         'repcode' => 'string',
         'isADealerCode' => 'bool',
         'dealerSystemName' => 'string',
@@ -75,6 +77,8 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
     protected static $openAPIFormats = [
         'username' => null,
         'password' => null,
+        'firstName' => null,
+        'lastName' => null,
         'repcode' => null,
         'isADealerCode' => null,
         'dealerSystemName' => null,
@@ -110,6 +114,8 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
     protected static $attributeMap = [
         'username' => 'username',
         'password' => 'password',
+        'firstName' => 'firstName',
+        'lastName' => 'lastName',
         'repcode' => 'repcode',
         'isADealerCode' => 'isADealerCode',
         'dealerSystemName' => 'dealerSystemName',
@@ -124,6 +130,8 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
     protected static $setters = [
         'username' => 'setUsername',
         'password' => 'setPassword',
+        'firstName' => 'setFirstName',
+        'lastName' => 'setLastName',
         'repcode' => 'setRepcode',
         'isADealerCode' => 'setIsADealerCode',
         'dealerSystemName' => 'setDealerSystemName',
@@ -138,6 +146,8 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
     protected static $getters = [
         'username' => 'getUsername',
         'password' => 'getPassword',
+        'firstName' => 'getFirstName',
+        'lastName' => 'getLastName',
         'repcode' => 'getRepcode',
         'isADealerCode' => 'getIsADealerCode',
         'dealerSystemName' => 'getDealerSystemName',
@@ -203,6 +213,8 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
     {
         $this->container['username'] = $data['username'] ?? null;
         $this->container['password'] = $data['password'] ?? null;
+        $this->container['firstName'] = $data['firstName'] ?? null;
+        $this->container['lastName'] = $data['lastName'] ?? null;
         $this->container['repcode'] = $data['repcode'] ?? null;
         $this->container['isADealerCode'] = $data['isADealerCode'] ?? null;
         $this->container['dealerSystemName'] = $data['dealerSystemName'] ?? null;
@@ -283,6 +295,54 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
     public function setPassword($password)
     {
         $this->container['password'] = $password;
+
+        return $this;
+    }
+
+    /**
+     * Gets firstName
+     *
+     * @return string|null
+     */
+    public function getFirstName()
+    {
+        return $this->container['firstName'];
+    }
+
+    /**
+     * Sets firstName
+     *
+     * @param string|null $firstName FirstName
+     *
+     * @return self
+     */
+    public function setFirstName($firstName)
+    {
+        $this->container['firstName'] = $firstName;
+
+        return $this;
+    }
+
+    /**
+     * Gets lastName
+     *
+     * @return string|null
+     */
+    public function getLastName()
+    {
+        return $this->container['lastName'];
+    }
+
+    /**
+     * Sets lastName
+     *
+     * @param string|null $lastName LastName
+     *
+     * @return self
+     */
+    public function setLastName($lastName)
+    {
+        $this->container['lastName'] = $lastName;
 
         return $this;
     }

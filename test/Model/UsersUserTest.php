@@ -98,15 +98,6 @@ class UsersUserTest extends TestCase
     }
 
     /**
-     * Test attribute "email"
-     */
-    public function testPropertyEmail()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "firstName"
      */
     public function testPropertyFirstName()
@@ -125,6 +116,15 @@ class UsersUserTest extends TestCase
     }
 
     /**
+     * Test attribute "initials"
+     */
+    public function testPropertyInitials()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "locale"
      */
     public function testPropertyLocale()
@@ -134,9 +134,36 @@ class UsersUserTest extends TestCase
     }
 
     /**
+     * Test attribute "email"
+     */
+    public function testPropertyEmail()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "role"
      */
     public function testPropertyRole()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "aclDelegationAllowed"
+     */
+    public function testPropertyAclDelegationAllowed()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "groups"
+     */
+    public function testPropertyGroups()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

@@ -1,6 +1,6 @@
 <?php
 /**
- * GatewaysCredentialsWithSsnTest
+ * UsersUserGroupTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * GatewaysCredentialsWithSsnTest Class Doc Comment
+ * UsersUserGroupTest Class Doc Comment
  *
  * @category    Class
- * @description GatewaysCredentialsWithSsn
+ * @description UsersUserGroup
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class GatewaysCredentialsWithSsnTest extends TestCase
+class UsersUserGroupTest extends TestCase
 {
 
     /**
@@ -71,81 +71,27 @@ class GatewaysCredentialsWithSsnTest extends TestCase
     }
 
     /**
-     * Test "GatewaysCredentialsWithSsn"
+     * Test "UsersUserGroup"
      */
-    public function testGatewaysCredentialsWithSsn()
+    public function testUsersUserGroup()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "username"
+     * Test attribute "id"
      */
-    public function testPropertyUsername()
+    public function testPropertyId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "password"
+     * Test attribute "displayName"
      */
-    public function testPropertyPassword()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "firstName"
-     */
-    public function testPropertyFirstName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "lastName"
-     */
-    public function testPropertyLastName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "repcode"
-     */
-    public function testPropertyRepcode()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "isADealerCode"
-     */
-    public function testPropertyIsADealerCode()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "dealerSystemName"
-     */
-    public function testPropertyDealerSystemName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "ssnList"
-     */
-    public function testPropertySsnList()
+    public function testPropertyDisplayName()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
