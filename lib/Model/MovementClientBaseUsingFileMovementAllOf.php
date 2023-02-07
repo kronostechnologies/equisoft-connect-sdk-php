@@ -196,6 +196,7 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
     }
 
     public const TYPE_CLIENTBASE_USING_FILE = 'CLIENTBASE_USING_FILE';
+    public const TYPE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
 
     /**
      * Gets allowable values of the enum
@@ -206,6 +207,7 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
     {
         return [
             self::TYPE_CLIENTBASE_USING_FILE,
+            self::TYPE_UNKNOWN_DEFAULT_OPEN_API,
         ];
     }
 

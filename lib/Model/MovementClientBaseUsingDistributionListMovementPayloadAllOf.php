@@ -196,6 +196,7 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
     }
 
     public const TYPE_CLIENTBASE_USING_DISTLIST = 'CLIENTBASE_USING_DISTLIST';
+    public const TYPE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
 
     /**
      * Gets allowable values of the enum
@@ -206,6 +207,7 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
     {
         return [
             self::TYPE_CLIENTBASE_USING_DISTLIST,
+            self::TYPE_UNKNOWN_DEFAULT_OPEN_API,
         ];
     }
 

@@ -52,6 +52,8 @@ class MovementMovementStatus
 
     public const SUCCESS = 'SUCCESS';
 
+    public const UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
+
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -63,7 +65,8 @@ class MovementMovementStatus
             self::CANCELLED,
             self::IGNORED,
             self::FAILURE,
-            self::SUCCESS
+            self::SUCCESS,
+            self::UNKNOWN_DEFAULT_OPEN_API
         ];
     }
 }
