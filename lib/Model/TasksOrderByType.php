@@ -54,8 +54,6 @@ class TasksOrderByType
 
     public const CREATION_TIME = 'creationTime';
 
-    public const UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
-
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -68,8 +66,7 @@ class TasksOrderByType
             self::COMPLETED_DATE,
             self::COMPLETED_DATE_DESC,
             self::UPDATE_TIME,
-            self::CREATION_TIME,
-            self::UNKNOWN_DEFAULT_OPEN_API
+            self::CREATION_TIME
         ];
     }
 }

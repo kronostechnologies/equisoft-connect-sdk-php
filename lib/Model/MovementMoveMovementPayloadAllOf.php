@@ -176,7 +176,6 @@ class MovementMoveMovementPayloadAllOf implements ModelInterface, ArrayAccess, \
     }
 
     public const TYPE_MOVE = 'MOVE';
-    public const TYPE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
 
     /**
      * Gets allowable values of the enum
@@ -187,7 +186,6 @@ class MovementMoveMovementPayloadAllOf implements ModelInterface, ArrayAccess, \
     {
         return [
             self::TYPE_MOVE,
-            self::TYPE_UNKNOWN_DEFAULT_OPEN_API,
         ];
     }
 

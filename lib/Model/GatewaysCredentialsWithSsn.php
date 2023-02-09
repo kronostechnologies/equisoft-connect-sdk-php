@@ -57,7 +57,6 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'int',
         'username' => 'string',
         'password' => 'string',
         'firstName' => 'string',
@@ -76,7 +75,6 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null,
         'username' => null,
         'password' => null,
         'firstName' => null,
@@ -114,7 +112,6 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
         'username' => 'username',
         'password' => 'password',
         'firstName' => 'firstName',
@@ -131,7 +128,6 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
         'username' => 'setUsername',
         'password' => 'setPassword',
         'firstName' => 'setFirstName',
@@ -148,7 +144,6 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
         'username' => 'getUsername',
         'password' => 'getPassword',
         'firstName' => 'getFirstName',
@@ -216,7 +211,6 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = $data['id'] ?? null;
         $this->container['username'] = $data['username'] ?? null;
         $this->container['password'] = $data['password'] ?? null;
         $this->container['firstName'] = $data['firstName'] ?? null;
@@ -256,30 +250,6 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets id
-     *
-     * @return int|null
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param int|null $id Id
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-
-        return $this;
-    }
 
     /**
      * Gets username

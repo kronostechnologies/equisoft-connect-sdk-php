@@ -80,15 +80,6 @@ class GatewaysCredentialsTest extends TestCase
     }
 
     /**
-     * Test attribute "id"
-     */
-    public function testPropertyId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "username"
      */
     public function testPropertyUsername()

@@ -181,7 +181,6 @@ class MovementReassignmentMovementPayloadAllOf implements ModelInterface, ArrayA
     }
 
     public const TYPE_REASSIGNMENT = 'REASSIGNMENT';
-    public const TYPE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
 
     /**
      * Gets allowable values of the enum
@@ -192,7 +191,6 @@ class MovementReassignmentMovementPayloadAllOf implements ModelInterface, ArrayA
     {
         return [
             self::TYPE_REASSIGNMENT,
-            self::TYPE_UNKNOWN_DEFAULT_OPEN_API,
         ];
     }
 

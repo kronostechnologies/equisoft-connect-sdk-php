@@ -174,7 +174,6 @@ class MovementMoveMovementPayload extends MovementMovementPayload
     }
 
     public const TYPE_MOVE = 'MOVE';
-    public const TYPE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
 
     /**
      * Gets allowable values of the enum
@@ -185,7 +184,6 @@ class MovementMoveMovementPayload extends MovementMovementPayload
     {
         return [
             self::TYPE_MOVE,
-            self::TYPE_UNKNOWN_DEFAULT_OPEN_API,
         ];
     }
 
