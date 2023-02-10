@@ -46,8 +46,6 @@ class UsersRole
 
     public const USER = 'USER';
 
-    public const UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
-
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -56,8 +54,7 @@ class UsersRole
     {
         return [
             self::ADMIN,
-            self::USER,
-            self::UNKNOWN_DEFAULT_OPEN_API
+            self::USER
         ];
     }
 }
