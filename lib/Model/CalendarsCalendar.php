@@ -387,7 +387,7 @@ class CalendarsCalendar implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets color
      *
-     * @param string|null $color hex color of the calendar.
+     * @param string|null $color Hex color of the calendar.
      *
      * @return self
      */
@@ -411,7 +411,7 @@ class CalendarsCalendar implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets textColor
      *
-     * @param string|null $textColor hex text color of the calendar.
+     * @param string|null $textColor Hex text color of the calendar.
      *
      * @return self
      */

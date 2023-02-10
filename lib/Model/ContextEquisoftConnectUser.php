@@ -219,7 +219,7 @@ class ContextEquisoftConnectUser implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets id
      *
-     * @param int $id $id
+     * @param int $id Id
      *
      * @return self
      */

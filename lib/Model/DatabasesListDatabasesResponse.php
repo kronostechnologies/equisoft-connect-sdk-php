@@ -219,7 +219,7 @@ class DatabasesListDatabasesResponse implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets items
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\DatabasesDatabase[] $items items
+     * @param \Equisoft\SDK\EquisoftConnect\Model\DatabasesDatabase[] $items List of databases
      *
      * @return self
      */

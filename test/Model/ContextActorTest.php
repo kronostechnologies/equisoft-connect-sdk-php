@@ -80,18 +80,18 @@ class ContextActorTest extends TestCase
     }
 
     /**
-     * Test attribute "displayName"
+     * Test attribute "uuid"
      */
-    public function testPropertyDisplayName()
+    public function testPropertyUuid()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "uuid"
+     * Test attribute "displayName"
      */
-    public function testPropertyUuid()
+    public function testPropertyDisplayName()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
