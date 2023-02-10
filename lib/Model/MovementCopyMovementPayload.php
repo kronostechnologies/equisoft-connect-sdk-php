@@ -174,6 +174,7 @@ class MovementCopyMovementPayload extends MovementMovementPayload
     }
 
     public const TYPE_COPY = 'COPY';
+    public const TYPE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
 
     /**
      * Gets allowable values of the enum
@@ -184,6 +185,7 @@ class MovementCopyMovementPayload extends MovementMovementPayload
     {
         return [
             self::TYPE_COPY,
+            self::TYPE_UNKNOWN_DEFAULT_OPEN_API,
         ];
     }
 
