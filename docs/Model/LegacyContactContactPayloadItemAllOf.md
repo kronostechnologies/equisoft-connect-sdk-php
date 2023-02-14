@@ -4,8 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**externalKey** | **string** | external key | [optional]
-**externalKeyType** | **string** | External key type | [optional]
 **gender** | **string** | Gender of the contact. Either MALE or FEMALE | [optional]
 **sin** | **string** | sin of the contact | [optional]
 **birthdate** | **string** | birthdate of the contact | [optional]
@@ -49,5 +47,7 @@ Name | Type | Description | Notes
 **orgProvNo** | **string** |  | [optional]
 **orgStateId** | **string** |  | [optional]
 **orgEin** | **string** |  | [optional]
+**externalKey** | **string** | external key | [optional]
+**externalKeyType** | **string** | External key type | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

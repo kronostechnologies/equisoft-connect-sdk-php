@@ -80,24 +80,6 @@ class LegacyContactContactPayloadItemAllOfTest extends TestCase
     }
 
     /**
-     * Test attribute "externalKey"
-     */
-    public function testPropertyExternalKey()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "externalKeyType"
-     */
-    public function testPropertyExternalKeyType()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "gender"
      */
     public function testPropertyGender()
@@ -479,6 +461,24 @@ class LegacyContactContactPayloadItemAllOfTest extends TestCase
      * Test attribute "orgEin"
      */
     public function testPropertyOrgEin()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "externalKey"
+     */
+    public function testPropertyExternalKey()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "externalKeyType"
+     */
+    public function testPropertyExternalKeyType()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

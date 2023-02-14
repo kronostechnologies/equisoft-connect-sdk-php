@@ -80,6 +80,15 @@ class MovementMoveMovementPayloadAllOfTest extends TestCase
     }
 
     /**
+     * Test attribute "type"
+     */
+    public function testPropertyType()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "sourceDatabase"
      */
     public function testPropertySourceDatabase()
@@ -101,15 +110,6 @@ class MovementMoveMovementPayloadAllOfTest extends TestCase
      * Test attribute "users"
      */
     public function testPropertyUsers()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "type"
-     */
-    public function testPropertyType()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

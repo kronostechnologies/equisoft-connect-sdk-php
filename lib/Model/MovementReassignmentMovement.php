@@ -55,11 +55,11 @@ class MovementReassignmentMovement extends MovementMovement
       * @var string[]
       */
     protected static $openAPITypes = [
+        'type' => 'string',
         'sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
         'sourceUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
         'destinationUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
-        'accessCode' => '\Equisoft\SDK\EquisoftConnect\Model\MovementGatewayAccessCode',
-        'type' => 'string'
+        'accessCode' => '\Equisoft\SDK\EquisoftConnect\Model\MovementGatewayAccessCode'
     ];
 
     /**
@@ -70,11 +70,11 @@ class MovementReassignmentMovement extends MovementMovement
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'type' => null,
         'sourceDatabase' => null,
         'sourceUser' => null,
         'destinationUser' => null,
-        'accessCode' => null,
-        'type' => null
+        'accessCode' => null
     ];
 
     /**
@@ -104,11 +104,11 @@ class MovementReassignmentMovement extends MovementMovement
      * @var string[]
      */
     protected static $attributeMap = [
+        'type' => 'type',
         'sourceDatabase' => 'sourceDatabase',
         'sourceUser' => 'sourceUser',
         'destinationUser' => 'destinationUser',
-        'accessCode' => 'accessCode',
-        'type' => 'type'
+        'accessCode' => 'accessCode'
     ];
 
     /**
@@ -117,11 +117,11 @@ class MovementReassignmentMovement extends MovementMovement
      * @var string[]
      */
     protected static $setters = [
+        'type' => 'setType',
         'sourceDatabase' => 'setSourceDatabase',
         'sourceUser' => 'setSourceUser',
         'destinationUser' => 'setDestinationUser',
-        'accessCode' => 'setAccessCode',
-        'type' => 'setType'
+        'accessCode' => 'setAccessCode'
     ];
 
     /**
@@ -130,11 +130,11 @@ class MovementReassignmentMovement extends MovementMovement
      * @var string[]
      */
     protected static $getters = [
+        'type' => 'getType',
         'sourceDatabase' => 'getSourceDatabase',
         'sourceUser' => 'getSourceUser',
         'destinationUser' => 'getDestinationUser',
-        'accessCode' => 'getAccessCode',
-        'type' => 'getType'
+        'accessCode' => 'getAccessCode'
     ];
 
     /**
@@ -205,11 +205,11 @@ class MovementReassignmentMovement extends MovementMovement
     {
         parent::__construct($data);
 
+        $this->container['type'] = $data['type'] ?? 'REASSIGNMENT';
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['sourceUser'] = $data['sourceUser'] ?? null;
         $this->container['destinationUser'] = $data['destinationUser'] ?? null;
         $this->container['accessCode'] = $data['accessCode'] ?? null;
-        $this->container['type'] = $data['type'] ?? 'REASSIGNMENT';
     }
 
     /**
@@ -220,6 +220,18 @@ class MovementReassignmentMovement extends MovementMovement
     public function listInvalidProperties()
     {
         $invalidProperties = parent::listInvalidProperties();
+
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'type', must be one of '%s'",
+                $this->container['type'],
+                implode("', '", $allowedValues)
+            );
+        }
 
         if ($this->container['sourceDatabase'] === null) {
             $invalidProperties[] = "'sourceDatabase' can't be null";
@@ -233,18 +245,6 @@ class MovementReassignmentMovement extends MovementMovement
         if ($this->container['accessCode'] === null) {
             $invalidProperties[] = "'accessCode' can't be null";
         }
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'type', must be one of '%s'",
-                $this->container['type'],
-                implode("', '", $allowedValues)
-            );
-        }
-
         return $invalidProperties;
     }
 
@@ -259,6 +259,40 @@ class MovementReassignmentMovement extends MovementMovement
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets type
+     *
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param string $type type
+     *
+     * @return self
+     */
+    public function setType($type)
+    {
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!in_array($type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'type', must be one of '%s'",
+                    $type,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['type'] = $type;
+
+        return $this;
+    }
 
     /**
      * Gets sourceDatabase
@@ -352,40 +386,6 @@ class MovementReassignmentMovement extends MovementMovement
     public function setAccessCode($accessCode)
     {
         $this->container['accessCode'] = $accessCode;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     *
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param string $type type
-     *
-     * @return self
-     */
-    public function setType($type)
-    {
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!in_array($type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'type', must be one of '%s'",
-                    $type,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['type'] = $type;
 
         return $this;
     }

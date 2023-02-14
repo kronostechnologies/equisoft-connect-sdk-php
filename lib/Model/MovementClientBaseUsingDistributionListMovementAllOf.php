@@ -57,14 +57,14 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
       * @var string[]
       */
     protected static $openAPITypes = [
+        'type' => 'string',
         'sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
         'sourceUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
         'sourceDistributionList' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDistributionList',
         'destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
         'destinationUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
         'datagatewayAccessMappings' => 'array<string,string>',
-        'transferOption' => 'string',
-        'type' => 'string'
+        'transferOption' => 'string'
     ];
 
     /**
@@ -75,14 +75,14 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'type' => null,
         'sourceDatabase' => null,
         'sourceUser' => null,
         'sourceDistributionList' => null,
         'destinationDatabase' => null,
         'destinationUser' => null,
         'datagatewayAccessMappings' => null,
-        'transferOption' => null,
-        'type' => null
+        'transferOption' => null
     ];
 
     /**
@@ -112,14 +112,14 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
      * @var string[]
      */
     protected static $attributeMap = [
+        'type' => 'type',
         'sourceDatabase' => 'sourceDatabase',
         'sourceUser' => 'sourceUser',
         'sourceDistributionList' => 'sourceDistributionList',
         'destinationDatabase' => 'destinationDatabase',
         'destinationUser' => 'destinationUser',
         'datagatewayAccessMappings' => 'datagatewayAccessMappings',
-        'transferOption' => 'transferOption',
-        'type' => 'type'
+        'transferOption' => 'transferOption'
     ];
 
     /**
@@ -128,14 +128,14 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
      * @var string[]
      */
     protected static $setters = [
+        'type' => 'setType',
         'sourceDatabase' => 'setSourceDatabase',
         'sourceUser' => 'setSourceUser',
         'sourceDistributionList' => 'setSourceDistributionList',
         'destinationDatabase' => 'setDestinationDatabase',
         'destinationUser' => 'setDestinationUser',
         'datagatewayAccessMappings' => 'setDatagatewayAccessMappings',
-        'transferOption' => 'setTransferOption',
-        'type' => 'setType'
+        'transferOption' => 'setTransferOption'
     ];
 
     /**
@@ -144,14 +144,14 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
      * @var string[]
      */
     protected static $getters = [
+        'type' => 'getType',
         'sourceDatabase' => 'getSourceDatabase',
         'sourceUser' => 'getSourceUser',
         'sourceDistributionList' => 'getSourceDistributionList',
         'destinationDatabase' => 'getDestinationDatabase',
         'destinationUser' => 'getDestinationUser',
         'datagatewayAccessMappings' => 'getDatagatewayAccessMappings',
-        'transferOption' => 'getTransferOption',
-        'type' => 'getType'
+        'transferOption' => 'getTransferOption'
     ];
 
     /**
@@ -226,6 +226,7 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
      */
     public function __construct(array $data = null)
     {
+        $this->container['type'] = $data['type'] ?? 'CLIENTBASE_USING_DISTLIST';
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['sourceUser'] = $data['sourceUser'] ?? null;
         $this->container['sourceDistributionList'] = $data['sourceDistributionList'] ?? null;
@@ -233,7 +234,6 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
         $this->container['destinationUser'] = $data['destinationUser'] ?? null;
         $this->container['datagatewayAccessMappings'] = $data['datagatewayAccessMappings'] ?? null;
         $this->container['transferOption'] = $data['transferOption'] ?? null;
-        $this->container['type'] = $data['type'] ?? 'CLIENTBASE_USING_DISTLIST';
     }
 
     /**
@@ -268,6 +268,40 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets type
+     *
+     * @return string|null
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param string|null $type type
+     *
+     * @return self
+     */
+    public function setType($type)
+    {
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!is_null($type) && !in_array($type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'type', must be one of '%s'",
+                    $type,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['type'] = $type;
+
+        return $this;
+    }
 
     /**
      * Gets sourceDatabase
@@ -433,40 +467,6 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
     public function setTransferOption($transferOption)
     {
         $this->container['transferOption'] = $transferOption;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     *
-     * @return string|null
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param string|null $type type
-     *
-     * @return self
-     */
-    public function setType($type)
-    {
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($type) && !in_array($type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'type', must be one of '%s'",
-                    $type,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['type'] = $type;
 
         return $this;
     }
