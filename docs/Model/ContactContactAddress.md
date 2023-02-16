@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **stateProvince** | **string** | Address state or province | [optional]
 **country** | **string** | Country | [optional]
 **postalCode** | **string** | Postal code | [optional]
-**dateSince** | **\DateTime** | Date since | [optional]
+**dateSince** | **\DateTime** |  | [optional]
 **city** | **string** | City | [optional]
 **locked** | **bool** | Is address locked for modifications | [optional]
 

@@ -57,11 +57,11 @@ class MovementReassignmentMovementPayloadAllOf implements ModelInterface, ArrayA
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string',
         'sourceDatabase' => 'string',
         'sourceUser' => 'string',
         'destinationUser' => 'string',
-        'accessCode' => 'string'
+        'accessCode' => 'string',
+        'type' => 'string'
     ];
 
     /**
@@ -72,11 +72,11 @@ class MovementReassignmentMovementPayloadAllOf implements ModelInterface, ArrayA
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'type' => null,
         'sourceDatabase' => null,
         'sourceUser' => null,
         'destinationUser' => null,
-        'accessCode' => null
+        'accessCode' => null,
+        'type' => null
     ];
 
     /**
@@ -106,11 +106,11 @@ class MovementReassignmentMovementPayloadAllOf implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type',
         'sourceDatabase' => 'sourceDatabase',
         'sourceUser' => 'sourceUser',
         'destinationUser' => 'destinationUser',
-        'accessCode' => 'accessCode'
+        'accessCode' => 'accessCode',
+        'type' => 'type'
     ];
 
     /**
@@ -119,11 +119,11 @@ class MovementReassignmentMovementPayloadAllOf implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType',
         'sourceDatabase' => 'setSourceDatabase',
         'sourceUser' => 'setSourceUser',
         'destinationUser' => 'setDestinationUser',
-        'accessCode' => 'setAccessCode'
+        'accessCode' => 'setAccessCode',
+        'type' => 'setType'
     ];
 
     /**
@@ -132,11 +132,11 @@ class MovementReassignmentMovementPayloadAllOf implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType',
         'sourceDatabase' => 'getSourceDatabase',
         'sourceUser' => 'getSourceUser',
         'destinationUser' => 'getDestinationUser',
-        'accessCode' => 'getAccessCode'
+        'accessCode' => 'getAccessCode',
+        'type' => 'getType'
     ];
 
     /**
@@ -181,7 +181,6 @@ class MovementReassignmentMovementPayloadAllOf implements ModelInterface, ArrayA
     }
 
     public const TYPE_REASSIGNMENT = 'REASSIGNMENT';
-    public const TYPE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
 
     /**
      * Gets allowable values of the enum
@@ -192,7 +191,6 @@ class MovementReassignmentMovementPayloadAllOf implements ModelInterface, ArrayA
     {
         return [
             self::TYPE_REASSIGNMENT,
-            self::TYPE_UNKNOWN_DEFAULT_OPEN_API,
         ];
     }
 
@@ -211,11 +209,11 @@ class MovementReassignmentMovementPayloadAllOf implements ModelInterface, ArrayA
      */
     public function __construct(array $data = null)
     {
-        $this->container['type'] = $data['type'] ?? 'REASSIGNMENT';
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['sourceUser'] = $data['sourceUser'] ?? null;
         $this->container['destinationUser'] = $data['destinationUser'] ?? null;
         $this->container['accessCode'] = $data['accessCode'] ?? null;
+        $this->container['type'] = $data['type'] ?? 'REASSIGNMENT';
     }
 
     /**
@@ -250,40 +248,6 @@ class MovementReassignmentMovementPayloadAllOf implements ModelInterface, ArrayA
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets type
-     *
-     * @return string|null
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param string|null $type type
-     *
-     * @return self
-     */
-    public function setType($type)
-    {
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($type) && !in_array($type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'type', must be one of '%s'",
-                    $type,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['type'] = $type;
-
-        return $this;
-    }
 
     /**
      * Gets sourceDatabase
@@ -377,6 +341,40 @@ class MovementReassignmentMovementPayloadAllOf implements ModelInterface, ArrayA
     public function setAccessCode($accessCode)
     {
         $this->container['accessCode'] = $accessCode;
+
+        return $this;
+    }
+
+    /**
+     * Gets type
+     *
+     * @return string|null
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param string|null $type type
+     *
+     * @return self
+     */
+    public function setType($type)
+    {
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!is_null($type) && !in_array($type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'type', must be one of '%s'",
+                    $type,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['type'] = $type;
 
         return $this;
     }

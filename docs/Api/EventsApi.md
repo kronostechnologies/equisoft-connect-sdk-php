@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**getEvent()**](EventsApi.md#getEvent) | **GET** /crm/api/v1/events/{eventId} | Return the detail of an event.
 [**getEventInstances()**](EventsApi.md#getEventInstances) | **GET** /crm/api/v1/events/{eventId}/instances | Get a recurring event instances.
 [**getEventInternalNoteList()**](EventsApi.md#getEventInternalNoteList) | **GET** /crm/api/v1/events/{eventId}/notes | Get the internal notes list for an event.
-[**listCalendars()**](EventsApi.md#listCalendars) | **GET** /crm/api/v1/calendars | Get the list of available calendarslol.
+[**listCalendars()**](EventsApi.md#listCalendars) | **GET** /crm/api/v1/calendars | Get the list of available calendars.
 [**listEvents()**](EventsApi.md#listEvents) | **GET** /crm/api/v1/events | List or search events.
 [**patchEvent()**](EventsApi.md#patchEvent) | **PATCH** /crm/api/v1/events/{eventId} | Partially update an event.
 [**patchEventInternalNote()**](EventsApi.md#patchEventInternalNote) | **PATCH** /crm/api/v1/events/{eventId}/notes/{noteId} | Add an internal note to and event.
@@ -519,7 +519,7 @@ Name | Type | Description  | Notes
 listCalendars($acceptLanguage): \Equisoft\SDK\EquisoftConnect\Model\CalendarsListCalendarResponse
 ```
 
-Get the list of available calendarslol.
+Get the list of available calendars.
 
 ### Example
 

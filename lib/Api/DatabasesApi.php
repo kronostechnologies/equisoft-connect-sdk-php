@@ -118,8 +118,6 @@ class DatabasesApi
     /**
      * Operation getDatabase
      *
-     * Get a database
-     *
      * @param  string $uuid uuid (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
@@ -134,8 +132,6 @@ class DatabasesApi
 
     /**
      * Operation getDatabaseWithHttpInfo
-     *
-     * Get a database
      *
      * @param  string $uuid (required)
      *
@@ -303,8 +299,6 @@ class DatabasesApi
     /**
      * Operation getDatabaseAsync
      *
-     * Get a database
-     *
      * @param  string $uuid (required)
      *
      * @throws \InvalidArgumentException
@@ -322,8 +316,6 @@ class DatabasesApi
 
     /**
      * Operation getDatabaseAsyncWithHttpInfo
-     *
-     * Get a database
      *
      * @param  string $uuid (required)
      *
@@ -471,8 +463,6 @@ class DatabasesApi
     /**
      * Operation getUser
      *
-     * Get a database&#39;s user
-     *
      * @param  string $uuid uuid (required)
      * @param  int $id id (required)
      *
@@ -488,8 +478,6 @@ class DatabasesApi
 
     /**
      * Operation getUserWithHttpInfo
-     *
-     * Get a database&#39;s user
      *
      * @param  string $uuid (required)
      * @param  int $id (required)
@@ -658,8 +646,6 @@ class DatabasesApi
     /**
      * Operation getUserAsync
      *
-     * Get a database&#39;s user
-     *
      * @param  string $uuid (required)
      * @param  int $id (required)
      *
@@ -678,8 +664,6 @@ class DatabasesApi
 
     /**
      * Operation getUserAsyncWithHttpInfo
-     *
-     * Get a database&#39;s user
      *
      * @param  string $uuid (required)
      * @param  int $id (required)
@@ -843,8 +827,6 @@ class DatabasesApi
     /**
      * Operation listDatabases
      *
-     * List all databases
-     *
      * @param  string $organizationUuid organizationUuid (optional)
      * @param  string $databaseName databaseName (optional)
      *
@@ -860,8 +842,6 @@ class DatabasesApi
 
     /**
      * Operation listDatabasesWithHttpInfo
-     *
-     * List all databases
      *
      * @param  string $organizationUuid (optional)
      * @param  string $databaseName (optional)
@@ -1007,8 +987,6 @@ class DatabasesApi
     /**
      * Operation listDatabasesAsync
      *
-     * List all databases
-     *
      * @param  string $organizationUuid (optional)
      * @param  string $databaseName (optional)
      *
@@ -1027,8 +1005,6 @@ class DatabasesApi
 
     /**
      * Operation listDatabasesAsyncWithHttpInfo
-     *
-     * List all databases
      *
      * @param  string $organizationUuid (optional)
      * @param  string $databaseName (optional)
@@ -1182,8 +1158,6 @@ class DatabasesApi
     /**
      * Operation listUsers
      *
-     * List database&#39;s users
-     *
      * @param  string $uuid uuid (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
@@ -1198,8 +1172,6 @@ class DatabasesApi
 
     /**
      * Operation listUsersWithHttpInfo
-     *
-     * List database&#39;s users
      *
      * @param  string $uuid (required)
      *
@@ -1367,8 +1339,6 @@ class DatabasesApi
     /**
      * Operation listUsersAsync
      *
-     * List database&#39;s users
-     *
      * @param  string $uuid (required)
      *
      * @throws \InvalidArgumentException
@@ -1386,8 +1356,6 @@ class DatabasesApi
 
     /**
      * Operation listUsersAsyncWithHttpInfo
-     *
-     * List database&#39;s users
      *
      * @param  string $uuid (required)
      *
@@ -1535,8 +1503,6 @@ class DatabasesApi
     /**
      * Operation updateUser
      *
-     * Update a database&#39;s user
-     *
      * @param  string $uuid uuid (required)
      * @param  int $id id (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\UsersUpdateUserPayload $usersUpdateUserPayload usersUpdateUserPayload (required)
@@ -1552,8 +1518,6 @@ class DatabasesApi
 
     /**
      * Operation updateUserWithHttpInfo
-     *
-     * Update a database&#39;s user
      *
      * @param  string $uuid (required)
      * @param  int $id (required)
@@ -1638,8 +1602,6 @@ class DatabasesApi
     /**
      * Operation updateUserAsync
      *
-     * Update a database&#39;s user
-     *
      * @param  string $uuid (required)
      * @param  int $id (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\UsersUpdateUserPayload $usersUpdateUserPayload (required)
@@ -1659,8 +1621,6 @@ class DatabasesApi
 
     /**
      * Operation updateUserAsyncWithHttpInfo
-     *
-     * Update a database&#39;s user
      *
      * @param  string $uuid (required)
      * @param  int $id (required)

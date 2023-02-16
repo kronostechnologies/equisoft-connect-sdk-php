@@ -252,7 +252,7 @@ class ContextUserContext implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets site
      *
-     * @param string $site Site name
+     * @param string $site site name
      *
      * @return self
      */
@@ -276,7 +276,7 @@ class ContextUserContext implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets environment
      *
-     * @param string $environment Environment name
+     * @param string $environment environment name
      *
      * @return self
      */

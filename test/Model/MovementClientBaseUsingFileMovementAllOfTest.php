@@ -80,15 +80,6 @@ class MovementClientBaseUsingFileMovementAllOfTest extends TestCase
     }
 
     /**
-     * Test attribute "type"
-     */
-    public function testPropertyType()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "sourceDatabase"
      */
     public function testPropertySourceDatabase()
@@ -146,6 +137,15 @@ class MovementClientBaseUsingFileMovementAllOfTest extends TestCase
      * Test attribute "dataphile"
      */
     public function testPropertyDataphile()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "type"
+     */
+    public function testPropertyType()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

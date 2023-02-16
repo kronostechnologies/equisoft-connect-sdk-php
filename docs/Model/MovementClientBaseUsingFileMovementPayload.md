@@ -4,7 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **string** |  | [default to 'CLIENTBASE_USING_FILE']
 **sourceDatabase** | **string** |  |
 **sourceUser** | **string** |  |
 **destinationDatabase** | **string** |  |
@@ -12,5 +11,6 @@ Name | Type | Description | Notes
 **capsilFile** | **string** |  | [optional]
 **univerisFile** | **string** |  | [optional]
 **dataphileFile** | **string** |  | [optional]
+**type** | **string** |  | [default to 'CLIENTBASE_USING_FILE']
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
