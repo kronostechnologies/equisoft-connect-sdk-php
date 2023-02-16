@@ -56,6 +56,8 @@ class GatewaysFullfinanceScrapeJobStatus
 
     public const COMPLETED = 'COMPLETED';
 
+    public const UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
+
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -69,7 +71,8 @@ class GatewaysFullfinanceScrapeJobStatus
             self::LOGIN,
             self::MFA,
             self::RUNNING,
-            self::COMPLETED
+            self::COMPLETED,
+            self::UNKNOWN_DEFAULT_OPEN_API
         ];
     }
 }

@@ -54,6 +54,8 @@ class EventsEventType
 
     public const NOTE = 'NOTE';
 
+    public const UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
+
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -66,7 +68,8 @@ class EventsEventType
             self::MEETING,
             self::VACATION,
             self::FILE,
-            self::NOTE
+            self::NOTE,
+            self::UNKNOWN_DEFAULT_OPEN_API
         ];
     }
 }
