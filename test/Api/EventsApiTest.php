@@ -170,7 +170,7 @@ class EventsApiTest extends TestCase
     /**
      * Test case for listCalendars
      *
-     * Get the list of available calendarslol..
+     * Get the list of available calendars..
      *
      */
     public function testListCalendars()

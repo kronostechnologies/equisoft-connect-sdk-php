@@ -78,16 +78,16 @@ All URIs are relative to *http://localhost*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *ContactsApi* | [**getByUuid**](docs/Api/ContactsApi.md#getbyuuid) | **GET** /crm/api/v1/contacts/{contactUuid} | Return the detail of a contact.
-*DSFApi* | [**createDsfFinancialCenter**](docs/Api/DSFApi.md#createdsffinancialcenter) | **POST** /crm/api/v1/dsf/financialCenters | Create a financial center
-*DSFApi* | [**deleteDsfFinancialCenter**](docs/Api/DSFApi.md#deletedsffinancialcenter) | **DELETE** /crm/api/v1/dsf/financialCenters/{financialCenterId} | Delete a financial center
-*DSFApi* | [**getDsfFinancialCenters**](docs/Api/DSFApi.md#getdsffinancialcenters) | **GET** /crm/api/v1/dsf/financialCenters/{financialCenterId} | Get a financial center
-*DSFApi* | [**listDsfFinancialCenters**](docs/Api/DSFApi.md#listdsffinancialcenters) | **GET** /crm/api/v1/dsf/financialCenters | List all financial centers
-*DSFApi* | [**updateDsfFinancialCenter**](docs/Api/DSFApi.md#updatedsffinancialcenter) | **POST** /crm/api/v1/dsf/financialCenters/{financialCenterId} | Update a financial center
-*DatabasesApi* | [**getDatabase**](docs/Api/DatabasesApi.md#getdatabase) | **GET** /crm/api/v1/databases/{uuid} | Get a database
-*DatabasesApi* | [**getUser**](docs/Api/DatabasesApi.md#getuser) | **GET** /crm/api/v1/databases/{uuid}/users/{id} | Get a database&#39;s user
-*DatabasesApi* | [**listDatabases**](docs/Api/DatabasesApi.md#listdatabases) | **GET** /crm/api/v1/databases | List all databases
-*DatabasesApi* | [**listUsers**](docs/Api/DatabasesApi.md#listusers) | **GET** /crm/api/v1/databases/{uuid}/users | List database&#39;s users
-*DatabasesApi* | [**updateUser**](docs/Api/DatabasesApi.md#updateuser) | **PATCH** /crm/api/v1/databases/{uuid}/users/{id} | Update a database&#39;s user
+*DSFApi* | [**createDsfFinancialCenter**](docs/Api/DSFApi.md#createdsffinancialcenter) | **POST** /crm/api/v1/dsf/financialCenters | 
+*DSFApi* | [**deleteDsfFinancialCenter**](docs/Api/DSFApi.md#deletedsffinancialcenter) | **DELETE** /crm/api/v1/dsf/financialCenters/{financialCenterId} | 
+*DSFApi* | [**getDsfFinancialCenters**](docs/Api/DSFApi.md#getdsffinancialcenters) | **GET** /crm/api/v1/dsf/financialCenters/{financialCenterId} | 
+*DSFApi* | [**listDsfFinancialCenters**](docs/Api/DSFApi.md#listdsffinancialcenters) | **GET** /crm/api/v1/dsf/financialCenters | 
+*DSFApi* | [**updateDsfFinancialCenter**](docs/Api/DSFApi.md#updatedsffinancialcenter) | **POST** /crm/api/v1/dsf/financialCenters/{financialCenterId} | 
+*DatabasesApi* | [**getDatabase**](docs/Api/DatabasesApi.md#getdatabase) | **GET** /crm/api/v1/databases/{uuid} | 
+*DatabasesApi* | [**getUser**](docs/Api/DatabasesApi.md#getuser) | **GET** /crm/api/v1/databases/{uuid}/users/{id} | 
+*DatabasesApi* | [**listDatabases**](docs/Api/DatabasesApi.md#listdatabases) | **GET** /crm/api/v1/databases | 
+*DatabasesApi* | [**listUsers**](docs/Api/DatabasesApi.md#listusers) | **GET** /crm/api/v1/databases/{uuid}/users | 
+*DatabasesApi* | [**updateUser**](docs/Api/DatabasesApi.md#updateuser) | **PATCH** /crm/api/v1/databases/{uuid}/users/{id} | 
 *EventsApi* | [**archiveEventInternalNote**](docs/Api/EventsApi.md#archiveeventinternalnote) | **POST** /crm/api/v1/events/{eventId}/notes/{noteId}/archive | Archive an internal note for and event.
 *EventsApi* | [**createEvent**](docs/Api/EventsApi.md#createevent) | **POST** /crm/api/v1/events | Create an event.
 *EventsApi* | [**createEventInternalNote**](docs/Api/EventsApi.md#createeventinternalnote) | **POST** /crm/api/v1/events/{eventId}/notes | Add an internal note to and event.
@@ -96,7 +96,7 @@ Class | Method | HTTP request | Description
 *EventsApi* | [**getEvent**](docs/Api/EventsApi.md#getevent) | **GET** /crm/api/v1/events/{eventId} | Return the detail of an event.
 *EventsApi* | [**getEventInstances**](docs/Api/EventsApi.md#geteventinstances) | **GET** /crm/api/v1/events/{eventId}/instances | Get a recurring event instances.
 *EventsApi* | [**getEventInternalNoteList**](docs/Api/EventsApi.md#geteventinternalnotelist) | **GET** /crm/api/v1/events/{eventId}/notes | Get the internal notes list for an event.
-*EventsApi* | [**listCalendars**](docs/Api/EventsApi.md#listcalendars) | **GET** /crm/api/v1/calendars | Get the list of available calendarslol.
+*EventsApi* | [**listCalendars**](docs/Api/EventsApi.md#listcalendars) | **GET** /crm/api/v1/calendars | Get the list of available calendars.
 *EventsApi* | [**listEvents**](docs/Api/EventsApi.md#listevents) | **GET** /crm/api/v1/events | List or search events.
 *EventsApi* | [**patchEvent**](docs/Api/EventsApi.md#patchevent) | **PATCH** /crm/api/v1/events/{eventId} | Partially update an event.
 *EventsApi* | [**patchEventInternalNote**](docs/Api/EventsApi.md#patcheventinternalnote) | **PATCH** /crm/api/v1/events/{eventId}/notes/{noteId} | Add an internal note to and event.
@@ -355,9 +355,6 @@ Class | Method | HTTP request | Description
     - **crm:event**: Read/Write access on events
     - **crm:task**: Read/Write access on tasks
     - **crm:document**: Read/Write access on documents
-    - **crm:database**: Read/Write access on databases
-    - **crm:user**: Read/Write access on users
-    - **profile**: Read/Write access on profile
 
 ## Tests
 
@@ -377,5 +374,5 @@ vendor/bin/phpunit
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
 - API version: `latest`
-    - Package version: `11.3.4-SNAPSHOT`
+    - Package version: `11.3.4`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

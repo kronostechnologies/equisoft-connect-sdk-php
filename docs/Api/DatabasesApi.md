@@ -4,11 +4,11 @@ All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getDatabase()**](DatabasesApi.md#getDatabase) | **GET** /crm/api/v1/databases/{uuid} | Get a database
-[**getUser()**](DatabasesApi.md#getUser) | **GET** /crm/api/v1/databases/{uuid}/users/{id} | Get a database&#39;s user
-[**listDatabases()**](DatabasesApi.md#listDatabases) | **GET** /crm/api/v1/databases | List all databases
-[**listUsers()**](DatabasesApi.md#listUsers) | **GET** /crm/api/v1/databases/{uuid}/users | List database&#39;s users
-[**updateUser()**](DatabasesApi.md#updateUser) | **PATCH** /crm/api/v1/databases/{uuid}/users/{id} | Update a database&#39;s user
+[**getDatabase()**](DatabasesApi.md#getDatabase) | **GET** /crm/api/v1/databases/{uuid} | 
+[**getUser()**](DatabasesApi.md#getUser) | **GET** /crm/api/v1/databases/{uuid}/users/{id} | 
+[**listDatabases()**](DatabasesApi.md#listDatabases) | **GET** /crm/api/v1/databases | 
+[**listUsers()**](DatabasesApi.md#listUsers) | **GET** /crm/api/v1/databases/{uuid}/users | 
+[**updateUser()**](DatabasesApi.md#updateUser) | **PATCH** /crm/api/v1/databases/{uuid}/users/{id} | 
 
 
 ## `getDatabase()`
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 getDatabase($uuid): \Equisoft\SDK\EquisoftConnect\Model\DatabasesDatabase
 ```
 
-Get a database
+
 
 ### Example
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 getUser($uuid, $id): \Equisoft\SDK\EquisoftConnect\Model\UsersUser
 ```
 
-Get a database's user
+
 
 ### Example
 
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 listDatabases($organizationUuid, $databaseName): \Equisoft\SDK\EquisoftConnect\Model\DatabasesListDatabasesResponse
 ```
 
-List all databases
+
 
 ### Example
 
@@ -195,7 +195,7 @@ Name | Type | Description  | Notes
 listUsers($uuid): \Equisoft\SDK\EquisoftConnect\Model\UsersListUsersResponse
 ```
 
-List database's users
+
 
 ### Example
 
@@ -253,7 +253,7 @@ Name | Type | Description  | Notes
 updateUser($uuid, $id, $usersUpdateUserPayload)
 ```
 
-Update a database's user
+
 
 ### Example
 

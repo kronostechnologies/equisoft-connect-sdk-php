@@ -57,10 +57,10 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string',
         'sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
         'destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
-        'userTuples' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUserTuple[]'
+        'userTuples' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUserTuple[]',
+        'type' => 'string'
     ];
 
     /**
@@ -71,10 +71,10 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess, \JsonSer
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'type' => null,
         'sourceDatabase' => null,
         'destinationDatabase' => null,
-        'userTuples' => null
+        'userTuples' => null,
+        'type' => null
     ];
 
     /**
@@ -104,10 +104,10 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type',
         'sourceDatabase' => 'sourceDatabase',
         'destinationDatabase' => 'destinationDatabase',
-        'userTuples' => 'userTuples'
+        'userTuples' => 'userTuples',
+        'type' => 'type'
     ];
 
     /**
@@ -116,10 +116,10 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType',
         'sourceDatabase' => 'setSourceDatabase',
         'destinationDatabase' => 'setDestinationDatabase',
-        'userTuples' => 'setUserTuples'
+        'userTuples' => 'setUserTuples',
+        'type' => 'setType'
     ];
 
     /**
@@ -128,10 +128,10 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType',
         'sourceDatabase' => 'getSourceDatabase',
         'destinationDatabase' => 'getDestinationDatabase',
-        'userTuples' => 'getUserTuples'
+        'userTuples' => 'getUserTuples',
+        'type' => 'getType'
     ];
 
     /**
@@ -176,7 +176,6 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess, \JsonSer
     }
 
     public const TYPE_COPY = 'COPY';
-    public const TYPE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
 
     /**
      * Gets allowable values of the enum
@@ -187,7 +186,6 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess, \JsonSer
     {
         return [
             self::TYPE_COPY,
-            self::TYPE_UNKNOWN_DEFAULT_OPEN_API,
         ];
     }
 
@@ -206,10 +204,10 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess, \JsonSer
      */
     public function __construct(array $data = null)
     {
-        $this->container['type'] = $data['type'] ?? 'COPY';
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['destinationDatabase'] = $data['destinationDatabase'] ?? null;
         $this->container['userTuples'] = $data['userTuples'] ?? null;
+        $this->container['type'] = $data['type'] ?? 'COPY';
     }
 
     /**
@@ -244,40 +242,6 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess, \JsonSer
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets type
-     *
-     * @return string|null
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param string|null $type type
-     *
-     * @return self
-     */
-    public function setType($type)
-    {
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($type) && !in_array($type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'type', must be one of '%s'",
-                    $type,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['type'] = $type;
-
-        return $this;
-    }
 
     /**
      * Gets sourceDatabase
@@ -347,6 +311,40 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess, \JsonSer
     public function setUserTuples($userTuples)
     {
         $this->container['userTuples'] = $userTuples;
+
+        return $this;
+    }
+
+    /**
+     * Gets type
+     *
+     * @return string|null
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param string|null $type type
+     *
+     * @return self
+     */
+    public function setType($type)
+    {
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!is_null($type) && !in_array($type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'type', must be one of '%s'",
+                    $type,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['type'] = $type;
 
         return $this;
     }

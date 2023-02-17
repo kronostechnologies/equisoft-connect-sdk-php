@@ -237,7 +237,7 @@ class ContextUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets uuid
      *
-     * @param string $uuid Uuid
+     * @param string $uuid environment name
      *
      * @return self
      */
@@ -261,7 +261,7 @@ class ContextUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets displayName
      *
-     * @param string $displayName Display name
+     * @param string $displayName environment name
      *
      * @return self
      */
@@ -285,7 +285,7 @@ class ContextUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets email
      *
-     * @param string $email Email
+     * @param string $email environment name
      *
      * @return self
      */

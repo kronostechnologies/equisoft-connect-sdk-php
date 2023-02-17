@@ -57,6 +57,8 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $openAPITypes = [
+        'externalKey' => 'string',
+        'externalKeyType' => 'string',
         'gender' => 'string',
         'sin' => 'string',
         'birthdate' => 'string',
@@ -99,9 +101,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
         'orgFedNo' => 'string',
         'orgProvNo' => 'string',
         'orgStateId' => 'string',
-        'orgEin' => 'string',
-        'externalKey' => 'string',
-        'externalKeyType' => 'string'
+        'orgEin' => 'string'
     ];
 
     /**
@@ -112,6 +112,8 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'externalKey' => null,
+        'externalKeyType' => null,
         'gender' => null,
         'sin' => null,
         'birthdate' => null,
@@ -154,9 +156,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
         'orgFedNo' => null,
         'orgProvNo' => null,
         'orgStateId' => null,
-        'orgEin' => null,
-        'externalKey' => null,
-        'externalKeyType' => null
+        'orgEin' => null
     ];
 
     /**
@@ -186,6 +186,8 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $attributeMap = [
+        'externalKey' => 'externalKey',
+        'externalKeyType' => 'externalKeyType',
         'gender' => 'gender',
         'sin' => 'sin',
         'birthdate' => 'birthdate',
@@ -228,9 +230,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
         'orgFedNo' => 'orgFedNo',
         'orgProvNo' => 'orgProvNo',
         'orgStateId' => 'orgStateId',
-        'orgEin' => 'orgEin',
-        'externalKey' => 'externalKey',
-        'externalKeyType' => 'externalKeyType'
+        'orgEin' => 'orgEin'
     ];
 
     /**
@@ -239,6 +239,8 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $setters = [
+        'externalKey' => 'setExternalKey',
+        'externalKeyType' => 'setExternalKeyType',
         'gender' => 'setGender',
         'sin' => 'setSin',
         'birthdate' => 'setBirthdate',
@@ -281,9 +283,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
         'orgFedNo' => 'setOrgFedNo',
         'orgProvNo' => 'setOrgProvNo',
         'orgStateId' => 'setOrgStateId',
-        'orgEin' => 'setOrgEin',
-        'externalKey' => 'setExternalKey',
-        'externalKeyType' => 'setExternalKeyType'
+        'orgEin' => 'setOrgEin'
     ];
 
     /**
@@ -292,6 +292,8 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $getters = [
+        'externalKey' => 'getExternalKey',
+        'externalKeyType' => 'getExternalKeyType',
         'gender' => 'getGender',
         'sin' => 'getSin',
         'birthdate' => 'getBirthdate',
@@ -334,9 +336,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
         'orgFedNo' => 'getOrgFedNo',
         'orgProvNo' => 'getOrgProvNo',
         'orgStateId' => 'getOrgStateId',
-        'orgEin' => 'getOrgEin',
-        'externalKey' => 'getExternalKey',
-        'externalKeyType' => 'getExternalKeyType'
+        'orgEin' => 'getOrgEin'
     ];
 
     /**
@@ -396,6 +396,8 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      */
     public function __construct(array $data = null)
     {
+        $this->container['externalKey'] = $data['externalKey'] ?? null;
+        $this->container['externalKeyType'] = $data['externalKeyType'] ?? null;
         $this->container['gender'] = $data['gender'] ?? null;
         $this->container['sin'] = $data['sin'] ?? null;
         $this->container['birthdate'] = $data['birthdate'] ?? null;
@@ -439,8 +441,6 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
         $this->container['orgProvNo'] = $data['orgProvNo'] ?? null;
         $this->container['orgStateId'] = $data['orgStateId'] ?? null;
         $this->container['orgEin'] = $data['orgEin'] ?? null;
-        $this->container['externalKey'] = $data['externalKey'] ?? null;
-        $this->container['externalKeyType'] = $data['externalKeyType'] ?? null;
     }
 
     /**
@@ -466,6 +466,54 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets externalKey
+     *
+     * @return string|null
+     */
+    public function getExternalKey()
+    {
+        return $this->container['externalKey'];
+    }
+
+    /**
+     * Sets externalKey
+     *
+     * @param string|null $externalKey external key
+     *
+     * @return self
+     */
+    public function setExternalKey($externalKey)
+    {
+        $this->container['externalKey'] = $externalKey;
+
+        return $this;
+    }
+
+    /**
+     * Gets externalKeyType
+     *
+     * @return string|null
+     */
+    public function getExternalKeyType()
+    {
+        return $this->container['externalKeyType'];
+    }
+
+    /**
+     * Sets externalKeyType
+     *
+     * @param string|null $externalKeyType External key type
+     *
+     * @return self
+     */
+    public function setExternalKeyType($externalKeyType)
+    {
+        $this->container['externalKeyType'] = $externalKeyType;
+
+        return $this;
+    }
 
     /**
      * Gets gender
@@ -1495,54 +1543,6 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
     public function setOrgEin($orgEin)
     {
         $this->container['orgEin'] = $orgEin;
-
-        return $this;
-    }
-
-    /**
-     * Gets externalKey
-     *
-     * @return string|null
-     */
-    public function getExternalKey()
-    {
-        return $this->container['externalKey'];
-    }
-
-    /**
-     * Sets externalKey
-     *
-     * @param string|null $externalKey external key
-     *
-     * @return self
-     */
-    public function setExternalKey($externalKey)
-    {
-        $this->container['externalKey'] = $externalKey;
-
-        return $this;
-    }
-
-    /**
-     * Gets externalKeyType
-     *
-     * @return string|null
-     */
-    public function getExternalKeyType()
-    {
-        return $this->container['externalKeyType'];
-    }
-
-    /**
-     * Sets externalKeyType
-     *
-     * @param string|null $externalKeyType External key type
-     *
-     * @return self
-     */
-    public function setExternalKeyType($externalKeyType)
-    {
-        $this->container['externalKeyType'] = $externalKeyType;
 
         return $this;
     }

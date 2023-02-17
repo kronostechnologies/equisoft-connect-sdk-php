@@ -10,6 +10,6 @@ Name | Type | Description | Notes
 **network** | **string** | SFL|DFSI|DFSIN|VMD |
 **code** | **string** | Code | [optional]
 **organizationUuid** | **string** | Organization Unique Id | [optional]
-**databaseCount** | **int** | Database count |
+**databaseCount** | **int** | Code |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

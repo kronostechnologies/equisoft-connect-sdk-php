@@ -219,7 +219,7 @@ class UsersUpdateUserPayload implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets role
      *
-     * @param string $role User role
+     * @param string $role role
      *
      * @return self
      */
