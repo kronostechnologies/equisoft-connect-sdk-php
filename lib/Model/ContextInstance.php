@@ -228,7 +228,7 @@ class ContextInstance implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets uuid
      *
-     * @param string $uuid $uuid
+     * @param string $uuid Uuid
      *
      * @return self
      */
@@ -252,7 +252,7 @@ class ContextInstance implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets databaseName
      *
-     * @param string $databaseName $databaseName
+     * @param string $databaseName Database name
      *
      * @return self
      */

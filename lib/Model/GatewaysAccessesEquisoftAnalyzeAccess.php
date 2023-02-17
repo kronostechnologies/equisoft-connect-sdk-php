@@ -177,6 +177,7 @@ class GatewaysAccessesEquisoftAnalyzeAccess implements ModelInterface, ArrayAcce
 
     public const VERSION_NATIVE = 'NATIVE';
     public const VERSION_LEGACY = 'LEGACY';
+    public const VERSION_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
 
     /**
      * Gets allowable values of the enum
@@ -188,6 +189,7 @@ class GatewaysAccessesEquisoftAnalyzeAccess implements ModelInterface, ArrayAcce
         return [
             self::VERSION_NATIVE,
             self::VERSION_LEGACY,
+            self::VERSION_UNKNOWN_DEFAULT_OPEN_API,
         ];
     }
 

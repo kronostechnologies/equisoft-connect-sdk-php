@@ -50,6 +50,8 @@ class InternalNotesNoteRevisionType
 
     public const RESTORE = 'RESTORE';
 
+    public const UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
+
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -60,7 +62,8 @@ class InternalNotesNoteRevisionType
             self::CREATE,
             self::MODIFY,
             self::ARCHIVE,
-            self::RESTORE
+            self::RESTORE,
+            self::UNKNOWN_DEFAULT_OPEN_API
         ];
     }
 }

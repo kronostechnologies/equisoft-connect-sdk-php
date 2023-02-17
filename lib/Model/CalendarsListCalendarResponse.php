@@ -219,7 +219,7 @@ class CalendarsListCalendarResponse implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets items
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\CalendarsCalendar[] $items items
+     * @param \Equisoft\SDK\EquisoftConnect\Model\CalendarsCalendar[] $items List of calendars
      *
      * @return self
      */
