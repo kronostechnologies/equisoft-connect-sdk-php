@@ -74,7 +74,7 @@ class EventsApiTest extends TestCase
     /**
      * Test case for archiveEventInternalNote
      *
-     * Archive an internal note for and event..
+     * Archive an internal note for an event..
      *
      */
     public function testArchiveEventInternalNote()
@@ -98,7 +98,7 @@ class EventsApiTest extends TestCase
     /**
      * Test case for createEventInternalNote
      *
-     * Add an internal note to and event..
+     * Add an internal note to an event..
      *
      */
     public function testCreateEventInternalNote()
@@ -206,7 +206,7 @@ class EventsApiTest extends TestCase
     /**
      * Test case for patchEventInternalNote
      *
-     * Add an internal note to and event..
+     * Update an internal note of an event..
      *
      */
     public function testPatchEventInternalNote()

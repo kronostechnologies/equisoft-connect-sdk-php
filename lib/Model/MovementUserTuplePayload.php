@@ -228,7 +228,7 @@ class MovementUserTuplePayload implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets from
      *
-     * @param int $from from
+     * @param int $from Source user id.
      *
      * @return self
      */
@@ -252,7 +252,7 @@ class MovementUserTuplePayload implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets to
      *
-     * @param int $to to
+     * @param int $to Destination user id.
      *
      * @return self
      */
