@@ -64,7 +64,7 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
         'destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
         'destinationUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
         'datagatewayAccessMappings' => 'array<string,string>',
-        'transferOption' => '\Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption'
+        'transferOption' => 'string'
     ];
 
     /**
@@ -436,7 +436,7 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
     /**
      * Sets datagatewayAccessMappings
      *
-     * @param array<string,string>|null $datagatewayAccessMappings Data gateway access mapping.
+     * @param array<string,string>|null $datagatewayAccessMappings datagatewayAccessMappings
      *
      * @return self
      */
@@ -450,7 +450,7 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
     /**
      * Gets transferOption
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption|null
+     * @return string|null
      */
     public function getTransferOption()
     {
@@ -460,7 +460,7 @@ class MovementClientBaseUsingDistributionListMovementAllOf implements ModelInter
     /**
      * Sets transferOption
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption|null $transferOption transferOption
+     * @param string|null $transferOption transferOption
      *
      * @return self
      */
