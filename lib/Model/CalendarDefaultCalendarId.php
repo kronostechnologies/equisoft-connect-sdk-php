@@ -46,8 +46,6 @@ class CalendarDefaultCalendarId
 
     public const COMPLETED = 'completed';
 
-    public const UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
-
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -56,8 +54,7 @@ class CalendarDefaultCalendarId
     {
         return [
             self::PRIMARY,
-            self::COMPLETED,
-            self::UNKNOWN_DEFAULT_OPEN_API
+            self::COMPLETED
         ];
     }
 }

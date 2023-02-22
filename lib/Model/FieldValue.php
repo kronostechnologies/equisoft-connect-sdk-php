@@ -59,8 +59,8 @@ class FieldValue implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'int',
         'label' => 'string',
-        'systemName' => 'string',
-        'translations' => '\Equisoft\SDK\EquisoftConnect\Model\Translation[]'
+        'translations' => '\Equisoft\SDK\EquisoftConnect\Model\Translation[]',
+        'systemName' => 'string'
     ];
 
     /**
@@ -73,8 +73,8 @@ class FieldValue implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPIFormats = [
         'id' => null,
         'label' => null,
-        'systemName' => null,
-        'translations' => null
+        'translations' => null,
+        'systemName' => null
     ];
 
     /**
@@ -106,8 +106,8 @@ class FieldValue implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $attributeMap = [
         'id' => 'id',
         'label' => 'label',
-        'systemName' => 'systemName',
-        'translations' => 'translations'
+        'translations' => 'translations',
+        'systemName' => 'systemName'
     ];
 
     /**
@@ -118,8 +118,8 @@ class FieldValue implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $setters = [
         'id' => 'setId',
         'label' => 'setLabel',
-        'systemName' => 'setSystemName',
-        'translations' => 'setTranslations'
+        'translations' => 'setTranslations',
+        'systemName' => 'setSystemName'
     ];
 
     /**
@@ -130,8 +130,8 @@ class FieldValue implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $getters = [
         'id' => 'getId',
         'label' => 'getLabel',
-        'systemName' => 'getSystemName',
-        'translations' => 'getTranslations'
+        'translations' => 'getTranslations',
+        'systemName' => 'getSystemName'
     ];
 
     /**
@@ -193,8 +193,8 @@ class FieldValue implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $this->container['id'] = $data['id'] ?? null;
         $this->container['label'] = $data['label'] ?? null;
-        $this->container['systemName'] = $data['systemName'] ?? null;
         $this->container['translations'] = $data['translations'] ?? null;
+        $this->container['systemName'] = $data['systemName'] ?? null;
     }
 
     /**
@@ -276,30 +276,6 @@ class FieldValue implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets systemName
-     *
-     * @return string|null
-     */
-    public function getSystemName()
-    {
-        return $this->container['systemName'];
-    }
-
-    /**
-     * Sets systemName
-     *
-     * @param string|null $systemName Value system_name
-     *
-     * @return self
-     */
-    public function setSystemName($systemName)
-    {
-        $this->container['systemName'] = $systemName;
-
-        return $this;
-    }
-
-    /**
      * Gets translations
      *
      * @return \Equisoft\SDK\EquisoftConnect\Model\Translation[]|null
@@ -319,6 +295,30 @@ class FieldValue implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setTranslations($translations)
     {
         $this->container['translations'] = $translations;
+
+        return $this;
+    }
+
+    /**
+     * Gets systemName
+     *
+     * @return string|null
+     */
+    public function getSystemName()
+    {
+        return $this->container['systemName'];
+    }
+
+    /**
+     * Sets systemName
+     *
+     * @param string|null $systemName Value system_name
+     *
+     * @return self
+     */
+    public function setSystemName($systemName)
+    {
+        $this->container['systemName'] = $systemName;
 
         return $this;
     }

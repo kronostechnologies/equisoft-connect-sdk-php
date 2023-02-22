@@ -73,6 +73,8 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
         'twitterLink' => 'string',
         'linkedinLink' => 'string',
         'avatar' => 'int',
+        'externalKey' => 'string',
+        'externalKeyType' => 'string',
         'gender' => 'string',
         'sin' => 'string',
         'birthdate' => 'string',
@@ -115,9 +117,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
         'orgFedNo' => 'string',
         'orgProvNo' => 'string',
         'orgStateId' => 'string',
-        'orgEin' => 'string',
-        'externalKey' => 'string',
-        'externalKeyType' => 'string'
+        'orgEin' => 'string'
     ];
 
     /**
@@ -144,6 +144,8 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
         'twitterLink' => null,
         'linkedinLink' => null,
         'avatar' => null,
+        'externalKey' => null,
+        'externalKeyType' => null,
         'gender' => null,
         'sin' => null,
         'birthdate' => null,
@@ -186,9 +188,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
         'orgFedNo' => null,
         'orgProvNo' => null,
         'orgStateId' => null,
-        'orgEin' => null,
-        'externalKey' => null,
-        'externalKeyType' => null
+        'orgEin' => null
     ];
 
     /**
@@ -234,6 +234,8 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
         'twitterLink' => 'twitterLink',
         'linkedinLink' => 'linkedinLink',
         'avatar' => 'avatar',
+        'externalKey' => 'externalKey',
+        'externalKeyType' => 'externalKeyType',
         'gender' => 'gender',
         'sin' => 'sin',
         'birthdate' => 'birthdate',
@@ -276,9 +278,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
         'orgFedNo' => 'orgFedNo',
         'orgProvNo' => 'orgProvNo',
         'orgStateId' => 'orgStateId',
-        'orgEin' => 'orgEin',
-        'externalKey' => 'externalKey',
-        'externalKeyType' => 'externalKeyType'
+        'orgEin' => 'orgEin'
     ];
 
     /**
@@ -303,6 +303,8 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
         'twitterLink' => 'setTwitterLink',
         'linkedinLink' => 'setLinkedinLink',
         'avatar' => 'setAvatar',
+        'externalKey' => 'setExternalKey',
+        'externalKeyType' => 'setExternalKeyType',
         'gender' => 'setGender',
         'sin' => 'setSin',
         'birthdate' => 'setBirthdate',
@@ -345,9 +347,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
         'orgFedNo' => 'setOrgFedNo',
         'orgProvNo' => 'setOrgProvNo',
         'orgStateId' => 'setOrgStateId',
-        'orgEin' => 'setOrgEin',
-        'externalKey' => 'setExternalKey',
-        'externalKeyType' => 'setExternalKeyType'
+        'orgEin' => 'setOrgEin'
     ];
 
     /**
@@ -372,6 +372,8 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
         'twitterLink' => 'getTwitterLink',
         'linkedinLink' => 'getLinkedinLink',
         'avatar' => 'getAvatar',
+        'externalKey' => 'getExternalKey',
+        'externalKeyType' => 'getExternalKeyType',
         'gender' => 'getGender',
         'sin' => 'getSin',
         'birthdate' => 'getBirthdate',
@@ -414,9 +416,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
         'orgFedNo' => 'getOrgFedNo',
         'orgProvNo' => 'getOrgProvNo',
         'orgStateId' => 'getOrgStateId',
-        'orgEin' => 'getOrgEin',
-        'externalKey' => 'getExternalKey',
-        'externalKeyType' => 'getExternalKeyType'
+        'orgEin' => 'getOrgEin'
     ];
 
     /**
@@ -492,6 +492,8 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
         $this->container['twitterLink'] = $data['twitterLink'] ?? null;
         $this->container['linkedinLink'] = $data['linkedinLink'] ?? null;
         $this->container['avatar'] = $data['avatar'] ?? null;
+        $this->container['externalKey'] = $data['externalKey'] ?? null;
+        $this->container['externalKeyType'] = $data['externalKeyType'] ?? null;
         $this->container['gender'] = $data['gender'] ?? null;
         $this->container['sin'] = $data['sin'] ?? null;
         $this->container['birthdate'] = $data['birthdate'] ?? null;
@@ -535,8 +537,6 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
         $this->container['orgProvNo'] = $data['orgProvNo'] ?? null;
         $this->container['orgStateId'] = $data['orgStateId'] ?? null;
         $this->container['orgEin'] = $data['orgEin'] ?? null;
-        $this->container['externalKey'] = $data['externalKey'] ?? null;
-        $this->container['externalKeyType'] = $data['externalKeyType'] ?? null;
     }
 
     /**
@@ -943,6 +943,54 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     public function setAvatar($avatar)
     {
         $this->container['avatar'] = $avatar;
+
+        return $this;
+    }
+
+    /**
+     * Gets externalKey
+     *
+     * @return string|null
+     */
+    public function getExternalKey()
+    {
+        return $this->container['externalKey'];
+    }
+
+    /**
+     * Sets externalKey
+     *
+     * @param string|null $externalKey external key
+     *
+     * @return self
+     */
+    public function setExternalKey($externalKey)
+    {
+        $this->container['externalKey'] = $externalKey;
+
+        return $this;
+    }
+
+    /**
+     * Gets externalKeyType
+     *
+     * @return string|null
+     */
+    public function getExternalKeyType()
+    {
+        return $this->container['externalKeyType'];
+    }
+
+    /**
+     * Sets externalKeyType
+     *
+     * @param string|null $externalKeyType External key type
+     *
+     * @return self
+     */
+    public function setExternalKeyType($externalKeyType)
+    {
+        $this->container['externalKeyType'] = $externalKeyType;
 
         return $this;
     }
@@ -1975,54 +2023,6 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     public function setOrgEin($orgEin)
     {
         $this->container['orgEin'] = $orgEin;
-
-        return $this;
-    }
-
-    /**
-     * Gets externalKey
-     *
-     * @return string|null
-     */
-    public function getExternalKey()
-    {
-        return $this->container['externalKey'];
-    }
-
-    /**
-     * Sets externalKey
-     *
-     * @param string|null $externalKey external key
-     *
-     * @return self
-     */
-    public function setExternalKey($externalKey)
-    {
-        $this->container['externalKey'] = $externalKey;
-
-        return $this;
-    }
-
-    /**
-     * Gets externalKeyType
-     *
-     * @return string|null
-     */
-    public function getExternalKeyType()
-    {
-        return $this->container['externalKeyType'];
-    }
-
-    /**
-     * Sets externalKeyType
-     *
-     * @param string|null $externalKeyType External key type
-     *
-     * @return self
-     */
-    public function setExternalKeyType($externalKeyType)
-    {
-        $this->container['externalKeyType'] = $externalKeyType;
 
         return $this;
     }

@@ -4,11 +4,11 @@ All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**addMovement()**](MovementApi.md#addMovement) | **POST** /crm/api/v1/movements | Add a movement
-[**cancelMovement()**](MovementApi.md#cancelMovement) | **POST** /crm/api/v1/movements/{movementId}/cancel | Cancel a movement.
-[**deleteMovement()**](MovementApi.md#deleteMovement) | **DELETE** /crm/api/v1/movements/{movementId} | Delete a movement.
-[**getMovementStatus()**](MovementApi.md#getMovementStatus) | **GET** /crm/api/v1/movements/{movementId}/status | Get movement status.
-[**listMovements()**](MovementApi.md#listMovements) | **GET** /crm/api/v1/movements | List all movements
+[**addMovement()**](MovementApi.md#addMovement) | **POST** /crm/api/v1/movements | 
+[**cancelMovement()**](MovementApi.md#cancelMovement) | **POST** /crm/api/v1/movements/{movementId}/cancel | 
+[**deleteMovement()**](MovementApi.md#deleteMovement) | **DELETE** /crm/api/v1/movements/{movementId} | 
+[**getMovementStatus()**](MovementApi.md#getMovementStatus) | **GET** /crm/api/v1/movements/{movementId}/status | 
+[**listMovements()**](MovementApi.md#listMovements) | **GET** /crm/api/v1/movements | 
 
 
 ## `addMovement()`
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 addMovement($movementMovementPayload): \Equisoft\SDK\EquisoftConnect\Model\MovementAddMovementResponse
 ```
 
-Add a movement
+
 
 ### Example
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 cancelMovement($movementId)
 ```
 
-Cancel a movement.
+
 
 ### Example
 
@@ -132,7 +132,7 @@ void (empty response body)
 deleteMovement($movementId)
 ```
 
-Delete a movement.
+
 
 ### Example
 
@@ -189,7 +189,7 @@ void (empty response body)
 getMovementStatus($movementId): \Equisoft\SDK\EquisoftConnect\Model\MovementGetStatusResponse
 ```
 
-Get movement status.
+
 
 ### Example
 
@@ -247,7 +247,7 @@ Name | Type | Description  | Notes
 listMovements(): \Equisoft\SDK\EquisoftConnect\Model\MovementListMovementResponse
 ```
 
-List all movements
+
 
 ### Example
 

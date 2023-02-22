@@ -274,7 +274,7 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param int|null $id Unique numerical identifier.
+     * @param int|null $id id
      *
      * @return self
      */
@@ -298,7 +298,7 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets status
      *
-     * @param string|null $status Movement status.
+     * @param string|null $status status
      *
      * @return self
      */
@@ -322,7 +322,7 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets availableAction
      *
-     * @param string|null $availableAction Available action.
+     * @param string|null $availableAction availableAction
      *
      * @return self
      */
@@ -346,7 +346,7 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets scheduledDate
      *
-     * @param string|null $scheduledDate Scheduled date.
+     * @param string|null $scheduledDate scheduledDate
      *
      * @return self
      */
@@ -370,7 +370,7 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets processedDate
      *
-     * @param string|null $processedDate Processed date.
+     * @param string|null $processedDate processedDate
      *
      * @return self
      */
@@ -394,7 +394,7 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets addedDate
      *
-     * @param string|null $addedDate Added date.
+     * @param string|null $addedDate addedDate
      *
      * @return self
      */
@@ -418,7 +418,7 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets addedBy
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null $addedBy Added by.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null $addedBy addedBy
      *
      * @return self
      */
@@ -442,7 +442,7 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets cancelledDate
      *
-     * @param string|null $cancelledDate .Cancelled date.
+     * @param string|null $cancelledDate cancelledDate
      *
      * @return self
      */
@@ -466,7 +466,7 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets cancelledBy
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null $cancelledBy Cancelled by.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null $cancelledBy cancelledBy
      *
      * @return self
      */
