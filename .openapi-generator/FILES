@@ -5,6 +5,7 @@ docs/Api/ContactsApi.md
 docs/Api/DSFApi.md
 docs/Api/DatabasesApi.md
 docs/Api/EventsApi.md
+docs/Api/FieldValuesApi.md
 docs/Api/GatewaysApi.md
 docs/Api/IntegrationsApi.md
 docs/Api/LegacyDocumentApi.md
@@ -29,6 +30,7 @@ docs/Model/ContactContactOccupation.md
 docs/Model/ContactContactPhone.md
 docs/Model/ContactContactSegmentation.md
 docs/Model/ContactContactWebsite.md
+docs/Model/ContactPatchDto.md
 docs/Model/ContactsContact.md
 docs/Model/ContextActor.md
 docs/Model/ContextEquisoftConnect.md
@@ -60,6 +62,9 @@ docs/Model/EventsPutEventLinkDocumentsPayload.md
 docs/Model/EventsTransferToCompletedResponse.md
 docs/Model/EventsVisibilityType.md
 docs/Model/FieldValue.md
+docs/Model/FieldValueField.md
+docs/Model/FieldValueListFieldResponse.md
+docs/Model/FieldValueLocalizedString.md
 docs/Model/GatewaysAccessesCreateAccessResponse.md
 docs/Model/GatewaysAccessesCreateEquisoftAnalyzeAccessPayload.md
 docs/Model/GatewaysAccessesEquisoftAnalyzeAccess.md
@@ -208,6 +213,7 @@ lib/Api/ContactsApi.php
 lib/Api/DSFApi.php
 lib/Api/DatabasesApi.php
 lib/Api/EventsApi.php
+lib/Api/FieldValuesApi.php
 lib/Api/GatewaysApi.php
 lib/Api/IntegrationsApi.php
 lib/Api/LegacyDocumentApi.php
@@ -235,6 +241,7 @@ lib/Model/ContactContactOccupation.php
 lib/Model/ContactContactPhone.php
 lib/Model/ContactContactSegmentation.php
 lib/Model/ContactContactWebsite.php
+lib/Model/ContactPatchDto.php
 lib/Model/ContactsContact.php
 lib/Model/ContextActor.php
 lib/Model/ContextEquisoftConnect.php
@@ -266,6 +273,9 @@ lib/Model/EventsPutEventLinkDocumentsPayload.php
 lib/Model/EventsTransferToCompletedResponse.php
 lib/Model/EventsVisibilityType.php
 lib/Model/FieldValue.php
+lib/Model/FieldValueField.php
+lib/Model/FieldValueListFieldResponse.php
+lib/Model/FieldValueLocalizedString.php
 lib/Model/GatewaysAccessesCreateAccessResponse.php
 lib/Model/GatewaysAccessesCreateEquisoftAnalyzeAccessPayload.php
 lib/Model/GatewaysAccessesEquisoftAnalyzeAccess.php
@@ -416,6 +426,7 @@ test/Api/ContactsApiTest.php
 test/Api/DSFApiTest.php
 test/Api/DatabasesApiTest.php
 test/Api/EventsApiTest.php
+test/Api/FieldValuesApiTest.php
 test/Api/GatewaysApiTest.php
 test/Api/IntegrationsApiTest.php
 test/Api/LegacyDocumentApiTest.php
@@ -440,6 +451,7 @@ test/Model/ContactContactOccupationTest.php
 test/Model/ContactContactPhoneTest.php
 test/Model/ContactContactSegmentationTest.php
 test/Model/ContactContactWebsiteTest.php
+test/Model/ContactPatchDtoTest.php
 test/Model/ContactsContactTest.php
 test/Model/ContextActorTest.php
 test/Model/ContextEquisoftConnectTest.php
@@ -470,6 +482,9 @@ test/Model/EventsPatchEventResponseTest.php
 test/Model/EventsPutEventLinkDocumentsPayloadTest.php
 test/Model/EventsTransferToCompletedResponseTest.php
 test/Model/EventsVisibilityTypeTest.php
+test/Model/FieldValueFieldTest.php
+test/Model/FieldValueListFieldResponseTest.php
+test/Model/FieldValueLocalizedStringTest.php
 test/Model/FieldValueTest.php
 test/Model/GatewaysAccessesCreateAccessResponseTest.php
 test/Model/GatewaysAccessesCreateEquisoftAnalyzeAccessPayloadTest.php
