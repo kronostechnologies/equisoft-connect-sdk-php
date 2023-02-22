@@ -1,11 +1,9 @@
-# # MovementUser
+# # FieldValueLocalizedString
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | Unique numerical identifier. |
-**uuid** | **string** | Unique string identifier. | [optional]
-**displayName** | **string** | User display name. |
+**translations** | [**\Equisoft\SDK\EquisoftConnect\Model\Translation[]**](Translation.md) | Value labels in available languages. |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

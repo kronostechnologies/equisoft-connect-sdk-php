@@ -421,7 +421,7 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
     /**
      * Sets capsil
      *
-     * @param bool|null $capsil capsil
+     * @param bool|null $capsil Is Capsil.
      *
      * @return self
      */
@@ -445,7 +445,7 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
     /**
      * Sets univeris
      *
-     * @param bool|null $univeris univeris
+     * @param bool|null $univeris Is Univeris. Deprecated: Univeris is not supported anymore and will be removed from future versions).
      *
      * @return self
      */
@@ -469,7 +469,7 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
     /**
      * Sets dataphile
      *
-     * @param bool|null $dataphile dataphile
+     * @param bool|null $dataphile Is Dataphile.
      *
      * @return self
      */
