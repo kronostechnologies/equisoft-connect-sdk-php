@@ -543,7 +543,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets initialDate
      *
-     * @param string|null $initialDate Date the Event was initially scheduled. As defined by full-date - RFC3339
+     * @param string|null $initialDate Date the Event was initially scheduled. As defined by full-date - RFC3339.
      *
      * @return self
      */
@@ -639,7 +639,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets type
      *
-     * @param string $type Event type (CALL, LETTER, MEETING, VACATION, FILE, NOTE)
+     * @param string $type Event type (CALL, LETTER, MEETING, VACATION, FILE, NOTE).
      *
      * @return self
      */
@@ -807,7 +807,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets visibility
      *
-     * @param string $visibility Confidentiality level of the Event (private or not). [NORMAL, PRIVATE]
+     * @param string $visibility Confidentiality level of the Event (private or not). [NORMAL, PRIVATE].
      *
      * @return self
      */
@@ -831,7 +831,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets creationTime
      *
-     * @param \DateTime|null $creationTime Creation time. As defined by date-time - RFC3339
+     * @param \DateTime|null $creationTime Creation time. As defined by date-time - RFC3339.
      *
      * @return self
      */
@@ -855,7 +855,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets updateTime
      *
-     * @param \DateTime|null $updateTime Date time of last modification. As defined by date-time - RFC3339
+     * @param \DateTime|null $updateTime Date time of last modification. As defined by date-time - RFC3339.
      *
      * @return self
      */
@@ -879,7 +879,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets calendarId
      *
-     * @param int $calendarId ID of the calendar owning this Event. If owned by many users, calendarId will be - The primary ( or completed depending on state) calendar ID of the connected user if the user is one of the owners. - Any primary ( or completed depending on state) completed calendar ID of one of the owners.
+     * @param int $calendarId ID of the calendar owning this Event. If owned by many users, calendarId will be: - The primary (or completed depending on state) calendar ID of the connected user if the user is one of the owners. - Any primary (or completed depending on state) completed calendar ID of one of the owners.
      *
      * @return self
      */
@@ -903,7 +903,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets color
      *
-     * @param string|null $color hex color of this event background
+     * @param string|null $color Hex color of this event background
      *
      * @return self
      */
@@ -927,7 +927,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets textColor
      *
-     * @param string|null $textColor hex text color of this event
+     * @param string|null $textColor Hex text color of this event
      *
      * @return self
      */
@@ -951,7 +951,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets contactIds
      *
-     * @param int[]|null $contactIds IDs of the contacts linked to this Event
+     * @param int[]|null $contactIds IDs of the contacts linked to this Event.
      *
      * @return self
      */
@@ -975,7 +975,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets documentIds
      *
-     * @param int[]|null $documentIds IDs of the documents linked to this Event
+     * @param int[]|null $documentIds IDs of the documents linked to this Event.
      *
      * @return self
      */

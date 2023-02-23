@@ -1,11 +1,9 @@
-# # MovementUser
+# # FieldValueListFieldResponse
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | Unique numerical identifier. |
-**uuid** | **string** | Unique string identifier. | [optional]
-**displayName** | **string** | User display name. |
+**items** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValueField[]**](FieldValueField.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -45,7 +45,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\TasksApi(
 );
 $taskId = 'taskId_example'; // string | Task unique identifier.
 $noteId = 56; // int | Note unique identifier.
-$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
+$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282.
 
 try {
     $apiInstance->archiveTaskInternalNote($taskId, $noteId, $acceptLanguage);
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **taskId** | **string**| Task unique identifier. |
  **noteId** | **int**| Note unique identifier. |
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 | [optional]
+ **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
 
 ### Return type
 
@@ -105,7 +105,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\TasksApi(
     $config
 );
 $tasksCreateTaskPayload = new \Equisoft\SDK\EquisoftConnect\Model\TasksCreateTaskPayload(); // \Equisoft\SDK\EquisoftConnect\Model\TasksCreateTaskPayload
-$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
+$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282.
 
 try {
     $result = $apiInstance->createTask($tasksCreateTaskPayload, $acceptLanguage);
@@ -120,7 +120,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tasksCreateTaskPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\TasksCreateTaskPayload**](../Model/TasksCreateTaskPayload.md)|  |
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 | [optional]
+ **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
 
 ### Return type
 
@@ -166,7 +166,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\TasksApi(
 );
 $taskId = 'taskId_example'; // string | Task unique identifier.
 $internalNotesCreateNotePayload = new \Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNotePayload(); // \Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNotePayload
-$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
+$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282.
 
 try {
     $result = $apiInstance->createTaskInternalNote($taskId, $internalNotesCreateNotePayload, $acceptLanguage);
@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **taskId** | **string**| Task unique identifier. |
  **internalNotesCreateNotePayload** | [**\Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNotePayload**](../Model/InternalNotesCreateNotePayload.md)|  |
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 | [optional]
+ **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
 
 ### Return type
 
@@ -284,7 +284,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\TasksApi(
     $config
 );
 $taskId = 'taskId_example'; // string
-$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
+$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282.
 
 try {
     $result = $apiInstance->getTask($taskId, $acceptLanguage);
@@ -299,7 +299,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **taskId** | **string**|  |
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 | [optional]
+ **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
 
 ### Return type
 
@@ -345,7 +345,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\TasksApi(
 );
 $taskId = 'taskId_example'; // string
 $history = new \Equisoft\SDK\EquisoftConnect\Model\InternalNotesHistoryType(); // InternalNotesHistoryType | Query all revisions or not.
-$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
+$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282.
 
 try {
     $result = $apiInstance->getTaskInternalNoteList($taskId, $history, $acceptLanguage);
@@ -361,7 +361,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **taskId** | **string**|  |
  **history** | [**InternalNotesHistoryType**](../Model/.md)| Query all revisions or not. | [optional]
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 | [optional]
+ **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
 
 ### Return type
 
@@ -406,15 +406,15 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\TasksApi(
     $config
 );
 $ownerId = 'ownerId_example'; // string | Owner ID filter param.
-$contactIds = array(56); // int[] | Contact ID filter param. Many ids can be passed to this argument separated by coma. Ex: '?contactId=1,2,3'. Any of the given contacts will be returned in the result.
+$contactIds = array(56); // int[] | Contact ID filter param. Many ids can be passed to this argument separated by coma. Ex: '?contactIds=1,2,3'. Any of the given contacts will be returned in the result.
 $minDueDate = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Minimum (inclusive) due date of the task.
 $maxDueDate = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Maximum (exclusive) due date of the task.
 $isCompleted = True; // bool | If true, include only completed tasks. If false, include only TODO tasks. If not set or null, include both.
 $dueDateFilter = new \Equisoft\SDK\EquisoftConnect\Model\TasksDueDateFilter(); // TasksDueDateFilter | Include or exclude tasks with or without due date.
 $orderBy = new \Equisoft\SDK\EquisoftConnect\Model\TasksOrderByType(); // TasksOrderByType | Specify the order of the results.
 $pageToken = MjUwMDszMDAK; // string | Token to specify which page to fetch.
-$maxResults = 'maxResults_example'; // string | Maximum number of records for one result page.  If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records.
-$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
+$maxResults = 'maxResults_example'; // string | Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records.
+$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282.
 
 try {
     $result = $apiInstance->listTasks($ownerId, $contactIds, $minDueDate, $maxDueDate, $isCompleted, $dueDateFilter, $orderBy, $pageToken, $maxResults, $acceptLanguage);
@@ -429,15 +429,15 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ownerId** | **string**| Owner ID filter param. | [optional]
- **contactIds** | [**int[]**](../Model/int.md)| Contact ID filter param. Many ids can be passed to this argument separated by coma. Ex: &#39;?contactId&#x3D;1,2,3&#39;. Any of the given contacts will be returned in the result. | [optional]
+ **contactIds** | [**int[]**](../Model/int.md)| Contact ID filter param. Many ids can be passed to this argument separated by coma. Ex: &#39;?contactIds&#x3D;1,2,3&#39;. Any of the given contacts will be returned in the result. | [optional]
  **minDueDate** | **\DateTime**| Minimum (inclusive) due date of the task. | [optional]
  **maxDueDate** | **\DateTime**| Maximum (exclusive) due date of the task. | [optional]
  **isCompleted** | **bool**| If true, include only completed tasks. If false, include only TODO tasks. If not set or null, include both. | [optional]
  **dueDateFilter** | [**TasksDueDateFilter**](../Model/.md)| Include or exclude tasks with or without due date. | [optional]
  **orderBy** | [**TasksOrderByType**](../Model/.md)| Specify the order of the results. | [optional]
  **pageToken** | **string**| Token to specify which page to fetch. | [optional]
- **maxResults** | **string**| Maximum number of records for one result page.  If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. | [optional]
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 | [optional]
+ **maxResults** | **string**| Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. | [optional]
+ **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
 
 ### Return type
 
@@ -483,7 +483,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\TasksApi(
 );
 $taskId = 'taskId_example'; // string | Task unique identifier.
 $tasksPatchTaskPayload = new \Equisoft\SDK\EquisoftConnect\Model\TasksPatchTaskPayload(); // \Equisoft\SDK\EquisoftConnect\Model\TasksPatchTaskPayload | Event fields to update. The body of the patch request includes only the resource fields you want to modify. To delete a field, set it to null. Collections are always overridden if defined.
-$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
+$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282.
 
 try {
     $result = $apiInstance->patchTask($taskId, $tasksPatchTaskPayload, $acceptLanguage);
@@ -499,7 +499,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **taskId** | **string**| Task unique identifier. |
  **tasksPatchTaskPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\TasksPatchTaskPayload**](../Model/TasksPatchTaskPayload.md)| Event fields to update. The body of the patch request includes only the resource fields you want to modify. To delete a field, set it to null. Collections are always overridden if defined. |
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 | [optional]
+ **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
 
 ### Return type
 
@@ -546,7 +546,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\TasksApi(
 $taskId = 'taskId_example'; // string | Task unique identifier.
 $noteId = 56; // int | Note unique identifier.
 $internalNotesPatchNotePayload = new \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNotePayload(); // \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNotePayload
-$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
+$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282.
 
 try {
     $result = $apiInstance->patchTaskInternalNote($taskId, $noteId, $internalNotesPatchNotePayload, $acceptLanguage);
@@ -563,7 +563,7 @@ Name | Type | Description  | Notes
  **taskId** | **string**| Task unique identifier. |
  **noteId** | **int**| Note unique identifier. |
  **internalNotesPatchNotePayload** | [**\Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNotePayload**](../Model/InternalNotesPatchNotePayload.md)|  |
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 | [optional]
+ **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
 
 ### Return type
 
@@ -609,7 +609,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\TasksApi(
 );
 $taskId = 'taskId_example'; // string | Task unique identifier.
 $tasksPutTaskLinkDocumentsPayload = new \Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload(); // \Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload | Contains an array of Ids for the documents to link with the task.  *     To remove all links, documentIds set to an empty array  Collections are always overridden if defined.
-$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
+$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282.
 
 try {
     $apiInstance->putTaskLinksDocuments($taskId, $tasksPutTaskLinkDocumentsPayload, $acceptLanguage);
@@ -624,7 +624,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **taskId** | **string**| Task unique identifier. |
  **tasksPutTaskLinkDocumentsPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload**](../Model/TasksPutTaskLinkDocumentsPayload.md)| Contains an array of Ids for the documents to link with the task.  *     To remove all links, documentIds set to an empty array  Collections are always overridden if defined. |
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 | [optional]
+ **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
 
 ### Return type
 
@@ -670,7 +670,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\TasksApi(
 );
 $taskId = 'taskId_example'; // string | Task unique identifier.
 $noteId = 56; // int | Note unique identifier.
-$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
+$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282.
 
 try {
     $apiInstance->restoreTaskInternalNote($taskId, $noteId, $acceptLanguage);
@@ -685,7 +685,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **taskId** | **string**| Task unique identifier. |
  **noteId** | **int**| Note unique identifier. |
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 | [optional]
+ **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
 
 ### Return type
 

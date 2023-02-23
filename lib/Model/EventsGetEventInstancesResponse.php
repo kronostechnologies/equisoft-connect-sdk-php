@@ -249,7 +249,7 @@ class EventsGetEventInstancesResponse implements ModelInterface, ArrayAccess, \J
     /**
      * Sets items
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\EventsEvent[] $items items
+     * @param \Equisoft\SDK\EquisoftConnect\Model\EventsEvent[] $items List of events.
      *
      * @return self
      */

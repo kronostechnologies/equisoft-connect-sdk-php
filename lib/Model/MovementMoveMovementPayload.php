@@ -298,7 +298,7 @@ class MovementMoveMovementPayload extends MovementMovementPayload
     /**
      * Sets sourceDatabase
      *
-     * @param string $sourceDatabase sourceDatabase
+     * @param string $sourceDatabase Source database full name.
      *
      * @return self
      */
@@ -322,7 +322,7 @@ class MovementMoveMovementPayload extends MovementMovementPayload
     /**
      * Sets destinationDatabase
      *
-     * @param string $destinationDatabase destinationDatabase
+     * @param string $destinationDatabase Destination database full name.
      *
      * @return self
      */
@@ -346,7 +346,7 @@ class MovementMoveMovementPayload extends MovementMovementPayload
     /**
      * Sets users
      *
-     * @param string[] $users users
+     * @param string[] $users List of users id.
      *
      * @return self
      */

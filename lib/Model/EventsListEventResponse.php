@@ -226,7 +226,7 @@ class EventsListEventResponse implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets nextPageToken
      *
-     * @param string|null $nextPageToken Opaque token used to get the next page of the result. Omitted if no more results.
+     * @param string|null $nextPageToken Opaque token used to get the next page of the result. Omitted if no more results..
      *
      * @return self
      */
@@ -250,7 +250,7 @@ class EventsListEventResponse implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets items
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\EventsEvent[] $items items
+     * @param \Equisoft\SDK\EquisoftConnect\Model\EventsEvent[] $items List of events.
      *
      * @return self
      */

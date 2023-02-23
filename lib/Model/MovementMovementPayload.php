@@ -232,7 +232,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets date
      *
-     * @param string|null $date date
+     * @param string|null $date Movement date.
      *
      * @return self
      */
@@ -256,7 +256,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets now
      *
-     * @param bool|null $now now
+     * @param bool|null $now Is now.
      *
      * @return self
      */
