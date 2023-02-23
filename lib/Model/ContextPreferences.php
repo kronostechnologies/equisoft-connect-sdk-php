@@ -246,7 +246,7 @@ class ContextPreferences implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets tz
      *
-     * @param string $tz $tz
+     * @param string $tz Timezone
      *
      * @return self
      */
@@ -270,7 +270,7 @@ class ContextPreferences implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets locale
      *
-     * @param string $locale $locale
+     * @param string $locale Locale
      *
      * @return self
      */
@@ -294,7 +294,7 @@ class ContextPreferences implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets timeFormat
      *
-     * @param string $timeFormat $timeFormat
+     * @param string $timeFormat Time format
      *
      * @return self
      */
@@ -318,7 +318,7 @@ class ContextPreferences implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets firstDayOfWeek
      *
-     * @param string $firstDayOfWeek $firstDayOfWeek
+     * @param string $firstDayOfWeek First day of week
      *
      * @return self
      */

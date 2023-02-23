@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**type** | **string** |  | [optional] [default to 'CLIENTBASE_USING_DISTLIST']
 **sourceDatabase** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase**](MovementDatabase.md) |  | [optional]
 **sourceUser** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementUser**](MovementUser.md) |  | [optional]
 **sourceDistributionList** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementDistributionList**](MovementDistributionList.md) |  | [optional]
@@ -11,6 +12,5 @@ Name | Type | Description | Notes
 **destinationUser** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementUser**](MovementUser.md) |  | [optional]
 **datagatewayAccessMappings** | **array<string,string>** |  | [optional]
 **transferOption** | **string** |  | [optional]
-**type** | **string** |  | [optional] [default to 'CLIENTBASE_USING_DISTLIST']
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

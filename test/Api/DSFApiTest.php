@@ -74,7 +74,7 @@ class DSFApiTest extends TestCase
     /**
      * Test case for createDsfFinancialCenter
      *
-     * .
+     * Create a financial center.
      *
      */
     public function testCreateDsfFinancialCenter()
@@ -86,7 +86,7 @@ class DSFApiTest extends TestCase
     /**
      * Test case for deleteDsfFinancialCenter
      *
-     * .
+     * Delete a financial center.
      *
      */
     public function testDeleteDsfFinancialCenter()
@@ -98,7 +98,7 @@ class DSFApiTest extends TestCase
     /**
      * Test case for getDsfFinancialCenters
      *
-     * .
+     * Get a financial center.
      *
      */
     public function testGetDsfFinancialCenters()
@@ -110,7 +110,7 @@ class DSFApiTest extends TestCase
     /**
      * Test case for listDsfFinancialCenters
      *
-     * .
+     * List all financial centers.
      *
      */
     public function testListDsfFinancialCenters()
@@ -122,7 +122,7 @@ class DSFApiTest extends TestCase
     /**
      * Test case for updateDsfFinancialCenter
      *
-     * .
+     * Update a financial center.
      *
      */
     public function testUpdateDsfFinancialCenter()

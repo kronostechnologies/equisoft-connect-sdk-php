@@ -46,6 +46,8 @@ class TasksDueDateFilter
 
     public const WITHOUT_DUE_DATE = 'withoutDueDate';
 
+    public const UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
+
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -54,7 +56,8 @@ class TasksDueDateFilter
     {
         return [
             self::WITH_DUE_DATE,
-            self::WITHOUT_DUE_DATE
+            self::WITHOUT_DUE_DATE,
+            self::UNKNOWN_DEFAULT_OPEN_API
         ];
     }
 }
