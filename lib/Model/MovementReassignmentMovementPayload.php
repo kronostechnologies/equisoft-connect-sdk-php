@@ -307,7 +307,7 @@ class MovementReassignmentMovementPayload extends MovementMovementPayload
     /**
      * Sets sourceDatabase
      *
-     * @param string $sourceDatabase Source database full name.
+     * @param string $sourceDatabase sourceDatabase
      *
      * @return self
      */
@@ -331,7 +331,7 @@ class MovementReassignmentMovementPayload extends MovementMovementPayload
     /**
      * Sets sourceUser
      *
-     * @param string $sourceUser Source user id.
+     * @param string $sourceUser sourceUser
      *
      * @return self
      */
@@ -355,7 +355,7 @@ class MovementReassignmentMovementPayload extends MovementMovementPayload
     /**
      * Sets destinationUser
      *
-     * @param string $destinationUser Destination user id.
+     * @param string $destinationUser destinationUser
      *
      * @return self
      */
@@ -379,7 +379,7 @@ class MovementReassignmentMovementPayload extends MovementMovementPayload
     /**
      * Sets accessCode
      *
-     * @param string $accessCode Access code. Format: dataGatewayType~~system~dealerCode-repCode.
+     * @param string $accessCode accessCode
      *
      * @return self
      */

@@ -118,8 +118,6 @@ class MovementApi
     /**
      * Operation addMovement
      *
-     * Add a movement
-     *
      * @param  \Equisoft\SDK\EquisoftConnect\Model\MovementMovementPayload $movementMovementPayload movementMovementPayload (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
@@ -134,8 +132,6 @@ class MovementApi
 
     /**
      * Operation addMovementWithHttpInfo
-     *
-     * Add a movement
      *
      * @param  \Equisoft\SDK\EquisoftConnect\Model\MovementMovementPayload $movementMovementPayload (required)
      *
@@ -326,8 +322,6 @@ class MovementApi
     /**
      * Operation addMovementAsync
      *
-     * Add a movement
-     *
      * @param  \Equisoft\SDK\EquisoftConnect\Model\MovementMovementPayload $movementMovementPayload (required)
      *
      * @throws \InvalidArgumentException
@@ -345,8 +339,6 @@ class MovementApi
 
     /**
      * Operation addMovementAsyncWithHttpInfo
-     *
-     * Add a movement
      *
      * @param  \Equisoft\SDK\EquisoftConnect\Model\MovementMovementPayload $movementMovementPayload (required)
      *
@@ -492,8 +484,6 @@ class MovementApi
     /**
      * Operation cancelMovement
      *
-     * Cancel a movement.
-     *
      * @param  int $movementId movementId (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
@@ -507,8 +497,6 @@ class MovementApi
 
     /**
      * Operation cancelMovementWithHttpInfo
-     *
-     * Cancel a movement.
      *
      * @param  int $movementId (required)
      *
@@ -591,8 +579,6 @@ class MovementApi
     /**
      * Operation cancelMovementAsync
      *
-     * Cancel a movement.
-     *
      * @param  int $movementId (required)
      *
      * @throws \InvalidArgumentException
@@ -610,8 +596,6 @@ class MovementApi
 
     /**
      * Operation cancelMovementAsyncWithHttpInfo
-     *
-     * Cancel a movement.
      *
      * @param  int $movementId (required)
      *
@@ -746,8 +730,6 @@ class MovementApi
     /**
      * Operation deleteMovement
      *
-     * Delete a movement.
-     *
      * @param  int $movementId movementId (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
@@ -761,8 +743,6 @@ class MovementApi
 
     /**
      * Operation deleteMovementWithHttpInfo
-     *
-     * Delete a movement.
      *
      * @param  int $movementId (required)
      *
@@ -845,8 +825,6 @@ class MovementApi
     /**
      * Operation deleteMovementAsync
      *
-     * Delete a movement.
-     *
      * @param  int $movementId (required)
      *
      * @throws \InvalidArgumentException
@@ -864,8 +842,6 @@ class MovementApi
 
     /**
      * Operation deleteMovementAsyncWithHttpInfo
-     *
-     * Delete a movement.
      *
      * @param  int $movementId (required)
      *
@@ -1000,8 +976,6 @@ class MovementApi
     /**
      * Operation getMovementStatus
      *
-     * Get movement status.
-     *
      * @param  int $movementId movementId (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
@@ -1016,8 +990,6 @@ class MovementApi
 
     /**
      * Operation getMovementStatusWithHttpInfo
-     *
-     * Get movement status.
      *
      * @param  int $movementId (required)
      *
@@ -1185,8 +1157,6 @@ class MovementApi
     /**
      * Operation getMovementStatusAsync
      *
-     * Get movement status.
-     *
      * @param  int $movementId (required)
      *
      * @throws \InvalidArgumentException
@@ -1204,8 +1174,6 @@ class MovementApi
 
     /**
      * Operation getMovementStatusAsyncWithHttpInfo
-     *
-     * Get movement status.
      *
      * @param  int $movementId (required)
      *
@@ -1353,8 +1321,6 @@ class MovementApi
     /**
      * Operation listMovements
      *
-     * List all movements
-     *
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1368,8 +1334,6 @@ class MovementApi
 
     /**
      * Operation listMovementsWithHttpInfo
-     *
-     * List all movements
      *
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
@@ -1536,8 +1500,6 @@ class MovementApi
     /**
      * Operation listMovementsAsync
      *
-     * List all movements
-     *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1554,8 +1516,6 @@ class MovementApi
 
     /**
      * Operation listMovementsAsyncWithHttpInfo
-     *
-     * List all movements
      *
      *
      * @throws \InvalidArgumentException

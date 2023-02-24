@@ -292,7 +292,7 @@ class MovementMoveMovementPayloadAllOf implements ModelInterface, ArrayAccess, \
     /**
      * Sets sourceDatabase
      *
-     * @param string|null $sourceDatabase Source database full name.
+     * @param string|null $sourceDatabase sourceDatabase
      *
      * @return self
      */
@@ -316,7 +316,7 @@ class MovementMoveMovementPayloadAllOf implements ModelInterface, ArrayAccess, \
     /**
      * Sets destinationDatabase
      *
-     * @param string|null $destinationDatabase Destination database full name.
+     * @param string|null $destinationDatabase destinationDatabase
      *
      * @return self
      */
@@ -340,7 +340,7 @@ class MovementMoveMovementPayloadAllOf implements ModelInterface, ArrayAccess, \
     /**
      * Sets users
      *
-     * @param string[]|null $users List of users id.
+     * @param string[]|null $users users
      *
      * @return self
      */

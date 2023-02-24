@@ -33,7 +33,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\ContactsApi(
     $config
 );
 $contactUuid = 'contactUuid_example'; // string | Contact unique identifier.
-$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282.
+$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
 
 try {
     $result = $apiInstance->getByUuid($contactUuid, $acceptLanguage);
@@ -48,7 +48,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contactUuid** | **string**| Contact unique identifier. |
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
+ **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 | [optional]
 
 ### Return type
 

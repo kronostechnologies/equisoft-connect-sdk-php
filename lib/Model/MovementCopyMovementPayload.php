@@ -233,9 +233,6 @@ class MovementCopyMovementPayload extends MovementMovementPayload
         if ($this->container['destinationDatabase'] === null) {
             $invalidProperties[] = "'destinationDatabase' can't be null";
         }
-        if ($this->container['userTuples'] === null) {
-            $invalidProperties[] = "'userTuples' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -298,7 +295,7 @@ class MovementCopyMovementPayload extends MovementMovementPayload
     /**
      * Sets sourceDatabase
      *
-     * @param string $sourceDatabase Source database full name.
+     * @param string $sourceDatabase sourceDatabase
      *
      * @return self
      */
@@ -322,7 +319,7 @@ class MovementCopyMovementPayload extends MovementMovementPayload
     /**
      * Sets destinationDatabase
      *
-     * @param string $destinationDatabase Destination database full name.
+     * @param string $destinationDatabase destinationDatabase
      *
      * @return self
      */
@@ -336,7 +333,7 @@ class MovementCopyMovementPayload extends MovementMovementPayload
     /**
      * Gets userTuples
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUserTuplePayload[]
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUserTuplePayload[]|null
      */
     public function getUserTuples()
     {
@@ -346,7 +343,7 @@ class MovementCopyMovementPayload extends MovementMovementPayload
     /**
      * Sets userTuples
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUserTuplePayload[] $userTuples User tuples.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUserTuplePayload[]|null $userTuples userTuples
      *
      * @return self
      */

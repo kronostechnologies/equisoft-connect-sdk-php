@@ -222,7 +222,7 @@ class MovementValidationError implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets message
      *
-     * @param string|null $message Message.
+     * @param string|null $message message
      *
      * @return self
      */
@@ -246,7 +246,7 @@ class MovementValidationError implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets context
      *
-     * @param array<string,string>|null $context Context.
+     * @param array<string,string>|null $context context
      *
      * @return self
      */
