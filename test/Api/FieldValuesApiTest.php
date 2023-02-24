@@ -1,6 +1,6 @@
 <?php
 /**
- * MovementApiTest
+ * FieldValuesApiTest
  * PHP version 7.4
  *
  * @category Class
@@ -33,14 +33,14 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**
- * MovementApiTest Class Doc Comment
+ * FieldValuesApiTest Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class MovementApiTest extends TestCase
+class FieldValuesApiTest extends TestCase
 {
 
     /**
@@ -72,60 +72,12 @@ class MovementApiTest extends TestCase
     }
 
     /**
-     * Test case for addMovement
+     * Test case for listFields
      *
-     * Add a movement.
-     *
-     */
-    public function testAddMovement()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for cancelMovement
-     *
-     * Cancel a movement..
+     * List fields with values list (values domain)..
      *
      */
-    public function testCancelMovement()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for deleteMovement
-     *
-     * Delete a movement..
-     *
-     */
-    public function testDeleteMovement()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for getMovementStatus
-     *
-     * Get movement status..
-     *
-     */
-    public function testGetMovementStatus()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for listMovements
-     *
-     * List all movements.
-     *
-     */
-    public function testListMovements()
+    public function testListFields()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

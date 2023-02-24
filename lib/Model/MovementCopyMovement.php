@@ -346,7 +346,7 @@ class MovementCopyMovement extends MovementMovement
     /**
      * Sets userTuples
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUserTuple[] $userTuples userTuples
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUserTuple[] $userTuples List of user tuples.
      *
      * @return self
      */

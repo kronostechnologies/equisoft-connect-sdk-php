@@ -346,7 +346,7 @@ class MovementMoveMovement extends MovementMovement
     /**
      * Sets users
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser[] $users users
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser[] $users List of users.
      *
      * @return self
      */

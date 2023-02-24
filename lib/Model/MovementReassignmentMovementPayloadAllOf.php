@@ -298,7 +298,7 @@ class MovementReassignmentMovementPayloadAllOf implements ModelInterface, ArrayA
     /**
      * Sets sourceDatabase
      *
-     * @param string|null $sourceDatabase sourceDatabase
+     * @param string|null $sourceDatabase Source database full name.
      *
      * @return self
      */
@@ -322,7 +322,7 @@ class MovementReassignmentMovementPayloadAllOf implements ModelInterface, ArrayA
     /**
      * Sets sourceUser
      *
-     * @param string|null $sourceUser sourceUser
+     * @param string|null $sourceUser Source user id.
      *
      * @return self
      */
@@ -346,7 +346,7 @@ class MovementReassignmentMovementPayloadAllOf implements ModelInterface, ArrayA
     /**
      * Sets destinationUser
      *
-     * @param string|null $destinationUser destinationUser
+     * @param string|null $destinationUser Destination user id.
      *
      * @return self
      */
@@ -370,7 +370,7 @@ class MovementReassignmentMovementPayloadAllOf implements ModelInterface, ArrayA
     /**
      * Sets accessCode
      *
-     * @param string|null $accessCode accessCode
+     * @param string|null $accessCode Access code. Format: dataGatewayType~~system~dealerCode-repCode.
      *
      * @return self
      */

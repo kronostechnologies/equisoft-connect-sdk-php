@@ -222,7 +222,7 @@ class MovementDatabase implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets name
      *
-     * @param string|null $name name
+     * @param string|null $name Database name.
      *
      * @return self
      */
@@ -246,7 +246,7 @@ class MovementDatabase implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets displayName
      *
-     * @param string|null $displayName displayName
+     * @param string|null $displayName Database display name.
      *
      * @return self
      */

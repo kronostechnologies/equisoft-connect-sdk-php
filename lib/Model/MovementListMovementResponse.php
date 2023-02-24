@@ -219,7 +219,7 @@ class MovementListMovementResponse implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets items
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementMovement[] $items items
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementMovement[] $items List of movements.
      *
      * @return self
      */
