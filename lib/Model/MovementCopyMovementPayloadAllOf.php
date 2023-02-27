@@ -292,7 +292,7 @@ class MovementCopyMovementPayloadAllOf implements ModelInterface, ArrayAccess, \
     /**
      * Sets sourceDatabase
      *
-     * @param string|null $sourceDatabase sourceDatabase
+     * @param string|null $sourceDatabase Source database full name.
      *
      * @return self
      */
@@ -316,7 +316,7 @@ class MovementCopyMovementPayloadAllOf implements ModelInterface, ArrayAccess, \
     /**
      * Sets destinationDatabase
      *
-     * @param string|null $destinationDatabase destinationDatabase
+     * @param string|null $destinationDatabase Destination database full name.
      *
      * @return self
      */
@@ -340,7 +340,7 @@ class MovementCopyMovementPayloadAllOf implements ModelInterface, ArrayAccess, \
     /**
      * Sets userTuples
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUserTuplePayload[]|null $userTuples userTuples
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUserTuplePayload[]|null $userTuples User tuples.
      *
      * @return self
      */
