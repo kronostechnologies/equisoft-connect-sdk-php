@@ -282,7 +282,7 @@ class InternalNotesAuthor implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets displayName
      *
-     * @param string $displayName Author name.
+     * @param string $displayName Author name
      *
      * @return self
      */

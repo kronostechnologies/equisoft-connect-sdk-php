@@ -412,7 +412,7 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
     /**
      * Sets capsil
      *
-     * @param bool|null $capsil Is Capsil.
+     * @param bool|null $capsil capsil
      *
      * @return self
      */
@@ -436,7 +436,7 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
     /**
      * Sets univeris
      *
-     * @param bool|null $univeris Is Univeris. Deprecated: Univeris is not supported anymore and will be removed from future versions).
+     * @param bool|null $univeris univeris
      *
      * @return self
      */
@@ -460,7 +460,7 @@ class MovementClientBaseUsingFileMovementAllOf implements ModelInterface, ArrayA
     /**
      * Sets dataphile
      *
-     * @param bool|null $dataphile Is Dataphile.
+     * @param bool|null $dataphile dataphile
      *
      * @return self
      */

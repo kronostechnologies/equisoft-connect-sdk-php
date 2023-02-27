@@ -316,7 +316,7 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
     /**
      * Sets sourceDatabase
      *
-     * @param string|null $sourceDatabase Source database full name.
+     * @param string|null $sourceDatabase sourceDatabase
      *
      * @return self
      */
@@ -340,7 +340,7 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
     /**
      * Sets sourceUser
      *
-     * @param string|null $sourceUser Source user id.
+     * @param string|null $sourceUser sourceUser
      *
      * @return self
      */
@@ -364,7 +364,7 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
     /**
      * Sets destinationDatabase
      *
-     * @param string|null $destinationDatabase Destination database full name.
+     * @param string|null $destinationDatabase destinationDatabase
      *
      * @return self
      */
@@ -388,7 +388,7 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
     /**
      * Sets destinationUser
      *
-     * @param string|null $destinationUser Destination user id.
+     * @param string|null $destinationUser destinationUser
      *
      * @return self
      */
@@ -412,7 +412,7 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
     /**
      * Sets capsilFile
      *
-     * @param string|null $capsilFile Path to the Capsil file.
+     * @param string|null $capsilFile capsilFile
      *
      * @return self
      */
@@ -436,7 +436,7 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
     /**
      * Sets univerisFile
      *
-     * @param string|null $univerisFile Path to the Univeris file. Deprecated: Univeris file is not supported anymore and will be removed in a future version.
+     * @param string|null $univerisFile univerisFile
      *
      * @return self
      */
@@ -460,7 +460,7 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
     /**
      * Sets dataphileFile
      *
-     * @param string|null $dataphileFile Path to the Dataphile.
+     * @param string|null $dataphileFile dataphileFile
      *
      * @return self
      */

@@ -390,7 +390,7 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets initialDate
      *
-     * @param string|null $initialDate Date the Event was initially scheduled. As defined by full-date - RFC3339.
+     * @param string|null $initialDate Date the Event was initially scheduled. As defined by full-date - RFC3339
      *
      * @return self
      */

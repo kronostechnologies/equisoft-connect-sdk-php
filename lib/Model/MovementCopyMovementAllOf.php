@@ -340,7 +340,7 @@ class MovementCopyMovementAllOf implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets userTuples
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUserTuple[]|null $userTuples List of user tuples.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUserTuple[]|null $userTuples userTuples
      *
      * @return self
      */
