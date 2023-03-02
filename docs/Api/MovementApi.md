@@ -94,7 +94,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\MovementApi(
     new GuzzleHttp\Client(),
     $config
 );
-$movementId = 56; // int
+$movementId = 56; // int | Movement identifier
 
 try {
     $apiInstance->cancelMovement($movementId);
@@ -107,7 +107,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **movementId** | **int**|  |
+ **movementId** | **int**| Movement identifier |
 
 ### Return type
 
@@ -151,7 +151,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\MovementApi(
     new GuzzleHttp\Client(),
     $config
 );
-$movementId = 56; // int
+$movementId = 56; // int | Movement identifier
 
 try {
     $apiInstance->deleteMovement($movementId);
@@ -164,7 +164,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **movementId** | **int**|  |
+ **movementId** | **int**| Movement identifier |
 
 ### Return type
 
@@ -208,7 +208,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\MovementApi(
     new GuzzleHttp\Client(),
     $config
 );
-$movementId = 56; // int
+$movementId = 56; // int | Movement identifier
 
 try {
     $result = $apiInstance->getMovementStatus($movementId);
@@ -222,7 +222,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **movementId** | **int**|  |
+ **movementId** | **int**| Movement identifier |
 
 ### Return type
 

@@ -494,7 +494,7 @@ class MovementApi
      *
      * Cancel a movement.
      *
-     * @param  int $movementId movementId (required)
+     * @param  int $movementId Movement identifier (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -510,7 +510,7 @@ class MovementApi
      *
      * Cancel a movement.
      *
-     * @param  int $movementId (required)
+     * @param  int $movementId Movement identifier (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -593,7 +593,7 @@ class MovementApi
      *
      * Cancel a movement.
      *
-     * @param  int $movementId (required)
+     * @param  int $movementId Movement identifier (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -613,7 +613,7 @@ class MovementApi
      *
      * Cancel a movement.
      *
-     * @param  int $movementId (required)
+     * @param  int $movementId Movement identifier (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -649,7 +649,7 @@ class MovementApi
     /**
      * Create request for operation 'cancelMovement'
      *
-     * @param  int $movementId (required)
+     * @param  int $movementId Movement identifier (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -748,7 +748,7 @@ class MovementApi
      *
      * Delete a movement.
      *
-     * @param  int $movementId movementId (required)
+     * @param  int $movementId Movement identifier (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -764,7 +764,7 @@ class MovementApi
      *
      * Delete a movement.
      *
-     * @param  int $movementId (required)
+     * @param  int $movementId Movement identifier (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -847,7 +847,7 @@ class MovementApi
      *
      * Delete a movement.
      *
-     * @param  int $movementId (required)
+     * @param  int $movementId Movement identifier (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -867,7 +867,7 @@ class MovementApi
      *
      * Delete a movement.
      *
-     * @param  int $movementId (required)
+     * @param  int $movementId Movement identifier (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -903,7 +903,7 @@ class MovementApi
     /**
      * Create request for operation 'deleteMovement'
      *
-     * @param  int $movementId (required)
+     * @param  int $movementId Movement identifier (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1002,7 +1002,7 @@ class MovementApi
      *
      * Get movement status.
      *
-     * @param  int $movementId movementId (required)
+     * @param  int $movementId Movement identifier (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1019,7 +1019,7 @@ class MovementApi
      *
      * Get movement status.
      *
-     * @param  int $movementId (required)
+     * @param  int $movementId Movement identifier (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1187,7 +1187,7 @@ class MovementApi
      *
      * Get movement status.
      *
-     * @param  int $movementId (required)
+     * @param  int $movementId Movement identifier (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1207,7 +1207,7 @@ class MovementApi
      *
      * Get movement status.
      *
-     * @param  int $movementId (required)
+     * @param  int $movementId Movement identifier (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1256,7 +1256,7 @@ class MovementApi
     /**
      * Create request for operation 'getMovementStatus'
      *
-     * @param  int $movementId (required)
+     * @param  int $movementId Movement identifier (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

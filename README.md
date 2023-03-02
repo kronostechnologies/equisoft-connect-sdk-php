@@ -83,11 +83,11 @@ Class | Method | HTTP request | Description
 *DSFApi* | [**getDsfFinancialCenters**](docs/Api/DSFApi.md#getdsffinancialcenters) | **GET** /crm/api/v1/dsf/financialCenters/{financialCenterId} | Get a financial center
 *DSFApi* | [**listDsfFinancialCenters**](docs/Api/DSFApi.md#listdsffinancialcenters) | **GET** /crm/api/v1/dsf/financialCenters | List all financial centers
 *DSFApi* | [**updateDsfFinancialCenter**](docs/Api/DSFApi.md#updatedsffinancialcenter) | **POST** /crm/api/v1/dsf/financialCenters/{financialCenterId} | Update a financial center
-*DatabasesApi* | [**getDatabase**](docs/Api/DatabasesApi.md#getdatabase) | **GET** /crm/api/v1/databases/{uuid} | Get a database
-*DatabasesApi* | [**getUser**](docs/Api/DatabasesApi.md#getuser) | **GET** /crm/api/v1/databases/{uuid}/users/{id} | Get a database&#39;s user
+*DatabasesApi* | [**getDatabase**](docs/Api/DatabasesApi.md#getdatabase) | **GET** /crm/api/v1/databases/{databaseUuid} | Get a database
+*DatabasesApi* | [**getUser**](docs/Api/DatabasesApi.md#getuser) | **GET** /crm/api/v1/databases/{databaseUuid}/users/{userId} | Get a database&#39;s user
 *DatabasesApi* | [**listDatabases**](docs/Api/DatabasesApi.md#listdatabases) | **GET** /crm/api/v1/databases | List all databases
-*DatabasesApi* | [**listUsers**](docs/Api/DatabasesApi.md#listusers) | **GET** /crm/api/v1/databases/{uuid}/users | List database&#39;s users
-*DatabasesApi* | [**updateUser**](docs/Api/DatabasesApi.md#updateuser) | **PATCH** /crm/api/v1/databases/{uuid}/users/{id} | Update a database&#39;s user
+*DatabasesApi* | [**listUsers**](docs/Api/DatabasesApi.md#listusers) | **GET** /crm/api/v1/databases/{databaseUuid}/users | List database&#39;s users
+*DatabasesApi* | [**updateUser**](docs/Api/DatabasesApi.md#updateuser) | **PATCH** /crm/api/v1/databases/{databaseUuid}/users/{userId} | Update a database&#39;s user
 *EventsApi* | [**archiveEventInternalNote**](docs/Api/EventsApi.md#archiveeventinternalnote) | **POST** /crm/api/v1/events/{eventId}/notes/{noteId}/archive | Archive an internal note for an event.
 *EventsApi* | [**createEvent**](docs/Api/EventsApi.md#createevent) | **POST** /crm/api/v1/events | Create an event.
 *EventsApi* | [**createEventInternalNote**](docs/Api/EventsApi.md#createeventinternalnote) | **POST** /crm/api/v1/events/{eventId}/notes | Add an internal note to an event.
