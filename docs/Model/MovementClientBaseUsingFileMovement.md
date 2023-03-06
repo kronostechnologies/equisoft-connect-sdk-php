@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**type** | **string** |  | [default to 'CLIENTBASE_USING_FILE']
 **sourceDatabase** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase**](MovementDatabase.md) |  |
 **sourceUser** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementUser**](MovementUser.md) |  |
 **destinationDatabase** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase**](MovementDatabase.md) |  |
 **destinationUser** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementUser**](MovementUser.md) |  |
-**capsil** | **bool** |  | [optional]
-**univeris** | **bool** |  | [optional]
-**dataphile** | **bool** |  | [optional]
-**type** | **string** |  | [default to 'CLIENTBASE_USING_FILE']
+**capsil** | **bool** | Is Capsil. | [optional]
+**univeris** | **bool** | Is Univeris. Deprecated: Univeris is not supported anymore and will be removed from future versions). | [optional]
+**dataphile** | **bool** | Is Dataphile. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

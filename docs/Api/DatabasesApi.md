@@ -4,20 +4,20 @@ All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getDatabase()**](DatabasesApi.md#getDatabase) | **GET** /crm/api/v1/databases/{uuid} | 
-[**getUser()**](DatabasesApi.md#getUser) | **GET** /crm/api/v1/databases/{uuid}/users/{id} | 
-[**listDatabases()**](DatabasesApi.md#listDatabases) | **GET** /crm/api/v1/databases | 
-[**listUsers()**](DatabasesApi.md#listUsers) | **GET** /crm/api/v1/databases/{uuid}/users | 
-[**updateUser()**](DatabasesApi.md#updateUser) | **PATCH** /crm/api/v1/databases/{uuid}/users/{id} | 
+[**getDatabase()**](DatabasesApi.md#getDatabase) | **GET** /crm/api/v1/databases/{databaseUuid} | Get a database
+[**getUser()**](DatabasesApi.md#getUser) | **GET** /crm/api/v1/databases/{databaseUuid}/users/{userId} | Get a database&#39;s user
+[**listDatabases()**](DatabasesApi.md#listDatabases) | **GET** /crm/api/v1/databases | List all databases
+[**listUsers()**](DatabasesApi.md#listUsers) | **GET** /crm/api/v1/databases/{databaseUuid}/users | List database&#39;s users
+[**updateUser()**](DatabasesApi.md#updateUser) | **PATCH** /crm/api/v1/databases/{databaseUuid}/users/{userId} | Update a database&#39;s user
 
 
 ## `getDatabase()`
 
 ```php
-getDatabase($uuid): \Equisoft\SDK\EquisoftConnect\Model\DatabasesDatabase
+getDatabase($databaseUuid): \Equisoft\SDK\EquisoftConnect\Model\DatabasesDatabase
 ```
 
-
+Get a database
 
 ### Example
 
@@ -36,10 +36,10 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\DatabasesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$uuid = 'uuid_example'; // string
+$databaseUuid = 'databaseUuid_example'; // string | Database unique identifier.
 
 try {
-    $result = $apiInstance->getDatabase($uuid);
+    $result = $apiInstance->getDatabase($databaseUuid);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DatabasesApi->getDatabase: ', $e->getMessage(), PHP_EOL;
@@ -50,7 +50,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uuid** | **string**|  |
+ **databaseUuid** | **string**| Database unique identifier. |
 
 ### Return type
 
@@ -72,10 +72,10 @@ Name | Type | Description  | Notes
 ## `getUser()`
 
 ```php
-getUser($uuid, $id): \Equisoft\SDK\EquisoftConnect\Model\UsersUser
+getUser($databaseUuid, $userId): \Equisoft\SDK\EquisoftConnect\Model\UsersUser
 ```
 
-
+Get a database's user
 
 ### Example
 
@@ -94,11 +94,11 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\DatabasesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$uuid = 'uuid_example'; // string
-$id = 56; // int
+$databaseUuid = 'databaseUuid_example'; // string | Database unique identifier.
+$userId = 56; // int | User identifier.
 
 try {
-    $result = $apiInstance->getUser($uuid, $id);
+    $result = $apiInstance->getUser($databaseUuid, $userId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DatabasesApi->getUser: ', $e->getMessage(), PHP_EOL;
@@ -109,8 +109,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uuid** | **string**|  |
- **id** | **int**|  |
+ **databaseUuid** | **string**| Database unique identifier. |
+ **userId** | **int**| User identifier. |
 
 ### Return type
 
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 listDatabases($organizationUuid, $databaseName): \Equisoft\SDK\EquisoftConnect\Model\DatabasesListDatabasesResponse
 ```
 
-
+List all databases
 
 ### Example
 
@@ -154,8 +154,8 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\DatabasesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$organizationUuid = 'organizationUuid_example'; // string
-$databaseName = 'databaseName_example'; // string
+$organizationUuid = 'organizationUuid_example'; // string | Organization unique identifier.
+$databaseName = 'databaseName_example'; // string | Database name.
 
 try {
     $result = $apiInstance->listDatabases($organizationUuid, $databaseName);
@@ -169,8 +169,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **organizationUuid** | **string**|  | [optional]
- **databaseName** | **string**|  | [optional]
+ **organizationUuid** | **string**| Organization unique identifier. | [optional]
+ **databaseName** | **string**| Database name. | [optional]
 
 ### Return type
 
@@ -192,10 +192,10 @@ Name | Type | Description  | Notes
 ## `listUsers()`
 
 ```php
-listUsers($uuid): \Equisoft\SDK\EquisoftConnect\Model\UsersListUsersResponse
+listUsers($databaseUuid): \Equisoft\SDK\EquisoftConnect\Model\UsersListUsersResponse
 ```
 
-
+List database's users
 
 ### Example
 
@@ -214,10 +214,10 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\DatabasesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$uuid = 'uuid_example'; // string
+$databaseUuid = 'databaseUuid_example'; // string | Database unique identifier.
 
 try {
-    $result = $apiInstance->listUsers($uuid);
+    $result = $apiInstance->listUsers($databaseUuid);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DatabasesApi->listUsers: ', $e->getMessage(), PHP_EOL;
@@ -228,7 +228,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uuid** | **string**|  |
+ **databaseUuid** | **string**| Database unique identifier. |
 
 ### Return type
 
@@ -250,10 +250,10 @@ Name | Type | Description  | Notes
 ## `updateUser()`
 
 ```php
-updateUser($uuid, $id, $usersUpdateUserPayload)
+updateUser($databaseUuid, $userId, $usersUpdateUserPayload)
 ```
 
-
+Update a database's user
 
 ### Example
 
@@ -272,12 +272,12 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\DatabasesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$uuid = 'uuid_example'; // string
-$id = 56; // int
+$databaseUuid = 'databaseUuid_example'; // string | Database unique identifier.
+$userId = 56; // int | User identifier.
 $usersUpdateUserPayload = new \Equisoft\SDK\EquisoftConnect\Model\UsersUpdateUserPayload(); // \Equisoft\SDK\EquisoftConnect\Model\UsersUpdateUserPayload
 
 try {
-    $apiInstance->updateUser($uuid, $id, $usersUpdateUserPayload);
+    $apiInstance->updateUser($databaseUuid, $userId, $usersUpdateUserPayload);
 } catch (Exception $e) {
     echo 'Exception when calling DatabasesApi->updateUser: ', $e->getMessage(), PHP_EOL;
 }
@@ -287,8 +287,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uuid** | **string**|  |
- **id** | **int**|  |
+ **databaseUuid** | **string**| Database unique identifier. |
+ **userId** | **int**| User identifier. |
  **usersUpdateUserPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\UsersUpdateUserPayload**](../Model/UsersUpdateUserPayload.md)|  |
 
 ### Return type

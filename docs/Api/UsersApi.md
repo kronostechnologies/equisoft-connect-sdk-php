@@ -33,7 +33,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\UsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
+$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282.
 
 try {
     $result = $apiInstance->getCurrentUser($acceptLanguage);
@@ -47,7 +47,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 | [optional]
+ **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
 
 ### Return type
 

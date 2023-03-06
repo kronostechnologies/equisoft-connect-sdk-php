@@ -222,7 +222,7 @@ class MovementDistributionList implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets id
      *
-     * @param int|null $id id
+     * @param int|null $id Unique numerical identifier.
      *
      * @return self
      */
@@ -246,7 +246,7 @@ class MovementDistributionList implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets label
      *
-     * @param string|null $label label
+     * @param string|null $label Label.
      *
      * @return self
      */

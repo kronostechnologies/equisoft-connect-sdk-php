@@ -118,6 +118,8 @@ class DSFApi
     /**
      * Operation createDsfFinancialCenter
      *
+     * Create a financial center
+     *
      * @param  \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload $dsfFinancialCenterPayload dsfFinancialCenterPayload (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
@@ -132,6 +134,8 @@ class DSFApi
 
     /**
      * Operation createDsfFinancialCenterWithHttpInfo
+     *
+     * Create a financial center
      *
      * @param  \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload $dsfFinancialCenterPayload (required)
      *
@@ -276,6 +280,8 @@ class DSFApi
     /**
      * Operation createDsfFinancialCenterAsync
      *
+     * Create a financial center
+     *
      * @param  \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload $dsfFinancialCenterPayload (required)
      *
      * @throws \InvalidArgumentException
@@ -293,6 +299,8 @@ class DSFApi
 
     /**
      * Operation createDsfFinancialCenterAsyncWithHttpInfo
+     *
+     * Create a financial center
      *
      * @param  \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload $dsfFinancialCenterPayload (required)
      *
@@ -438,7 +446,9 @@ class DSFApi
     /**
      * Operation deleteDsfFinancialCenter
      *
-     * @param  int $financialCenterId financialCenterId (required)
+     * Delete a financial center
+     *
+     * @param  int $financialCenterId Financial center identifier. (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -452,7 +462,9 @@ class DSFApi
     /**
      * Operation deleteDsfFinancialCenterWithHttpInfo
      *
-     * @param  int $financialCenterId (required)
+     * Delete a financial center
+     *
+     * @param  int $financialCenterId Financial center identifier. (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -525,7 +537,9 @@ class DSFApi
     /**
      * Operation deleteDsfFinancialCenterAsync
      *
-     * @param  int $financialCenterId (required)
+     * Delete a financial center
+     *
+     * @param  int $financialCenterId Financial center identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -543,7 +557,9 @@ class DSFApi
     /**
      * Operation deleteDsfFinancialCenterAsyncWithHttpInfo
      *
-     * @param  int $financialCenterId (required)
+     * Delete a financial center
+     *
+     * @param  int $financialCenterId Financial center identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -579,7 +595,7 @@ class DSFApi
     /**
      * Create request for operation 'deleteDsfFinancialCenter'
      *
-     * @param  int $financialCenterId (required)
+     * @param  int $financialCenterId Financial center identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -676,7 +692,9 @@ class DSFApi
     /**
      * Operation getDsfFinancialCenters
      *
-     * @param  int $financialCenterId financialCenterId (required)
+     * Get a financial center
+     *
+     * @param  int $financialCenterId Financial center identifier. (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -691,7 +709,9 @@ class DSFApi
     /**
      * Operation getDsfFinancialCentersWithHttpInfo
      *
-     * @param  int $financialCenterId (required)
+     * Get a financial center
+     *
+     * @param  int $financialCenterId Financial center identifier. (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -857,7 +877,9 @@ class DSFApi
     /**
      * Operation getDsfFinancialCentersAsync
      *
-     * @param  int $financialCenterId (required)
+     * Get a financial center
+     *
+     * @param  int $financialCenterId Financial center identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -875,7 +897,9 @@ class DSFApi
     /**
      * Operation getDsfFinancialCentersAsyncWithHttpInfo
      *
-     * @param  int $financialCenterId (required)
+     * Get a financial center
+     *
+     * @param  int $financialCenterId Financial center identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -924,7 +948,7 @@ class DSFApi
     /**
      * Create request for operation 'getDsfFinancialCenters'
      *
-     * @param  int $financialCenterId (required)
+     * @param  int $financialCenterId Financial center identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1021,6 +1045,8 @@ class DSFApi
     /**
      * Operation listDsfFinancialCenters
      *
+     * List all financial centers
+     *
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1034,6 +1060,8 @@ class DSFApi
 
     /**
      * Operation listDsfFinancialCentersWithHttpInfo
+     *
+     * List all financial centers
      *
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
@@ -1177,6 +1205,8 @@ class DSFApi
     /**
      * Operation listDsfFinancialCentersAsync
      *
+     * List all financial centers
+     *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1193,6 +1223,8 @@ class DSFApi
 
     /**
      * Operation listDsfFinancialCentersAsyncWithHttpInfo
+     *
+     * List all financial centers
      *
      *
      * @throws \InvalidArgumentException
@@ -1324,7 +1356,9 @@ class DSFApi
     /**
      * Operation updateDsfFinancialCenter
      *
-     * @param  int $financialCenterId financialCenterId (required)
+     * Update a financial center
+     *
+     * @param  int $financialCenterId Financial center identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload $dsfFinancialCenterPayload dsfFinancialCenterPayload (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
@@ -1340,7 +1374,9 @@ class DSFApi
     /**
      * Operation updateDsfFinancialCenterWithHttpInfo
      *
-     * @param  int $financialCenterId (required)
+     * Update a financial center
+     *
+     * @param  int $financialCenterId Financial center identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload $dsfFinancialCenterPayload (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
@@ -1507,7 +1543,9 @@ class DSFApi
     /**
      * Operation updateDsfFinancialCenterAsync
      *
-     * @param  int $financialCenterId (required)
+     * Update a financial center
+     *
+     * @param  int $financialCenterId Financial center identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload $dsfFinancialCenterPayload (required)
      *
      * @throws \InvalidArgumentException
@@ -1526,7 +1564,9 @@ class DSFApi
     /**
      * Operation updateDsfFinancialCenterAsyncWithHttpInfo
      *
-     * @param  int $financialCenterId (required)
+     * Update a financial center
+     *
+     * @param  int $financialCenterId Financial center identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload $dsfFinancialCenterPayload (required)
      *
      * @throws \InvalidArgumentException
@@ -1576,7 +1616,7 @@ class DSFApi
     /**
      * Create request for operation 'updateDsfFinancialCenter'
      *
-     * @param  int $financialCenterId (required)
+     * @param  int $financialCenterId Financial center identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload $dsfFinancialCenterPayload (required)
      *
      * @throws \InvalidArgumentException

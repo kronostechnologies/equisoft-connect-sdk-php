@@ -498,7 +498,7 @@ class ContactContactAddress implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets dateSince
      *
-     * @param \DateTime|null $dateSince dateSince
+     * @param \DateTime|null $dateSince Date since
      *
      * @return self
      */

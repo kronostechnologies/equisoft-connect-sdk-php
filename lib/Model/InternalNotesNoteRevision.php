@@ -58,7 +58,7 @@ class InternalNotesNoteRevision implements ModelInterface, ArrayAccess, \JsonSer
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'type' => 'string',
+        'type' => '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteRevisionType',
         'content' => 'string',
         'createdAt' => '\DateTime'
     ];
@@ -257,7 +257,7 @@ class InternalNotesNoteRevision implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets type
      *
-     * @return string|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteRevisionType|null
      */
     public function getType()
     {
@@ -267,7 +267,7 @@ class InternalNotesNoteRevision implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets type
      *
-     * @param string|null $type type
+     * @param \Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteRevisionType|null $type type
      *
      * @return self
      */
@@ -291,7 +291,7 @@ class InternalNotesNoteRevision implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets content
      *
-     * @param string $content Note content
+     * @param string $content Note content.
      *
      * @return self
      */
@@ -315,7 +315,7 @@ class InternalNotesNoteRevision implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets createdAt
      *
-     * @param \DateTime $createdAt createdAt
+     * @param \DateTime $createdAt Created at.
      *
      * @return self
      */

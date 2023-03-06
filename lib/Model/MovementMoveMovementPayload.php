@@ -55,10 +55,10 @@ class MovementMoveMovementPayload extends MovementMovementPayload
       * @var string[]
       */
     protected static $openAPITypes = [
+        'type' => 'string',
         'sourceDatabase' => 'string',
         'destinationDatabase' => 'string',
-        'users' => 'string[]',
-        'type' => 'string'
+        'users' => 'string[]'
     ];
 
     /**
@@ -69,10 +69,10 @@ class MovementMoveMovementPayload extends MovementMovementPayload
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'type' => null,
         'sourceDatabase' => null,
         'destinationDatabase' => null,
-        'users' => null,
-        'type' => null
+        'users' => null
     ];
 
     /**
@@ -102,10 +102,10 @@ class MovementMoveMovementPayload extends MovementMovementPayload
      * @var string[]
      */
     protected static $attributeMap = [
+        'type' => 'type',
         'sourceDatabase' => 'sourceDatabase',
         'destinationDatabase' => 'destinationDatabase',
-        'users' => 'users',
-        'type' => 'type'
+        'users' => 'users'
     ];
 
     /**
@@ -114,10 +114,10 @@ class MovementMoveMovementPayload extends MovementMovementPayload
      * @var string[]
      */
     protected static $setters = [
+        'type' => 'setType',
         'sourceDatabase' => 'setSourceDatabase',
         'destinationDatabase' => 'setDestinationDatabase',
-        'users' => 'setUsers',
-        'type' => 'setType'
+        'users' => 'setUsers'
     ];
 
     /**
@@ -126,10 +126,10 @@ class MovementMoveMovementPayload extends MovementMovementPayload
      * @var string[]
      */
     protected static $getters = [
+        'type' => 'getType',
         'sourceDatabase' => 'getSourceDatabase',
         'destinationDatabase' => 'getDestinationDatabase',
-        'users' => 'getUsers',
-        'type' => 'getType'
+        'users' => 'getUsers'
     ];
 
     /**
@@ -174,6 +174,7 @@ class MovementMoveMovementPayload extends MovementMovementPayload
     }
 
     public const TYPE_MOVE = 'MOVE';
+    public const TYPE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
 
     /**
      * Gets allowable values of the enum
@@ -184,6 +185,7 @@ class MovementMoveMovementPayload extends MovementMovementPayload
     {
         return [
             self::TYPE_MOVE,
+            self::TYPE_UNKNOWN_DEFAULT_OPEN_API,
         ];
     }
 
@@ -198,10 +200,10 @@ class MovementMoveMovementPayload extends MovementMovementPayload
     {
         parent::__construct($data);
 
+        $this->container['type'] = $data['type'] ?? 'MOVE';
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['destinationDatabase'] = $data['destinationDatabase'] ?? null;
         $this->container['users'] = $data['users'] ?? null;
-        $this->container['type'] = $data['type'] ?? 'MOVE';
     }
 
     /**
@@ -213,15 +215,6 @@ class MovementMoveMovementPayload extends MovementMovementPayload
     {
         $invalidProperties = parent::listInvalidProperties();
 
-        if ($this->container['sourceDatabase'] === null) {
-            $invalidProperties[] = "'sourceDatabase' can't be null";
-        }
-        if ($this->container['destinationDatabase'] === null) {
-            $invalidProperties[] = "'destinationDatabase' can't be null";
-        }
-        if ($this->container['users'] === null) {
-            $invalidProperties[] = "'users' can't be null";
-        }
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
         }
@@ -234,6 +227,15 @@ class MovementMoveMovementPayload extends MovementMovementPayload
             );
         }
 
+        if ($this->container['sourceDatabase'] === null) {
+            $invalidProperties[] = "'sourceDatabase' can't be null";
+        }
+        if ($this->container['destinationDatabase'] === null) {
+            $invalidProperties[] = "'destinationDatabase' can't be null";
+        }
+        if ($this->container['users'] === null) {
+            $invalidProperties[] = "'users' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -248,78 +250,6 @@ class MovementMoveMovementPayload extends MovementMovementPayload
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets sourceDatabase
-     *
-     * @return string
-     */
-    public function getSourceDatabase()
-    {
-        return $this->container['sourceDatabase'];
-    }
-
-    /**
-     * Sets sourceDatabase
-     *
-     * @param string $sourceDatabase sourceDatabase
-     *
-     * @return self
-     */
-    public function setSourceDatabase($sourceDatabase)
-    {
-        $this->container['sourceDatabase'] = $sourceDatabase;
-
-        return $this;
-    }
-
-    /**
-     * Gets destinationDatabase
-     *
-     * @return string
-     */
-    public function getDestinationDatabase()
-    {
-        return $this->container['destinationDatabase'];
-    }
-
-    /**
-     * Sets destinationDatabase
-     *
-     * @param string $destinationDatabase destinationDatabase
-     *
-     * @return self
-     */
-    public function setDestinationDatabase($destinationDatabase)
-    {
-        $this->container['destinationDatabase'] = $destinationDatabase;
-
-        return $this;
-    }
-
-    /**
-     * Gets users
-     *
-     * @return string[]
-     */
-    public function getUsers()
-    {
-        return $this->container['users'];
-    }
-
-    /**
-     * Sets users
-     *
-     * @param string[] $users users
-     *
-     * @return self
-     */
-    public function setUsers($users)
-    {
-        $this->container['users'] = $users;
-
-        return $this;
-    }
 
     /**
      * Gets type
@@ -351,6 +281,78 @@ class MovementMoveMovementPayload extends MovementMovementPayload
             );
         }
         $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets sourceDatabase
+     *
+     * @return string
+     */
+    public function getSourceDatabase()
+    {
+        return $this->container['sourceDatabase'];
+    }
+
+    /**
+     * Sets sourceDatabase
+     *
+     * @param string $sourceDatabase Source database full name.
+     *
+     * @return self
+     */
+    public function setSourceDatabase($sourceDatabase)
+    {
+        $this->container['sourceDatabase'] = $sourceDatabase;
+
+        return $this;
+    }
+
+    /**
+     * Gets destinationDatabase
+     *
+     * @return string
+     */
+    public function getDestinationDatabase()
+    {
+        return $this->container['destinationDatabase'];
+    }
+
+    /**
+     * Sets destinationDatabase
+     *
+     * @param string $destinationDatabase Destination database full name.
+     *
+     * @return self
+     */
+    public function setDestinationDatabase($destinationDatabase)
+    {
+        $this->container['destinationDatabase'] = $destinationDatabase;
+
+        return $this;
+    }
+
+    /**
+     * Gets users
+     *
+     * @return string[]
+     */
+    public function getUsers()
+    {
+        return $this->container['users'];
+    }
+
+    /**
+     * Sets users
+     *
+     * @param string[] $users List of users id.
+     *
+     * @return self
+     */
+    public function setUsers($users)
+    {
+        $this->container['users'] = $users;
 
         return $this;
     }

@@ -8,11 +8,11 @@ Name | Type | Description | Notes
 **uuid** | **string** | Uuid |
 **databaseName** | **string** | Database name |
 **displayName** | **string** | Display name |
-**profileName** | **string** | Profile |
+**profileName** | **string** | Profile name |
 **state** | **string** | Database state |
-**datagatewayEnabled** | **bool** | Datagateway Enabled |
+**datagatewayEnabled** | **bool** | Is Datagateway Enabled |
 **isMultiUser** | **bool** | Is Multi User |
-**equisoftPlanEnabled** | **bool** | Is Multi User |
+**equisoftPlanEnabled** | **bool** | Is Equisoft Plan Enabled | [optional]
 **distributorCode** | **string** | Distributor Code | [optional]
 **chargebeeCustomerId** | **string** | Chargebee Customer Id | [optional]
 **organizationUuid** | **string** | Organization uuid | [optional]

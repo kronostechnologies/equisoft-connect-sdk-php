@@ -55,14 +55,14 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
       * @var string[]
       */
     protected static $openAPITypes = [
+        'type' => 'string',
         'sourceDatabase' => 'string',
         'sourceUser' => 'string',
         'sourceDistributionList' => 'string',
         'destinationDatabase' => 'string',
         'destinationUser' => 'string',
         'datagatewayAccessMappings' => 'array<string,string>',
-        'transferOption' => 'string',
-        'type' => 'string'
+        'transferOption' => '\Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption'
     ];
 
     /**
@@ -73,14 +73,14 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'type' => null,
         'sourceDatabase' => null,
         'sourceUser' => null,
         'sourceDistributionList' => null,
         'destinationDatabase' => null,
         'destinationUser' => null,
         'datagatewayAccessMappings' => null,
-        'transferOption' => null,
-        'type' => null
+        'transferOption' => null
     ];
 
     /**
@@ -110,14 +110,14 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
      * @var string[]
      */
     protected static $attributeMap = [
+        'type' => 'type',
         'sourceDatabase' => 'sourceDatabase',
         'sourceUser' => 'sourceUser',
         'sourceDistributionList' => 'sourceDistributionList',
         'destinationDatabase' => 'destinationDatabase',
         'destinationUser' => 'destinationUser',
         'datagatewayAccessMappings' => 'datagatewayAccessMappings',
-        'transferOption' => 'transferOption',
-        'type' => 'type'
+        'transferOption' => 'transferOption'
     ];
 
     /**
@@ -126,14 +126,14 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
      * @var string[]
      */
     protected static $setters = [
+        'type' => 'setType',
         'sourceDatabase' => 'setSourceDatabase',
         'sourceUser' => 'setSourceUser',
         'sourceDistributionList' => 'setSourceDistributionList',
         'destinationDatabase' => 'setDestinationDatabase',
         'destinationUser' => 'setDestinationUser',
         'datagatewayAccessMappings' => 'setDatagatewayAccessMappings',
-        'transferOption' => 'setTransferOption',
-        'type' => 'setType'
+        'transferOption' => 'setTransferOption'
     ];
 
     /**
@@ -142,14 +142,14 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
      * @var string[]
      */
     protected static $getters = [
+        'type' => 'getType',
         'sourceDatabase' => 'getSourceDatabase',
         'sourceUser' => 'getSourceUser',
         'sourceDistributionList' => 'getSourceDistributionList',
         'destinationDatabase' => 'getDestinationDatabase',
         'destinationUser' => 'getDestinationUser',
         'datagatewayAccessMappings' => 'getDatagatewayAccessMappings',
-        'transferOption' => 'getTransferOption',
-        'type' => 'getType'
+        'transferOption' => 'getTransferOption'
     ];
 
     /**
@@ -194,6 +194,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
     }
 
     public const TYPE_CLIENTBASE_USING_DISTLIST = 'CLIENTBASE_USING_DISTLIST';
+    public const TYPE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
 
     /**
      * Gets allowable values of the enum
@@ -204,6 +205,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
     {
         return [
             self::TYPE_CLIENTBASE_USING_DISTLIST,
+            self::TYPE_UNKNOWN_DEFAULT_OPEN_API,
         ];
     }
 
@@ -218,6 +220,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
     {
         parent::__construct($data);
 
+        $this->container['type'] = $data['type'] ?? 'CLIENTBASE_USING_DISTLIST';
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['sourceUser'] = $data['sourceUser'] ?? null;
         $this->container['sourceDistributionList'] = $data['sourceDistributionList'] ?? null;
@@ -225,7 +228,6 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
         $this->container['destinationUser'] = $data['destinationUser'] ?? null;
         $this->container['datagatewayAccessMappings'] = $data['datagatewayAccessMappings'] ?? null;
         $this->container['transferOption'] = $data['transferOption'] ?? null;
-        $this->container['type'] = $data['type'] ?? 'CLIENTBASE_USING_DISTLIST';
     }
 
     /**
@@ -236,6 +238,18 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
     public function listInvalidProperties()
     {
         $invalidProperties = parent::listInvalidProperties();
+
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'type', must be one of '%s'",
+                $this->container['type'],
+                implode("', '", $allowedValues)
+            );
+        }
 
         if ($this->container['sourceDatabase'] === null) {
             $invalidProperties[] = "'sourceDatabase' can't be null";
@@ -252,18 +266,6 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
         if ($this->container['transferOption'] === null) {
             $invalidProperties[] = "'transferOption' can't be null";
         }
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'type', must be one of '%s'",
-                $this->container['type'],
-                implode("', '", $allowedValues)
-            );
-        }
-
         return $invalidProperties;
     }
 
@@ -278,174 +280,6 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets sourceDatabase
-     *
-     * @return string
-     */
-    public function getSourceDatabase()
-    {
-        return $this->container['sourceDatabase'];
-    }
-
-    /**
-     * Sets sourceDatabase
-     *
-     * @param string $sourceDatabase sourceDatabase
-     *
-     * @return self
-     */
-    public function setSourceDatabase($sourceDatabase)
-    {
-        $this->container['sourceDatabase'] = $sourceDatabase;
-
-        return $this;
-    }
-
-    /**
-     * Gets sourceUser
-     *
-     * @return string
-     */
-    public function getSourceUser()
-    {
-        return $this->container['sourceUser'];
-    }
-
-    /**
-     * Sets sourceUser
-     *
-     * @param string $sourceUser sourceUser
-     *
-     * @return self
-     */
-    public function setSourceUser($sourceUser)
-    {
-        $this->container['sourceUser'] = $sourceUser;
-
-        return $this;
-    }
-
-    /**
-     * Gets sourceDistributionList
-     *
-     * @return string|null
-     */
-    public function getSourceDistributionList()
-    {
-        return $this->container['sourceDistributionList'];
-    }
-
-    /**
-     * Sets sourceDistributionList
-     *
-     * @param string|null $sourceDistributionList sourceDistributionList
-     *
-     * @return self
-     */
-    public function setSourceDistributionList($sourceDistributionList)
-    {
-        $this->container['sourceDistributionList'] = $sourceDistributionList;
-
-        return $this;
-    }
-
-    /**
-     * Gets destinationDatabase
-     *
-     * @return string
-     */
-    public function getDestinationDatabase()
-    {
-        return $this->container['destinationDatabase'];
-    }
-
-    /**
-     * Sets destinationDatabase
-     *
-     * @param string $destinationDatabase destinationDatabase
-     *
-     * @return self
-     */
-    public function setDestinationDatabase($destinationDatabase)
-    {
-        $this->container['destinationDatabase'] = $destinationDatabase;
-
-        return $this;
-    }
-
-    /**
-     * Gets destinationUser
-     *
-     * @return string
-     */
-    public function getDestinationUser()
-    {
-        return $this->container['destinationUser'];
-    }
-
-    /**
-     * Sets destinationUser
-     *
-     * @param string $destinationUser destinationUser
-     *
-     * @return self
-     */
-    public function setDestinationUser($destinationUser)
-    {
-        $this->container['destinationUser'] = $destinationUser;
-
-        return $this;
-    }
-
-    /**
-     * Gets datagatewayAccessMappings
-     *
-     * @return array<string,string>|null
-     */
-    public function getDatagatewayAccessMappings()
-    {
-        return $this->container['datagatewayAccessMappings'];
-    }
-
-    /**
-     * Sets datagatewayAccessMappings
-     *
-     * @param array<string,string>|null $datagatewayAccessMappings datagatewayAccessMappings
-     *
-     * @return self
-     */
-    public function setDatagatewayAccessMappings($datagatewayAccessMappings)
-    {
-        $this->container['datagatewayAccessMappings'] = $datagatewayAccessMappings;
-
-        return $this;
-    }
-
-    /**
-     * Gets transferOption
-     *
-     * @return string
-     */
-    public function getTransferOption()
-    {
-        return $this->container['transferOption'];
-    }
-
-    /**
-     * Sets transferOption
-     *
-     * @param string $transferOption transferOption
-     *
-     * @return self
-     */
-    public function setTransferOption($transferOption)
-    {
-        $this->container['transferOption'] = $transferOption;
-
-        return $this;
-    }
 
     /**
      * Gets type
@@ -477,6 +311,174 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
             );
         }
         $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets sourceDatabase
+     *
+     * @return string
+     */
+    public function getSourceDatabase()
+    {
+        return $this->container['sourceDatabase'];
+    }
+
+    /**
+     * Sets sourceDatabase
+     *
+     * @param string $sourceDatabase Source database full name.
+     *
+     * @return self
+     */
+    public function setSourceDatabase($sourceDatabase)
+    {
+        $this->container['sourceDatabase'] = $sourceDatabase;
+
+        return $this;
+    }
+
+    /**
+     * Gets sourceUser
+     *
+     * @return string
+     */
+    public function getSourceUser()
+    {
+        return $this->container['sourceUser'];
+    }
+
+    /**
+     * Sets sourceUser
+     *
+     * @param string $sourceUser Source user id.
+     *
+     * @return self
+     */
+    public function setSourceUser($sourceUser)
+    {
+        $this->container['sourceUser'] = $sourceUser;
+
+        return $this;
+    }
+
+    /**
+     * Gets sourceDistributionList
+     *
+     * @return string|null
+     */
+    public function getSourceDistributionList()
+    {
+        return $this->container['sourceDistributionList'];
+    }
+
+    /**
+     * Sets sourceDistributionList
+     *
+     * @param string|null $sourceDistributionList Source distribution list.
+     *
+     * @return self
+     */
+    public function setSourceDistributionList($sourceDistributionList)
+    {
+        $this->container['sourceDistributionList'] = $sourceDistributionList;
+
+        return $this;
+    }
+
+    /**
+     * Gets destinationDatabase
+     *
+     * @return string
+     */
+    public function getDestinationDatabase()
+    {
+        return $this->container['destinationDatabase'];
+    }
+
+    /**
+     * Sets destinationDatabase
+     *
+     * @param string $destinationDatabase Destination database full name.
+     *
+     * @return self
+     */
+    public function setDestinationDatabase($destinationDatabase)
+    {
+        $this->container['destinationDatabase'] = $destinationDatabase;
+
+        return $this;
+    }
+
+    /**
+     * Gets destinationUser
+     *
+     * @return string
+     */
+    public function getDestinationUser()
+    {
+        return $this->container['destinationUser'];
+    }
+
+    /**
+     * Sets destinationUser
+     *
+     * @param string $destinationUser Destination user id.
+     *
+     * @return self
+     */
+    public function setDestinationUser($destinationUser)
+    {
+        $this->container['destinationUser'] = $destinationUser;
+
+        return $this;
+    }
+
+    /**
+     * Gets datagatewayAccessMappings
+     *
+     * @return array<string,string>|null
+     */
+    public function getDatagatewayAccessMappings()
+    {
+        return $this->container['datagatewayAccessMappings'];
+    }
+
+    /**
+     * Sets datagatewayAccessMappings
+     *
+     * @param array<string,string>|null $datagatewayAccessMappings Data gateway access mapping.
+     *
+     * @return self
+     */
+    public function setDatagatewayAccessMappings($datagatewayAccessMappings)
+    {
+        $this->container['datagatewayAccessMappings'] = $datagatewayAccessMappings;
+
+        return $this;
+    }
+
+    /**
+     * Gets transferOption
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption
+     */
+    public function getTransferOption()
+    {
+        return $this->container['transferOption'];
+    }
+
+    /**
+     * Sets transferOption
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption $transferOption transferOption
+     *
+     * @return self
+     */
+    public function setTransferOption($transferOption)
+    {
+        $this->container['transferOption'] = $transferOption;
 
         return $this;
     }

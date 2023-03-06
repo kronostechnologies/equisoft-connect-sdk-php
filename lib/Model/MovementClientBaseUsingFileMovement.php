@@ -55,14 +55,14 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
       * @var string[]
       */
     protected static $openAPITypes = [
+        'type' => 'string',
         'sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
         'sourceUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
         'destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
         'destinationUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
         'capsil' => 'bool',
         'univeris' => 'bool',
-        'dataphile' => 'bool',
-        'type' => 'string'
+        'dataphile' => 'bool'
     ];
 
     /**
@@ -73,14 +73,14 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'type' => null,
         'sourceDatabase' => null,
         'sourceUser' => null,
         'destinationDatabase' => null,
         'destinationUser' => null,
         'capsil' => null,
         'univeris' => null,
-        'dataphile' => null,
-        'type' => null
+        'dataphile' => null
     ];
 
     /**
@@ -110,14 +110,14 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
      * @var string[]
      */
     protected static $attributeMap = [
+        'type' => 'type',
         'sourceDatabase' => 'sourceDatabase',
         'sourceUser' => 'sourceUser',
         'destinationDatabase' => 'destinationDatabase',
         'destinationUser' => 'destinationUser',
         'capsil' => 'capsil',
         'univeris' => 'univeris',
-        'dataphile' => 'dataphile',
-        'type' => 'type'
+        'dataphile' => 'dataphile'
     ];
 
     /**
@@ -126,14 +126,14 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
      * @var string[]
      */
     protected static $setters = [
+        'type' => 'setType',
         'sourceDatabase' => 'setSourceDatabase',
         'sourceUser' => 'setSourceUser',
         'destinationDatabase' => 'setDestinationDatabase',
         'destinationUser' => 'setDestinationUser',
         'capsil' => 'setCapsil',
         'univeris' => 'setUniveris',
-        'dataphile' => 'setDataphile',
-        'type' => 'setType'
+        'dataphile' => 'setDataphile'
     ];
 
     /**
@@ -142,14 +142,14 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
      * @var string[]
      */
     protected static $getters = [
+        'type' => 'getType',
         'sourceDatabase' => 'getSourceDatabase',
         'sourceUser' => 'getSourceUser',
         'destinationDatabase' => 'getDestinationDatabase',
         'destinationUser' => 'getDestinationUser',
         'capsil' => 'getCapsil',
         'univeris' => 'getUniveris',
-        'dataphile' => 'getDataphile',
-        'type' => 'getType'
+        'dataphile' => 'getDataphile'
     ];
 
     /**
@@ -194,6 +194,7 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
     }
 
     public const TYPE_CLIENTBASE_USING_FILE = 'CLIENTBASE_USING_FILE';
+    public const TYPE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
 
     /**
      * Gets allowable values of the enum
@@ -204,6 +205,7 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
     {
         return [
             self::TYPE_CLIENTBASE_USING_FILE,
+            self::TYPE_UNKNOWN_DEFAULT_OPEN_API,
         ];
     }
 
@@ -218,6 +220,7 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
     {
         parent::__construct($data);
 
+        $this->container['type'] = $data['type'] ?? 'CLIENTBASE_USING_FILE';
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['sourceUser'] = $data['sourceUser'] ?? null;
         $this->container['destinationDatabase'] = $data['destinationDatabase'] ?? null;
@@ -225,7 +228,6 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
         $this->container['capsil'] = $data['capsil'] ?? null;
         $this->container['univeris'] = $data['univeris'] ?? null;
         $this->container['dataphile'] = $data['dataphile'] ?? null;
-        $this->container['type'] = $data['type'] ?? 'CLIENTBASE_USING_FILE';
     }
 
     /**
@@ -236,6 +238,18 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
     public function listInvalidProperties()
     {
         $invalidProperties = parent::listInvalidProperties();
+
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'type', must be one of '%s'",
+                $this->container['type'],
+                implode("', '", $allowedValues)
+            );
+        }
 
         if ($this->container['sourceDatabase'] === null) {
             $invalidProperties[] = "'sourceDatabase' can't be null";
@@ -249,18 +263,6 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
         if ($this->container['destinationUser'] === null) {
             $invalidProperties[] = "'destinationUser' can't be null";
         }
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'type', must be one of '%s'",
-                $this->container['type'],
-                implode("', '", $allowedValues)
-            );
-        }
-
         return $invalidProperties;
     }
 
@@ -275,6 +277,40 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets type
+     *
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param string $type type
+     *
+     * @return self
+     */
+    public function setType($type)
+    {
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!in_array($type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'type', must be one of '%s'",
+                    $type,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['type'] = $type;
+
+        return $this;
+    }
 
     /**
      * Gets sourceDatabase
@@ -385,7 +421,7 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
     /**
      * Sets capsil
      *
-     * @param bool|null $capsil capsil
+     * @param bool|null $capsil Is Capsil.
      *
      * @return self
      */
@@ -409,7 +445,7 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
     /**
      * Sets univeris
      *
-     * @param bool|null $univeris univeris
+     * @param bool|null $univeris Is Univeris. Deprecated: Univeris is not supported anymore and will be removed from future versions).
      *
      * @return self
      */
@@ -433,47 +469,13 @@ class MovementClientBaseUsingFileMovement extends MovementMovement
     /**
      * Sets dataphile
      *
-     * @param bool|null $dataphile dataphile
+     * @param bool|null $dataphile Is Dataphile.
      *
      * @return self
      */
     public function setDataphile($dataphile)
     {
         $this->container['dataphile'] = $dataphile;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     *
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param string $type type
-     *
-     * @return self
-     */
-    public function setType($type)
-    {
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!in_array($type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'type', must be one of '%s'",
-                    $type,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['type'] = $type;
 
         return $this;
     }

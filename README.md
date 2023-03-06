@@ -60,7 +60,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\ContactsApi(
     $config
 );
 $contactUuid = 'contactUuid_example'; // string | Contact unique identifier.
-$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282
+$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282.
 
 try {
     $result = $apiInstance->getByUuid($contactUuid, $acceptLanguage);
@@ -78,31 +78,32 @@ All URIs are relative to *http://localhost*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *ContactsApi* | [**getByUuid**](docs/Api/ContactsApi.md#getbyuuid) | **GET** /crm/api/v1/contacts/{contactUuid} | Return the detail of a contact.
-*DSFApi* | [**createDsfFinancialCenter**](docs/Api/DSFApi.md#createdsffinancialcenter) | **POST** /crm/api/v1/dsf/financialCenters | 
-*DSFApi* | [**deleteDsfFinancialCenter**](docs/Api/DSFApi.md#deletedsffinancialcenter) | **DELETE** /crm/api/v1/dsf/financialCenters/{financialCenterId} | 
-*DSFApi* | [**getDsfFinancialCenters**](docs/Api/DSFApi.md#getdsffinancialcenters) | **GET** /crm/api/v1/dsf/financialCenters/{financialCenterId} | 
-*DSFApi* | [**listDsfFinancialCenters**](docs/Api/DSFApi.md#listdsffinancialcenters) | **GET** /crm/api/v1/dsf/financialCenters | 
-*DSFApi* | [**updateDsfFinancialCenter**](docs/Api/DSFApi.md#updatedsffinancialcenter) | **POST** /crm/api/v1/dsf/financialCenters/{financialCenterId} | 
-*DatabasesApi* | [**getDatabase**](docs/Api/DatabasesApi.md#getdatabase) | **GET** /crm/api/v1/databases/{uuid} | 
-*DatabasesApi* | [**getUser**](docs/Api/DatabasesApi.md#getuser) | **GET** /crm/api/v1/databases/{uuid}/users/{id} | 
-*DatabasesApi* | [**listDatabases**](docs/Api/DatabasesApi.md#listdatabases) | **GET** /crm/api/v1/databases | 
-*DatabasesApi* | [**listUsers**](docs/Api/DatabasesApi.md#listusers) | **GET** /crm/api/v1/databases/{uuid}/users | 
-*DatabasesApi* | [**updateUser**](docs/Api/DatabasesApi.md#updateuser) | **PATCH** /crm/api/v1/databases/{uuid}/users/{id} | 
-*EventsApi* | [**archiveEventInternalNote**](docs/Api/EventsApi.md#archiveeventinternalnote) | **POST** /crm/api/v1/events/{eventId}/notes/{noteId}/archive | Archive an internal note for and event.
+*DSFApi* | [**createDsfFinancialCenter**](docs/Api/DSFApi.md#createdsffinancialcenter) | **POST** /crm/api/v1/dsf/financialCenters | Create a financial center
+*DSFApi* | [**deleteDsfFinancialCenter**](docs/Api/DSFApi.md#deletedsffinancialcenter) | **DELETE** /crm/api/v1/dsf/financialCenters/{financialCenterId} | Delete a financial center
+*DSFApi* | [**getDsfFinancialCenters**](docs/Api/DSFApi.md#getdsffinancialcenters) | **GET** /crm/api/v1/dsf/financialCenters/{financialCenterId} | Get a financial center
+*DSFApi* | [**listDsfFinancialCenters**](docs/Api/DSFApi.md#listdsffinancialcenters) | **GET** /crm/api/v1/dsf/financialCenters | List all financial centers
+*DSFApi* | [**updateDsfFinancialCenter**](docs/Api/DSFApi.md#updatedsffinancialcenter) | **POST** /crm/api/v1/dsf/financialCenters/{financialCenterId} | Update a financial center
+*DatabasesApi* | [**getDatabase**](docs/Api/DatabasesApi.md#getdatabase) | **GET** /crm/api/v1/databases/{databaseUuid} | Get a database
+*DatabasesApi* | [**getUser**](docs/Api/DatabasesApi.md#getuser) | **GET** /crm/api/v1/databases/{databaseUuid}/users/{userId} | Get a database&#39;s user
+*DatabasesApi* | [**listDatabases**](docs/Api/DatabasesApi.md#listdatabases) | **GET** /crm/api/v1/databases | List all databases
+*DatabasesApi* | [**listUsers**](docs/Api/DatabasesApi.md#listusers) | **GET** /crm/api/v1/databases/{databaseUuid}/users | List database&#39;s users
+*DatabasesApi* | [**updateUser**](docs/Api/DatabasesApi.md#updateuser) | **PATCH** /crm/api/v1/databases/{databaseUuid}/users/{userId} | Update a database&#39;s user
+*EventsApi* | [**archiveEventInternalNote**](docs/Api/EventsApi.md#archiveeventinternalnote) | **POST** /crm/api/v1/events/{eventId}/notes/{noteId}/archive | Archive an internal note for an event.
 *EventsApi* | [**createEvent**](docs/Api/EventsApi.md#createevent) | **POST** /crm/api/v1/events | Create an event.
-*EventsApi* | [**createEventInternalNote**](docs/Api/EventsApi.md#createeventinternalnote) | **POST** /crm/api/v1/events/{eventId}/notes | Add an internal note to and event.
+*EventsApi* | [**createEventInternalNote**](docs/Api/EventsApi.md#createeventinternalnote) | **POST** /crm/api/v1/events/{eventId}/notes | Add an internal note to an event.
 *EventsApi* | [**deleteEvent**](docs/Api/EventsApi.md#deleteevent) | **DELETE** /crm/api/v1/events/{eventId} | Delete an event.
 *EventsApi* | [**getCalendar**](docs/Api/EventsApi.md#getcalendar) | **GET** /crm/api/v1/calendars/{calendarId} | Get informations about a calendar or a default calendar.
 *EventsApi* | [**getEvent**](docs/Api/EventsApi.md#getevent) | **GET** /crm/api/v1/events/{eventId} | Return the detail of an event.
 *EventsApi* | [**getEventInstances**](docs/Api/EventsApi.md#geteventinstances) | **GET** /crm/api/v1/events/{eventId}/instances | Get a recurring event instances.
 *EventsApi* | [**getEventInternalNoteList**](docs/Api/EventsApi.md#geteventinternalnotelist) | **GET** /crm/api/v1/events/{eventId}/notes | Get the internal notes list for an event.
-*EventsApi* | [**listCalendars**](docs/Api/EventsApi.md#listcalendars) | **GET** /crm/api/v1/calendars | Get the list of available calendars.
+*EventsApi* | [**listCalendars**](docs/Api/EventsApi.md#listcalendars) | **GET** /crm/api/v1/calendars | Get the list of available calendarslol.
 *EventsApi* | [**listEvents**](docs/Api/EventsApi.md#listevents) | **GET** /crm/api/v1/events | List or search events.
 *EventsApi* | [**patchEvent**](docs/Api/EventsApi.md#patchevent) | **PATCH** /crm/api/v1/events/{eventId} | Partially update an event.
-*EventsApi* | [**patchEventInternalNote**](docs/Api/EventsApi.md#patcheventinternalnote) | **PATCH** /crm/api/v1/events/{eventId}/notes/{noteId} | Add an internal note to and event.
+*EventsApi* | [**patchEventInternalNote**](docs/Api/EventsApi.md#patcheventinternalnote) | **PATCH** /crm/api/v1/events/{eventId}/notes/{noteId} | Update an internal note of an event.
 *EventsApi* | [**putEventLinksDocuments**](docs/Api/EventsApi.md#puteventlinksdocuments) | **PUT** /crm/api/v1/events/{eventId}/documents | Update the links between an event and existing documents
 *EventsApi* | [**restoreEventInternalNote**](docs/Api/EventsApi.md#restoreeventinternalnote) | **POST** /crm/api/v1/events/{eventId}/notes/{noteId}/restore | Restore an archived internal note for an event.
 *EventsApi* | [**transferEventToCompleted**](docs/Api/EventsApi.md#transfereventtocompleted) | **POST** /crm/api/v1/events/{eventId}/transferToCompleted | Transfer an event to the completed/done calendar.
+*FieldValuesApi* | [**listFields**](docs/Api/FieldValuesApi.md#listfields) | **GET** /crm/api/v1/fields | List fields with values list (values domain).
 *GatewaysApi* | [**createEquisoftAnalyzeAccess**](docs/Api/GatewaysApi.md#createequisoftanalyzeaccess) | **POST** /crm/api/v1/gateways/equisoftAnalyze/accesses | 
 *GatewaysApi* | [**deleteEquisoftAnalyzeAccess**](docs/Api/GatewaysApi.md#deleteequisoftanalyzeaccess) | **DELETE** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} | 
 *GatewaysApi* | [**gatewayAdminLogin**](docs/Api/GatewaysApi.md#gatewayadminlogin) | **POST** /crm/api/v1/gateways/credentials-validation/admin-credentials/login | 
@@ -128,11 +129,11 @@ Class | Method | HTTP request | Description
 *LegacyFinanceApi* | [**getLiabilities**](docs/Api/LegacyFinanceApi.md#getliabilities) | **GET** /apps/api/kronos.finance.getLiabilities | Get Liabilities information for a contact.
 *LegacyProvisioningApi* | [**getOrganization**](docs/Api/LegacyProvisioningApi.md#getorganization) | **GET** /apps/provisioning/kronos.provisioning.getOrganization | Get all informations about an organization.
 *LegacyProvisioningApi* | [**getOrganizationList**](docs/Api/LegacyProvisioningApi.md#getorganizationlist) | **GET** /apps/provisioning/kronos.provisioning.getOrganizationList | List all organizations
-*MovementApi* | [**addMovement**](docs/Api/MovementApi.md#addmovement) | **POST** /crm/api/v1/movements | 
-*MovementApi* | [**cancelMovement**](docs/Api/MovementApi.md#cancelmovement) | **POST** /crm/api/v1/movements/{movementId}/cancel | 
-*MovementApi* | [**deleteMovement**](docs/Api/MovementApi.md#deletemovement) | **DELETE** /crm/api/v1/movements/{movementId} | 
-*MovementApi* | [**getMovementStatus**](docs/Api/MovementApi.md#getmovementstatus) | **GET** /crm/api/v1/movements/{movementId}/status | 
-*MovementApi* | [**listMovements**](docs/Api/MovementApi.md#listmovements) | **GET** /crm/api/v1/movements | 
+*MovementApi* | [**addMovement**](docs/Api/MovementApi.md#addmovement) | **POST** /crm/api/v1/movements | Add a movement
+*MovementApi* | [**cancelMovement**](docs/Api/MovementApi.md#cancelmovement) | **POST** /crm/api/v1/movements/{movementId}/cancel | Cancel a movement.
+*MovementApi* | [**deleteMovement**](docs/Api/MovementApi.md#deletemovement) | **DELETE** /crm/api/v1/movements/{movementId} | Delete a movement.
+*MovementApi* | [**getMovementStatus**](docs/Api/MovementApi.md#getmovementstatus) | **GET** /crm/api/v1/movements/{movementId}/status | Get movement status.
+*MovementApi* | [**listMovements**](docs/Api/MovementApi.md#listmovements) | **GET** /crm/api/v1/movements | List all movements
 *MxApi* | [**validateRecipients**](docs/Api/MxApi.md#validaterecipients) | **POST** /crm/api/app/mail/validateRecipients | Validate recipients
 *RemoteAccountApi* | [**getMailAccountAccessRights**](docs/Api/RemoteAccountApi.md#getmailaccountaccessrights) | **GET** /crm/api/v1/mailAccounts/{remoteAccountId}/accessRights | Return the mail account access rights granted to the currently connected user account.
 *RemoteAccountApi* | [**synchronizeCalendars**](docs/Api/RemoteAccountApi.md#synchronizecalendars) | **POST** /crm/api/agenda/account/calendarSync | Synchronize calendars with remote account
@@ -168,6 +169,7 @@ Class | Method | HTTP request | Description
 - [ContactContactPhone](docs/Model/ContactContactPhone.md)
 - [ContactContactSegmentation](docs/Model/ContactContactSegmentation.md)
 - [ContactContactWebsite](docs/Model/ContactContactWebsite.md)
+- [ContactPatchDto](docs/Model/ContactPatchDto.md)
 - [ContactsContact](docs/Model/ContactsContact.md)
 - [ContextActor](docs/Model/ContextActor.md)
 - [ContextEquisoftConnect](docs/Model/ContextEquisoftConnect.md)
@@ -199,6 +201,9 @@ Class | Method | HTTP request | Description
 - [EventsTransferToCompletedResponse](docs/Model/EventsTransferToCompletedResponse.md)
 - [EventsVisibilityType](docs/Model/EventsVisibilityType.md)
 - [FieldValue](docs/Model/FieldValue.md)
+- [FieldValueField](docs/Model/FieldValueField.md)
+- [FieldValueListFieldResponse](docs/Model/FieldValueListFieldResponse.md)
+- [FieldValueLocalizedString](docs/Model/FieldValueLocalizedString.md)
 - [GatewaysAccessesCreateAccessResponse](docs/Model/GatewaysAccessesCreateAccessResponse.md)
 - [GatewaysAccessesCreateEquisoftAnalyzeAccessPayload](docs/Model/GatewaysAccessesCreateEquisoftAnalyzeAccessPayload.md)
 - [GatewaysAccessesEquisoftAnalyzeAccess](docs/Model/GatewaysAccessesEquisoftAnalyzeAccess.md)
@@ -353,8 +358,12 @@ Class | Method | HTTP request | Description
 - **Scopes**: 
     - **crm:contact**: Read/Write access on contacts
     - **crm:event**: Read/Write access on events
-    - **crm:task**: Read/Write access on tasks
+    - **crm:database**: Read/Write access on databases
     - **crm:document**: Read/Write access on documents
+    - **crm:movement**: Read/Write access on movement
+    - **crm:task**: Read/Write access on tasks
+    - **crm:user**: Read/Write access on users
+    - **profile**: Read/Write access on profile
 
 ## Tests
 
@@ -374,5 +383,5 @@ vendor/bin/phpunit
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
 - API version: `latest`
-    - Package version: `11.1.10`
+    - Package version: `11.5.2-SNAPSHOT`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

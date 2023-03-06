@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **isDeceased** | **bool** | Is the contact deceased | [optional]
 **deceasedDate** | **\DateTime** | Deceased date | [optional]
 **isSmoker** | **bool** | Is the contact a smoker | [optional]
-**smokerEndDate** | **\DateTime** | Smoker end date | [optional]
+**smokerEndDate** | **\DateTime** | Date since is smoker or non-smoker (related to \&quot;isSmoker\&quot; field) | [optional]
 **birthDate** | **\DateTime** | Birthdate | [optional]
 **facebookLink** | **string** | Facebook link | [optional]
 **twitterLink** | **string** | Twitter link | [optional]
