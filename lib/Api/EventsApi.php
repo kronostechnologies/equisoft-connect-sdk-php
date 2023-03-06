@@ -2911,7 +2911,7 @@ class EventsApi
     /**
      * Operation listCalendars
      *
-     * Get the list of available calendarslol.
+     * Get the list of available calendars.
      *
      * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
@@ -2928,7 +2928,7 @@ class EventsApi
     /**
      * Operation listCalendarsWithHttpInfo
      *
-     * Get the list of available calendarslol.
+     * Get the list of available calendars.
      *
      * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
@@ -3096,7 +3096,7 @@ class EventsApi
     /**
      * Operation listCalendarsAsync
      *
-     * Get the list of available calendarslol.
+     * Get the list of available calendars.
      *
      * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
@@ -3116,7 +3116,7 @@ class EventsApi
     /**
      * Operation listCalendarsAsyncWithHttpInfo
      *
-     * Get the list of available calendarslol.
+     * Get the list of available calendars.
      *
      * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *

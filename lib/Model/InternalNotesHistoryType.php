@@ -46,8 +46,6 @@ class InternalNotesHistoryType
 
     public const LATEST_ONLY = 'latestOnly';
 
-    public const UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
-
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -56,8 +54,7 @@ class InternalNotesHistoryType
     {
         return [
             self::FULL,
-            self::LATEST_ONLY,
-            self::UNKNOWN_DEFAULT_OPEN_API
+            self::LATEST_ONLY
         ];
     }
 }

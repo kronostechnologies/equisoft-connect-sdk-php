@@ -74,7 +74,7 @@ class DatabasesApiTest extends TestCase
     /**
      * Test case for getDatabase
      *
-     * Get a database.
+     * .
      *
      */
     public function testGetDatabase()
@@ -86,7 +86,7 @@ class DatabasesApiTest extends TestCase
     /**
      * Test case for getUser
      *
-     * Get a database's user.
+     * .
      *
      */
     public function testGetUser()
@@ -98,7 +98,7 @@ class DatabasesApiTest extends TestCase
     /**
      * Test case for listDatabases
      *
-     * List all databases.
+     * .
      *
      */
     public function testListDatabases()
@@ -110,7 +110,7 @@ class DatabasesApiTest extends TestCase
     /**
      * Test case for listUsers
      *
-     * List database's users.
+     * .
      *
      */
     public function testListUsers()
@@ -122,7 +122,7 @@ class DatabasesApiTest extends TestCase
     /**
      * Test case for updateUser
      *
-     * Update a database's user.
+     * .
      *
      */
     public function testUpdateUser()

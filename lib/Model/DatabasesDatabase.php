@@ -278,6 +278,9 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
         if ($this->container['isMultiUser'] === null) {
             $invalidProperties[] = "'isMultiUser' can't be null";
         }
+        if ($this->container['equisoftPlanEnabled'] === null) {
+            $invalidProperties[] = "'equisoftPlanEnabled' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -402,7 +405,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets profileName
      *
-     * @param string $profileName Profile name
+     * @param string $profileName Profile
      *
      * @return self
      */
@@ -450,7 +453,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets datagatewayEnabled
      *
-     * @param bool $datagatewayEnabled Is Datagateway Enabled
+     * @param bool $datagatewayEnabled Datagateway Enabled
      *
      * @return self
      */
@@ -488,7 +491,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets equisoftPlanEnabled
      *
-     * @return bool|null
+     * @return bool
      */
     public function getEquisoftPlanEnabled()
     {
@@ -498,7 +501,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets equisoftPlanEnabled
      *
-     * @param bool|null $equisoftPlanEnabled Is Equisoft Plan Enabled
+     * @param bool $equisoftPlanEnabled Is Multi User
      *
      * @return self
      */

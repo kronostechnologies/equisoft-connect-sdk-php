@@ -4,11 +4,11 @@ All URIs are relative to http://localhost.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createDsfFinancialCenter()**](DSFApi.md#createDsfFinancialCenter) | **POST** /crm/api/v1/dsf/financialCenters | Create a financial center
-[**deleteDsfFinancialCenter()**](DSFApi.md#deleteDsfFinancialCenter) | **DELETE** /crm/api/v1/dsf/financialCenters/{financialCenterId} | Delete a financial center
-[**getDsfFinancialCenters()**](DSFApi.md#getDsfFinancialCenters) | **GET** /crm/api/v1/dsf/financialCenters/{financialCenterId} | Get a financial center
-[**listDsfFinancialCenters()**](DSFApi.md#listDsfFinancialCenters) | **GET** /crm/api/v1/dsf/financialCenters | List all financial centers
-[**updateDsfFinancialCenter()**](DSFApi.md#updateDsfFinancialCenter) | **POST** /crm/api/v1/dsf/financialCenters/{financialCenterId} | Update a financial center
+[**createDsfFinancialCenter()**](DSFApi.md#createDsfFinancialCenter) | **POST** /crm/api/v1/dsf/financialCenters | 
+[**deleteDsfFinancialCenter()**](DSFApi.md#deleteDsfFinancialCenter) | **DELETE** /crm/api/v1/dsf/financialCenters/{financialCenterId} | 
+[**getDsfFinancialCenters()**](DSFApi.md#getDsfFinancialCenters) | **GET** /crm/api/v1/dsf/financialCenters/{financialCenterId} | 
+[**listDsfFinancialCenters()**](DSFApi.md#listDsfFinancialCenters) | **GET** /crm/api/v1/dsf/financialCenters | 
+[**updateDsfFinancialCenter()**](DSFApi.md#updateDsfFinancialCenter) | **POST** /crm/api/v1/dsf/financialCenters/{financialCenterId} | 
 
 
 ## `createDsfFinancialCenter()`
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 createDsfFinancialCenter($dsfFinancialCenterPayload): \Equisoft\SDK\EquisoftConnect\Model\DsfCreateOrUpdateFinancialCenterResponse
 ```
 
-Create a financial center
+
 
 ### Example
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 deleteDsfFinancialCenter($financialCenterId)
 ```
 
-Delete a financial center
+
 
 ### Example
 
@@ -132,7 +132,7 @@ void (empty response body)
 getDsfFinancialCenters($financialCenterId): \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenter
 ```
 
-Get a financial center
+
 
 ### Example
 
@@ -190,7 +190,7 @@ Name | Type | Description  | Notes
 listDsfFinancialCenters(): \Equisoft\SDK\EquisoftConnect\Model\DsfListFinancialCenterResponse
 ```
 
-List all financial centers
+
 
 ### Example
 
@@ -245,7 +245,7 @@ This endpoint does not need any parameter.
 updateDsfFinancialCenter($financialCenterId, $dsfFinancialCenterPayload): \Equisoft\SDK\EquisoftConnect\Model\DsfCreateOrUpdateFinancialCenterResponse
 ```
 
-Update a financial center
+
 
 ### Example
 

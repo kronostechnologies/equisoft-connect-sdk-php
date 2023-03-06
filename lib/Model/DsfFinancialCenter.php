@@ -411,7 +411,7 @@ class DsfFinancialCenter implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets databaseCount
      *
-     * @param int $databaseCount Database count
+     * @param int $databaseCount Code
      *
      * @return self
      */

@@ -4,7 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | Id | [optional]
 **username** | **string** | User name |
 **password** | **string** | Password |
 **firstName** | **string** | FirstName | [optional]

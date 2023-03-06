@@ -342,7 +342,7 @@ class ContactContactAdditionalInformation implements ModelInterface, ArrayAccess
     /**
      * Sets smokerEndDate
      *
-     * @param \DateTime|null $smokerEndDate Date since is smoker or non-smoker (related to \"isSmoker\" field)
+     * @param \DateTime|null $smokerEndDate Smoker end date
      *
      * @return self
      */
