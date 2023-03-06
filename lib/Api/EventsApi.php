@@ -118,11 +118,11 @@ class EventsApi
     /**
      * Operation archiveEventInternalNote
      *
-     * Archive an internal note for an event.
+     * Archive an internal note for and event.
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
      * @param  int $noteId Note unique identifier. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -136,11 +136,11 @@ class EventsApi
     /**
      * Operation archiveEventInternalNoteWithHttpInfo
      *
-     * Archive an internal note for an event.
+     * Archive an internal note for and event.
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
      * @param  int $noteId Note unique identifier. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -221,11 +221,11 @@ class EventsApi
     /**
      * Operation archiveEventInternalNoteAsync
      *
-     * Archive an internal note for an event.
+     * Archive an internal note for and event.
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
      * @param  int $noteId Note unique identifier. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -243,11 +243,11 @@ class EventsApi
     /**
      * Operation archiveEventInternalNoteAsyncWithHttpInfo
      *
-     * Archive an internal note for an event.
+     * Archive an internal note for and event.
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
      * @param  int $noteId Note unique identifier. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -285,7 +285,7 @@ class EventsApi
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
      * @param  int $noteId Note unique identifier. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -403,7 +403,7 @@ class EventsApi
      * Create an event.
      *
      * @param  \Equisoft\SDK\EquisoftConnect\Model\EventsCreateEventPayload $eventsCreateEventPayload eventsCreateEventPayload (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -421,7 +421,7 @@ class EventsApi
      * Create an event.
      *
      * @param  \Equisoft\SDK\EquisoftConnect\Model\EventsCreateEventPayload $eventsCreateEventPayload (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -590,7 +590,7 @@ class EventsApi
      * Create an event.
      *
      * @param  \Equisoft\SDK\EquisoftConnect\Model\EventsCreateEventPayload $eventsCreateEventPayload (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -611,7 +611,7 @@ class EventsApi
      * Create an event.
      *
      * @param  \Equisoft\SDK\EquisoftConnect\Model\EventsCreateEventPayload $eventsCreateEventPayload (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -661,7 +661,7 @@ class EventsApi
      * Create request for operation 'createEvent'
      *
      * @param  \Equisoft\SDK\EquisoftConnect\Model\EventsCreateEventPayload $eventsCreateEventPayload (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -760,15 +760,15 @@ class EventsApi
     /**
      * Operation createEventInternalNote
      *
-     * Add an internal note to an event.
+     * Add an internal note to and event.
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNotePayload $internalNotesCreateNotePayload internalNotesCreateNotePayload (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNoteResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+     * @return \Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNoteResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
     public function createEventInternalNote($eventId, $internalNotesCreateNotePayload, $acceptLanguage = null)
     {
@@ -779,15 +779,15 @@ class EventsApi
     /**
      * Operation createEventInternalNoteWithHttpInfo
      *
-     * Add an internal note to an event.
+     * Add an internal note to and event.
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNotePayload $internalNotesCreateNotePayload (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNoteResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNoteResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createEventInternalNoteWithHttpInfo($eventId, $internalNotesCreateNotePayload, $acceptLanguage = null)
     {
@@ -841,21 +841,6 @@ class EventsApi
 
                     return [
                         ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNoteResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 400:
-                    if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -932,14 +917,6 @@ class EventsApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -972,11 +949,11 @@ class EventsApi
     /**
      * Operation createEventInternalNoteAsync
      *
-     * Add an internal note to an event.
+     * Add an internal note to and event.
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNotePayload $internalNotesCreateNotePayload (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -994,11 +971,11 @@ class EventsApi
     /**
      * Operation createEventInternalNoteAsyncWithHttpInfo
      *
-     * Add an internal note to an event.
+     * Add an internal note to and event.
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNotePayload $internalNotesCreateNotePayload (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1049,7 +1026,7 @@ class EventsApi
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNotePayload $internalNotesCreateNotePayload (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1419,7 +1396,7 @@ class EventsApi
      * Get informations about a calendar or a default calendar.
      *
      * @param  string $calendarId Calendar ID filter param. An id returned by listCalendars. The string &#x60;primary&#x60; for the current connected user primary (TODO) calendar. The string &#x60;completed&#x60; for the current connected user completed (DONE) calendar. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1437,7 +1414,7 @@ class EventsApi
      * Get informations about a calendar or a default calendar.
      *
      * @param  string $calendarId Calendar ID filter param. An id returned by listCalendars. The string &#x60;primary&#x60; for the current connected user primary (TODO) calendar. The string &#x60;completed&#x60; for the current connected user completed (DONE) calendar. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1606,7 +1583,7 @@ class EventsApi
      * Get informations about a calendar or a default calendar.
      *
      * @param  string $calendarId Calendar ID filter param. An id returned by listCalendars. The string &#x60;primary&#x60; for the current connected user primary (TODO) calendar. The string &#x60;completed&#x60; for the current connected user completed (DONE) calendar. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1627,7 +1604,7 @@ class EventsApi
      * Get informations about a calendar or a default calendar.
      *
      * @param  string $calendarId Calendar ID filter param. An id returned by listCalendars. The string &#x60;primary&#x60; for the current connected user primary (TODO) calendar. The string &#x60;completed&#x60; for the current connected user completed (DONE) calendar. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1677,7 +1654,7 @@ class EventsApi
      * Create request for operation 'getCalendar'
      *
      * @param  string $calendarId Calendar ID filter param. An id returned by listCalendars. The string &#x60;primary&#x60; for the current connected user primary (TODO) calendar. The string &#x60;completed&#x60; for the current connected user completed (DONE) calendar. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1781,7 +1758,7 @@ class EventsApi
      * Return the detail of an event.
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1799,7 +1776,7 @@ class EventsApi
      * Return the detail of an event.
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1968,7 +1945,7 @@ class EventsApi
      * Return the detail of an event.
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1989,7 +1966,7 @@ class EventsApi
      * Return the detail of an event.
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2039,7 +2016,7 @@ class EventsApi
      * Create request for operation 'getEvent'
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2143,11 +2120,11 @@ class EventsApi
      * Get a recurring event instances.
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
-     * @param  \DateTime $minTime Minimum (inclusive) date and time of the event start time. As defined by date-time - RFC3339. (optional)
-     * @param  \DateTime $maxTime Maximum (exclusive) date and time of the event start time. As defined by date-time - RFC3339. (optional)
+     * @param  \DateTime $minTime Minimum (inclusive) date and time of the event start time. As defined by date-time - RFC3339 (optional)
+     * @param  \DateTime $maxTime Maximum (exclusive) date and time of the event start time. As defined by date-time - RFC3339 (optional)
      * @param  string $pageToken Token to specify which page to fetch. (optional)
-     * @param  string $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $maxResults Maximum number of records for one result page.  If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2165,11 +2142,11 @@ class EventsApi
      * Get a recurring event instances.
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
-     * @param  \DateTime $minTime Minimum (inclusive) date and time of the event start time. As defined by date-time - RFC3339. (optional)
-     * @param  \DateTime $maxTime Maximum (exclusive) date and time of the event start time. As defined by date-time - RFC3339. (optional)
+     * @param  \DateTime $minTime Minimum (inclusive) date and time of the event start time. As defined by date-time - RFC3339 (optional)
+     * @param  \DateTime $maxTime Maximum (exclusive) date and time of the event start time. As defined by date-time - RFC3339 (optional)
      * @param  string $pageToken Token to specify which page to fetch. (optional)
-     * @param  string $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $maxResults Maximum number of records for one result page.  If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2338,11 +2315,11 @@ class EventsApi
      * Get a recurring event instances.
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
-     * @param  \DateTime $minTime Minimum (inclusive) date and time of the event start time. As defined by date-time - RFC3339. (optional)
-     * @param  \DateTime $maxTime Maximum (exclusive) date and time of the event start time. As defined by date-time - RFC3339. (optional)
+     * @param  \DateTime $minTime Minimum (inclusive) date and time of the event start time. As defined by date-time - RFC3339 (optional)
+     * @param  \DateTime $maxTime Maximum (exclusive) date and time of the event start time. As defined by date-time - RFC3339 (optional)
      * @param  string $pageToken Token to specify which page to fetch. (optional)
-     * @param  string $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $maxResults Maximum number of records for one result page.  If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2363,11 +2340,11 @@ class EventsApi
      * Get a recurring event instances.
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
-     * @param  \DateTime $minTime Minimum (inclusive) date and time of the event start time. As defined by date-time - RFC3339. (optional)
-     * @param  \DateTime $maxTime Maximum (exclusive) date and time of the event start time. As defined by date-time - RFC3339. (optional)
+     * @param  \DateTime $minTime Minimum (inclusive) date and time of the event start time. As defined by date-time - RFC3339 (optional)
+     * @param  \DateTime $maxTime Maximum (exclusive) date and time of the event start time. As defined by date-time - RFC3339 (optional)
      * @param  string $pageToken Token to specify which page to fetch. (optional)
-     * @param  string $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $maxResults Maximum number of records for one result page.  If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2417,11 +2394,11 @@ class EventsApi
      * Create request for operation 'getEventInstances'
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
-     * @param  \DateTime $minTime Minimum (inclusive) date and time of the event start time. As defined by date-time - RFC3339. (optional)
-     * @param  \DateTime $maxTime Maximum (exclusive) date and time of the event start time. As defined by date-time - RFC3339. (optional)
+     * @param  \DateTime $minTime Minimum (inclusive) date and time of the event start time. As defined by date-time - RFC3339 (optional)
+     * @param  \DateTime $maxTime Maximum (exclusive) date and time of the event start time. As defined by date-time - RFC3339 (optional)
      * @param  string $pageToken Token to specify which page to fetch. (optional)
-     * @param  string $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $maxResults Maximum number of records for one result page.  If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2562,7 +2539,7 @@ class EventsApi
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
      * @param  InternalNotesHistoryType $history Query all revisions or not. (optional)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2581,7 +2558,7 @@ class EventsApi
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
      * @param  InternalNotesHistoryType $history Query all revisions or not. (optional)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2751,7 +2728,7 @@ class EventsApi
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
      * @param  InternalNotesHistoryType $history Query all revisions or not. (optional)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2773,7 +2750,7 @@ class EventsApi
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
      * @param  InternalNotesHistoryType $history Query all revisions or not. (optional)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2824,7 +2801,7 @@ class EventsApi
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
      * @param  InternalNotesHistoryType $history Query all revisions or not. (optional)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2934,9 +2911,9 @@ class EventsApi
     /**
      * Operation listCalendars
      *
-     * Get the list of available calendarslol.
+     * Get the list of available calendars.
      *
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2951,9 +2928,9 @@ class EventsApi
     /**
      * Operation listCalendarsWithHttpInfo
      *
-     * Get the list of available calendarslol.
+     * Get the list of available calendars.
      *
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3119,9 +3096,9 @@ class EventsApi
     /**
      * Operation listCalendarsAsync
      *
-     * Get the list of available calendarslol.
+     * Get the list of available calendars.
      *
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3139,9 +3116,9 @@ class EventsApi
     /**
      * Operation listCalendarsAsyncWithHttpInfo
      *
-     * Get the list of available calendarslol.
+     * Get the list of available calendars.
      *
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3190,7 +3167,7 @@ class EventsApi
     /**
      * Create request for operation 'listCalendars'
      *
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3281,19 +3258,19 @@ class EventsApi
      *
      * @param  string $calendarId Calendar ID filter param. An id returned by listCalendars. The string &#x60;primary&#x60; for the current connected user primary (TODO) calendar. The string &#x60;completed&#x60; for the current connected user completed (DONE) calendar. (optional)
      * @param  string $ownerId Owner ID filter param. (optional)
-     * @param  int[] $contactIds Contact ID filter param. Many ids can be passed to this argument separated by coma. Ex: &#39;?contactIds&#x3D;1,2,3&#39;. Any of the given contacts will be returned in the result. (optional)
-     * @param  \DateTime $minTime Minimum (inclusive) date and time of the event start time. As defined by date-time - RFC3339. (optional)
-     * @param  \DateTime $maxTime Maximum (exclusive) date and time of the event start time. As defined by date-time - RFC3339. (optional)
+     * @param  int[] $contactIds Contact ID filter param. Many ids can be passed to this argument separated by coma. Ex: &#39;?contactId&#x3D;1,2,3&#39;. Any of the given contacts will be returned in the result. (optional)
+     * @param  \DateTime $minTime Minimum (inclusive) date and time of the event start time. As defined by date-time - RFC3339 (optional)
+     * @param  \DateTime $maxTime Maximum (exclusive) date and time of the event start time. As defined by date-time - RFC3339 (optional)
      * @param  bool $singleEvents Expand recurring events into occurrences. When singleEvents is true, master recurrences are not returned in list. (optional)
      * @param  bool $isCompleted If true, include only completed events. If false, include only TODO event. If not set or null, include both. (optional)
      * @param  EventsOrderByType $orderBy Specify the order of the results. &#x60;startTime&#x60; may result in inconsistant sort when used without the &#x60;singleEvents&#x60; option. (optional)
      * @param  string $pageToken Token to specify which page to fetch. (optional)
-     * @param  string $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $maxResults Maximum number of records for one result page.  If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Equisoft\SDK\EquisoftConnect\Model\EventsListEventResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+     * @return \Equisoft\SDK\EquisoftConnect\Model\EventsListEventResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
     public function listEvents($calendarId = null, $ownerId = null, $contactIds = null, $minTime = null, $maxTime = null, $singleEvents = null, $isCompleted = null, $orderBy = null, $pageToken = null, $maxResults = null, $acceptLanguage = null)
     {
@@ -3308,19 +3285,19 @@ class EventsApi
      *
      * @param  string $calendarId Calendar ID filter param. An id returned by listCalendars. The string &#x60;primary&#x60; for the current connected user primary (TODO) calendar. The string &#x60;completed&#x60; for the current connected user completed (DONE) calendar. (optional)
      * @param  string $ownerId Owner ID filter param. (optional)
-     * @param  int[] $contactIds Contact ID filter param. Many ids can be passed to this argument separated by coma. Ex: &#39;?contactIds&#x3D;1,2,3&#39;. Any of the given contacts will be returned in the result. (optional)
-     * @param  \DateTime $minTime Minimum (inclusive) date and time of the event start time. As defined by date-time - RFC3339. (optional)
-     * @param  \DateTime $maxTime Maximum (exclusive) date and time of the event start time. As defined by date-time - RFC3339. (optional)
+     * @param  int[] $contactIds Contact ID filter param. Many ids can be passed to this argument separated by coma. Ex: &#39;?contactId&#x3D;1,2,3&#39;. Any of the given contacts will be returned in the result. (optional)
+     * @param  \DateTime $minTime Minimum (inclusive) date and time of the event start time. As defined by date-time - RFC3339 (optional)
+     * @param  \DateTime $maxTime Maximum (exclusive) date and time of the event start time. As defined by date-time - RFC3339 (optional)
      * @param  bool $singleEvents Expand recurring events into occurrences. When singleEvents is true, master recurrences are not returned in list. (optional)
      * @param  bool $isCompleted If true, include only completed events. If false, include only TODO event. If not set or null, include both. (optional)
      * @param  EventsOrderByType $orderBy Specify the order of the results. &#x60;startTime&#x60; may result in inconsistant sort when used without the &#x60;singleEvents&#x60; option. (optional)
      * @param  string $pageToken Token to specify which page to fetch. (optional)
-     * @param  string $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $maxResults Maximum number of records for one result page.  If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Equisoft\SDK\EquisoftConnect\Model\EventsListEventResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\EventsListEventResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function listEventsWithHttpInfo($calendarId = null, $ownerId = null, $contactIds = null, $minTime = null, $maxTime = null, $singleEvents = null, $isCompleted = null, $orderBy = null, $pageToken = null, $maxResults = null, $acceptLanguage = null)
     {
@@ -3407,21 +3384,6 @@ class EventsApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
-                case 404:
-                    if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
                 case 500:
                     if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -3481,14 +3443,6 @@ class EventsApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 404:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -3509,15 +3463,15 @@ class EventsApi
      *
      * @param  string $calendarId Calendar ID filter param. An id returned by listCalendars. The string &#x60;primary&#x60; for the current connected user primary (TODO) calendar. The string &#x60;completed&#x60; for the current connected user completed (DONE) calendar. (optional)
      * @param  string $ownerId Owner ID filter param. (optional)
-     * @param  int[] $contactIds Contact ID filter param. Many ids can be passed to this argument separated by coma. Ex: &#39;?contactIds&#x3D;1,2,3&#39;. Any of the given contacts will be returned in the result. (optional)
-     * @param  \DateTime $minTime Minimum (inclusive) date and time of the event start time. As defined by date-time - RFC3339. (optional)
-     * @param  \DateTime $maxTime Maximum (exclusive) date and time of the event start time. As defined by date-time - RFC3339. (optional)
+     * @param  int[] $contactIds Contact ID filter param. Many ids can be passed to this argument separated by coma. Ex: &#39;?contactId&#x3D;1,2,3&#39;. Any of the given contacts will be returned in the result. (optional)
+     * @param  \DateTime $minTime Minimum (inclusive) date and time of the event start time. As defined by date-time - RFC3339 (optional)
+     * @param  \DateTime $maxTime Maximum (exclusive) date and time of the event start time. As defined by date-time - RFC3339 (optional)
      * @param  bool $singleEvents Expand recurring events into occurrences. When singleEvents is true, master recurrences are not returned in list. (optional)
      * @param  bool $isCompleted If true, include only completed events. If false, include only TODO event. If not set or null, include both. (optional)
      * @param  EventsOrderByType $orderBy Specify the order of the results. &#x60;startTime&#x60; may result in inconsistant sort when used without the &#x60;singleEvents&#x60; option. (optional)
      * @param  string $pageToken Token to specify which page to fetch. (optional)
-     * @param  string $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $maxResults Maximum number of records for one result page.  If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3539,15 +3493,15 @@ class EventsApi
      *
      * @param  string $calendarId Calendar ID filter param. An id returned by listCalendars. The string &#x60;primary&#x60; for the current connected user primary (TODO) calendar. The string &#x60;completed&#x60; for the current connected user completed (DONE) calendar. (optional)
      * @param  string $ownerId Owner ID filter param. (optional)
-     * @param  int[] $contactIds Contact ID filter param. Many ids can be passed to this argument separated by coma. Ex: &#39;?contactIds&#x3D;1,2,3&#39;. Any of the given contacts will be returned in the result. (optional)
-     * @param  \DateTime $minTime Minimum (inclusive) date and time of the event start time. As defined by date-time - RFC3339. (optional)
-     * @param  \DateTime $maxTime Maximum (exclusive) date and time of the event start time. As defined by date-time - RFC3339. (optional)
+     * @param  int[] $contactIds Contact ID filter param. Many ids can be passed to this argument separated by coma. Ex: &#39;?contactId&#x3D;1,2,3&#39;. Any of the given contacts will be returned in the result. (optional)
+     * @param  \DateTime $minTime Minimum (inclusive) date and time of the event start time. As defined by date-time - RFC3339 (optional)
+     * @param  \DateTime $maxTime Maximum (exclusive) date and time of the event start time. As defined by date-time - RFC3339 (optional)
      * @param  bool $singleEvents Expand recurring events into occurrences. When singleEvents is true, master recurrences are not returned in list. (optional)
      * @param  bool $isCompleted If true, include only completed events. If false, include only TODO event. If not set or null, include both. (optional)
      * @param  EventsOrderByType $orderBy Specify the order of the results. &#x60;startTime&#x60; may result in inconsistant sort when used without the &#x60;singleEvents&#x60; option. (optional)
      * @param  string $pageToken Token to specify which page to fetch. (optional)
-     * @param  string $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $maxResults Maximum number of records for one result page.  If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3598,15 +3552,15 @@ class EventsApi
      *
      * @param  string $calendarId Calendar ID filter param. An id returned by listCalendars. The string &#x60;primary&#x60; for the current connected user primary (TODO) calendar. The string &#x60;completed&#x60; for the current connected user completed (DONE) calendar. (optional)
      * @param  string $ownerId Owner ID filter param. (optional)
-     * @param  int[] $contactIds Contact ID filter param. Many ids can be passed to this argument separated by coma. Ex: &#39;?contactIds&#x3D;1,2,3&#39;. Any of the given contacts will be returned in the result. (optional)
-     * @param  \DateTime $minTime Minimum (inclusive) date and time of the event start time. As defined by date-time - RFC3339. (optional)
-     * @param  \DateTime $maxTime Maximum (exclusive) date and time of the event start time. As defined by date-time - RFC3339. (optional)
+     * @param  int[] $contactIds Contact ID filter param. Many ids can be passed to this argument separated by coma. Ex: &#39;?contactId&#x3D;1,2,3&#39;. Any of the given contacts will be returned in the result. (optional)
+     * @param  \DateTime $minTime Minimum (inclusive) date and time of the event start time. As defined by date-time - RFC3339 (optional)
+     * @param  \DateTime $maxTime Maximum (exclusive) date and time of the event start time. As defined by date-time - RFC3339 (optional)
      * @param  bool $singleEvents Expand recurring events into occurrences. When singleEvents is true, master recurrences are not returned in list. (optional)
      * @param  bool $isCompleted If true, include only completed events. If false, include only TODO event. If not set or null, include both. (optional)
      * @param  EventsOrderByType $orderBy Specify the order of the results. &#x60;startTime&#x60; may result in inconsistant sort when used without the &#x60;singleEvents&#x60; option. (optional)
      * @param  string $pageToken Token to specify which page to fetch. (optional)
-     * @param  string $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $maxResults Maximum number of records for one result page.  If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3787,11 +3741,11 @@ class EventsApi
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\EventsPatchEventPayload $eventsPatchEventPayload Event fields to update. The body of the patch request includes only the resource fields you want to modify. To delete a field, set it to null. Collections are always overridden if defined. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Equisoft\SDK\EquisoftConnect\Model\EventsPatchEventResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+     * @return \Equisoft\SDK\EquisoftConnect\Model\EventsPatchEventResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
     public function patchEvent($eventId, $eventsPatchEventPayload, $acceptLanguage = null)
     {
@@ -3806,11 +3760,11 @@ class EventsApi
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\EventsPatchEventPayload $eventsPatchEventPayload Event fields to update. The body of the patch request includes only the resource fields you want to modify. To delete a field, set it to null. Collections are always overridden if defined. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Equisoft\SDK\EquisoftConnect\Model\EventsPatchEventResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\EventsPatchEventResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function patchEventWithHttpInfo($eventId, $eventsPatchEventPayload, $acceptLanguage = null)
     {
@@ -3897,21 +3851,6 @@ class EventsApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
-                case 404:
-                    if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
                 case 500:
                     if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -3971,14 +3910,6 @@ class EventsApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 404:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -3999,7 +3930,7 @@ class EventsApi
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\EventsPatchEventPayload $eventsPatchEventPayload Event fields to update. The body of the patch request includes only the resource fields you want to modify. To delete a field, set it to null. Collections are always overridden if defined. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4021,7 +3952,7 @@ class EventsApi
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\EventsPatchEventPayload $eventsPatchEventPayload Event fields to update. The body of the patch request includes only the resource fields you want to modify. To delete a field, set it to null. Collections are always overridden if defined. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4072,7 +4003,7 @@ class EventsApi
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\EventsPatchEventPayload $eventsPatchEventPayload Event fields to update. The body of the patch request includes only the resource fields you want to modify. To delete a field, set it to null. Collections are always overridden if defined. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -4185,16 +4116,16 @@ class EventsApi
     /**
      * Operation patchEventInternalNote
      *
-     * Update an internal note of an event.
+     * Add an internal note to and event.
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
      * @param  int $noteId Note unique identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNotePayload $internalNotesPatchNotePayload internalNotesPatchNotePayload (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNoteResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+     * @return \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNoteResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
     public function patchEventInternalNote($eventId, $noteId, $internalNotesPatchNotePayload, $acceptLanguage = null)
     {
@@ -4205,16 +4136,16 @@ class EventsApi
     /**
      * Operation patchEventInternalNoteWithHttpInfo
      *
-     * Update an internal note of an event.
+     * Add an internal note to and event.
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
      * @param  int $noteId Note unique identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNotePayload $internalNotesPatchNotePayload (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNoteResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNoteResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function patchEventInternalNoteWithHttpInfo($eventId, $noteId, $internalNotesPatchNotePayload, $acceptLanguage = null)
     {
@@ -4268,21 +4199,6 @@ class EventsApi
 
                     return [
                         ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNoteResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 400:
-                    if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -4359,14 +4275,6 @@ class EventsApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -4399,12 +4307,12 @@ class EventsApi
     /**
      * Operation patchEventInternalNoteAsync
      *
-     * Update an internal note of an event.
+     * Add an internal note to and event.
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
      * @param  int $noteId Note unique identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNotePayload $internalNotesPatchNotePayload (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4422,12 +4330,12 @@ class EventsApi
     /**
      * Operation patchEventInternalNoteAsyncWithHttpInfo
      *
-     * Update an internal note of an event.
+     * Add an internal note to and event.
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
      * @param  int $noteId Note unique identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNotePayload $internalNotesPatchNotePayload (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4479,7 +4387,7 @@ class EventsApi
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
      * @param  int $noteId Note unique identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNotePayload $internalNotesPatchNotePayload (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -4608,9 +4516,9 @@ class EventsApi
      *
      * Update the links between an event and existing documents
      *
-     * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
-     * @param  \Equisoft\SDK\EquisoftConnect\Model\EventsPutEventLinkDocumentsPayload $eventsPutEventLinkDocumentsPayload Contains an array of Ids for the documents to link with the event. To remove all links, documentIds set to an empty array. Collections are always overridden if defined. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $eventId Event unique identifier.  *      For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence.  *      For example 999_20180101. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\EventsPutEventLinkDocumentsPayload $eventsPutEventLinkDocumentsPayload Contains an array of Ids for the documents to link with the event.  *     To remove all links, documentIds set to an empty array  Collections are always overridden if defined. (required)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -4626,9 +4534,9 @@ class EventsApi
      *
      * Update the links between an event and existing documents
      *
-     * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
-     * @param  \Equisoft\SDK\EquisoftConnect\Model\EventsPutEventLinkDocumentsPayload $eventsPutEventLinkDocumentsPayload Contains an array of Ids for the documents to link with the event. To remove all links, documentIds set to an empty array. Collections are always overridden if defined. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $eventId Event unique identifier.  *      For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence.  *      For example 999_20180101. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\EventsPutEventLinkDocumentsPayload $eventsPutEventLinkDocumentsPayload Contains an array of Ids for the documents to link with the event.  *     To remove all links, documentIds set to an empty array  Collections are always overridden if defined. (required)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -4693,14 +4601,6 @@ class EventsApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 404:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -4719,9 +4619,9 @@ class EventsApi
      *
      * Update the links between an event and existing documents
      *
-     * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
-     * @param  \Equisoft\SDK\EquisoftConnect\Model\EventsPutEventLinkDocumentsPayload $eventsPutEventLinkDocumentsPayload Contains an array of Ids for the documents to link with the event. To remove all links, documentIds set to an empty array. Collections are always overridden if defined. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $eventId Event unique identifier.  *      For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence.  *      For example 999_20180101. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\EventsPutEventLinkDocumentsPayload $eventsPutEventLinkDocumentsPayload Contains an array of Ids for the documents to link with the event.  *     To remove all links, documentIds set to an empty array  Collections are always overridden if defined. (required)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4741,9 +4641,9 @@ class EventsApi
      *
      * Update the links between an event and existing documents
      *
-     * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
-     * @param  \Equisoft\SDK\EquisoftConnect\Model\EventsPutEventLinkDocumentsPayload $eventsPutEventLinkDocumentsPayload Contains an array of Ids for the documents to link with the event. To remove all links, documentIds set to an empty array. Collections are always overridden if defined. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $eventId Event unique identifier.  *      For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence.  *      For example 999_20180101. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\EventsPutEventLinkDocumentsPayload $eventsPutEventLinkDocumentsPayload Contains an array of Ids for the documents to link with the event.  *     To remove all links, documentIds set to an empty array  Collections are always overridden if defined. (required)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4779,9 +4679,9 @@ class EventsApi
     /**
      * Create request for operation 'putEventLinksDocuments'
      *
-     * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
-     * @param  \Equisoft\SDK\EquisoftConnect\Model\EventsPutEventLinkDocumentsPayload $eventsPutEventLinkDocumentsPayload Contains an array of Ids for the documents to link with the event. To remove all links, documentIds set to an empty array. Collections are always overridden if defined. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $eventId Event unique identifier.  *      For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence.  *      For example 999_20180101. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\EventsPutEventLinkDocumentsPayload $eventsPutEventLinkDocumentsPayload Contains an array of Ids for the documents to link with the event.  *     To remove all links, documentIds set to an empty array  Collections are always overridden if defined. (required)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -4898,7 +4798,7 @@ class EventsApi
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
      * @param  int $noteId Note unique identifier. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -4916,7 +4816,7 @@ class EventsApi
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
      * @param  int $noteId Note unique identifier. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -5001,7 +4901,7 @@ class EventsApi
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
      * @param  int $noteId Note unique identifier. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5023,7 +4923,7 @@ class EventsApi
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
      * @param  int $noteId Note unique identifier. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5061,7 +4961,7 @@ class EventsApi
      *
      * @param  string $eventId Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. (required)
      * @param  int $noteId Note unique identifier. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

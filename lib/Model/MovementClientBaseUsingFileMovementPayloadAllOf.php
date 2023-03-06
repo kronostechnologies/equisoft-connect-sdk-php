@@ -57,14 +57,14 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string',
         'sourceDatabase' => 'string',
         'sourceUser' => 'string',
         'destinationDatabase' => 'string',
         'destinationUser' => 'string',
         'capsilFile' => 'string',
         'univerisFile' => 'string',
-        'dataphileFile' => 'string'
+        'dataphileFile' => 'string',
+        'type' => 'string'
     ];
 
     /**
@@ -75,14 +75,14 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'type' => null,
         'sourceDatabase' => null,
         'sourceUser' => null,
         'destinationDatabase' => null,
         'destinationUser' => null,
         'capsilFile' => null,
         'univerisFile' => null,
-        'dataphileFile' => null
+        'dataphileFile' => null,
+        'type' => null
     ];
 
     /**
@@ -112,14 +112,14 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type',
         'sourceDatabase' => 'sourceDatabase',
         'sourceUser' => 'sourceUser',
         'destinationDatabase' => 'destinationDatabase',
         'destinationUser' => 'destinationUser',
         'capsilFile' => 'capsilFile',
         'univerisFile' => 'univerisFile',
-        'dataphileFile' => 'dataphileFile'
+        'dataphileFile' => 'dataphileFile',
+        'type' => 'type'
     ];
 
     /**
@@ -128,14 +128,14 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType',
         'sourceDatabase' => 'setSourceDatabase',
         'sourceUser' => 'setSourceUser',
         'destinationDatabase' => 'setDestinationDatabase',
         'destinationUser' => 'setDestinationUser',
         'capsilFile' => 'setCapsilFile',
         'univerisFile' => 'setUniverisFile',
-        'dataphileFile' => 'setDataphileFile'
+        'dataphileFile' => 'setDataphileFile',
+        'type' => 'setType'
     ];
 
     /**
@@ -144,14 +144,14 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType',
         'sourceDatabase' => 'getSourceDatabase',
         'sourceUser' => 'getSourceUser',
         'destinationDatabase' => 'getDestinationDatabase',
         'destinationUser' => 'getDestinationUser',
         'capsilFile' => 'getCapsilFile',
         'univerisFile' => 'getUniverisFile',
-        'dataphileFile' => 'getDataphileFile'
+        'dataphileFile' => 'getDataphileFile',
+        'type' => 'getType'
     ];
 
     /**
@@ -196,7 +196,6 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
     }
 
     public const TYPE_CLIENTBASE_USING_FILE = 'CLIENTBASE_USING_FILE';
-    public const TYPE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
 
     /**
      * Gets allowable values of the enum
@@ -207,7 +206,6 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
     {
         return [
             self::TYPE_CLIENTBASE_USING_FILE,
-            self::TYPE_UNKNOWN_DEFAULT_OPEN_API,
         ];
     }
 
@@ -226,7 +224,6 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
      */
     public function __construct(array $data = null)
     {
-        $this->container['type'] = $data['type'] ?? 'CLIENTBASE_USING_FILE';
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['sourceUser'] = $data['sourceUser'] ?? null;
         $this->container['destinationDatabase'] = $data['destinationDatabase'] ?? null;
@@ -234,6 +231,7 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
         $this->container['capsilFile'] = $data['capsilFile'] ?? null;
         $this->container['univerisFile'] = $data['univerisFile'] ?? null;
         $this->container['dataphileFile'] = $data['dataphileFile'] ?? null;
+        $this->container['type'] = $data['type'] ?? 'CLIENTBASE_USING_FILE';
     }
 
     /**
@@ -270,6 +268,174 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
 
 
     /**
+     * Gets sourceDatabase
+     *
+     * @return string|null
+     */
+    public function getSourceDatabase()
+    {
+        return $this->container['sourceDatabase'];
+    }
+
+    /**
+     * Sets sourceDatabase
+     *
+     * @param string|null $sourceDatabase sourceDatabase
+     *
+     * @return self
+     */
+    public function setSourceDatabase($sourceDatabase)
+    {
+        $this->container['sourceDatabase'] = $sourceDatabase;
+
+        return $this;
+    }
+
+    /**
+     * Gets sourceUser
+     *
+     * @return string|null
+     */
+    public function getSourceUser()
+    {
+        return $this->container['sourceUser'];
+    }
+
+    /**
+     * Sets sourceUser
+     *
+     * @param string|null $sourceUser sourceUser
+     *
+     * @return self
+     */
+    public function setSourceUser($sourceUser)
+    {
+        $this->container['sourceUser'] = $sourceUser;
+
+        return $this;
+    }
+
+    /**
+     * Gets destinationDatabase
+     *
+     * @return string|null
+     */
+    public function getDestinationDatabase()
+    {
+        return $this->container['destinationDatabase'];
+    }
+
+    /**
+     * Sets destinationDatabase
+     *
+     * @param string|null $destinationDatabase destinationDatabase
+     *
+     * @return self
+     */
+    public function setDestinationDatabase($destinationDatabase)
+    {
+        $this->container['destinationDatabase'] = $destinationDatabase;
+
+        return $this;
+    }
+
+    /**
+     * Gets destinationUser
+     *
+     * @return string|null
+     */
+    public function getDestinationUser()
+    {
+        return $this->container['destinationUser'];
+    }
+
+    /**
+     * Sets destinationUser
+     *
+     * @param string|null $destinationUser destinationUser
+     *
+     * @return self
+     */
+    public function setDestinationUser($destinationUser)
+    {
+        $this->container['destinationUser'] = $destinationUser;
+
+        return $this;
+    }
+
+    /**
+     * Gets capsilFile
+     *
+     * @return string|null
+     */
+    public function getCapsilFile()
+    {
+        return $this->container['capsilFile'];
+    }
+
+    /**
+     * Sets capsilFile
+     *
+     * @param string|null $capsilFile capsilFile
+     *
+     * @return self
+     */
+    public function setCapsilFile($capsilFile)
+    {
+        $this->container['capsilFile'] = $capsilFile;
+
+        return $this;
+    }
+
+    /**
+     * Gets univerisFile
+     *
+     * @return string|null
+     */
+    public function getUniverisFile()
+    {
+        return $this->container['univerisFile'];
+    }
+
+    /**
+     * Sets univerisFile
+     *
+     * @param string|null $univerisFile univerisFile
+     *
+     * @return self
+     */
+    public function setUniverisFile($univerisFile)
+    {
+        $this->container['univerisFile'] = $univerisFile;
+
+        return $this;
+    }
+
+    /**
+     * Gets dataphileFile
+     *
+     * @return string|null
+     */
+    public function getDataphileFile()
+    {
+        return $this->container['dataphileFile'];
+    }
+
+    /**
+     * Sets dataphileFile
+     *
+     * @param string|null $dataphileFile dataphileFile
+     *
+     * @return self
+     */
+    public function setDataphileFile($dataphileFile)
+    {
+        $this->container['dataphileFile'] = $dataphileFile;
+
+        return $this;
+    }
+
+    /**
      * Gets type
      *
      * @return string|null
@@ -299,174 +465,6 @@ class MovementClientBaseUsingFileMovementPayloadAllOf implements ModelInterface,
             );
         }
         $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets sourceDatabase
-     *
-     * @return string|null
-     */
-    public function getSourceDatabase()
-    {
-        return $this->container['sourceDatabase'];
-    }
-
-    /**
-     * Sets sourceDatabase
-     *
-     * @param string|null $sourceDatabase Source database full name.
-     *
-     * @return self
-     */
-    public function setSourceDatabase($sourceDatabase)
-    {
-        $this->container['sourceDatabase'] = $sourceDatabase;
-
-        return $this;
-    }
-
-    /**
-     * Gets sourceUser
-     *
-     * @return string|null
-     */
-    public function getSourceUser()
-    {
-        return $this->container['sourceUser'];
-    }
-
-    /**
-     * Sets sourceUser
-     *
-     * @param string|null $sourceUser Source user id.
-     *
-     * @return self
-     */
-    public function setSourceUser($sourceUser)
-    {
-        $this->container['sourceUser'] = $sourceUser;
-
-        return $this;
-    }
-
-    /**
-     * Gets destinationDatabase
-     *
-     * @return string|null
-     */
-    public function getDestinationDatabase()
-    {
-        return $this->container['destinationDatabase'];
-    }
-
-    /**
-     * Sets destinationDatabase
-     *
-     * @param string|null $destinationDatabase Destination database full name.
-     *
-     * @return self
-     */
-    public function setDestinationDatabase($destinationDatabase)
-    {
-        $this->container['destinationDatabase'] = $destinationDatabase;
-
-        return $this;
-    }
-
-    /**
-     * Gets destinationUser
-     *
-     * @return string|null
-     */
-    public function getDestinationUser()
-    {
-        return $this->container['destinationUser'];
-    }
-
-    /**
-     * Sets destinationUser
-     *
-     * @param string|null $destinationUser Destination user id.
-     *
-     * @return self
-     */
-    public function setDestinationUser($destinationUser)
-    {
-        $this->container['destinationUser'] = $destinationUser;
-
-        return $this;
-    }
-
-    /**
-     * Gets capsilFile
-     *
-     * @return string|null
-     */
-    public function getCapsilFile()
-    {
-        return $this->container['capsilFile'];
-    }
-
-    /**
-     * Sets capsilFile
-     *
-     * @param string|null $capsilFile Path to the Capsil file.
-     *
-     * @return self
-     */
-    public function setCapsilFile($capsilFile)
-    {
-        $this->container['capsilFile'] = $capsilFile;
-
-        return $this;
-    }
-
-    /**
-     * Gets univerisFile
-     *
-     * @return string|null
-     */
-    public function getUniverisFile()
-    {
-        return $this->container['univerisFile'];
-    }
-
-    /**
-     * Sets univerisFile
-     *
-     * @param string|null $univerisFile Path to the Univeris file. Deprecated: Univeris file is not supported anymore and will be removed in a future version.
-     *
-     * @return self
-     */
-    public function setUniverisFile($univerisFile)
-    {
-        $this->container['univerisFile'] = $univerisFile;
-
-        return $this;
-    }
-
-    /**
-     * Gets dataphileFile
-     *
-     * @return string|null
-     */
-    public function getDataphileFile()
-    {
-        return $this->container['dataphileFile'];
-    }
-
-    /**
-     * Sets dataphileFile
-     *
-     * @param string|null $dataphileFile Path to the Dataphile.
-     *
-     * @return self
-     */
-    public function setDataphileFile($dataphileFile)
-    {
-        $this->container['dataphileFile'] = $dataphileFile;
 
         return $this;
     }

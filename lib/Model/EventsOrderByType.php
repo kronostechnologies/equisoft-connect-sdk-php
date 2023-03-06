@@ -48,8 +48,6 @@ class EventsOrderByType
 
     public const CREATION_TIME = 'creationTime';
 
-    public const UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
-
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -59,8 +57,7 @@ class EventsOrderByType
         return [
             self::START_TIME,
             self::UPDATE_TIME,
-            self::CREATION_TIME,
-            self::UNKNOWN_DEFAULT_OPEN_API
+            self::CREATION_TIME
         ];
     }
 }

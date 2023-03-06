@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**uuid** | **string** | Uuid |
-**displayName** | **string** | Display name |
-**email** | **string** | Email |
+**uuid** | **string** | environment name |
+**displayName** | **string** | environment name |
+**email** | **string** | environment name |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

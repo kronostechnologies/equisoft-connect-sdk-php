@@ -57,8 +57,8 @@ class ContextActor implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'uuid' => 'string',
-        'displayName' => 'string'
+        'displayName' => 'string',
+        'uuid' => 'string'
     ];
 
     /**
@@ -69,8 +69,8 @@ class ContextActor implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'uuid' => null,
-        'displayName' => null
+        'displayName' => null,
+        'uuid' => null
     ];
 
     /**
@@ -100,8 +100,8 @@ class ContextActor implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'uuid' => 'uuid',
-        'displayName' => 'displayName'
+        'displayName' => 'displayName',
+        'uuid' => 'uuid'
     ];
 
     /**
@@ -110,8 +110,8 @@ class ContextActor implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'uuid' => 'setUuid',
-        'displayName' => 'setDisplayName'
+        'displayName' => 'setDisplayName',
+        'uuid' => 'setUuid'
     ];
 
     /**
@@ -120,8 +120,8 @@ class ContextActor implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'uuid' => 'getUuid',
-        'displayName' => 'getDisplayName'
+        'displayName' => 'getDisplayName',
+        'uuid' => 'getUuid'
     ];
 
     /**
@@ -181,8 +181,8 @@ class ContextActor implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['uuid'] = $data['uuid'] ?? null;
         $this->container['displayName'] = $data['displayName'] ?? null;
+        $this->container['uuid'] = $data['uuid'] ?? null;
     }
 
     /**
@@ -194,11 +194,11 @@ class ContextActor implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['uuid'] === null) {
-            $invalidProperties[] = "'uuid' can't be null";
-        }
         if ($this->container['displayName'] === null) {
             $invalidProperties[] = "'displayName' can't be null";
+        }
+        if ($this->container['uuid'] === null) {
+            $invalidProperties[] = "'uuid' can't be null";
         }
         return $invalidProperties;
     }
@@ -216,30 +216,6 @@ class ContextActor implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets uuid
-     *
-     * @return string
-     */
-    public function getUuid()
-    {
-        return $this->container['uuid'];
-    }
-
-    /**
-     * Sets uuid
-     *
-     * @param string $uuid Uuid
-     *
-     * @return self
-     */
-    public function setUuid($uuid)
-    {
-        $this->container['uuid'] = $uuid;
-
-        return $this;
-    }
-
-    /**
      * Gets displayName
      *
      * @return string
@@ -252,13 +228,37 @@ class ContextActor implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets displayName
      *
-     * @param string $displayName Display name
+     * @param string $displayName $displayName
      *
      * @return self
      */
     public function setDisplayName($displayName)
     {
         $this->container['displayName'] = $displayName;
+
+        return $this;
+    }
+
+    /**
+     * Gets uuid
+     *
+     * @return string
+     */
+    public function getUuid()
+    {
+        return $this->container['uuid'];
+    }
+
+    /**
+     * Sets uuid
+     *
+     * @param string $uuid $uuid
+     *
+     * @return self
+     */
+    public function setUuid($uuid)
+    {
+        $this->container['uuid'] = $uuid;
 
         return $this;
     }

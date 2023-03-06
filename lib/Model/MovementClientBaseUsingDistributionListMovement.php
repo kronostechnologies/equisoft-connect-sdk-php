@@ -55,14 +55,14 @@ class MovementClientBaseUsingDistributionListMovement extends MovementMovement
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string',
         'sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
         'sourceUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
         'sourceDistributionList' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDistributionList',
         'destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
         'destinationUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
         'datagatewayAccessMappings' => 'array<string,string>',
-        'transferOption' => '\Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption'
+        'transferOption' => 'string',
+        'type' => 'string'
     ];
 
     /**
@@ -73,14 +73,14 @@ class MovementClientBaseUsingDistributionListMovement extends MovementMovement
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'type' => null,
         'sourceDatabase' => null,
         'sourceUser' => null,
         'sourceDistributionList' => null,
         'destinationDatabase' => null,
         'destinationUser' => null,
         'datagatewayAccessMappings' => null,
-        'transferOption' => null
+        'transferOption' => null,
+        'type' => null
     ];
 
     /**
@@ -110,14 +110,14 @@ class MovementClientBaseUsingDistributionListMovement extends MovementMovement
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type',
         'sourceDatabase' => 'sourceDatabase',
         'sourceUser' => 'sourceUser',
         'sourceDistributionList' => 'sourceDistributionList',
         'destinationDatabase' => 'destinationDatabase',
         'destinationUser' => 'destinationUser',
         'datagatewayAccessMappings' => 'datagatewayAccessMappings',
-        'transferOption' => 'transferOption'
+        'transferOption' => 'transferOption',
+        'type' => 'type'
     ];
 
     /**
@@ -126,14 +126,14 @@ class MovementClientBaseUsingDistributionListMovement extends MovementMovement
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType',
         'sourceDatabase' => 'setSourceDatabase',
         'sourceUser' => 'setSourceUser',
         'sourceDistributionList' => 'setSourceDistributionList',
         'destinationDatabase' => 'setDestinationDatabase',
         'destinationUser' => 'setDestinationUser',
         'datagatewayAccessMappings' => 'setDatagatewayAccessMappings',
-        'transferOption' => 'setTransferOption'
+        'transferOption' => 'setTransferOption',
+        'type' => 'setType'
     ];
 
     /**
@@ -142,14 +142,14 @@ class MovementClientBaseUsingDistributionListMovement extends MovementMovement
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType',
         'sourceDatabase' => 'getSourceDatabase',
         'sourceUser' => 'getSourceUser',
         'sourceDistributionList' => 'getSourceDistributionList',
         'destinationDatabase' => 'getDestinationDatabase',
         'destinationUser' => 'getDestinationUser',
         'datagatewayAccessMappings' => 'getDatagatewayAccessMappings',
-        'transferOption' => 'getTransferOption'
+        'transferOption' => 'getTransferOption',
+        'type' => 'getType'
     ];
 
     /**
@@ -194,7 +194,6 @@ class MovementClientBaseUsingDistributionListMovement extends MovementMovement
     }
 
     public const TYPE_CLIENTBASE_USING_DISTLIST = 'CLIENTBASE_USING_DISTLIST';
-    public const TYPE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
 
     /**
      * Gets allowable values of the enum
@@ -205,7 +204,6 @@ class MovementClientBaseUsingDistributionListMovement extends MovementMovement
     {
         return [
             self::TYPE_CLIENTBASE_USING_DISTLIST,
-            self::TYPE_UNKNOWN_DEFAULT_OPEN_API,
         ];
     }
 
@@ -220,7 +218,6 @@ class MovementClientBaseUsingDistributionListMovement extends MovementMovement
     {
         parent::__construct($data);
 
-        $this->container['type'] = $data['type'] ?? 'CLIENTBASE_USING_DISTLIST';
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['sourceUser'] = $data['sourceUser'] ?? null;
         $this->container['sourceDistributionList'] = $data['sourceDistributionList'] ?? null;
@@ -228,6 +225,7 @@ class MovementClientBaseUsingDistributionListMovement extends MovementMovement
         $this->container['destinationUser'] = $data['destinationUser'] ?? null;
         $this->container['datagatewayAccessMappings'] = $data['datagatewayAccessMappings'] ?? null;
         $this->container['transferOption'] = $data['transferOption'] ?? null;
+        $this->container['type'] = $data['type'] ?? 'CLIENTBASE_USING_DISTLIST';
     }
 
     /**
@@ -238,18 +236,6 @@ class MovementClientBaseUsingDistributionListMovement extends MovementMovement
     public function listInvalidProperties()
     {
         $invalidProperties = parent::listInvalidProperties();
-
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'type', must be one of '%s'",
-                $this->container['type'],
-                implode("', '", $allowedValues)
-            );
-        }
 
         if ($this->container['sourceDatabase'] === null) {
             $invalidProperties[] = "'sourceDatabase' can't be null";
@@ -266,6 +252,18 @@ class MovementClientBaseUsingDistributionListMovement extends MovementMovement
         if ($this->container['transferOption'] === null) {
             $invalidProperties[] = "'transferOption' can't be null";
         }
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'type', must be one of '%s'",
+                $this->container['type'],
+                implode("', '", $allowedValues)
+            );
+        }
+
         return $invalidProperties;
     }
 
@@ -280,40 +278,6 @@ class MovementClientBaseUsingDistributionListMovement extends MovementMovement
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets type
-     *
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param string $type type
-     *
-     * @return self
-     */
-    public function setType($type)
-    {
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!in_array($type, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'type', must be one of '%s'",
-                    $type,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['type'] = $type;
-
-        return $this;
-    }
 
     /**
      * Gets sourceDatabase
@@ -448,7 +412,7 @@ class MovementClientBaseUsingDistributionListMovement extends MovementMovement
     /**
      * Sets datagatewayAccessMappings
      *
-     * @param array<string,string>|null $datagatewayAccessMappings Data gateway access mapping.
+     * @param array<string,string>|null $datagatewayAccessMappings datagatewayAccessMappings
      *
      * @return self
      */
@@ -462,7 +426,7 @@ class MovementClientBaseUsingDistributionListMovement extends MovementMovement
     /**
      * Gets transferOption
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption
+     * @return string
      */
     public function getTransferOption()
     {
@@ -472,13 +436,47 @@ class MovementClientBaseUsingDistributionListMovement extends MovementMovement
     /**
      * Sets transferOption
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption $transferOption transferOption
+     * @param string $transferOption transferOption
      *
      * @return self
      */
     public function setTransferOption($transferOption)
     {
         $this->container['transferOption'] = $transferOption;
+
+        return $this;
+    }
+
+    /**
+     * Gets type
+     *
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param string $type type
+     *
+     * @return self
+     */
+    public function setType($type)
+    {
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!in_array($type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'type', must be one of '%s'",
+                    $type,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['type'] = $type;
 
         return $this;
     }

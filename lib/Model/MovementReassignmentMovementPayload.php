@@ -55,11 +55,11 @@ class MovementReassignmentMovementPayload extends MovementMovementPayload
       * @var string[]
       */
     protected static $openAPITypes = [
-        'type' => 'string',
         'sourceDatabase' => 'string',
         'sourceUser' => 'string',
         'destinationUser' => 'string',
-        'accessCode' => 'string'
+        'accessCode' => 'string',
+        'type' => 'string'
     ];
 
     /**
@@ -70,11 +70,11 @@ class MovementReassignmentMovementPayload extends MovementMovementPayload
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'type' => null,
         'sourceDatabase' => null,
         'sourceUser' => null,
         'destinationUser' => null,
-        'accessCode' => null
+        'accessCode' => null,
+        'type' => null
     ];
 
     /**
@@ -104,11 +104,11 @@ class MovementReassignmentMovementPayload extends MovementMovementPayload
      * @var string[]
      */
     protected static $attributeMap = [
-        'type' => 'type',
         'sourceDatabase' => 'sourceDatabase',
         'sourceUser' => 'sourceUser',
         'destinationUser' => 'destinationUser',
-        'accessCode' => 'accessCode'
+        'accessCode' => 'accessCode',
+        'type' => 'type'
     ];
 
     /**
@@ -117,11 +117,11 @@ class MovementReassignmentMovementPayload extends MovementMovementPayload
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType',
         'sourceDatabase' => 'setSourceDatabase',
         'sourceUser' => 'setSourceUser',
         'destinationUser' => 'setDestinationUser',
-        'accessCode' => 'setAccessCode'
+        'accessCode' => 'setAccessCode',
+        'type' => 'setType'
     ];
 
     /**
@@ -130,11 +130,11 @@ class MovementReassignmentMovementPayload extends MovementMovementPayload
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType',
         'sourceDatabase' => 'getSourceDatabase',
         'sourceUser' => 'getSourceUser',
         'destinationUser' => 'getDestinationUser',
-        'accessCode' => 'getAccessCode'
+        'accessCode' => 'getAccessCode',
+        'type' => 'getType'
     ];
 
     /**
@@ -179,7 +179,6 @@ class MovementReassignmentMovementPayload extends MovementMovementPayload
     }
 
     public const TYPE_REASSIGNMENT = 'REASSIGNMENT';
-    public const TYPE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
 
     /**
      * Gets allowable values of the enum
@@ -190,7 +189,6 @@ class MovementReassignmentMovementPayload extends MovementMovementPayload
     {
         return [
             self::TYPE_REASSIGNMENT,
-            self::TYPE_UNKNOWN_DEFAULT_OPEN_API,
         ];
     }
 
@@ -205,11 +203,11 @@ class MovementReassignmentMovementPayload extends MovementMovementPayload
     {
         parent::__construct($data);
 
-        $this->container['type'] = $data['type'] ?? 'REASSIGNMENT';
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['sourceUser'] = $data['sourceUser'] ?? null;
         $this->container['destinationUser'] = $data['destinationUser'] ?? null;
         $this->container['accessCode'] = $data['accessCode'] ?? null;
+        $this->container['type'] = $data['type'] ?? 'REASSIGNMENT';
     }
 
     /**
@@ -220,18 +218,6 @@ class MovementReassignmentMovementPayload extends MovementMovementPayload
     public function listInvalidProperties()
     {
         $invalidProperties = parent::listInvalidProperties();
-
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
-        $allowedValues = $this->getTypeAllowableValues();
-        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'type', must be one of '%s'",
-                $this->container['type'],
-                implode("', '", $allowedValues)
-            );
-        }
 
         if ($this->container['sourceDatabase'] === null) {
             $invalidProperties[] = "'sourceDatabase' can't be null";
@@ -245,6 +231,18 @@ class MovementReassignmentMovementPayload extends MovementMovementPayload
         if ($this->container['accessCode'] === null) {
             $invalidProperties[] = "'accessCode' can't be null";
         }
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'type', must be one of '%s'",
+                $this->container['type'],
+                implode("', '", $allowedValues)
+            );
+        }
+
         return $invalidProperties;
     }
 
@@ -259,6 +257,102 @@ class MovementReassignmentMovementPayload extends MovementMovementPayload
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets sourceDatabase
+     *
+     * @return string
+     */
+    public function getSourceDatabase()
+    {
+        return $this->container['sourceDatabase'];
+    }
+
+    /**
+     * Sets sourceDatabase
+     *
+     * @param string $sourceDatabase sourceDatabase
+     *
+     * @return self
+     */
+    public function setSourceDatabase($sourceDatabase)
+    {
+        $this->container['sourceDatabase'] = $sourceDatabase;
+
+        return $this;
+    }
+
+    /**
+     * Gets sourceUser
+     *
+     * @return string
+     */
+    public function getSourceUser()
+    {
+        return $this->container['sourceUser'];
+    }
+
+    /**
+     * Sets sourceUser
+     *
+     * @param string $sourceUser sourceUser
+     *
+     * @return self
+     */
+    public function setSourceUser($sourceUser)
+    {
+        $this->container['sourceUser'] = $sourceUser;
+
+        return $this;
+    }
+
+    /**
+     * Gets destinationUser
+     *
+     * @return string
+     */
+    public function getDestinationUser()
+    {
+        return $this->container['destinationUser'];
+    }
+
+    /**
+     * Sets destinationUser
+     *
+     * @param string $destinationUser destinationUser
+     *
+     * @return self
+     */
+    public function setDestinationUser($destinationUser)
+    {
+        $this->container['destinationUser'] = $destinationUser;
+
+        return $this;
+    }
+
+    /**
+     * Gets accessCode
+     *
+     * @return string
+     */
+    public function getAccessCode()
+    {
+        return $this->container['accessCode'];
+    }
+
+    /**
+     * Sets accessCode
+     *
+     * @param string $accessCode accessCode
+     *
+     * @return self
+     */
+    public function setAccessCode($accessCode)
+    {
+        $this->container['accessCode'] = $accessCode;
+
+        return $this;
+    }
 
     /**
      * Gets type
@@ -290,102 +384,6 @@ class MovementReassignmentMovementPayload extends MovementMovementPayload
             );
         }
         $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets sourceDatabase
-     *
-     * @return string
-     */
-    public function getSourceDatabase()
-    {
-        return $this->container['sourceDatabase'];
-    }
-
-    /**
-     * Sets sourceDatabase
-     *
-     * @param string $sourceDatabase Source database full name.
-     *
-     * @return self
-     */
-    public function setSourceDatabase($sourceDatabase)
-    {
-        $this->container['sourceDatabase'] = $sourceDatabase;
-
-        return $this;
-    }
-
-    /**
-     * Gets sourceUser
-     *
-     * @return string
-     */
-    public function getSourceUser()
-    {
-        return $this->container['sourceUser'];
-    }
-
-    /**
-     * Sets sourceUser
-     *
-     * @param string $sourceUser Source user id.
-     *
-     * @return self
-     */
-    public function setSourceUser($sourceUser)
-    {
-        $this->container['sourceUser'] = $sourceUser;
-
-        return $this;
-    }
-
-    /**
-     * Gets destinationUser
-     *
-     * @return string
-     */
-    public function getDestinationUser()
-    {
-        return $this->container['destinationUser'];
-    }
-
-    /**
-     * Sets destinationUser
-     *
-     * @param string $destinationUser Destination user id.
-     *
-     * @return self
-     */
-    public function setDestinationUser($destinationUser)
-    {
-        $this->container['destinationUser'] = $destinationUser;
-
-        return $this;
-    }
-
-    /**
-     * Gets accessCode
-     *
-     * @return string
-     */
-    public function getAccessCode()
-    {
-        return $this->container['accessCode'];
-    }
-
-    /**
-     * Sets accessCode
-     *
-     * @param string $accessCode Access code. Format: dataGatewayType~~system~dealerCode-repCode.
-     *
-     * @return self
-     */
-    public function setAccessCode($accessCode)
-    {
-        $this->container['accessCode'] = $accessCode;
 
         return $this;
     }

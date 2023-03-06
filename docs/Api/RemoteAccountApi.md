@@ -24,17 +24,13 @@ Return the mail account access rights granted to the currently connected user ac
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure OAuth2 access token for authorization: OAuth2
-$config = Equisoft\SDK\EquisoftConnect\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
 
 $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\RemoteAccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
+    new GuzzleHttp\Client()
 );
-$remoteAccountId = 'remoteAccountId_example'; // string | Remote account identifier.
+$remoteAccountId = 'remoteAccountId_example'; // string | Remote account id.
 
 try {
     $result = $apiInstance->getMailAccountAccessRights($remoteAccountId);
@@ -48,7 +44,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **remoteAccountId** | **string**| Remote account identifier. |
+ **remoteAccountId** | **string**| Remote account id. |
 
 ### Return type
 
@@ -56,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
