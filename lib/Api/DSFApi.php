@@ -118,6 +118,8 @@ class DSFApi
     /**
      * Operation createDsfFinancialCenter
      *
+     * Create a financial center
+     *
      * @param  \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload $dsfFinancialCenterPayload dsfFinancialCenterPayload (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
@@ -132,6 +134,8 @@ class DSFApi
 
     /**
      * Operation createDsfFinancialCenterWithHttpInfo
+     *
+     * Create a financial center
      *
      * @param  \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload $dsfFinancialCenterPayload (required)
      *
@@ -276,6 +280,8 @@ class DSFApi
     /**
      * Operation createDsfFinancialCenterAsync
      *
+     * Create a financial center
+     *
      * @param  \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload $dsfFinancialCenterPayload (required)
      *
      * @throws \InvalidArgumentException
@@ -293,6 +299,8 @@ class DSFApi
 
     /**
      * Operation createDsfFinancialCenterAsyncWithHttpInfo
+     *
+     * Create a financial center
      *
      * @param  \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload $dsfFinancialCenterPayload (required)
      *
@@ -438,6 +446,8 @@ class DSFApi
     /**
      * Operation deleteDsfFinancialCenter
      *
+     * Delete a financial center
+     *
      * @param  int $financialCenterId financialCenterId (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
@@ -451,6 +461,8 @@ class DSFApi
 
     /**
      * Operation deleteDsfFinancialCenterWithHttpInfo
+     *
+     * Delete a financial center
      *
      * @param  int $financialCenterId (required)
      *
@@ -525,6 +537,8 @@ class DSFApi
     /**
      * Operation deleteDsfFinancialCenterAsync
      *
+     * Delete a financial center
+     *
      * @param  int $financialCenterId (required)
      *
      * @throws \InvalidArgumentException
@@ -542,6 +556,8 @@ class DSFApi
 
     /**
      * Operation deleteDsfFinancialCenterAsyncWithHttpInfo
+     *
+     * Delete a financial center
      *
      * @param  int $financialCenterId (required)
      *
@@ -676,6 +692,8 @@ class DSFApi
     /**
      * Operation getDsfFinancialCenters
      *
+     * Get a financial center
+     *
      * @param  int $financialCenterId financialCenterId (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
@@ -690,6 +708,8 @@ class DSFApi
 
     /**
      * Operation getDsfFinancialCentersWithHttpInfo
+     *
+     * Get a financial center
      *
      * @param  int $financialCenterId (required)
      *
@@ -857,6 +877,8 @@ class DSFApi
     /**
      * Operation getDsfFinancialCentersAsync
      *
+     * Get a financial center
+     *
      * @param  int $financialCenterId (required)
      *
      * @throws \InvalidArgumentException
@@ -874,6 +896,8 @@ class DSFApi
 
     /**
      * Operation getDsfFinancialCentersAsyncWithHttpInfo
+     *
+     * Get a financial center
      *
      * @param  int $financialCenterId (required)
      *
@@ -1021,6 +1045,8 @@ class DSFApi
     /**
      * Operation listDsfFinancialCenters
      *
+     * List all financial centers
+     *
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1034,6 +1060,8 @@ class DSFApi
 
     /**
      * Operation listDsfFinancialCentersWithHttpInfo
+     *
+     * List all financial centers
      *
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
@@ -1177,6 +1205,8 @@ class DSFApi
     /**
      * Operation listDsfFinancialCentersAsync
      *
+     * List all financial centers
+     *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1193,6 +1223,8 @@ class DSFApi
 
     /**
      * Operation listDsfFinancialCentersAsyncWithHttpInfo
+     *
+     * List all financial centers
      *
      *
      * @throws \InvalidArgumentException
@@ -1324,6 +1356,8 @@ class DSFApi
     /**
      * Operation updateDsfFinancialCenter
      *
+     * Update a financial center
+     *
      * @param  int $financialCenterId financialCenterId (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload $dsfFinancialCenterPayload dsfFinancialCenterPayload (required)
      *
@@ -1339,6 +1373,8 @@ class DSFApi
 
     /**
      * Operation updateDsfFinancialCenterWithHttpInfo
+     *
+     * Update a financial center
      *
      * @param  int $financialCenterId (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload $dsfFinancialCenterPayload (required)
@@ -1507,6 +1543,8 @@ class DSFApi
     /**
      * Operation updateDsfFinancialCenterAsync
      *
+     * Update a financial center
+     *
      * @param  int $financialCenterId (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload $dsfFinancialCenterPayload (required)
      *
@@ -1525,6 +1563,8 @@ class DSFApi
 
     /**
      * Operation updateDsfFinancialCenterAsyncWithHttpInfo
+     *
+     * Update a financial center
      *
      * @param  int $financialCenterId (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload $dsfFinancialCenterPayload (required)

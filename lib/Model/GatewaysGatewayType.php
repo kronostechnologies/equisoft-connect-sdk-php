@@ -45,6 +45,8 @@ class GatewaysGatewayType
      */
     public const EQUISOFT_ANALYZE = 'EQUISOFT_ANALYZE';
 
+    public const UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
+
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -52,7 +54,8 @@ class GatewaysGatewayType
     public static function getAllowableEnumValues()
     {
         return [
-            self::EQUISOFT_ANALYZE
+            self::EQUISOFT_ANALYZE,
+            self::UNKNOWN_DEFAULT_OPEN_API
         ];
     }
 }
