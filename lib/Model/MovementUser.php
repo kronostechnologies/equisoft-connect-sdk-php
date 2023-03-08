@@ -234,7 +234,7 @@ class MovementUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param int $id Unique numerical identifier.
+     * @param int $id id
      *
      * @return self
      */
@@ -258,7 +258,7 @@ class MovementUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets uuid
      *
-     * @param string|null $uuid Unique string identifier.
+     * @param string|null $uuid uuid
      *
      * @return self
      */
@@ -282,7 +282,7 @@ class MovementUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets displayName
      *
-     * @param string $displayName User display name.
+     * @param string $displayName displayName
      *
      * @return self
      */

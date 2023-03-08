@@ -64,7 +64,7 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
         'destinationDatabase' => 'string',
         'destinationUser' => 'string',
         'datagatewayAccessMappings' => 'array<string,string>',
-        'transferOption' => '\Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption'
+        'transferOption' => 'string'
     ];
 
     /**
@@ -316,7 +316,7 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
     /**
      * Sets sourceDatabase
      *
-     * @param string|null $sourceDatabase Source database full name.
+     * @param string|null $sourceDatabase sourceDatabase
      *
      * @return self
      */
@@ -340,7 +340,7 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
     /**
      * Sets sourceUser
      *
-     * @param string|null $sourceUser Source user id.
+     * @param string|null $sourceUser sourceUser
      *
      * @return self
      */
@@ -364,7 +364,7 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
     /**
      * Sets sourceDistributionList
      *
-     * @param string|null $sourceDistributionList Source distribution list.
+     * @param string|null $sourceDistributionList sourceDistributionList
      *
      * @return self
      */
@@ -388,7 +388,7 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
     /**
      * Sets destinationDatabase
      *
-     * @param string|null $destinationDatabase Destination database full name.
+     * @param string|null $destinationDatabase destinationDatabase
      *
      * @return self
      */
@@ -412,7 +412,7 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
     /**
      * Sets destinationUser
      *
-     * @param string|null $destinationUser Destination user id.
+     * @param string|null $destinationUser destinationUser
      *
      * @return self
      */
@@ -436,7 +436,7 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
     /**
      * Sets datagatewayAccessMappings
      *
-     * @param array<string,string>|null $datagatewayAccessMappings Data gateway access mapping.
+     * @param array<string,string>|null $datagatewayAccessMappings datagatewayAccessMappings
      *
      * @return self
      */
@@ -450,7 +450,7 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
     /**
      * Gets transferOption
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption|null
+     * @return string|null
      */
     public function getTransferOption()
     {
@@ -460,7 +460,7 @@ class MovementClientBaseUsingDistributionListMovementPayloadAllOf implements Mod
     /**
      * Sets transferOption
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption|null $transferOption transferOption
+     * @param string|null $transferOption transferOption
      *
      * @return self
      */

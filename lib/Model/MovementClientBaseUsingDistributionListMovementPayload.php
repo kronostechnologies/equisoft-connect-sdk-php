@@ -62,7 +62,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
         'destinationDatabase' => 'string',
         'destinationUser' => 'string',
         'datagatewayAccessMappings' => 'array<string,string>',
-        'transferOption' => '\Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption'
+        'transferOption' => 'string'
     ];
 
     /**
@@ -328,7 +328,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
     /**
      * Sets sourceDatabase
      *
-     * @param string $sourceDatabase Source database full name.
+     * @param string $sourceDatabase sourceDatabase
      *
      * @return self
      */
@@ -352,7 +352,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
     /**
      * Sets sourceUser
      *
-     * @param string $sourceUser Source user id.
+     * @param string $sourceUser sourceUser
      *
      * @return self
      */
@@ -376,7 +376,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
     /**
      * Sets sourceDistributionList
      *
-     * @param string|null $sourceDistributionList Source distribution list.
+     * @param string|null $sourceDistributionList sourceDistributionList
      *
      * @return self
      */
@@ -400,7 +400,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
     /**
      * Sets destinationDatabase
      *
-     * @param string $destinationDatabase Destination database full name.
+     * @param string $destinationDatabase destinationDatabase
      *
      * @return self
      */
@@ -424,7 +424,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
     /**
      * Sets destinationUser
      *
-     * @param string $destinationUser Destination user id.
+     * @param string $destinationUser destinationUser
      *
      * @return self
      */
@@ -448,7 +448,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
     /**
      * Sets datagatewayAccessMappings
      *
-     * @param array<string,string>|null $datagatewayAccessMappings Data gateway access mapping.
+     * @param array<string,string>|null $datagatewayAccessMappings datagatewayAccessMappings
      *
      * @return self
      */
@@ -462,7 +462,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
     /**
      * Gets transferOption
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption
+     * @return string
      */
     public function getTransferOption()
     {
@@ -472,7 +472,7 @@ class MovementClientBaseUsingDistributionListMovementPayload extends MovementMov
     /**
      * Sets transferOption
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption $transferOption transferOption
+     * @param string $transferOption transferOption
      *
      * @return self
      */

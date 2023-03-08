@@ -225,7 +225,7 @@ class InternalNotesNoteList implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets notes
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\InternalNotesNote[] $notes List of internal notes.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\InternalNotesNote[] $notes notes
      *
      * @return self
      */
