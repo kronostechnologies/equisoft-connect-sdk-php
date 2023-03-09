@@ -216,7 +216,7 @@ class MovementValidationErrorResponse implements ModelInterface, ArrayAccess, \J
     /**
      * Sets errors
      *
-     * @param array<string,\Equisoft\SDK\EquisoftConnect\Model\MovementValidationError>|null $errors errors
+     * @param array<string,\Equisoft\SDK\EquisoftConnect\Model\MovementValidationError>|null $errors List of errors.
      *
      * @return self
      */

@@ -448,7 +448,7 @@ class DSFApi
      *
      * Delete a financial center
      *
-     * @param  int $financialCenterId financialCenterId (required)
+     * @param  int $financialCenterId Financial center identifier. (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -464,7 +464,7 @@ class DSFApi
      *
      * Delete a financial center
      *
-     * @param  int $financialCenterId (required)
+     * @param  int $financialCenterId Financial center identifier. (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -539,7 +539,7 @@ class DSFApi
      *
      * Delete a financial center
      *
-     * @param  int $financialCenterId (required)
+     * @param  int $financialCenterId Financial center identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -559,7 +559,7 @@ class DSFApi
      *
      * Delete a financial center
      *
-     * @param  int $financialCenterId (required)
+     * @param  int $financialCenterId Financial center identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -595,7 +595,7 @@ class DSFApi
     /**
      * Create request for operation 'deleteDsfFinancialCenter'
      *
-     * @param  int $financialCenterId (required)
+     * @param  int $financialCenterId Financial center identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -694,7 +694,7 @@ class DSFApi
      *
      * Get a financial center
      *
-     * @param  int $financialCenterId financialCenterId (required)
+     * @param  int $financialCenterId Financial center identifier. (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -711,7 +711,7 @@ class DSFApi
      *
      * Get a financial center
      *
-     * @param  int $financialCenterId (required)
+     * @param  int $financialCenterId Financial center identifier. (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -879,7 +879,7 @@ class DSFApi
      *
      * Get a financial center
      *
-     * @param  int $financialCenterId (required)
+     * @param  int $financialCenterId Financial center identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -899,7 +899,7 @@ class DSFApi
      *
      * Get a financial center
      *
-     * @param  int $financialCenterId (required)
+     * @param  int $financialCenterId Financial center identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -948,7 +948,7 @@ class DSFApi
     /**
      * Create request for operation 'getDsfFinancialCenters'
      *
-     * @param  int $financialCenterId (required)
+     * @param  int $financialCenterId Financial center identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1358,7 +1358,7 @@ class DSFApi
      *
      * Update a financial center
      *
-     * @param  int $financialCenterId financialCenterId (required)
+     * @param  int $financialCenterId Financial center identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload $dsfFinancialCenterPayload dsfFinancialCenterPayload (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
@@ -1376,7 +1376,7 @@ class DSFApi
      *
      * Update a financial center
      *
-     * @param  int $financialCenterId (required)
+     * @param  int $financialCenterId Financial center identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload $dsfFinancialCenterPayload (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
@@ -1545,7 +1545,7 @@ class DSFApi
      *
      * Update a financial center
      *
-     * @param  int $financialCenterId (required)
+     * @param  int $financialCenterId Financial center identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload $dsfFinancialCenterPayload (required)
      *
      * @throws \InvalidArgumentException
@@ -1566,7 +1566,7 @@ class DSFApi
      *
      * Update a financial center
      *
-     * @param  int $financialCenterId (required)
+     * @param  int $financialCenterId Financial center identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload $dsfFinancialCenterPayload (required)
      *
      * @throws \InvalidArgumentException
@@ -1616,7 +1616,7 @@ class DSFApi
     /**
      * Create request for operation 'updateDsfFinancialCenter'
      *
-     * @param  int $financialCenterId (required)
+     * @param  int $financialCenterId Financial center identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload $dsfFinancialCenterPayload (required)
      *
      * @throws \InvalidArgumentException

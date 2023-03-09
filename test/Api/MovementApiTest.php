@@ -74,7 +74,7 @@ class MovementApiTest extends TestCase
     /**
      * Test case for addMovement
      *
-     * .
+     * Add a movement.
      *
      */
     public function testAddMovement()
@@ -86,7 +86,7 @@ class MovementApiTest extends TestCase
     /**
      * Test case for cancelMovement
      *
-     * .
+     * Cancel a movement..
      *
      */
     public function testCancelMovement()
@@ -98,7 +98,7 @@ class MovementApiTest extends TestCase
     /**
      * Test case for deleteMovement
      *
-     * .
+     * Delete a movement..
      *
      */
     public function testDeleteMovement()
@@ -110,7 +110,7 @@ class MovementApiTest extends TestCase
     /**
      * Test case for getMovementStatus
      *
-     * .
+     * Get movement status..
      *
      */
     public function testGetMovementStatus()
@@ -122,7 +122,7 @@ class MovementApiTest extends TestCase
     /**
      * Test case for listMovements
      *
-     * .
+     * List all movements.
      *
      */
     public function testListMovements()
