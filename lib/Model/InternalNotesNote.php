@@ -309,7 +309,7 @@ class InternalNotesNote implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets firstRevisionCreatedAt
      *
-     * @param \DateTime $firstRevisionCreatedAt First revision created at.
+     * @param \DateTime $firstRevisionCreatedAt firstRevisionCreatedAt
      *
      * @return self
      */
@@ -357,7 +357,7 @@ class InternalNotesNote implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets currentRevision
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteRevision $currentRevision Current note revision.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteRevision $currentRevision currentRevision
      *
      * @return self
      */
@@ -381,7 +381,7 @@ class InternalNotesNote implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets previousRevisions
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteRevision[]|null $previousRevisions List of previous revisions.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteRevision[]|null $previousRevisions previousRevisions
      *
      * @return self
      */

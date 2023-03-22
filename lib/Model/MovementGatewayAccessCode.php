@@ -234,7 +234,7 @@ class MovementGatewayAccessCode implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets accessCode
      *
-     * @param string|null $accessCode Access code.
+     * @param string|null $accessCode accessCode
      *
      * @return self
      */
@@ -258,7 +258,7 @@ class MovementGatewayAccessCode implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets label
      *
-     * @param string|null $label Label.
+     * @param string|null $label label
      *
      * @return self
      */
@@ -282,7 +282,7 @@ class MovementGatewayAccessCode implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets code
      *
-     * @param string|null $code Code.
+     * @param string|null $code code
      *
      * @return self
      */
@@ -306,7 +306,7 @@ class MovementGatewayAccessCode implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets system
      *
-     * @param string|null $system System.
+     * @param string|null $system system
      *
      * @return self
      */

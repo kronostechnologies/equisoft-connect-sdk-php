@@ -34,7 +34,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\RemoteAccountApi(
     new GuzzleHttp\Client(),
     $config
 );
-$remoteAccountId = 'remoteAccountId_example'; // string | Remote account identifier.
+$remoteAccountId = 'remoteAccountId_example'; // string | Remote account id.
 
 try {
     $result = $apiInstance->getMailAccountAccessRights($remoteAccountId);
@@ -48,7 +48,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **remoteAccountId** | **string**| Remote account identifier. |
+ **remoteAccountId** | **string**| Remote account id. |
 
 ### Return type
 

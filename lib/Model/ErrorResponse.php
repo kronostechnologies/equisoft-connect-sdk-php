@@ -222,7 +222,7 @@ class ErrorResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets error
      *
-     * @param string|null $error Error.
+     * @param string|null $error error
      *
      * @return self
      */
@@ -246,7 +246,7 @@ class ErrorResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets errorDescription
      *
-     * @param string|null $errorDescription Error description.
+     * @param string|null $errorDescription errorDescription
      *
      * @return self
      */

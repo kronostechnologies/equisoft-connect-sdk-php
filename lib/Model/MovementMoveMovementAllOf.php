@@ -340,7 +340,7 @@ class MovementMoveMovementAllOf implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets users
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser[]|null $users List of users.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser[]|null $users users
      *
      * @return self
      */

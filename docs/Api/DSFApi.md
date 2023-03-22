@@ -94,7 +94,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\DSFApi(
     new GuzzleHttp\Client(),
     $config
 );
-$financialCenterId = 56; // int | Financial center identifier.
+$financialCenterId = 56; // int
 
 try {
     $apiInstance->deleteDsfFinancialCenter($financialCenterId);
@@ -107,7 +107,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **financialCenterId** | **int**| Financial center identifier. |
+ **financialCenterId** | **int**|  |
 
 ### Return type
 
@@ -151,7 +151,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\DSFApi(
     new GuzzleHttp\Client(),
     $config
 );
-$financialCenterId = 56; // int | Financial center identifier.
+$financialCenterId = 56; // int
 
 try {
     $result = $apiInstance->getDsfFinancialCenters($financialCenterId);
@@ -165,7 +165,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **financialCenterId** | **int**| Financial center identifier. |
+ **financialCenterId** | **int**|  |
 
 ### Return type
 
@@ -264,7 +264,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\DSFApi(
     new GuzzleHttp\Client(),
     $config
 );
-$financialCenterId = 56; // int | Financial center identifier.
+$financialCenterId = 56; // int
 $dsfFinancialCenterPayload = new \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload(); // \Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload
 
 try {
@@ -279,7 +279,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **financialCenterId** | **int**| Financial center identifier. |
+ **financialCenterId** | **int**|  |
  **dsfFinancialCenterPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload**](../Model/DsfFinancialCenterPayload.md)|  |
 
 ### Return type

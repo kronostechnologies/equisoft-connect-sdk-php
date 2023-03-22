@@ -219,7 +219,7 @@ class InternalNotesPatchNotePayload implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets content
      *
-     * @param string $content Content.
+     * @param string $content content
      *
      * @return self
      */

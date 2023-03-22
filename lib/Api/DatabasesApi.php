@@ -120,15 +120,15 @@ class DatabasesApi
      *
      * Get a database
      *
-     * @param  string $databaseUuid Database unique identifier. (required)
+     * @param  string $uuid uuid (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Equisoft\SDK\EquisoftConnect\Model\DatabasesDatabase|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
-    public function getDatabase($databaseUuid)
+    public function getDatabase($uuid)
     {
-        list($response) = $this->getDatabaseWithHttpInfo($databaseUuid);
+        list($response) = $this->getDatabaseWithHttpInfo($uuid);
         return $response;
     }
 
@@ -137,15 +137,15 @@ class DatabasesApi
      *
      * Get a database
      *
-     * @param  string $databaseUuid Database unique identifier. (required)
+     * @param  string $uuid (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Equisoft\SDK\EquisoftConnect\Model\DatabasesDatabase|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getDatabaseWithHttpInfo($databaseUuid)
+    public function getDatabaseWithHttpInfo($uuid)
     {
-        $request = $this->getDatabaseRequest($databaseUuid);
+        $request = $this->getDatabaseRequest($uuid);
 
         try {
             $options = $this->createHttpClientOption();
@@ -305,14 +305,14 @@ class DatabasesApi
      *
      * Get a database
      *
-     * @param  string $databaseUuid Database unique identifier. (required)
+     * @param  string $uuid (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getDatabaseAsync($databaseUuid)
+    public function getDatabaseAsync($uuid)
     {
-        return $this->getDatabaseAsyncWithHttpInfo($databaseUuid)
+        return $this->getDatabaseAsyncWithHttpInfo($uuid)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -325,15 +325,15 @@ class DatabasesApi
      *
      * Get a database
      *
-     * @param  string $databaseUuid Database unique identifier. (required)
+     * @param  string $uuid (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getDatabaseAsyncWithHttpInfo($databaseUuid)
+    public function getDatabaseAsyncWithHttpInfo($uuid)
     {
         $returnType = '\Equisoft\SDK\EquisoftConnect\Model\DatabasesDatabase';
-        $request = $this->getDatabaseRequest($databaseUuid);
+        $request = $this->getDatabaseRequest($uuid);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -374,21 +374,21 @@ class DatabasesApi
     /**
      * Create request for operation 'getDatabase'
      *
-     * @param  string $databaseUuid Database unique identifier. (required)
+     * @param  string $uuid (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getDatabaseRequest($databaseUuid)
+    public function getDatabaseRequest($uuid)
     {
-        // verify the required parameter 'databaseUuid' is set
-        if ($databaseUuid === null || (is_array($databaseUuid) && count($databaseUuid) === 0)) {
+        // verify the required parameter 'uuid' is set
+        if ($uuid === null || (is_array($uuid) && count($uuid) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $databaseUuid when calling getDatabase'
+                'Missing the required parameter $uuid when calling getDatabase'
             );
         }
 
-        $resourcePath = '/crm/api/v1/databases/{databaseUuid}';
+        $resourcePath = '/crm/api/v1/databases/{uuid}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -398,10 +398,10 @@ class DatabasesApi
 
 
         // path params
-        if ($databaseUuid !== null) {
+        if ($uuid !== null) {
             $resourcePath = str_replace(
-                '{' . 'databaseUuid' . '}',
-                ObjectSerializer::toPathValue($databaseUuid),
+                '{' . 'uuid' . '}',
+                ObjectSerializer::toPathValue($uuid),
                 $resourcePath
             );
         }
@@ -473,16 +473,16 @@ class DatabasesApi
      *
      * Get a database&#39;s user
      *
-     * @param  string $databaseUuid Database unique identifier. (required)
-     * @param  int $userId User identifier. (required)
+     * @param  string $uuid uuid (required)
+     * @param  int $id id (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Equisoft\SDK\EquisoftConnect\Model\UsersUser|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
-    public function getUser($databaseUuid, $userId)
+    public function getUser($uuid, $id)
     {
-        list($response) = $this->getUserWithHttpInfo($databaseUuid, $userId);
+        list($response) = $this->getUserWithHttpInfo($uuid, $id);
         return $response;
     }
 
@@ -491,16 +491,16 @@ class DatabasesApi
      *
      * Get a database&#39;s user
      *
-     * @param  string $databaseUuid Database unique identifier. (required)
-     * @param  int $userId User identifier. (required)
+     * @param  string $uuid (required)
+     * @param  int $id (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Equisoft\SDK\EquisoftConnect\Model\UsersUser|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getUserWithHttpInfo($databaseUuid, $userId)
+    public function getUserWithHttpInfo($uuid, $id)
     {
-        $request = $this->getUserRequest($databaseUuid, $userId);
+        $request = $this->getUserRequest($uuid, $id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -660,15 +660,15 @@ class DatabasesApi
      *
      * Get a database&#39;s user
      *
-     * @param  string $databaseUuid Database unique identifier. (required)
-     * @param  int $userId User identifier. (required)
+     * @param  string $uuid (required)
+     * @param  int $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getUserAsync($databaseUuid, $userId)
+    public function getUserAsync($uuid, $id)
     {
-        return $this->getUserAsyncWithHttpInfo($databaseUuid, $userId)
+        return $this->getUserAsyncWithHttpInfo($uuid, $id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -681,16 +681,16 @@ class DatabasesApi
      *
      * Get a database&#39;s user
      *
-     * @param  string $databaseUuid Database unique identifier. (required)
-     * @param  int $userId User identifier. (required)
+     * @param  string $uuid (required)
+     * @param  int $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getUserAsyncWithHttpInfo($databaseUuid, $userId)
+    public function getUserAsyncWithHttpInfo($uuid, $id)
     {
         $returnType = '\Equisoft\SDK\EquisoftConnect\Model\UsersUser';
-        $request = $this->getUserRequest($databaseUuid, $userId);
+        $request = $this->getUserRequest($uuid, $id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -731,28 +731,28 @@ class DatabasesApi
     /**
      * Create request for operation 'getUser'
      *
-     * @param  string $databaseUuid Database unique identifier. (required)
-     * @param  int $userId User identifier. (required)
+     * @param  string $uuid (required)
+     * @param  int $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getUserRequest($databaseUuid, $userId)
+    public function getUserRequest($uuid, $id)
     {
-        // verify the required parameter 'databaseUuid' is set
-        if ($databaseUuid === null || (is_array($databaseUuid) && count($databaseUuid) === 0)) {
+        // verify the required parameter 'uuid' is set
+        if ($uuid === null || (is_array($uuid) && count($uuid) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $databaseUuid when calling getUser'
+                'Missing the required parameter $uuid when calling getUser'
             );
         }
-        // verify the required parameter 'userId' is set
-        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $userId when calling getUser'
+                'Missing the required parameter $id when calling getUser'
             );
         }
 
-        $resourcePath = '/crm/api/v1/databases/{databaseUuid}/users/{userId}';
+        $resourcePath = '/crm/api/v1/databases/{uuid}/users/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -762,18 +762,18 @@ class DatabasesApi
 
 
         // path params
-        if ($databaseUuid !== null) {
+        if ($uuid !== null) {
             $resourcePath = str_replace(
-                '{' . 'databaseUuid' . '}',
-                ObjectSerializer::toPathValue($databaseUuid),
+                '{' . 'uuid' . '}',
+                ObjectSerializer::toPathValue($uuid),
                 $resourcePath
             );
         }
         // path params
-        if ($userId !== null) {
+        if ($id !== null) {
             $resourcePath = str_replace(
-                '{' . 'userId' . '}',
-                ObjectSerializer::toPathValue($userId),
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
                 $resourcePath
             );
         }
@@ -845,8 +845,8 @@ class DatabasesApi
      *
      * List all databases
      *
-     * @param  string $organizationUuid Organization unique identifier. (optional)
-     * @param  string $databaseName Database name. (optional)
+     * @param  string $organizationUuid organizationUuid (optional)
+     * @param  string $databaseName databaseName (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -863,8 +863,8 @@ class DatabasesApi
      *
      * List all databases
      *
-     * @param  string $organizationUuid Organization unique identifier. (optional)
-     * @param  string $databaseName Database name. (optional)
+     * @param  string $organizationUuid (optional)
+     * @param  string $databaseName (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1009,8 +1009,8 @@ class DatabasesApi
      *
      * List all databases
      *
-     * @param  string $organizationUuid Organization unique identifier. (optional)
-     * @param  string $databaseName Database name. (optional)
+     * @param  string $organizationUuid (optional)
+     * @param  string $databaseName (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1030,8 +1030,8 @@ class DatabasesApi
      *
      * List all databases
      *
-     * @param  string $organizationUuid Organization unique identifier. (optional)
-     * @param  string $databaseName Database name. (optional)
+     * @param  string $organizationUuid (optional)
+     * @param  string $databaseName (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1080,8 +1080,8 @@ class DatabasesApi
     /**
      * Create request for operation 'listDatabases'
      *
-     * @param  string $organizationUuid Organization unique identifier. (optional)
-     * @param  string $databaseName Database name. (optional)
+     * @param  string $organizationUuid (optional)
+     * @param  string $databaseName (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1184,15 +1184,15 @@ class DatabasesApi
      *
      * List database&#39;s users
      *
-     * @param  string $databaseUuid Database unique identifier. (required)
+     * @param  string $uuid uuid (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Equisoft\SDK\EquisoftConnect\Model\UsersListUsersResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
-    public function listUsers($databaseUuid)
+    public function listUsers($uuid)
     {
-        list($response) = $this->listUsersWithHttpInfo($databaseUuid);
+        list($response) = $this->listUsersWithHttpInfo($uuid);
         return $response;
     }
 
@@ -1201,15 +1201,15 @@ class DatabasesApi
      *
      * List database&#39;s users
      *
-     * @param  string $databaseUuid Database unique identifier. (required)
+     * @param  string $uuid (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Equisoft\SDK\EquisoftConnect\Model\UsersListUsersResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listUsersWithHttpInfo($databaseUuid)
+    public function listUsersWithHttpInfo($uuid)
     {
-        $request = $this->listUsersRequest($databaseUuid);
+        $request = $this->listUsersRequest($uuid);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1369,14 +1369,14 @@ class DatabasesApi
      *
      * List database&#39;s users
      *
-     * @param  string $databaseUuid Database unique identifier. (required)
+     * @param  string $uuid (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listUsersAsync($databaseUuid)
+    public function listUsersAsync($uuid)
     {
-        return $this->listUsersAsyncWithHttpInfo($databaseUuid)
+        return $this->listUsersAsyncWithHttpInfo($uuid)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1389,15 +1389,15 @@ class DatabasesApi
      *
      * List database&#39;s users
      *
-     * @param  string $databaseUuid Database unique identifier. (required)
+     * @param  string $uuid (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listUsersAsyncWithHttpInfo($databaseUuid)
+    public function listUsersAsyncWithHttpInfo($uuid)
     {
         $returnType = '\Equisoft\SDK\EquisoftConnect\Model\UsersListUsersResponse';
-        $request = $this->listUsersRequest($databaseUuid);
+        $request = $this->listUsersRequest($uuid);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1438,21 +1438,21 @@ class DatabasesApi
     /**
      * Create request for operation 'listUsers'
      *
-     * @param  string $databaseUuid Database unique identifier. (required)
+     * @param  string $uuid (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function listUsersRequest($databaseUuid)
+    public function listUsersRequest($uuid)
     {
-        // verify the required parameter 'databaseUuid' is set
-        if ($databaseUuid === null || (is_array($databaseUuid) && count($databaseUuid) === 0)) {
+        // verify the required parameter 'uuid' is set
+        if ($uuid === null || (is_array($uuid) && count($uuid) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $databaseUuid when calling listUsers'
+                'Missing the required parameter $uuid when calling listUsers'
             );
         }
 
-        $resourcePath = '/crm/api/v1/databases/{databaseUuid}/users';
+        $resourcePath = '/crm/api/v1/databases/{uuid}/users';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1462,10 +1462,10 @@ class DatabasesApi
 
 
         // path params
-        if ($databaseUuid !== null) {
+        if ($uuid !== null) {
             $resourcePath = str_replace(
-                '{' . 'databaseUuid' . '}',
-                ObjectSerializer::toPathValue($databaseUuid),
+                '{' . 'uuid' . '}',
+                ObjectSerializer::toPathValue($uuid),
                 $resourcePath
             );
         }
@@ -1537,17 +1537,17 @@ class DatabasesApi
      *
      * Update a database&#39;s user
      *
-     * @param  string $databaseUuid Database unique identifier. (required)
-     * @param  int $userId User identifier. (required)
+     * @param  string $uuid uuid (required)
+     * @param  int $id id (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\UsersUpdateUserPayload $usersUpdateUserPayload usersUpdateUserPayload (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function updateUser($databaseUuid, $userId, $usersUpdateUserPayload)
+    public function updateUser($uuid, $id, $usersUpdateUserPayload)
     {
-        $this->updateUserWithHttpInfo($databaseUuid, $userId, $usersUpdateUserPayload);
+        $this->updateUserWithHttpInfo($uuid, $id, $usersUpdateUserPayload);
     }
 
     /**
@@ -1555,17 +1555,17 @@ class DatabasesApi
      *
      * Update a database&#39;s user
      *
-     * @param  string $databaseUuid Database unique identifier. (required)
-     * @param  int $userId User identifier. (required)
+     * @param  string $uuid (required)
+     * @param  int $id (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\UsersUpdateUserPayload $usersUpdateUserPayload (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateUserWithHttpInfo($databaseUuid, $userId, $usersUpdateUserPayload)
+    public function updateUserWithHttpInfo($uuid, $id, $usersUpdateUserPayload)
     {
-        $request = $this->updateUserRequest($databaseUuid, $userId, $usersUpdateUserPayload);
+        $request = $this->updateUserRequest($uuid, $id, $usersUpdateUserPayload);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1640,16 +1640,16 @@ class DatabasesApi
      *
      * Update a database&#39;s user
      *
-     * @param  string $databaseUuid Database unique identifier. (required)
-     * @param  int $userId User identifier. (required)
+     * @param  string $uuid (required)
+     * @param  int $id (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\UsersUpdateUserPayload $usersUpdateUserPayload (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateUserAsync($databaseUuid, $userId, $usersUpdateUserPayload)
+    public function updateUserAsync($uuid, $id, $usersUpdateUserPayload)
     {
-        return $this->updateUserAsyncWithHttpInfo($databaseUuid, $userId, $usersUpdateUserPayload)
+        return $this->updateUserAsyncWithHttpInfo($uuid, $id, $usersUpdateUserPayload)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1662,17 +1662,17 @@ class DatabasesApi
      *
      * Update a database&#39;s user
      *
-     * @param  string $databaseUuid Database unique identifier. (required)
-     * @param  int $userId User identifier. (required)
+     * @param  string $uuid (required)
+     * @param  int $id (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\UsersUpdateUserPayload $usersUpdateUserPayload (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateUserAsyncWithHttpInfo($databaseUuid, $userId, $usersUpdateUserPayload)
+    public function updateUserAsyncWithHttpInfo($uuid, $id, $usersUpdateUserPayload)
     {
         $returnType = '';
-        $request = $this->updateUserRequest($databaseUuid, $userId, $usersUpdateUserPayload);
+        $request = $this->updateUserRequest($uuid, $id, $usersUpdateUserPayload);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1700,25 +1700,25 @@ class DatabasesApi
     /**
      * Create request for operation 'updateUser'
      *
-     * @param  string $databaseUuid Database unique identifier. (required)
-     * @param  int $userId User identifier. (required)
+     * @param  string $uuid (required)
+     * @param  int $id (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\UsersUpdateUserPayload $usersUpdateUserPayload (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function updateUserRequest($databaseUuid, $userId, $usersUpdateUserPayload)
+    public function updateUserRequest($uuid, $id, $usersUpdateUserPayload)
     {
-        // verify the required parameter 'databaseUuid' is set
-        if ($databaseUuid === null || (is_array($databaseUuid) && count($databaseUuid) === 0)) {
+        // verify the required parameter 'uuid' is set
+        if ($uuid === null || (is_array($uuid) && count($uuid) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $databaseUuid when calling updateUser'
+                'Missing the required parameter $uuid when calling updateUser'
             );
         }
-        // verify the required parameter 'userId' is set
-        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $userId when calling updateUser'
+                'Missing the required parameter $id when calling updateUser'
             );
         }
         // verify the required parameter 'usersUpdateUserPayload' is set
@@ -1728,7 +1728,7 @@ class DatabasesApi
             );
         }
 
-        $resourcePath = '/crm/api/v1/databases/{databaseUuid}/users/{userId}';
+        $resourcePath = '/crm/api/v1/databases/{uuid}/users/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1738,18 +1738,18 @@ class DatabasesApi
 
 
         // path params
-        if ($databaseUuid !== null) {
+        if ($uuid !== null) {
             $resourcePath = str_replace(
-                '{' . 'databaseUuid' . '}',
-                ObjectSerializer::toPathValue($databaseUuid),
+                '{' . 'uuid' . '}',
+                ObjectSerializer::toPathValue($uuid),
                 $resourcePath
             );
         }
         // path params
-        if ($userId !== null) {
+        if ($id !== null) {
             $resourcePath = str_replace(
-                '{' . 'userId' . '}',
-                ObjectSerializer::toPathValue($userId),
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
                 $resourcePath
             );
         }

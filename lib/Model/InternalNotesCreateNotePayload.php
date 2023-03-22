@@ -219,7 +219,7 @@ class InternalNotesCreateNotePayload implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets content
      *
-     * @param string $content Content.
+     * @param string $content content
      *
      * @return self
      */
