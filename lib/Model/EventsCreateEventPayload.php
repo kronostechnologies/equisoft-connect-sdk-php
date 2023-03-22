@@ -675,7 +675,7 @@ class EventsCreateEventPayload implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets ownerIds
      *
-     * @param int[]|null $ownerIds For local legacy events, `ownerIds` can be used instead of calendarId to create an Event for many user at once. - Cannot be used with `calendarId`. - Cannot be used for users with remote calendar (Exchange, Microsoft, Outlook.com).
+     * @param int[]|null $ownerIds For local legacy events, `ownerIds` can be used instead of calendarId to create an Event for many user at once. - Cannot be used with `calendarId`. - Cannot be used for users with remote calendar (Exchange, Office365, Outlook.com).
      *
      * @return self
      */
