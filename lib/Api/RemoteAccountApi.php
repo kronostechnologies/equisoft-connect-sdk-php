@@ -120,7 +120,7 @@ class RemoteAccountApi
      *
      * Return the mail account access rights granted to the currently connected user account.
      *
-     * @param  string $remoteAccountId Remote account id. (required)
+     * @param  string $remoteAccountId Remote account identifier. (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -137,7 +137,7 @@ class RemoteAccountApi
      *
      * Return the mail account access rights granted to the currently connected user account.
      *
-     * @param  string $remoteAccountId Remote account id. (required)
+     * @param  string $remoteAccountId Remote account identifier. (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -259,7 +259,7 @@ class RemoteAccountApi
      *
      * Return the mail account access rights granted to the currently connected user account.
      *
-     * @param  string $remoteAccountId Remote account id. (required)
+     * @param  string $remoteAccountId Remote account identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -279,7 +279,7 @@ class RemoteAccountApi
      *
      * Return the mail account access rights granted to the currently connected user account.
      *
-     * @param  string $remoteAccountId Remote account id. (required)
+     * @param  string $remoteAccountId Remote account identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -328,7 +328,7 @@ class RemoteAccountApi
     /**
      * Create request for operation 'getMailAccountAccessRights'
      *
-     * @param  string $remoteAccountId Remote account id. (required)
+     * @param  string $remoteAccountId Remote account identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

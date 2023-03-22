@@ -121,7 +121,7 @@ class ContactsApi
      * Return the detail of a contact.
      *
      * @param  string $contactUuid Contact unique identifier. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -139,7 +139,7 @@ class ContactsApi
      * Return the detail of a contact.
      *
      * @param  string $contactUuid Contact unique identifier. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -308,7 +308,7 @@ class ContactsApi
      * Return the detail of a contact.
      *
      * @param  string $contactUuid Contact unique identifier. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -329,7 +329,7 @@ class ContactsApi
      * Return the detail of a contact.
      *
      * @param  string $contactUuid Contact unique identifier. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -379,7 +379,7 @@ class ContactsApi
      * Create request for operation 'getByUuid'
      *
      * @param  string $contactUuid Contact unique identifier. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

@@ -57,7 +57,7 @@ class MovementGetStatusResponse implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'status' => 'string'
+        'status' => '\Equisoft\SDK\EquisoftConnect\Model\MovementMovementStatus'
     ];
 
     /**
@@ -209,7 +209,7 @@ class MovementGetStatusResponse implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets status
      *
-     * @return string
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementMovementStatus
      */
     public function getStatus()
     {
@@ -219,7 +219,7 @@ class MovementGetStatusResponse implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets status
      *
-     * @param string $status status
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementMovementStatus $status status
      *
      * @return self
      */

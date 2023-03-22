@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **start** | [**\Equisoft\SDK\EquisoftConnect\Model\DateOrDateTime**](DateOrDateTime.md) |  | [optional]
 **end** | [**\Equisoft\SDK\EquisoftConnect\Model\DateOrDateTime**](DateOrDateTime.md) |  | [optional]
 **allDay** | **bool** | Indicate if the event is an all-day event or a timed event. | [optional]
-**initialDate** | **string** | Date the Event was initially scheduled. As defined by full-date - RFC3339 | [optional]
+**initialDate** | **string** | Date the Event was initially scheduled. As defined by full-date - RFC3339. | [optional]
 **description** | **string** | Public description of the Event. | [optional]
 **internalNotes** | **string** | Internal notes on the Event. Not synced on remote sources. | [optional]
 **location** | **string** | Location of the event in free-text form. | [optional]

@@ -122,7 +122,7 @@ class TasksApi
      *
      * @param  string $taskId Task unique identifier. (required)
      * @param  int $noteId Note unique identifier. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -140,7 +140,7 @@ class TasksApi
      *
      * @param  string $taskId Task unique identifier. (required)
      * @param  int $noteId Note unique identifier. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -225,7 +225,7 @@ class TasksApi
      *
      * @param  string $taskId Task unique identifier. (required)
      * @param  int $noteId Note unique identifier. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -247,7 +247,7 @@ class TasksApi
      *
      * @param  string $taskId Task unique identifier. (required)
      * @param  int $noteId Note unique identifier. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -285,7 +285,7 @@ class TasksApi
      *
      * @param  string $taskId Task unique identifier. (required)
      * @param  int $noteId Note unique identifier. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -403,7 +403,7 @@ class TasksApi
      * Create a task.
      *
      * @param  \Equisoft\SDK\EquisoftConnect\Model\TasksCreateTaskPayload $tasksCreateTaskPayload tasksCreateTaskPayload (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -421,7 +421,7 @@ class TasksApi
      * Create a task.
      *
      * @param  \Equisoft\SDK\EquisoftConnect\Model\TasksCreateTaskPayload $tasksCreateTaskPayload (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -590,7 +590,7 @@ class TasksApi
      * Create a task.
      *
      * @param  \Equisoft\SDK\EquisoftConnect\Model\TasksCreateTaskPayload $tasksCreateTaskPayload (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -611,7 +611,7 @@ class TasksApi
      * Create a task.
      *
      * @param  \Equisoft\SDK\EquisoftConnect\Model\TasksCreateTaskPayload $tasksCreateTaskPayload (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -661,7 +661,7 @@ class TasksApi
      * Create request for operation 'createTask'
      *
      * @param  \Equisoft\SDK\EquisoftConnect\Model\TasksCreateTaskPayload $tasksCreateTaskPayload (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -764,7 +764,7 @@ class TasksApi
      *
      * @param  string $taskId Task unique identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNotePayload $internalNotesCreateNotePayload internalNotesCreateNotePayload (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -783,7 +783,7 @@ class TasksApi
      *
      * @param  string $taskId Task unique identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNotePayload $internalNotesCreateNotePayload (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -953,7 +953,7 @@ class TasksApi
      *
      * @param  string $taskId Task unique identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNotePayload $internalNotesCreateNotePayload (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -975,7 +975,7 @@ class TasksApi
      *
      * @param  string $taskId Task unique identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNotePayload $internalNotesCreateNotePayload (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1026,7 +1026,7 @@ class TasksApi
      *
      * @param  string $taskId Task unique identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNotePayload $internalNotesCreateNotePayload (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1396,7 +1396,7 @@ class TasksApi
      * Return the detail of a task.
      *
      * @param  string $taskId taskId (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1414,7 +1414,7 @@ class TasksApi
      * Return the detail of a task.
      *
      * @param  string $taskId (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1583,7 +1583,7 @@ class TasksApi
      * Return the detail of a task.
      *
      * @param  string $taskId (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1604,7 +1604,7 @@ class TasksApi
      * Return the detail of a task.
      *
      * @param  string $taskId (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1654,7 +1654,7 @@ class TasksApi
      * Create request for operation 'getTask'
      *
      * @param  string $taskId (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1759,7 +1759,7 @@ class TasksApi
      *
      * @param  string $taskId taskId (required)
      * @param  InternalNotesHistoryType $history Query all revisions or not. (optional)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1778,7 +1778,7 @@ class TasksApi
      *
      * @param  string $taskId (required)
      * @param  InternalNotesHistoryType $history Query all revisions or not. (optional)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1948,7 +1948,7 @@ class TasksApi
      *
      * @param  string $taskId (required)
      * @param  InternalNotesHistoryType $history Query all revisions or not. (optional)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1970,7 +1970,7 @@ class TasksApi
      *
      * @param  string $taskId (required)
      * @param  InternalNotesHistoryType $history Query all revisions or not. (optional)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2021,7 +2021,7 @@ class TasksApi
      *
      * @param  string $taskId (required)
      * @param  InternalNotesHistoryType $history Query all revisions or not. (optional)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2134,15 +2134,15 @@ class TasksApi
      * List or search tasks.
      *
      * @param  string $ownerId Owner ID filter param. (optional)
-     * @param  int[] $contactIds Contact ID filter param. Many ids can be passed to this argument separated by coma. Ex: &#39;?contactId&#x3D;1,2,3&#39;. Any of the given contacts will be returned in the result. (optional)
+     * @param  int[] $contactIds Contact ID filter param. Many ids can be passed to this argument separated by coma. Ex: &#39;?contactIds&#x3D;1,2,3&#39;. Any of the given contacts will be returned in the result. (optional)
      * @param  \DateTime $minDueDate Minimum (inclusive) due date of the task. (optional)
      * @param  \DateTime $maxDueDate Maximum (exclusive) due date of the task. (optional)
      * @param  bool $isCompleted If true, include only completed tasks. If false, include only TODO tasks. If not set or null, include both. (optional)
      * @param  TasksDueDateFilter $dueDateFilter Include or exclude tasks with or without due date. (optional)
      * @param  TasksOrderByType $orderBy Specify the order of the results. (optional)
      * @param  string $pageToken Token to specify which page to fetch. (optional)
-     * @param  string $maxResults Maximum number of records for one result page.  If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2160,15 +2160,15 @@ class TasksApi
      * List or search tasks.
      *
      * @param  string $ownerId Owner ID filter param. (optional)
-     * @param  int[] $contactIds Contact ID filter param. Many ids can be passed to this argument separated by coma. Ex: &#39;?contactId&#x3D;1,2,3&#39;. Any of the given contacts will be returned in the result. (optional)
+     * @param  int[] $contactIds Contact ID filter param. Many ids can be passed to this argument separated by coma. Ex: &#39;?contactIds&#x3D;1,2,3&#39;. Any of the given contacts will be returned in the result. (optional)
      * @param  \DateTime $minDueDate Minimum (inclusive) due date of the task. (optional)
      * @param  \DateTime $maxDueDate Maximum (exclusive) due date of the task. (optional)
      * @param  bool $isCompleted If true, include only completed tasks. If false, include only TODO tasks. If not set or null, include both. (optional)
      * @param  TasksDueDateFilter $dueDateFilter Include or exclude tasks with or without due date. (optional)
      * @param  TasksOrderByType $orderBy Specify the order of the results. (optional)
      * @param  string $pageToken Token to specify which page to fetch. (optional)
-     * @param  string $maxResults Maximum number of records for one result page.  If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2337,15 +2337,15 @@ class TasksApi
      * List or search tasks.
      *
      * @param  string $ownerId Owner ID filter param. (optional)
-     * @param  int[] $contactIds Contact ID filter param. Many ids can be passed to this argument separated by coma. Ex: &#39;?contactId&#x3D;1,2,3&#39;. Any of the given contacts will be returned in the result. (optional)
+     * @param  int[] $contactIds Contact ID filter param. Many ids can be passed to this argument separated by coma. Ex: &#39;?contactIds&#x3D;1,2,3&#39;. Any of the given contacts will be returned in the result. (optional)
      * @param  \DateTime $minDueDate Minimum (inclusive) due date of the task. (optional)
      * @param  \DateTime $maxDueDate Maximum (exclusive) due date of the task. (optional)
      * @param  bool $isCompleted If true, include only completed tasks. If false, include only TODO tasks. If not set or null, include both. (optional)
      * @param  TasksDueDateFilter $dueDateFilter Include or exclude tasks with or without due date. (optional)
      * @param  TasksOrderByType $orderBy Specify the order of the results. (optional)
      * @param  string $pageToken Token to specify which page to fetch. (optional)
-     * @param  string $maxResults Maximum number of records for one result page.  If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2366,15 +2366,15 @@ class TasksApi
      * List or search tasks.
      *
      * @param  string $ownerId Owner ID filter param. (optional)
-     * @param  int[] $contactIds Contact ID filter param. Many ids can be passed to this argument separated by coma. Ex: &#39;?contactId&#x3D;1,2,3&#39;. Any of the given contacts will be returned in the result. (optional)
+     * @param  int[] $contactIds Contact ID filter param. Many ids can be passed to this argument separated by coma. Ex: &#39;?contactIds&#x3D;1,2,3&#39;. Any of the given contacts will be returned in the result. (optional)
      * @param  \DateTime $minDueDate Minimum (inclusive) due date of the task. (optional)
      * @param  \DateTime $maxDueDate Maximum (exclusive) due date of the task. (optional)
      * @param  bool $isCompleted If true, include only completed tasks. If false, include only TODO tasks. If not set or null, include both. (optional)
      * @param  TasksDueDateFilter $dueDateFilter Include or exclude tasks with or without due date. (optional)
      * @param  TasksOrderByType $orderBy Specify the order of the results. (optional)
      * @param  string $pageToken Token to specify which page to fetch. (optional)
-     * @param  string $maxResults Maximum number of records for one result page.  If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2424,15 +2424,15 @@ class TasksApi
      * Create request for operation 'listTasks'
      *
      * @param  string $ownerId Owner ID filter param. (optional)
-     * @param  int[] $contactIds Contact ID filter param. Many ids can be passed to this argument separated by coma. Ex: &#39;?contactId&#x3D;1,2,3&#39;. Any of the given contacts will be returned in the result. (optional)
+     * @param  int[] $contactIds Contact ID filter param. Many ids can be passed to this argument separated by coma. Ex: &#39;?contactIds&#x3D;1,2,3&#39;. Any of the given contacts will be returned in the result. (optional)
      * @param  \DateTime $minDueDate Minimum (inclusive) due date of the task. (optional)
      * @param  \DateTime $maxDueDate Maximum (exclusive) due date of the task. (optional)
      * @param  bool $isCompleted If true, include only completed tasks. If false, include only TODO tasks. If not set or null, include both. (optional)
      * @param  TasksDueDateFilter $dueDateFilter Include or exclude tasks with or without due date. (optional)
      * @param  TasksOrderByType $orderBy Specify the order of the results. (optional)
      * @param  string $pageToken Token to specify which page to fetch. (optional)
-     * @param  string $maxResults Maximum number of records for one result page.  If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2604,7 +2604,7 @@ class TasksApi
      *
      * @param  string $taskId Task unique identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\TasksPatchTaskPayload $tasksPatchTaskPayload Event fields to update. The body of the patch request includes only the resource fields you want to modify. To delete a field, set it to null. Collections are always overridden if defined. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2623,7 +2623,7 @@ class TasksApi
      *
      * @param  string $taskId Task unique identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\TasksPatchTaskPayload $tasksPatchTaskPayload Event fields to update. The body of the patch request includes only the resource fields you want to modify. To delete a field, set it to null. Collections are always overridden if defined. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -2793,7 +2793,7 @@ class TasksApi
      *
      * @param  string $taskId Task unique identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\TasksPatchTaskPayload $tasksPatchTaskPayload Event fields to update. The body of the patch request includes only the resource fields you want to modify. To delete a field, set it to null. Collections are always overridden if defined. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2815,7 +2815,7 @@ class TasksApi
      *
      * @param  string $taskId Task unique identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\TasksPatchTaskPayload $tasksPatchTaskPayload Event fields to update. The body of the patch request includes only the resource fields you want to modify. To delete a field, set it to null. Collections are always overridden if defined. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2866,7 +2866,7 @@ class TasksApi
      *
      * @param  string $taskId Task unique identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\TasksPatchTaskPayload $tasksPatchTaskPayload Event fields to update. The body of the patch request includes only the resource fields you want to modify. To delete a field, set it to null. Collections are always overridden if defined. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2984,7 +2984,7 @@ class TasksApi
      * @param  string $taskId Task unique identifier. (required)
      * @param  int $noteId Note unique identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNotePayload $internalNotesPatchNotePayload internalNotesPatchNotePayload (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3004,7 +3004,7 @@ class TasksApi
      * @param  string $taskId Task unique identifier. (required)
      * @param  int $noteId Note unique identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNotePayload $internalNotesPatchNotePayload (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3175,7 +3175,7 @@ class TasksApi
      * @param  string $taskId Task unique identifier. (required)
      * @param  int $noteId Note unique identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNotePayload $internalNotesPatchNotePayload (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3198,7 +3198,7 @@ class TasksApi
      * @param  string $taskId Task unique identifier. (required)
      * @param  int $noteId Note unique identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNotePayload $internalNotesPatchNotePayload (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3250,7 +3250,7 @@ class TasksApi
      * @param  string $taskId Task unique identifier. (required)
      * @param  int $noteId Note unique identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNotePayload $internalNotesPatchNotePayload (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3381,7 +3381,7 @@ class TasksApi
      *
      * @param  string $taskId Task unique identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload $tasksPutTaskLinkDocumentsPayload Contains an array of Ids for the documents to link with the task.  *     To remove all links, documentIds set to an empty array  Collections are always overridden if defined. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3399,7 +3399,7 @@ class TasksApi
      *
      * @param  string $taskId Task unique identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload $tasksPutTaskLinkDocumentsPayload Contains an array of Ids for the documents to link with the task.  *     To remove all links, documentIds set to an empty array  Collections are always overridden if defined. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3484,7 +3484,7 @@ class TasksApi
      *
      * @param  string $taskId Task unique identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload $tasksPutTaskLinkDocumentsPayload Contains an array of Ids for the documents to link with the task.  *     To remove all links, documentIds set to an empty array  Collections are always overridden if defined. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3506,7 +3506,7 @@ class TasksApi
      *
      * @param  string $taskId Task unique identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload $tasksPutTaskLinkDocumentsPayload Contains an array of Ids for the documents to link with the task.  *     To remove all links, documentIds set to an empty array  Collections are always overridden if defined. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3544,7 +3544,7 @@ class TasksApi
      *
      * @param  string $taskId Task unique identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload $tasksPutTaskLinkDocumentsPayload Contains an array of Ids for the documents to link with the task.  *     To remove all links, documentIds set to an empty array  Collections are always overridden if defined. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3661,7 +3661,7 @@ class TasksApi
      *
      * @param  string $taskId Task unique identifier. (required)
      * @param  int $noteId Note unique identifier. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3679,7 +3679,7 @@ class TasksApi
      *
      * @param  string $taskId Task unique identifier. (required)
      * @param  int $noteId Note unique identifier. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -3764,7 +3764,7 @@ class TasksApi
      *
      * @param  string $taskId Task unique identifier. (required)
      * @param  int $noteId Note unique identifier. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3786,7 +3786,7 @@ class TasksApi
      *
      * @param  string $taskId Task unique identifier. (required)
      * @param  int $noteId Note unique identifier. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3824,7 +3824,7 @@ class TasksApi
      *
      * @param  string $taskId Task unique identifier. (required)
      * @param  int $noteId Note unique identifier. (required)
-     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282 (optional)
+     * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

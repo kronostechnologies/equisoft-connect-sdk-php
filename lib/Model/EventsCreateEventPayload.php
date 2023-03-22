@@ -411,7 +411,7 @@ class EventsCreateEventPayload implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets initialDate
      *
-     * @param string|null $initialDate Date the Event was initially scheduled. As defined by full-date - RFC3339
+     * @param string|null $initialDate Date the Event was initially scheduled. As defined by full-date - RFC3339.
      *
      * @return self
      */
@@ -651,7 +651,7 @@ class EventsCreateEventPayload implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets calendarId
      *
-     * @param string|null $calendarId Calendar the Event will be created for. A numerical ID returned by listCalendars. The string `primary` for the current connected user primary ('TODO') calendar. The string `completed` for the current connected user completed ('DONE') calendar. The `calendarId` parameter can't be used with the `ownerId` parameter.
+     * @param string|null $calendarId Calendar the Event will be created for. - A numerical ID returned by listCalendars. - The string \"primary\" for the current connected user primary (\"TODO\") calendar. - The string \"completed\" for the current connected user completed (\"DONE\") calendar. The `calendarId` parameter can't be used with the `ownerId` parameter.
      *
      * @return self
      */
@@ -675,7 +675,7 @@ class EventsCreateEventPayload implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets ownerIds
      *
-     * @param int[]|null $ownerIds For local legacy events, `ownerIds` can be used instead of calendarId to create an Event for many user at once. Cannot be used with `calendarId`. Cannot be used for users with remote calendar (Exchange, Office365, Outlook.com).
+     * @param int[]|null $ownerIds For local legacy events, `ownerIds` can be used instead of calendarId to create an Event for many user at once. - Cannot be used with `calendarId`. - Cannot be used for users with remote calendar (Exchange, Microsoft, Outlook.com).
      *
      * @return self
      */
