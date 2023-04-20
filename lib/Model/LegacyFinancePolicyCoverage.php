@@ -57,12 +57,15 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
+        'id' => 'string',
         'coverageType' => 'string',
         'product' => 'string',
         'productType' => 'string',
+        'productTypeSystemName' => 'string',
         'productSubType' => 'string',
         'deathCapital' => 'string',
         'issueDate' => 'string',
+        'amount' => 'string',
         'annualPremium' => 'string',
         'modalPremium' => 'string',
         'annualizedPremium' => 'string',
@@ -77,7 +80,9 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
         'insureds' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyFinancePolicyCoverageInsured[]',
         'livesType' => 'string',
         'coverageOptions' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyFinancePolicyCoverageOption[]',
-        'isInsured' => 'string'
+        'isInsured' => 'string',
+        'expiryDate' => 'string',
+        'accountStatementNotes' => 'string'
     ];
 
     /**
@@ -88,12 +93,15 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'id' => null,
         'coverageType' => null,
         'product' => null,
         'productType' => null,
+        'productTypeSystemName' => null,
         'productSubType' => null,
         'deathCapital' => null,
         'issueDate' => null,
+        'amount' => null,
         'annualPremium' => null,
         'modalPremium' => null,
         'annualizedPremium' => null,
@@ -108,7 +116,9 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
         'insureds' => null,
         'livesType' => null,
         'coverageOptions' => null,
-        'isInsured' => null
+        'isInsured' => null,
+        'expiryDate' => null,
+        'accountStatementNotes' => null
     ];
 
     /**
@@ -138,12 +148,15 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $attributeMap = [
+        'id' => 'id',
         'coverageType' => 'coverageType',
         'product' => 'product',
         'productType' => 'productType',
+        'productTypeSystemName' => 'productTypeSystemName',
         'productSubType' => 'productSubType',
         'deathCapital' => 'deathCapital',
         'issueDate' => 'issueDate',
+        'amount' => 'amount',
         'annualPremium' => 'annualPremium',
         'modalPremium' => 'modalPremium',
         'annualizedPremium' => 'annualizedPremium',
@@ -158,7 +171,9 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
         'insureds' => 'insureds',
         'livesType' => 'livesType',
         'coverageOptions' => 'coverageOptions',
-        'isInsured' => 'isInsured'
+        'isInsured' => 'isInsured',
+        'expiryDate' => 'expiryDate',
+        'accountStatementNotes' => 'accountStatementNotes'
     ];
 
     /**
@@ -167,12 +182,15 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $setters = [
+        'id' => 'setId',
         'coverageType' => 'setCoverageType',
         'product' => 'setProduct',
         'productType' => 'setProductType',
+        'productTypeSystemName' => 'setProductTypeSystemName',
         'productSubType' => 'setProductSubType',
         'deathCapital' => 'setDeathCapital',
         'issueDate' => 'setIssueDate',
+        'amount' => 'setAmount',
         'annualPremium' => 'setAnnualPremium',
         'modalPremium' => 'setModalPremium',
         'annualizedPremium' => 'setAnnualizedPremium',
@@ -187,7 +205,9 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
         'insureds' => 'setInsureds',
         'livesType' => 'setLivesType',
         'coverageOptions' => 'setCoverageOptions',
-        'isInsured' => 'setIsInsured'
+        'isInsured' => 'setIsInsured',
+        'expiryDate' => 'setExpiryDate',
+        'accountStatementNotes' => 'setAccountStatementNotes'
     ];
 
     /**
@@ -196,12 +216,15 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $getters = [
+        'id' => 'getId',
         'coverageType' => 'getCoverageType',
         'product' => 'getProduct',
         'productType' => 'getProductType',
+        'productTypeSystemName' => 'getProductTypeSystemName',
         'productSubType' => 'getProductSubType',
         'deathCapital' => 'getDeathCapital',
         'issueDate' => 'getIssueDate',
+        'amount' => 'getAmount',
         'annualPremium' => 'getAnnualPremium',
         'modalPremium' => 'getModalPremium',
         'annualizedPremium' => 'getAnnualizedPremium',
@@ -216,7 +239,9 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
         'insureds' => 'getInsureds',
         'livesType' => 'getLivesType',
         'coverageOptions' => 'getCoverageOptions',
-        'isInsured' => 'getIsInsured'
+        'isInsured' => 'getIsInsured',
+        'expiryDate' => 'getExpiryDate',
+        'accountStatementNotes' => 'getAccountStatementNotes'
     ];
 
     /**
@@ -276,12 +301,15 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
      */
     public function __construct(array $data = null)
     {
+        $this->container['id'] = $data['id'] ?? null;
         $this->container['coverageType'] = $data['coverageType'] ?? null;
         $this->container['product'] = $data['product'] ?? null;
         $this->container['productType'] = $data['productType'] ?? null;
+        $this->container['productTypeSystemName'] = $data['productTypeSystemName'] ?? null;
         $this->container['productSubType'] = $data['productSubType'] ?? null;
         $this->container['deathCapital'] = $data['deathCapital'] ?? null;
         $this->container['issueDate'] = $data['issueDate'] ?? null;
+        $this->container['amount'] = $data['amount'] ?? null;
         $this->container['annualPremium'] = $data['annualPremium'] ?? null;
         $this->container['modalPremium'] = $data['modalPremium'] ?? null;
         $this->container['annualizedPremium'] = $data['annualizedPremium'] ?? null;
@@ -297,6 +325,8 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
         $this->container['livesType'] = $data['livesType'] ?? null;
         $this->container['coverageOptions'] = $data['coverageOptions'] ?? null;
         $this->container['isInsured'] = $data['isInsured'] ?? null;
+        $this->container['expiryDate'] = $data['expiryDate'] ?? null;
+        $this->container['accountStatementNotes'] = $data['accountStatementNotes'] ?? null;
     }
 
     /**
@@ -322,6 +352,30 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id id
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
 
     /**
      * Gets coverageType
@@ -396,6 +450,30 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
     }
 
     /**
+     * Gets productTypeSystemName
+     *
+     * @return string|null
+     */
+    public function getProductTypeSystemName()
+    {
+        return $this->container['productTypeSystemName'];
+    }
+
+    /**
+     * Sets productTypeSystemName
+     *
+     * @param string|null $productTypeSystemName productTypeSystemName
+     *
+     * @return self
+     */
+    public function setProductTypeSystemName($productTypeSystemName)
+    {
+        $this->container['productTypeSystemName'] = $productTypeSystemName;
+
+        return $this;
+    }
+
+    /**
      * Gets productSubType
      *
      * @return string|null
@@ -463,6 +541,30 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
     public function setIssueDate($issueDate)
     {
         $this->container['issueDate'] = $issueDate;
+
+        return $this;
+    }
+
+    /**
+     * Gets amount
+     *
+     * @return string|null
+     */
+    public function getAmount()
+    {
+        return $this->container['amount'];
+    }
+
+    /**
+     * Sets amount
+     *
+     * @param string|null $amount amount
+     *
+     * @return self
+     */
+    public function setAmount($amount)
+    {
+        $this->container['amount'] = $amount;
 
         return $this;
     }
@@ -823,6 +925,54 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
     public function setIsInsured($isInsured)
     {
         $this->container['isInsured'] = $isInsured;
+
+        return $this;
+    }
+
+    /**
+     * Gets expiryDate
+     *
+     * @return string|null
+     */
+    public function getExpiryDate()
+    {
+        return $this->container['expiryDate'];
+    }
+
+    /**
+     * Sets expiryDate
+     *
+     * @param string|null $expiryDate expiryDate
+     *
+     * @return self
+     */
+    public function setExpiryDate($expiryDate)
+    {
+        $this->container['expiryDate'] = $expiryDate;
+
+        return $this;
+    }
+
+    /**
+     * Gets accountStatementNotes
+     *
+     * @return string|null
+     */
+    public function getAccountStatementNotes()
+    {
+        return $this->container['accountStatementNotes'];
+    }
+
+    /**
+     * Sets accountStatementNotes
+     *
+     * @param string|null $accountStatementNotes accountStatementNotes
+     *
+     * @return self
+     */
+    public function setAccountStatementNotes($accountStatementNotes)
+    {
+        $this->container['accountStatementNotes'] = $accountStatementNotes;
 
         return $this;
     }
