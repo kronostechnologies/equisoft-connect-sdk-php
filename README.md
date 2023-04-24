@@ -104,6 +104,7 @@ Class | Method | HTTP request | Description
 *EventsApi* | [**restoreEventInternalNote**](docs/Api/EventsApi.md#restoreeventinternalnote) | **POST** /crm/api/v1/events/{eventId}/notes/{noteId}/restore | Restore an archived internal note for an event.
 *EventsApi* | [**transferEventToCompleted**](docs/Api/EventsApi.md#transfereventtocompleted) | **POST** /crm/api/v1/events/{eventId}/transferToCompleted | Transfer an event to the completed/done calendar.
 *FieldValuesApi* | [**listFields**](docs/Api/FieldValuesApi.md#listfields) | **GET** /crm/api/v1/fields | List fields with values list (values domain).
+*FieldValuesApi* | [**listValues**](docs/Api/FieldValuesApi.md#listvalues) | **GET** /crm/api/v1/fields/{fieldName}/values | List values for a specific field name
 *GatewaysApi* | [**createEquisoftAnalyzeAccess**](docs/Api/GatewaysApi.md#createequisoftanalyzeaccess) | **POST** /crm/api/v1/gateways/equisoftAnalyze/accesses | 
 *GatewaysApi* | [**deleteEquisoftAnalyzeAccess**](docs/Api/GatewaysApi.md#deleteequisoftanalyzeaccess) | **DELETE** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} | 
 *GatewaysApi* | [**gatewayAdminLogin**](docs/Api/GatewaysApi.md#gatewayadminlogin) | **POST** /crm/api/v1/gateways/credentials-validation/admin-credentials/login | 
@@ -203,7 +204,9 @@ Class | Method | HTTP request | Description
 - [FieldValue](docs/Model/FieldValue.md)
 - [FieldValueField](docs/Model/FieldValueField.md)
 - [FieldValueListFieldResponse](docs/Model/FieldValueListFieldResponse.md)
+- [FieldValueListValueResponse](docs/Model/FieldValueListValueResponse.md)
 - [FieldValueLocalizedString](docs/Model/FieldValueLocalizedString.md)
+- [FieldValueValue](docs/Model/FieldValueValue.md)
 - [GatewaysAccessesCreateAccessResponse](docs/Model/GatewaysAccessesCreateAccessResponse.md)
 - [GatewaysAccessesCreateEquisoftAnalyzeAccessPayload](docs/Model/GatewaysAccessesCreateEquisoftAnalyzeAccessPayload.md)
 - [GatewaysAccessesEquisoftAnalyzeAccess](docs/Model/GatewaysAccessesEquisoftAnalyzeAccess.md)
