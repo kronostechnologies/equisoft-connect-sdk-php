@@ -216,7 +216,7 @@ class LegacyDocumentGetResponseAllOf implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets documents
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocument[]|null $documents Array of documents
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocument[]|null $documents Array of documents.
      *
      * @return self
      */

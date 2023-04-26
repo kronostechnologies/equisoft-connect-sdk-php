@@ -1,6 +1,6 @@
 <?php
 /**
- * LegacyDocumentDocumentPayloadRequestTest
+ * FieldValueListValueResponseTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * LegacyDocumentDocumentPayloadRequestTest Class Doc Comment
+ * FieldValueListValueResponseTest Class Doc Comment
  *
  * @category    Class
- * @description Wrapper for Legacy payload argument.
+ * @description FieldValueListValueResponse
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class LegacyDocumentDocumentPayloadRequestTest extends TestCase
+class FieldValueListValueResponseTest extends TestCase
 {
 
     /**
@@ -71,18 +71,18 @@ class LegacyDocumentDocumentPayloadRequestTest extends TestCase
     }
 
     /**
-     * Test "LegacyDocumentDocumentPayloadRequest"
+     * Test "FieldValueListValueResponse"
      */
-    public function testLegacyDocumentDocumentPayloadRequest()
+    public function testFieldValueListValueResponse()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "payload"
+     * Test attribute "items"
      */
-    public function testPropertyPayload()
+    public function testPropertyItems()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

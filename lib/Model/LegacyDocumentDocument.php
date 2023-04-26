@@ -313,7 +313,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets externalKey
      *
-     * @param string|null $externalKey external key of the document
+     * @param string|null $externalKey External key of the document.
      *
      * @return self
      */
@@ -337,7 +337,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets dateStart
      *
-     * @param string|null $dateStart date start of the document
+     * @param string|null $dateStart Date start of the document.
      *
      * @return self
      */
@@ -361,7 +361,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets dateEnd
      *
-     * @param string|null $dateEnd date end of the document
+     * @param string|null $dateEnd Date end of the document.
      *
      * @return self
      */
@@ -385,7 +385,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets dateSignature
      *
-     * @param string|null $dateSignature date signature of the document
+     * @param string|null $dateSignature Date signature of the document.
      *
      * @return self
      */
@@ -409,7 +409,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets writtenBy
      *
-     * @param string|null $writtenBy author of the document
+     * @param string|null $writtenBy Author of the document.
      *
      * @return self
      */
@@ -433,7 +433,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets notes
      *
-     * @param string|null $notes notes of the document
+     * @param string|null $notes Notes of the document.
      *
      * @return self
      */
@@ -457,7 +457,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets users
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyUser[]|null $users users related to the document
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyUser[]|null $users Users related to the document.
      *
      * @return self
      */
@@ -577,7 +577,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets files
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentFile[]|null $files Files contained inside the document
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentFile[]|null $files Files contained inside the document.
      *
      * @return self
      */
@@ -601,7 +601,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets contacts
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyContactContact[]|null $contacts List of linked contacts
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyContactContact[]|null $contacts List of linked contacts.
      *
      * @return self
      */
@@ -625,7 +625,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets createdBy
      *
-     * @param string|null $createdBy email of user who created the document
+     * @param string|null $createdBy Email of user who created the document.
      *
      * @return self
      */
@@ -649,7 +649,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets createdOn
      *
-     * @param string|null $createdOn date of creation of the document
+     * @param string|null $createdOn Date of creation of the document.
      *
      * @return self
      */
@@ -673,7 +673,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets modifiedBy
      *
-     * @param string|null $modifiedBy email of user who last modified the document
+     * @param string|null $modifiedBy Email of user who last modified the document.
      *
      * @return self
      */
@@ -697,7 +697,7 @@ class LegacyDocumentDocument implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets modifiedOn
      *
-     * @param string|null $modifiedOn date of the last modification of the document
+     * @param string|null $modifiedOn Date of the last modification of the document.
      *
      * @return self
      */

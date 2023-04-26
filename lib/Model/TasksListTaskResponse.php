@@ -249,7 +249,7 @@ class TasksListTaskResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets items
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\TasksTask[] $items items
+     * @param \Equisoft\SDK\EquisoftConnect\Model\TasksTask[] $items List of tasks.
      *
      * @return self
      */

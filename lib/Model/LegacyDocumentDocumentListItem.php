@@ -336,7 +336,7 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets files
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentFile[]|null $files Files contained inside the document
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentFile[]|null $files Files contained inside the document.
      *
      * @return self
      */

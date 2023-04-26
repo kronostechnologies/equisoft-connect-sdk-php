@@ -228,7 +228,7 @@ class LegacyUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id id of the user
+     * @param string|null $id Id of the user.
      *
      * @return self
      */
@@ -252,7 +252,7 @@ class LegacyUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets displayName
      *
-     * @param string|null $displayName display name of the user
+     * @param string|null $displayName Display name of the user.
      *
      * @return self
      */
@@ -276,7 +276,7 @@ class LegacyUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets email
      *
-     * @param string|null $email email of the user
+     * @param string|null $email Email of the user.
      *
      * @return self
      */

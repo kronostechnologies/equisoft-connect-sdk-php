@@ -1,6 +1,6 @@
 <?php
 /**
- * LegacyDocumentDocumentPayloadRequestTest
+ * LegacyDocumentDocumentGetListPayloadRequestTest
  *
  * PHP version 7.4
  *
@@ -31,7 +31,7 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * LegacyDocumentDocumentPayloadRequestTest Class Doc Comment
+ * LegacyDocumentDocumentGetListPayloadRequestTest Class Doc Comment
  *
  * @category    Class
  * @description Wrapper for Legacy payload argument.
@@ -39,7 +39,7 @@ use PHPUnit\Framework\TestCase;
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class LegacyDocumentDocumentPayloadRequestTest extends TestCase
+class LegacyDocumentDocumentGetListPayloadRequestTest extends TestCase
 {
 
     /**
@@ -71,18 +71,18 @@ class LegacyDocumentDocumentPayloadRequestTest extends TestCase
     }
 
     /**
-     * Test "LegacyDocumentDocumentPayloadRequest"
+     * Test "LegacyDocumentDocumentGetListPayloadRequest"
      */
-    public function testLegacyDocumentDocumentPayloadRequest()
+    public function testLegacyDocumentDocumentGetListPayloadRequest()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "payload"
+     * Test attribute "optionsPayload"
      */
-    public function testPropertyPayload()
+    public function testPropertyOptionsPayload()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

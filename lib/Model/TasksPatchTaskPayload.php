@@ -300,7 +300,7 @@ class TasksPatchTaskPayload implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets dueDate
      *
-     * @param string|null $dueDate Date the task is expected to be done. As defined by full-date - RFC3339
+     * @param string|null $dueDate Date the task is expected to be done. As defined by full-date - RFC3339.
      *
      * @return self
      */
@@ -324,7 +324,7 @@ class TasksPatchTaskPayload implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets initialDate
      *
-     * @param string|null $initialDate Date the task was initially started. As defined by full-date - RFC3339
+     * @param string|null $initialDate Date the task was initially started. As defined by full-date - RFC3339.
      *
      * @return self
      */
@@ -348,7 +348,7 @@ class TasksPatchTaskPayload implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets completedDate
      *
-     * @param string|null $completedDate Date the task was completed / done. As defined by full-date - RFC3339
+     * @param string|null $completedDate Date the task was completed / done. As defined by full-date - RFC3339.
      *
      * @return self
      */
@@ -492,7 +492,7 @@ class TasksPatchTaskPayload implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets visibility
      *
-     * @param string|null $visibility Confidentiality level of the Event (private or not). [NORMAL, PRIVATE]
+     * @param string|null $visibility Confidentiality level of the Event (private or not). [NORMAL, PRIVATE].
      *
      * @return self
      */

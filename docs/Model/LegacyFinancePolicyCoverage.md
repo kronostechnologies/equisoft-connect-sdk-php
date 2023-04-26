@@ -4,12 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**id** | **string** |  | [optional]
 **coverageType** | **string** | BASE or RIDER | [optional]
 **product** | **string** |  | [optional]
 **productType** | **string** |  | [optional]
+**productTypeSystemName** | **string** |  | [optional]
 **productSubType** | **string** |  | [optional]
 **deathCapital** | **string** |  | [optional]
 **issueDate** | **string** |  | [optional]
+**amount** | **string** |  | [optional]
 **annualPremium** | **string** |  | [optional]
 **modalPremium** | **string** |  | [optional]
 **annualizedPremium** | **string** |  | [optional]
@@ -25,5 +28,7 @@ Name | Type | Description | Notes
 **livesType** | **string** |  | [optional]
 **coverageOptions** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyFinancePolicyCoverageOption[]**](LegacyFinancePolicyCoverageOption.md) |  | [optional]
 **isInsured** | **string** |  | [optional]
+**expiryDate** | **string** |  | [optional]
+**accountStatementNotes** | **string** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -104,6 +104,7 @@ Class | Method | HTTP request | Description
 *EventsApi* | [**restoreEventInternalNote**](docs/Api/EventsApi.md#restoreeventinternalnote) | **POST** /crm/api/v1/events/{eventId}/notes/{noteId}/restore | Restore an archived internal note for an event.
 *EventsApi* | [**transferEventToCompleted**](docs/Api/EventsApi.md#transfereventtocompleted) | **POST** /crm/api/v1/events/{eventId}/transferToCompleted | Transfer an event to the completed/done calendar.
 *FieldValuesApi* | [**listFields**](docs/Api/FieldValuesApi.md#listfields) | **GET** /crm/api/v1/fields | List fields with values list (values domain).
+*FieldValuesApi* | [**listValues**](docs/Api/FieldValuesApi.md#listvalues) | **GET** /crm/api/v1/fields/{fieldName}/values | List values for a specific field name
 *GatewaysApi* | [**createEquisoftAnalyzeAccess**](docs/Api/GatewaysApi.md#createequisoftanalyzeaccess) | **POST** /crm/api/v1/gateways/equisoftAnalyze/accesses | 
 *GatewaysApi* | [**deleteEquisoftAnalyzeAccess**](docs/Api/GatewaysApi.md#deleteequisoftanalyzeaccess) | **DELETE** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} | 
 *GatewaysApi* | [**gatewayAdminLogin**](docs/Api/GatewaysApi.md#gatewayadminlogin) | **POST** /crm/api/v1/gateways/credentials-validation/admin-credentials/login | 
@@ -119,12 +120,12 @@ Class | Method | HTTP request | Description
 *IntegrationsApi* | [**redirectContactToLaserAppAnywhere**](docs/Api/IntegrationsApi.md#redirectcontacttolaserappanywhere) | **GET** /crm/api/app/integrations/laserapp/anywhere/{contactId} | Redirect contact to LaserApp Anywhere.
 *LegacyDocumentApi* | [**addDocument**](docs/Api/LegacyDocumentApi.md#adddocument) | **POST** /apps/api/kronos.document.add | Create a new document.
 *LegacyDocumentApi* | [**deleteDocument**](docs/Api/LegacyDocumentApi.md#deletedocument) | **POST** /apps/api/kronos.document.delete | Delete a document and it&#39;s related files.
-*LegacyDocumentApi* | [**deleteDocumentFile**](docs/Api/LegacyDocumentApi.md#deletedocumentfile) | **POST** /apps/api/kronos.document.deleteFile | Delete one file from a document
+*LegacyDocumentApi* | [**deleteDocumentFile**](docs/Api/LegacyDocumentApi.md#deletedocumentfile) | **POST** /apps/api/kronos.document.deleteFile | Delete one file from a document.
 *LegacyDocumentApi* | [**downloadDocumentFile**](docs/Api/LegacyDocumentApi.md#downloaddocumentfile) | **GET** /apps/api/kronos.document.downloadFile | Download a file. File data is encoded in base64.
 *LegacyDocumentApi* | [**getDocument**](docs/Api/LegacyDocumentApi.md#getdocument) | **GET** /apps/api/kronos.document.get | Get all data for a document record.
-*LegacyDocumentApi* | [**getDocumentList**](docs/Api/LegacyDocumentApi.md#getdocumentlist) | **GET** /apps/api/kronos.document.getList | Get a list of all documents. This will return basic information about the document.
+*LegacyDocumentApi* | [**getDocumentList**](docs/Api/LegacyDocumentApi.md#getdocumentlist) | **GET** /apps/api/kronos.document.getList | Get a list of all documents.
 *LegacyDocumentApi* | [**updateDocument**](docs/Api/LegacyDocumentApi.md#updatedocument) | **POST** /apps/api/kronos.document.update | Update a document.
-*LegacyDocumentApi* | [**uploadDocumentFile**](docs/Api/LegacyDocumentApi.md#uploaddocumentfile) | **POST** /apps/api/kronos.document.uploadFile | Upload a new file in a document
+*LegacyDocumentApi* | [**uploadDocumentFile**](docs/Api/LegacyDocumentApi.md#uploaddocumentfile) | **POST** /apps/api/kronos.document.uploadFile | Upload a new file in a document.
 *LegacyFinanceApi* | [**getAccountStatement**](docs/Api/LegacyFinanceApi.md#getaccountstatement) | **GET** /apps/api/kronos.finance.getAccountStatement | Get Account Statement information for a contact.
 *LegacyFinanceApi* | [**getLiabilities**](docs/Api/LegacyFinanceApi.md#getliabilities) | **GET** /apps/api/kronos.finance.getLiabilities | Get Liabilities information for a contact.
 *LegacyProvisioningApi* | [**getOrganization**](docs/Api/LegacyProvisioningApi.md#getorganization) | **GET** /apps/provisioning/kronos.provisioning.getOrganization | Get all informations about an organization.
@@ -146,8 +147,8 @@ Class | Method | HTTP request | Description
 *TasksApi* | [**getTaskInternalNoteList**](docs/Api/TasksApi.md#gettaskinternalnotelist) | **GET** /crm/api/v1/tasks/{taskId}/notes | Get the internal notes list for a task.
 *TasksApi* | [**listTasks**](docs/Api/TasksApi.md#listtasks) | **GET** /crm/api/v1/tasks | List or search tasks.
 *TasksApi* | [**patchTask**](docs/Api/TasksApi.md#patchtask) | **PATCH** /crm/api/v1/tasks/{taskId} | Partially update a task.
-*TasksApi* | [**patchTaskInternalNote**](docs/Api/TasksApi.md#patchtaskinternalnote) | **PATCH** /crm/api/v1/tasks/{taskId}/notes/{noteId} | Add an internal note to a task.
-*TasksApi* | [**putTaskLinksDocuments**](docs/Api/TasksApi.md#puttasklinksdocuments) | **PUT** /crm/api/v1/tasks/{taskId}/documents | Update the links between a task and existing documents
+*TasksApi* | [**patchTaskInternalNote**](docs/Api/TasksApi.md#patchtaskinternalnote) | **PATCH** /crm/api/v1/tasks/{taskId}/notes/{noteId} | Edit an internal note for a task.
+*TasksApi* | [**putTaskLinksDocuments**](docs/Api/TasksApi.md#puttasklinksdocuments) | **PUT** /crm/api/v1/tasks/{taskId}/documents | Update the links between a task and existing documents.
 *TasksApi* | [**restoreTaskInternalNote**](docs/Api/TasksApi.md#restoretaskinternalnote) | **POST** /crm/api/v1/tasks/{taskId}/notes/{noteId}/restore | Restore an archived internal note for a task.
 *TasksApi* | [**transferTaskToCompleted**](docs/Api/TasksApi.md#transfertasktocompleted) | **POST** /crm/api/v1/tasks/{taskId}/transferToCompleted | Transfer a task to completed/done.
 *UsersApi* | [**getCurrentUser**](docs/Api/UsersApi.md#getcurrentuser) | **GET** /crm/api/v1/users/me | Get informations about the current user
@@ -203,7 +204,9 @@ Class | Method | HTTP request | Description
 - [FieldValue](docs/Model/FieldValue.md)
 - [FieldValueField](docs/Model/FieldValueField.md)
 - [FieldValueListFieldResponse](docs/Model/FieldValueListFieldResponse.md)
+- [FieldValueListValueResponse](docs/Model/FieldValueListValueResponse.md)
 - [FieldValueLocalizedString](docs/Model/FieldValueLocalizedString.md)
+- [FieldValueValue](docs/Model/FieldValueValue.md)
 - [GatewaysAccessesCreateAccessResponse](docs/Model/GatewaysAccessesCreateAccessResponse.md)
 - [GatewaysAccessesCreateEquisoftAnalyzeAccessPayload](docs/Model/GatewaysAccessesCreateEquisoftAnalyzeAccessPayload.md)
 - [GatewaysAccessesEquisoftAnalyzeAccess](docs/Model/GatewaysAccessesEquisoftAnalyzeAccess.md)
@@ -248,6 +251,7 @@ Class | Method | HTTP request | Description
 - [LegacyDocumentBase64FilePayloadItem](docs/Model/LegacyDocumentBase64FilePayloadItem.md)
 - [LegacyDocumentBase64FilePayloadItemAllOf](docs/Model/LegacyDocumentBase64FilePayloadItemAllOf.md)
 - [LegacyDocumentDocument](docs/Model/LegacyDocumentDocument.md)
+- [LegacyDocumentDocumentGetListPayloadRequest](docs/Model/LegacyDocumentDocumentGetListPayloadRequest.md)
 - [LegacyDocumentDocumentListItem](docs/Model/LegacyDocumentDocumentListItem.md)
 - [LegacyDocumentDocumentPayload](docs/Model/LegacyDocumentDocumentPayload.md)
 - [LegacyDocumentDocumentPayloadItem](docs/Model/LegacyDocumentDocumentPayloadItem.md)
@@ -383,5 +387,5 @@ vendor/bin/phpunit
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
 - API version: `latest`
-    - Package version: `12.1.1`
+    - Package version: `12.1.2-SNAPSHOT`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

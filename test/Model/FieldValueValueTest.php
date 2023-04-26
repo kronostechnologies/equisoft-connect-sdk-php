@@ -1,6 +1,6 @@
 <?php
 /**
- * LegacyDocumentDocumentPayloadRequestTest
+ * FieldValueValueTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * LegacyDocumentDocumentPayloadRequestTest Class Doc Comment
+ * FieldValueValueTest Class Doc Comment
  *
  * @category    Class
- * @description Wrapper for Legacy payload argument.
+ * @description FieldValueValue
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class LegacyDocumentDocumentPayloadRequestTest extends TestCase
+class FieldValueValueTest extends TestCase
 {
 
     /**
@@ -71,18 +71,72 @@ class LegacyDocumentDocumentPayloadRequestTest extends TestCase
     }
 
     /**
-     * Test "LegacyDocumentDocumentPayloadRequest"
+     * Test "FieldValueValue"
      */
-    public function testLegacyDocumentDocumentPayloadRequest()
+    public function testFieldValueValue()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "payload"
+     * Test attribute "id"
      */
-    public function testPropertyPayload()
+    public function testPropertyId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "name"
+     */
+    public function testPropertyName()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "label"
+     */
+    public function testPropertyLabel()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "code"
+     */
+    public function testPropertyCode()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "description"
+     */
+    public function testPropertyDescription()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "isLocked"
+     */
+    public function testPropertyIsLocked()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "sort"
+     */
+    public function testPropertySort()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
