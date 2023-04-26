@@ -234,7 +234,7 @@ class LegacyDocumentFile implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets id
      *
-     * @param string|null $id Id of the file.
+     * @param string|null $id id of the file
      *
      * @return self
      */
@@ -258,7 +258,7 @@ class LegacyDocumentFile implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets fileName
      *
-     * @param string|null $fileName Filename.
+     * @param string|null $fileName File name
      *
      * @return self
      */
@@ -282,7 +282,7 @@ class LegacyDocumentFile implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets mimeType
      *
-     * @param string|null $mimeType Mime Type of the file.
+     * @param string|null $mimeType Mime Type of the file
      *
      * @return self
      */
@@ -306,7 +306,7 @@ class LegacyDocumentFile implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets sizeBytes
      *
-     * @param string|null $sizeBytes Size of the file(in bytes).
+     * @param string|null $sizeBytes Size of the file(in bytes)
      *
      * @return self
      */

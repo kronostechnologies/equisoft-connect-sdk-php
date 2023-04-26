@@ -306,7 +306,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets id
      *
-     * @param string|null $id Unique id.
+     * @param string|null $id Unique id
      *
      * @return self
      */
@@ -330,7 +330,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets uuid
      *
-     * @param string|null $uuid Contact UUID.
+     * @param string|null $uuid Contact UUID
      *
      * @return self
      */
@@ -354,7 +354,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets typeContact
      *
-     * @param string|null $typeContact Type of the contact.
+     * @param string|null $typeContact type of the contact
      *
      * @return self
      */
@@ -378,7 +378,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets indOrg
      *
-     * @param string|null $indOrg Type INDIVIDUAL OR ORGANIZATION.
+     * @param string|null $indOrg type INDIVIDUAL OR ORGANIZATION
      *
      * @return self
      */
@@ -402,7 +402,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets displayName
      *
-     * @param string|null $displayName Display name of the contact.
+     * @param string|null $displayName display name of the contact
      *
      * @return self
      */
@@ -426,7 +426,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets firstName
      *
-     * @param string|null $firstName First name of the contact.
+     * @param string|null $firstName first name of the contact
      *
      * @return self
      */
@@ -450,7 +450,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets nickname
      *
-     * @param string|null $nickname Nickname of the contact.
+     * @param string|null $nickname nickname of the contact
      *
      * @return self
      */
@@ -474,7 +474,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets middleName
      *
-     * @param string|null $middleName Middle name of the contact.
+     * @param string|null $middleName middle name of the contact
      *
      * @return self
      */
@@ -498,7 +498,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets lastName
      *
-     * @param string|null $lastName Last name of the contact.
+     * @param string|null $lastName last name of the contact
      *
      * @return self
      */
@@ -522,7 +522,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets corporationName
      *
-     * @param string|null $corporationName First line of corporation name (Organization).
+     * @param string|null $corporationName first line of corporation name (Organization)
      *
      * @return self
      */
@@ -546,7 +546,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets corporationNameLine2
      *
-     * @param string|null $corporationNameLine2 Second line of corporation name (Organization).
+     * @param string|null $corporationNameLine2 second line of corporation name (Organization)
      *
      * @return self
      */
@@ -570,7 +570,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets rank
      *
-     * @param string|null $rank Rank of the contact. (Industrial Alliance only).
+     * @param string|null $rank rank of the contact. (Industrial Alliance only)
      *
      * @return self
      */
@@ -594,7 +594,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets facebookLink
      *
-     * @param string|null $facebookLink Facebook link.
+     * @param string|null $facebookLink facebookLink
      *
      * @return self
      */
@@ -618,7 +618,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets twitterLink
      *
-     * @param string|null $twitterLink Twitter link.
+     * @param string|null $twitterLink twitterLink
      *
      * @return self
      */
@@ -642,7 +642,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets linkedinLink
      *
-     * @param string|null $linkedinLink LinkedIn link.
+     * @param string|null $linkedinLink linkedinLink
      *
      * @return self
      */
@@ -666,7 +666,7 @@ class LegacyContactContact implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets avatar
      *
-     * @param int|null $avatar Avatar.
+     * @param int|null $avatar avatar
      *
      * @return self
      */

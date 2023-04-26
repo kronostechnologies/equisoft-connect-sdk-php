@@ -80,15 +80,6 @@ class LegacyFinancePolicyCoverageTest extends TestCase
     }
 
     /**
-     * Test attribute "id"
-     */
-    public function testPropertyId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "coverageType"
      */
     public function testPropertyCoverageType()
@@ -116,15 +107,6 @@ class LegacyFinancePolicyCoverageTest extends TestCase
     }
 
     /**
-     * Test attribute "productTypeSystemName"
-     */
-    public function testPropertyProductTypeSystemName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "productSubType"
      */
     public function testPropertyProductSubType()
@@ -146,15 +128,6 @@ class LegacyFinancePolicyCoverageTest extends TestCase
      * Test attribute "issueDate"
      */
     public function testPropertyIssueDate()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "amount"
-     */
-    public function testPropertyAmount()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -290,24 +263,6 @@ class LegacyFinancePolicyCoverageTest extends TestCase
      * Test attribute "isInsured"
      */
     public function testPropertyIsInsured()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "expiryDate"
-     */
-    public function testPropertyExpiryDate()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "accountStatementNotes"
-     */
-    public function testPropertyAccountStatementNotes()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

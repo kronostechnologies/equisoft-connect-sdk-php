@@ -238,7 +238,7 @@ class LegacyDocumentGetListResponse implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets stat
      *
-     * @param string|null $stat Status of the request that has been made. Can be 'ok' or 'fail'.
+     * @param string|null $stat Status of the request that has been made. Can be 'ok' or 'fail'
      *
      * @return self
      */
@@ -310,7 +310,7 @@ class LegacyDocumentGetListResponse implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets documents
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentListItem[] $documents Array of documents.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentListItem[] $documents Array of documents
      *
      * @return self
      */

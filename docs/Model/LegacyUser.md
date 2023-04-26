@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **string** | Id of the user. | [optional]
-**displayName** | **string** | Display name of the user. | [optional]
-**email** | **string** | Email of the user. | [optional]
+**id** | **string** | id of the user | [optional]
+**displayName** | **string** | display name of the user | [optional]
+**email** | **string** | email of the user | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

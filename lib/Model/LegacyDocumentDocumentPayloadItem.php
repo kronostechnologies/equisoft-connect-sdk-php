@@ -289,7 +289,7 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess, 
     /**
      * Sets externalKey
      *
-     * @param string|null $externalKey External key of the document.
+     * @param string|null $externalKey external key of the document
      *
      * @return self
      */
@@ -313,7 +313,7 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess, 
     /**
      * Sets dateStart
      *
-     * @param string|null $dateStart Date start of the document.
+     * @param string|null $dateStart date start of the document
      *
      * @return self
      */
@@ -337,7 +337,7 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess, 
     /**
      * Sets dateEnd
      *
-     * @param string|null $dateEnd Date end of the document.
+     * @param string|null $dateEnd date end of the document
      *
      * @return self
      */
@@ -361,7 +361,7 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess, 
     /**
      * Sets dateSignature
      *
-     * @param string|null $dateSignature Date signature of the document.
+     * @param string|null $dateSignature date signature of the document
      *
      * @return self
      */
@@ -385,7 +385,7 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess, 
     /**
      * Sets writtenBy
      *
-     * @param string|null $writtenBy Author of the document.
+     * @param string|null $writtenBy author of the document
      *
      * @return self
      */
@@ -409,7 +409,7 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess, 
     /**
      * Sets notes
      *
-     * @param string|null $notes Notes of the document.
+     * @param string|null $notes notes of the document
      *
      * @return self
      */
@@ -433,7 +433,7 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess, 
     /**
      * Sets users
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyUser[]|null $users Users related to the document.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyUser[]|null $users users related to the document
      *
      * @return self
      */
@@ -553,7 +553,7 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess, 
     /**
      * Sets files
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentBase64FilePayloadItem[]|null $files Files contained inside the document.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentBase64FilePayloadItem[]|null $files Files contained inside the document
      *
      * @return self
      */
@@ -577,7 +577,7 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess, 
     /**
      * Sets contacts
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyContactContactPayloadItem[]|null $contacts List of linked contacts.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyContactContactPayloadItem[]|null $contacts List of linked contacts
      *
      * @return self
      */
