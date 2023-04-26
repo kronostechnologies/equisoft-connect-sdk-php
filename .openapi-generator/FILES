@@ -111,6 +111,7 @@ docs/Model/LegacyDocumentBase64FilePayload.md
 docs/Model/LegacyDocumentBase64FilePayloadItem.md
 docs/Model/LegacyDocumentBase64FilePayloadItemAllOf.md
 docs/Model/LegacyDocumentDocument.md
+docs/Model/LegacyDocumentDocumentGetListPayloadRequest.md
 docs/Model/LegacyDocumentDocumentListItem.md
 docs/Model/LegacyDocumentDocumentPayload.md
 docs/Model/LegacyDocumentDocumentPayloadItem.md
@@ -324,6 +325,7 @@ lib/Model/LegacyDocumentBase64FilePayload.php
 lib/Model/LegacyDocumentBase64FilePayloadItem.php
 lib/Model/LegacyDocumentBase64FilePayloadItemAllOf.php
 lib/Model/LegacyDocumentDocument.php
+lib/Model/LegacyDocumentDocumentGetListPayloadRequest.php
 lib/Model/LegacyDocumentDocumentListItem.php
 lib/Model/LegacyDocumentDocumentPayload.php
 lib/Model/LegacyDocumentDocumentPayloadItem.php
@@ -535,6 +537,7 @@ test/Model/LegacyContactContactTest.php
 test/Model/LegacyDocumentBase64FilePayloadItemAllOfTest.php
 test/Model/LegacyDocumentBase64FilePayloadItemTest.php
 test/Model/LegacyDocumentBase64FilePayloadTest.php
+test/Model/LegacyDocumentDocumentGetListPayloadRequestTest.php
 test/Model/LegacyDocumentDocumentListItemTest.php
 test/Model/LegacyDocumentDocumentPayloadItemTest.php
 test/Model/LegacyDocumentDocumentPayloadRequestTest.php

@@ -408,7 +408,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets dueDate
      *
-     * @param \DateTime|null $dueDate Date the task is expected to be done. As defined by full-date - RFC3339
+     * @param \DateTime|null $dueDate Date the task is expected to be done. As defined by full-date - RFC3339.
      *
      * @return self
      */
@@ -432,7 +432,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets initialDate
      *
-     * @param \DateTime|null $initialDate Date the task was initially started. As defined by full-date - RFC3339
+     * @param \DateTime|null $initialDate Date the task was initially started. As defined by full-date - RFC3339.
      *
      * @return self
      */
@@ -456,7 +456,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets completedDate
      *
-     * @param \DateTime|null $completedDate Date the task was completed / done. As defined by full-date - RFC3339
+     * @param \DateTime|null $completedDate Date the task was completed / done. As defined by full-date - RFC3339.
      *
      * @return self
      */
@@ -528,7 +528,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets category
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $category Event category
+     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $category Event category.
      *
      * @return self
      */
@@ -552,7 +552,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets subCategory
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $subCategory Event sub category
+     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $subCategory Event sub category.
      *
      * @return self
      */
@@ -600,7 +600,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets visibility
      *
-     * @param string $visibility Confidentiality level of the Event (private or not). [NORMAL, PRIVATE]
+     * @param string $visibility Confidentiality level of the Event (private or not). [NORMAL, PRIVATE].
      *
      * @return self
      */
@@ -624,7 +624,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets creationTime
      *
-     * @param \DateTime|null $creationTime Creation time. As defined by date-time - RFC3339
+     * @param \DateTime|null $creationTime Creation time. As defined by date-time - RFC3339.
      *
      * @return self
      */
@@ -648,7 +648,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets updateTime
      *
-     * @param \DateTime|null $updateTime Date time of last modification. As defined by date-time - RFC3339
+     * @param \DateTime|null $updateTime Date time of last modification. As defined by date-time - RFC3339.
      *
      * @return self
      */
@@ -672,7 +672,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets completionTime
      *
-     * @param \DateTime|null $completionTime Completion time. As defined by date-time - RFC3339
+     * @param \DateTime|null $completionTime Completion time. As defined by date-time - RFC3339.
      *
      * @return self
      */
@@ -696,7 +696,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets contactIds
      *
-     * @param int[]|null $contactIds IDs of the contacts linked to this Task
+     * @param int[]|null $contactIds IDs of the contacts linked to this Task.
      *
      * @return self
      */
@@ -720,7 +720,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets documentIds
      *
-     * @param int[]|null $documentIds IDs of the documents linked to this Task
+     * @param int[]|null $documentIds IDs of the documents linked to this Task.
      *
      * @return self
      */

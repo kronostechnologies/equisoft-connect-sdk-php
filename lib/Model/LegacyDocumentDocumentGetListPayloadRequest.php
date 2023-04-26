@@ -1,6 +1,6 @@
 <?php
 /**
- * LegacyFinanceGetAccountStatementResponse
+ * LegacyDocumentDocumentGetListPayloadRequest
  *
  * PHP version 7.4
  *
@@ -32,16 +32,16 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * LegacyFinanceGetAccountStatementResponse Class Doc Comment
+ * LegacyDocumentDocumentGetListPayloadRequest Class Doc Comment
  *
  * @category Class
- * @description Response datatype returned by the kronos.finance.getAccountStatement method
+ * @description Wrapper for Legacy payload argument.
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class LegacyFinanceGetAccountStatementResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class LegacyDocumentDocumentGetListPayloadRequest implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class LegacyFinanceGetAccountStatementResponse implements ModelInterface, ArrayA
       *
       * @var string
       */
-    protected static $openAPIModelName = 'legacy.finance.getAccountStatementResponse';
+    protected static $openAPIModelName = 'legacy.document.DocumentGetListPayloadRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,10 +58,7 @@ class LegacyFinanceGetAccountStatementResponse implements ModelInterface, ArrayA
       * @var string[]
       */
     protected static $openAPITypes = [
-        'stat' => 'string',
-        'errorCode' => 'string',
-        'errorMsg' => 'string',
-        'accountStatement' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAccountStatement'
+        'optionsPayload' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentGetListOptions'
     ];
 
     /**
@@ -72,10 +69,7 @@ class LegacyFinanceGetAccountStatementResponse implements ModelInterface, ArrayA
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'stat' => null,
-        'errorCode' => null,
-        'errorMsg' => null,
-        'accountStatement' => null
+        'optionsPayload' => null
     ];
 
     /**
@@ -105,10 +99,7 @@ class LegacyFinanceGetAccountStatementResponse implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $attributeMap = [
-        'stat' => 'stat',
-        'errorCode' => 'error_code',
-        'errorMsg' => 'error_msg',
-        'accountStatement' => 'accountStatement'
+        'optionsPayload' => 'options_payload'
     ];
 
     /**
@@ -117,10 +108,7 @@ class LegacyFinanceGetAccountStatementResponse implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $setters = [
-        'stat' => 'setStat',
-        'errorCode' => 'setErrorCode',
-        'errorMsg' => 'setErrorMsg',
-        'accountStatement' => 'setAccountStatement'
+        'optionsPayload' => 'setOptionsPayload'
     ];
 
     /**
@@ -129,10 +117,7 @@ class LegacyFinanceGetAccountStatementResponse implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $getters = [
-        'stat' => 'getStat',
-        'errorCode' => 'getErrorCode',
-        'errorMsg' => 'getErrorMsg',
-        'accountStatement' => 'getAccountStatement'
+        'optionsPayload' => 'getOptionsPayload'
     ];
 
     /**
@@ -192,10 +177,7 @@ class LegacyFinanceGetAccountStatementResponse implements ModelInterface, ArrayA
      */
     public function __construct(array $data = null)
     {
-        $this->container['stat'] = $data['stat'] ?? null;
-        $this->container['errorCode'] = $data['errorCode'] ?? null;
-        $this->container['errorMsg'] = $data['errorMsg'] ?? null;
-        $this->container['accountStatement'] = $data['accountStatement'] ?? null;
+        $this->container['optionsPayload'] = $data['optionsPayload'] ?? null;
     }
 
     /**
@@ -207,9 +189,6 @@ class LegacyFinanceGetAccountStatementResponse implements ModelInterface, ArrayA
     {
         $invalidProperties = [];
 
-        if ($this->container['accountStatement'] === null) {
-            $invalidProperties[] = "'accountStatement' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -226,97 +205,25 @@ class LegacyFinanceGetAccountStatementResponse implements ModelInterface, ArrayA
 
 
     /**
-     * Gets stat
+     * Gets optionsPayload
      *
-     * @return string|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentGetListOptions|null
      */
-    public function getStat()
+    public function getOptionsPayload()
     {
-        return $this->container['stat'];
+        return $this->container['optionsPayload'];
     }
 
     /**
-     * Sets stat
+     * Sets optionsPayload
      *
-     * @param string|null $stat Status of the request that has been made. Can be 'ok' or 'fail'.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentGetListOptions|null $optionsPayload optionsPayload
      *
      * @return self
      */
-    public function setStat($stat)
+    public function setOptionsPayload($optionsPayload)
     {
-        $this->container['stat'] = $stat;
-
-        return $this;
-    }
-
-    /**
-     * Gets errorCode
-     *
-     * @return string|null
-     */
-    public function getErrorCode()
-    {
-        return $this->container['errorCode'];
-    }
-
-    /**
-     * Sets errorCode
-     *
-     * @param string|null $errorCode If the request has failed, this element will contain the error code related to the problem encountered.
-     *
-     * @return self
-     */
-    public function setErrorCode($errorCode)
-    {
-        $this->container['errorCode'] = $errorCode;
-
-        return $this;
-    }
-
-    /**
-     * Gets errorMsg
-     *
-     * @return string|null
-     */
-    public function getErrorMsg()
-    {
-        return $this->container['errorMsg'];
-    }
-
-    /**
-     * Sets errorMsg
-     *
-     * @param string|null $errorMsg If the request has failed, this element will contain the error message related to the problem encountered.
-     *
-     * @return self
-     */
-    public function setErrorMsg($errorMsg)
-    {
-        $this->container['errorMsg'] = $errorMsg;
-
-        return $this;
-    }
-
-    /**
-     * Gets accountStatement
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAccountStatement
-     */
-    public function getAccountStatement()
-    {
-        return $this->container['accountStatement'];
-    }
-
-    /**
-     * Sets accountStatement
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAccountStatement $accountStatement accountStatement
-     *
-     * @return self
-     */
-    public function setAccountStatement($accountStatement)
-    {
-        $this->container['accountStatement'] = $accountStatement;
+        $this->container['optionsPayload'] = $optionsPayload;
 
         return $this;
     }

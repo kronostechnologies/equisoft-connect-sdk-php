@@ -6,12 +6,12 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**addDocument()**](LegacyDocumentApi.md#addDocument) | **POST** /apps/api/kronos.document.add | Create a new document.
 [**deleteDocument()**](LegacyDocumentApi.md#deleteDocument) | **POST** /apps/api/kronos.document.delete | Delete a document and it&#39;s related files.
-[**deleteDocumentFile()**](LegacyDocumentApi.md#deleteDocumentFile) | **POST** /apps/api/kronos.document.deleteFile | Delete one file from a document
+[**deleteDocumentFile()**](LegacyDocumentApi.md#deleteDocumentFile) | **POST** /apps/api/kronos.document.deleteFile | Delete one file from a document.
 [**downloadDocumentFile()**](LegacyDocumentApi.md#downloadDocumentFile) | **GET** /apps/api/kronos.document.downloadFile | Download a file. File data is encoded in base64.
 [**getDocument()**](LegacyDocumentApi.md#getDocument) | **GET** /apps/api/kronos.document.get | Get all data for a document record.
-[**getDocumentList()**](LegacyDocumentApi.md#getDocumentList) | **GET** /apps/api/kronos.document.getList | Get a list of all documents. This will return basic information about the document.
+[**getDocumentList()**](LegacyDocumentApi.md#getDocumentList) | **GET** /apps/api/kronos.document.getList | Get a list of all documents.
 [**updateDocument()**](LegacyDocumentApi.md#updateDocument) | **POST** /apps/api/kronos.document.update | Update a document.
-[**uploadDocumentFile()**](LegacyDocumentApi.md#uploadDocumentFile) | **POST** /apps/api/kronos.document.uploadFile | Upload a new file in a document
+[**uploadDocumentFile()**](LegacyDocumentApi.md#uploadDocumentFile) | **POST** /apps/api/kronos.document.uploadFile | Upload a new file in a document.
 
 
 ## `addDocument()`
@@ -97,7 +97,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\LegacyDocumentApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | Document Id
+$id = 'id_example'; // string | Document identifier.
 
 try {
     $result = $apiInstance->deleteDocument($id);
@@ -111,7 +111,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **string**| Document Id |
+ **id** | **string**| Document identifier. |
 
 ### Return type
 
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 deleteDocumentFile($id): \Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
 ```
 
-Delete one file from a document
+Delete one file from a document.
 
 ### Example
 
@@ -155,7 +155,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\LegacyDocumentApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | Document File Id
+$id = 'id_example'; // string | Document file identifier.
 
 try {
     $result = $apiInstance->deleteDocumentFile($id);
@@ -169,7 +169,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **string**| Document File Id |
+ **id** | **string**| Document file identifier. |
 
 ### Return type
 
@@ -213,7 +213,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\LegacyDocumentApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | Document File Id
+$id = 'id_example'; // string | Document file identifier.
 
 try {
     $result = $apiInstance->downloadDocumentFile($id);
@@ -227,7 +227,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **string**| Document File Id |
+ **id** | **string**| Document file identifier. |
 
 ### Return type
 
@@ -271,7 +271,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\LegacyDocumentApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | Document Id
+$id = 'id_example'; // string | Document identifier.
 
 try {
     $result = $apiInstance->getDocument($id);
@@ -285,7 +285,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **string**| Document Id |
+ **id** | **string**| Document identifier. |
 
 ### Return type
 
@@ -307,12 +307,12 @@ Name | Type | Description  | Notes
 ## `getDocumentList()`
 
 ```php
-getDocumentList(): \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentGetListResponse
+getDocumentList($legacyDocumentDocumentGetListPayloadRequest, $lastModifiedTime): \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentGetListResponse
 ```
 
-Get a list of all documents. This will return basic information about the document.
+Get a list of all documents.
 
-Please note that a document is similar to a folder and may contain one or many files.
+This will return basic information about the document. Please note that a document is similar to a folder and may contain one or many files.
 
 ### Example
 
@@ -331,9 +331,11 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\LegacyDocumentApi(
     new GuzzleHttp\Client(),
     $config
 );
+$legacyDocumentDocumentGetListPayloadRequest = new \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentGetListPayloadRequest(); // \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentGetListPayloadRequest
+$lastModifiedTime = 'lastModifiedTime_example'; // string | To Fetch all documents, which got modified / created after specified date. If the value \"auto\" is used, the last access date to this method will be used.
 
 try {
-    $result = $apiInstance->getDocumentList();
+    $result = $apiInstance->getDocumentList($legacyDocumentDocumentGetListPayloadRequest, $lastModifiedTime);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling LegacyDocumentApi->getDocumentList: ', $e->getMessage(), PHP_EOL;
@@ -342,7 +344,10 @@ try {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **legacyDocumentDocumentGetListPayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentGetListPayloadRequest**](../Model/LegacyDocumentDocumentGetListPayloadRequest.md)|  |
+ **lastModifiedTime** | **string**| To Fetch all documents, which got modified / created after specified date. If the value \&quot;auto\&quot; is used, the last access date to this method will be used. | [optional]
 
 ### Return type
 
@@ -354,7 +359,7 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: `application/json`
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
@@ -425,7 +430,7 @@ Name | Type | Description  | Notes
 uploadDocumentFile($id, $legacyDocumentUploadDocumentFileRequest): \Equisoft\SDK\EquisoftConnect\Model\LegacyAddUpdateResponse
 ```
 
-Upload a new file in a document
+Upload a new file in a document.
 
 ### Example
 
@@ -444,7 +449,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\LegacyDocumentApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | Document File Id
+$id = 'id_example'; // string | Document file identifier.
 $legacyDocumentUploadDocumentFileRequest = new \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentUploadDocumentFileRequest(); // \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentUploadDocumentFileRequest
 
 try {
@@ -459,7 +464,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **string**| Document File Id |
+ **id** | **string**| Document file identifier. |
  **legacyDocumentUploadDocumentFileRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentUploadDocumentFileRequest**](../Model/LegacyDocumentUploadDocumentFileRequest.md)|  |
 
 ### Return type
