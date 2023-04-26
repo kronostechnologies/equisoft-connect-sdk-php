@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **string** |  |
+**id** | **int** |  |
+**name** | **string** |  | [optional]
 **label** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValueLocalizedString**](FieldValueLocalizedString.md) |  |
 **code** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValueLocalizedString**](FieldValueLocalizedString.md) |  |
 **description** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValueLocalizedString**](FieldValueLocalizedString.md) |  |
