@@ -457,7 +457,7 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess, 
     /**
      * Sets id
      *
-     * @param string|null $id id of the document
+     * @param string|null $id Id of the document.
      *
      * @return self
      */
@@ -481,7 +481,7 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess, 
     /**
      * Sets type
      *
-     * @param string|null $type type of the document
+     * @param string|null $type Type of the document.
      *
      * @return self
      */
@@ -505,7 +505,7 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess, 
     /**
      * Sets subType
      *
-     * @param string|null $subType subtype of the document
+     * @param string|null $subType Subtype of the document.
      *
      * @return self
      */
@@ -529,7 +529,7 @@ class LegacyDocumentDocumentPayloadItem implements ModelInterface, ArrayAccess, 
     /**
      * Sets name
      *
-     * @param string|null $name name of the document
+     * @param string|null $name Name of the document.
      *
      * @return self
      */

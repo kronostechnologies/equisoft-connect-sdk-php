@@ -61,7 +61,11 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess, \Js
         'type' => 'string',
         'subType' => 'string',
         'name' => 'string',
-        'files' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentFile[]'
+        'files' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentFile[]',
+        'createdBy' => 'string',
+        'createdOn' => 'string',
+        'modifiedBy' => 'string',
+        'modifiedOn' => 'string'
     ];
 
     /**
@@ -76,7 +80,11 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess, \Js
         'type' => null,
         'subType' => null,
         'name' => null,
-        'files' => null
+        'files' => null,
+        'createdBy' => null,
+        'createdOn' => null,
+        'modifiedBy' => null,
+        'modifiedOn' => null
     ];
 
     /**
@@ -110,7 +118,11 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess, \Js
         'type' => 'type',
         'subType' => 'subType',
         'name' => 'name',
-        'files' => 'files'
+        'files' => 'files',
+        'createdBy' => 'createdBy',
+        'createdOn' => 'createdOn',
+        'modifiedBy' => 'modifiedBy',
+        'modifiedOn' => 'modifiedOn'
     ];
 
     /**
@@ -123,7 +135,11 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess, \Js
         'type' => 'setType',
         'subType' => 'setSubType',
         'name' => 'setName',
-        'files' => 'setFiles'
+        'files' => 'setFiles',
+        'createdBy' => 'setCreatedBy',
+        'createdOn' => 'setCreatedOn',
+        'modifiedBy' => 'setModifiedBy',
+        'modifiedOn' => 'setModifiedOn'
     ];
 
     /**
@@ -136,7 +152,11 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess, \Js
         'type' => 'getType',
         'subType' => 'getSubType',
         'name' => 'getName',
-        'files' => 'getFiles'
+        'files' => 'getFiles',
+        'createdBy' => 'getCreatedBy',
+        'createdOn' => 'getCreatedOn',
+        'modifiedBy' => 'getModifiedBy',
+        'modifiedOn' => 'getModifiedOn'
     ];
 
     /**
@@ -201,6 +221,10 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess, \Js
         $this->container['subType'] = $data['subType'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
         $this->container['files'] = $data['files'] ?? null;
+        $this->container['createdBy'] = $data['createdBy'] ?? null;
+        $this->container['createdOn'] = $data['createdOn'] ?? null;
+        $this->container['modifiedBy'] = $data['modifiedBy'] ?? null;
+        $this->container['modifiedOn'] = $data['modifiedOn'] ?? null;
     }
 
     /**
@@ -240,7 +264,7 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets id
      *
-     * @param string|null $id id of the document
+     * @param string|null $id Id of the document.
      *
      * @return self
      */
@@ -264,7 +288,7 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets type
      *
-     * @param string|null $type type of the document
+     * @param string|null $type Type of the document.
      *
      * @return self
      */
@@ -288,7 +312,7 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets subType
      *
-     * @param string|null $subType subtype of the document
+     * @param string|null $subType Subtype of the document.
      *
      * @return self
      */
@@ -312,7 +336,7 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets name
      *
-     * @param string|null $name name of the document
+     * @param string|null $name Name of the document.
      *
      * @return self
      */
@@ -343,6 +367,102 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess, \Js
     public function setFiles($files)
     {
         $this->container['files'] = $files;
+
+        return $this;
+    }
+
+    /**
+     * Gets createdBy
+     *
+     * @return string|null
+     */
+    public function getCreatedBy()
+    {
+        return $this->container['createdBy'];
+    }
+
+    /**
+     * Sets createdBy
+     *
+     * @param string|null $createdBy Email of user who created the document.
+     *
+     * @return self
+     */
+    public function setCreatedBy($createdBy)
+    {
+        $this->container['createdBy'] = $createdBy;
+
+        return $this;
+    }
+
+    /**
+     * Gets createdOn
+     *
+     * @return string|null
+     */
+    public function getCreatedOn()
+    {
+        return $this->container['createdOn'];
+    }
+
+    /**
+     * Sets createdOn
+     *
+     * @param string|null $createdOn Date of creation of the document.
+     *
+     * @return self
+     */
+    public function setCreatedOn($createdOn)
+    {
+        $this->container['createdOn'] = $createdOn;
+
+        return $this;
+    }
+
+    /**
+     * Gets modifiedBy
+     *
+     * @return string|null
+     */
+    public function getModifiedBy()
+    {
+        return $this->container['modifiedBy'];
+    }
+
+    /**
+     * Sets modifiedBy
+     *
+     * @param string|null $modifiedBy Email of user who last modified the document.
+     *
+     * @return self
+     */
+    public function setModifiedBy($modifiedBy)
+    {
+        $this->container['modifiedBy'] = $modifiedBy;
+
+        return $this;
+    }
+
+    /**
+     * Gets modifiedOn
+     *
+     * @return string|null
+     */
+    public function getModifiedOn()
+    {
+        return $this->container['modifiedOn'];
+    }
+
+    /**
+     * Sets modifiedOn
+     *
+     * @param string|null $modifiedOn Date of the last modification of the document.
+     *
+     * @return self
+     */
+    public function setModifiedOn($modifiedOn)
+    {
+        $this->container['modifiedOn'] = $modifiedOn;
 
         return $this;
     }
