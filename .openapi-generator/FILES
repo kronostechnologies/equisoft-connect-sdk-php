@@ -30,6 +30,7 @@ docs/Model/ContactContactOccupation.md
 docs/Model/ContactContactPhone.md
 docs/Model/ContactContactSegmentation.md
 docs/Model/ContactContactWebsite.md
+docs/Model/ContactPatchContactPayload.md
 docs/Model/ContactPatchDto.md
 docs/Model/ContactsContact.md
 docs/Model/ContextActor.md
@@ -244,6 +245,7 @@ lib/Model/ContactContactOccupation.php
 lib/Model/ContactContactPhone.php
 lib/Model/ContactContactSegmentation.php
 lib/Model/ContactContactWebsite.php
+lib/Model/ContactPatchContactPayload.php
 lib/Model/ContactPatchDto.php
 lib/Model/ContactsContact.php
 lib/Model/ContextActor.php
@@ -457,6 +459,7 @@ test/Model/ContactContactOccupationTest.php
 test/Model/ContactContactPhoneTest.php
 test/Model/ContactContactSegmentationTest.php
 test/Model/ContactContactWebsiteTest.php
+test/Model/ContactPatchContactPayloadTest.php
 test/Model/ContactPatchDtoTest.php
 test/Model/ContactsContactTest.php
 test/Model/ContextActorTest.php

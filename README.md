@@ -78,6 +78,7 @@ All URIs are relative to *http://localhost*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *ContactsApi* | [**getByUuid**](docs/Api/ContactsApi.md#getbyuuid) | **GET** /crm/api/v1/contacts/{contactUuid} | Return the detail of a contact.
+*ContactsApi* | [**patchContact**](docs/Api/ContactsApi.md#patchcontact) | **PATCH** /crm/api/v1/contacts/{contactUuid} | Update a contact
 *DSFApi* | [**createDsfFinancialCenter**](docs/Api/DSFApi.md#createdsffinancialcenter) | **POST** /crm/api/v1/dsf/financialCenters | Create a financial center
 *DSFApi* | [**deleteDsfFinancialCenter**](docs/Api/DSFApi.md#deletedsffinancialcenter) | **DELETE** /crm/api/v1/dsf/financialCenters/{financialCenterId} | Delete a financial center
 *DSFApi* | [**getDsfFinancialCenters**](docs/Api/DSFApi.md#getdsffinancialcenters) | **GET** /crm/api/v1/dsf/financialCenters/{financialCenterId} | Get a financial center
@@ -171,6 +172,7 @@ Class | Method | HTTP request | Description
 - [ContactContactPhone](docs/Model/ContactContactPhone.md)
 - [ContactContactSegmentation](docs/Model/ContactContactSegmentation.md)
 - [ContactContactWebsite](docs/Model/ContactContactWebsite.md)
+- [ContactPatchContactPayload](docs/Model/ContactPatchContactPayload.md)
 - [ContactPatchDto](docs/Model/ContactPatchDto.md)
 - [ContactsContact](docs/Model/ContactsContact.md)
 - [ContextActor](docs/Model/ContextActor.md)

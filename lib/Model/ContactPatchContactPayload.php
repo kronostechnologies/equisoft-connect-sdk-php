@@ -1,6 +1,6 @@
 <?php
 /**
- * ContactPatchDto
+ * ContactPatchContactPayload
  *
  * PHP version 7.4
  *
@@ -32,15 +32,16 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * ContactPatchDto Class Doc Comment
+ * ContactPatchContactPayload Class Doc Comment
  *
  * @category Class
+ * @description List of patches to apply
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
+class ContactPatchContactPayload implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +50,7 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'contact.PatchDto';
+    protected static $openAPIModelName = 'contact.PatchContactPayload';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +58,7 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'op' => 'string',
-        'path' => 'string',
-        'value' => 'mixed'
+        'patches' => '\Equisoft\SDK\EquisoftConnect\Model\ContactPatchDto[]'
     ];
 
     /**
@@ -70,9 +69,7 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'op' => null,
-        'path' => null,
-        'value' => null
+        'patches' => null
     ];
 
     /**
@@ -102,9 +99,7 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'op' => 'op',
-        'path' => 'path',
-        'value' => 'value'
+        'patches' => 'patches'
     ];
 
     /**
@@ -113,9 +108,7 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'op' => 'setOp',
-        'path' => 'setPath',
-        'value' => 'setValue'
+        'patches' => 'setPatches'
     ];
 
     /**
@@ -124,9 +117,7 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'op' => 'getOp',
-        'path' => 'getPath',
-        'value' => 'getValue'
+        'patches' => 'getPatches'
     ];
 
     /**
@@ -186,9 +177,7 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['op'] = $data['op'] ?? null;
-        $this->container['path'] = $data['path'] ?? null;
-        $this->container['value'] = $data['value'] ?? null;
+        $this->container['patches'] = $data['patches'] ?? null;
     }
 
     /**
@@ -200,11 +189,8 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['op'] === null) {
-            $invalidProperties[] = "'op' can't be null";
-        }
-        if ($this->container['path'] === null) {
-            $invalidProperties[] = "'path' can't be null";
+        if ($this->container['patches'] === null) {
+            $invalidProperties[] = "'patches' can't be null";
         }
         return $invalidProperties;
     }
@@ -222,73 +208,25 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets op
+     * Gets patches
      *
-     * @return string
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactPatchDto[]
      */
-    public function getOp()
+    public function getPatches()
     {
-        return $this->container['op'];
+        return $this->container['patches'];
     }
 
     /**
-     * Sets op
+     * Sets patches
      *
-     * @param string $op Patch operation
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactPatchDto[] $patches patches
      *
      * @return self
      */
-    public function setOp($op)
+    public function setPatches($patches)
     {
-        $this->container['op'] = $op;
-
-        return $this;
-    }
-
-    /**
-     * Gets path
-     *
-     * @return string
-     */
-    public function getPath()
-    {
-        return $this->container['path'];
-    }
-
-    /**
-     * Sets path
-     *
-     * @param string $path Path to update
-     *
-     * @return self
-     */
-    public function setPath($path)
-    {
-        $this->container['path'] = $path;
-
-        return $this;
-    }
-
-    /**
-     * Gets value
-     *
-     * @return mixed|null
-     */
-    public function getValue()
-    {
-        return $this->container['value'];
-    }
-
-    /**
-     * Sets value
-     *
-     * @param mixed|null $value Value to assign
-     *
-     * @return self
-     */
-    public function setValue($value)
-    {
-        $this->container['value'] = $value;
+        $this->container['patches'] = $patches;
 
         return $this;
     }
