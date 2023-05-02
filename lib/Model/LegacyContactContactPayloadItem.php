@@ -576,7 +576,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets id
      *
-     * @param string|null $id Unique id
+     * @param string|null $id Unique id.
      *
      * @return self
      */
@@ -600,7 +600,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets uuid
      *
-     * @param string|null $uuid Contact UUID
+     * @param string|null $uuid Contact UUID.
      *
      * @return self
      */
@@ -624,7 +624,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets typeContact
      *
-     * @param string|null $typeContact type of the contact
+     * @param string|null $typeContact Type of the contact.
      *
      * @return self
      */
@@ -648,7 +648,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets indOrg
      *
-     * @param string|null $indOrg type INDIVIDUAL OR ORGANIZATION
+     * @param string|null $indOrg Type INDIVIDUAL OR ORGANIZATION.
      *
      * @return self
      */
@@ -672,7 +672,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets displayName
      *
-     * @param string|null $displayName display name of the contact
+     * @param string|null $displayName Display name of the contact.
      *
      * @return self
      */
@@ -696,7 +696,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets firstName
      *
-     * @param string|null $firstName first name of the contact
+     * @param string|null $firstName First name of the contact.
      *
      * @return self
      */
@@ -720,7 +720,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets nickname
      *
-     * @param string|null $nickname nickname of the contact
+     * @param string|null $nickname Nickname of the contact.
      *
      * @return self
      */
@@ -744,7 +744,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets middleName
      *
-     * @param string|null $middleName middle name of the contact
+     * @param string|null $middleName Middle name of the contact.
      *
      * @return self
      */
@@ -768,7 +768,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets lastName
      *
-     * @param string|null $lastName last name of the contact
+     * @param string|null $lastName Last name of the contact.
      *
      * @return self
      */
@@ -792,7 +792,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets corporationName
      *
-     * @param string|null $corporationName first line of corporation name (Organization)
+     * @param string|null $corporationName First line of corporation name (Organization).
      *
      * @return self
      */
@@ -816,7 +816,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets corporationNameLine2
      *
-     * @param string|null $corporationNameLine2 second line of corporation name (Organization)
+     * @param string|null $corporationNameLine2 Second line of corporation name (Organization).
      *
      * @return self
      */
@@ -840,7 +840,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets rank
      *
-     * @param string|null $rank rank of the contact. (Industrial Alliance only)
+     * @param string|null $rank Rank of the contact. (Industrial Alliance only).
      *
      * @return self
      */
@@ -864,7 +864,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets facebookLink
      *
-     * @param string|null $facebookLink facebookLink
+     * @param string|null $facebookLink Facebook link.
      *
      * @return self
      */
@@ -888,7 +888,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets twitterLink
      *
-     * @param string|null $twitterLink twitterLink
+     * @param string|null $twitterLink Twitter link.
      *
      * @return self
      */
@@ -912,7 +912,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets linkedinLink
      *
-     * @param string|null $linkedinLink linkedinLink
+     * @param string|null $linkedinLink LinkedIn link.
      *
      * @return self
      */
@@ -936,7 +936,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets avatar
      *
-     * @param int|null $avatar avatar
+     * @param int|null $avatar Avatar.
      *
      * @return self
      */
@@ -960,7 +960,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets gender
      *
-     * @param string|null $gender Gender of the contact. Either MALE or FEMALE
+     * @param string|null $gender Gender of the contact. Either MALE or FEMALE.
      *
      * @return self
      */
@@ -984,7 +984,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets sin
      *
-     * @param string|null $sin sin of the contact
+     * @param string|null $sin Sin of the contact.
      *
      * @return self
      */
@@ -1008,7 +1008,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets birthdate
      *
-     * @param string|null $birthdate birthdate of the contact
+     * @param string|null $birthdate Birthdate of the contact.
      *
      * @return self
      */
@@ -1080,7 +1080,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets phoneHome
      *
-     * @param string|null $phoneHome phone number of the contact at home
+     * @param string|null $phoneHome Phone number of the contact at home.
      *
      * @return self
      */
@@ -1104,7 +1104,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets phoneHomeSecond
      *
-     * @param string|null $phoneHomeSecond second phone number of the contact at home
+     * @param string|null $phoneHomeSecond Second phone number of the contact at home.
      *
      * @return self
      */
@@ -1128,7 +1128,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets phoneAssistant
      *
-     * @param string|null $phoneAssistant assistant phone number of the contact
+     * @param string|null $phoneAssistant Assistant phone number of the contact.
      *
      * @return self
      */
@@ -1152,7 +1152,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets phoneOffice
      *
-     * @param string|null $phoneOffice office phone number of the contact
+     * @param string|null $phoneOffice Office phone number of the contact.
      *
      * @return self
      */
@@ -1176,7 +1176,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets phoneOfficeSecond
      *
-     * @param string|null $phoneOfficeSecond second office phone number of the contact
+     * @param string|null $phoneOfficeSecond Second office phone number of the contact.
      *
      * @return self
      */
@@ -1200,7 +1200,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets phoneCell
      *
-     * @param string|null $phoneCell cell phone number of the contact
+     * @param string|null $phoneCell Cell phone number of the contact.
      *
      * @return self
      */
@@ -1224,7 +1224,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets phonePager
      *
-     * @param string|null $phonePager Pager phone number of the contact
+     * @param string|null $phonePager Pager phone number of the contact.
      *
      * @return self
      */
@@ -1248,7 +1248,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets phoneFax
      *
-     * @param string|null $phoneFax fax phone number of the contact
+     * @param string|null $phoneFax Fax phone number of the contact.
      *
      * @return self
      */
@@ -1272,7 +1272,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets mainEmail
      *
-     * @param string|null $mainEmail main email of the contact
+     * @param string|null $mainEmail Main email of the contact.
      *
      * @return self
      */
@@ -1296,7 +1296,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets emailPersonal
      *
-     * @param string|null $emailPersonal personal email of the contact
+     * @param string|null $emailPersonal Personal email of the contact.
      *
      * @return self
      */
@@ -1344,7 +1344,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets emailBusiness
      *
-     * @param string|null $emailBusiness business email of the contact
+     * @param string|null $emailBusiness Business email of the contact.
      *
      * @return self
      */
@@ -1368,7 +1368,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets emailOther
      *
-     * @param string|null $emailOther business email of the contact
+     * @param string|null $emailOther Business email of the contact.
      *
      * @return self
      */
@@ -1392,7 +1392,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets notes
      *
-     * @param string|null $notes notes of the contact
+     * @param string|null $notes Notes of the contact.
      *
      * @return self
      */
@@ -1416,7 +1416,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets peculiarity
      *
-     * @param string|null $peculiarity peculiarity of the contact
+     * @param string|null $peculiarity Peculiarity of the contact.
      *
      * @return self
      */
@@ -1440,7 +1440,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets endFinancialYear
      *
-     * @param string|null $endFinancialYear End of the financial year (for organization)
+     * @param string|null $endFinancialYear End of the financial year (for organization).
      *
      * @return self
      */
@@ -1464,7 +1464,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets language
      *
-     * @param string|null $language Language
+     * @param string|null $language Language.
      *
      * @return self
      */
@@ -1488,7 +1488,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets active
      *
-     * @param string|null $active Active (boolean)
+     * @param string|null $active Active (boolean).
      *
      * @return self
      */
@@ -1512,7 +1512,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets publish
      *
-     * @param string|null $publish Publish (boolean)
+     * @param string|null $publish Publish (boolean).
      *
      * @return self
      */
@@ -1536,7 +1536,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets title
      *
-     * @param string|null $title Title
+     * @param string|null $title Title.
      *
      * @return self
      */
@@ -1560,7 +1560,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets suffix
      *
-     * @param string|null $suffix Suffix
+     * @param string|null $suffix Suffix.
      *
      * @return self
      */
@@ -1584,7 +1584,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets civility
      *
-     * @param string|null $civility Civility
+     * @param string|null $civility Civility.
      *
      * @return self
      */
@@ -1608,7 +1608,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets civilityId
      *
-     * @param int|null $civilityId Civility id
+     * @param int|null $civilityId Civility id.
      *
      * @return self
      */
@@ -1632,7 +1632,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets personAddressed
      *
-     * @param string|null $personAddressed Person Addressed (Correspondance)
+     * @param string|null $personAddressed Person Addressed (Correspondance).
      *
      * @return self
      */
@@ -1656,7 +1656,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets organizationLine1
      *
-     * @param string|null $organizationLine1 Organization name (Correspondance)
+     * @param string|null $organizationLine1 Organization name (Correspondance).
      *
      * @return self
      */
@@ -1680,7 +1680,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets organizationLine2
      *
-     * @param string|null $organizationLine2 Organization name - second line (Correspondance)
+     * @param string|null $organizationLine2 Organization name - second line (Correspondance).
      *
      * @return self
      */
@@ -1704,7 +1704,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets department
      *
-     * @param string|null $department Department (Correspondance)
+     * @param string|null $department Department (Correspondance).
      *
      * @return self
      */
@@ -1728,7 +1728,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets customerNumber
      *
-     * @param string|null $customerNumber Customer Number
+     * @param string|null $customerNumber Customer Number.
      *
      * @return self
      */
@@ -1752,7 +1752,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets birthPlace
      *
-     * @param string|null $birthPlace Birth Place
+     * @param string|null $birthPlace Birth Place.
      *
      * @return self
      */
@@ -1776,7 +1776,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets nationality
      *
-     * @param string|null $nationality Nationality
+     * @param string|null $nationality Nationality.
      *
      * @return self
      */
@@ -1800,7 +1800,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets orgDateCreated
      *
-     * @param string|null $orgDateCreated orgDateCreated
+     * @param string|null $orgDateCreated Organization created date.
      *
      * @return self
      */
@@ -1824,7 +1824,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets orgDateClosed
      *
-     * @param string|null $orgDateClosed orgDateClosed
+     * @param string|null $orgDateClosed Organization closed date.
      *
      * @return self
      */
@@ -1848,7 +1848,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets dateEndFinancialYear
      *
-     * @param string|null $dateEndFinancialYear dateEndFinancialYear
+     * @param string|null $dateEndFinancialYear Financial year end date.
      *
      * @return self
      */
@@ -1872,7 +1872,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets orgIdNo
      *
-     * @param string|null $orgIdNo orgIdNo
+     * @param string|null $orgIdNo Organization identification number.
      *
      * @return self
      */
@@ -1896,7 +1896,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets orgFedNo
      *
-     * @param string|null $orgFedNo orgFedNo
+     * @param string|null $orgFedNo Organization federal number.
      *
      * @return self
      */
@@ -1920,7 +1920,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets orgProvNo
      *
-     * @param string|null $orgProvNo orgProvNo
+     * @param string|null $orgProvNo Organization provincial number.
      *
      * @return self
      */
@@ -1944,7 +1944,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets orgStateId
      *
-     * @param string|null $orgStateId orgStateId
+     * @param string|null $orgStateId Organization state identification
      *
      * @return self
      */
@@ -1968,7 +1968,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets orgEin
      *
-     * @param string|null $orgEin orgEin
+     * @param string|null $orgEin Organization EIN.
      *
      * @return self
      */
@@ -1992,7 +1992,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets externalKey
      *
-     * @param string|null $externalKey external key
+     * @param string|null $externalKey External key.
      *
      * @return self
      */
@@ -2016,7 +2016,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
     /**
      * Sets externalKeyType
      *
-     * @param string|null $externalKeyType External key type
+     * @param string|null $externalKeyType External key type.
      *
      * @return self
      */

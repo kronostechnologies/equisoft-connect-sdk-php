@@ -1,6 +1,6 @@
 <?php
 /**
- * LegacyDocumentDocumentListItemTest
+ * FieldValueValueTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * LegacyDocumentDocumentListItemTest Class Doc Comment
+ * FieldValueValueTest Class Doc Comment
  *
  * @category    Class
- * @description LegacyDocumentDocumentListItem
+ * @description FieldValueValue
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class LegacyDocumentDocumentListItemTest extends TestCase
+class FieldValueValueTest extends TestCase
 {
 
     /**
@@ -71,9 +71,9 @@ class LegacyDocumentDocumentListItemTest extends TestCase
     }
 
     /**
-     * Test "LegacyDocumentDocumentListItem"
+     * Test "FieldValueValue"
      */
-    public function testLegacyDocumentDocumentListItem()
+    public function testFieldValueValue()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -89,24 +89,6 @@ class LegacyDocumentDocumentListItemTest extends TestCase
     }
 
     /**
-     * Test attribute "type"
-     */
-    public function testPropertyType()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "subType"
-     */
-    public function testPropertySubType()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "name"
      */
     public function testPropertyName()
@@ -116,45 +98,45 @@ class LegacyDocumentDocumentListItemTest extends TestCase
     }
 
     /**
-     * Test attribute "files"
+     * Test attribute "label"
      */
-    public function testPropertyFiles()
+    public function testPropertyLabel()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "createdBy"
+     * Test attribute "code"
      */
-    public function testPropertyCreatedBy()
+    public function testPropertyCode()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "createdOn"
+     * Test attribute "description"
      */
-    public function testPropertyCreatedOn()
+    public function testPropertyDescription()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "modifiedBy"
+     * Test attribute "isLocked"
      */
-    public function testPropertyModifiedBy()
+    public function testPropertyIsLocked()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "modifiedOn"
+     * Test attribute "sort"
      */
-    public function testPropertyModifiedOn()
+    public function testPropertySort()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

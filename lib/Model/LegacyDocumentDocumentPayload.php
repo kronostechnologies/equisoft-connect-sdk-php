@@ -217,7 +217,7 @@ class LegacyDocumentDocumentPayload implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets documents
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentPayloadItem[]|null $documents List of document
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentPayloadItem[]|null $documents List of documents.
      *
      * @return self
      */

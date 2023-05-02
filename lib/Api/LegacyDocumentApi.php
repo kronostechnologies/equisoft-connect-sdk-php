@@ -494,7 +494,7 @@ class LegacyDocumentApi
      *
      * Delete a document and it&#39;s related files.
      *
-     * @param  string $id Document Id (required)
+     * @param  string $id Document identifier. (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -511,7 +511,7 @@ class LegacyDocumentApi
      *
      * Delete a document and it&#39;s related files.
      *
-     * @param  string $id Document Id (required)
+     * @param  string $id Document identifier. (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -702,7 +702,7 @@ class LegacyDocumentApi
      *
      * Delete a document and it&#39;s related files.
      *
-     * @param  string $id Document Id (required)
+     * @param  string $id Document identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -722,7 +722,7 @@ class LegacyDocumentApi
      *
      * Delete a document and it&#39;s related files.
      *
-     * @param  string $id Document Id (required)
+     * @param  string $id Document identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -771,7 +771,7 @@ class LegacyDocumentApi
     /**
      * Create request for operation 'deleteDocument'
      *
-     * @param  string $id Document Id (required)
+     * @param  string $id Document identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -869,9 +869,9 @@ class LegacyDocumentApi
     /**
      * Operation deleteDocumentFile
      *
-     * Delete one file from a document
+     * Delete one file from a document.
      *
-     * @param  string $id Document File Id (required)
+     * @param  string $id Document file identifier. (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -886,9 +886,9 @@ class LegacyDocumentApi
     /**
      * Operation deleteDocumentFileWithHttpInfo
      *
-     * Delete one file from a document
+     * Delete one file from a document.
      *
-     * @param  string $id Document File Id (required)
+     * @param  string $id Document file identifier. (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1077,9 +1077,9 @@ class LegacyDocumentApi
     /**
      * Operation deleteDocumentFileAsync
      *
-     * Delete one file from a document
+     * Delete one file from a document.
      *
-     * @param  string $id Document File Id (required)
+     * @param  string $id Document file identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1097,9 +1097,9 @@ class LegacyDocumentApi
     /**
      * Operation deleteDocumentFileAsyncWithHttpInfo
      *
-     * Delete one file from a document
+     * Delete one file from a document.
      *
-     * @param  string $id Document File Id (required)
+     * @param  string $id Document file identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1148,7 +1148,7 @@ class LegacyDocumentApi
     /**
      * Create request for operation 'deleteDocumentFile'
      *
-     * @param  string $id Document File Id (required)
+     * @param  string $id Document file identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1248,7 +1248,7 @@ class LegacyDocumentApi
      *
      * Download a file. File data is encoded in base64.
      *
-     * @param  string $id Document File Id (required)
+     * @param  string $id Document file identifier. (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1265,7 +1265,7 @@ class LegacyDocumentApi
      *
      * Download a file. File data is encoded in base64.
      *
-     * @param  string $id Document File Id (required)
+     * @param  string $id Document file identifier. (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1456,7 +1456,7 @@ class LegacyDocumentApi
      *
      * Download a file. File data is encoded in base64.
      *
-     * @param  string $id Document File Id (required)
+     * @param  string $id Document file identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1476,7 +1476,7 @@ class LegacyDocumentApi
      *
      * Download a file. File data is encoded in base64.
      *
-     * @param  string $id Document File Id (required)
+     * @param  string $id Document file identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1525,7 +1525,7 @@ class LegacyDocumentApi
     /**
      * Create request for operation 'downloadDocumentFile'
      *
-     * @param  string $id Document File Id (required)
+     * @param  string $id Document file identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1625,7 +1625,7 @@ class LegacyDocumentApi
      *
      * Get all data for a document record.
      *
-     * @param  string $id Document Id (required)
+     * @param  string $id Document identifier. (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1642,7 +1642,7 @@ class LegacyDocumentApi
      *
      * Get all data for a document record.
      *
-     * @param  string $id Document Id (required)
+     * @param  string $id Document identifier. (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1833,7 +1833,7 @@ class LegacyDocumentApi
      *
      * Get all data for a document record.
      *
-     * @param  string $id Document Id (required)
+     * @param  string $id Document identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1853,7 +1853,7 @@ class LegacyDocumentApi
      *
      * Get all data for a document record.
      *
-     * @param  string $id Document Id (required)
+     * @param  string $id Document identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1902,7 +1902,7 @@ class LegacyDocumentApi
     /**
      * Create request for operation 'getDocument'
      *
-     * @param  string $id Document Id (required)
+     * @param  string $id Document identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2000,32 +2000,36 @@ class LegacyDocumentApi
     /**
      * Operation getDocumentList
      *
-     * Get a list of all documents. This will return basic information about the document.
+     * Get a list of all documents.
      *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentGetListPayloadRequest $legacyDocumentDocumentGetListPayloadRequest legacyDocumentDocumentGetListPayloadRequest (required)
+     * @param  string $lastModifiedTime To Fetch all documents, which got modified / created after specified date. If the value \&quot;auto\&quot; is used, the last access date to this method will be used. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentGetListResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
      */
-    public function getDocumentList()
+    public function getDocumentList($legacyDocumentDocumentGetListPayloadRequest, $lastModifiedTime = null)
     {
-        list($response) = $this->getDocumentListWithHttpInfo();
+        list($response) = $this->getDocumentListWithHttpInfo($legacyDocumentDocumentGetListPayloadRequest, $lastModifiedTime);
         return $response;
     }
 
     /**
      * Operation getDocumentListWithHttpInfo
      *
-     * Get a list of all documents. This will return basic information about the document.
+     * Get a list of all documents.
      *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentGetListPayloadRequest $legacyDocumentDocumentGetListPayloadRequest (required)
+     * @param  string $lastModifiedTime To Fetch all documents, which got modified / created after specified date. If the value \&quot;auto\&quot; is used, the last access date to this method will be used. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentGetListResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getDocumentListWithHttpInfo()
+    public function getDocumentListWithHttpInfo($legacyDocumentDocumentGetListPayloadRequest, $lastModifiedTime = null)
     {
-        $request = $this->getDocumentListRequest();
+        $request = $this->getDocumentListRequest($legacyDocumentDocumentGetListPayloadRequest, $lastModifiedTime);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2160,15 +2164,17 @@ class LegacyDocumentApi
     /**
      * Operation getDocumentListAsync
      *
-     * Get a list of all documents. This will return basic information about the document.
+     * Get a list of all documents.
      *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentGetListPayloadRequest $legacyDocumentDocumentGetListPayloadRequest (required)
+     * @param  string $lastModifiedTime To Fetch all documents, which got modified / created after specified date. If the value \&quot;auto\&quot; is used, the last access date to this method will be used. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getDocumentListAsync()
+    public function getDocumentListAsync($legacyDocumentDocumentGetListPayloadRequest, $lastModifiedTime = null)
     {
-        return $this->getDocumentListAsyncWithHttpInfo()
+        return $this->getDocumentListAsyncWithHttpInfo($legacyDocumentDocumentGetListPayloadRequest, $lastModifiedTime)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2179,16 +2185,18 @@ class LegacyDocumentApi
     /**
      * Operation getDocumentListAsyncWithHttpInfo
      *
-     * Get a list of all documents. This will return basic information about the document.
+     * Get a list of all documents.
      *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentGetListPayloadRequest $legacyDocumentDocumentGetListPayloadRequest (required)
+     * @param  string $lastModifiedTime To Fetch all documents, which got modified / created after specified date. If the value \&quot;auto\&quot; is used, the last access date to this method will be used. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getDocumentListAsyncWithHttpInfo()
+    public function getDocumentListAsyncWithHttpInfo($legacyDocumentDocumentGetListPayloadRequest, $lastModifiedTime = null)
     {
         $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentGetListResponse';
-        $request = $this->getDocumentListRequest();
+        $request = $this->getDocumentListRequest($legacyDocumentDocumentGetListPayloadRequest, $lastModifiedTime);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2229,12 +2237,20 @@ class LegacyDocumentApi
     /**
      * Create request for operation 'getDocumentList'
      *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentGetListPayloadRequest $legacyDocumentDocumentGetListPayloadRequest (required)
+     * @param  string $lastModifiedTime To Fetch all documents, which got modified / created after specified date. If the value \&quot;auto\&quot; is used, the last access date to this method will be used. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getDocumentListRequest()
+    public function getDocumentListRequest($legacyDocumentDocumentGetListPayloadRequest, $lastModifiedTime = null)
     {
+        // verify the required parameter 'legacyDocumentDocumentGetListPayloadRequest' is set
+        if ($legacyDocumentDocumentGetListPayloadRequest === null || (is_array($legacyDocumentDocumentGetListPayloadRequest) && count($legacyDocumentDocumentGetListPayloadRequest) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $legacyDocumentDocumentGetListPayloadRequest when calling getDocumentList'
+            );
+        }
 
         $resourcePath = '/apps/api/kronos.document.getList';
         $formParams = [];
@@ -2243,6 +2259,15 @@ class LegacyDocumentApi
         $httpBody = '';
         $multipart = false;
 
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $lastModifiedTime,
+            'last_modified_time', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
 
 
 
@@ -2254,12 +2279,18 @@ class LegacyDocumentApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                []
+                ['application/json']
             );
         }
 
         // for model (json/xml)
-        if (count($formParams) > 0) {
+        if (isset($legacyDocumentDocumentGetListPayloadRequest)) {
+            if ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($legacyDocumentDocumentGetListPayloadRequest));
+            } else {
+                $httpBody = $legacyDocumentDocumentGetListPayloadRequest;
+            }
+        } elseif (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {
@@ -2685,9 +2716,9 @@ class LegacyDocumentApi
     /**
      * Operation uploadDocumentFile
      *
-     * Upload a new file in a document
+     * Upload a new file in a document.
      *
-     * @param  string $id Document File Id (required)
+     * @param  string $id Document file identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentUploadDocumentFileRequest $legacyDocumentUploadDocumentFileRequest legacyDocumentUploadDocumentFileRequest (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
@@ -2703,9 +2734,9 @@ class LegacyDocumentApi
     /**
      * Operation uploadDocumentFileWithHttpInfo
      *
-     * Upload a new file in a document
+     * Upload a new file in a document.
      *
-     * @param  string $id Document File Id (required)
+     * @param  string $id Document file identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentUploadDocumentFileRequest $legacyDocumentUploadDocumentFileRequest (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
@@ -2895,9 +2926,9 @@ class LegacyDocumentApi
     /**
      * Operation uploadDocumentFileAsync
      *
-     * Upload a new file in a document
+     * Upload a new file in a document.
      *
-     * @param  string $id Document File Id (required)
+     * @param  string $id Document file identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentUploadDocumentFileRequest $legacyDocumentUploadDocumentFileRequest (required)
      *
      * @throws \InvalidArgumentException
@@ -2916,9 +2947,9 @@ class LegacyDocumentApi
     /**
      * Operation uploadDocumentFileAsyncWithHttpInfo
      *
-     * Upload a new file in a document
+     * Upload a new file in a document.
      *
-     * @param  string $id Document File Id (required)
+     * @param  string $id Document file identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentUploadDocumentFileRequest $legacyDocumentUploadDocumentFileRequest (required)
      *
      * @throws \InvalidArgumentException
@@ -2968,7 +2999,7 @@ class LegacyDocumentApi
     /**
      * Create request for operation 'uploadDocumentFile'
      *
-     * @param  string $id Document File Id (required)
+     * @param  string $id Document file identifier. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentUploadDocumentFileRequest $legacyDocumentUploadDocumentFileRequest (required)
      *
      * @throws \InvalidArgumentException

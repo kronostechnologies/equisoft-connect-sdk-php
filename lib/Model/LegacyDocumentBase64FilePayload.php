@@ -217,7 +217,7 @@ class LegacyDocumentBase64FilePayload implements ModelInterface, ArrayAccess, \J
     /**
      * Sets files
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentBase64FilePayloadItem[]|null $files files
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentBase64FilePayloadItem[]|null $files Array of files.
      *
      * @return self
      */
