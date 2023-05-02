@@ -222,7 +222,7 @@ class LegacyDocumentBase64FilePayloadItemAllOf implements ModelInterface, ArrayA
     /**
      * Sets externalKey
      *
-     * @param string|null $externalKey The file external key.
+     * @param string|null $externalKey The file external key
      *
      * @return self
      */
@@ -246,7 +246,7 @@ class LegacyDocumentBase64FilePayloadItemAllOf implements ModelInterface, ArrayA
     /**
      * Sets base64EncodedData
      *
-     * @param string|null $base64EncodedData File data encoded in base 64.
+     * @param string|null $base64EncodedData file data encoded in base 64
      *
      * @return self
      */

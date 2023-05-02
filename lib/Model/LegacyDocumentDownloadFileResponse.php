@@ -238,7 +238,7 @@ class LegacyDocumentDownloadFileResponse implements ModelInterface, ArrayAccess,
     /**
      * Sets stat
      *
-     * @param string|null $stat Status of the request that has been made. Can be 'ok' or 'fail'.
+     * @param string|null $stat Status of the request that has been made. Can be 'ok' or 'fail'
      *
      * @return self
      */
@@ -310,7 +310,7 @@ class LegacyDocumentDownloadFileResponse implements ModelInterface, ArrayAccess,
     /**
      * Sets files
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentBase64FilePayloadItem[] $files Array of files.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentBase64FilePayloadItem[] $files Array of documents
      *
      * @return self
      */

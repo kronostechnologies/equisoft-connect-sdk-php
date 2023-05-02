@@ -98,7 +98,7 @@ class LegacyDocumentApiTest extends TestCase
     /**
      * Test case for deleteDocumentFile
      *
-     * Delete one file from a document..
+     * Delete one file from a document.
      *
      */
     public function testDeleteDocumentFile()
@@ -134,7 +134,7 @@ class LegacyDocumentApiTest extends TestCase
     /**
      * Test case for getDocumentList
      *
-     * Get a list of all documents..
+     * Get a list of all documents. This will return basic information about the document..
      *
      */
     public function testGetDocumentList()
@@ -158,7 +158,7 @@ class LegacyDocumentApiTest extends TestCase
     /**
      * Test case for uploadDocumentFile
      *
-     * Upload a new file in a document..
+     * Upload a new file in a document.
      *
      */
     public function testUploadDocumentFile()

@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * LegacyDocumentUploadDocumentFileRequestTest Class Doc Comment
  *
  * @category    Class
- * @description Wrapper for Legacy payload argument.
+ * @description Wrapper for Legacy payload argument
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

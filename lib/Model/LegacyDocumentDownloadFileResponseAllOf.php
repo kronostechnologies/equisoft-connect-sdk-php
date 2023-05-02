@@ -216,7 +216,7 @@ class LegacyDocumentDownloadFileResponseAllOf implements ModelInterface, ArrayAc
     /**
      * Sets files
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentBase64FilePayloadItem[]|null $files Array of files.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentBase64FilePayloadItem[]|null $files Array of documents
      *
      * @return self
      */

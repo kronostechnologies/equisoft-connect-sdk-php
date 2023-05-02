@@ -170,7 +170,7 @@ class TasksApiTest extends TestCase
     /**
      * Test case for patchTaskInternalNote
      *
-     * Edit an internal note for a task..
+     * Add an internal note to a task..
      *
      */
     public function testPatchTaskInternalNote()
@@ -182,7 +182,7 @@ class TasksApiTest extends TestCase
     /**
      * Test case for putTaskLinksDocuments
      *
-     * Update the links between a task and existing documents..
+     * Update the links between a task and existing documents.
      *
      */
     public function testPutTaskLinksDocuments()

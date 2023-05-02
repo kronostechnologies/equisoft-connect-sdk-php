@@ -72,36 +72,12 @@ class FieldValuesApiTest extends TestCase
     }
 
     /**
-     * Test case for getValue
-     *
-     * Get single value for a specific field name and value id.
-     *
-     */
-    public function testGetValue()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for listFields
      *
      * List fields with values list (values domain)..
      *
      */
     public function testListFields()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for listValues
-     *
-     * List values for a specific field name.
-     *
-     */
-    public function testListValues()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

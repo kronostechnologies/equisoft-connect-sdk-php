@@ -12,8 +12,8 @@ Method | HTTP request | Description
 [**getTaskInternalNoteList()**](TasksApi.md#getTaskInternalNoteList) | **GET** /crm/api/v1/tasks/{taskId}/notes | Get the internal notes list for a task.
 [**listTasks()**](TasksApi.md#listTasks) | **GET** /crm/api/v1/tasks | List or search tasks.
 [**patchTask()**](TasksApi.md#patchTask) | **PATCH** /crm/api/v1/tasks/{taskId} | Partially update a task.
-[**patchTaskInternalNote()**](TasksApi.md#patchTaskInternalNote) | **PATCH** /crm/api/v1/tasks/{taskId}/notes/{noteId} | Edit an internal note for a task.
-[**putTaskLinksDocuments()**](TasksApi.md#putTaskLinksDocuments) | **PUT** /crm/api/v1/tasks/{taskId}/documents | Update the links between a task and existing documents.
+[**patchTaskInternalNote()**](TasksApi.md#patchTaskInternalNote) | **PATCH** /crm/api/v1/tasks/{taskId}/notes/{noteId} | Add an internal note to a task.
+[**putTaskLinksDocuments()**](TasksApi.md#putTaskLinksDocuments) | **PUT** /crm/api/v1/tasks/{taskId}/documents | Update the links between a task and existing documents
 [**restoreTaskInternalNote()**](TasksApi.md#restoreTaskInternalNote) | **POST** /crm/api/v1/tasks/{taskId}/notes/{noteId}/restore | Restore an archived internal note for a task.
 [**transferTaskToCompleted()**](TasksApi.md#transferTaskToCompleted) | **POST** /crm/api/v1/tasks/{taskId}/transferToCompleted | Transfer a task to completed/done.
 
@@ -226,7 +226,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\TasksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$taskId = 'taskId_example'; // string | Task unique identifier.
+$taskId = 'taskId_example'; // string
 
 try {
     $apiInstance->deleteTask($taskId);
@@ -239,7 +239,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **taskId** | **string**| Task unique identifier. |
+ **taskId** | **string**|  |
 
 ### Return type
 
@@ -283,7 +283,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\TasksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$taskId = 'taskId_example'; // string | Task unique identifier.
+$taskId = 'taskId_example'; // string
 $acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282.
 
 try {
@@ -298,7 +298,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **taskId** | **string**| Task unique identifier. |
+ **taskId** | **string**|  |
  **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
 
 ### Return type
@@ -343,7 +343,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\TasksApi(
     new GuzzleHttp\Client(),
     $config
 );
-$taskId = 'taskId_example'; // string | Task unique identifier.
+$taskId = 'taskId_example'; // string
 $history = new \Equisoft\SDK\EquisoftConnect\Model\InternalNotesHistoryType(); // InternalNotesHistoryType | Query all revisions or not.
 $acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282.
 
@@ -359,7 +359,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **taskId** | **string**| Task unique identifier. |
+ **taskId** | **string**|  |
  **history** | [**InternalNotesHistoryType**](../Model/.md)| Query all revisions or not. | [optional]
  **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
 
@@ -524,7 +524,7 @@ Name | Type | Description  | Notes
 patchTaskInternalNote($taskId, $noteId, $internalNotesPatchNotePayload, $acceptLanguage): \Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNoteResponse
 ```
 
-Edit an internal note for a task.
+Add an internal note to a task.
 
 ### Example
 
@@ -588,7 +588,7 @@ Name | Type | Description  | Notes
 putTaskLinksDocuments($taskId, $tasksPutTaskLinkDocumentsPayload, $acceptLanguage)
 ```
 
-Update the links between a task and existing documents.
+Update the links between a task and existing documents
 
 ### Example
 
@@ -608,7 +608,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\TasksApi(
     $config
 );
 $taskId = 'taskId_example'; // string | Task unique identifier.
-$tasksPutTaskLinkDocumentsPayload = new \Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload(); // \Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload | Contains an array of Ids for the documents to link with the task. To remove all links, documentIds set to an empty array  Collections are always overridden if defined.
+$tasksPutTaskLinkDocumentsPayload = new \Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload(); // \Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload | Contains an array of Ids for the documents to link with the task.  *     To remove all links, documentIds set to an empty array  Collections are always overridden if defined.
 $acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282.
 
 try {
@@ -623,7 +623,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **taskId** | **string**| Task unique identifier. |
- **tasksPutTaskLinkDocumentsPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload**](../Model/TasksPutTaskLinkDocumentsPayload.md)| Contains an array of Ids for the documents to link with the task. To remove all links, documentIds set to an empty array  Collections are always overridden if defined. |
+ **tasksPutTaskLinkDocumentsPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload**](../Model/TasksPutTaskLinkDocumentsPayload.md)| Contains an array of Ids for the documents to link with the task.  *     To remove all links, documentIds set to an empty array  Collections are always overridden if defined. |
  **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
 
 ### Return type

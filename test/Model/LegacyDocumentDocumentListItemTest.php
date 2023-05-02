@@ -123,40 +123,4 @@ class LegacyDocumentDocumentListItemTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
-
-    /**
-     * Test attribute "createdBy"
-     */
-    public function testPropertyCreatedBy()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "createdOn"
-     */
-    public function testPropertyCreatedOn()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "modifiedBy"
-     */
-    public function testPropertyModifiedBy()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "modifiedOn"
-     */
-    public function testPropertyModifiedOn()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
 }

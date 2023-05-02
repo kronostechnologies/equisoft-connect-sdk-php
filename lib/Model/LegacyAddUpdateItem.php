@@ -228,7 +228,7 @@ class LegacyAddUpdateItem implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets id
      *
-     * @param string|null $id Id of the added item.
+     * @param string|null $id id of the added item
      *
      * @return self
      */
@@ -252,7 +252,7 @@ class LegacyAddUpdateItem implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets externalKey
      *
-     * @param string|null $externalKey External key assigned to the item.
+     * @param string|null $externalKey External key assigned to the item
      *
      * @return self
      */
@@ -276,7 +276,7 @@ class LegacyAddUpdateItem implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets result
      *
-     * @param string|null $result Status of the Add or Update command (\"inserted\" | \"updated\").
+     * @param string|null $result Status of the Add or Update command (\"inserted\" | \"updated\")
      *
      * @return self
      */

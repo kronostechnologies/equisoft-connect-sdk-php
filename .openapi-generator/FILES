@@ -30,7 +30,6 @@ docs/Model/ContactContactOccupation.md
 docs/Model/ContactContactPhone.md
 docs/Model/ContactContactSegmentation.md
 docs/Model/ContactContactWebsite.md
-docs/Model/ContactPatchContactPayload.md
 docs/Model/ContactPatchDto.md
 docs/Model/ContactsContact.md
 docs/Model/ContextActor.md
@@ -65,9 +64,7 @@ docs/Model/EventsVisibilityType.md
 docs/Model/FieldValue.md
 docs/Model/FieldValueField.md
 docs/Model/FieldValueListFieldResponse.md
-docs/Model/FieldValueListValueResponse.md
 docs/Model/FieldValueLocalizedString.md
-docs/Model/FieldValueValue.md
 docs/Model/GatewaysAccessesCreateAccessResponse.md
 docs/Model/GatewaysAccessesCreateEquisoftAnalyzeAccessPayload.md
 docs/Model/GatewaysAccessesEquisoftAnalyzeAccess.md
@@ -112,7 +109,6 @@ docs/Model/LegacyDocumentBase64FilePayload.md
 docs/Model/LegacyDocumentBase64FilePayloadItem.md
 docs/Model/LegacyDocumentBase64FilePayloadItemAllOf.md
 docs/Model/LegacyDocumentDocument.md
-docs/Model/LegacyDocumentDocumentGetListPayloadRequest.md
 docs/Model/LegacyDocumentDocumentListItem.md
 docs/Model/LegacyDocumentDocumentPayload.md
 docs/Model/LegacyDocumentDocumentPayloadItem.md
@@ -245,7 +241,6 @@ lib/Model/ContactContactOccupation.php
 lib/Model/ContactContactPhone.php
 lib/Model/ContactContactSegmentation.php
 lib/Model/ContactContactWebsite.php
-lib/Model/ContactPatchContactPayload.php
 lib/Model/ContactPatchDto.php
 lib/Model/ContactsContact.php
 lib/Model/ContextActor.php
@@ -280,9 +275,7 @@ lib/Model/EventsVisibilityType.php
 lib/Model/FieldValue.php
 lib/Model/FieldValueField.php
 lib/Model/FieldValueListFieldResponse.php
-lib/Model/FieldValueListValueResponse.php
 lib/Model/FieldValueLocalizedString.php
-lib/Model/FieldValueValue.php
 lib/Model/GatewaysAccessesCreateAccessResponse.php
 lib/Model/GatewaysAccessesCreateEquisoftAnalyzeAccessPayload.php
 lib/Model/GatewaysAccessesEquisoftAnalyzeAccess.php
@@ -327,7 +320,6 @@ lib/Model/LegacyDocumentBase64FilePayload.php
 lib/Model/LegacyDocumentBase64FilePayloadItem.php
 lib/Model/LegacyDocumentBase64FilePayloadItemAllOf.php
 lib/Model/LegacyDocumentDocument.php
-lib/Model/LegacyDocumentDocumentGetListPayloadRequest.php
 lib/Model/LegacyDocumentDocumentListItem.php
 lib/Model/LegacyDocumentDocumentPayload.php
 lib/Model/LegacyDocumentDocumentPayloadItem.php
@@ -459,7 +451,6 @@ test/Model/ContactContactOccupationTest.php
 test/Model/ContactContactPhoneTest.php
 test/Model/ContactContactSegmentationTest.php
 test/Model/ContactContactWebsiteTest.php
-test/Model/ContactPatchContactPayloadTest.php
 test/Model/ContactPatchDtoTest.php
 test/Model/ContactsContactTest.php
 test/Model/ContextActorTest.php
@@ -493,10 +484,8 @@ test/Model/EventsTransferToCompletedResponseTest.php
 test/Model/EventsVisibilityTypeTest.php
 test/Model/FieldValueFieldTest.php
 test/Model/FieldValueListFieldResponseTest.php
-test/Model/FieldValueListValueResponseTest.php
 test/Model/FieldValueLocalizedStringTest.php
 test/Model/FieldValueTest.php
-test/Model/FieldValueValueTest.php
 test/Model/GatewaysAccessesCreateAccessResponseTest.php
 test/Model/GatewaysAccessesCreateEquisoftAnalyzeAccessPayloadTest.php
 test/Model/GatewaysAccessesEquisoftAnalyzeAccessTest.php
@@ -540,7 +529,6 @@ test/Model/LegacyContactContactTest.php
 test/Model/LegacyDocumentBase64FilePayloadItemAllOfTest.php
 test/Model/LegacyDocumentBase64FilePayloadItemTest.php
 test/Model/LegacyDocumentBase64FilePayloadTest.php
-test/Model/LegacyDocumentDocumentGetListPayloadRequestTest.php
 test/Model/LegacyDocumentDocumentListItemTest.php
 test/Model/LegacyDocumentDocumentPayloadItemTest.php
 test/Model/LegacyDocumentDocumentPayloadRequestTest.php

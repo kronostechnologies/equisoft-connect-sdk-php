@@ -246,7 +246,7 @@ class LegacyDocumentBase64FilePayloadItem implements ModelInterface, ArrayAccess
     /**
      * Sets id
      *
-     * @param string|null $id Id of the file.
+     * @param string|null $id id of the file
      *
      * @return self
      */
@@ -270,7 +270,7 @@ class LegacyDocumentBase64FilePayloadItem implements ModelInterface, ArrayAccess
     /**
      * Sets fileName
      *
-     * @param string|null $fileName Filename.
+     * @param string|null $fileName File name
      *
      * @return self
      */
@@ -294,7 +294,7 @@ class LegacyDocumentBase64FilePayloadItem implements ModelInterface, ArrayAccess
     /**
      * Sets mimeType
      *
-     * @param string|null $mimeType Mime Type of the file.
+     * @param string|null $mimeType Mime Type of the file
      *
      * @return self
      */
@@ -318,7 +318,7 @@ class LegacyDocumentBase64FilePayloadItem implements ModelInterface, ArrayAccess
     /**
      * Sets sizeBytes
      *
-     * @param string|null $sizeBytes Size of the file(in bytes).
+     * @param string|null $sizeBytes Size of the file(in bytes)
      *
      * @return self
      */
@@ -342,7 +342,7 @@ class LegacyDocumentBase64FilePayloadItem implements ModelInterface, ArrayAccess
     /**
      * Sets externalKey
      *
-     * @param string|null $externalKey The file external key.
+     * @param string|null $externalKey The file external key
      *
      * @return self
      */
@@ -366,7 +366,7 @@ class LegacyDocumentBase64FilePayloadItem implements ModelInterface, ArrayAccess
     /**
      * Sets base64EncodedData
      *
-     * @param string|null $base64EncodedData File data encoded in base 64.
+     * @param string|null $base64EncodedData file data encoded in base 64
      *
      * @return self
      */

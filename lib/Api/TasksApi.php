@@ -1141,7 +1141,7 @@ class TasksApi
      *
      * Delete a task.
      *
-     * @param  string $taskId Task unique identifier. (required)
+     * @param  string $taskId taskId (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1157,7 +1157,7 @@ class TasksApi
      *
      * Delete a task.
      *
-     * @param  string $taskId Task unique identifier. (required)
+     * @param  string $taskId (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1240,7 +1240,7 @@ class TasksApi
      *
      * Delete a task.
      *
-     * @param  string $taskId Task unique identifier. (required)
+     * @param  string $taskId (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1260,7 +1260,7 @@ class TasksApi
      *
      * Delete a task.
      *
-     * @param  string $taskId Task unique identifier. (required)
+     * @param  string $taskId (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1296,7 +1296,7 @@ class TasksApi
     /**
      * Create request for operation 'deleteTask'
      *
-     * @param  string $taskId Task unique identifier. (required)
+     * @param  string $taskId (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1395,7 +1395,7 @@ class TasksApi
      *
      * Return the detail of a task.
      *
-     * @param  string $taskId Task unique identifier. (required)
+     * @param  string $taskId taskId (required)
      * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
@@ -1413,7 +1413,7 @@ class TasksApi
      *
      * Return the detail of a task.
      *
-     * @param  string $taskId Task unique identifier. (required)
+     * @param  string $taskId (required)
      * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
@@ -1582,7 +1582,7 @@ class TasksApi
      *
      * Return the detail of a task.
      *
-     * @param  string $taskId Task unique identifier. (required)
+     * @param  string $taskId (required)
      * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
@@ -1603,7 +1603,7 @@ class TasksApi
      *
      * Return the detail of a task.
      *
-     * @param  string $taskId Task unique identifier. (required)
+     * @param  string $taskId (required)
      * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
@@ -1653,7 +1653,7 @@ class TasksApi
     /**
      * Create request for operation 'getTask'
      *
-     * @param  string $taskId Task unique identifier. (required)
+     * @param  string $taskId (required)
      * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
@@ -1757,7 +1757,7 @@ class TasksApi
      *
      * Get the internal notes list for a task.
      *
-     * @param  string $taskId Task unique identifier. (required)
+     * @param  string $taskId taskId (required)
      * @param  InternalNotesHistoryType $history Query all revisions or not. (optional)
      * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
@@ -1776,7 +1776,7 @@ class TasksApi
      *
      * Get the internal notes list for a task.
      *
-     * @param  string $taskId Task unique identifier. (required)
+     * @param  string $taskId (required)
      * @param  InternalNotesHistoryType $history Query all revisions or not. (optional)
      * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
@@ -1946,7 +1946,7 @@ class TasksApi
      *
      * Get the internal notes list for a task.
      *
-     * @param  string $taskId Task unique identifier. (required)
+     * @param  string $taskId (required)
      * @param  InternalNotesHistoryType $history Query all revisions or not. (optional)
      * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
@@ -1968,7 +1968,7 @@ class TasksApi
      *
      * Get the internal notes list for a task.
      *
-     * @param  string $taskId Task unique identifier. (required)
+     * @param  string $taskId (required)
      * @param  InternalNotesHistoryType $history Query all revisions or not. (optional)
      * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
@@ -2019,7 +2019,7 @@ class TasksApi
     /**
      * Create request for operation 'getTaskInternalNoteList'
      *
-     * @param  string $taskId Task unique identifier. (required)
+     * @param  string $taskId (required)
      * @param  InternalNotesHistoryType $history Query all revisions or not. (optional)
      * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
@@ -2608,7 +2608,7 @@ class TasksApi
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Equisoft\SDK\EquisoftConnect\Model\TasksPatchTaskResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+     * @return \Equisoft\SDK\EquisoftConnect\Model\TasksPatchTaskResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
     public function patchTask($taskId, $tasksPatchTaskPayload, $acceptLanguage = null)
     {
@@ -2627,7 +2627,7 @@ class TasksApi
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Equisoft\SDK\EquisoftConnect\Model\TasksPatchTaskResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\TasksPatchTaskResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function patchTaskWithHttpInfo($taskId, $tasksPatchTaskPayload, $acceptLanguage = null)
     {
@@ -2714,21 +2714,6 @@ class TasksApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
-                case 404:
-                    if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
                 case 500:
                     if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -2781,14 +2766,6 @@ class TasksApi
                     $e->setResponseObject($data);
                     break;
                 case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
@@ -3002,7 +2979,7 @@ class TasksApi
     /**
      * Operation patchTaskInternalNote
      *
-     * Edit an internal note for a task.
+     * Add an internal note to a task.
      *
      * @param  string $taskId Task unique identifier. (required)
      * @param  int $noteId Note unique identifier. (required)
@@ -3022,7 +2999,7 @@ class TasksApi
     /**
      * Operation patchTaskInternalNoteWithHttpInfo
      *
-     * Edit an internal note for a task.
+     * Add an internal note to a task.
      *
      * @param  string $taskId Task unique identifier. (required)
      * @param  int $noteId Note unique identifier. (required)
@@ -3193,7 +3170,7 @@ class TasksApi
     /**
      * Operation patchTaskInternalNoteAsync
      *
-     * Edit an internal note for a task.
+     * Add an internal note to a task.
      *
      * @param  string $taskId Task unique identifier. (required)
      * @param  int $noteId Note unique identifier. (required)
@@ -3216,7 +3193,7 @@ class TasksApi
     /**
      * Operation patchTaskInternalNoteAsyncWithHttpInfo
      *
-     * Edit an internal note for a task.
+     * Add an internal note to a task.
      *
      * @param  string $taskId Task unique identifier. (required)
      * @param  int $noteId Note unique identifier. (required)
@@ -3400,10 +3377,10 @@ class TasksApi
     /**
      * Operation putTaskLinksDocuments
      *
-     * Update the links between a task and existing documents.
+     * Update the links between a task and existing documents
      *
      * @param  string $taskId Task unique identifier. (required)
-     * @param  \Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload $tasksPutTaskLinkDocumentsPayload Contains an array of Ids for the documents to link with the task. To remove all links, documentIds set to an empty array  Collections are always overridden if defined. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload $tasksPutTaskLinkDocumentsPayload Contains an array of Ids for the documents to link with the task.  *     To remove all links, documentIds set to an empty array  Collections are always overridden if defined. (required)
      * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
@@ -3418,10 +3395,10 @@ class TasksApi
     /**
      * Operation putTaskLinksDocumentsWithHttpInfo
      *
-     * Update the links between a task and existing documents.
+     * Update the links between a task and existing documents
      *
      * @param  string $taskId Task unique identifier. (required)
-     * @param  \Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload $tasksPutTaskLinkDocumentsPayload Contains an array of Ids for the documents to link with the task. To remove all links, documentIds set to an empty array  Collections are always overridden if defined. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload $tasksPutTaskLinkDocumentsPayload Contains an array of Ids for the documents to link with the task.  *     To remove all links, documentIds set to an empty array  Collections are always overridden if defined. (required)
      * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
@@ -3487,14 +3464,6 @@ class TasksApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 404:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -3511,10 +3480,10 @@ class TasksApi
     /**
      * Operation putTaskLinksDocumentsAsync
      *
-     * Update the links between a task and existing documents.
+     * Update the links between a task and existing documents
      *
      * @param  string $taskId Task unique identifier. (required)
-     * @param  \Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload $tasksPutTaskLinkDocumentsPayload Contains an array of Ids for the documents to link with the task. To remove all links, documentIds set to an empty array  Collections are always overridden if defined. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload $tasksPutTaskLinkDocumentsPayload Contains an array of Ids for the documents to link with the task.  *     To remove all links, documentIds set to an empty array  Collections are always overridden if defined. (required)
      * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
@@ -3533,10 +3502,10 @@ class TasksApi
     /**
      * Operation putTaskLinksDocumentsAsyncWithHttpInfo
      *
-     * Update the links between a task and existing documents.
+     * Update the links between a task and existing documents
      *
      * @param  string $taskId Task unique identifier. (required)
-     * @param  \Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload $tasksPutTaskLinkDocumentsPayload Contains an array of Ids for the documents to link with the task. To remove all links, documentIds set to an empty array  Collections are always overridden if defined. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload $tasksPutTaskLinkDocumentsPayload Contains an array of Ids for the documents to link with the task.  *     To remove all links, documentIds set to an empty array  Collections are always overridden if defined. (required)
      * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
@@ -3574,7 +3543,7 @@ class TasksApi
      * Create request for operation 'putTaskLinksDocuments'
      *
      * @param  string $taskId Task unique identifier. (required)
-     * @param  \Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload $tasksPutTaskLinkDocumentsPayload Contains an array of Ids for the documents to link with the task. To remove all links, documentIds set to an empty array  Collections are always overridden if defined. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload $tasksPutTaskLinkDocumentsPayload Contains an array of Ids for the documents to link with the task.  *     To remove all links, documentIds set to an empty array  Collections are always overridden if defined. (required)
      * @param  string $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
      *
      * @throws \InvalidArgumentException
