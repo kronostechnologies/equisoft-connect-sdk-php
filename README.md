@@ -104,6 +104,7 @@ Class | Method | HTTP request | Description
 *EventsApi* | [**putEventLinksDocuments**](docs/Api/EventsApi.md#puteventlinksdocuments) | **PUT** /crm/api/v1/events/{eventId}/documents | Update the links between an event and existing documents
 *EventsApi* | [**restoreEventInternalNote**](docs/Api/EventsApi.md#restoreeventinternalnote) | **POST** /crm/api/v1/events/{eventId}/notes/{noteId}/restore | Restore an archived internal note for an event.
 *EventsApi* | [**transferEventToCompleted**](docs/Api/EventsApi.md#transfereventtocompleted) | **POST** /crm/api/v1/events/{eventId}/transferToCompleted | Transfer an event to the completed/done calendar.
+*FieldValuesApi* | [**createValue**](docs/Api/FieldValuesApi.md#createvalue) | **POST** /crm/api/v1/fields/{fieldName}/values | Create a value
 *FieldValuesApi* | [**getValue**](docs/Api/FieldValuesApi.md#getvalue) | **GET** /crm/api/v1/fields/{fieldName}/values/{id} | Get single value for a specific field name and value id
 *FieldValuesApi* | [**listFields**](docs/Api/FieldValuesApi.md#listfields) | **GET** /crm/api/v1/fields | List fields with values list (values domain).
 *FieldValuesApi* | [**listValues**](docs/Api/FieldValuesApi.md#listvalues) | **GET** /crm/api/v1/fields/{fieldName}/values | List values for a specific field name
@@ -205,6 +206,8 @@ Class | Method | HTTP request | Description
 - [EventsTransferToCompletedResponse](docs/Model/EventsTransferToCompletedResponse.md)
 - [EventsVisibilityType](docs/Model/EventsVisibilityType.md)
 - [FieldValue](docs/Model/FieldValue.md)
+- [FieldValueCreateValuePayload](docs/Model/FieldValueCreateValuePayload.md)
+- [FieldValueCreateValueResponse](docs/Model/FieldValueCreateValueResponse.md)
 - [FieldValueField](docs/Model/FieldValueField.md)
 - [FieldValueListFieldResponse](docs/Model/FieldValueListFieldResponse.md)
 - [FieldValueListValueResponse](docs/Model/FieldValueListValueResponse.md)

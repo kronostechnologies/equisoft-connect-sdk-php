@@ -63,6 +63,8 @@ docs/Model/EventsPutEventLinkDocumentsPayload.md
 docs/Model/EventsTransferToCompletedResponse.md
 docs/Model/EventsVisibilityType.md
 docs/Model/FieldValue.md
+docs/Model/FieldValueCreateValuePayload.md
+docs/Model/FieldValueCreateValueResponse.md
 docs/Model/FieldValueField.md
 docs/Model/FieldValueListFieldResponse.md
 docs/Model/FieldValueListValueResponse.md
@@ -278,6 +280,8 @@ lib/Model/EventsPutEventLinkDocumentsPayload.php
 lib/Model/EventsTransferToCompletedResponse.php
 lib/Model/EventsVisibilityType.php
 lib/Model/FieldValue.php
+lib/Model/FieldValueCreateValuePayload.php
+lib/Model/FieldValueCreateValueResponse.php
 lib/Model/FieldValueField.php
 lib/Model/FieldValueListFieldResponse.php
 lib/Model/FieldValueListValueResponse.php
@@ -491,6 +495,8 @@ test/Model/EventsPatchEventResponseTest.php
 test/Model/EventsPutEventLinkDocumentsPayloadTest.php
 test/Model/EventsTransferToCompletedResponseTest.php
 test/Model/EventsVisibilityTypeTest.php
+test/Model/FieldValueCreateValuePayloadTest.php
+test/Model/FieldValueCreateValueResponseTest.php
 test/Model/FieldValueFieldTest.php
 test/Model/FieldValueListFieldResponseTest.php
 test/Model/FieldValueListValueResponseTest.php
