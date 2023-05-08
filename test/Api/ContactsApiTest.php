@@ -82,16 +82,4 @@ class ContactsApiTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
-
-    /**
-     * Test case for patchContact
-     *
-     * Update a contact.
-     *
-     */
-    public function testPatchContact()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
 }
