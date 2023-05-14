@@ -1,6 +1,6 @@
 <?php
 /**
- * FieldValueCreateValueResponseTest
+ * FieldValueUpdateValuePayloadTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * FieldValueCreateValueResponseTest Class Doc Comment
+ * FieldValueUpdateValuePayloadTest Class Doc Comment
  *
  * @category    Class
- * @description FieldValueCreateValueResponse
+ * @description FieldValueUpdateValuePayload
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class FieldValueCreateValueResponseTest extends TestCase
+class FieldValueUpdateValuePayloadTest extends TestCase
 {
 
     /**
@@ -71,18 +71,54 @@ class FieldValueCreateValueResponseTest extends TestCase
     }
 
     /**
-     * Test "FieldValueCreateValueResponse"
+     * Test "FieldValueUpdateValuePayload"
      */
-    public function testFieldValueCreateValueResponse()
+    public function testFieldValueUpdateValuePayload()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "valueId"
+     * Test attribute "label"
      */
-    public function testPropertyValueId()
+    public function testPropertyLabel()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "code"
+     */
+    public function testPropertyCode()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "description"
+     */
+    public function testPropertyDescription()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "isLocked"
+     */
+    public function testPropertyIsLocked()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "name"
+     */
+    public function testPropertyName()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

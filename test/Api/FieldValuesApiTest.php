@@ -118,4 +118,16 @@ class FieldValuesApiTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test case for updateValue
+     *
+     * Update a value.
+     *
+     */
+    public function testUpdateValue()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }
