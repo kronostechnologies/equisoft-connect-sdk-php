@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**getGroup()**](FieldValuesApi.md#getGroup) | **GET** /crm/api/v1/fields/{fieldName}/groups/{id} | Get single group for a specific field name and group id
 [**getValue()**](FieldValuesApi.md#getValue) | **GET** /crm/api/v1/fields/{fieldName}/values/{id} | Get single value for a specific field name and value id
 [**listFields()**](FieldValuesApi.md#listFields) | **GET** /crm/api/v1/fields | List fields with values list (values domain).
+[**listGroupValues()**](FieldValuesApi.md#listGroupValues) | **GET** /crm/api/v1/fields/{fieldName}/groups/{id}/values | List values for a specific field name and group
 [**listGroups()**](FieldValuesApi.md#listGroups) | **GET** /crm/api/v1/fields/{fieldName}/groups | List groups for a specific field name
 [**listValues()**](FieldValuesApi.md#listValues) | **GET** /crm/api/v1/fields/{fieldName}/values | List values for a specific field name
 [**updateValue()**](FieldValuesApi.md#updateValue) | **PUT** /crm/api/v1/fields/{fieldName}/values/{id} | Update a value
@@ -234,6 +235,66 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**\Equisoft\SDK\EquisoftConnect\Model\FieldValueListFieldResponse**](../Model/FieldValueListFieldResponse.md)
+
+### Authorization
+
+[OAuth2](../../README.md#OAuth2)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `listGroupValues()`
+
+```php
+listGroupValues($fieldName, $id): \Equisoft\SDK\EquisoftConnect\Model\FieldValueListValueResponse
+```
+
+List values for a specific field name and group
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Equisoft\SDK\EquisoftConnect\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\FieldValuesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$fieldName = 'fieldName_example'; // string | Field unique identifier.
+$id = 56; // int | group unique identifier.
+
+try {
+    $result = $apiInstance->listGroupValues($fieldName, $id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling FieldValuesApi->listGroupValues: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fieldName** | **string**| Field unique identifier. |
+ **id** | **int**| group unique identifier. |
+
+### Return type
+
+[**\Equisoft\SDK\EquisoftConnect\Model\FieldValueListValueResponse**](../Model/FieldValueListValueResponse.md)
 
 ### Authorization
 
