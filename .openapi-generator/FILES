@@ -66,7 +66,9 @@ docs/Model/FieldValue.md
 docs/Model/FieldValueCreateOrUpdateValueResponse.md
 docs/Model/FieldValueCreateValuePayload.md
 docs/Model/FieldValueField.md
+docs/Model/FieldValueGroup.md
 docs/Model/FieldValueListFieldResponse.md
+docs/Model/FieldValueListGroupResponse.md
 docs/Model/FieldValueListValueResponse.md
 docs/Model/FieldValueLocalizedString.md
 docs/Model/FieldValueUpdateValuePayload.md
@@ -284,7 +286,9 @@ lib/Model/FieldValue.php
 lib/Model/FieldValueCreateOrUpdateValueResponse.php
 lib/Model/FieldValueCreateValuePayload.php
 lib/Model/FieldValueField.php
+lib/Model/FieldValueGroup.php
 lib/Model/FieldValueListFieldResponse.php
+lib/Model/FieldValueListGroupResponse.php
 lib/Model/FieldValueListValueResponse.php
 lib/Model/FieldValueLocalizedString.php
 lib/Model/FieldValueUpdateValuePayload.php
@@ -500,7 +504,9 @@ test/Model/EventsVisibilityTypeTest.php
 test/Model/FieldValueCreateOrUpdateValueResponseTest.php
 test/Model/FieldValueCreateValuePayloadTest.php
 test/Model/FieldValueFieldTest.php
+test/Model/FieldValueGroupTest.php
 test/Model/FieldValueListFieldResponseTest.php
+test/Model/FieldValueListGroupResponseTest.php
 test/Model/FieldValueListValueResponseTest.php
 test/Model/FieldValueLocalizedStringTest.php
 test/Model/FieldValueTest.php

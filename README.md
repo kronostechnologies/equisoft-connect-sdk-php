@@ -105,8 +105,10 @@ Class | Method | HTTP request | Description
 *EventsApi* | [**restoreEventInternalNote**](docs/Api/EventsApi.md#restoreeventinternalnote) | **POST** /crm/api/v1/events/{eventId}/notes/{noteId}/restore | Restore an archived internal note for an event.
 *EventsApi* | [**transferEventToCompleted**](docs/Api/EventsApi.md#transfereventtocompleted) | **POST** /crm/api/v1/events/{eventId}/transferToCompleted | Transfer an event to the completed/done calendar.
 *FieldValuesApi* | [**createValue**](docs/Api/FieldValuesApi.md#createvalue) | **POST** /crm/api/v1/fields/{fieldName}/values | Create a value
+*FieldValuesApi* | [**getGroup**](docs/Api/FieldValuesApi.md#getgroup) | **GET** /crm/api/v1/fields/{fieldName}/groups/{id} | Get single group for a specific field name and group id
 *FieldValuesApi* | [**getValue**](docs/Api/FieldValuesApi.md#getvalue) | **GET** /crm/api/v1/fields/{fieldName}/values/{id} | Get single value for a specific field name and value id
 *FieldValuesApi* | [**listFields**](docs/Api/FieldValuesApi.md#listfields) | **GET** /crm/api/v1/fields | List fields with values list (values domain).
+*FieldValuesApi* | [**listGroups**](docs/Api/FieldValuesApi.md#listgroups) | **GET** /crm/api/v1/fields/{fieldName}/groups | List groups for a specific field name
 *FieldValuesApi* | [**listValues**](docs/Api/FieldValuesApi.md#listvalues) | **GET** /crm/api/v1/fields/{fieldName}/values | List values for a specific field name
 *FieldValuesApi* | [**updateValue**](docs/Api/FieldValuesApi.md#updatevalue) | **PUT** /crm/api/v1/fields/{fieldName}/values/{id} | Update a value
 *GatewaysApi* | [**createEquisoftAnalyzeAccess**](docs/Api/GatewaysApi.md#createequisoftanalyzeaccess) | **POST** /crm/api/v1/gateways/equisoftAnalyze/accesses | 
@@ -210,7 +212,9 @@ Class | Method | HTTP request | Description
 - [FieldValueCreateOrUpdateValueResponse](docs/Model/FieldValueCreateOrUpdateValueResponse.md)
 - [FieldValueCreateValuePayload](docs/Model/FieldValueCreateValuePayload.md)
 - [FieldValueField](docs/Model/FieldValueField.md)
+- [FieldValueGroup](docs/Model/FieldValueGroup.md)
 - [FieldValueListFieldResponse](docs/Model/FieldValueListFieldResponse.md)
+- [FieldValueListGroupResponse](docs/Model/FieldValueListGroupResponse.md)
 - [FieldValueListValueResponse](docs/Model/FieldValueListValueResponse.md)
 - [FieldValueLocalizedString](docs/Model/FieldValueLocalizedString.md)
 - [FieldValueUpdateValuePayload](docs/Model/FieldValueUpdateValuePayload.md)
