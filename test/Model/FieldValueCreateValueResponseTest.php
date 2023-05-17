@@ -1,6 +1,6 @@
 <?php
 /**
- * FieldValueGroupTest
+ * FieldValueCreateValueResponseTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * FieldValueGroupTest Class Doc Comment
+ * FieldValueCreateValueResponseTest Class Doc Comment
  *
  * @category    Class
- * @description FieldValueGroup
+ * @description FieldValueCreateValueResponse
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class FieldValueGroupTest extends TestCase
+class FieldValueCreateValueResponseTest extends TestCase
 {
 
     /**
@@ -71,54 +71,18 @@ class FieldValueGroupTest extends TestCase
     }
 
     /**
-     * Test "FieldValueGroup"
+     * Test "FieldValueCreateValueResponse"
      */
-    public function testFieldValueGroup()
+    public function testFieldValueCreateValueResponse()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "valueId"
      */
-    public function testPropertyId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "label"
-     */
-    public function testPropertyLabel()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "description"
-     */
-    public function testPropertyDescription()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "sort"
-     */
-    public function testPropertySort()
+    public function testPropertyValueId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
