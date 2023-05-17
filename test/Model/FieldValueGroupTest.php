@@ -1,6 +1,6 @@
 <?php
 /**
- * FieldValueCreateValueResponseTest
+ * FieldValueGroupTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * FieldValueCreateValueResponseTest Class Doc Comment
+ * FieldValueGroupTest Class Doc Comment
  *
  * @category    Class
- * @description FieldValueCreateValueResponse
+ * @description FieldValueGroup
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class FieldValueCreateValueResponseTest extends TestCase
+class FieldValueGroupTest extends TestCase
 {
 
     /**
@@ -71,18 +71,54 @@ class FieldValueCreateValueResponseTest extends TestCase
     }
 
     /**
-     * Test "FieldValueCreateValueResponse"
+     * Test "FieldValueGroup"
      */
-    public function testFieldValueCreateValueResponse()
+    public function testFieldValueGroup()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "valueId"
+     * Test attribute "id"
      */
-    public function testPropertyValueId()
+    public function testPropertyId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "name"
+     */
+    public function testPropertyName()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "label"
+     */
+    public function testPropertyLabel()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "description"
+     */
+    public function testPropertyDescription()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "sort"
+     */
+    public function testPropertySort()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
