@@ -78,6 +78,7 @@ All URIs are relative to *http://localhost*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *ContactsApi* | [**getByUuid**](docs/Api/ContactsApi.md#getbyuuid) | **GET** /crm/api/v1/contacts/{contactUuid} | Return the detail of a contact.
+*ContactsApi* | [**patchContact**](docs/Api/ContactsApi.md#patchcontact) | **PATCH** /crm/api/v1/contacts/{contactUuid} | Update a contact
 *DSFApi* | [**createDsfFinancialCenter**](docs/Api/DSFApi.md#createdsffinancialcenter) | **POST** /crm/api/v1/dsf/financialCenters | Create a financial center
 *DSFApi* | [**deleteDsfFinancialCenter**](docs/Api/DSFApi.md#deletedsffinancialcenter) | **DELETE** /crm/api/v1/dsf/financialCenters/{financialCenterId} | Delete a financial center
 *DSFApi* | [**getDsfFinancialCenters**](docs/Api/DSFApi.md#getdsffinancialcenters) | **GET** /crm/api/v1/dsf/financialCenters/{financialCenterId} | Get a financial center
@@ -103,9 +104,16 @@ Class | Method | HTTP request | Description
 *EventsApi* | [**putEventLinksDocuments**](docs/Api/EventsApi.md#puteventlinksdocuments) | **PUT** /crm/api/v1/events/{eventId}/documents | Update the links between an event and existing documents
 *EventsApi* | [**restoreEventInternalNote**](docs/Api/EventsApi.md#restoreeventinternalnote) | **POST** /crm/api/v1/events/{eventId}/notes/{noteId}/restore | Restore an archived internal note for an event.
 *EventsApi* | [**transferEventToCompleted**](docs/Api/EventsApi.md#transfereventtocompleted) | **POST** /crm/api/v1/events/{eventId}/transferToCompleted | Transfer an event to the completed/done calendar.
+*FieldValuesApi* | [**createGroup**](docs/Api/FieldValuesApi.md#creategroup) | **POST** /crm/api/v1/fields/{fieldName}/groups | Create a group
+*FieldValuesApi* | [**createValue**](docs/Api/FieldValuesApi.md#createvalue) | **POST** /crm/api/v1/fields/{fieldName}/values | Create a value
+*FieldValuesApi* | [**getGroup**](docs/Api/FieldValuesApi.md#getgroup) | **GET** /crm/api/v1/fields/{fieldName}/groups/{id} | Get single group for a specific field name and group id
 *FieldValuesApi* | [**getValue**](docs/Api/FieldValuesApi.md#getvalue) | **GET** /crm/api/v1/fields/{fieldName}/values/{id} | Get single value for a specific field name and value id
 *FieldValuesApi* | [**listFields**](docs/Api/FieldValuesApi.md#listfields) | **GET** /crm/api/v1/fields | List fields with values list (values domain).
+*FieldValuesApi* | [**listGroupValues**](docs/Api/FieldValuesApi.md#listgroupvalues) | **GET** /crm/api/v1/fields/{fieldName}/groups/{id}/values | List values for a specific field name and group
+*FieldValuesApi* | [**listGroups**](docs/Api/FieldValuesApi.md#listgroups) | **GET** /crm/api/v1/fields/{fieldName}/groups | List groups for a specific field name
 *FieldValuesApi* | [**listValues**](docs/Api/FieldValuesApi.md#listvalues) | **GET** /crm/api/v1/fields/{fieldName}/values | List values for a specific field name
+*FieldValuesApi* | [**updateGroup**](docs/Api/FieldValuesApi.md#updategroup) | **PUT** /crm/api/v1/fields/{fieldName}/groups/{id} | Update a group
+*FieldValuesApi* | [**updateValue**](docs/Api/FieldValuesApi.md#updatevalue) | **PUT** /crm/api/v1/fields/{fieldName}/values/{id} | Update a value
 *GatewaysApi* | [**createEquisoftAnalyzeAccess**](docs/Api/GatewaysApi.md#createequisoftanalyzeaccess) | **POST** /crm/api/v1/gateways/equisoftAnalyze/accesses | 
 *GatewaysApi* | [**deleteEquisoftAnalyzeAccess**](docs/Api/GatewaysApi.md#deleteequisoftanalyzeaccess) | **DELETE** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} | 
 *GatewaysApi* | [**gatewayAdminLogin**](docs/Api/GatewaysApi.md#gatewayadminlogin) | **POST** /crm/api/v1/gateways/credentials-validation/admin-credentials/login | 
@@ -171,6 +179,7 @@ Class | Method | HTTP request | Description
 - [ContactContactPhone](docs/Model/ContactContactPhone.md)
 - [ContactContactSegmentation](docs/Model/ContactContactSegmentation.md)
 - [ContactContactWebsite](docs/Model/ContactContactWebsite.md)
+- [ContactPatchContactPayload](docs/Model/ContactPatchContactPayload.md)
 - [ContactPatchDto](docs/Model/ContactPatchDto.md)
 - [ContactsContact](docs/Model/ContactsContact.md)
 - [ContextActor](docs/Model/ContextActor.md)
@@ -203,10 +212,18 @@ Class | Method | HTTP request | Description
 - [EventsTransferToCompletedResponse](docs/Model/EventsTransferToCompletedResponse.md)
 - [EventsVisibilityType](docs/Model/EventsVisibilityType.md)
 - [FieldValue](docs/Model/FieldValue.md)
+- [FieldValueCreateGroupPayload](docs/Model/FieldValueCreateGroupPayload.md)
+- [FieldValueCreateOrUpdateGroupResponse](docs/Model/FieldValueCreateOrUpdateGroupResponse.md)
+- [FieldValueCreateOrUpdateValueResponse](docs/Model/FieldValueCreateOrUpdateValueResponse.md)
+- [FieldValueCreateValuePayload](docs/Model/FieldValueCreateValuePayload.md)
 - [FieldValueField](docs/Model/FieldValueField.md)
+- [FieldValueGroup](docs/Model/FieldValueGroup.md)
 - [FieldValueListFieldResponse](docs/Model/FieldValueListFieldResponse.md)
+- [FieldValueListGroupResponse](docs/Model/FieldValueListGroupResponse.md)
 - [FieldValueListValueResponse](docs/Model/FieldValueListValueResponse.md)
 - [FieldValueLocalizedString](docs/Model/FieldValueLocalizedString.md)
+- [FieldValueUpdateGroupPayload](docs/Model/FieldValueUpdateGroupPayload.md)
+- [FieldValueUpdateValuePayload](docs/Model/FieldValueUpdateValuePayload.md)
 - [FieldValueValue](docs/Model/FieldValueValue.md)
 - [GatewaysAccessesCreateAccessResponse](docs/Model/GatewaysAccessesCreateAccessResponse.md)
 - [GatewaysAccessesCreateEquisoftAnalyzeAccessPayload](docs/Model/GatewaysAccessesCreateEquisoftAnalyzeAccessPayload.md)
@@ -388,5 +405,5 @@ vendor/bin/phpunit
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
 - API version: `latest`
-    - Package version: `12.2.4`
+    - Package version: `12.3.4-SNAPSHOT`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

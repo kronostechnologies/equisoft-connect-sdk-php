@@ -1,6 +1,6 @@
 <?php
 /**
- * ContactPatchDto
+ * FieldValueCreateOrUpdateGroupResponse
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * ContactPatchDto Class Doc Comment
+ * FieldValueCreateOrUpdateGroupResponse Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
@@ -40,7 +40,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
+class FieldValueCreateOrUpdateGroupResponse implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'contact.PatchDto';
+    protected static $openAPIModelName = 'fieldValue.CreateOrUpdateGroupResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +57,7 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'op' => 'string',
-        'path' => 'string',
-        'value' => 'mixed'
+        'groupId' => 'int'
     ];
 
     /**
@@ -70,9 +68,7 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'op' => null,
-        'path' => null,
-        'value' => null
+        'groupId' => null
     ];
 
     /**
@@ -102,9 +98,7 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'op' => 'op',
-        'path' => 'path',
-        'value' => 'value'
+        'groupId' => 'groupId'
     ];
 
     /**
@@ -113,9 +107,7 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'op' => 'setOp',
-        'path' => 'setPath',
-        'value' => 'setValue'
+        'groupId' => 'setGroupId'
     ];
 
     /**
@@ -124,9 +116,7 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'op' => 'getOp',
-        'path' => 'getPath',
-        'value' => 'getValue'
+        'groupId' => 'getGroupId'
     ];
 
     /**
@@ -186,9 +176,7 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['op'] = $data['op'] ?? null;
-        $this->container['path'] = $data['path'] ?? null;
-        $this->container['value'] = $data['value'] ?? null;
+        $this->container['groupId'] = $data['groupId'] ?? null;
     }
 
     /**
@@ -200,11 +188,8 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['op'] === null) {
-            $invalidProperties[] = "'op' can't be null";
-        }
-        if ($this->container['path'] === null) {
-            $invalidProperties[] = "'path' can't be null";
+        if ($this->container['groupId'] === null) {
+            $invalidProperties[] = "'groupId' can't be null";
         }
         return $invalidProperties;
     }
@@ -222,73 +207,25 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets op
+     * Gets groupId
      *
-     * @return string
+     * @return int
      */
-    public function getOp()
+    public function getGroupId()
     {
-        return $this->container['op'];
+        return $this->container['groupId'];
     }
 
     /**
-     * Sets op
+     * Sets groupId
      *
-     * @param string $op Patch operation
+     * @param int $groupId Unique numerical identifier of the created or updated group.
      *
      * @return self
      */
-    public function setOp($op)
+    public function setGroupId($groupId)
     {
-        $this->container['op'] = $op;
-
-        return $this;
-    }
-
-    /**
-     * Gets path
-     *
-     * @return string
-     */
-    public function getPath()
-    {
-        return $this->container['path'];
-    }
-
-    /**
-     * Sets path
-     *
-     * @param string $path Path to update
-     *
-     * @return self
-     */
-    public function setPath($path)
-    {
-        $this->container['path'] = $path;
-
-        return $this;
-    }
-
-    /**
-     * Gets value
-     *
-     * @return mixed|null
-     */
-    public function getValue()
-    {
-        return $this->container['value'];
-    }
-
-    /**
-     * Sets value
-     *
-     * @param mixed|null $value Value to assign
-     *
-     * @return self
-     */
-    public function setValue($value)
-    {
-        $this->container['value'] = $value;
+        $this->container['groupId'] = $groupId;
 
         return $this;
     }

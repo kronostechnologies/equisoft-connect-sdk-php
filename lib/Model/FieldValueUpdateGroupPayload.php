@@ -1,6 +1,6 @@
 <?php
 /**
- * ContactPatchDto
+ * FieldValueUpdateGroupPayload
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * ContactPatchDto Class Doc Comment
+ * FieldValueUpdateGroupPayload Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
@@ -40,7 +40,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
+class FieldValueUpdateGroupPayload implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'contact.PatchDto';
+    protected static $openAPIModelName = 'fieldValue.UpdateGroupPayload';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +57,9 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'op' => 'string',
-        'path' => 'string',
-        'value' => 'mixed'
+        'label' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValueLocalizedString',
+        'description' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValueLocalizedString',
+        'name' => 'string'
     ];
 
     /**
@@ -70,9 +70,9 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'op' => null,
-        'path' => null,
-        'value' => null
+        'label' => null,
+        'description' => null,
+        'name' => null
     ];
 
     /**
@@ -102,9 +102,9 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'op' => 'op',
-        'path' => 'path',
-        'value' => 'value'
+        'label' => 'label',
+        'description' => 'description',
+        'name' => 'name'
     ];
 
     /**
@@ -113,9 +113,9 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'op' => 'setOp',
-        'path' => 'setPath',
-        'value' => 'setValue'
+        'label' => 'setLabel',
+        'description' => 'setDescription',
+        'name' => 'setName'
     ];
 
     /**
@@ -124,9 +124,9 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'op' => 'getOp',
-        'path' => 'getPath',
-        'value' => 'getValue'
+        'label' => 'getLabel',
+        'description' => 'getDescription',
+        'name' => 'getName'
     ];
 
     /**
@@ -186,9 +186,9 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->container['op'] = $data['op'] ?? null;
-        $this->container['path'] = $data['path'] ?? null;
-        $this->container['value'] = $data['value'] ?? null;
+        $this->container['label'] = $data['label'] ?? null;
+        $this->container['description'] = $data['description'] ?? null;
+        $this->container['name'] = $data['name'] ?? null;
     }
 
     /**
@@ -200,11 +200,11 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['op'] === null) {
-            $invalidProperties[] = "'op' can't be null";
+        if ($this->container['label'] === null) {
+            $invalidProperties[] = "'label' can't be null";
         }
-        if ($this->container['path'] === null) {
-            $invalidProperties[] = "'path' can't be null";
+        if ($this->container['description'] === null) {
+            $invalidProperties[] = "'description' can't be null";
         }
         return $invalidProperties;
     }
@@ -222,73 +222,73 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets op
+     * Gets label
      *
-     * @return string
+     * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValueLocalizedString
      */
-    public function getOp()
+    public function getLabel()
     {
-        return $this->container['op'];
+        return $this->container['label'];
     }
 
     /**
-     * Sets op
+     * Sets label
      *
-     * @param string $op Patch operation
+     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValueLocalizedString $label label
      *
      * @return self
      */
-    public function setOp($op)
+    public function setLabel($label)
     {
-        $this->container['op'] = $op;
+        $this->container['label'] = $label;
 
         return $this;
     }
 
     /**
-     * Gets path
+     * Gets description
      *
-     * @return string
+     * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValueLocalizedString
      */
-    public function getPath()
+    public function getDescription()
     {
-        return $this->container['path'];
+        return $this->container['description'];
     }
 
     /**
-     * Sets path
+     * Sets description
      *
-     * @param string $path Path to update
+     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValueLocalizedString $description description
      *
      * @return self
      */
-    public function setPath($path)
+    public function setDescription($description)
     {
-        $this->container['path'] = $path;
+        $this->container['description'] = $description;
 
         return $this;
     }
 
     /**
-     * Gets value
+     * Gets name
      *
-     * @return mixed|null
+     * @return string|null
      */
-    public function getValue()
+    public function getName()
     {
-        return $this->container['value'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets value
+     * Sets name
      *
-     * @param mixed|null $value Value to assign
+     * @param string|null $name name
      *
      * @return self
      */
-    public function setValue($value)
+    public function setName($name)
     {
-        $this->container['value'] = $value;
+        $this->container['name'] = $name;
 
         return $this;
     }

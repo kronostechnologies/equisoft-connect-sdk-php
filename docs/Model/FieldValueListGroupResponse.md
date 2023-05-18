@@ -1,11 +1,9 @@
-# # ContactPatchDto
+# # FieldValueListGroupResponse
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**op** | **string** | Patch operation |
-**path** | **string** | Path to update |
-**value** | **mixed** | Value to assign | [optional]
+**items** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValueGroup[]**](FieldValueGroup.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
