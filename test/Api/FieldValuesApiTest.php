@@ -72,18 +72,6 @@ class FieldValuesApiTest extends TestCase
     }
 
     /**
-     * Test case for createValue
-     *
-     * Create a value.
-     *
-     */
-    public function testCreateValue()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for getValue
      *
      * Get single value for a specific field name and value id.

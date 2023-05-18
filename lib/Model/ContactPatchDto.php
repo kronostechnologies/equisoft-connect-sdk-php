@@ -49,7 +49,7 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'contact.PatchDto';
+    protected static $openAPIModelName = 'contact.patchDto';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -200,12 +200,6 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['op'] === null) {
-            $invalidProperties[] = "'op' can't be null";
-        }
-        if ($this->container['path'] === null) {
-            $invalidProperties[] = "'path' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -224,7 +218,7 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets op
      *
-     * @return string
+     * @return string|null
      */
     public function getOp()
     {
@@ -234,7 +228,7 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets op
      *
-     * @param string $op Patch operation
+     * @param string|null $op op
      *
      * @return self
      */
@@ -248,7 +242,7 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets path
      *
-     * @return string
+     * @return string|null
      */
     public function getPath()
     {
@@ -258,7 +252,7 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets path
      *
-     * @param string $path Path to update
+     * @param string|null $path path
      *
      * @return self
      */
@@ -282,7 +276,7 @@ class ContactPatchDto implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets value
      *
-     * @param mixed|null $value Value to assign
+     * @param mixed|null $value value
      *
      * @return self
      */
