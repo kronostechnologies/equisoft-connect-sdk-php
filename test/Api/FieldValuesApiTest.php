@@ -84,18 +84,6 @@ class FieldValuesApiTest extends TestCase
     }
 
     /**
-     * Test case for getGroup
-     *
-     * Get single group for a specific field name and group id.
-     *
-     */
-    public function testGetGroup()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for getValue
      *
      * Get single value for a specific field name and value id.
@@ -120,48 +108,12 @@ class FieldValuesApiTest extends TestCase
     }
 
     /**
-     * Test case for listGroupValues
-     *
-     * List values for a specific field name and group.
-     *
-     */
-    public function testListGroupValues()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for listGroups
-     *
-     * List groups for a specific field name.
-     *
-     */
-    public function testListGroups()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for listValues
      *
      * List values for a specific field name.
      *
      */
     public function testListValues()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for updateValue
-     *
-     * Update a value.
-     *
-     */
-    public function testUpdateValue()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
