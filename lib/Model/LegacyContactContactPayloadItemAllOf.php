@@ -57,11 +57,15 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $openAPITypes = [
+        'picture' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyContactPicture',
         'gender' => 'string',
         'sin' => 'string',
         'birthdate' => 'string',
         'smoker' => 'string',
         'smokerSince' => 'string',
+        'addressHome' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyContactAddress',
+        'addressOffice' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyContactAddress',
+        'addressOther' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyContactAddress',
         'phoneHome' => 'string',
         'phoneHomeSecond' => 'string',
         'phoneAssistant' => 'string',
@@ -78,6 +82,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
         'notes' => 'string',
         'peculiarity' => 'string',
         'endFinancialYear' => 'string',
+        'users' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyUser[]',
         'language' => 'string',
         'active' => 'string',
         'publish' => 'string',
@@ -90,6 +95,10 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
         'organizationLine2' => 'string',
         'department' => 'string',
         'customerNumber' => 'string',
+        'addresses' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyContactAddress[]',
+        'phones' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyContactPhone[]',
+        'emails' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyContactEmail[]',
+        'webSites' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyContactWebSite[]',
         'birthPlace' => 'string',
         'nationality' => 'string',
         'orgDateCreated' => 'string',
@@ -100,8 +109,21 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
         'orgProvNo' => 'string',
         'orgStateId' => 'string',
         'orgEin' => 'string',
+        'spouse' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyContactSpouseContactPayloadItem',
         'externalKey' => 'string',
-        'externalKeyType' => 'string'
+        'externalKeyType' => 'string',
+        'classes' => '\Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue[]',
+        'groups' => '\Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue[]',
+        'hobbies' => '\Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue[]',
+        'origins' => '\Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue[]',
+        'domains' => '\Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue[]',
+        'territory' => '\Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue',
+        'seg1' => '\Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue',
+        'seg2' => '\Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue',
+        'seg3' => '\Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue',
+        'seg4' => '\Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue',
+        'seg5' => '\Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue',
+        'seg6' => '\Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue'
     ];
 
     /**
@@ -112,11 +134,15 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'picture' => null,
         'gender' => null,
         'sin' => null,
         'birthdate' => null,
         'smoker' => null,
         'smokerSince' => null,
+        'addressHome' => null,
+        'addressOffice' => null,
+        'addressOther' => null,
         'phoneHome' => null,
         'phoneHomeSecond' => null,
         'phoneAssistant' => null,
@@ -133,6 +159,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
         'notes' => null,
         'peculiarity' => null,
         'endFinancialYear' => null,
+        'users' => null,
         'language' => null,
         'active' => null,
         'publish' => null,
@@ -145,6 +172,10 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
         'organizationLine2' => null,
         'department' => null,
         'customerNumber' => null,
+        'addresses' => null,
+        'phones' => null,
+        'emails' => null,
+        'webSites' => null,
         'birthPlace' => null,
         'nationality' => null,
         'orgDateCreated' => null,
@@ -155,8 +186,21 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
         'orgProvNo' => null,
         'orgStateId' => null,
         'orgEin' => null,
+        'spouse' => null,
         'externalKey' => null,
-        'externalKeyType' => null
+        'externalKeyType' => null,
+        'classes' => null,
+        'groups' => null,
+        'hobbies' => null,
+        'origins' => null,
+        'domains' => null,
+        'territory' => null,
+        'seg1' => null,
+        'seg2' => null,
+        'seg3' => null,
+        'seg4' => null,
+        'seg5' => null,
+        'seg6' => null
     ];
 
     /**
@@ -186,11 +230,15 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $attributeMap = [
+        'picture' => 'picture',
         'gender' => 'gender',
         'sin' => 'sin',
         'birthdate' => 'birthdate',
         'smoker' => 'smoker',
         'smokerSince' => 'smokerSince',
+        'addressHome' => 'addressHome',
+        'addressOffice' => 'addressOffice',
+        'addressOther' => 'addressOther',
         'phoneHome' => 'phoneHome',
         'phoneHomeSecond' => 'phoneHomeSecond',
         'phoneAssistant' => 'phoneAssistant',
@@ -207,6 +255,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
         'notes' => 'notes',
         'peculiarity' => 'peculiarity',
         'endFinancialYear' => 'endFinancialYear',
+        'users' => 'users',
         'language' => 'language',
         'active' => 'active',
         'publish' => 'publish',
@@ -219,6 +268,10 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
         'organizationLine2' => 'organizationLine2',
         'department' => 'department',
         'customerNumber' => 'customerNumber',
+        'addresses' => 'addresses',
+        'phones' => 'phones',
+        'emails' => 'emails',
+        'webSites' => 'webSites',
         'birthPlace' => 'birthPlace',
         'nationality' => 'nationality',
         'orgDateCreated' => 'orgDateCreated',
@@ -229,8 +282,21 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
         'orgProvNo' => 'orgProvNo',
         'orgStateId' => 'orgStateId',
         'orgEin' => 'orgEin',
+        'spouse' => 'spouse',
         'externalKey' => 'externalKey',
-        'externalKeyType' => 'externalKeyType'
+        'externalKeyType' => 'externalKeyType',
+        'classes' => 'classes',
+        'groups' => 'groups',
+        'hobbies' => 'hobbies',
+        'origins' => 'origins',
+        'domains' => 'domains',
+        'territory' => 'territory',
+        'seg1' => 'seg1',
+        'seg2' => 'seg2',
+        'seg3' => 'seg3',
+        'seg4' => 'seg4',
+        'seg5' => 'seg5',
+        'seg6' => 'seg6'
     ];
 
     /**
@@ -239,11 +305,15 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $setters = [
+        'picture' => 'setPicture',
         'gender' => 'setGender',
         'sin' => 'setSin',
         'birthdate' => 'setBirthdate',
         'smoker' => 'setSmoker',
         'smokerSince' => 'setSmokerSince',
+        'addressHome' => 'setAddressHome',
+        'addressOffice' => 'setAddressOffice',
+        'addressOther' => 'setAddressOther',
         'phoneHome' => 'setPhoneHome',
         'phoneHomeSecond' => 'setPhoneHomeSecond',
         'phoneAssistant' => 'setPhoneAssistant',
@@ -260,6 +330,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
         'notes' => 'setNotes',
         'peculiarity' => 'setPeculiarity',
         'endFinancialYear' => 'setEndFinancialYear',
+        'users' => 'setUsers',
         'language' => 'setLanguage',
         'active' => 'setActive',
         'publish' => 'setPublish',
@@ -272,6 +343,10 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
         'organizationLine2' => 'setOrganizationLine2',
         'department' => 'setDepartment',
         'customerNumber' => 'setCustomerNumber',
+        'addresses' => 'setAddresses',
+        'phones' => 'setPhones',
+        'emails' => 'setEmails',
+        'webSites' => 'setWebSites',
         'birthPlace' => 'setBirthPlace',
         'nationality' => 'setNationality',
         'orgDateCreated' => 'setOrgDateCreated',
@@ -282,8 +357,21 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
         'orgProvNo' => 'setOrgProvNo',
         'orgStateId' => 'setOrgStateId',
         'orgEin' => 'setOrgEin',
+        'spouse' => 'setSpouse',
         'externalKey' => 'setExternalKey',
-        'externalKeyType' => 'setExternalKeyType'
+        'externalKeyType' => 'setExternalKeyType',
+        'classes' => 'setClasses',
+        'groups' => 'setGroups',
+        'hobbies' => 'setHobbies',
+        'origins' => 'setOrigins',
+        'domains' => 'setDomains',
+        'territory' => 'setTerritory',
+        'seg1' => 'setSeg1',
+        'seg2' => 'setSeg2',
+        'seg3' => 'setSeg3',
+        'seg4' => 'setSeg4',
+        'seg5' => 'setSeg5',
+        'seg6' => 'setSeg6'
     ];
 
     /**
@@ -292,11 +380,15 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $getters = [
+        'picture' => 'getPicture',
         'gender' => 'getGender',
         'sin' => 'getSin',
         'birthdate' => 'getBirthdate',
         'smoker' => 'getSmoker',
         'smokerSince' => 'getSmokerSince',
+        'addressHome' => 'getAddressHome',
+        'addressOffice' => 'getAddressOffice',
+        'addressOther' => 'getAddressOther',
         'phoneHome' => 'getPhoneHome',
         'phoneHomeSecond' => 'getPhoneHomeSecond',
         'phoneAssistant' => 'getPhoneAssistant',
@@ -313,6 +405,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
         'notes' => 'getNotes',
         'peculiarity' => 'getPeculiarity',
         'endFinancialYear' => 'getEndFinancialYear',
+        'users' => 'getUsers',
         'language' => 'getLanguage',
         'active' => 'getActive',
         'publish' => 'getPublish',
@@ -325,6 +418,10 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
         'organizationLine2' => 'getOrganizationLine2',
         'department' => 'getDepartment',
         'customerNumber' => 'getCustomerNumber',
+        'addresses' => 'getAddresses',
+        'phones' => 'getPhones',
+        'emails' => 'getEmails',
+        'webSites' => 'getWebSites',
         'birthPlace' => 'getBirthPlace',
         'nationality' => 'getNationality',
         'orgDateCreated' => 'getOrgDateCreated',
@@ -335,8 +432,21 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
         'orgProvNo' => 'getOrgProvNo',
         'orgStateId' => 'getOrgStateId',
         'orgEin' => 'getOrgEin',
+        'spouse' => 'getSpouse',
         'externalKey' => 'getExternalKey',
-        'externalKeyType' => 'getExternalKeyType'
+        'externalKeyType' => 'getExternalKeyType',
+        'classes' => 'getClasses',
+        'groups' => 'getGroups',
+        'hobbies' => 'getHobbies',
+        'origins' => 'getOrigins',
+        'domains' => 'getDomains',
+        'territory' => 'getTerritory',
+        'seg1' => 'getSeg1',
+        'seg2' => 'getSeg2',
+        'seg3' => 'getSeg3',
+        'seg4' => 'getSeg4',
+        'seg5' => 'getSeg5',
+        'seg6' => 'getSeg6'
     ];
 
     /**
@@ -396,11 +506,15 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
      */
     public function __construct(array $data = null)
     {
+        $this->container['picture'] = $data['picture'] ?? null;
         $this->container['gender'] = $data['gender'] ?? null;
         $this->container['sin'] = $data['sin'] ?? null;
         $this->container['birthdate'] = $data['birthdate'] ?? null;
         $this->container['smoker'] = $data['smoker'] ?? null;
         $this->container['smokerSince'] = $data['smokerSince'] ?? null;
+        $this->container['addressHome'] = $data['addressHome'] ?? null;
+        $this->container['addressOffice'] = $data['addressOffice'] ?? null;
+        $this->container['addressOther'] = $data['addressOther'] ?? null;
         $this->container['phoneHome'] = $data['phoneHome'] ?? null;
         $this->container['phoneHomeSecond'] = $data['phoneHomeSecond'] ?? null;
         $this->container['phoneAssistant'] = $data['phoneAssistant'] ?? null;
@@ -417,6 +531,7 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
         $this->container['notes'] = $data['notes'] ?? null;
         $this->container['peculiarity'] = $data['peculiarity'] ?? null;
         $this->container['endFinancialYear'] = $data['endFinancialYear'] ?? null;
+        $this->container['users'] = $data['users'] ?? null;
         $this->container['language'] = $data['language'] ?? null;
         $this->container['active'] = $data['active'] ?? null;
         $this->container['publish'] = $data['publish'] ?? null;
@@ -429,6 +544,10 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
         $this->container['organizationLine2'] = $data['organizationLine2'] ?? null;
         $this->container['department'] = $data['department'] ?? null;
         $this->container['customerNumber'] = $data['customerNumber'] ?? null;
+        $this->container['addresses'] = $data['addresses'] ?? null;
+        $this->container['phones'] = $data['phones'] ?? null;
+        $this->container['emails'] = $data['emails'] ?? null;
+        $this->container['webSites'] = $data['webSites'] ?? null;
         $this->container['birthPlace'] = $data['birthPlace'] ?? null;
         $this->container['nationality'] = $data['nationality'] ?? null;
         $this->container['orgDateCreated'] = $data['orgDateCreated'] ?? null;
@@ -439,8 +558,21 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
         $this->container['orgProvNo'] = $data['orgProvNo'] ?? null;
         $this->container['orgStateId'] = $data['orgStateId'] ?? null;
         $this->container['orgEin'] = $data['orgEin'] ?? null;
+        $this->container['spouse'] = $data['spouse'] ?? null;
         $this->container['externalKey'] = $data['externalKey'] ?? null;
         $this->container['externalKeyType'] = $data['externalKeyType'] ?? null;
+        $this->container['classes'] = $data['classes'] ?? null;
+        $this->container['groups'] = $data['groups'] ?? null;
+        $this->container['hobbies'] = $data['hobbies'] ?? null;
+        $this->container['origins'] = $data['origins'] ?? null;
+        $this->container['domains'] = $data['domains'] ?? null;
+        $this->container['territory'] = $data['territory'] ?? null;
+        $this->container['seg1'] = $data['seg1'] ?? null;
+        $this->container['seg2'] = $data['seg2'] ?? null;
+        $this->container['seg3'] = $data['seg3'] ?? null;
+        $this->container['seg4'] = $data['seg4'] ?? null;
+        $this->container['seg5'] = $data['seg5'] ?? null;
+        $this->container['seg6'] = $data['seg6'] ?? null;
     }
 
     /**
@@ -466,6 +598,30 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets picture
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyContactPicture|null
+     */
+    public function getPicture()
+    {
+        return $this->container['picture'];
+    }
+
+    /**
+     * Sets picture
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyContactPicture|null $picture picture
+     *
+     * @return self
+     */
+    public function setPicture($picture)
+    {
+        $this->container['picture'] = $picture;
+
+        return $this;
+    }
 
     /**
      * Gets gender
@@ -583,6 +739,78 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
     public function setSmokerSince($smokerSince)
     {
         $this->container['smokerSince'] = $smokerSince;
+
+        return $this;
+    }
+
+    /**
+     * Gets addressHome
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyContactAddress|null
+     */
+    public function getAddressHome()
+    {
+        return $this->container['addressHome'];
+    }
+
+    /**
+     * Sets addressHome
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyContactAddress|null $addressHome addressHome
+     *
+     * @return self
+     */
+    public function setAddressHome($addressHome)
+    {
+        $this->container['addressHome'] = $addressHome;
+
+        return $this;
+    }
+
+    /**
+     * Gets addressOffice
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyContactAddress|null
+     */
+    public function getAddressOffice()
+    {
+        return $this->container['addressOffice'];
+    }
+
+    /**
+     * Sets addressOffice
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyContactAddress|null $addressOffice addressOffice
+     *
+     * @return self
+     */
+    public function setAddressOffice($addressOffice)
+    {
+        $this->container['addressOffice'] = $addressOffice;
+
+        return $this;
+    }
+
+    /**
+     * Gets addressOther
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyContactAddress|null
+     */
+    public function getAddressOther()
+    {
+        return $this->container['addressOther'];
+    }
+
+    /**
+     * Sets addressOther
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyContactAddress|null $addressOther addressOther
+     *
+     * @return self
+     */
+    public function setAddressOther($addressOther)
+    {
+        $this->container['addressOther'] = $addressOther;
 
         return $this;
     }
@@ -972,6 +1200,30 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
     }
 
     /**
+     * Gets users
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyUser[]|null
+     */
+    public function getUsers()
+    {
+        return $this->container['users'];
+    }
+
+    /**
+     * Sets users
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyUser[]|null $users Owner of the contact. By default use the current api user.
+     *
+     * @return self
+     */
+    public function setUsers($users)
+    {
+        $this->container['users'] = $users;
+
+        return $this;
+    }
+
+    /**
      * Gets language
      *
      * @return string|null
@@ -1260,6 +1512,102 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
     }
 
     /**
+     * Gets addresses
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyContactAddress[]|null
+     */
+    public function getAddresses()
+    {
+        return $this->container['addresses'];
+    }
+
+    /**
+     * Sets addresses
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyContactAddress[]|null $addresses Contact addresses.
+     *
+     * @return self
+     */
+    public function setAddresses($addresses)
+    {
+        $this->container['addresses'] = $addresses;
+
+        return $this;
+    }
+
+    /**
+     * Gets phones
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyContactPhone[]|null
+     */
+    public function getPhones()
+    {
+        return $this->container['phones'];
+    }
+
+    /**
+     * Sets phones
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyContactPhone[]|null $phones Contact phones.
+     *
+     * @return self
+     */
+    public function setPhones($phones)
+    {
+        $this->container['phones'] = $phones;
+
+        return $this;
+    }
+
+    /**
+     * Gets emails
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyContactEmail[]|null
+     */
+    public function getEmails()
+    {
+        return $this->container['emails'];
+    }
+
+    /**
+     * Sets emails
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyContactEmail[]|null $emails Contact emails.
+     *
+     * @return self
+     */
+    public function setEmails($emails)
+    {
+        $this->container['emails'] = $emails;
+
+        return $this;
+    }
+
+    /**
+     * Gets webSites
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyContactWebSite[]|null
+     */
+    public function getWebSites()
+    {
+        return $this->container['webSites'];
+    }
+
+    /**
+     * Sets webSites
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyContactWebSite[]|null $webSites Contact web sites.
+     *
+     * @return self
+     */
+    public function setWebSites($webSites)
+    {
+        $this->container['webSites'] = $webSites;
+
+        return $this;
+    }
+
+    /**
      * Gets birthPlace
      *
      * @return string|null
@@ -1500,6 +1848,30 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
     }
 
     /**
+     * Gets spouse
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyContactSpouseContactPayloadItem|null
+     */
+    public function getSpouse()
+    {
+        return $this->container['spouse'];
+    }
+
+    /**
+     * Sets spouse
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyContactSpouseContactPayloadItem|null $spouse spouse
+     *
+     * @return self
+     */
+    public function setSpouse($spouse)
+    {
+        $this->container['spouse'] = $spouse;
+
+        return $this;
+    }
+
+    /**
      * Gets externalKey
      *
      * @return string|null
@@ -1543,6 +1915,294 @@ class LegacyContactContactPayloadItemAllOf implements ModelInterface, ArrayAcces
     public function setExternalKeyType($externalKeyType)
     {
         $this->container['externalKeyType'] = $externalKeyType;
+
+        return $this;
+    }
+
+    /**
+     * Gets classes
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue[]|null
+     */
+    public function getClasses()
+    {
+        return $this->container['classes'];
+    }
+
+    /**
+     * Sets classes
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue[]|null $classes Classes.
+     *
+     * @return self
+     */
+    public function setClasses($classes)
+    {
+        $this->container['classes'] = $classes;
+
+        return $this;
+    }
+
+    /**
+     * Gets groups
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue[]|null
+     */
+    public function getGroups()
+    {
+        return $this->container['groups'];
+    }
+
+    /**
+     * Sets groups
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue[]|null $groups Mailing groups.
+     *
+     * @return self
+     */
+    public function setGroups($groups)
+    {
+        $this->container['groups'] = $groups;
+
+        return $this;
+    }
+
+    /**
+     * Gets hobbies
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue[]|null
+     */
+    public function getHobbies()
+    {
+        return $this->container['hobbies'];
+    }
+
+    /**
+     * Sets hobbies
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue[]|null $hobbies Hobbies.
+     *
+     * @return self
+     */
+    public function setHobbies($hobbies)
+    {
+        $this->container['hobbies'] = $hobbies;
+
+        return $this;
+    }
+
+    /**
+     * Gets origins
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue[]|null
+     */
+    public function getOrigins()
+    {
+        return $this->container['origins'];
+    }
+
+    /**
+     * Sets origins
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue[]|null $origins Origins.
+     *
+     * @return self
+     */
+    public function setOrigins($origins)
+    {
+        $this->container['origins'] = $origins;
+
+        return $this;
+    }
+
+    /**
+     * Gets domains
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue[]|null
+     */
+    public function getDomains()
+    {
+        return $this->container['domains'];
+    }
+
+    /**
+     * Sets domains
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue[]|null $domains Activity Domains.
+     *
+     * @return self
+     */
+    public function setDomains($domains)
+    {
+        $this->container['domains'] = $domains;
+
+        return $this;
+    }
+
+    /**
+     * Gets territory
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue|null
+     */
+    public function getTerritory()
+    {
+        return $this->container['territory'];
+    }
+
+    /**
+     * Sets territory
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue|null $territory territory
+     *
+     * @return self
+     */
+    public function setTerritory($territory)
+    {
+        $this->container['territory'] = $territory;
+
+        return $this;
+    }
+
+    /**
+     * Gets seg1
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue|null
+     */
+    public function getSeg1()
+    {
+        return $this->container['seg1'];
+    }
+
+    /**
+     * Sets seg1
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue|null $seg1 seg1
+     *
+     * @return self
+     */
+    public function setSeg1($seg1)
+    {
+        $this->container['seg1'] = $seg1;
+
+        return $this;
+    }
+
+    /**
+     * Gets seg2
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue|null
+     */
+    public function getSeg2()
+    {
+        return $this->container['seg2'];
+    }
+
+    /**
+     * Sets seg2
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue|null $seg2 seg2
+     *
+     * @return self
+     */
+    public function setSeg2($seg2)
+    {
+        $this->container['seg2'] = $seg2;
+
+        return $this;
+    }
+
+    /**
+     * Gets seg3
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue|null
+     */
+    public function getSeg3()
+    {
+        return $this->container['seg3'];
+    }
+
+    /**
+     * Sets seg3
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue|null $seg3 seg3
+     *
+     * @return self
+     */
+    public function setSeg3($seg3)
+    {
+        $this->container['seg3'] = $seg3;
+
+        return $this;
+    }
+
+    /**
+     * Gets seg4
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue|null
+     */
+    public function getSeg4()
+    {
+        return $this->container['seg4'];
+    }
+
+    /**
+     * Sets seg4
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue|null $seg4 seg4
+     *
+     * @return self
+     */
+    public function setSeg4($seg4)
+    {
+        $this->container['seg4'] = $seg4;
+
+        return $this;
+    }
+
+    /**
+     * Gets seg5
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue|null
+     */
+    public function getSeg5()
+    {
+        return $this->container['seg5'];
+    }
+
+    /**
+     * Sets seg5
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue|null $seg5 seg5
+     *
+     * @return self
+     */
+    public function setSeg5($seg5)
+    {
+        $this->container['seg5'] = $seg5;
+
+        return $this;
+    }
+
+    /**
+     * Gets seg6
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue|null
+     */
+    public function getSeg6()
+    {
+        return $this->container['seg6'];
+    }
+
+    /**
+     * Sets seg6
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacySystemLinkedValue|null $seg6 seg6
+     *
+     * @return self
+     */
+    public function setSeg6($seg6)
+    {
+        $this->container['seg6'] = $seg6;
 
         return $this;
     }

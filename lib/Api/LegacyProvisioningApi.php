@@ -116,36 +116,6731 @@ class LegacyProvisioningApi
     }
 
     /**
-     * Operation getOrganization
+     * Operation legacyProvisioningActivateFnaForOrganization
+     *
+     * Activate FNA for an organization.
+     *
+     * @param  string $orgId Organization identifier. (required)
+     * @param  bool $activateOnly Only activate FNA if true, create FNA accounts for all active users if false. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
+     */
+    public function legacyProvisioningActivateFnaForOrganization($orgId, $activateOnly)
+    {
+        list($response) = $this->legacyProvisioningActivateFnaForOrganizationWithHttpInfo($orgId, $activateOnly);
+        return $response;
+    }
+
+    /**
+     * Operation legacyProvisioningActivateFnaForOrganizationWithHttpInfo
+     *
+     * Activate FNA for an organization.
+     *
+     * @param  string $orgId Organization identifier. (required)
+     * @param  bool $activateOnly Only activate FNA if true, create FNA accounts for all active users if false. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function legacyProvisioningActivateFnaForOrganizationWithHttpInfo($orgId, $activateOnly)
+    {
+        $request = $this->legacyProvisioningActivateFnaForOrganizationRequest($orgId, $activateOnly);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation legacyProvisioningActivateFnaForOrganizationAsync
+     *
+     * Activate FNA for an organization.
+     *
+     * @param  string $orgId Organization identifier. (required)
+     * @param  bool $activateOnly Only activate FNA if true, create FNA accounts for all active users if false. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningActivateFnaForOrganizationAsync($orgId, $activateOnly)
+    {
+        return $this->legacyProvisioningActivateFnaForOrganizationAsyncWithHttpInfo($orgId, $activateOnly)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation legacyProvisioningActivateFnaForOrganizationAsyncWithHttpInfo
+     *
+     * Activate FNA for an organization.
+     *
+     * @param  string $orgId Organization identifier. (required)
+     * @param  bool $activateOnly Only activate FNA if true, create FNA accounts for all active users if false. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningActivateFnaForOrganizationAsyncWithHttpInfo($orgId, $activateOnly)
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse';
+        $request = $this->legacyProvisioningActivateFnaForOrganizationRequest($orgId, $activateOnly);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'legacyProvisioningActivateFnaForOrganization'
+     *
+     * @param  string $orgId Organization identifier. (required)
+     * @param  bool $activateOnly Only activate FNA if true, create FNA accounts for all active users if false. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function legacyProvisioningActivateFnaForOrganizationRequest($orgId, $activateOnly)
+    {
+        // verify the required parameter 'orgId' is set
+        if ($orgId === null || (is_array($orgId) && count($orgId) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $orgId when calling legacyProvisioningActivateFnaForOrganization'
+            );
+        }
+        // verify the required parameter 'activateOnly' is set
+        if ($activateOnly === null || (is_array($activateOnly) && count($activateOnly) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $activateOnly when calling legacyProvisioningActivateFnaForOrganization'
+            );
+        }
+
+        $resourcePath = '/apps/api/kronos.provisioning.activateFnaForOrganization';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $orgId,
+            'orgId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            true // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $activateOnly,
+            'activateOnly', // param base name
+            'boolean', // openApiType
+            'form', // style
+            true, // explode
+            true // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation legacyProvisioningActivateUser
+     *
+     * Activate a user.
+     *
+     * @param  string $userId User identifier. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
+     */
+    public function legacyProvisioningActivateUser($userId)
+    {
+        list($response) = $this->legacyProvisioningActivateUserWithHttpInfo($userId);
+        return $response;
+    }
+
+    /**
+     * Operation legacyProvisioningActivateUserWithHttpInfo
+     *
+     * Activate a user.
+     *
+     * @param  string $userId User identifier. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function legacyProvisioningActivateUserWithHttpInfo($userId)
+    {
+        $request = $this->legacyProvisioningActivateUserRequest($userId);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation legacyProvisioningActivateUserAsync
+     *
+     * Activate a user.
+     *
+     * @param  string $userId User identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningActivateUserAsync($userId)
+    {
+        return $this->legacyProvisioningActivateUserAsyncWithHttpInfo($userId)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation legacyProvisioningActivateUserAsyncWithHttpInfo
+     *
+     * Activate a user.
+     *
+     * @param  string $userId User identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningActivateUserAsyncWithHttpInfo($userId)
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse';
+        $request = $this->legacyProvisioningActivateUserRequest($userId);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'legacyProvisioningActivateUser'
+     *
+     * @param  string $userId User identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function legacyProvisioningActivateUserRequest($userId)
+    {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $userId when calling legacyProvisioningActivateUser'
+            );
+        }
+
+        $resourcePath = '/apps/api/kronos.provisioning.activateUser';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $userId,
+            'userId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            true // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation legacyProvisioningAddOrganization
+     *
+     * Add a new organization.
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationPayloadRequest $legacyProvisioningOrganizationPayloadRequest legacyProvisioningOrganizationPayloadRequest (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningAddOrganizationResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
+     */
+    public function legacyProvisioningAddOrganization($legacyProvisioningOrganizationPayloadRequest)
+    {
+        list($response) = $this->legacyProvisioningAddOrganizationWithHttpInfo($legacyProvisioningOrganizationPayloadRequest);
+        return $response;
+    }
+
+    /**
+     * Operation legacyProvisioningAddOrganizationWithHttpInfo
+     *
+     * Add a new organization.
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationPayloadRequest $legacyProvisioningOrganizationPayloadRequest (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningAddOrganizationResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function legacyProvisioningAddOrganizationWithHttpInfo($legacyProvisioningOrganizationPayloadRequest)
+    {
+        $request = $this->legacyProvisioningAddOrganizationRequest($legacyProvisioningOrganizationPayloadRequest);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningAddOrganizationResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningAddOrganizationResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningAddOrganizationResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningAddOrganizationResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningAddOrganizationResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation legacyProvisioningAddOrganizationAsync
+     *
+     * Add a new organization.
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationPayloadRequest $legacyProvisioningOrganizationPayloadRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningAddOrganizationAsync($legacyProvisioningOrganizationPayloadRequest)
+    {
+        return $this->legacyProvisioningAddOrganizationAsyncWithHttpInfo($legacyProvisioningOrganizationPayloadRequest)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation legacyProvisioningAddOrganizationAsyncWithHttpInfo
+     *
+     * Add a new organization.
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationPayloadRequest $legacyProvisioningOrganizationPayloadRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningAddOrganizationAsyncWithHttpInfo($legacyProvisioningOrganizationPayloadRequest)
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningAddOrganizationResponse';
+        $request = $this->legacyProvisioningAddOrganizationRequest($legacyProvisioningOrganizationPayloadRequest);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'legacyProvisioningAddOrganization'
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationPayloadRequest $legacyProvisioningOrganizationPayloadRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function legacyProvisioningAddOrganizationRequest($legacyProvisioningOrganizationPayloadRequest)
+    {
+        // verify the required parameter 'legacyProvisioningOrganizationPayloadRequest' is set
+        if ($legacyProvisioningOrganizationPayloadRequest === null || (is_array($legacyProvisioningOrganizationPayloadRequest) && count($legacyProvisioningOrganizationPayloadRequest) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $legacyProvisioningOrganizationPayloadRequest when calling legacyProvisioningAddOrganization'
+            );
+        }
+
+        $resourcePath = '/apps/api/kronos.provisioning.addOrganization';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($legacyProvisioningOrganizationPayloadRequest)) {
+            if ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($legacyProvisioningOrganizationPayloadRequest));
+            } else {
+                $httpBody = $legacyProvisioningOrganizationPayloadRequest;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation legacyProvisioningAddUser
+     *
+     * Add a new user.
+     *
+     * @param  string $orgId Organization identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserPayloadRequest $legacyProvisioningUserPayloadRequest legacyProvisioningUserPayloadRequest (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningAddUpdateUserResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
+     */
+    public function legacyProvisioningAddUser($orgId, $legacyProvisioningUserPayloadRequest)
+    {
+        list($response) = $this->legacyProvisioningAddUserWithHttpInfo($orgId, $legacyProvisioningUserPayloadRequest);
+        return $response;
+    }
+
+    /**
+     * Operation legacyProvisioningAddUserWithHttpInfo
+     *
+     * Add a new user.
+     *
+     * @param  string $orgId Organization identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserPayloadRequest $legacyProvisioningUserPayloadRequest (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningAddUpdateUserResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function legacyProvisioningAddUserWithHttpInfo($orgId, $legacyProvisioningUserPayloadRequest)
+    {
+        $request = $this->legacyProvisioningAddUserRequest($orgId, $legacyProvisioningUserPayloadRequest);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningAddUpdateUserResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningAddUpdateUserResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningAddUpdateUserResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningAddUpdateUserResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningAddUpdateUserResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation legacyProvisioningAddUserAsync
+     *
+     * Add a new user.
+     *
+     * @param  string $orgId Organization identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserPayloadRequest $legacyProvisioningUserPayloadRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningAddUserAsync($orgId, $legacyProvisioningUserPayloadRequest)
+    {
+        return $this->legacyProvisioningAddUserAsyncWithHttpInfo($orgId, $legacyProvisioningUserPayloadRequest)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation legacyProvisioningAddUserAsyncWithHttpInfo
+     *
+     * Add a new user.
+     *
+     * @param  string $orgId Organization identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserPayloadRequest $legacyProvisioningUserPayloadRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningAddUserAsyncWithHttpInfo($orgId, $legacyProvisioningUserPayloadRequest)
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningAddUpdateUserResponse';
+        $request = $this->legacyProvisioningAddUserRequest($orgId, $legacyProvisioningUserPayloadRequest);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'legacyProvisioningAddUser'
+     *
+     * @param  string $orgId Organization identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserPayloadRequest $legacyProvisioningUserPayloadRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function legacyProvisioningAddUserRequest($orgId, $legacyProvisioningUserPayloadRequest)
+    {
+        // verify the required parameter 'orgId' is set
+        if ($orgId === null || (is_array($orgId) && count($orgId) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $orgId when calling legacyProvisioningAddUser'
+            );
+        }
+        // verify the required parameter 'legacyProvisioningUserPayloadRequest' is set
+        if ($legacyProvisioningUserPayloadRequest === null || (is_array($legacyProvisioningUserPayloadRequest) && count($legacyProvisioningUserPayloadRequest) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $legacyProvisioningUserPayloadRequest when calling legacyProvisioningAddUser'
+            );
+        }
+
+        $resourcePath = '/apps/api/kronos.provisioning.addUser';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $orgId,
+            'orgId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            true // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($legacyProvisioningUserPayloadRequest)) {
+            if ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($legacyProvisioningUserPayloadRequest));
+            } else {
+                $httpBody = $legacyProvisioningUserPayloadRequest;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation legacyProvisioningChangeDatabaseProfile
+     *
+     * Change database profile.
+     *
+     * @param  string $orgId Organization identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningChangeDatabaseProfilePayloadRequest $legacyProvisioningChangeDatabaseProfilePayloadRequest legacyProvisioningChangeDatabaseProfilePayloadRequest (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningChangeDatabaseProfileResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
+     */
+    public function legacyProvisioningChangeDatabaseProfile($orgId, $legacyProvisioningChangeDatabaseProfilePayloadRequest)
+    {
+        list($response) = $this->legacyProvisioningChangeDatabaseProfileWithHttpInfo($orgId, $legacyProvisioningChangeDatabaseProfilePayloadRequest);
+        return $response;
+    }
+
+    /**
+     * Operation legacyProvisioningChangeDatabaseProfileWithHttpInfo
+     *
+     * Change database profile.
+     *
+     * @param  string $orgId Organization identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningChangeDatabaseProfilePayloadRequest $legacyProvisioningChangeDatabaseProfilePayloadRequest (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningChangeDatabaseProfileResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function legacyProvisioningChangeDatabaseProfileWithHttpInfo($orgId, $legacyProvisioningChangeDatabaseProfilePayloadRequest)
+    {
+        $request = $this->legacyProvisioningChangeDatabaseProfileRequest($orgId, $legacyProvisioningChangeDatabaseProfilePayloadRequest);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningChangeDatabaseProfileResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningChangeDatabaseProfileResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningChangeDatabaseProfileResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningChangeDatabaseProfileResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningChangeDatabaseProfileResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation legacyProvisioningChangeDatabaseProfileAsync
+     *
+     * Change database profile.
+     *
+     * @param  string $orgId Organization identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningChangeDatabaseProfilePayloadRequest $legacyProvisioningChangeDatabaseProfilePayloadRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningChangeDatabaseProfileAsync($orgId, $legacyProvisioningChangeDatabaseProfilePayloadRequest)
+    {
+        return $this->legacyProvisioningChangeDatabaseProfileAsyncWithHttpInfo($orgId, $legacyProvisioningChangeDatabaseProfilePayloadRequest)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation legacyProvisioningChangeDatabaseProfileAsyncWithHttpInfo
+     *
+     * Change database profile.
+     *
+     * @param  string $orgId Organization identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningChangeDatabaseProfilePayloadRequest $legacyProvisioningChangeDatabaseProfilePayloadRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningChangeDatabaseProfileAsyncWithHttpInfo($orgId, $legacyProvisioningChangeDatabaseProfilePayloadRequest)
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningChangeDatabaseProfileResponse';
+        $request = $this->legacyProvisioningChangeDatabaseProfileRequest($orgId, $legacyProvisioningChangeDatabaseProfilePayloadRequest);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'legacyProvisioningChangeDatabaseProfile'
+     *
+     * @param  string $orgId Organization identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningChangeDatabaseProfilePayloadRequest $legacyProvisioningChangeDatabaseProfilePayloadRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function legacyProvisioningChangeDatabaseProfileRequest($orgId, $legacyProvisioningChangeDatabaseProfilePayloadRequest)
+    {
+        // verify the required parameter 'orgId' is set
+        if ($orgId === null || (is_array($orgId) && count($orgId) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $orgId when calling legacyProvisioningChangeDatabaseProfile'
+            );
+        }
+        // verify the required parameter 'legacyProvisioningChangeDatabaseProfilePayloadRequest' is set
+        if ($legacyProvisioningChangeDatabaseProfilePayloadRequest === null || (is_array($legacyProvisioningChangeDatabaseProfilePayloadRequest) && count($legacyProvisioningChangeDatabaseProfilePayloadRequest) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $legacyProvisioningChangeDatabaseProfilePayloadRequest when calling legacyProvisioningChangeDatabaseProfile'
+            );
+        }
+
+        $resourcePath = '/apps/api/kronos.provisioning.changeDatabaseProfile';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $orgId,
+            'orgId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            true // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($legacyProvisioningChangeDatabaseProfilePayloadRequest)) {
+            if ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($legacyProvisioningChangeDatabaseProfilePayloadRequest));
+            } else {
+                $httpBody = $legacyProvisioningChangeDatabaseProfilePayloadRequest;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation legacyProvisioningClearCache
+     *
+     * Clear cache.
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningClearCachePayloadRequest $legacyProvisioningClearCachePayloadRequest legacyProvisioningClearCachePayloadRequest (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningClearCacheResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
+     */
+    public function legacyProvisioningClearCache($legacyProvisioningClearCachePayloadRequest)
+    {
+        list($response) = $this->legacyProvisioningClearCacheWithHttpInfo($legacyProvisioningClearCachePayloadRequest);
+        return $response;
+    }
+
+    /**
+     * Operation legacyProvisioningClearCacheWithHttpInfo
+     *
+     * Clear cache.
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningClearCachePayloadRequest $legacyProvisioningClearCachePayloadRequest (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningClearCacheResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function legacyProvisioningClearCacheWithHttpInfo($legacyProvisioningClearCachePayloadRequest)
+    {
+        $request = $this->legacyProvisioningClearCacheRequest($legacyProvisioningClearCachePayloadRequest);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningClearCacheResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningClearCacheResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningClearCacheResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningClearCacheResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningClearCacheResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation legacyProvisioningClearCacheAsync
+     *
+     * Clear cache.
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningClearCachePayloadRequest $legacyProvisioningClearCachePayloadRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningClearCacheAsync($legacyProvisioningClearCachePayloadRequest)
+    {
+        return $this->legacyProvisioningClearCacheAsyncWithHttpInfo($legacyProvisioningClearCachePayloadRequest)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation legacyProvisioningClearCacheAsyncWithHttpInfo
+     *
+     * Clear cache.
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningClearCachePayloadRequest $legacyProvisioningClearCachePayloadRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningClearCacheAsyncWithHttpInfo($legacyProvisioningClearCachePayloadRequest)
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningClearCacheResponse';
+        $request = $this->legacyProvisioningClearCacheRequest($legacyProvisioningClearCachePayloadRequest);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'legacyProvisioningClearCache'
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningClearCachePayloadRequest $legacyProvisioningClearCachePayloadRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function legacyProvisioningClearCacheRequest($legacyProvisioningClearCachePayloadRequest)
+    {
+        // verify the required parameter 'legacyProvisioningClearCachePayloadRequest' is set
+        if ($legacyProvisioningClearCachePayloadRequest === null || (is_array($legacyProvisioningClearCachePayloadRequest) && count($legacyProvisioningClearCachePayloadRequest) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $legacyProvisioningClearCachePayloadRequest when calling legacyProvisioningClearCache'
+            );
+        }
+
+        $resourcePath = '/apps/api/kronos.provisioning.clearCache';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($legacyProvisioningClearCachePayloadRequest)) {
+            if ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($legacyProvisioningClearCachePayloadRequest));
+            } else {
+                $httpBody = $legacyProvisioningClearCachePayloadRequest;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation legacyProvisioningCloseUserSession
+     *
+     * Close all sessions open for a user.
+     *
+     * @param  string $userId User identifier. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
+     */
+    public function legacyProvisioningCloseUserSession($userId)
+    {
+        list($response) = $this->legacyProvisioningCloseUserSessionWithHttpInfo($userId);
+        return $response;
+    }
+
+    /**
+     * Operation legacyProvisioningCloseUserSessionWithHttpInfo
+     *
+     * Close all sessions open for a user.
+     *
+     * @param  string $userId User identifier. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function legacyProvisioningCloseUserSessionWithHttpInfo($userId)
+    {
+        $request = $this->legacyProvisioningCloseUserSessionRequest($userId);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation legacyProvisioningCloseUserSessionAsync
+     *
+     * Close all sessions open for a user.
+     *
+     * @param  string $userId User identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningCloseUserSessionAsync($userId)
+    {
+        return $this->legacyProvisioningCloseUserSessionAsyncWithHttpInfo($userId)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation legacyProvisioningCloseUserSessionAsyncWithHttpInfo
+     *
+     * Close all sessions open for a user.
+     *
+     * @param  string $userId User identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningCloseUserSessionAsyncWithHttpInfo($userId)
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse';
+        $request = $this->legacyProvisioningCloseUserSessionRequest($userId);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'legacyProvisioningCloseUserSession'
+     *
+     * @param  string $userId User identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function legacyProvisioningCloseUserSessionRequest($userId)
+    {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $userId when calling legacyProvisioningCloseUserSession'
+            );
+        }
+
+        $resourcePath = '/apps/api/kronos.provisioning.closeUserSession';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $userId,
+            'userId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            true // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation legacyProvisioningDeactivateUser
+     *
+     * Deactivate a user.
+     *
+     * @param  string $userId User identifier. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
+     */
+    public function legacyProvisioningDeactivateUser($userId)
+    {
+        list($response) = $this->legacyProvisioningDeactivateUserWithHttpInfo($userId);
+        return $response;
+    }
+
+    /**
+     * Operation legacyProvisioningDeactivateUserWithHttpInfo
+     *
+     * Deactivate a user.
+     *
+     * @param  string $userId User identifier. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function legacyProvisioningDeactivateUserWithHttpInfo($userId)
+    {
+        $request = $this->legacyProvisioningDeactivateUserRequest($userId);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation legacyProvisioningDeactivateUserAsync
+     *
+     * Deactivate a user.
+     *
+     * @param  string $userId User identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningDeactivateUserAsync($userId)
+    {
+        return $this->legacyProvisioningDeactivateUserAsyncWithHttpInfo($userId)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation legacyProvisioningDeactivateUserAsyncWithHttpInfo
+     *
+     * Deactivate a user.
+     *
+     * @param  string $userId User identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningDeactivateUserAsyncWithHttpInfo($userId)
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse';
+        $request = $this->legacyProvisioningDeactivateUserRequest($userId);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'legacyProvisioningDeactivateUser'
+     *
+     * @param  string $userId User identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function legacyProvisioningDeactivateUserRequest($userId)
+    {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $userId when calling legacyProvisioningDeactivateUser'
+            );
+        }
+
+        $resourcePath = '/apps/api/kronos.provisioning.deactivateUser';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $userId,
+            'userId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            true // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation legacyProvisioningDeleteOrganization
+     *
+     * Delete an organization.
+     *
+     * @param  string $orgId Organization identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningDeleteOrganizationOptionRequest $legacyProvisioningDeleteOrganizationOptionRequest legacyProvisioningDeleteOrganizationOptionRequest (required)
+     * @param  bool $testIfOrgExists Test if the organization exists. (optional)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningDeleteOrganizationResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
+     */
+    public function legacyProvisioningDeleteOrganization($orgId, $legacyProvisioningDeleteOrganizationOptionRequest, $testIfOrgExists = null)
+    {
+        list($response) = $this->legacyProvisioningDeleteOrganizationWithHttpInfo($orgId, $legacyProvisioningDeleteOrganizationOptionRequest, $testIfOrgExists);
+        return $response;
+    }
+
+    /**
+     * Operation legacyProvisioningDeleteOrganizationWithHttpInfo
+     *
+     * Delete an organization.
+     *
+     * @param  string $orgId Organization identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningDeleteOrganizationOptionRequest $legacyProvisioningDeleteOrganizationOptionRequest (required)
+     * @param  bool $testIfOrgExists Test if the organization exists. (optional)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningDeleteOrganizationResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function legacyProvisioningDeleteOrganizationWithHttpInfo($orgId, $legacyProvisioningDeleteOrganizationOptionRequest, $testIfOrgExists = null)
+    {
+        $request = $this->legacyProvisioningDeleteOrganizationRequest($orgId, $legacyProvisioningDeleteOrganizationOptionRequest, $testIfOrgExists);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningDeleteOrganizationResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningDeleteOrganizationResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningDeleteOrganizationResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningDeleteOrganizationResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningDeleteOrganizationResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation legacyProvisioningDeleteOrganizationAsync
+     *
+     * Delete an organization.
+     *
+     * @param  string $orgId Organization identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningDeleteOrganizationOptionRequest $legacyProvisioningDeleteOrganizationOptionRequest (required)
+     * @param  bool $testIfOrgExists Test if the organization exists. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningDeleteOrganizationAsync($orgId, $legacyProvisioningDeleteOrganizationOptionRequest, $testIfOrgExists = null)
+    {
+        return $this->legacyProvisioningDeleteOrganizationAsyncWithHttpInfo($orgId, $legacyProvisioningDeleteOrganizationOptionRequest, $testIfOrgExists)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation legacyProvisioningDeleteOrganizationAsyncWithHttpInfo
+     *
+     * Delete an organization.
+     *
+     * @param  string $orgId Organization identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningDeleteOrganizationOptionRequest $legacyProvisioningDeleteOrganizationOptionRequest (required)
+     * @param  bool $testIfOrgExists Test if the organization exists. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningDeleteOrganizationAsyncWithHttpInfo($orgId, $legacyProvisioningDeleteOrganizationOptionRequest, $testIfOrgExists = null)
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningDeleteOrganizationResponse';
+        $request = $this->legacyProvisioningDeleteOrganizationRequest($orgId, $legacyProvisioningDeleteOrganizationOptionRequest, $testIfOrgExists);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'legacyProvisioningDeleteOrganization'
+     *
+     * @param  string $orgId Organization identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningDeleteOrganizationOptionRequest $legacyProvisioningDeleteOrganizationOptionRequest (required)
+     * @param  bool $testIfOrgExists Test if the organization exists. (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function legacyProvisioningDeleteOrganizationRequest($orgId, $legacyProvisioningDeleteOrganizationOptionRequest, $testIfOrgExists = null)
+    {
+        // verify the required parameter 'orgId' is set
+        if ($orgId === null || (is_array($orgId) && count($orgId) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $orgId when calling legacyProvisioningDeleteOrganization'
+            );
+        }
+        // verify the required parameter 'legacyProvisioningDeleteOrganizationOptionRequest' is set
+        if ($legacyProvisioningDeleteOrganizationOptionRequest === null || (is_array($legacyProvisioningDeleteOrganizationOptionRequest) && count($legacyProvisioningDeleteOrganizationOptionRequest) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $legacyProvisioningDeleteOrganizationOptionRequest when calling legacyProvisioningDeleteOrganization'
+            );
+        }
+
+        $resourcePath = '/apps/api/kronos.provisioning.deleteOrganization';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $orgId,
+            'orgId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            true // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $testIfOrgExists,
+            'testIfOrgExists', // param base name
+            'boolean', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($legacyProvisioningDeleteOrganizationOptionRequest)) {
+            if ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($legacyProvisioningDeleteOrganizationOptionRequest));
+            } else {
+                $httpBody = $legacyProvisioningDeleteOrganizationOptionRequest;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation legacyProvisioningDeleteUser
+     *
+     * Delete a user.
+     *
+     * @param  string $userId User identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningDeleteUserOptionRequest $legacyProvisioningDeleteUserOptionRequest legacyProvisioningDeleteUserOptionRequest (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
+     */
+    public function legacyProvisioningDeleteUser($userId, $legacyProvisioningDeleteUserOptionRequest)
+    {
+        list($response) = $this->legacyProvisioningDeleteUserWithHttpInfo($userId, $legacyProvisioningDeleteUserOptionRequest);
+        return $response;
+    }
+
+    /**
+     * Operation legacyProvisioningDeleteUserWithHttpInfo
+     *
+     * Delete a user.
+     *
+     * @param  string $userId User identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningDeleteUserOptionRequest $legacyProvisioningDeleteUserOptionRequest (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function legacyProvisioningDeleteUserWithHttpInfo($userId, $legacyProvisioningDeleteUserOptionRequest)
+    {
+        $request = $this->legacyProvisioningDeleteUserRequest($userId, $legacyProvisioningDeleteUserOptionRequest);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation legacyProvisioningDeleteUserAsync
+     *
+     * Delete a user.
+     *
+     * @param  string $userId User identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningDeleteUserOptionRequest $legacyProvisioningDeleteUserOptionRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningDeleteUserAsync($userId, $legacyProvisioningDeleteUserOptionRequest)
+    {
+        return $this->legacyProvisioningDeleteUserAsyncWithHttpInfo($userId, $legacyProvisioningDeleteUserOptionRequest)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation legacyProvisioningDeleteUserAsyncWithHttpInfo
+     *
+     * Delete a user.
+     *
+     * @param  string $userId User identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningDeleteUserOptionRequest $legacyProvisioningDeleteUserOptionRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningDeleteUserAsyncWithHttpInfo($userId, $legacyProvisioningDeleteUserOptionRequest)
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse';
+        $request = $this->legacyProvisioningDeleteUserRequest($userId, $legacyProvisioningDeleteUserOptionRequest);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'legacyProvisioningDeleteUser'
+     *
+     * @param  string $userId User identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningDeleteUserOptionRequest $legacyProvisioningDeleteUserOptionRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function legacyProvisioningDeleteUserRequest($userId, $legacyProvisioningDeleteUserOptionRequest)
+    {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $userId when calling legacyProvisioningDeleteUser'
+            );
+        }
+        // verify the required parameter 'legacyProvisioningDeleteUserOptionRequest' is set
+        if ($legacyProvisioningDeleteUserOptionRequest === null || (is_array($legacyProvisioningDeleteUserOptionRequest) && count($legacyProvisioningDeleteUserOptionRequest) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $legacyProvisioningDeleteUserOptionRequest when calling legacyProvisioningDeleteUser'
+            );
+        }
+
+        $resourcePath = '/apps/api/kronos.provisioning.deleteUser';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $userId,
+            'userId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            true // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($legacyProvisioningDeleteUserOptionRequest)) {
+            if ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($legacyProvisioningDeleteUserOptionRequest));
+            } else {
+                $httpBody = $legacyProvisioningDeleteUserOptionRequest;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation legacyProvisioningEnableContactPersonalizedFieldsModule
+     *
+     * Enable Contact Personalized Fields module for a database.
+     *
+     * @param  string $orgId Organization identifier. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
+     */
+    public function legacyProvisioningEnableContactPersonalizedFieldsModule($orgId)
+    {
+        list($response) = $this->legacyProvisioningEnableContactPersonalizedFieldsModuleWithHttpInfo($orgId);
+        return $response;
+    }
+
+    /**
+     * Operation legacyProvisioningEnableContactPersonalizedFieldsModuleWithHttpInfo
+     *
+     * Enable Contact Personalized Fields module for a database.
+     *
+     * @param  string $orgId Organization identifier. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function legacyProvisioningEnableContactPersonalizedFieldsModuleWithHttpInfo($orgId)
+    {
+        $request = $this->legacyProvisioningEnableContactPersonalizedFieldsModuleRequest($orgId);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation legacyProvisioningEnableContactPersonalizedFieldsModuleAsync
+     *
+     * Enable Contact Personalized Fields module for a database.
+     *
+     * @param  string $orgId Organization identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningEnableContactPersonalizedFieldsModuleAsync($orgId)
+    {
+        return $this->legacyProvisioningEnableContactPersonalizedFieldsModuleAsyncWithHttpInfo($orgId)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation legacyProvisioningEnableContactPersonalizedFieldsModuleAsyncWithHttpInfo
+     *
+     * Enable Contact Personalized Fields module for a database.
+     *
+     * @param  string $orgId Organization identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningEnableContactPersonalizedFieldsModuleAsyncWithHttpInfo($orgId)
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse';
+        $request = $this->legacyProvisioningEnableContactPersonalizedFieldsModuleRequest($orgId);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'legacyProvisioningEnableContactPersonalizedFieldsModule'
+     *
+     * @param  string $orgId Organization identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function legacyProvisioningEnableContactPersonalizedFieldsModuleRequest($orgId)
+    {
+        // verify the required parameter 'orgId' is set
+        if ($orgId === null || (is_array($orgId) && count($orgId) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $orgId when calling legacyProvisioningEnableContactPersonalizedFieldsModule'
+            );
+        }
+
+        $resourcePath = '/apps/api/kronos.provisioning.enableContactPersonalizedFieldsModule';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $orgId,
+            'orgId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            true // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation legacyProvisioningEnableFnaForUser
+     *
+     * Enable FNA for user.
+     *
+     * @param  string $userId User identifier. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
+     */
+    public function legacyProvisioningEnableFnaForUser($userId)
+    {
+        list($response) = $this->legacyProvisioningEnableFnaForUserWithHttpInfo($userId);
+        return $response;
+    }
+
+    /**
+     * Operation legacyProvisioningEnableFnaForUserWithHttpInfo
+     *
+     * Enable FNA for user.
+     *
+     * @param  string $userId User identifier. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function legacyProvisioningEnableFnaForUserWithHttpInfo($userId)
+    {
+        $request = $this->legacyProvisioningEnableFnaForUserRequest($userId);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation legacyProvisioningEnableFnaForUserAsync
+     *
+     * Enable FNA for user.
+     *
+     * @param  string $userId User identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningEnableFnaForUserAsync($userId)
+    {
+        return $this->legacyProvisioningEnableFnaForUserAsyncWithHttpInfo($userId)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation legacyProvisioningEnableFnaForUserAsyncWithHttpInfo
+     *
+     * Enable FNA for user.
+     *
+     * @param  string $userId User identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningEnableFnaForUserAsyncWithHttpInfo($userId)
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse';
+        $request = $this->legacyProvisioningEnableFnaForUserRequest($userId);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'legacyProvisioningEnableFnaForUser'
+     *
+     * @param  string $userId User identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function legacyProvisioningEnableFnaForUserRequest($userId)
+    {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $userId when calling legacyProvisioningEnableFnaForUser'
+            );
+        }
+
+        $resourcePath = '/apps/api/kronos.provisioning.enableFnaForUser';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $userId,
+            'userId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            true // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation legacyProvisioningGetCrmGatewaysAccessReport
+     *
+     * Get a report of active accesses for all CRM datagateways.
+     *
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningReportAccessesResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
+     */
+    public function legacyProvisioningGetCrmGatewaysAccessReport()
+    {
+        list($response) = $this->legacyProvisioningGetCrmGatewaysAccessReportWithHttpInfo();
+        return $response;
+    }
+
+    /**
+     * Operation legacyProvisioningGetCrmGatewaysAccessReportWithHttpInfo
+     *
+     * Get a report of active accesses for all CRM datagateways.
+     *
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningReportAccessesResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function legacyProvisioningGetCrmGatewaysAccessReportWithHttpInfo()
+    {
+        $request = $this->legacyProvisioningGetCrmGatewaysAccessReportRequest();
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningReportAccessesResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningReportAccessesResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningReportAccessesResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningReportAccessesResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningReportAccessesResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation legacyProvisioningGetCrmGatewaysAccessReportAsync
+     *
+     * Get a report of active accesses for all CRM datagateways.
+     *
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningGetCrmGatewaysAccessReportAsync()
+    {
+        return $this->legacyProvisioningGetCrmGatewaysAccessReportAsyncWithHttpInfo()
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation legacyProvisioningGetCrmGatewaysAccessReportAsyncWithHttpInfo
+     *
+     * Get a report of active accesses for all CRM datagateways.
+     *
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningGetCrmGatewaysAccessReportAsyncWithHttpInfo()
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningReportAccessesResponse';
+        $request = $this->legacyProvisioningGetCrmGatewaysAccessReportRequest();
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'legacyProvisioningGetCrmGatewaysAccessReport'
+     *
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function legacyProvisioningGetCrmGatewaysAccessReportRequest()
+    {
+
+        $resourcePath = '/apps/api/kronos.provisioning.getCrmGatewaysAccessReport';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation legacyProvisioningGetFFGatewaysAccessReport
+     *
+     * Get a report of active accesses for all FF datagateways.
+     *
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningReportAccessesResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
+     */
+    public function legacyProvisioningGetFFGatewaysAccessReport()
+    {
+        list($response) = $this->legacyProvisioningGetFFGatewaysAccessReportWithHttpInfo();
+        return $response;
+    }
+
+    /**
+     * Operation legacyProvisioningGetFFGatewaysAccessReportWithHttpInfo
+     *
+     * Get a report of active accesses for all FF datagateways.
+     *
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningReportAccessesResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function legacyProvisioningGetFFGatewaysAccessReportWithHttpInfo()
+    {
+        $request = $this->legacyProvisioningGetFFGatewaysAccessReportRequest();
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningReportAccessesResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningReportAccessesResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningReportAccessesResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningReportAccessesResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningReportAccessesResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation legacyProvisioningGetFFGatewaysAccessReportAsync
+     *
+     * Get a report of active accesses for all FF datagateways.
+     *
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningGetFFGatewaysAccessReportAsync()
+    {
+        return $this->legacyProvisioningGetFFGatewaysAccessReportAsyncWithHttpInfo()
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation legacyProvisioningGetFFGatewaysAccessReportAsyncWithHttpInfo
+     *
+     * Get a report of active accesses for all FF datagateways.
+     *
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningGetFFGatewaysAccessReportAsyncWithHttpInfo()
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningReportAccessesResponse';
+        $request = $this->legacyProvisioningGetFFGatewaysAccessReportRequest();
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'legacyProvisioningGetFFGatewaysAccessReport'
+     *
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function legacyProvisioningGetFFGatewaysAccessReportRequest()
+    {
+
+        $resourcePath = '/apps/api/kronos.provisioning.getFFGatewaysAccessReport';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation legacyProvisioningGetGatewayArchiveByDate
+     *
+     * Get the archives for a given gateway at the given date.
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGatewayArchivePayloadRequest $legacyProvisioningGatewayArchivePayloadRequest legacyProvisioningGatewayArchivePayloadRequest (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetFileForGatewayArchiveByDateResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
+     */
+    public function legacyProvisioningGetGatewayArchiveByDate($legacyProvisioningGatewayArchivePayloadRequest)
+    {
+        list($response) = $this->legacyProvisioningGetGatewayArchiveByDateWithHttpInfo($legacyProvisioningGatewayArchivePayloadRequest);
+        return $response;
+    }
+
+    /**
+     * Operation legacyProvisioningGetGatewayArchiveByDateWithHttpInfo
+     *
+     * Get the archives for a given gateway at the given date.
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGatewayArchivePayloadRequest $legacyProvisioningGatewayArchivePayloadRequest (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetFileForGatewayArchiveByDateResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function legacyProvisioningGetGatewayArchiveByDateWithHttpInfo($legacyProvisioningGatewayArchivePayloadRequest)
+    {
+        $request = $this->legacyProvisioningGetGatewayArchiveByDateRequest($legacyProvisioningGatewayArchivePayloadRequest);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetFileForGatewayArchiveByDateResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetFileForGatewayArchiveByDateResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetFileForGatewayArchiveByDateResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetFileForGatewayArchiveByDateResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetFileForGatewayArchiveByDateResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation legacyProvisioningGetGatewayArchiveByDateAsync
+     *
+     * Get the archives for a given gateway at the given date.
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGatewayArchivePayloadRequest $legacyProvisioningGatewayArchivePayloadRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningGetGatewayArchiveByDateAsync($legacyProvisioningGatewayArchivePayloadRequest)
+    {
+        return $this->legacyProvisioningGetGatewayArchiveByDateAsyncWithHttpInfo($legacyProvisioningGatewayArchivePayloadRequest)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation legacyProvisioningGetGatewayArchiveByDateAsyncWithHttpInfo
+     *
+     * Get the archives for a given gateway at the given date.
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGatewayArchivePayloadRequest $legacyProvisioningGatewayArchivePayloadRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningGetGatewayArchiveByDateAsyncWithHttpInfo($legacyProvisioningGatewayArchivePayloadRequest)
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetFileForGatewayArchiveByDateResponse';
+        $request = $this->legacyProvisioningGetGatewayArchiveByDateRequest($legacyProvisioningGatewayArchivePayloadRequest);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'legacyProvisioningGetGatewayArchiveByDate'
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGatewayArchivePayloadRequest $legacyProvisioningGatewayArchivePayloadRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function legacyProvisioningGetGatewayArchiveByDateRequest($legacyProvisioningGatewayArchivePayloadRequest)
+    {
+        // verify the required parameter 'legacyProvisioningGatewayArchivePayloadRequest' is set
+        if ($legacyProvisioningGatewayArchivePayloadRequest === null || (is_array($legacyProvisioningGatewayArchivePayloadRequest) && count($legacyProvisioningGatewayArchivePayloadRequest) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $legacyProvisioningGatewayArchivePayloadRequest when calling legacyProvisioningGetGatewayArchiveByDate'
+            );
+        }
+
+        $resourcePath = '/apps/api/kronos.provisioning.getGatewayArchiveByDate';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($legacyProvisioningGatewayArchivePayloadRequest)) {
+            if ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($legacyProvisioningGatewayArchivePayloadRequest));
+            } else {
+                $httpBody = $legacyProvisioningGatewayArchivePayloadRequest;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation legacyProvisioningGetGatewayArchiveListByDate
+     *
+     * Get the archives list for a given gateway at the given date.
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGatewayArchivePayloadRequest $legacyProvisioningGatewayArchivePayloadRequest legacyProvisioningGatewayArchivePayloadRequest (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetGatewayArchiveListByDateResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
+     */
+    public function legacyProvisioningGetGatewayArchiveListByDate($legacyProvisioningGatewayArchivePayloadRequest)
+    {
+        list($response) = $this->legacyProvisioningGetGatewayArchiveListByDateWithHttpInfo($legacyProvisioningGatewayArchivePayloadRequest);
+        return $response;
+    }
+
+    /**
+     * Operation legacyProvisioningGetGatewayArchiveListByDateWithHttpInfo
+     *
+     * Get the archives list for a given gateway at the given date.
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGatewayArchivePayloadRequest $legacyProvisioningGatewayArchivePayloadRequest (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetGatewayArchiveListByDateResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function legacyProvisioningGetGatewayArchiveListByDateWithHttpInfo($legacyProvisioningGatewayArchivePayloadRequest)
+    {
+        $request = $this->legacyProvisioningGetGatewayArchiveListByDateRequest($legacyProvisioningGatewayArchivePayloadRequest);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetGatewayArchiveListByDateResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetGatewayArchiveListByDateResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetGatewayArchiveListByDateResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetGatewayArchiveListByDateResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetGatewayArchiveListByDateResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation legacyProvisioningGetGatewayArchiveListByDateAsync
+     *
+     * Get the archives list for a given gateway at the given date.
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGatewayArchivePayloadRequest $legacyProvisioningGatewayArchivePayloadRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningGetGatewayArchiveListByDateAsync($legacyProvisioningGatewayArchivePayloadRequest)
+    {
+        return $this->legacyProvisioningGetGatewayArchiveListByDateAsyncWithHttpInfo($legacyProvisioningGatewayArchivePayloadRequest)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation legacyProvisioningGetGatewayArchiveListByDateAsyncWithHttpInfo
+     *
+     * Get the archives list for a given gateway at the given date.
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGatewayArchivePayloadRequest $legacyProvisioningGatewayArchivePayloadRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningGetGatewayArchiveListByDateAsyncWithHttpInfo($legacyProvisioningGatewayArchivePayloadRequest)
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetGatewayArchiveListByDateResponse';
+        $request = $this->legacyProvisioningGetGatewayArchiveListByDateRequest($legacyProvisioningGatewayArchivePayloadRequest);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'legacyProvisioningGetGatewayArchiveListByDate'
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGatewayArchivePayloadRequest $legacyProvisioningGatewayArchivePayloadRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function legacyProvisioningGetGatewayArchiveListByDateRequest($legacyProvisioningGatewayArchivePayloadRequest)
+    {
+        // verify the required parameter 'legacyProvisioningGatewayArchivePayloadRequest' is set
+        if ($legacyProvisioningGatewayArchivePayloadRequest === null || (is_array($legacyProvisioningGatewayArchivePayloadRequest) && count($legacyProvisioningGatewayArchivePayloadRequest) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $legacyProvisioningGatewayArchivePayloadRequest when calling legacyProvisioningGetGatewayArchiveListByDate'
+            );
+        }
+
+        $resourcePath = '/apps/api/kronos.provisioning.getGatewayArchiveListByDate';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($legacyProvisioningGatewayArchivePayloadRequest)) {
+            if ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($legacyProvisioningGatewayArchivePayloadRequest));
+            } else {
+                $httpBody = $legacyProvisioningGatewayArchivePayloadRequest;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation legacyProvisioningGetLoginLog
+     *
+     * Get the login log based on given options.
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningLoginLogOptionsRequest $legacyProvisioningLoginLogOptionsRequest legacyProvisioningLoginLogOptionsRequest (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningLoginLogResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
+     */
+    public function legacyProvisioningGetLoginLog($legacyProvisioningLoginLogOptionsRequest)
+    {
+        list($response) = $this->legacyProvisioningGetLoginLogWithHttpInfo($legacyProvisioningLoginLogOptionsRequest);
+        return $response;
+    }
+
+    /**
+     * Operation legacyProvisioningGetLoginLogWithHttpInfo
+     *
+     * Get the login log based on given options.
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningLoginLogOptionsRequest $legacyProvisioningLoginLogOptionsRequest (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningLoginLogResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function legacyProvisioningGetLoginLogWithHttpInfo($legacyProvisioningLoginLogOptionsRequest)
+    {
+        $request = $this->legacyProvisioningGetLoginLogRequest($legacyProvisioningLoginLogOptionsRequest);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningLoginLogResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningLoginLogResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningLoginLogResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningLoginLogResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningLoginLogResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation legacyProvisioningGetLoginLogAsync
+     *
+     * Get the login log based on given options.
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningLoginLogOptionsRequest $legacyProvisioningLoginLogOptionsRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningGetLoginLogAsync($legacyProvisioningLoginLogOptionsRequest)
+    {
+        return $this->legacyProvisioningGetLoginLogAsyncWithHttpInfo($legacyProvisioningLoginLogOptionsRequest)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation legacyProvisioningGetLoginLogAsyncWithHttpInfo
+     *
+     * Get the login log based on given options.
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningLoginLogOptionsRequest $legacyProvisioningLoginLogOptionsRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningGetLoginLogAsyncWithHttpInfo($legacyProvisioningLoginLogOptionsRequest)
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningLoginLogResponse';
+        $request = $this->legacyProvisioningGetLoginLogRequest($legacyProvisioningLoginLogOptionsRequest);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'legacyProvisioningGetLoginLog'
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningLoginLogOptionsRequest $legacyProvisioningLoginLogOptionsRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function legacyProvisioningGetLoginLogRequest($legacyProvisioningLoginLogOptionsRequest)
+    {
+        // verify the required parameter 'legacyProvisioningLoginLogOptionsRequest' is set
+        if ($legacyProvisioningLoginLogOptionsRequest === null || (is_array($legacyProvisioningLoginLogOptionsRequest) && count($legacyProvisioningLoginLogOptionsRequest) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $legacyProvisioningLoginLogOptionsRequest when calling legacyProvisioningGetLoginLog'
+            );
+        }
+
+        $resourcePath = '/apps/api/kronos.provisioning.getLoginLog';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($legacyProvisioningLoginLogOptionsRequest)) {
+            if ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($legacyProvisioningLoginLogOptionsRequest));
+            } else {
+                $httpBody = $legacyProvisioningLoginLogOptionsRequest;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation legacyProvisioningGetMoveUserToOrganizationStatus
+     *
+     * Get the progression status of a previous call to moveUserToOrganization.
+     *
+     * @param  string $moveId Move request unique identifier. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetMoveUserToOrganizationStatus|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
+     */
+    public function legacyProvisioningGetMoveUserToOrganizationStatus($moveId)
+    {
+        list($response) = $this->legacyProvisioningGetMoveUserToOrganizationStatusWithHttpInfo($moveId);
+        return $response;
+    }
+
+    /**
+     * Operation legacyProvisioningGetMoveUserToOrganizationStatusWithHttpInfo
+     *
+     * Get the progression status of a previous call to moveUserToOrganization.
+     *
+     * @param  string $moveId Move request unique identifier. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetMoveUserToOrganizationStatus|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function legacyProvisioningGetMoveUserToOrganizationStatusWithHttpInfo($moveId)
+    {
+        $request = $this->legacyProvisioningGetMoveUserToOrganizationStatusRequest($moveId);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetMoveUserToOrganizationStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetMoveUserToOrganizationStatus' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetMoveUserToOrganizationStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetMoveUserToOrganizationStatus';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetMoveUserToOrganizationStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation legacyProvisioningGetMoveUserToOrganizationStatusAsync
+     *
+     * Get the progression status of a previous call to moveUserToOrganization.
+     *
+     * @param  string $moveId Move request unique identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningGetMoveUserToOrganizationStatusAsync($moveId)
+    {
+        return $this->legacyProvisioningGetMoveUserToOrganizationStatusAsyncWithHttpInfo($moveId)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation legacyProvisioningGetMoveUserToOrganizationStatusAsyncWithHttpInfo
+     *
+     * Get the progression status of a previous call to moveUserToOrganization.
+     *
+     * @param  string $moveId Move request unique identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningGetMoveUserToOrganizationStatusAsyncWithHttpInfo($moveId)
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetMoveUserToOrganizationStatus';
+        $request = $this->legacyProvisioningGetMoveUserToOrganizationStatusRequest($moveId);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'legacyProvisioningGetMoveUserToOrganizationStatus'
+     *
+     * @param  string $moveId Move request unique identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function legacyProvisioningGetMoveUserToOrganizationStatusRequest($moveId)
+    {
+        // verify the required parameter 'moveId' is set
+        if ($moveId === null || (is_array($moveId) && count($moveId) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $moveId when calling legacyProvisioningGetMoveUserToOrganizationStatus'
+            );
+        }
+
+        $resourcePath = '/apps/api/kronos.provisioning.getMoveUserToOrganizationStatus';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $moveId,
+            'moveId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            true // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation legacyProvisioningGetOrganization
      *
      * Get all informations about an organization.
      *
-     * @param  string $orgId Organization Id (required)
+     * @param  string $orgId Organization identifier. (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetOrganizationResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
      */
-    public function getOrganization($orgId)
+    public function legacyProvisioningGetOrganization($orgId)
     {
-        list($response) = $this->getOrganizationWithHttpInfo($orgId);
+        list($response) = $this->legacyProvisioningGetOrganizationWithHttpInfo($orgId);
         return $response;
     }
 
     /**
-     * Operation getOrganizationWithHttpInfo
+     * Operation legacyProvisioningGetOrganizationWithHttpInfo
      *
      * Get all informations about an organization.
      *
-     * @param  string $orgId Organization Id (required)
+     * @param  string $orgId Organization identifier. (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetOrganizationResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOrganizationWithHttpInfo($orgId)
+    public function legacyProvisioningGetOrganizationWithHttpInfo($orgId)
     {
-        $request = $this->getOrganizationRequest($orgId);
+        $request = $this->legacyProvisioningGetOrganizationRequest($orgId);
 
         try {
             $options = $this->createHttpClientOption();
@@ -213,7 +6908,7 @@ class LegacyProvisioningApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
-                case 404:
+                case 401:
                     if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
@@ -228,7 +6923,7 @@ class LegacyProvisioningApi
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
-                case 401:
+                case 404:
                     if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
@@ -294,7 +6989,7 @@ class LegacyProvisioningApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 404:
+                case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
@@ -302,7 +6997,7 @@ class LegacyProvisioningApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 401:
+                case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
@@ -324,18 +7019,18 @@ class LegacyProvisioningApi
     }
 
     /**
-     * Operation getOrganizationAsync
+     * Operation legacyProvisioningGetOrganizationAsync
      *
      * Get all informations about an organization.
      *
-     * @param  string $orgId Organization Id (required)
+     * @param  string $orgId Organization identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrganizationAsync($orgId)
+    public function legacyProvisioningGetOrganizationAsync($orgId)
     {
-        return $this->getOrganizationAsyncWithHttpInfo($orgId)
+        return $this->legacyProvisioningGetOrganizationAsyncWithHttpInfo($orgId)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -344,19 +7039,19 @@ class LegacyProvisioningApi
     }
 
     /**
-     * Operation getOrganizationAsyncWithHttpInfo
+     * Operation legacyProvisioningGetOrganizationAsyncWithHttpInfo
      *
      * Get all informations about an organization.
      *
-     * @param  string $orgId Organization Id (required)
+     * @param  string $orgId Organization identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrganizationAsyncWithHttpInfo($orgId)
+    public function legacyProvisioningGetOrganizationAsyncWithHttpInfo($orgId)
     {
         $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetOrganizationResponse';
-        $request = $this->getOrganizationRequest($orgId);
+        $request = $this->legacyProvisioningGetOrganizationRequest($orgId);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -395,23 +7090,23 @@ class LegacyProvisioningApi
     }
 
     /**
-     * Create request for operation 'getOrganization'
+     * Create request for operation 'legacyProvisioningGetOrganization'
      *
-     * @param  string $orgId Organization Id (required)
+     * @param  string $orgId Organization identifier. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getOrganizationRequest($orgId)
+    public function legacyProvisioningGetOrganizationRequest($orgId)
     {
         // verify the required parameter 'orgId' is set
         if ($orgId === null || (is_array($orgId) && count($orgId) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $orgId when calling getOrganization'
+                'Missing the required parameter $orgId when calling legacyProvisioningGetOrganization'
             );
         }
 
-        $resourcePath = '/apps/provisioning/kronos.provisioning.getOrganization';
+        $resourcePath = '/apps/api/kronos.provisioning.getOrganization';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -493,34 +7188,34 @@ class LegacyProvisioningApi
     }
 
     /**
-     * Operation getOrganizationList
+     * Operation legacyProvisioningGetOrganizationList
      *
-     * List all organizations
+     * List all organizations.
      *
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetOrganizationListResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
      */
-    public function getOrganizationList()
+    public function legacyProvisioningGetOrganizationList()
     {
-        list($response) = $this->getOrganizationListWithHttpInfo();
+        list($response) = $this->legacyProvisioningGetOrganizationListWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation getOrganizationListWithHttpInfo
+     * Operation legacyProvisioningGetOrganizationListWithHttpInfo
      *
-     * List all organizations
+     * List all organizations.
      *
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetOrganizationListResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getOrganizationListWithHttpInfo()
+    public function legacyProvisioningGetOrganizationListWithHttpInfo()
     {
-        $request = $this->getOrganizationListRequest();
+        $request = $this->legacyProvisioningGetOrganizationListRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -653,17 +7348,17 @@ class LegacyProvisioningApi
     }
 
     /**
-     * Operation getOrganizationListAsync
+     * Operation legacyProvisioningGetOrganizationListAsync
      *
-     * List all organizations
+     * List all organizations.
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrganizationListAsync()
+    public function legacyProvisioningGetOrganizationListAsync()
     {
-        return $this->getOrganizationListAsyncWithHttpInfo()
+        return $this->legacyProvisioningGetOrganizationListAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -672,18 +7367,18 @@ class LegacyProvisioningApi
     }
 
     /**
-     * Operation getOrganizationListAsyncWithHttpInfo
+     * Operation legacyProvisioningGetOrganizationListAsyncWithHttpInfo
      *
-     * List all organizations
+     * List all organizations.
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getOrganizationListAsyncWithHttpInfo()
+    public function legacyProvisioningGetOrganizationListAsyncWithHttpInfo()
     {
         $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetOrganizationListResponse';
-        $request = $this->getOrganizationListRequest();
+        $request = $this->legacyProvisioningGetOrganizationListRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -722,16 +7417,16 @@ class LegacyProvisioningApi
     }
 
     /**
-     * Create request for operation 'getOrganizationList'
+     * Create request for operation 'legacyProvisioningGetOrganizationList'
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getOrganizationListRequest()
+    public function legacyProvisioningGetOrganizationListRequest()
     {
 
-        $resourcePath = '/apps/provisioning/kronos.provisioning.getOrganizationList';
+        $resourcePath = '/apps/api/kronos.provisioning.getOrganizationList';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -797,6 +7492,4092 @@ class LegacyProvisioningApi
         $query = ObjectSerializer::buildQuery($queryParams);
         return new Request(
             'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation legacyProvisioningGetOrganizationStatus
+     *
+     * Return the state of a given database.
+     *
+     * @param  string $orgId Organization identifier. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetOrganizationStatusResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
+     */
+    public function legacyProvisioningGetOrganizationStatus($orgId)
+    {
+        list($response) = $this->legacyProvisioningGetOrganizationStatusWithHttpInfo($orgId);
+        return $response;
+    }
+
+    /**
+     * Operation legacyProvisioningGetOrganizationStatusWithHttpInfo
+     *
+     * Return the state of a given database.
+     *
+     * @param  string $orgId Organization identifier. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetOrganizationStatusResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function legacyProvisioningGetOrganizationStatusWithHttpInfo($orgId)
+    {
+        $request = $this->legacyProvisioningGetOrganizationStatusRequest($orgId);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetOrganizationStatusResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetOrganizationStatusResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetOrganizationStatusResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetOrganizationStatusResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetOrganizationStatusResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation legacyProvisioningGetOrganizationStatusAsync
+     *
+     * Return the state of a given database.
+     *
+     * @param  string $orgId Organization identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningGetOrganizationStatusAsync($orgId)
+    {
+        return $this->legacyProvisioningGetOrganizationStatusAsyncWithHttpInfo($orgId)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation legacyProvisioningGetOrganizationStatusAsyncWithHttpInfo
+     *
+     * Return the state of a given database.
+     *
+     * @param  string $orgId Organization identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningGetOrganizationStatusAsyncWithHttpInfo($orgId)
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetOrganizationStatusResponse';
+        $request = $this->legacyProvisioningGetOrganizationStatusRequest($orgId);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'legacyProvisioningGetOrganizationStatus'
+     *
+     * @param  string $orgId Organization identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function legacyProvisioningGetOrganizationStatusRequest($orgId)
+    {
+        // verify the required parameter 'orgId' is set
+        if ($orgId === null || (is_array($orgId) && count($orgId) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $orgId when calling legacyProvisioningGetOrganizationStatus'
+            );
+        }
+
+        $resourcePath = '/apps/api/kronos.provisioning.getOrganizationStatus';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $orgId,
+            'orgId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            true // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation legacyProvisioningGetSyncControlDataForAllDatabaseStatus
+     *
+     * Get the progression status of a previous call to moveUserToOrganization.
+     *
+     * @param  string $jobId Job identifier. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningSyncControlDataForAllDatabaseResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
+     */
+    public function legacyProvisioningGetSyncControlDataForAllDatabaseStatus($jobId)
+    {
+        list($response) = $this->legacyProvisioningGetSyncControlDataForAllDatabaseStatusWithHttpInfo($jobId);
+        return $response;
+    }
+
+    /**
+     * Operation legacyProvisioningGetSyncControlDataForAllDatabaseStatusWithHttpInfo
+     *
+     * Get the progression status of a previous call to moveUserToOrganization.
+     *
+     * @param  string $jobId Job identifier. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningSyncControlDataForAllDatabaseResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function legacyProvisioningGetSyncControlDataForAllDatabaseStatusWithHttpInfo($jobId)
+    {
+        $request = $this->legacyProvisioningGetSyncControlDataForAllDatabaseStatusRequest($jobId);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningSyncControlDataForAllDatabaseResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningSyncControlDataForAllDatabaseResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningSyncControlDataForAllDatabaseResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningSyncControlDataForAllDatabaseResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningSyncControlDataForAllDatabaseResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation legacyProvisioningGetSyncControlDataForAllDatabaseStatusAsync
+     *
+     * Get the progression status of a previous call to moveUserToOrganization.
+     *
+     * @param  string $jobId Job identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningGetSyncControlDataForAllDatabaseStatusAsync($jobId)
+    {
+        return $this->legacyProvisioningGetSyncControlDataForAllDatabaseStatusAsyncWithHttpInfo($jobId)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation legacyProvisioningGetSyncControlDataForAllDatabaseStatusAsyncWithHttpInfo
+     *
+     * Get the progression status of a previous call to moveUserToOrganization.
+     *
+     * @param  string $jobId Job identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningGetSyncControlDataForAllDatabaseStatusAsyncWithHttpInfo($jobId)
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningSyncControlDataForAllDatabaseResponse';
+        $request = $this->legacyProvisioningGetSyncControlDataForAllDatabaseStatusRequest($jobId);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'legacyProvisioningGetSyncControlDataForAllDatabaseStatus'
+     *
+     * @param  string $jobId Job identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function legacyProvisioningGetSyncControlDataForAllDatabaseStatusRequest($jobId)
+    {
+        // verify the required parameter 'jobId' is set
+        if ($jobId === null || (is_array($jobId) && count($jobId) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $jobId when calling legacyProvisioningGetSyncControlDataForAllDatabaseStatus'
+            );
+        }
+
+        $resourcePath = '/apps/api/kronos.provisioning.getSyncControlDataForAllDatabaseStatus';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $jobId,
+            'jobId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            true // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation legacyProvisioningGetUser
+     *
+     * Get all informations about a user.
+     *
+     * @param  string $userId User identifier. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetUserResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
+     */
+    public function legacyProvisioningGetUser($userId)
+    {
+        list($response) = $this->legacyProvisioningGetUserWithHttpInfo($userId);
+        return $response;
+    }
+
+    /**
+     * Operation legacyProvisioningGetUserWithHttpInfo
+     *
+     * Get all informations about a user.
+     *
+     * @param  string $userId User identifier. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetUserResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function legacyProvisioningGetUserWithHttpInfo($userId)
+    {
+        $request = $this->legacyProvisioningGetUserRequest($userId);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetUserResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetUserResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetUserResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetUserResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetUserResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation legacyProvisioningGetUserAsync
+     *
+     * Get all informations about a user.
+     *
+     * @param  string $userId User identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningGetUserAsync($userId)
+    {
+        return $this->legacyProvisioningGetUserAsyncWithHttpInfo($userId)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation legacyProvisioningGetUserAsyncWithHttpInfo
+     *
+     * Get all informations about a user.
+     *
+     * @param  string $userId User identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningGetUserAsyncWithHttpInfo($userId)
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetUserResponse';
+        $request = $this->legacyProvisioningGetUserRequest($userId);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'legacyProvisioningGetUser'
+     *
+     * @param  string $userId User identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function legacyProvisioningGetUserRequest($userId)
+    {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $userId when calling legacyProvisioningGetUser'
+            );
+        }
+
+        $resourcePath = '/apps/api/kronos.provisioning.getUser';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $userId,
+            'userId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            true // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation legacyProvisioningGetUserList
+     *
+     * List all users in an organization.
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserListOptionsRequest $legacyProvisioningUserListOptionsRequest legacyProvisioningUserListOptionsRequest (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningResponseGetUserListResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
+     */
+    public function legacyProvisioningGetUserList($legacyProvisioningUserListOptionsRequest)
+    {
+        list($response) = $this->legacyProvisioningGetUserListWithHttpInfo($legacyProvisioningUserListOptionsRequest);
+        return $response;
+    }
+
+    /**
+     * Operation legacyProvisioningGetUserListWithHttpInfo
+     *
+     * List all users in an organization.
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserListOptionsRequest $legacyProvisioningUserListOptionsRequest (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningResponseGetUserListResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function legacyProvisioningGetUserListWithHttpInfo($legacyProvisioningUserListOptionsRequest)
+    {
+        $request = $this->legacyProvisioningGetUserListRequest($legacyProvisioningUserListOptionsRequest);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningResponseGetUserListResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningResponseGetUserListResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningResponseGetUserListResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningResponseGetUserListResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningResponseGetUserListResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation legacyProvisioningGetUserListAsync
+     *
+     * List all users in an organization.
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserListOptionsRequest $legacyProvisioningUserListOptionsRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningGetUserListAsync($legacyProvisioningUserListOptionsRequest)
+    {
+        return $this->legacyProvisioningGetUserListAsyncWithHttpInfo($legacyProvisioningUserListOptionsRequest)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation legacyProvisioningGetUserListAsyncWithHttpInfo
+     *
+     * List all users in an organization.
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserListOptionsRequest $legacyProvisioningUserListOptionsRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningGetUserListAsyncWithHttpInfo($legacyProvisioningUserListOptionsRequest)
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningResponseGetUserListResponse';
+        $request = $this->legacyProvisioningGetUserListRequest($legacyProvisioningUserListOptionsRequest);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'legacyProvisioningGetUserList'
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserListOptionsRequest $legacyProvisioningUserListOptionsRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function legacyProvisioningGetUserListRequest($legacyProvisioningUserListOptionsRequest)
+    {
+        // verify the required parameter 'legacyProvisioningUserListOptionsRequest' is set
+        if ($legacyProvisioningUserListOptionsRequest === null || (is_array($legacyProvisioningUserListOptionsRequest) && count($legacyProvisioningUserListOptionsRequest) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $legacyProvisioningUserListOptionsRequest when calling legacyProvisioningGetUserList'
+            );
+        }
+
+        $resourcePath = '/apps/api/kronos.provisioning.getUserList';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($legacyProvisioningUserListOptionsRequest)) {
+            if ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($legacyProvisioningUserListOptionsRequest));
+            } else {
+                $httpBody = $legacyProvisioningUserListOptionsRequest;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation legacyProvisioningGetWebuserDatabaseListByValue
+     *
+     * Get a list of webuser&#39;s databases.
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningWebuserDatabasePayloadRequest $legacyProvisioningWebuserDatabasePayloadRequest legacyProvisioningWebuserDatabasePayloadRequest (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetWebuserDatabaseListByValueResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
+     */
+    public function legacyProvisioningGetWebuserDatabaseListByValue($legacyProvisioningWebuserDatabasePayloadRequest)
+    {
+        list($response) = $this->legacyProvisioningGetWebuserDatabaseListByValueWithHttpInfo($legacyProvisioningWebuserDatabasePayloadRequest);
+        return $response;
+    }
+
+    /**
+     * Operation legacyProvisioningGetWebuserDatabaseListByValueWithHttpInfo
+     *
+     * Get a list of webuser&#39;s databases.
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningWebuserDatabasePayloadRequest $legacyProvisioningWebuserDatabasePayloadRequest (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetWebuserDatabaseListByValueResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function legacyProvisioningGetWebuserDatabaseListByValueWithHttpInfo($legacyProvisioningWebuserDatabasePayloadRequest)
+    {
+        $request = $this->legacyProvisioningGetWebuserDatabaseListByValueRequest($legacyProvisioningWebuserDatabasePayloadRequest);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetWebuserDatabaseListByValueResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetWebuserDatabaseListByValueResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetWebuserDatabaseListByValueResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetWebuserDatabaseListByValueResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetWebuserDatabaseListByValueResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation legacyProvisioningGetWebuserDatabaseListByValueAsync
+     *
+     * Get a list of webuser&#39;s databases.
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningWebuserDatabasePayloadRequest $legacyProvisioningWebuserDatabasePayloadRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningGetWebuserDatabaseListByValueAsync($legacyProvisioningWebuserDatabasePayloadRequest)
+    {
+        return $this->legacyProvisioningGetWebuserDatabaseListByValueAsyncWithHttpInfo($legacyProvisioningWebuserDatabasePayloadRequest)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation legacyProvisioningGetWebuserDatabaseListByValueAsyncWithHttpInfo
+     *
+     * Get a list of webuser&#39;s databases.
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningWebuserDatabasePayloadRequest $legacyProvisioningWebuserDatabasePayloadRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningGetWebuserDatabaseListByValueAsyncWithHttpInfo($legacyProvisioningWebuserDatabasePayloadRequest)
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetWebuserDatabaseListByValueResponse';
+        $request = $this->legacyProvisioningGetWebuserDatabaseListByValueRequest($legacyProvisioningWebuserDatabasePayloadRequest);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'legacyProvisioningGetWebuserDatabaseListByValue'
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningWebuserDatabasePayloadRequest $legacyProvisioningWebuserDatabasePayloadRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function legacyProvisioningGetWebuserDatabaseListByValueRequest($legacyProvisioningWebuserDatabasePayloadRequest)
+    {
+        // verify the required parameter 'legacyProvisioningWebuserDatabasePayloadRequest' is set
+        if ($legacyProvisioningWebuserDatabasePayloadRequest === null || (is_array($legacyProvisioningWebuserDatabasePayloadRequest) && count($legacyProvisioningWebuserDatabasePayloadRequest) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $legacyProvisioningWebuserDatabasePayloadRequest when calling legacyProvisioningGetWebuserDatabaseListByValue'
+            );
+        }
+
+        $resourcePath = '/apps/api/kronos.provisioning.getWebuserDatabaseListByValue';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($legacyProvisioningWebuserDatabasePayloadRequest)) {
+            if ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($legacyProvisioningWebuserDatabasePayloadRequest));
+            } else {
+                $httpBody = $legacyProvisioningWebuserDatabasePayloadRequest;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation legacyProvisioningMonitorDatagateways
+     *
+     * Monitor stats of the datagateways for a given environment.
+     *
+     * @param  string $environment The environment. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningMonitorDatagatewayResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
+     */
+    public function legacyProvisioningMonitorDatagateways($environment)
+    {
+        list($response) = $this->legacyProvisioningMonitorDatagatewaysWithHttpInfo($environment);
+        return $response;
+    }
+
+    /**
+     * Operation legacyProvisioningMonitorDatagatewaysWithHttpInfo
+     *
+     * Monitor stats of the datagateways for a given environment.
+     *
+     * @param  string $environment The environment. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningMonitorDatagatewayResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function legacyProvisioningMonitorDatagatewaysWithHttpInfo($environment)
+    {
+        $request = $this->legacyProvisioningMonitorDatagatewaysRequest($environment);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningMonitorDatagatewayResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningMonitorDatagatewayResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningMonitorDatagatewayResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningMonitorDatagatewayResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningMonitorDatagatewayResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation legacyProvisioningMonitorDatagatewaysAsync
+     *
+     * Monitor stats of the datagateways for a given environment.
+     *
+     * @param  string $environment The environment. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningMonitorDatagatewaysAsync($environment)
+    {
+        return $this->legacyProvisioningMonitorDatagatewaysAsyncWithHttpInfo($environment)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation legacyProvisioningMonitorDatagatewaysAsyncWithHttpInfo
+     *
+     * Monitor stats of the datagateways for a given environment.
+     *
+     * @param  string $environment The environment. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningMonitorDatagatewaysAsyncWithHttpInfo($environment)
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningMonitorDatagatewayResponse';
+        $request = $this->legacyProvisioningMonitorDatagatewaysRequest($environment);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'legacyProvisioningMonitorDatagateways'
+     *
+     * @param  string $environment The environment. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function legacyProvisioningMonitorDatagatewaysRequest($environment)
+    {
+        // verify the required parameter 'environment' is set
+        if ($environment === null || (is_array($environment) && count($environment) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $environment when calling legacyProvisioningMonitorDatagateways'
+            );
+        }
+
+        $resourcePath = '/apps/api/kronos.provisioning.monitorDatagateways';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $environment,
+            'environment', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            true // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation legacyProvisioningMoveUserToOrganization
+     *
+     * Move a user to another organization.
+     *
+     * @param  string $userId User identifier. (required)
+     * @param  string $toOrgId Unique identifier of the target organization. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningMoveUserToOrganizationResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
+     */
+    public function legacyProvisioningMoveUserToOrganization($userId, $toOrgId)
+    {
+        list($response) = $this->legacyProvisioningMoveUserToOrganizationWithHttpInfo($userId, $toOrgId);
+        return $response;
+    }
+
+    /**
+     * Operation legacyProvisioningMoveUserToOrganizationWithHttpInfo
+     *
+     * Move a user to another organization.
+     *
+     * @param  string $userId User identifier. (required)
+     * @param  string $toOrgId Unique identifier of the target organization. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningMoveUserToOrganizationResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function legacyProvisioningMoveUserToOrganizationWithHttpInfo($userId, $toOrgId)
+    {
+        $request = $this->legacyProvisioningMoveUserToOrganizationRequest($userId, $toOrgId);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningMoveUserToOrganizationResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningMoveUserToOrganizationResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningMoveUserToOrganizationResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningMoveUserToOrganizationResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningMoveUserToOrganizationResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation legacyProvisioningMoveUserToOrganizationAsync
+     *
+     * Move a user to another organization.
+     *
+     * @param  string $userId User identifier. (required)
+     * @param  string $toOrgId Unique identifier of the target organization. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningMoveUserToOrganizationAsync($userId, $toOrgId)
+    {
+        return $this->legacyProvisioningMoveUserToOrganizationAsyncWithHttpInfo($userId, $toOrgId)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation legacyProvisioningMoveUserToOrganizationAsyncWithHttpInfo
+     *
+     * Move a user to another organization.
+     *
+     * @param  string $userId User identifier. (required)
+     * @param  string $toOrgId Unique identifier of the target organization. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningMoveUserToOrganizationAsyncWithHttpInfo($userId, $toOrgId)
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningMoveUserToOrganizationResponse';
+        $request = $this->legacyProvisioningMoveUserToOrganizationRequest($userId, $toOrgId);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'legacyProvisioningMoveUserToOrganization'
+     *
+     * @param  string $userId User identifier. (required)
+     * @param  string $toOrgId Unique identifier of the target organization. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function legacyProvisioningMoveUserToOrganizationRequest($userId, $toOrgId)
+    {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $userId when calling legacyProvisioningMoveUserToOrganization'
+            );
+        }
+        // verify the required parameter 'toOrgId' is set
+        if ($toOrgId === null || (is_array($toOrgId) && count($toOrgId) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $toOrgId when calling legacyProvisioningMoveUserToOrganization'
+            );
+        }
+
+        $resourcePath = '/apps/api/kronos.provisioning.moveUserToOrganization';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $userId,
+            'userId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            true // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $toOrgId,
+            'toOrgId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            true // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation legacyProvisioningSyncControlData
+     *
+     * Sync one database pilotage.
+     *
+     * @param  string $database Database identifier. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningSyncControlDataResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
+     */
+    public function legacyProvisioningSyncControlData($database)
+    {
+        list($response) = $this->legacyProvisioningSyncControlDataWithHttpInfo($database);
+        return $response;
+    }
+
+    /**
+     * Operation legacyProvisioningSyncControlDataWithHttpInfo
+     *
+     * Sync one database pilotage.
+     *
+     * @param  string $database Database identifier. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningSyncControlDataResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function legacyProvisioningSyncControlDataWithHttpInfo($database)
+    {
+        $request = $this->legacyProvisioningSyncControlDataRequest($database);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningSyncControlDataResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningSyncControlDataResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningSyncControlDataResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningSyncControlDataResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningSyncControlDataResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation legacyProvisioningSyncControlDataAsync
+     *
+     * Sync one database pilotage.
+     *
+     * @param  string $database Database identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningSyncControlDataAsync($database)
+    {
+        return $this->legacyProvisioningSyncControlDataAsyncWithHttpInfo($database)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation legacyProvisioningSyncControlDataAsyncWithHttpInfo
+     *
+     * Sync one database pilotage.
+     *
+     * @param  string $database Database identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningSyncControlDataAsyncWithHttpInfo($database)
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningSyncControlDataResponse';
+        $request = $this->legacyProvisioningSyncControlDataRequest($database);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'legacyProvisioningSyncControlData'
+     *
+     * @param  string $database Database identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function legacyProvisioningSyncControlDataRequest($database)
+    {
+        // verify the required parameter 'database' is set
+        if ($database === null || (is_array($database) && count($database) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $database when calling legacyProvisioningSyncControlData'
+            );
+        }
+
+        $resourcePath = '/apps/api/kronos.provisioning.syncControlData';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $database,
+            'database', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            true // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation legacyProvisioningSyncControlDataForAllDatabase
+     *
+     * Use gearman to sync all database for a given profile.
+     *
+     * @param  string $profile Profile identifier. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningSyncControlDataForAllDatabaseResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
+     */
+    public function legacyProvisioningSyncControlDataForAllDatabase($profile)
+    {
+        list($response) = $this->legacyProvisioningSyncControlDataForAllDatabaseWithHttpInfo($profile);
+        return $response;
+    }
+
+    /**
+     * Operation legacyProvisioningSyncControlDataForAllDatabaseWithHttpInfo
+     *
+     * Use gearman to sync all database for a given profile.
+     *
+     * @param  string $profile Profile identifier. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningSyncControlDataForAllDatabaseResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function legacyProvisioningSyncControlDataForAllDatabaseWithHttpInfo($profile)
+    {
+        $request = $this->legacyProvisioningSyncControlDataForAllDatabaseRequest($profile);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningSyncControlDataForAllDatabaseResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningSyncControlDataForAllDatabaseResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningSyncControlDataForAllDatabaseResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningSyncControlDataForAllDatabaseResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningSyncControlDataForAllDatabaseResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation legacyProvisioningSyncControlDataForAllDatabaseAsync
+     *
+     * Use gearman to sync all database for a given profile.
+     *
+     * @param  string $profile Profile identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningSyncControlDataForAllDatabaseAsync($profile)
+    {
+        return $this->legacyProvisioningSyncControlDataForAllDatabaseAsyncWithHttpInfo($profile)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation legacyProvisioningSyncControlDataForAllDatabaseAsyncWithHttpInfo
+     *
+     * Use gearman to sync all database for a given profile.
+     *
+     * @param  string $profile Profile identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningSyncControlDataForAllDatabaseAsyncWithHttpInfo($profile)
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningSyncControlDataForAllDatabaseResponse';
+        $request = $this->legacyProvisioningSyncControlDataForAllDatabaseRequest($profile);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'legacyProvisioningSyncControlDataForAllDatabase'
+     *
+     * @param  string $profile Profile identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function legacyProvisioningSyncControlDataForAllDatabaseRequest($profile)
+    {
+        // verify the required parameter 'profile' is set
+        if ($profile === null || (is_array($profile) && count($profile) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $profile when calling legacyProvisioningSyncControlDataForAllDatabase'
+            );
+        }
+
+        $resourcePath = '/apps/api/kronos.provisioning.syncControlDataForAllDatabase';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $profile,
+            'profile', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            true // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation legacyProvisioningUnlockUser
+     *
+     * Unlock a user.
+     *
+     * @param  string $userId User identifier. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
+     */
+    public function legacyProvisioningUnlockUser($userId)
+    {
+        list($response) = $this->legacyProvisioningUnlockUserWithHttpInfo($userId);
+        return $response;
+    }
+
+    /**
+     * Operation legacyProvisioningUnlockUserWithHttpInfo
+     *
+     * Unlock a user.
+     *
+     * @param  string $userId User identifier. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function legacyProvisioningUnlockUserWithHttpInfo($userId)
+    {
+        $request = $this->legacyProvisioningUnlockUserRequest($userId);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation legacyProvisioningUnlockUserAsync
+     *
+     * Unlock a user.
+     *
+     * @param  string $userId User identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningUnlockUserAsync($userId)
+    {
+        return $this->legacyProvisioningUnlockUserAsyncWithHttpInfo($userId)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation legacyProvisioningUnlockUserAsyncWithHttpInfo
+     *
+     * Unlock a user.
+     *
+     * @param  string $userId User identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningUnlockUserAsyncWithHttpInfo($userId)
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse';
+        $request = $this->legacyProvisioningUnlockUserRequest($userId);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'legacyProvisioningUnlockUser'
+     *
+     * @param  string $userId User identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function legacyProvisioningUnlockUserRequest($userId)
+    {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $userId when calling legacyProvisioningUnlockUser'
+            );
+        }
+
+        $resourcePath = '/apps/api/kronos.provisioning.unlockUser';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $userId,
+            'userId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            true // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation legacyProvisioningUpdateUser
+     *
+     * Update a user.
+     *
+     * @param  string $userId User identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserPayloadRequest $legacyProvisioningUserPayloadRequest legacyProvisioningUserPayloadRequest (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningAddUpdateUserResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
+     */
+    public function legacyProvisioningUpdateUser($userId, $legacyProvisioningUserPayloadRequest)
+    {
+        list($response) = $this->legacyProvisioningUpdateUserWithHttpInfo($userId, $legacyProvisioningUserPayloadRequest);
+        return $response;
+    }
+
+    /**
+     * Operation legacyProvisioningUpdateUserWithHttpInfo
+     *
+     * Update a user.
+     *
+     * @param  string $userId User identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserPayloadRequest $legacyProvisioningUserPayloadRequest (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningAddUpdateUserResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function legacyProvisioningUpdateUserWithHttpInfo($userId, $legacyProvisioningUserPayloadRequest)
+    {
+        $request = $this->legacyProvisioningUpdateUserRequest($userId, $legacyProvisioningUserPayloadRequest);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningAddUpdateUserResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningAddUpdateUserResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningAddUpdateUserResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 400:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningAddUpdateUserResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningAddUpdateUserResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation legacyProvisioningUpdateUserAsync
+     *
+     * Update a user.
+     *
+     * @param  string $userId User identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserPayloadRequest $legacyProvisioningUserPayloadRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningUpdateUserAsync($userId, $legacyProvisioningUserPayloadRequest)
+    {
+        return $this->legacyProvisioningUpdateUserAsyncWithHttpInfo($userId, $legacyProvisioningUserPayloadRequest)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation legacyProvisioningUpdateUserAsyncWithHttpInfo
+     *
+     * Update a user.
+     *
+     * @param  string $userId User identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserPayloadRequest $legacyProvisioningUserPayloadRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function legacyProvisioningUpdateUserAsyncWithHttpInfo($userId, $legacyProvisioningUserPayloadRequest)
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningAddUpdateUserResponse';
+        $request = $this->legacyProvisioningUpdateUserRequest($userId, $legacyProvisioningUserPayloadRequest);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'legacyProvisioningUpdateUser'
+     *
+     * @param  string $userId User identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserPayloadRequest $legacyProvisioningUserPayloadRequest (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function legacyProvisioningUpdateUserRequest($userId, $legacyProvisioningUserPayloadRequest)
+    {
+        // verify the required parameter 'userId' is set
+        if ($userId === null || (is_array($userId) && count($userId) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $userId when calling legacyProvisioningUpdateUser'
+            );
+        }
+        // verify the required parameter 'legacyProvisioningUserPayloadRequest' is set
+        if ($legacyProvisioningUserPayloadRequest === null || (is_array($legacyProvisioningUserPayloadRequest) && count($legacyProvisioningUserPayloadRequest) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $legacyProvisioningUserPayloadRequest when calling legacyProvisioningUpdateUser'
+            );
+        }
+
+        $resourcePath = '/apps/api/kronos.provisioning.updateUser';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $userId,
+            'userId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            true // required
+        ) ?? []);
+
+
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($legacyProvisioningUserPayloadRequest)) {
+            if ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($legacyProvisioningUserPayloadRequest));
+            } else {
+                $httpBody = $legacyProvisioningUserPayloadRequest;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody

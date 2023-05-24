@@ -246,7 +246,7 @@ class LegacyFinancePlanBeneficiary implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets name
      *
-     * @param string|null $name name
+     * @param string|null $name Name.
      *
      * @return self
      */
@@ -270,7 +270,7 @@ class LegacyFinancePlanBeneficiary implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets heirAtLaw
      *
-     * @param string|null $heirAtLaw heirAtLaw
+     * @param string|null $heirAtLaw Heir at law.
      *
      * @return self
      */
@@ -294,7 +294,7 @@ class LegacyFinancePlanBeneficiary implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets familyConnection
      *
-     * @param string|null $familyConnection familyConnection
+     * @param string|null $familyConnection Family connection.
      *
      * @return self
      */
@@ -318,7 +318,7 @@ class LegacyFinancePlanBeneficiary implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets percentage
      *
-     * @param string|null $percentage percentage
+     * @param string|null $percentage Percentage.
      *
      * @return self
      */
@@ -342,7 +342,7 @@ class LegacyFinancePlanBeneficiary implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets revocable
      *
-     * @param string|null $revocable revocable
+     * @param string|null $revocable Revocable.
      *
      * @return self
      */
@@ -366,7 +366,7 @@ class LegacyFinancePlanBeneficiary implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets notes
      *
-     * @param string|null $notes notes
+     * @param string|null $notes Notes.
      *
      * @return self
      */

@@ -318,7 +318,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess,
     /**
      * Sets orgId
      *
-     * @param string|null $orgId Unique identifier for the organization
+     * @param string|null $orgId Unique identifier for the organization.
      *
      * @return self
      */
@@ -342,7 +342,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess,
     /**
      * Sets displayName
      *
-     * @param string|null $displayName Organization Name
+     * @param string|null $displayName Organization name.
      *
      * @return self
      */
@@ -366,7 +366,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess,
     /**
      * Sets status
      *
-     * @param string|null $status Organization status In creation, Active, Maintenance
+     * @param string|null $status Organization status. In creation, Active, Maintenance.
      *
      * @return self
      */
@@ -381,6 +381,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess,
      * Gets diskUsageQuota
      *
      * @return string|null
+     * @deprecated
      */
     public function getDiskUsageQuota()
     {
@@ -393,6 +394,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess,
      * @param string|null $diskUsageQuota Organization disk usage quota. Deprecated. Always empty.
      *
      * @return self
+     * @deprecated
      */
     public function setDiskUsageQuota($diskUsageQuota)
     {
@@ -414,7 +416,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess,
     /**
      * Sets lang
      *
-     * @param string|null $lang Default language
+     * @param string|null $lang Default language.
      *
      * @return self
      */
@@ -438,7 +440,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess,
     /**
      * Sets mainPhone
      *
-     * @param string|null $mainPhone Organization main phone number
+     * @param string|null $mainPhone Organization main phone number.
      *
      * @return self
      */
@@ -462,7 +464,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess,
     /**
      * Sets tollFree
      *
-     * @param string|null $tollFree Organization tollFree phone number
+     * @param string|null $tollFree Organization tollFree phone number.
      *
      * @return self
      */
@@ -486,7 +488,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess,
     /**
      * Sets fax
      *
-     * @param string|null $fax Organization fax phone number
+     * @param string|null $fax Organization fax phone number.
      *
      * @return self
      */
@@ -510,7 +512,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess,
     /**
      * Sets address
      *
-     * @param string|null $address Organization address first line
+     * @param string|null $address Organization address first line.
      *
      * @return self
      */
@@ -534,7 +536,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess,
     /**
      * Sets addressLine2
      *
-     * @param string|null $addressLine2 Organization address second line
+     * @param string|null $addressLine2 Organization address second line.
      *
      * @return self
      */
@@ -558,7 +560,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess,
     /**
      * Sets addressCity
      *
-     * @param string|null $addressCity Organization address city
+     * @param string|null $addressCity Organization address city.
      *
      * @return self
      */
@@ -582,7 +584,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess,
     /**
      * Sets addressState
      *
-     * @param string|null $addressState Organization address state/province
+     * @param string|null $addressState Organization address state/province.
      *
      * @return self
      */
@@ -606,7 +608,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess,
     /**
      * Sets addressPostalCode
      *
-     * @param string|null $addressPostalCode Organization address postal code
+     * @param string|null $addressPostalCode Organization address postal code.
      *
      * @return self
      */
@@ -630,7 +632,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess,
     /**
      * Sets addressCountry
      *
-     * @param string|null $addressCountry Organization address country
+     * @param string|null $addressCountry Organization address country.
      *
      * @return self
      */
@@ -654,7 +656,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess,
     /**
      * Sets webSite
      *
-     * @param string|null $webSite Organization website url
+     * @param string|null $webSite Organization website url.
      *
      * @return self
      */
@@ -678,7 +680,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess,
     /**
      * Sets isMultiUser
      *
-     * @param string|null $isMultiUser Is the organization in single user mode or mutil user mode
+     * @param string|null $isMultiUser Is the organization in single user mode or multi user mode.
      *
      * @return self
      */
@@ -702,7 +704,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess,
     /**
      * Sets fnaStatus
      *
-     * @param string|null $fnaStatus Is FNA enabled for the organization
+     * @param string|null $fnaStatus Is FNA enabled for the organization.
      *
      * @return self
      */
@@ -726,7 +728,7 @@ class LegacyProvisioningOrganizationItem implements ModelInterface, ArrayAccess,
     /**
      * Sets users
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserItem[]|null $users Organization users
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserItem[]|null $users Organization users.
      *
      * @return self
      */
