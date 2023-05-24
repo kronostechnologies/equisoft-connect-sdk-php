@@ -72,96 +72,96 @@ class LegacyDocumentApiTest extends TestCase
     }
 
     /**
-     * Test case for legacyDocumentAddDocument
+     * Test case for addDocument
      *
      * Create a new document..
      *
      */
-    public function testLegacyDocumentAddDocument()
+    public function testAddDocument()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for legacyDocumentDeleteDocument
+     * Test case for deleteDocument
      *
      * Delete a document and it's related files..
      *
      */
-    public function testLegacyDocumentDeleteDocument()
+    public function testDeleteDocument()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for legacyDocumentDeleteDocumentFile
+     * Test case for deleteDocumentFile
      *
      * Delete one file from a document..
      *
      */
-    public function testLegacyDocumentDeleteDocumentFile()
+    public function testDeleteDocumentFile()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for legacyDocumentDownloadDocumentFile
+     * Test case for downloadDocumentFile
      *
      * Download a file. File data is encoded in base64..
      *
      */
-    public function testLegacyDocumentDownloadDocumentFile()
+    public function testDownloadDocumentFile()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for legacyDocumentGetDocument
+     * Test case for getDocument
      *
      * Get all data for a document record..
      *
      */
-    public function testLegacyDocumentGetDocument()
+    public function testGetDocument()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for legacyDocumentGetDocumentList
+     * Test case for getDocumentList
      *
      * Get a list of all documents..
      *
      */
-    public function testLegacyDocumentGetDocumentList()
+    public function testGetDocumentList()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for legacyDocumentUpdateDocument
+     * Test case for updateDocument
      *
      * Update a document..
      *
      */
-    public function testLegacyDocumentUpdateDocument()
+    public function testUpdateDocument()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for legacyDocumentUploadDocumentFile
+     * Test case for uploadDocumentFile
      *
      * Upload a new file in a document..
      *
      */
-    public function testLegacyDocumentUploadDocumentFile()
+    public function testUploadDocumentFile()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

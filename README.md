@@ -127,65 +127,18 @@ Class | Method | HTTP request | Description
 *GatewaysApi* | [**updateCredentials**](docs/Api/GatewaysApi.md#updatecredentials) | **PUT** /crm/api/v1/gateways/credentials-validation/{gatewayId}/credentials/{status} | 
 *IntegrationsApi* | [**downloadLaserAppEnterpriseContactData**](docs/Api/IntegrationsApi.md#downloadlaserappenterprisecontactdata) | **GET** /crm/api/app/integrations/laserapp/enterprise/{contactId} | Download contact data for LaserApp Enterprise.
 *IntegrationsApi* | [**redirectContactToLaserAppAnywhere**](docs/Api/IntegrationsApi.md#redirectcontacttolaserappanywhere) | **GET** /crm/api/app/integrations/laserapp/anywhere/{contactId} | Redirect contact to LaserApp Anywhere.
-*LegacyContactApi* | [**legacyContactAddContact**](docs/Api/LegacyContactApi.md#legacycontactaddcontact) | **POST** /apps/api/kronos.contact.add | Create a new contact.
-*LegacyContactApi* | [**legacyContactDeleteContact**](docs/Api/LegacyContactApi.md#legacycontactdeletecontact) | **POST** /apps/api/kronos.contact.delete | Delete a contact.
-*LegacyContactApi* | [**legacyContactGetContact**](docs/Api/LegacyContactApi.md#legacycontactgetcontact) | **GET** /apps/api/kronos.contact.get | Get complete record for a contact.
-*LegacyContactApi* | [**legacyContactGetContactAccessRights**](docs/Api/LegacyContactApi.md#legacycontactgetcontactaccessrights) | **GET** /apps/api/kronos.contact.getAccessRights | Get access rights for a contact.
-*LegacyContactApi* | [**legacyContactGetContactAccessRightsByExternalId**](docs/Api/LegacyContactApi.md#legacycontactgetcontactaccessrightsbyexternalid) | **GET** /apps/api/kronos.contact.getAccessRightsByExternalId | Get access rights for a contact using external id.
-*LegacyContactApi* | [**legacyContactGetContactList**](docs/Api/LegacyContactApi.md#legacycontactgetcontactlist) | **GET** /apps/api/kronos.contact.getList | Get a list of all contacts.
-*LegacyContactApi* | [**legacyContactGetDatagatewayUniverisContact**](docs/Api/LegacyContactApi.md#legacycontactgetdatagatewayuniveriscontact) | **GET** /apps/api/kronos.contact.getDatagatewayUniverisContact | Get access rights for a contact using external key.
-*LegacyContactApi* | [**legacyContactPatchContact**](docs/Api/LegacyContactApi.md#legacycontactpatchcontact) | **POST** /apps/api/kronos.contact.patchContact | Patch a contact.
-*LegacyContactApi* | [**legacyContactUpdateContact**](docs/Api/LegacyContactApi.md#legacycontactupdatecontact) | **POST** /apps/api/kronos.contact.update | Update a contact.
-*LegacyDocumentApi* | [**legacyDocumentAddDocument**](docs/Api/LegacyDocumentApi.md#legacydocumentadddocument) | **POST** /apps/api/kronos.document.add | Create a new document.
-*LegacyDocumentApi* | [**legacyDocumentDeleteDocument**](docs/Api/LegacyDocumentApi.md#legacydocumentdeletedocument) | **POST** /apps/api/kronos.document.delete | Delete a document and it&#39;s related files.
-*LegacyDocumentApi* | [**legacyDocumentDeleteDocumentFile**](docs/Api/LegacyDocumentApi.md#legacydocumentdeletedocumentfile) | **POST** /apps/api/kronos.document.deleteFile | Delete one file from a document.
-*LegacyDocumentApi* | [**legacyDocumentDownloadDocumentFile**](docs/Api/LegacyDocumentApi.md#legacydocumentdownloaddocumentfile) | **GET** /apps/api/kronos.document.downloadFile | Download a file. File data is encoded in base64.
-*LegacyDocumentApi* | [**legacyDocumentGetDocument**](docs/Api/LegacyDocumentApi.md#legacydocumentgetdocument) | **GET** /apps/api/kronos.document.get | Get all data for a document record.
-*LegacyDocumentApi* | [**legacyDocumentGetDocumentList**](docs/Api/LegacyDocumentApi.md#legacydocumentgetdocumentlist) | **GET** /apps/api/kronos.document.getList | Get a list of all documents.
-*LegacyDocumentApi* | [**legacyDocumentUpdateDocument**](docs/Api/LegacyDocumentApi.md#legacydocumentupdatedocument) | **POST** /apps/api/kronos.document.update | Update a document.
-*LegacyDocumentApi* | [**legacyDocumentUploadDocumentFile**](docs/Api/LegacyDocumentApi.md#legacydocumentuploaddocumentfile) | **POST** /apps/api/kronos.document.uploadFile | Upload a new file in a document.
-*LegacyFieldValuesApi* | [**legacyFieldValuesGet**](docs/Api/LegacyFieldValuesApi.md#legacyfieldvaluesget) | **GET** /apps/api/kronos.fieldValues.get | Return a list of all available field values item.
-*LegacyFieldValuesApi* | [**legacyFieldValuesGetList**](docs/Api/LegacyFieldValuesApi.md#legacyfieldvaluesgetlist) | **GET** /apps/api/kronos.fieldValues.getList | Return a list of field values.
-*LegacyFinanceApi* | [**legacyFinanceAddContact**](docs/Api/LegacyFinanceApi.md#legacyfinanceaddcontact) | **POST** /apps/api/kronos.finance.addContact | Create a new contact.
-*LegacyFinanceApi* | [**legacyFinanceGetAccountStatement**](docs/Api/LegacyFinanceApi.md#legacyfinancegetaccountstatement) | **GET** /apps/api/kronos.finance.getAccountStatement | Get Account Statement information for a contact.
-*LegacyFinanceApi* | [**legacyFinanceGetAccountStatementByExternalId**](docs/Api/LegacyFinanceApi.md#legacyfinancegetaccountstatementbyexternalid) | **GET** /apps/api/kronos.finance.getAccountStatementByExternalId | Get Account Statement information for a contact.
-*LegacyFinanceApi* | [**legacyFinanceGetAssetDetail**](docs/Api/LegacyFinanceApi.md#legacyfinancegetassetdetail) | **GET** /apps/api/kronos.finance.getAssetDetail | Get asset detail with transactions.
-*LegacyFinanceApi* | [**legacyFinanceGetContact**](docs/Api/LegacyFinanceApi.md#legacyfinancegetcontact) | **GET** /apps/api/kronos.finance.getContact | Get complete data for a contact.
-*LegacyFinanceApi* | [**legacyFinanceGetContactList**](docs/Api/LegacyFinanceApi.md#legacyfinancegetcontactlist) | **GET** /apps/api/kronos.finance.getContactList | Get a list of all contacts.
-*LegacyFinanceApi* | [**legacyFinanceGetLiabilities**](docs/Api/LegacyFinanceApi.md#legacyfinancegetliabilities) | **GET** /apps/api/kronos.finance.getLiabilities | Get Liabilities information for a contact.
-*LegacyFinanceApi* | [**legacyFinanceUpdateContact**](docs/Api/LegacyFinanceApi.md#legacyfinanceupdatecontact) | **POST** /apps/api/kronos.finance.updateContact | Update a contact.
-*LegacyParametersApi* | [**legacyParametersGet**](docs/Api/LegacyParametersApi.md#legacyparametersget) | **GET** /apps/api/kronos.parameters.get | Get the system parameters.
-*LegacyProvisioningApi* | [**legacyProvisioningActivateFnaForOrganization**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningactivatefnafororganization) | **POST** /apps/api/kronos.provisioning.activateFnaForOrganization | Activate FNA for an organization.
-*LegacyProvisioningApi* | [**legacyProvisioningActivateUser**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningactivateuser) | **POST** /apps/api/kronos.provisioning.activateUser | Activate a user.
-*LegacyProvisioningApi* | [**legacyProvisioningAddOrganization**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningaddorganization) | **POST** /apps/api/kronos.provisioning.addOrganization | Add a new organization.
-*LegacyProvisioningApi* | [**legacyProvisioningAddUser**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningadduser) | **POST** /apps/api/kronos.provisioning.addUser | Add a new user.
-*LegacyProvisioningApi* | [**legacyProvisioningChangeDatabaseProfile**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningchangedatabaseprofile) | **POST** /apps/api/kronos.provisioning.changeDatabaseProfile | Change database profile.
-*LegacyProvisioningApi* | [**legacyProvisioningClearCache**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningclearcache) | **POST** /apps/api/kronos.provisioning.clearCache | Clear cache.
-*LegacyProvisioningApi* | [**legacyProvisioningCloseUserSession**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningcloseusersession) | **POST** /apps/api/kronos.provisioning.closeUserSession | Close all sessions open for a user.
-*LegacyProvisioningApi* | [**legacyProvisioningDeactivateUser**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningdeactivateuser) | **POST** /apps/api/kronos.provisioning.deactivateUser | Deactivate a user.
-*LegacyProvisioningApi* | [**legacyProvisioningDeleteOrganization**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningdeleteorganization) | **POST** /apps/api/kronos.provisioning.deleteOrganization | Delete an organization.
-*LegacyProvisioningApi* | [**legacyProvisioningDeleteUser**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningdeleteuser) | **POST** /apps/api/kronos.provisioning.deleteUser | Delete a user.
-*LegacyProvisioningApi* | [**legacyProvisioningEnableContactPersonalizedFieldsModule**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningenablecontactpersonalizedfieldsmodule) | **POST** /apps/api/kronos.provisioning.enableContactPersonalizedFieldsModule | Enable Contact Personalized Fields module for a database.
-*LegacyProvisioningApi* | [**legacyProvisioningEnableFnaForUser**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningenablefnaforuser) | **POST** /apps/api/kronos.provisioning.enableFnaForUser | Enable FNA for user.
-*LegacyProvisioningApi* | [**legacyProvisioningGetCrmGatewaysAccessReport**](docs/Api/LegacyProvisioningApi.md#legacyprovisioninggetcrmgatewaysaccessreport) | **GET** /apps/api/kronos.provisioning.getCrmGatewaysAccessReport | Get a report of active accesses for all CRM datagateways.
-*LegacyProvisioningApi* | [**legacyProvisioningGetFFGatewaysAccessReport**](docs/Api/LegacyProvisioningApi.md#legacyprovisioninggetffgatewaysaccessreport) | **GET** /apps/api/kronos.provisioning.getFFGatewaysAccessReport | Get a report of active accesses for all FF datagateways.
-*LegacyProvisioningApi* | [**legacyProvisioningGetGatewayArchiveByDate**](docs/Api/LegacyProvisioningApi.md#legacyprovisioninggetgatewayarchivebydate) | **GET** /apps/api/kronos.provisioning.getGatewayArchiveByDate | Get the archives for a given gateway at the given date.
-*LegacyProvisioningApi* | [**legacyProvisioningGetGatewayArchiveListByDate**](docs/Api/LegacyProvisioningApi.md#legacyprovisioninggetgatewayarchivelistbydate) | **GET** /apps/api/kronos.provisioning.getGatewayArchiveListByDate | Get the archives list for a given gateway at the given date.
-*LegacyProvisioningApi* | [**legacyProvisioningGetLoginLog**](docs/Api/LegacyProvisioningApi.md#legacyprovisioninggetloginlog) | **GET** /apps/api/kronos.provisioning.getLoginLog | Get the login log based on given options.
-*LegacyProvisioningApi* | [**legacyProvisioningGetMoveUserToOrganizationStatus**](docs/Api/LegacyProvisioningApi.md#legacyprovisioninggetmoveusertoorganizationstatus) | **GET** /apps/api/kronos.provisioning.getMoveUserToOrganizationStatus | Get the progression status of a previous call to moveUserToOrganization.
-*LegacyProvisioningApi* | [**legacyProvisioningGetOrganization**](docs/Api/LegacyProvisioningApi.md#legacyprovisioninggetorganization) | **GET** /apps/api/kronos.provisioning.getOrganization | Get all informations about an organization.
-*LegacyProvisioningApi* | [**legacyProvisioningGetOrganizationList**](docs/Api/LegacyProvisioningApi.md#legacyprovisioninggetorganizationlist) | **GET** /apps/api/kronos.provisioning.getOrganizationList | List all organizations.
-*LegacyProvisioningApi* | [**legacyProvisioningGetOrganizationStatus**](docs/Api/LegacyProvisioningApi.md#legacyprovisioninggetorganizationstatus) | **POST** /apps/api/kronos.provisioning.getOrganizationStatus | Return the state of a given database.
-*LegacyProvisioningApi* | [**legacyProvisioningGetSyncControlDataForAllDatabaseStatus**](docs/Api/LegacyProvisioningApi.md#legacyprovisioninggetsynccontroldataforalldatabasestatus) | **GET** /apps/api/kronos.provisioning.getSyncControlDataForAllDatabaseStatus | Get the progression status of a previous call to moveUserToOrganization.
-*LegacyProvisioningApi* | [**legacyProvisioningGetUser**](docs/Api/LegacyProvisioningApi.md#legacyprovisioninggetuser) | **GET** /apps/api/kronos.provisioning.getUser | Get all informations about a user.
-*LegacyProvisioningApi* | [**legacyProvisioningGetUserList**](docs/Api/LegacyProvisioningApi.md#legacyprovisioninggetuserlist) | **GET** /apps/api/kronos.provisioning.getUserList | List all users in an organization.
-*LegacyProvisioningApi* | [**legacyProvisioningGetWebuserDatabaseListByValue**](docs/Api/LegacyProvisioningApi.md#legacyprovisioninggetwebuserdatabaselistbyvalue) | **GET** /apps/api/kronos.provisioning.getWebuserDatabaseListByValue | Get a list of webuser&#39;s databases.
-*LegacyProvisioningApi* | [**legacyProvisioningMonitorDatagateways**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningmonitordatagateways) | **GET** /apps/api/kronos.provisioning.monitorDatagateways | Monitor stats of the datagateways for a given environment.
-*LegacyProvisioningApi* | [**legacyProvisioningMoveUserToOrganization**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningmoveusertoorganization) | **POST** /apps/api/kronos.provisioning.moveUserToOrganization | Move a user to another organization.
-*LegacyProvisioningApi* | [**legacyProvisioningSyncControlData**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningsynccontroldata) | **POST** /apps/api/kronos.provisioning.syncControlData | Sync one database pilotage.
-*LegacyProvisioningApi* | [**legacyProvisioningSyncControlDataForAllDatabase**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningsynccontroldataforalldatabase) | **POST** /apps/api/kronos.provisioning.syncControlDataForAllDatabase | Use gearman to sync all database for a given profile.
-*LegacyProvisioningApi* | [**legacyProvisioningUnlockUser**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningunlockuser) | **POST** /apps/api/kronos.provisioning.unlockUser | Unlock a user.
-*LegacyProvisioningApi* | [**legacyProvisioningUpdateUser**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningupdateuser) | **POST** /apps/api/kronos.provisioning.updateUser | Update a user.
+*LegacyDocumentApi* | [**addDocument**](docs/Api/LegacyDocumentApi.md#adddocument) | **POST** /apps/api/kronos.document.add | Create a new document.
+*LegacyDocumentApi* | [**deleteDocument**](docs/Api/LegacyDocumentApi.md#deletedocument) | **POST** /apps/api/kronos.document.delete | Delete a document and it&#39;s related files.
+*LegacyDocumentApi* | [**deleteDocumentFile**](docs/Api/LegacyDocumentApi.md#deletedocumentfile) | **POST** /apps/api/kronos.document.deleteFile | Delete one file from a document.
+*LegacyDocumentApi* | [**downloadDocumentFile**](docs/Api/LegacyDocumentApi.md#downloaddocumentfile) | **GET** /apps/api/kronos.document.downloadFile | Download a file. File data is encoded in base64.
+*LegacyDocumentApi* | [**getDocument**](docs/Api/LegacyDocumentApi.md#getdocument) | **GET** /apps/api/kronos.document.get | Get all data for a document record.
+*LegacyDocumentApi* | [**getDocumentList**](docs/Api/LegacyDocumentApi.md#getdocumentlist) | **GET** /apps/api/kronos.document.getList | Get a list of all documents.
+*LegacyDocumentApi* | [**updateDocument**](docs/Api/LegacyDocumentApi.md#updatedocument) | **POST** /apps/api/kronos.document.update | Update a document.
+*LegacyDocumentApi* | [**uploadDocumentFile**](docs/Api/LegacyDocumentApi.md#uploaddocumentfile) | **POST** /apps/api/kronos.document.uploadFile | Upload a new file in a document.
+*LegacyFinanceApi* | [**getAccountStatement**](docs/Api/LegacyFinanceApi.md#getaccountstatement) | **GET** /apps/api/kronos.finance.getAccountStatement | Get Account Statement information for a contact.
+*LegacyFinanceApi* | [**getLiabilities**](docs/Api/LegacyFinanceApi.md#getliabilities) | **GET** /apps/api/kronos.finance.getLiabilities | Get Liabilities information for a contact.
+*LegacyProvisioningApi* | [**getOrganization**](docs/Api/LegacyProvisioningApi.md#getorganization) | **GET** /apps/provisioning/kronos.provisioning.getOrganization | Get all informations about an organization.
+*LegacyProvisioningApi* | [**getOrganizationList**](docs/Api/LegacyProvisioningApi.md#getorganizationlist) | **GET** /apps/provisioning/kronos.provisioning.getOrganizationList | List all organizations
 *MovementApi* | [**addMovement**](docs/Api/MovementApi.md#addmovement) | **POST** /crm/api/v1/movements | Add a movement
 *MovementApi* | [**cancelMovement**](docs/Api/MovementApi.md#cancelmovement) | **POST** /crm/api/v1/movements/{movementId}/cancel | Cancel a movement.
 *MovementApi* | [**deleteMovement**](docs/Api/MovementApi.md#deletemovement) | **DELETE** /crm/api/v1/movements/{movementId} | Delete a movement.
@@ -303,25 +256,6 @@ Class | Method | HTTP request | Description
 - [InternalNotesNoteRevisionType](docs/Model/InternalNotesNoteRevisionType.md)
 - [InternalNotesPatchNotePayload](docs/Model/InternalNotesPatchNotePayload.md)
 - [InternalNotesPatchNoteResponse](docs/Model/InternalNotesPatchNoteResponse.md)
-- [KronosFieldValuesFieldValuesGet](docs/Model/KronosFieldValuesFieldValuesGet.md)
-- [KronosFieldValuesFieldValuesGetAllOf](docs/Model/KronosFieldValuesFieldValuesGetAllOf.md)
-- [KronosFieldValuesValue](docs/Model/KronosFieldValuesValue.md)
-- [KronosFinanceAssetDetail](docs/Model/KronosFinanceAssetDetail.md)
-- [KronosFinanceAssetDetailAllOf](docs/Model/KronosFinanceAssetDetailAllOf.md)
-- [KronosFinanceContactListItem](docs/Model/KronosFinanceContactListItem.md)
-- [KronosFinanceContactListItemAllOf](docs/Model/KronosFinanceContactListItemAllOf.md)
-- [KronosFinanceContactPayload](docs/Model/KronosFinanceContactPayload.md)
-- [KronosFinanceContactPayloadItem](docs/Model/KronosFinanceContactPayloadItem.md)
-- [KronosFinanceContactPayloadItemAllOf](docs/Model/KronosFinanceContactPayloadItemAllOf.md)
-- [KronosFinanceContactPayloadRequest](docs/Model/KronosFinanceContactPayloadRequest.md)
-- [KronosFinanceGeneralInsurance](docs/Model/KronosFinanceGeneralInsurance.md)
-- [KronosFinanceGetContactItem](docs/Model/KronosFinanceGetContactItem.md)
-- [KronosFinanceGetContactItemAllOf](docs/Model/KronosFinanceGetContactItemAllOf.md)
-- [KronosFinanceGetContactList](docs/Model/KronosFinanceGetContactList.md)
-- [KronosFinanceGetContactListAllOf](docs/Model/KronosFinanceGetContactListAllOf.md)
-- [KronosFinanceGetContactResponse](docs/Model/KronosFinanceGetContactResponse.md)
-- [KronosFinanceGetContactResponseAllOf](docs/Model/KronosFinanceGetContactResponseAllOf.md)
-- [KronosFinanceJob](docs/Model/KronosFinanceJob.md)
 - [LaserAppLaserAppAnywhereError](docs/Model/LaserAppLaserAppAnywhereError.md)
 - [LaserAppLaserAppAnywhereResponse](docs/Model/LaserAppLaserAppAnywhereResponse.md)
 - [LegacyAddUpdateItem](docs/Model/LegacyAddUpdateItem.md)
@@ -329,44 +263,12 @@ Class | Method | HTTP request | Description
 - [LegacyAddUpdateResponseAllOf](docs/Model/LegacyAddUpdateResponseAllOf.md)
 - [LegacyContactAddress](docs/Model/LegacyContactAddress.md)
 - [LegacyContactContact](docs/Model/LegacyContactContact.md)
-- [LegacyContactContactGetItem](docs/Model/LegacyContactContactGetItem.md)
-- [LegacyContactContactGetItemAllOf](docs/Model/LegacyContactContactGetItemAllOf.md)
-- [LegacyContactContactGetListPayloadRequest](docs/Model/LegacyContactContactGetListPayloadRequest.md)
-- [LegacyContactContactLink](docs/Model/LegacyContactContactLink.md)
-- [LegacyContactContactLinkParticipant](docs/Model/LegacyContactContactLinkParticipant.md)
-- [LegacyContactContactLinkParticipantAllOf](docs/Model/LegacyContactContactLinkParticipantAllOf.md)
-- [LegacyContactContactListItem](docs/Model/LegacyContactContactListItem.md)
-- [LegacyContactContactListItemAllOf](docs/Model/LegacyContactContactListItemAllOf.md)
-- [LegacyContactContactPayload](docs/Model/LegacyContactContactPayload.md)
 - [LegacyContactContactPayloadItem](docs/Model/LegacyContactContactPayloadItem.md)
 - [LegacyContactContactPayloadItemAllOf](docs/Model/LegacyContactContactPayloadItemAllOf.md)
-- [LegacyContactContactPayloadRequest](docs/Model/LegacyContactContactPayloadRequest.md)
-- [LegacyContactEmail](docs/Model/LegacyContactEmail.md)
-- [LegacyContactGetAccessRightsResponse](docs/Model/LegacyContactGetAccessRightsResponse.md)
-- [LegacyContactGetAccessRightsResponseAllOf](docs/Model/LegacyContactGetAccessRightsResponseAllOf.md)
-- [LegacyContactGetListOptions](docs/Model/LegacyContactGetListOptions.md)
-- [LegacyContactGetListResponse](docs/Model/LegacyContactGetListResponse.md)
-- [LegacyContactGetListResponseAllOf](docs/Model/LegacyContactGetListResponseAllOf.md)
-- [LegacyContactGetResponse](docs/Model/LegacyContactGetResponse.md)
-- [LegacyContactGetResponseAllOf](docs/Model/LegacyContactGetResponseAllOf.md)
-- [LegacyContactJob](docs/Model/LegacyContactJob.md)
-- [LegacyContactMaritalStatus](docs/Model/LegacyContactMaritalStatus.md)
-- [LegacyContactOptionGetListSearch](docs/Model/LegacyContactOptionGetListSearch.md)
-- [LegacyContactPatchContact](docs/Model/LegacyContactPatchContact.md)
-- [LegacyContactPatchContactPayloadRequest](docs/Model/LegacyContactPatchContactPayloadRequest.md)
-- [LegacyContactPatchContactResponse](docs/Model/LegacyContactPatchContactResponse.md)
-- [LegacyContactPatchContactResponseAllOf](docs/Model/LegacyContactPatchContactResponseAllOf.md)
-- [LegacyContactPatchEntry](docs/Model/LegacyContactPatchEntry.md)
-- [LegacyContactPhone](docs/Model/LegacyContactPhone.md)
-- [LegacyContactPicture](docs/Model/LegacyContactPicture.md)
-- [LegacyContactSpouseContactPayloadItem](docs/Model/LegacyContactSpouseContactPayloadItem.md)
-- [LegacyContactSpouseContactPayloadItemAllOf](docs/Model/LegacyContactSpouseContactPayloadItemAllOf.md)
-- [LegacyContactWebSite](docs/Model/LegacyContactWebSite.md)
-- [LegacyDateRange](docs/Model/LegacyDateRange.md)
 - [LegacyDocumentBase64FilePayload](docs/Model/LegacyDocumentBase64FilePayload.md)
 - [LegacyDocumentBase64FilePayloadItem](docs/Model/LegacyDocumentBase64FilePayloadItem.md)
 - [LegacyDocumentBase64FilePayloadItemAllOf](docs/Model/LegacyDocumentBase64FilePayloadItemAllOf.md)
-- [LegacyDocumentDocumentGetItem](docs/Model/LegacyDocumentDocumentGetItem.md)
+- [LegacyDocumentDocument](docs/Model/LegacyDocumentDocument.md)
 - [LegacyDocumentDocumentGetListPayloadRequest](docs/Model/LegacyDocumentDocumentGetListPayloadRequest.md)
 - [LegacyDocumentDocumentListItem](docs/Model/LegacyDocumentDocumentListItem.md)
 - [LegacyDocumentDocumentPayload](docs/Model/LegacyDocumentDocumentPayload.md)
@@ -381,10 +283,6 @@ Class | Method | HTTP request | Description
 - [LegacyDocumentGetResponse](docs/Model/LegacyDocumentGetResponse.md)
 - [LegacyDocumentGetResponseAllOf](docs/Model/LegacyDocumentGetResponseAllOf.md)
 - [LegacyDocumentUploadDocumentFileRequest](docs/Model/LegacyDocumentUploadDocumentFileRequest.md)
-- [LegacyFieldValuesFieldValues](docs/Model/LegacyFieldValuesFieldValues.md)
-- [LegacyFieldValuesFieldValuesGetList](docs/Model/LegacyFieldValuesFieldValuesGetList.md)
-- [LegacyFieldValuesFieldValuesGetListAllOf](docs/Model/LegacyFieldValuesFieldValuesGetListAllOf.md)
-- [LegacyFieldValuesSubValue](docs/Model/LegacyFieldValuesSubValue.md)
 - [LegacyFinanceAccountStatement](docs/Model/LegacyFinanceAccountStatement.md)
 - [LegacyFinanceAsset](docs/Model/LegacyFinanceAsset.md)
 - [LegacyFinanceGetAccountStatementResponse](docs/Model/LegacyFinanceGetAccountStatementResponse.md)
@@ -401,73 +299,16 @@ Class | Method | HTTP request | Description
 - [LegacyFinancePolicyCoverageInsured](docs/Model/LegacyFinancePolicyCoverageInsured.md)
 - [LegacyFinancePolicyCoverageOption](docs/Model/LegacyFinancePolicyCoverageOption.md)
 - [LegacyFinanceTransaction](docs/Model/LegacyFinanceTransaction.md)
-- [LegacyInt](docs/Model/LegacyInt.md)
-- [LegacyParametersParametersGet](docs/Model/LegacyParametersParametersGet.md)
-- [LegacyParametersParametersGetAllOf](docs/Model/LegacyParametersParametersGetAllOf.md)
-- [LegacyProvisioningAddOrganizationResponse](docs/Model/LegacyProvisioningAddOrganizationResponse.md)
-- [LegacyProvisioningAddOrganizationResponseAllOf](docs/Model/LegacyProvisioningAddOrganizationResponseAllOf.md)
-- [LegacyProvisioningAddUpdateUserResponse](docs/Model/LegacyProvisioningAddUpdateUserResponse.md)
-- [LegacyProvisioningAddUpdateUserResponseAllOf](docs/Model/LegacyProvisioningAddUpdateUserResponseAllOf.md)
-- [LegacyProvisioningChangeDatabaseProfilePayload](docs/Model/LegacyProvisioningChangeDatabaseProfilePayload.md)
-- [LegacyProvisioningChangeDatabaseProfilePayloadRequest](docs/Model/LegacyProvisioningChangeDatabaseProfilePayloadRequest.md)
-- [LegacyProvisioningChangeDatabaseProfileResponse](docs/Model/LegacyProvisioningChangeDatabaseProfileResponse.md)
-- [LegacyProvisioningChangeDatabaseProfileResponseAllOf](docs/Model/LegacyProvisioningChangeDatabaseProfileResponseAllOf.md)
-- [LegacyProvisioningClearCachePayload](docs/Model/LegacyProvisioningClearCachePayload.md)
-- [LegacyProvisioningClearCachePayloadRequest](docs/Model/LegacyProvisioningClearCachePayloadRequest.md)
-- [LegacyProvisioningClearCacheResponse](docs/Model/LegacyProvisioningClearCacheResponse.md)
-- [LegacyProvisioningClearCacheResponseAllOf](docs/Model/LegacyProvisioningClearCacheResponseAllOf.md)
-- [LegacyProvisioningDeleteOrganizationOption](docs/Model/LegacyProvisioningDeleteOrganizationOption.md)
-- [LegacyProvisioningDeleteOrganizationOptionRequest](docs/Model/LegacyProvisioningDeleteOrganizationOptionRequest.md)
-- [LegacyProvisioningDeleteOrganizationResponse](docs/Model/LegacyProvisioningDeleteOrganizationResponse.md)
-- [LegacyProvisioningDeleteUserOption](docs/Model/LegacyProvisioningDeleteUserOption.md)
-- [LegacyProvisioningDeleteUserOptionRequest](docs/Model/LegacyProvisioningDeleteUserOptionRequest.md)
-- [LegacyProvisioningGatewayArchivePayload](docs/Model/LegacyProvisioningGatewayArchivePayload.md)
-- [LegacyProvisioningGatewayArchivePayloadRequest](docs/Model/LegacyProvisioningGatewayArchivePayloadRequest.md)
-- [LegacyProvisioningGetFileForGatewayArchiveByDateResponse](docs/Model/LegacyProvisioningGetFileForGatewayArchiveByDateResponse.md)
-- [LegacyProvisioningGetFileForGatewayArchiveByDateResponseAllOf](docs/Model/LegacyProvisioningGetFileForGatewayArchiveByDateResponseAllOf.md)
-- [LegacyProvisioningGetGatewayArchiveListByDateResponse](docs/Model/LegacyProvisioningGetGatewayArchiveListByDateResponse.md)
-- [LegacyProvisioningGetGatewayArchiveListByDateResponseAllOf](docs/Model/LegacyProvisioningGetGatewayArchiveListByDateResponseAllOf.md)
-- [LegacyProvisioningGetMoveUserToOrganizationStatus](docs/Model/LegacyProvisioningGetMoveUserToOrganizationStatus.md)
-- [LegacyProvisioningGetMoveUserToOrganizationStatusAllOf](docs/Model/LegacyProvisioningGetMoveUserToOrganizationStatusAllOf.md)
 - [LegacyProvisioningGetOrganizationListResponse](docs/Model/LegacyProvisioningGetOrganizationListResponse.md)
 - [LegacyProvisioningGetOrganizationListResponseAllOf](docs/Model/LegacyProvisioningGetOrganizationListResponseAllOf.md)
 - [LegacyProvisioningGetOrganizationResponse](docs/Model/LegacyProvisioningGetOrganizationResponse.md)
 - [LegacyProvisioningGetOrganizationResponseAllOf](docs/Model/LegacyProvisioningGetOrganizationResponseAllOf.md)
-- [LegacyProvisioningGetOrganizationStatusResponse](docs/Model/LegacyProvisioningGetOrganizationStatusResponse.md)
-- [LegacyProvisioningGetOrganizationStatusResponseAllOf](docs/Model/LegacyProvisioningGetOrganizationStatusResponseAllOf.md)
-- [LegacyProvisioningGetUserResponse](docs/Model/LegacyProvisioningGetUserResponse.md)
-- [LegacyProvisioningGetUserResponseAllOf](docs/Model/LegacyProvisioningGetUserResponseAllOf.md)
-- [LegacyProvisioningGetWebuserDatabaseListByValueResponse](docs/Model/LegacyProvisioningGetWebuserDatabaseListByValueResponse.md)
-- [LegacyProvisioningGetWebuserDatabaseListByValueResponseAllOf](docs/Model/LegacyProvisioningGetWebuserDatabaseListByValueResponseAllOf.md)
 - [LegacyProvisioningGroupItem](docs/Model/LegacyProvisioningGroupItem.md)
-- [LegacyProvisioningLoginLog](docs/Model/LegacyProvisioningLoginLog.md)
-- [LegacyProvisioningLoginLogOptions](docs/Model/LegacyProvisioningLoginLogOptions.md)
-- [LegacyProvisioningLoginLogOptionsRequest](docs/Model/LegacyProvisioningLoginLogOptionsRequest.md)
-- [LegacyProvisioningLoginLogResponse](docs/Model/LegacyProvisioningLoginLogResponse.md)
-- [LegacyProvisioningLoginLogResponseAllOf](docs/Model/LegacyProvisioningLoginLogResponseAllOf.md)
-- [LegacyProvisioningMonitorDatagatewayResponse](docs/Model/LegacyProvisioningMonitorDatagatewayResponse.md)
-- [LegacyProvisioningMonitorDatagatewayResponseAllOf](docs/Model/LegacyProvisioningMonitorDatagatewayResponseAllOf.md)
-- [LegacyProvisioningMoveUserToOrganizationResponse](docs/Model/LegacyProvisioningMoveUserToOrganizationResponse.md)
-- [LegacyProvisioningMoveUserToOrganizationResponseAllOf](docs/Model/LegacyProvisioningMoveUserToOrganizationResponseAllOf.md)
 - [LegacyProvisioningOrganizationItem](docs/Model/LegacyProvisioningOrganizationItem.md)
-- [LegacyProvisioningOrganizationPayload](docs/Model/LegacyProvisioningOrganizationPayload.md)
-- [LegacyProvisioningOrganizationPayloadRequest](docs/Model/LegacyProvisioningOrganizationPayloadRequest.md)
-- [LegacyProvisioningReportAccessesResponse](docs/Model/LegacyProvisioningReportAccessesResponse.md)
-- [LegacyProvisioningResponseGetUserListResponse](docs/Model/LegacyProvisioningResponseGetUserListResponse.md)
-- [LegacyProvisioningResponseGetUserListResponseAllOf](docs/Model/LegacyProvisioningResponseGetUserListResponseAllOf.md)
-- [LegacyProvisioningSyncControlDataForAllDatabaseResponse](docs/Model/LegacyProvisioningSyncControlDataForAllDatabaseResponse.md)
-- [LegacyProvisioningSyncControlDataForAllDatabaseResponseAllOf](docs/Model/LegacyProvisioningSyncControlDataForAllDatabaseResponseAllOf.md)
-- [LegacyProvisioningSyncControlDataResponse](docs/Model/LegacyProvisioningSyncControlDataResponse.md)
 - [LegacyProvisioningUserIdentifier](docs/Model/LegacyProvisioningUserIdentifier.md)
 - [LegacyProvisioningUserItem](docs/Model/LegacyProvisioningUserItem.md)
-- [LegacyProvisioningUserListOptions](docs/Model/LegacyProvisioningUserListOptions.md)
-- [LegacyProvisioningUserListOptionsRequest](docs/Model/LegacyProvisioningUserListOptionsRequest.md)
 - [LegacyProvisioningUserPayload](docs/Model/LegacyProvisioningUserPayload.md)
-- [LegacyProvisioningUserPayloadRequest](docs/Model/LegacyProvisioningUserPayloadRequest.md)
-- [LegacyProvisioningWebuserDatabasePayload](docs/Model/LegacyProvisioningWebuserDatabasePayload.md)
-- [LegacyProvisioningWebuserDatabasePayloadRequest](docs/Model/LegacyProvisioningWebuserDatabasePayloadRequest.md)
 - [LegacyResponse](docs/Model/LegacyResponse.md)
-- [LegacySystemLinkedValue](docs/Model/LegacySystemLinkedValue.md)
 - [LegacyUser](docs/Model/LegacyUser.md)
 - [MovementAddMovementResponse](docs/Model/MovementAddMovementResponse.md)
 - [MovementClientBaseUsingDistributionListMovement](docs/Model/MovementClientBaseUsingDistributionListMovement.md)

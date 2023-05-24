@@ -216,7 +216,7 @@ class LegacyProvisioningUserIdentifier implements ModelInterface, ArrayAccess, \
     /**
      * Sets identifier
      *
-     * @param string|null $identifier User unique identifier.
+     * @param string|null $identifier User unique identifier
      *
      * @return self
      */
