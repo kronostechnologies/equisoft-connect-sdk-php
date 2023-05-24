@@ -240,6 +240,57 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess, \JsonSerializ
         return self::$openAPIModelName;
     }
 
+    public const MAIN_FALSE = 'false';
+    public const MAIN_TRUE = 'true';
+    public const MAIN_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
+    public const POSTAL_FALSE = 'false';
+    public const POSTAL_TRUE = 'true';
+    public const POSTAL_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
+    public const LOCKED_FALSE = 'false';
+    public const LOCKED_TRUE = 'true';
+    public const LOCKED_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getMainAllowableValues()
+    {
+        return [
+            self::MAIN_FALSE,
+            self::MAIN_TRUE,
+            self::MAIN_UNKNOWN_DEFAULT_OPEN_API,
+        ];
+    }
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getPostalAllowableValues()
+    {
+        return [
+            self::POSTAL_FALSE,
+            self::POSTAL_TRUE,
+            self::POSTAL_UNKNOWN_DEFAULT_OPEN_API,
+        ];
+    }
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getLockedAllowableValues()
+    {
+        return [
+            self::LOCKED_FALSE,
+            self::LOCKED_TRUE,
+            self::LOCKED_UNKNOWN_DEFAULT_OPEN_API,
+        ];
+    }
 
     /**
      * Associative array for storing property values
@@ -284,6 +335,33 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess, \JsonSerializ
     {
         $invalidProperties = [];
 
+        $allowedValues = $this->getMainAllowableValues();
+        if (!is_null($this->container['main']) && !in_array($this->container['main'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'main', must be one of '%s'",
+                $this->container['main'],
+                implode("', '", $allowedValues)
+            );
+        }
+
+        $allowedValues = $this->getPostalAllowableValues();
+        if (!is_null($this->container['postal']) && !in_array($this->container['postal'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'postal', must be one of '%s'",
+                $this->container['postal'],
+                implode("', '", $allowedValues)
+            );
+        }
+
+        $allowedValues = $this->getLockedAllowableValues();
+        if (!is_null($this->container['locked']) && !in_array($this->container['locked'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'locked', must be one of '%s'",
+                $this->container['locked'],
+                implode("', '", $allowedValues)
+            );
+        }
+
         return $invalidProperties;
     }
 
@@ -312,7 +390,7 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets id
      *
-     * @param int|null $id Unique Identifier
+     * @param int|null $id Unique Identifier.
      *
      * @return self
      */
@@ -336,12 +414,22 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets main
      *
-     * @param string|null $main If the address is the main address or not (true|false)
+     * @param string|null $main Is the main address.
      *
      * @return self
      */
     public function setMain($main)
     {
+        $allowedValues = $this->getMainAllowableValues();
+        if (!is_null($main) && !in_array($main, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'main', must be one of '%s'",
+                    $main,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
         $this->container['main'] = $main;
 
         return $this;
@@ -360,12 +448,22 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets postal
      *
-     * @param string|null $postal If the address is the postal address or not (true|false)
+     * @param string|null $postal Is the postal address.
      *
      * @return self
      */
     public function setPostal($postal)
     {
+        $allowedValues = $this->getPostalAllowableValues();
+        if (!is_null($postal) && !in_array($postal, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'postal', must be one of '%s'",
+                    $postal,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
         $this->container['postal'] = $postal;
 
         return $this;
@@ -384,7 +482,7 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets type
      *
-     * @param string|null $type Address type (HOME, OFFICE, HOME2, OTHER, Custom Type Label)
+     * @param string|null $type Address type (HOME, OFFICE, HOME2, OTHER, Custom Type Label).
      *
      * @return self
      */
@@ -408,7 +506,7 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets typeId
      *
-     * @param int|null $typeId Address type fieldValue id
+     * @param int|null $typeId Address type fieldValue id.
      *
      * @return self
      */
@@ -432,7 +530,7 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets line1
      *
-     * @param string|null $line1 First line of address of the contact
+     * @param string|null $line1 First line of address of the contact.
      *
      * @return self
      */
@@ -456,7 +554,7 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets line2
      *
-     * @param string|null $line2 second line of address of the contact
+     * @param string|null $line2 Second line of address of the contact.
      *
      * @return self
      */
@@ -480,7 +578,7 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets city
      *
-     * @param string|null $city city of the contact
+     * @param string|null $city City of the contact.
      *
      * @return self
      */
@@ -504,7 +602,7 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets stateProvince
      *
-     * @param string|null $stateProvince state or province of the contact
+     * @param string|null $stateProvince State or province of the contact.
      *
      * @return self
      */
@@ -528,7 +626,7 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets country
      *
-     * @param string|null $country country of the contact
+     * @param string|null $country Country of the contact.
      *
      * @return self
      */
@@ -552,7 +650,7 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets postalCode
      *
-     * @param string|null $postalCode postalCode of the contact
+     * @param string|null $postalCode PostalCode of the contact.
      *
      * @return self
      */
@@ -576,7 +674,7 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets civicNumber
      *
-     * @param string|null $civicNumber Industrielle Alliance Only
+     * @param string|null $civicNumber Industrielle Alliance Only.
      *
      * @return self
      */
@@ -600,7 +698,7 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets road
      *
-     * @param string|null $road Industrielle Alliance Only
+     * @param string|null $road Industrielle Alliance Only.
      *
      * @return self
      */
@@ -624,7 +722,7 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets extType
      *
-     * @param string|null $extType Industrielle Alliance Only
+     * @param string|null $extType Industrielle Alliance Only.
      *
      * @return self
      */
@@ -648,7 +746,7 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets extNumber
      *
-     * @param string|null $extNumber Industrielle Alliance Only
+     * @param string|null $extNumber Industrielle Alliance Only.
      *
      * @return self
      */
@@ -672,7 +770,7 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets notes
      *
-     * @param string|null $notes notes
+     * @param string|null $notes Notes about the address.
      *
      * @return self
      */
@@ -696,12 +794,22 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets locked
      *
-     * @param string|null $locked address is locked or not (true or false)
+     * @param string|null $locked Is the address locked.
      *
      * @return self
      */
     public function setLocked($locked)
     {
+        $allowedValues = $this->getLockedAllowableValues();
+        if (!is_null($locked) && !in_array($locked, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'locked', must be one of '%s'",
+                    $locked,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
         $this->container['locked'] = $locked;
 
         return $this;

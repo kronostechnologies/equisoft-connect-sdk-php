@@ -246,7 +246,7 @@ class LegacyFinancePlanSummary implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets name
      *
-     * @param string|null $name name
+     * @param string|null $name Name.
      *
      * @return self
      */
@@ -261,6 +261,7 @@ class LegacyFinancePlanSummary implements ModelInterface, ArrayAccess, \JsonSeri
      * Gets category
      *
      * @return string|null
+     * @deprecated
      */
     public function getCategory()
     {
@@ -270,9 +271,10 @@ class LegacyFinancePlanSummary implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets category
      *
-     * @param string|null $category category
+     * @param string|null $category Category.
      *
      * @return self
+     * @deprecated
      */
     public function setCategory($category)
     {
@@ -294,7 +296,7 @@ class LegacyFinancePlanSummary implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets marketValue
      *
-     * @param string|null $marketValue marketValue
+     * @param string|null $marketValue Market value.
      *
      * @return self
      */
@@ -318,7 +320,7 @@ class LegacyFinancePlanSummary implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets marketValueDate
      *
-     * @param string|null $marketValueDate marketValueDate
+     * @param string|null $marketValueDate Market value date.
      *
      * @return self
      */
@@ -342,7 +344,7 @@ class LegacyFinancePlanSummary implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets showWarning
      *
-     * @param string|null $showWarning showWarning
+     * @param string|null $showWarning Show warning.
      *
      * @return self
      */
@@ -366,7 +368,7 @@ class LegacyFinancePlanSummary implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets foreignCurrency
      *
-     * @param string|null $foreignCurrency foreignCurrency
+     * @param string|null $foreignCurrency Foreign currency.
      *
      * @return self
      */

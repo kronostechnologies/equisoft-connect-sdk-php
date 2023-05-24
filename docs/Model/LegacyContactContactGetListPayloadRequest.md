@@ -1,0 +1,9 @@
+# # LegacyContactContactGetListPayloadRequest
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**optionPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyContactGetListOptions**](LegacyContactGetListOptions.md) |  | [optional]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

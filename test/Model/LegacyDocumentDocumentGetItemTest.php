@@ -1,6 +1,6 @@
 <?php
 /**
- * LegacyDocumentDocumentTest
+ * LegacyDocumentDocumentGetItemTest
  *
  * PHP version 7.4
  *
@@ -31,7 +31,7 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * LegacyDocumentDocumentTest Class Doc Comment
+ * LegacyDocumentDocumentGetItemTest Class Doc Comment
  *
  * @category    Class
  * @description Payload needed by the kronos.document.add method {@example addDocumentUpload.xml} payload example
@@ -39,7 +39,7 @@ use PHPUnit\Framework\TestCase;
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class LegacyDocumentDocumentTest extends TestCase
+class LegacyDocumentDocumentGetItemTest extends TestCase
 {
 
     /**
@@ -71,9 +71,9 @@ class LegacyDocumentDocumentTest extends TestCase
     }
 
     /**
-     * Test "LegacyDocumentDocument"
+     * Test "LegacyDocumentDocumentGetItem"
      */
-    public function testLegacyDocumentDocument()
+    public function testLegacyDocumentDocumentGetItem()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
