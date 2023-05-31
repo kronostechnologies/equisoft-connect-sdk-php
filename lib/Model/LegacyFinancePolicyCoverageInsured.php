@@ -228,7 +228,7 @@ class LegacyFinancePolicyCoverageInsured implements ModelInterface, ArrayAccess,
     /**
      * Sets name
      *
-     * @param string|null $name name
+     * @param string|null $name Name.
      *
      * @return self
      */
@@ -252,7 +252,7 @@ class LegacyFinancePolicyCoverageInsured implements ModelInterface, ArrayAccess,
     /**
      * Sets insuranceClass
      *
-     * @param string|null $insuranceClass insuranceClass
+     * @param string|null $insuranceClass Insurance class.
      *
      * @return self
      */
@@ -276,7 +276,7 @@ class LegacyFinancePolicyCoverageInsured implements ModelInterface, ArrayAccess,
     /**
      * Sets smoker
      *
-     * @param string|null $smoker smoker
+     * @param string|null $smoker Smoker.
      *
      * @return self
      */
