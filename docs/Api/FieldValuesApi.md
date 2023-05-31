@@ -5,9 +5,11 @@ All URIs are relative to http://localhost.
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createGroup()**](FieldValuesApi.md#createGroup) | **POST** /crm/api/v1/fields/{fieldName}/groups | Create a group
+[**createGroupValue()**](FieldValuesApi.md#createGroupValue) | **POST** /crm/api/v1/fields/{fieldName}/groups/{id}/values | Create a group value
 [**createValue()**](FieldValuesApi.md#createValue) | **POST** /crm/api/v1/fields/{fieldName}/values | Create a value
 [**getGroup()**](FieldValuesApi.md#getGroup) | **GET** /crm/api/v1/fields/{fieldName}/groups/{id} | Get single group for a specific field name and group id
 [**getValue()**](FieldValuesApi.md#getValue) | **GET** /crm/api/v1/fields/{fieldName}/values/{id} | Get single value for a specific field name and value id
+[**linkValueGroup()**](FieldValuesApi.md#linkValueGroup) | **PUT** /crm/api/v1/fields/{fieldName}/values/{id}/groups | Link a value to a group
 [**listFields()**](FieldValuesApi.md#listFields) | **GET** /crm/api/v1/fields | List fields with values list (values domain).
 [**listGroupValues()**](FieldValuesApi.md#listGroupValues) | **GET** /crm/api/v1/fields/{fieldName}/groups/{id}/values | List values for a specific field name and group
 [**listGroups()**](FieldValuesApi.md#listGroups) | **GET** /crm/api/v1/fields/{fieldName}/groups | List groups for a specific field name
@@ -62,6 +64,68 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateGroupResponse**](../Model/FieldValueCreateOrUpdateGroupResponse.md)
+
+### Authorization
+
+[OAuth2](../../README.md#OAuth2)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `createGroupValue()`
+
+```php
+createGroupValue($fieldName, $id, $fieldValueCreateValuePayload): \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateValueResponse
+```
+
+Create a group value
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Equisoft\SDK\EquisoftConnect\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\FieldValuesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$fieldName = 'fieldName_example'; // string | Field unique identifier.
+$id = 56; // int | group unique identifier.
+$fieldValueCreateValuePayload = new \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateValuePayload(); // \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateValuePayload
+
+try {
+    $result = $apiInstance->createGroupValue($fieldName, $id, $fieldValueCreateValuePayload);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling FieldValuesApi->createGroupValue: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fieldName** | **string**| Field unique identifier. |
+ **id** | **int**| group unique identifier. |
+ **fieldValueCreateValuePayload** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateValuePayload**](../Model/FieldValueCreateValuePayload.md)|  |
+
+### Return type
+
+[**\Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateValueResponse**](../Model/FieldValueCreateOrUpdateValueResponse.md)
 
 ### Authorization
 
@@ -250,6 +314,67 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `linkValueGroup()`
+
+```php
+linkValueGroup($fieldName, $id, $fieldValueLinkGroupValuePayload)
+```
+
+Link a value to a group
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Equisoft\SDK\EquisoftConnect\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\FieldValuesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$fieldName = 'fieldName_example'; // string | Field unique identifier.
+$id = 56; // int | value unique identifier.
+$fieldValueLinkGroupValuePayload = new \Equisoft\SDK\EquisoftConnect\Model\FieldValueLinkGroupValuePayload(); // \Equisoft\SDK\EquisoftConnect\Model\FieldValueLinkGroupValuePayload
+
+try {
+    $apiInstance->linkValueGroup($fieldName, $id, $fieldValueLinkGroupValuePayload);
+} catch (Exception $e) {
+    echo 'Exception when calling FieldValuesApi->linkValueGroup: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fieldName** | **string**| Field unique identifier. |
+ **id** | **int**| value unique identifier. |
+ **fieldValueLinkGroupValuePayload** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValueLinkGroupValuePayload**](../Model/FieldValueLinkGroupValuePayload.md)|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[OAuth2](../../README.md#OAuth2)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)

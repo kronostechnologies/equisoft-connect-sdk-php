@@ -84,6 +84,18 @@ class FieldValuesApiTest extends TestCase
     }
 
     /**
+     * Test case for createGroupValue
+     *
+     * Create a group value.
+     *
+     */
+    public function testCreateGroupValue()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for createValue
      *
      * Create a value.
@@ -114,6 +126,18 @@ class FieldValuesApiTest extends TestCase
      *
      */
     public function testGetValue()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for linkValueGroup
+     *
+     * Link a value to a group.
+     *
+     */
+    public function testLinkValueGroup()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
