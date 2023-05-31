@@ -255,112 +255,6 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
         return self::$openAPIModelName;
     }
 
-    public const LANG_EN = 'EN';
-    public const LANG_FR = 'FR';
-    public const LANG_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
-    public const ROLE_ADMIN = 'ADMIN';
-    public const ROLE_USER = 'USER';
-    public const ROLE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
-    public const ALLOW_DELEGATION_FALSE = 'false';
-    public const ALLOW_DELEGATION_TRUE = 'true';
-    public const ALLOW_DELEGATION_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
-    public const GENDER_F = 'F';
-    public const GENDER_M = 'M';
-    public const GENDER_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
-    public const PHONE_MAIN_CELL = 'cell';
-    public const PHONE_MAIN_FAX = 'fax';
-    public const PHONE_MAIN_HOME = 'home';
-    public const PHONE_MAIN_WORK = 'work';
-    public const PHONE_MAIN_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
-    public const NO_FNA_FALSE = 'false';
-    public const NO_FNA_TRUE = 'true';
-    public const NO_FNA_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getLangAllowableValues()
-    {
-        return [
-            self::LANG_EN,
-            self::LANG_FR,
-            self::LANG_UNKNOWN_DEFAULT_OPEN_API,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getRoleAllowableValues()
-    {
-        return [
-            self::ROLE_ADMIN,
-            self::ROLE_USER,
-            self::ROLE_UNKNOWN_DEFAULT_OPEN_API,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getAllowDelegationAllowableValues()
-    {
-        return [
-            self::ALLOW_DELEGATION_FALSE,
-            self::ALLOW_DELEGATION_TRUE,
-            self::ALLOW_DELEGATION_UNKNOWN_DEFAULT_OPEN_API,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getGenderAllowableValues()
-    {
-        return [
-            self::GENDER_F,
-            self::GENDER_M,
-            self::GENDER_UNKNOWN_DEFAULT_OPEN_API,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getPhoneMainAllowableValues()
-    {
-        return [
-            self::PHONE_MAIN_CELL,
-            self::PHONE_MAIN_FAX,
-            self::PHONE_MAIN_HOME,
-            self::PHONE_MAIN_WORK,
-            self::PHONE_MAIN_UNKNOWN_DEFAULT_OPEN_API,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getNoFNAAllowableValues()
-    {
-        return [
-            self::NO_FNA_FALSE,
-            self::NO_FNA_TRUE,
-            self::NO_FNA_UNKNOWN_DEFAULT_OPEN_API,
-        ];
-    }
 
     /**
      * Associative array for storing property values
@@ -408,60 +302,6 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
     {
         $invalidProperties = [];
 
-        $allowedValues = $this->getLangAllowableValues();
-        if (!is_null($this->container['lang']) && !in_array($this->container['lang'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'lang', must be one of '%s'",
-                $this->container['lang'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getRoleAllowableValues();
-        if (!is_null($this->container['role']) && !in_array($this->container['role'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'role', must be one of '%s'",
-                $this->container['role'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getAllowDelegationAllowableValues();
-        if (!is_null($this->container['allowDelegation']) && !in_array($this->container['allowDelegation'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'allowDelegation', must be one of '%s'",
-                $this->container['allowDelegation'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getGenderAllowableValues();
-        if (!is_null($this->container['gender']) && !in_array($this->container['gender'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'gender', must be one of '%s'",
-                $this->container['gender'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getPhoneMainAllowableValues();
-        if (!is_null($this->container['phoneMain']) && !in_array($this->container['phoneMain'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'phoneMain', must be one of '%s'",
-                $this->container['phoneMain'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getNoFNAAllowableValues();
-        if (!is_null($this->container['noFNA']) && !in_array($this->container['noFNA'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'noFNA', must be one of '%s'",
-                $this->container['noFNA'],
-                implode("', '", $allowedValues)
-            );
-        }
-
         return $invalidProperties;
     }
 
@@ -490,7 +330,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets firstName
      *
-     * @param string|null $firstName First name.
+     * @param string|null $firstName First name
      *
      * @return self
      */
@@ -514,7 +354,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets lastName
      *
-     * @param string|null $lastName Last name.
+     * @param string|null $lastName Last name
      *
      * @return self
      */
@@ -538,7 +378,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets email
      *
-     * @param string|null $email Email address used for login.
+     * @param string|null $email Email address used for login
      *
      * @return self
      */
@@ -562,22 +402,12 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets lang
      *
-     * @param string|null $lang User language. Organisation default lang will be used if not provided.
+     * @param string|null $lang User language. Organisation default lang will be used if not provided. Accepts FR or EN.
      *
      * @return self
      */
     public function setLang($lang)
     {
-        $allowedValues = $this->getLangAllowableValues();
-        if (!is_null($lang) && !in_array($lang, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'lang', must be one of '%s'",
-                    $lang,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
         $this->container['lang'] = $lang;
 
         return $this;
@@ -596,22 +426,12 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets role
      *
-     * @param string|null $role User role.
+     * @param string|null $role User role. Accepts USER or ADMIN
      *
      * @return self
      */
     public function setRole($role)
     {
-        $allowedValues = $this->getRoleAllowableValues();
-        if (!is_null($role) && !in_array($role, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'role', must be one of '%s'",
-                    $role,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
         $this->container['role'] = $role;
 
         return $this;
@@ -630,7 +450,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets concurrentAccess
      *
-     * @param int|null $concurrentAccess Number of allowed concurrent accesses with this user. Default: 1.
+     * @param int|null $concurrentAccess Number of allowed concurrent accesses with this user. Default 1.
      *
      * @return self
      */
@@ -645,7 +465,6 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
      * Gets password
      *
      * @return string|null
-     * @deprecated
      */
     public function getPassword()
     {
@@ -655,10 +474,9 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets password
      *
-     * @param string|null $password This option does nothing.
+     * @param string|null $password DEPRECATED this option does nothing
      *
      * @return self
-     * @deprecated
      */
     public function setPassword($password)
     {
@@ -671,7 +489,6 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
      * Gets noPassword
      *
      * @return string|null
-     * @deprecated
      */
     public function getNoPassword()
     {
@@ -681,10 +498,9 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets noPassword
      *
-     * @param string|null $noPassword This option does nothing.
+     * @param string|null $noPassword DEPRECATED this option does nothing
      *
      * @return self
-     * @deprecated
      */
     public function setNoPassword($noPassword)
     {
@@ -697,7 +513,6 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
      * Gets requirePasswordChange
      *
      * @return string|null
-     * @deprecated
      */
     public function getRequirePasswordChange()
     {
@@ -707,10 +522,9 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets requirePasswordChange
      *
-     * @param string|null $requirePasswordChange This option does nothing.
+     * @param string|null $requirePasswordChange DEPRECATED this option does nothing
      *
      * @return self
-     * @deprecated
      */
     public function setRequirePasswordChange($requirePasswordChange)
     {
@@ -723,7 +537,6 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
      * Gets enableMobile
      *
      * @return string|null
-     * @deprecated
      */
     public function getEnableMobile()
     {
@@ -733,10 +546,9 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets enableMobile
      *
-     * @param string|null $enableMobile This option does nothing.
+     * @param string|null $enableMobile DEPRECATED this option does nothing
      *
      * @return self
-     * @deprecated
      */
     public function setEnableMobile($enableMobile)
     {
@@ -758,22 +570,12 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets allowDelegation
      *
-     * @param string|null $allowDelegation Allow the user to delegate access to his data. Default: false.
+     * @param string|null $allowDelegation Allow the user to delegate access to his data Accepts true or false. Default false
      *
      * @return self
      */
     public function setAllowDelegation($allowDelegation)
     {
-        $allowedValues = $this->getAllowDelegationAllowableValues();
-        if (!is_null($allowDelegation) && !in_array($allowDelegation, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'allowDelegation', must be one of '%s'",
-                    $allowDelegation,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
         $this->container['allowDelegation'] = $allowDelegation;
 
         return $this;
@@ -792,22 +594,12 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets gender
      *
-     * @param string|null $gender Gender of this user.
+     * @param string|null $gender Gender of this user. Accepts M or F.
      *
      * @return self
      */
     public function setGender($gender)
     {
-        $allowedValues = $this->getGenderAllowableValues();
-        if (!is_null($gender) && !in_array($gender, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'gender', must be one of '%s'",
-                    $gender,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
         $this->container['gender'] = $gender;
 
         return $this;
@@ -826,7 +618,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets phoneWork
      *
-     * @param string|null $phoneWork Work phone number of this user.
+     * @param string|null $phoneWork Work phone number of this user
      *
      * @return self
      */
@@ -946,22 +738,12 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets phoneMain
      *
-     * @param string|null $phoneMain The phone type to be the main phone number. Default: work.
+     * @param string|null $phoneMain The phone type to be the main phone number. Accepts fax, cell, home, work. Default work
      *
      * @return self
      */
     public function setPhoneMain($phoneMain)
     {
-        $allowedValues = $this->getPhoneMainAllowableValues();
-        if (!is_null($phoneMain) && !in_array($phoneMain, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'phoneMain', must be one of '%s'",
-                    $phoneMain,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
         $this->container['phoneMain'] = $phoneMain;
 
         return $this;
@@ -1004,22 +786,12 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets noFNA
      *
-     * @param string|null $noFNA Skip Equisoft Plan. Default: false.
+     * @param string|null $noFNA Accepts true or false. Default false
      *
      * @return self
      */
     public function setNoFNA($noFNA)
     {
-        $allowedValues = $this->getNoFNAAllowableValues();
-        if (!is_null($noFNA) && !in_array($noFNA, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'noFNA', must be one of '%s'",
-                    $noFNA,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
         $this->container['noFNA'] = $noFNA;
 
         return $this;

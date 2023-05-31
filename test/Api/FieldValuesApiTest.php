@@ -72,48 +72,12 @@ class FieldValuesApiTest extends TestCase
     }
 
     /**
-     * Test case for createGroup
-     *
-     * Create a group.
-     *
-     */
-    public function testCreateGroup()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for createGroupValue
-     *
-     * Create a group value.
-     *
-     */
-    public function testCreateGroupValue()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for createValue
      *
      * Create a value.
      *
      */
     public function testCreateValue()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for getGroup
-     *
-     * Get single group for a specific field name and group id.
-     *
-     */
-    public function testGetGroup()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -132,18 +96,6 @@ class FieldValuesApiTest extends TestCase
     }
 
     /**
-     * Test case for linkValueGroup
-     *
-     * Link a value to a group.
-     *
-     */
-    public function testLinkValueGroup()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for listFields
      *
      * List fields with values list (values domain)..
@@ -156,60 +108,12 @@ class FieldValuesApiTest extends TestCase
     }
 
     /**
-     * Test case for listGroupValues
-     *
-     * List values for a specific field name and group.
-     *
-     */
-    public function testListGroupValues()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for listGroups
-     *
-     * List groups for a specific field name.
-     *
-     */
-    public function testListGroups()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for listValues
      *
      * List values for a specific field name.
      *
      */
     public function testListValues()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for updateGroup
-     *
-     * Update a group.
-     *
-     */
-    public function testUpdateGroup()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for updateValue
-     *
-     * Update a value.
-     *
-     */
-    public function testUpdateValue()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

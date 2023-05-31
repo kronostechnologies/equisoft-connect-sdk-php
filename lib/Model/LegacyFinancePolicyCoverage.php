@@ -285,23 +285,6 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
         return self::$openAPIModelName;
     }
 
-    public const COVERAGE_TYPE_BASE = 'BASE';
-    public const COVERAGE_TYPE_RIDER = 'RIDER';
-    public const COVERAGE_TYPE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getCoverageTypeAllowableValues()
-    {
-        return [
-            self::COVERAGE_TYPE_BASE,
-            self::COVERAGE_TYPE_RIDER,
-            self::COVERAGE_TYPE_UNKNOWN_DEFAULT_OPEN_API,
-        ];
-    }
 
     /**
      * Associative array for storing property values
@@ -355,15 +338,6 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
     {
         $invalidProperties = [];
 
-        $allowedValues = $this->getCoverageTypeAllowableValues();
-        if (!is_null($this->container['coverageType']) && !in_array($this->container['coverageType'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'coverageType', must be one of '%s'",
-                $this->container['coverageType'],
-                implode("', '", $allowedValues)
-            );
-        }
-
         return $invalidProperties;
     }
 
@@ -392,7 +366,7 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets id
      *
-     * @param string|null $id Identifier.
+     * @param string|null $id id
      *
      * @return self
      */
@@ -416,22 +390,12 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets coverageType
      *
-     * @param string|null $coverageType Coverage type.
+     * @param string|null $coverageType BASE or RIDER
      *
      * @return self
      */
     public function setCoverageType($coverageType)
     {
-        $allowedValues = $this->getCoverageTypeAllowableValues();
-        if (!is_null($coverageType) && !in_array($coverageType, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'coverageType', must be one of '%s'",
-                    $coverageType,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
         $this->container['coverageType'] = $coverageType;
 
         return $this;
@@ -450,7 +414,7 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets product
      *
-     * @param string|null $product Product name.
+     * @param string|null $product product
      *
      * @return self
      */
@@ -474,7 +438,7 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets productType
      *
-     * @param string|null $productType Product type.
+     * @param string|null $productType productType
      *
      * @return self
      */
@@ -498,7 +462,7 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets productTypeSystemName
      *
-     * @param string|null $productTypeSystemName Product type system name.
+     * @param string|null $productTypeSystemName productTypeSystemName
      *
      * @return self
      */
@@ -522,7 +486,7 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets productSubType
      *
-     * @param string|null $productSubType Product subtype.
+     * @param string|null $productSubType productSubType
      *
      * @return self
      */
@@ -546,7 +510,7 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets deathCapital
      *
-     * @param string|null $deathCapital Death capital.
+     * @param string|null $deathCapital deathCapital
      *
      * @return self
      */
@@ -570,7 +534,7 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets issueDate
      *
-     * @param string|null $issueDate Issue date.
+     * @param string|null $issueDate issueDate
      *
      * @return self
      */
@@ -594,7 +558,7 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets amount
      *
-     * @param string|null $amount Amount.
+     * @param string|null $amount amount
      *
      * @return self
      */
@@ -618,7 +582,7 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets annualPremium
      *
-     * @param string|null $annualPremium Annual premium.
+     * @param string|null $annualPremium annualPremium
      *
      * @return self
      */
@@ -642,7 +606,7 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets modalPremium
      *
-     * @param string|null $modalPremium Modal premium.
+     * @param string|null $modalPremium modalPremium
      *
      * @return self
      */
@@ -666,7 +630,7 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets annualizedPremium
      *
-     * @param string|null $annualizedPremium Annualized premium.
+     * @param string|null $annualizedPremium annualizedPremium
      *
      * @return self
      */
@@ -690,7 +654,7 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets premiumMode
      *
-     * @param string|null $premiumMode Premium mode.
+     * @param string|null $premiumMode premiumMode
      *
      * @return self
      */
@@ -714,7 +678,7 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets surrenderValue
      *
-     * @param string|null $surrenderValue Surrender value.
+     * @param string|null $surrenderValue surrenderValue
      *
      * @return self
      */
@@ -738,7 +702,7 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets accumulatedFund
      *
-     * @param string|null $accumulatedFund Accumulated fund.
+     * @param string|null $accumulatedFund accumulatedFund
      *
      * @return self
      */
@@ -762,7 +726,7 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets elimPeriodAcc
      *
-     * @param string|null $elimPeriodAcc Elimination period accident.
+     * @param string|null $elimPeriodAcc elimPeriodAcc
      *
      * @return self
      */
@@ -786,7 +750,7 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets elimPeriodSick
      *
-     * @param string|null $elimPeriodSick Elimination period sick.
+     * @param string|null $elimPeriodSick elimPeriodSick
      *
      * @return self
      */
@@ -810,7 +774,7 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets benefitPeriod
      *
-     * @param string|null $benefitPeriod Benefit period.
+     * @param string|null $benefitPeriod benefitPeriod
      *
      * @return self
      */
@@ -834,7 +798,7 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets benefitAmount
      *
-     * @param string|null $benefitAmount Benefit amount.
+     * @param string|null $benefitAmount benefitAmount
      *
      * @return self
      */
@@ -858,7 +822,7 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets beneficiary
      *
-     * @param string|null $beneficiary Beneficiary.
+     * @param string|null $beneficiary beneficiary
      *
      * @return self
      */
@@ -882,7 +846,7 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets insureds
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinancePolicyCoverageInsured[]|null $insureds List of beneficiaries.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinancePolicyCoverageInsured[]|null $insureds insureds
      *
      * @return self
      */
@@ -906,7 +870,7 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets livesType
      *
-     * @param string|null $livesType Lives type.
+     * @param string|null $livesType livesType
      *
      * @return self
      */
@@ -930,7 +894,7 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets coverageOptions
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinancePolicyCoverageOption[]|null $coverageOptions List of coverage options.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinancePolicyCoverageOption[]|null $coverageOptions coverageOptions
      *
      * @return self
      */
@@ -954,7 +918,7 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets isInsured
      *
-     * @param string|null $isInsured Is insured.
+     * @param string|null $isInsured isInsured
      *
      * @return self
      */
@@ -978,7 +942,7 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets expiryDate
      *
-     * @param string|null $expiryDate Expiry date.
+     * @param string|null $expiryDate expiryDate
      *
      * @return self
      */
@@ -1002,7 +966,7 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets accountStatementNotes
      *
-     * @param string|null $accountStatementNotes Account statement notes.
+     * @param string|null $accountStatementNotes accountStatementNotes
      *
      * @return self
      */

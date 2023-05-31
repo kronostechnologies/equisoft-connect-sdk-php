@@ -57,7 +57,7 @@ class LegacyDocumentGetResponseAllOf implements ModelInterface, ArrayAccess, \Js
       * @var string[]
       */
     protected static $openAPITypes = [
-        'documents' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentGetItem[]'
+        'documents' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocument[]'
     ];
 
     /**
@@ -206,7 +206,7 @@ class LegacyDocumentGetResponseAllOf implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets documents
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentGetItem[]|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocument[]|null
      */
     public function getDocuments()
     {
@@ -216,7 +216,7 @@ class LegacyDocumentGetResponseAllOf implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets documents
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentGetItem[]|null $documents Array of documents.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocument[]|null $documents Array of documents.
      *
      * @return self
      */

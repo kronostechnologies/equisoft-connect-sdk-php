@@ -216,7 +216,7 @@ class LegacyFinancePlanInTrust implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets name
      *
-     * @param string|null $name Name.
+     * @param string|null $name name
      *
      * @return self
      */

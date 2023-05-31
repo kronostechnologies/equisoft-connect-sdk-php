@@ -372,7 +372,7 @@ class LegacyFinancePlan implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets id
      *
-     * @param int|null $id Plan id.
+     * @param int|null $id id
      *
      * @return self
      */
@@ -396,7 +396,7 @@ class LegacyFinancePlan implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets description
      *
-     * @param string|null $description Description.
+     * @param string|null $description description
      *
      * @return self
      */
@@ -420,7 +420,7 @@ class LegacyFinancePlan implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets accountNumber
      *
-     * @param string|null $accountNumber Account number.
+     * @param string|null $accountNumber accountNumber
      *
      * @return self
      */
@@ -444,7 +444,7 @@ class LegacyFinancePlan implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets accountType
      *
-     * @param string|null $accountType Account type.
+     * @param string|null $accountType accountType
      *
      * @return self
      */
@@ -468,7 +468,7 @@ class LegacyFinancePlan implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets marketValue
      *
-     * @param string|null $marketValue Market value.
+     * @param string|null $marketValue marketValue
      *
      * @return self
      */
@@ -492,7 +492,7 @@ class LegacyFinancePlan implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets marketValueDate
      *
-     * @param string|null $marketValueDate Market value date.
+     * @param string|null $marketValueDate marketValueDate
      *
      * @return self
      */
@@ -516,7 +516,7 @@ class LegacyFinancePlan implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets maturityDate
      *
-     * @param \DateTime|null $maturityDate Maturity date.
+     * @param \DateTime|null $maturityDate maturityDate
      *
      * @return self
      */
@@ -540,7 +540,7 @@ class LegacyFinancePlan implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets owner
      *
-     * @param string|null $owner Owner.
+     * @param string|null $owner owner
      *
      * @return self
      */
@@ -564,7 +564,7 @@ class LegacyFinancePlan implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets owner2
      *
-     * @param string|null $owner2 Owner 2.
+     * @param string|null $owner2 owner2
      *
      * @return self
      */
@@ -588,7 +588,7 @@ class LegacyFinancePlan implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets accountDesignation
      *
-     * @param string|null $accountDesignation Account designation.
+     * @param string|null $accountDesignation accountDesignation
      *
      * @return self
      */
@@ -612,7 +612,7 @@ class LegacyFinancePlan implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets intermediaryCode
      *
-     * @param string|null $intermediaryCode Intermediary code.
+     * @param string|null $intermediaryCode intermediaryCode
      *
      * @return self
      */
@@ -636,7 +636,7 @@ class LegacyFinancePlan implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets intermediaryAccountNumber
      *
-     * @param string|null $intermediaryAccountNumber Intermediary account number.
+     * @param string|null $intermediaryAccountNumber intermediaryAccountNumber
      *
      * @return self
      */
@@ -660,7 +660,7 @@ class LegacyFinancePlan implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets groupFlag
      *
-     * @param string|null $groupFlag Group flag.
+     * @param string|null $groupFlag groupFlag
      *
      * @return self
      */
@@ -684,7 +684,7 @@ class LegacyFinancePlan implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets spousalAccount
      *
-     * @param string|null $spousalAccount Spousal account.
+     * @param string|null $spousalAccount spousalAccount
      *
      * @return self
      */
@@ -708,7 +708,7 @@ class LegacyFinancePlan implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets lockedIn
      *
-     * @param string|null $lockedIn Locked in.
+     * @param string|null $lockedIn lockedIn
      *
      * @return self
      */
@@ -732,7 +732,7 @@ class LegacyFinancePlan implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets jointSignature
      *
-     * @param string|null $jointSignature Joint signature.
+     * @param string|null $jointSignature jointSignature
      *
      * @return self
      */
@@ -756,7 +756,7 @@ class LegacyFinancePlan implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets jointSurvivor
      *
-     * @param string|null $jointSurvivor Joint survivor.
+     * @param string|null $jointSurvivor jointSurvivor
      *
      * @return self
      */
@@ -780,7 +780,7 @@ class LegacyFinancePlan implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets inTrust
      *
-     * @param string|null $inTrust In trust.
+     * @param string|null $inTrust inTrust
      *
      * @return self
      */
@@ -804,7 +804,7 @@ class LegacyFinancePlan implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets inTrustFor
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinancePlanInTrust[]|null $inTrustFor List of plans in trust.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinancePlanInTrust[]|null $inTrustFor inTrustFor
      *
      * @return self
      */
@@ -828,7 +828,7 @@ class LegacyFinancePlan implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets beneficiaries
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinancePlanBeneficiary[]|null $beneficiaries List of beneficiaries.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinancePlanBeneficiary[]|null $beneficiaries beneficiaries
      *
      * @return self
      */
@@ -852,7 +852,7 @@ class LegacyFinancePlan implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets summary
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinancePlanSummary[]|null $summary List of summaries.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinancePlanSummary[]|null $summary summary
      *
      * @return self
      */
@@ -867,7 +867,6 @@ class LegacyFinancePlan implements ModelInterface, ArrayAccess, \JsonSerializabl
      * Gets mutualFunds
      *
      * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAsset[]|null
-     * @deprecated
      */
     public function getMutualFunds()
     {
@@ -877,10 +876,9 @@ class LegacyFinancePlan implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets mutualFunds
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAsset[]|null $mutualFunds Deprecated: Use assets instead. List of asset.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAsset[]|null $mutualFunds mutualFunds
      *
      * @return self
-     * @deprecated
      */
     public function setMutualFunds($mutualFunds)
     {
@@ -893,7 +891,6 @@ class LegacyFinancePlan implements ModelInterface, ArrayAccess, \JsonSerializabl
      * Gets segregatedFunds
      *
      * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAsset[]|null
-     * @deprecated
      */
     public function getSegregatedFunds()
     {
@@ -903,10 +900,9 @@ class LegacyFinancePlan implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets segregatedFunds
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAsset[]|null $segregatedFunds Deprecated: Use assets instead. List of segregated funds.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAsset[]|null $segregatedFunds segregatedFunds
      *
      * @return self
-     * @deprecated
      */
     public function setSegregatedFunds($segregatedFunds)
     {
@@ -919,7 +915,6 @@ class LegacyFinancePlan implements ModelInterface, ArrayAccess, \JsonSerializabl
      * Gets gics
      *
      * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAsset[]|null
-     * @deprecated
      */
     public function getGics()
     {
@@ -929,10 +924,9 @@ class LegacyFinancePlan implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets gics
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAsset[]|null $gics Deprecated: Use assets instead. List of gics.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAsset[]|null $gics gics
      *
      * @return self
-     * @deprecated
      */
     public function setGics($gics)
     {
@@ -945,7 +939,6 @@ class LegacyFinancePlan implements ModelInterface, ArrayAccess, \JsonSerializabl
      * Gets shares
      *
      * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAsset[]|null
-     * @deprecated
      */
     public function getShares()
     {
@@ -955,10 +948,9 @@ class LegacyFinancePlan implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets shares
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAsset[]|null $shares Deprecated: Use assets instead. List of shares.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAsset[]|null $shares shares
      *
      * @return self
-     * @deprecated
      */
     public function setShares($shares)
     {
@@ -971,7 +963,6 @@ class LegacyFinancePlan implements ModelInterface, ArrayAccess, \JsonSerializabl
      * Gets bankAccounts
      *
      * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAsset[]|null
-     * @deprecated
      */
     public function getBankAccounts()
     {
@@ -981,10 +972,9 @@ class LegacyFinancePlan implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets bankAccounts
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAsset[]|null $bankAccounts Deprecated: Use assets instead. List of bank accounts.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAsset[]|null $bankAccounts bankAccounts
      *
      * @return self
-     * @deprecated
      */
     public function setBankAccounts($bankAccounts)
     {
@@ -1006,7 +996,7 @@ class LegacyFinancePlan implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets assets
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAsset[]|null $assets List of assets.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceAsset[]|null $assets assets
      *
      * @return self
      */

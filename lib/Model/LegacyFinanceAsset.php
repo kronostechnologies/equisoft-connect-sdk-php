@@ -330,7 +330,7 @@ class LegacyFinanceAsset implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets id
      *
-     * @param int|null $id Identifier.
+     * @param int|null $id id
      *
      * @return self
      */
@@ -354,7 +354,7 @@ class LegacyFinanceAsset implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets assetType
      *
-     * @param string|null $assetType Asset type.
+     * @param string|null $assetType assetType
      *
      * @return self
      */
@@ -369,7 +369,6 @@ class LegacyFinanceAsset implements ModelInterface, ArrayAccess, \JsonSerializab
      * Gets category
      *
      * @return string|null
-     * @deprecated
      */
     public function getCategory()
     {
@@ -379,10 +378,9 @@ class LegacyFinanceAsset implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets category
      *
-     * @param string|null $category Category.
+     * @param string|null $category category
      *
      * @return self
-     * @deprecated
      */
     public function setCategory($category)
     {
@@ -404,7 +402,7 @@ class LegacyFinanceAsset implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets manufacturerName
      *
-     * @param string|null $manufacturerName Manufacturer name.
+     * @param string|null $manufacturerName manufacturerName
      *
      * @return self
      */
@@ -428,7 +426,7 @@ class LegacyFinanceAsset implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets productName
      *
-     * @param string|null $productName Product name.
+     * @param string|null $productName productName
      *
      * @return self
      */
@@ -452,7 +450,7 @@ class LegacyFinanceAsset implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets productCode
      *
-     * @param string|null $productCode Product code.
+     * @param string|null $productCode productCode
      *
      * @return self
      */
@@ -476,7 +474,7 @@ class LegacyFinanceAsset implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets loadType
      *
-     * @param string|null $loadType Load type.
+     * @param string|null $loadType loadType
      *
      * @return self
      */
@@ -500,7 +498,7 @@ class LegacyFinanceAsset implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets currency
      *
-     * @param string|null $currency Currency.
+     * @param string|null $currency currency
      *
      * @return self
      */
@@ -524,7 +522,7 @@ class LegacyFinanceAsset implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets productDescription
      *
-     * @param string|null $productDescription Product description.
+     * @param string|null $productDescription productDescription
      *
      * @return self
      */
@@ -548,7 +546,7 @@ class LegacyFinanceAsset implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets accountName
      *
-     * @param string|null $accountName Account name.
+     * @param string|null $accountName accountName
      *
      * @return self
      */
@@ -572,7 +570,7 @@ class LegacyFinanceAsset implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets certificateNb
      *
-     * @param string|null $certificateNb Certification number.
+     * @param string|null $certificateNb certificateNb
      *
      * @return self
      */
@@ -596,7 +594,7 @@ class LegacyFinanceAsset implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets units
      *
-     * @param string|null $units Units.
+     * @param string|null $units units
      *
      * @return self
      */
@@ -620,7 +618,7 @@ class LegacyFinanceAsset implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets unitPrice
      *
-     * @param string|null $unitPrice Unit price.
+     * @param string|null $unitPrice unitPrice
      *
      * @return self
      */
@@ -644,7 +642,7 @@ class LegacyFinanceAsset implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets marketValue
      *
-     * @param string|null $marketValue Market value.
+     * @param string|null $marketValue marketValue
      *
      * @return self
      */
@@ -668,7 +666,7 @@ class LegacyFinanceAsset implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets marketValueDate
      *
-     * @param string|null $marketValueDate Market value date.
+     * @param string|null $marketValueDate marketValueDate
      *
      * @return self
      */
@@ -692,7 +690,7 @@ class LegacyFinanceAsset implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets maturityAmount
      *
-     * @param string|null $maturityAmount Maturity amount.
+     * @param string|null $maturityAmount maturityAmount
      *
      * @return self
      */
@@ -716,7 +714,7 @@ class LegacyFinanceAsset implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets maturityAmountDate
      *
-     * @param string|null $maturityAmountDate Maturity amount date.
+     * @param string|null $maturityAmountDate maturityAmountDate
      *
      * @return self
      */
@@ -740,7 +738,7 @@ class LegacyFinanceAsset implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets interestRate
      *
-     * @param string|null $interestRate Interest rate.
+     * @param string|null $interestRate interestRate
      *
      * @return self
      */
@@ -764,7 +762,7 @@ class LegacyFinanceAsset implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets initialAmount
      *
-     * @param string|null $initialAmount Initial amount.
+     * @param string|null $initialAmount initialAmount
      *
      * @return self
      */
@@ -788,7 +786,7 @@ class LegacyFinanceAsset implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets transactions
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceTransaction[]|null $transactions Initial amount.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceTransaction[]|null $transactions transactions
      *
      * @return self
      */

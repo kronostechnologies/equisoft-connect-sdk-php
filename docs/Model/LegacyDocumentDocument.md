@@ -1,4 +1,4 @@
-# # LegacyDocumentDocumentGetItem
+# # LegacyDocumentDocument
 
 ## Properties
 

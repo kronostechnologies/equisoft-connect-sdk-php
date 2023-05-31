@@ -301,7 +301,7 @@ class LegacyFinanceLiability implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets id
      *
-     * @param int|null $id Identifier.
+     * @param int|null $id id
      *
      * @return self
      */
@@ -325,7 +325,7 @@ class LegacyFinanceLiability implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets product
      *
-     * @param string|null $product Product.
+     * @param string|null $product product
      *
      * @return self
      */
@@ -349,7 +349,7 @@ class LegacyFinanceLiability implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets productType
      *
-     * @param string|null $productType Product type.
+     * @param string|null $productType productType
      *
      * @return self
      */
@@ -373,7 +373,7 @@ class LegacyFinanceLiability implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets rate
      *
-     * @param float|null $rate Rate.
+     * @param float|null $rate rate
      *
      * @return self
      */
@@ -397,7 +397,7 @@ class LegacyFinanceLiability implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets initialAmount
      *
-     * @param float|null $initialAmount Initial amount.
+     * @param float|null $initialAmount initialAmount
      *
      * @return self
      */
@@ -421,7 +421,7 @@ class LegacyFinanceLiability implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets marketValue
      *
-     * @param float|null $marketValue Market value.
+     * @param float|null $marketValue marketValue
      *
      * @return self
      */
@@ -445,7 +445,7 @@ class LegacyFinanceLiability implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets balance
      *
-     * @param float|null $balance Balance.
+     * @param float|null $balance balance
      *
      * @return self
      */
@@ -469,7 +469,7 @@ class LegacyFinanceLiability implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets netValue
      *
-     * @param float|null $netValue Net value.
+     * @param float|null $netValue netValue
      *
      * @return self
      */
@@ -493,7 +493,7 @@ class LegacyFinanceLiability implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets pctOwnership
      *
-     * @param float|null $pctOwnership Percentage ownership.
+     * @param float|null $pctOwnership pctOwnership
      *
      * @return self
      */
@@ -517,7 +517,7 @@ class LegacyFinanceLiability implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets instalment
      *
-     * @param float|null $instalment Instalment.
+     * @param float|null $instalment instalment
      *
      * @return self
      */
@@ -541,7 +541,7 @@ class LegacyFinanceLiability implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets instalmentFrequency
      *
-     * @param string|null $instalmentFrequency Instalment frequency.
+     * @param string|null $instalmentFrequency instalmentFrequency
      *
      * @return self
      */
@@ -565,7 +565,7 @@ class LegacyFinanceLiability implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets dateStart
      *
-     * @param \DateTime|null $dateStart Start date.
+     * @param \DateTime|null $dateStart dateStart
      *
      * @return self
      */
@@ -589,7 +589,7 @@ class LegacyFinanceLiability implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets dateEnd
      *
-     * @param \DateTime|null $dateEnd End date.
+     * @param \DateTime|null $dateEnd dateEnd
      *
      * @return self
      */
@@ -613,7 +613,7 @@ class LegacyFinanceLiability implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets dateUpdated
      *
-     * @param \DateTime|null $dateUpdated Updated date.
+     * @param \DateTime|null $dateUpdated dateUpdated
      *
      * @return self
      */
@@ -637,7 +637,7 @@ class LegacyFinanceLiability implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets notes
      *
-     * @param string|null $notes Notes.
+     * @param string|null $notes notes
      *
      * @return self
      */

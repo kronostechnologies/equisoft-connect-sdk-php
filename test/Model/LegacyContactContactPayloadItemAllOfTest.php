@@ -80,15 +80,6 @@ class LegacyContactContactPayloadItemAllOfTest extends TestCase
     }
 
     /**
-     * Test attribute "picture"
-     */
-    public function testPropertyPicture()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "gender"
      */
     public function testPropertyGender()
@@ -128,33 +119,6 @@ class LegacyContactContactPayloadItemAllOfTest extends TestCase
      * Test attribute "smokerSince"
      */
     public function testPropertySmokerSince()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "addressHome"
-     */
-    public function testPropertyAddressHome()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "addressOffice"
-     */
-    public function testPropertyAddressOffice()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "addressOther"
-     */
-    public function testPropertyAddressOther()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -305,15 +269,6 @@ class LegacyContactContactPayloadItemAllOfTest extends TestCase
     }
 
     /**
-     * Test attribute "users"
-     */
-    public function testPropertyUsers()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "language"
      */
     public function testPropertyLanguage()
@@ -422,42 +377,6 @@ class LegacyContactContactPayloadItemAllOfTest extends TestCase
     }
 
     /**
-     * Test attribute "addresses"
-     */
-    public function testPropertyAddresses()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "phones"
-     */
-    public function testPropertyPhones()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "emails"
-     */
-    public function testPropertyEmails()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "webSites"
-     */
-    public function testPropertyWebSites()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "birthPlace"
      */
     public function testPropertyBirthPlace()
@@ -548,15 +467,6 @@ class LegacyContactContactPayloadItemAllOfTest extends TestCase
     }
 
     /**
-     * Test attribute "spouse"
-     */
-    public function testPropertySpouse()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "externalKey"
      */
     public function testPropertyExternalKey()
@@ -569,114 +479,6 @@ class LegacyContactContactPayloadItemAllOfTest extends TestCase
      * Test attribute "externalKeyType"
      */
     public function testPropertyExternalKeyType()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "classes"
-     */
-    public function testPropertyClasses()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "groups"
-     */
-    public function testPropertyGroups()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "hobbies"
-     */
-    public function testPropertyHobbies()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "origins"
-     */
-    public function testPropertyOrigins()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "domains"
-     */
-    public function testPropertyDomains()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "territory"
-     */
-    public function testPropertyTerritory()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "seg1"
-     */
-    public function testPropertySeg1()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "seg2"
-     */
-    public function testPropertySeg2()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "seg3"
-     */
-    public function testPropertySeg3()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "seg4"
-     */
-    public function testPropertySeg4()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "seg5"
-     */
-    public function testPropertySeg5()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "seg6"
-     */
-    public function testPropertySeg6()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

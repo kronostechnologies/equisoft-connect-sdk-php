@@ -216,7 +216,7 @@ class LegacyProvisioningGetOrganizationListResponseAllOf implements ModelInterfa
     /**
      * Sets organizations
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem[]|null $organizations List of organization.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem[]|null $organizations List of organization
      *
      * @return self
      */
