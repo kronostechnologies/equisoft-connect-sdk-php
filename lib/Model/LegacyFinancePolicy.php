@@ -318,7 +318,7 @@ class LegacyFinancePolicy implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets id
      *
-     * @param string|null $id Identifier.
+     * @param string|null $id id
      *
      * @return self
      */
@@ -342,7 +342,7 @@ class LegacyFinancePolicy implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets policyNb
      *
-     * @param string|null $policyNb Policy number.
+     * @param string|null $policyNb policyNb
      *
      * @return self
      */
@@ -366,7 +366,7 @@ class LegacyFinancePolicy implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets lineOfBusiness
      *
-     * @param string|null $lineOfBusiness Line of business.
+     * @param string|null $lineOfBusiness lineOfBusiness
      *
      * @return self
      */
@@ -390,7 +390,7 @@ class LegacyFinancePolicy implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets lineOfBusinessLabel
      *
-     * @param string|null $lineOfBusinessLabel Line of business label.
+     * @param string|null $lineOfBusinessLabel lineOfBusinessLabel
      *
      * @return self
      */
@@ -414,7 +414,7 @@ class LegacyFinancePolicy implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets type
      *
-     * @param string|null $type Type.
+     * @param string|null $type type
      *
      * @return self
      */
@@ -438,7 +438,7 @@ class LegacyFinancePolicy implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets owner
      *
-     * @param string|null $owner Owner.
+     * @param string|null $owner owner
      *
      * @return self
      */
@@ -462,7 +462,7 @@ class LegacyFinancePolicy implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets carrier
      *
-     * @param string|null $carrier Carrier.
+     * @param string|null $carrier carrier
      *
      * @return self
      */
@@ -486,7 +486,7 @@ class LegacyFinancePolicy implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets issueDate
      *
-     * @param string|null $issueDate Issue date.
+     * @param string|null $issueDate issueDate
      *
      * @return self
      */
@@ -510,7 +510,7 @@ class LegacyFinancePolicy implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets endDate
      *
-     * @param string|null $endDate End date.
+     * @param string|null $endDate endDate
      *
      * @return self
      */
@@ -534,7 +534,7 @@ class LegacyFinancePolicy implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets annualPremium
      *
-     * @param string|null $annualPremium Annual premium.
+     * @param string|null $annualPremium annualPremium
      *
      * @return self
      */
@@ -558,7 +558,7 @@ class LegacyFinancePolicy implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets modalPremium
      *
-     * @param string|null $modalPremium Modal premium.
+     * @param string|null $modalPremium modalPremium
      *
      * @return self
      */
@@ -582,7 +582,7 @@ class LegacyFinancePolicy implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets annualizedPremium
      *
-     * @param string|null $annualizedPremium Annualized premium.
+     * @param string|null $annualizedPremium annualizedPremium
      *
      * @return self
      */
@@ -606,7 +606,7 @@ class LegacyFinancePolicy implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets premiumMode
      *
-     * @param string|null $premiumMode Premium mode.
+     * @param string|null $premiumMode premiumMode
      *
      * @return self
      */
@@ -630,7 +630,7 @@ class LegacyFinancePolicy implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets isOwner
      *
-     * @param string|null $isOwner Is owner.
+     * @param string|null $isOwner isOwner
      *
      * @return self
      */
@@ -654,7 +654,7 @@ class LegacyFinancePolicy implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets isInsured
      *
-     * @param string|null $isInsured Is insured.
+     * @param string|null $isInsured isInsured
      *
      * @return self
      */
@@ -678,7 +678,7 @@ class LegacyFinancePolicy implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets isBeneficiary
      *
-     * @param string|null $isBeneficiary Is beneficiary.
+     * @param string|null $isBeneficiary isBeneficiary
      *
      * @return self
      */
@@ -702,7 +702,7 @@ class LegacyFinancePolicy implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets coverages
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinancePolicyCoverage[]|null $coverages List of policy coverages.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinancePolicyCoverage[]|null $coverages coverages
      *
      * @return self
      */
@@ -726,7 +726,7 @@ class LegacyFinancePolicy implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets status
      *
-     * @param string|null $status Policy status.
+     * @param string|null $status Policy status
      *
      * @return self
      */

@@ -234,7 +234,7 @@ class LegacyFinancePolicyCoverageOption implements ModelInterface, ArrayAccess, 
     /**
      * Sets description
      *
-     * @param string|null $description Option Description.
+     * @param string|null $description Option Description
      *
      * @return self
      */
@@ -258,7 +258,7 @@ class LegacyFinancePolicyCoverageOption implements ModelInterface, ArrayAccess, 
     /**
      * Sets amount
      *
-     * @param string|null $amount Option Amount (where applicable).
+     * @param string|null $amount Option Amount (where applicable)
      *
      * @return self
      */
@@ -282,7 +282,7 @@ class LegacyFinancePolicyCoverageOption implements ModelInterface, ArrayAccess, 
     /**
      * Sets percentage
      *
-     * @param string|null $percentage Option percentage (where applicable).
+     * @param string|null $percentage Option percentage (where applicable)
      *
      * @return self
      */
@@ -306,7 +306,7 @@ class LegacyFinancePolicyCoverageOption implements ModelInterface, ArrayAccess, 
     /**
      * Sets notes
      *
-     * @param string|null $notes Notes.
+     * @param string|null $notes notes
      *
      * @return self
      */

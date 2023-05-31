@@ -189,9 +189,6 @@ class LegacyDocumentDocumentPayload implements ModelInterface, ArrayAccess, \Jso
     {
         $invalidProperties = [];
 
-        if ($this->container['documents'] === null) {
-            $invalidProperties[] = "'documents' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -210,7 +207,7 @@ class LegacyDocumentDocumentPayload implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets documents
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentPayloadItem[]
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentPayloadItem[]|null
      */
     public function getDocuments()
     {
@@ -220,7 +217,7 @@ class LegacyDocumentDocumentPayload implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets documents
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentPayloadItem[] $documents List of documents.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentPayloadItem[]|null $documents List of documents.
      *
      * @return self
      */

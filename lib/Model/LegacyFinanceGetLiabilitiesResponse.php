@@ -309,7 +309,7 @@ class LegacyFinanceGetLiabilitiesResponse implements ModelInterface, ArrayAccess
     /**
      * Sets liabilities
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceLiability[] $liabilities List of liabilities.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceLiability[] $liabilities liabilities
      *
      * @return self
      */

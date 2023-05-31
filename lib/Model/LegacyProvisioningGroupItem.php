@@ -222,7 +222,7 @@ class LegacyProvisioningGroupItem implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets groupId
      *
-     * @param string|null $groupId User unique identifier.
+     * @param string|null $groupId User unique identifier
      *
      * @return self
      */
@@ -246,7 +246,7 @@ class LegacyProvisioningGroupItem implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets name
      *
-     * @param string|null $name Group name.
+     * @param string|null $name Group name
      *
      * @return self
      */

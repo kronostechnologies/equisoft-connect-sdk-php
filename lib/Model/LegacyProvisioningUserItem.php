@@ -280,142 +280,6 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess, \JsonSe
         return self::$openAPIModelName;
     }
 
-    public const ROLE_USER = 'USER';
-    public const ROLE_ADMIN = 'ADMIN';
-    public const ROLE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
-    public const LANG_EN = 'EN';
-    public const LANG_FR = 'FR';
-    public const LANG_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
-    public const ACTIVE_N = 'N';
-    public const ACTIVE_Y = 'Y';
-    public const ACTIVE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
-    public const LOCKED_N = 'N';
-    public const LOCKED_Y = 'Y';
-    public const LOCKED_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
-    public const ENABLE_MOBILE_FALSE = 'false';
-    public const ENABLE_MOBILE_TRUE = 'true';
-    public const ENABLE_MOBILE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
-    public const GENDER_F = 'F';
-    public const GENDER_M = 'M';
-    public const GENDER_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
-    public const ALLOW_DELEGATION_FALSE = 'false';
-    public const ALLOW_DELEGATION_TRUE = 'true';
-    public const ALLOW_DELEGATION_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
-    public const DELETABLE_N = 'N';
-    public const DELETABLE_Y = 'Y';
-    public const DELETABLE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getRoleAllowableValues()
-    {
-        return [
-            self::ROLE_USER,
-            self::ROLE_ADMIN,
-            self::ROLE_UNKNOWN_DEFAULT_OPEN_API,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getLangAllowableValues()
-    {
-        return [
-            self::LANG_EN,
-            self::LANG_FR,
-            self::LANG_UNKNOWN_DEFAULT_OPEN_API,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getActiveAllowableValues()
-    {
-        return [
-            self::ACTIVE_N,
-            self::ACTIVE_Y,
-            self::ACTIVE_UNKNOWN_DEFAULT_OPEN_API,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getLockedAllowableValues()
-    {
-        return [
-            self::LOCKED_N,
-            self::LOCKED_Y,
-            self::LOCKED_UNKNOWN_DEFAULT_OPEN_API,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getEnableMobileAllowableValues()
-    {
-        return [
-            self::ENABLE_MOBILE_FALSE,
-            self::ENABLE_MOBILE_TRUE,
-            self::ENABLE_MOBILE_UNKNOWN_DEFAULT_OPEN_API,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getGenderAllowableValues()
-    {
-        return [
-            self::GENDER_F,
-            self::GENDER_M,
-            self::GENDER_UNKNOWN_DEFAULT_OPEN_API,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getAllowDelegationAllowableValues()
-    {
-        return [
-            self::ALLOW_DELEGATION_FALSE,
-            self::ALLOW_DELEGATION_TRUE,
-            self::ALLOW_DELEGATION_UNKNOWN_DEFAULT_OPEN_API,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getDeletableAllowableValues()
-    {
-        return [
-            self::DELETABLE_N,
-            self::DELETABLE_Y,
-            self::DELETABLE_UNKNOWN_DEFAULT_OPEN_API,
-        ];
-    }
 
     /**
      * Associative array for storing property values
@@ -468,78 +332,6 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess, \JsonSe
     {
         $invalidProperties = [];
 
-        $allowedValues = $this->getRoleAllowableValues();
-        if (!is_null($this->container['role']) && !in_array($this->container['role'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'role', must be one of '%s'",
-                $this->container['role'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getLangAllowableValues();
-        if (!is_null($this->container['lang']) && !in_array($this->container['lang'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'lang', must be one of '%s'",
-                $this->container['lang'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getActiveAllowableValues();
-        if (!is_null($this->container['active']) && !in_array($this->container['active'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'active', must be one of '%s'",
-                $this->container['active'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getLockedAllowableValues();
-        if (!is_null($this->container['locked']) && !in_array($this->container['locked'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'locked', must be one of '%s'",
-                $this->container['locked'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getEnableMobileAllowableValues();
-        if (!is_null($this->container['enableMobile']) && !in_array($this->container['enableMobile'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'enableMobile', must be one of '%s'",
-                $this->container['enableMobile'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getGenderAllowableValues();
-        if (!is_null($this->container['gender']) && !in_array($this->container['gender'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'gender', must be one of '%s'",
-                $this->container['gender'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getAllowDelegationAllowableValues();
-        if (!is_null($this->container['allowDelegation']) && !in_array($this->container['allowDelegation'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'allowDelegation', must be one of '%s'",
-                $this->container['allowDelegation'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getDeletableAllowableValues();
-        if (!is_null($this->container['deletable']) && !in_array($this->container['deletable'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'deletable', must be one of '%s'",
-                $this->container['deletable'],
-                implode("', '", $allowedValues)
-            );
-        }
-
         return $invalidProperties;
     }
 
@@ -568,7 +360,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets orgId
      *
-     * @param string|null $orgId User organization id.
+     * @param string|null $orgId User organization id
      *
      * @return self
      */
@@ -592,7 +384,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets uuid
      *
-     * @param string|null $uuid User globally unique identifier.
+     * @param string|null $uuid User globaly unique identifier
      *
      * @return self
      */
@@ -616,7 +408,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets userId
      *
-     * @param string|null $userId User unique identifier.
+     * @param string|null $userId User unique identifier
      *
      * @return self
      */
@@ -640,7 +432,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets displayName
      *
-     * @param string|null $displayName User display name.
+     * @param string|null $displayName User display name
      *
      * @return self
      */
@@ -664,7 +456,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets firstName
      *
-     * @param string|null $firstName First name.
+     * @param string|null $firstName First name
      *
      * @return self
      */
@@ -688,7 +480,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets lastName
      *
-     * @param string|null $lastName Last name.
+     * @param string|null $lastName Last name
      *
      * @return self
      */
@@ -712,7 +504,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets initials
      *
-     * @param string|null $initials Initials.
+     * @param string|null $initials Initials
      *
      * @return self
      */
@@ -736,7 +528,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets email
      *
-     * @param string|null $email Email address used for login.
+     * @param string|null $email Email address used for login
      *
      * @return self
      */
@@ -760,22 +552,12 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets role
      *
-     * @param string|null $role User role.
+     * @param string|null $role User role. Accepts USER or ADMIN
      *
      * @return self
      */
     public function setRole($role)
     {
-        $allowedValues = $this->getRoleAllowableValues();
-        if (!is_null($role) && !in_array($role, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'role', must be one of '%s'",
-                    $role,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
         $this->container['role'] = $role;
 
         return $this;
@@ -794,22 +576,12 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets lang
      *
-     * @param string|null $lang User language. Organisation default lang will be used if not provided.
+     * @param string|null $lang User language. Organisation default lang will be used if not provided. Accepts FR or EN.
      *
      * @return self
      */
     public function setLang($lang)
     {
-        $allowedValues = $this->getLangAllowableValues();
-        if (!is_null($lang) && !in_array($lang, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'lang', must be one of '%s'",
-                    $lang,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
         $this->container['lang'] = $lang;
 
         return $this;
@@ -852,22 +624,12 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets active
      *
-     * @param string|null $active Is the user active (N: false, Y: true).
+     * @param string|null $active User is active or not (true or false)
      *
      * @return self
      */
     public function setActive($active)
     {
-        $allowedValues = $this->getActiveAllowableValues();
-        if (!is_null($active) && !in_array($active, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'active', must be one of '%s'",
-                    $active,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
         $this->container['active'] = $active;
 
         return $this;
@@ -886,22 +648,12 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets locked
      *
-     * @param string|null $locked Is the user locked (N: false, Y: true).
+     * @param string|null $locked User is locked or not (true or false)
      *
      * @return self
      */
     public function setLocked($locked)
     {
-        $allowedValues = $this->getLockedAllowableValues();
-        if (!is_null($locked) && !in_array($locked, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'locked', must be one of '%s'",
-                    $locked,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
         $this->container['locked'] = $locked;
 
         return $this;
@@ -920,22 +672,12 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets enableMobile
      *
-     * @param string|null $enableMobile Enable Mobile version. Default: false.
+     * @param string|null $enableMobile Enable Mobile version. Accepts true or false. Default false
      *
      * @return self
      */
     public function setEnableMobile($enableMobile)
     {
-        $allowedValues = $this->getEnableMobileAllowableValues();
-        if (!is_null($enableMobile) && !in_array($enableMobile, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'enableMobile', must be one of '%s'",
-                    $enableMobile,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
         $this->container['enableMobile'] = $enableMobile;
 
         return $this;
@@ -954,22 +696,12 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets gender
      *
-     * @param string|null $gender Gender of this user.
+     * @param string|null $gender Gender of this user. Accepts M or F.
      *
      * @return self
      */
     public function setGender($gender)
     {
-        $allowedValues = $this->getGenderAllowableValues();
-        if (!is_null($gender) && !in_array($gender, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'gender', must be one of '%s'",
-                    $gender,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
         $this->container['gender'] = $gender;
 
         return $this;
@@ -988,7 +720,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets phoneWork
      *
-     * @param string|null $phoneWork Work phone number of this user.
+     * @param string|null $phoneWork Work phone number of this user
      *
      * @return self
      */
@@ -1036,7 +768,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets phoneHome
      *
-     * @param string|null $phoneHome Home phone number of this user..
+     * @param string|null $phoneHome Home phone number of this user.
      *
      * @return self
      */
@@ -1156,7 +888,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets externalIdentifiers
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserIdentifier[]|null $externalIdentifiers List of identifier to uniquely identify the user. (Ex: Extranet2 or domain userId).
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserIdentifier[]|null $externalIdentifiers List of identifier to uniquely identify the user. (Ex: Extranet2 or domain userId)
      *
      * @return self
      */
@@ -1180,22 +912,12 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets allowDelegation
      *
-     * @param string|null $allowDelegation Allow the user to delegate access to his data.
+     * @param string|null $allowDelegation Allow the user to delegate access to his data Accepts true or false.
      *
      * @return self
      */
     public function setAllowDelegation($allowDelegation)
     {
-        $allowedValues = $this->getAllowDelegationAllowableValues();
-        if (!is_null($allowDelegation) && !in_array($allowDelegation, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'allowDelegation', must be one of '%s'",
-                    $allowDelegation,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
         $this->container['allowDelegation'] = $allowDelegation;
 
         return $this;
@@ -1214,22 +936,12 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets deletable
      *
-     * @param string|null $deletable Can the user be deleted (N: false, Y: true).
+     * @param string|null $deletable Can the user be deleted Accepts true or false.
      *
      * @return self
      */
     public function setDeletable($deletable)
     {
-        $allowedValues = $this->getDeletableAllowableValues();
-        if (!is_null($deletable) && !in_array($deletable, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'deletable', must be one of '%s'",
-                    $deletable,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
         $this->container['deletable'] = $deletable;
 
         return $this;

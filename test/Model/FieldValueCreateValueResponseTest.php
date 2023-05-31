@@ -1,6 +1,6 @@
 <?php
 /**
- * LegacyProvisioningAddUpdateUserResponseAllOfTest
+ * FieldValueCreateValueResponseTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * LegacyProvisioningAddUpdateUserResponseAllOfTest Class Doc Comment
+ * FieldValueCreateValueResponseTest Class Doc Comment
  *
  * @category    Class
- * @description LegacyProvisioningAddUpdateUserResponseAllOf
+ * @description FieldValueCreateValueResponse
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class LegacyProvisioningAddUpdateUserResponseAllOfTest extends TestCase
+class FieldValueCreateValueResponseTest extends TestCase
 {
 
     /**
@@ -71,18 +71,18 @@ class LegacyProvisioningAddUpdateUserResponseAllOfTest extends TestCase
     }
 
     /**
-     * Test "LegacyProvisioningAddUpdateUserResponseAllOf"
+     * Test "FieldValueCreateValueResponse"
      */
-    public function testLegacyProvisioningAddUpdateUserResponseAllOf()
+    public function testFieldValueCreateValueResponse()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "userId"
+     * Test attribute "valueId"
      */
-    public function testPropertyUserId()
+    public function testPropertyValueId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

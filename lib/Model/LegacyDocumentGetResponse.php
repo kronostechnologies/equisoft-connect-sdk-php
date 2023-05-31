@@ -61,7 +61,7 @@ class LegacyDocumentGetResponse implements ModelInterface, ArrayAccess, \JsonSer
         'stat' => 'string',
         'errorCode' => 'string',
         'errorMsg' => 'string',
-        'documents' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentGetItem[]'
+        'documents' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocument[]'
     ];
 
     /**
@@ -300,7 +300,7 @@ class LegacyDocumentGetResponse implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets documents
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentGetItem[]
+     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocument[]
      */
     public function getDocuments()
     {
@@ -310,7 +310,7 @@ class LegacyDocumentGetResponse implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets documents
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentGetItem[] $documents Array of documents.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocument[] $documents Array of documents.
      *
      * @return self
      */
