@@ -216,7 +216,7 @@ class LegacyFinanceGetLiabilitiesResponseAllOf implements ModelInterface, ArrayA
     /**
      * Sets liabilities
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceLiability[]|null $liabilities liabilities
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceLiability[]|null $liabilities List of liabilities.
      *
      * @return self
      */

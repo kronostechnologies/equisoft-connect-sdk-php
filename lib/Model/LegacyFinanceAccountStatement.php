@@ -235,7 +235,7 @@ class LegacyFinanceAccountStatement implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets plans
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinancePlan[] $plans Array of plan
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinancePlan[] $plans Array of plans
      *
      * @return self
      */
@@ -259,7 +259,7 @@ class LegacyFinanceAccountStatement implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets policies
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinancePolicy[] $policies Array of policy
+     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyFinancePolicy[] $policies Array of policies.
      *
      * @return self
      */
@@ -283,7 +283,7 @@ class LegacyFinanceAccountStatement implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets dealers
      *
-     * @param string|null $dealers Dealer list for denial
+     * @param string|null $dealers Dealer list for denial.
      *
      * @return self
      */

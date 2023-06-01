@@ -72,24 +72,96 @@ class LegacyFinanceApiTest extends TestCase
     }
 
     /**
-     * Test case for getAccountStatement
+     * Test case for legacyFinanceAddContact
      *
-     * Get Account Statement information for a contact..
+     * Create a new contact..
      *
      */
-    public function testGetAccountStatement()
+    public function testLegacyFinanceAddContact()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for getLiabilities
+     * Test case for legacyFinanceGetAccountStatement
+     *
+     * Get Account Statement information for a contact..
+     *
+     */
+    public function testLegacyFinanceGetAccountStatement()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for legacyFinanceGetAccountStatementByExternalId
+     *
+     * Get Account Statement information for a contact..
+     *
+     */
+    public function testLegacyFinanceGetAccountStatementByExternalId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for legacyFinanceGetAssetDetail
+     *
+     * Get asset detail with transactions..
+     *
+     */
+    public function testLegacyFinanceGetAssetDetail()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for legacyFinanceGetContact
+     *
+     * Get complete data for a contact..
+     *
+     */
+    public function testLegacyFinanceGetContact()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for legacyFinanceGetContactList
+     *
+     * Get a list of all contacts..
+     *
+     */
+    public function testLegacyFinanceGetContactList()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for legacyFinanceGetLiabilities
      *
      * Get Liabilities information for a contact..
      *
      */
-    public function testGetLiabilities()
+    public function testLegacyFinanceGetLiabilities()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for legacyFinanceUpdateContact
+     *
+     * Update a contact..
+     *
+     */
+    public function testLegacyFinanceUpdateContact()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

@@ -252,7 +252,7 @@ class LegacyFinanceTransaction implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets type
      *
-     * @param string|null $type type
+     * @param string|null $type Type.
      *
      * @return self
      */
@@ -276,7 +276,7 @@ class LegacyFinanceTransaction implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets description
      *
-     * @param string|null $description description
+     * @param string|null $description Description.
      *
      * @return self
      */
@@ -300,7 +300,7 @@ class LegacyFinanceTransaction implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets netAmount
      *
-     * @param string|null $netAmount netAmount
+     * @param string|null $netAmount Net amount.
      *
      * @return self
      */
@@ -324,7 +324,7 @@ class LegacyFinanceTransaction implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets unitPrice
      *
-     * @param string|null $unitPrice unitPrice
+     * @param string|null $unitPrice Unit price.
      *
      * @return self
      */
@@ -348,7 +348,7 @@ class LegacyFinanceTransaction implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets units
      *
-     * @param string|null $units units
+     * @param string|null $units Units.
      *
      * @return self
      */
@@ -372,7 +372,7 @@ class LegacyFinanceTransaction implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets unitBalance
      *
-     * @param string|null $unitBalance unitBalance
+     * @param string|null $unitBalance Unit balance.
      *
      * @return self
      */
@@ -396,7 +396,7 @@ class LegacyFinanceTransaction implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets dateTransaction
      *
-     * @param string|null $dateTransaction dateTransaction
+     * @param string|null $dateTransaction Date transaction.
      *
      * @return self
      */
