@@ -107,6 +107,8 @@ Class | Method | HTTP request | Description
 *FieldValuesApi* | [**createGroup**](docs/Api/FieldValuesApi.md#creategroup) | **POST** /crm/api/v1/fields/{fieldName}/groups | Create a group
 *FieldValuesApi* | [**createGroupValue**](docs/Api/FieldValuesApi.md#creategroupvalue) | **POST** /crm/api/v1/fields/{fieldName}/groups/{id}/values | Create a group value
 *FieldValuesApi* | [**createValue**](docs/Api/FieldValuesApi.md#createvalue) | **POST** /crm/api/v1/fields/{fieldName}/values | Create a value
+*FieldValuesApi* | [**deleteGroup**](docs/Api/FieldValuesApi.md#deletegroup) | **DELETE** /crm/api/v1/fields/{fieldName}/groups/{id} | Delete single group for a specific field name and group id
+*FieldValuesApi* | [**deleteValue**](docs/Api/FieldValuesApi.md#deletevalue) | **DELETE** /crm/api/v1/fields/{fieldName}/values/{id} | Delete single value for a specific field name and value id
 *FieldValuesApi* | [**getGroup**](docs/Api/FieldValuesApi.md#getgroup) | **GET** /crm/api/v1/fields/{fieldName}/groups/{id} | Get single group for a specific field name and group id
 *FieldValuesApi* | [**getValue**](docs/Api/FieldValuesApi.md#getvalue) | **GET** /crm/api/v1/fields/{fieldName}/values/{id} | Get single value for a specific field name and value id
 *FieldValuesApi* | [**linkValueGroup**](docs/Api/FieldValuesApi.md#linkvaluegroup) | **PUT** /crm/api/v1/fields/{fieldName}/values/{id}/groups | Link a value to a group

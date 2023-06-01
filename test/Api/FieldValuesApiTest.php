@@ -108,6 +108,30 @@ class FieldValuesApiTest extends TestCase
     }
 
     /**
+     * Test case for deleteGroup
+     *
+     * Delete single group for a specific field name and group id.
+     *
+     */
+    public function testDeleteGroup()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for deleteValue
+     *
+     * Delete single value for a specific field name and value id.
+     *
+     */
+    public function testDeleteValue()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for getGroup
      *
      * Get single group for a specific field name and group id.

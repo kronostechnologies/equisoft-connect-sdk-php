@@ -7,6 +7,8 @@ Method | HTTP request | Description
 [**createGroup()**](FieldValuesApi.md#createGroup) | **POST** /crm/api/v1/fields/{fieldName}/groups | Create a group
 [**createGroupValue()**](FieldValuesApi.md#createGroupValue) | **POST** /crm/api/v1/fields/{fieldName}/groups/{id}/values | Create a group value
 [**createValue()**](FieldValuesApi.md#createValue) | **POST** /crm/api/v1/fields/{fieldName}/values | Create a value
+[**deleteGroup()**](FieldValuesApi.md#deleteGroup) | **DELETE** /crm/api/v1/fields/{fieldName}/groups/{id} | Delete single group for a specific field name and group id
+[**deleteValue()**](FieldValuesApi.md#deleteValue) | **DELETE** /crm/api/v1/fields/{fieldName}/values/{id} | Delete single value for a specific field name and value id
 [**getGroup()**](FieldValuesApi.md#getGroup) | **GET** /crm/api/v1/fields/{fieldName}/groups/{id} | Get single group for a specific field name and group id
 [**getValue()**](FieldValuesApi.md#getValue) | **GET** /crm/api/v1/fields/{fieldName}/values/{id} | Get single value for a specific field name and value id
 [**linkValueGroup()**](FieldValuesApi.md#linkValueGroup) | **PUT** /crm/api/v1/fields/{fieldName}/values/{id}/groups | Link a value to a group
@@ -194,6 +196,124 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `deleteGroup()`
+
+```php
+deleteGroup($fieldName, $id)
+```
+
+Delete single group for a specific field name and group id
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Equisoft\SDK\EquisoftConnect\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\FieldValuesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$fieldName = 'fieldName_example'; // string | Field unique identifier.
+$id = 56; // int | group unique identifier.
+
+try {
+    $apiInstance->deleteGroup($fieldName, $id);
+} catch (Exception $e) {
+    echo 'Exception when calling FieldValuesApi->deleteGroup: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fieldName** | **string**| Field unique identifier. |
+ **id** | **int**| group unique identifier. |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[OAuth2](../../README.md#OAuth2)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `deleteValue()`
+
+```php
+deleteValue($fieldName, $id)
+```
+
+Delete single value for a specific field name and value id
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Equisoft\SDK\EquisoftConnect\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\FieldValuesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$fieldName = 'fieldName_example'; // string | Field unique identifier.
+$id = 56; // int | value unique identifier.
+
+try {
+    $apiInstance->deleteValue($fieldName, $id);
+} catch (Exception $e) {
+    echo 'Exception when calling FieldValuesApi->deleteValue: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fieldName** | **string**| Field unique identifier. |
+ **id** | **int**| value unique identifier. |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[OAuth2](../../README.md#OAuth2)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
