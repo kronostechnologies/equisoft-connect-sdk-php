@@ -82,28 +82,4 @@ class RemoteAccountApiTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
-
-    /**
-     * Test case for synchronizeCalendars
-     *
-     * Synchronize calendars with remote account.
-     *
-     */
-    public function testSynchronizeCalendars()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for synchronizeTasks
-     *
-     * Synchronize tasks with remote account.
-     *
-     */
-    public function testSynchronizeTasks()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
 }

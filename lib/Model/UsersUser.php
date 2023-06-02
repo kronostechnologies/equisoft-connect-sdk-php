@@ -64,7 +64,7 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
         'initials' => 'string',
         'locale' => 'string',
         'email' => 'string',
-        'role' => 'string',
+        'role' => '\Equisoft\SDK\EquisoftConnect\Model\UsersRole',
         'aclDelegationAllowed' => 'bool',
         'groups' => '\Equisoft\SDK\EquisoftConnect\Model\UsersUserGroup[]'
     ];
@@ -449,7 +449,7 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets role
      *
-     * @return string
+     * @return \Equisoft\SDK\EquisoftConnect\Model\UsersRole
      */
     public function getRole()
     {
@@ -459,7 +459,7 @@ class UsersUser implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets role
      *
-     * @param string $role The user's role.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\UsersRole $role role
      *
      * @return self
      */

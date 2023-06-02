@@ -129,8 +129,6 @@ Class | Method | HTTP request | Description
 *GatewaysApi* | [**listGenericCredentials**](docs/Api/GatewaysApi.md#listgenericcredentials) | **GET** /crm/api/v1/gateways/generic/{gatewayName}/credentials | 
 *GatewaysApi* | [**patchEquisoftAnalyzeAccess**](docs/Api/GatewaysApi.md#patchequisoftanalyzeaccess) | **PATCH** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} | 
 *GatewaysApi* | [**updateCredentials**](docs/Api/GatewaysApi.md#updatecredentials) | **PUT** /crm/api/v1/gateways/credentials-validation/{gatewayId}/credentials/{status} | 
-*IntegrationsApi* | [**downloadLaserAppEnterpriseContactData**](docs/Api/IntegrationsApi.md#downloadlaserappenterprisecontactdata) | **GET** /crm/api/app/integrations/laserapp/enterprise/{contactId} | Download contact data for LaserApp Enterprise.
-*IntegrationsApi* | [**redirectContactToLaserAppAnywhere**](docs/Api/IntegrationsApi.md#redirectcontacttolaserappanywhere) | **GET** /crm/api/app/integrations/laserapp/anywhere/{contactId} | Redirect contact to LaserApp Anywhere.
 *LegacyContactApi* | [**legacyContactAddContact**](docs/Api/LegacyContactApi.md#legacycontactaddcontact) | **POST** /apps/api/kronos.contact.add | Create a new contact.
 *LegacyContactApi* | [**legacyContactDeleteContact**](docs/Api/LegacyContactApi.md#legacycontactdeletecontact) | **POST** /apps/api/kronos.contact.delete | Delete a contact.
 *LegacyContactApi* | [**legacyContactGetContact**](docs/Api/LegacyContactApi.md#legacycontactgetcontact) | **GET** /apps/api/kronos.contact.get | Get complete record for a contact.
@@ -195,10 +193,7 @@ Class | Method | HTTP request | Description
 *MovementApi* | [**deleteMovement**](docs/Api/MovementApi.md#deletemovement) | **DELETE** /crm/api/v1/movements/{movementId} | Delete a movement.
 *MovementApi* | [**getMovementStatus**](docs/Api/MovementApi.md#getmovementstatus) | **GET** /crm/api/v1/movements/{movementId}/status | Get movement status.
 *MovementApi* | [**listMovements**](docs/Api/MovementApi.md#listmovements) | **GET** /crm/api/v1/movements | List all movements
-*MxApi* | [**validateRecipients**](docs/Api/MxApi.md#validaterecipients) | **POST** /crm/api/app/mail/validateRecipients | Validate recipients
 *RemoteAccountApi* | [**getMailAccountAccessRights**](docs/Api/RemoteAccountApi.md#getmailaccountaccessrights) | **GET** /crm/api/v1/mailAccounts/{remoteAccountId}/accessRights | Return the mail account access rights granted to the currently connected user account.
-*RemoteAccountApi* | [**synchronizeCalendars**](docs/Api/RemoteAccountApi.md#synchronizecalendars) | **POST** /crm/api/agenda/account/calendarSync | Synchronize calendars with remote account
-*RemoteAccountApi* | [**synchronizeTasks**](docs/Api/RemoteAccountApi.md#synchronizetasks) | **POST** /crm/api/agenda/account/tasksSync | Synchronize tasks with remote account
 *TasksApi* | [**archiveTaskInternalNote**](docs/Api/TasksApi.md#archivetaskinternalnote) | **POST** /crm/api/v1/tasks/{taskId}/notes/{noteId}/archive | Archive an internal note for a task.
 *TasksApi* | [**createTask**](docs/Api/TasksApi.md#createtask) | **POST** /crm/api/v1/tasks | Create a task.
 *TasksApi* | [**createTaskInternalNote**](docs/Api/TasksApi.md#createtaskinternalnote) | **POST** /crm/api/v1/tasks/{taskId}/notes | Add an internal note to a task.
@@ -218,7 +213,6 @@ Class | Method | HTTP request | Description
 
 - [AccessRights](docs/Model/AccessRights.md)
 - [AdminCredentialPayload](docs/Model/AdminCredentialPayload.md)
-- [CalendarDefaultCalendarId](docs/Model/CalendarDefaultCalendarId.md)
 - [CalendarsCalendar](docs/Model/CalendarsCalendar.md)
 - [CalendarsListCalendarResponse](docs/Model/CalendarsListCalendarResponse.md)
 - [ContactContactAdditionalInformation](docs/Model/ContactContactAdditionalInformation.md)
@@ -296,7 +290,7 @@ Class | Method | HTTP request | Description
 - [GatewaysGatewaysResponse](docs/Model/GatewaysGatewaysResponse.md)
 - [GatewaysListCredentialsResponse](docs/Model/GatewaysListCredentialsResponse.md)
 - [GroupUsersListGroupUsersResponse](docs/Model/GroupUsersListGroupUsersResponse.md)
-- [HandlersOauth2AssetbookAssetBookTokenPostBody](docs/Model/HandlersOauth2AssetbookAssetBookTokenPostBody.md)
+- [GroupUsersUserOrGroup](docs/Model/GroupUsersUserOrGroup.md)
 - [InternalNotesAuthor](docs/Model/InternalNotesAuthor.md)
 - [InternalNotesCreateNotePayload](docs/Model/InternalNotesCreateNotePayload.md)
 - [InternalNotesCreateNoteResponse](docs/Model/InternalNotesCreateNoteResponse.md)
@@ -327,8 +321,6 @@ Class | Method | HTTP request | Description
 - [KronosFinanceGetContactResponse](docs/Model/KronosFinanceGetContactResponse.md)
 - [KronosFinanceGetContactResponseAllOf](docs/Model/KronosFinanceGetContactResponseAllOf.md)
 - [KronosFinanceJob](docs/Model/KronosFinanceJob.md)
-- [LaserAppLaserAppAnywhereError](docs/Model/LaserAppLaserAppAnywhereError.md)
-- [LaserAppLaserAppAnywhereResponse](docs/Model/LaserAppLaserAppAnywhereResponse.md)
 - [LegacyAddUpdateItem](docs/Model/LegacyAddUpdateItem.md)
 - [LegacyAddUpdateResponse](docs/Model/LegacyAddUpdateResponse.md)
 - [LegacyAddUpdateResponseAllOf](docs/Model/LegacyAddUpdateResponseAllOf.md)
@@ -476,46 +468,30 @@ Class | Method | HTTP request | Description
 - [LegacyUser](docs/Model/LegacyUser.md)
 - [MovementAddMovementResponse](docs/Model/MovementAddMovementResponse.md)
 - [MovementClientBaseUsingDistributionListMovement](docs/Model/MovementClientBaseUsingDistributionListMovement.md)
-- [MovementClientBaseUsingDistributionListMovementAllOf](docs/Model/MovementClientBaseUsingDistributionListMovementAllOf.md)
 - [MovementClientBaseUsingDistributionListMovementPayload](docs/Model/MovementClientBaseUsingDistributionListMovementPayload.md)
-- [MovementClientBaseUsingDistributionListMovementPayloadAllOf](docs/Model/MovementClientBaseUsingDistributionListMovementPayloadAllOf.md)
 - [MovementClientBaseUsingFileMovement](docs/Model/MovementClientBaseUsingFileMovement.md)
-- [MovementClientBaseUsingFileMovementAllOf](docs/Model/MovementClientBaseUsingFileMovementAllOf.md)
 - [MovementClientBaseUsingFileMovementPayload](docs/Model/MovementClientBaseUsingFileMovementPayload.md)
-- [MovementClientBaseUsingFileMovementPayloadAllOf](docs/Model/MovementClientBaseUsingFileMovementPayloadAllOf.md)
 - [MovementCopyMovement](docs/Model/MovementCopyMovement.md)
-- [MovementCopyMovementAllOf](docs/Model/MovementCopyMovementAllOf.md)
 - [MovementCopyMovementPayload](docs/Model/MovementCopyMovementPayload.md)
-- [MovementCopyMovementPayloadAllOf](docs/Model/MovementCopyMovementPayloadAllOf.md)
 - [MovementDatabase](docs/Model/MovementDatabase.md)
 - [MovementDistributionList](docs/Model/MovementDistributionList.md)
 - [MovementGatewayAccessCode](docs/Model/MovementGatewayAccessCode.md)
 - [MovementGetStatusResponse](docs/Model/MovementGetStatusResponse.md)
 - [MovementListMovementResponse](docs/Model/MovementListMovementResponse.md)
 - [MovementMoveMovement](docs/Model/MovementMoveMovement.md)
-- [MovementMoveMovementAllOf](docs/Model/MovementMoveMovementAllOf.md)
 - [MovementMoveMovementPayload](docs/Model/MovementMoveMovementPayload.md)
-- [MovementMoveMovementPayloadAllOf](docs/Model/MovementMoveMovementPayloadAllOf.md)
 - [MovementMovement](docs/Model/MovementMovement.md)
 - [MovementMovementPayload](docs/Model/MovementMovementPayload.md)
 - [MovementMovementStatus](docs/Model/MovementMovementStatus.md)
 - [MovementMovementType](docs/Model/MovementMovementType.md)
 - [MovementReassignmentMovement](docs/Model/MovementReassignmentMovement.md)
-- [MovementReassignmentMovementAllOf](docs/Model/MovementReassignmentMovementAllOf.md)
 - [MovementReassignmentMovementPayload](docs/Model/MovementReassignmentMovementPayload.md)
-- [MovementReassignmentMovementPayloadAllOf](docs/Model/MovementReassignmentMovementPayloadAllOf.md)
 - [MovementTransferOption](docs/Model/MovementTransferOption.md)
 - [MovementUser](docs/Model/MovementUser.md)
 - [MovementUserTuple](docs/Model/MovementUserTuple.md)
 - [MovementUserTuplePayload](docs/Model/MovementUserTuplePayload.md)
 - [MovementValidationError](docs/Model/MovementValidationError.md)
 - [MovementValidationErrorResponse](docs/Model/MovementValidationErrorResponse.md)
-- [MxRecipient](docs/Model/MxRecipient.md)
-- [MxRecipientsPayload](docs/Model/MxRecipientsPayload.md)
-- [MxValidateRecipientsResponse](docs/Model/MxValidateRecipientsResponse.md)
-- [RemoteaccountAccountSyncResponse](docs/Model/RemoteaccountAccountSyncResponse.md)
-- [RemoteaccountSyncStatus](docs/Model/RemoteaccountSyncStatus.md)
-- [RemoteaccountSyncTaskStatus](docs/Model/RemoteaccountSyncTaskStatus.md)
 - [TasksCreateTaskPayload](docs/Model/TasksCreateTaskPayload.md)
 - [TasksCreateTaskResponse](docs/Model/TasksCreateTaskResponse.md)
 - [TasksDueDateFilter](docs/Model/TasksDueDateFilter.md)

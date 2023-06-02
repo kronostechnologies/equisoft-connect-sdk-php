@@ -64,8 +64,22 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
       * @var string[]
       */
     protected static $openAPITypes = [
+        'type' => '\Equisoft\SDK\EquisoftConnect\Model\MovementMovementType',
         'date' => 'string',
-        'now' => 'bool'
+        'now' => 'bool',
+        'sourceDatabase' => 'string',
+        'destinationDatabase' => 'string',
+        'users' => 'string[]',
+        'userTuples' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUserTuplePayload[]',
+        'sourceUser' => 'string',
+        'destinationUser' => 'string',
+        'accessCode' => 'string',
+        'sourceDistributionList' => 'string',
+        'datagatewayAccessMappings' => 'array<string,string>',
+        'transferOption' => '\Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption',
+        'capsilFile' => 'string',
+        'univerisFile' => 'string',
+        'dataphileFile' => 'string'
     ];
 
     /**
@@ -76,8 +90,22 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'type' => null,
         'date' => null,
-        'now' => null
+        'now' => null,
+        'sourceDatabase' => null,
+        'destinationDatabase' => null,
+        'users' => null,
+        'userTuples' => null,
+        'sourceUser' => null,
+        'destinationUser' => null,
+        'accessCode' => null,
+        'sourceDistributionList' => null,
+        'datagatewayAccessMappings' => null,
+        'transferOption' => null,
+        'capsilFile' => null,
+        'univerisFile' => null,
+        'dataphileFile' => null
     ];
 
     /**
@@ -107,8 +135,22 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $attributeMap = [
+        'type' => 'type',
         'date' => 'date',
-        'now' => 'now'
+        'now' => 'now',
+        'sourceDatabase' => 'sourceDatabase',
+        'destinationDatabase' => 'destinationDatabase',
+        'users' => 'users',
+        'userTuples' => 'userTuples',
+        'sourceUser' => 'sourceUser',
+        'destinationUser' => 'destinationUser',
+        'accessCode' => 'accessCode',
+        'sourceDistributionList' => 'sourceDistributionList',
+        'datagatewayAccessMappings' => 'datagatewayAccessMappings',
+        'transferOption' => 'transferOption',
+        'capsilFile' => 'capsilFile',
+        'univerisFile' => 'univerisFile',
+        'dataphileFile' => 'dataphileFile'
     ];
 
     /**
@@ -117,8 +159,22 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $setters = [
+        'type' => 'setType',
         'date' => 'setDate',
-        'now' => 'setNow'
+        'now' => 'setNow',
+        'sourceDatabase' => 'setSourceDatabase',
+        'destinationDatabase' => 'setDestinationDatabase',
+        'users' => 'setUsers',
+        'userTuples' => 'setUserTuples',
+        'sourceUser' => 'setSourceUser',
+        'destinationUser' => 'setDestinationUser',
+        'accessCode' => 'setAccessCode',
+        'sourceDistributionList' => 'setSourceDistributionList',
+        'datagatewayAccessMappings' => 'setDatagatewayAccessMappings',
+        'transferOption' => 'setTransferOption',
+        'capsilFile' => 'setCapsilFile',
+        'univerisFile' => 'setUniverisFile',
+        'dataphileFile' => 'setDataphileFile'
     ];
 
     /**
@@ -127,8 +183,22 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $getters = [
+        'type' => 'getType',
         'date' => 'getDate',
-        'now' => 'getNow'
+        'now' => 'getNow',
+        'sourceDatabase' => 'getSourceDatabase',
+        'destinationDatabase' => 'getDestinationDatabase',
+        'users' => 'getUsers',
+        'userTuples' => 'getUserTuples',
+        'sourceUser' => 'getSourceUser',
+        'destinationUser' => 'getDestinationUser',
+        'accessCode' => 'getAccessCode',
+        'sourceDistributionList' => 'getSourceDistributionList',
+        'datagatewayAccessMappings' => 'getDatagatewayAccessMappings',
+        'transferOption' => 'getTransferOption',
+        'capsilFile' => 'getCapsilFile',
+        'univerisFile' => 'getUniverisFile',
+        'dataphileFile' => 'getDataphileFile'
     ];
 
     /**
@@ -188,8 +258,22 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
      */
     public function __construct(array $data = null)
     {
+        $this->container['type'] = $data['type'] ?? null;
         $this->container['date'] = $data['date'] ?? null;
         $this->container['now'] = $data['now'] ?? null;
+        $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
+        $this->container['destinationDatabase'] = $data['destinationDatabase'] ?? null;
+        $this->container['users'] = $data['users'] ?? null;
+        $this->container['userTuples'] = $data['userTuples'] ?? null;
+        $this->container['sourceUser'] = $data['sourceUser'] ?? null;
+        $this->container['destinationUser'] = $data['destinationUser'] ?? null;
+        $this->container['accessCode'] = $data['accessCode'] ?? null;
+        $this->container['sourceDistributionList'] = $data['sourceDistributionList'] ?? null;
+        $this->container['datagatewayAccessMappings'] = $data['datagatewayAccessMappings'] ?? null;
+        $this->container['transferOption'] = $data['transferOption'] ?? null;
+        $this->container['capsilFile'] = $data['capsilFile'] ?? null;
+        $this->container['univerisFile'] = $data['univerisFile'] ?? null;
+        $this->container['dataphileFile'] = $data['dataphileFile'] ?? null;
 
         // Initialize discriminator property with the model name.
         $this->container['type'] = static::$openAPIModelName;
@@ -204,6 +288,30 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
     {
         $invalidProperties = [];
 
+        if ($this->container['sourceDatabase'] === null) {
+            $invalidProperties[] = "'sourceDatabase' can't be null";
+        }
+        if ($this->container['destinationDatabase'] === null) {
+            $invalidProperties[] = "'destinationDatabase' can't be null";
+        }
+        if ($this->container['users'] === null) {
+            $invalidProperties[] = "'users' can't be null";
+        }
+        if ($this->container['userTuples'] === null) {
+            $invalidProperties[] = "'userTuples' can't be null";
+        }
+        if ($this->container['sourceUser'] === null) {
+            $invalidProperties[] = "'sourceUser' can't be null";
+        }
+        if ($this->container['destinationUser'] === null) {
+            $invalidProperties[] = "'destinationUser' can't be null";
+        }
+        if ($this->container['accessCode'] === null) {
+            $invalidProperties[] = "'accessCode' can't be null";
+        }
+        if ($this->container['transferOption'] === null) {
+            $invalidProperties[] = "'transferOption' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -218,6 +326,30 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets type
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementMovementType|null
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementMovementType|null $type type
+     *
+     * @return self
+     */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
+
+        return $this;
+    }
 
     /**
      * Gets date
@@ -263,6 +395,318 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
     public function setNow($now)
     {
         $this->container['now'] = $now;
+
+        return $this;
+    }
+
+    /**
+     * Gets sourceDatabase
+     *
+     * @return string
+     */
+    public function getSourceDatabase()
+    {
+        return $this->container['sourceDatabase'];
+    }
+
+    /**
+     * Sets sourceDatabase
+     *
+     * @param string $sourceDatabase Source database full name.
+     *
+     * @return self
+     */
+    public function setSourceDatabase($sourceDatabase)
+    {
+        $this->container['sourceDatabase'] = $sourceDatabase;
+
+        return $this;
+    }
+
+    /**
+     * Gets destinationDatabase
+     *
+     * @return string
+     */
+    public function getDestinationDatabase()
+    {
+        return $this->container['destinationDatabase'];
+    }
+
+    /**
+     * Sets destinationDatabase
+     *
+     * @param string $destinationDatabase Destination database full name.
+     *
+     * @return self
+     */
+    public function setDestinationDatabase($destinationDatabase)
+    {
+        $this->container['destinationDatabase'] = $destinationDatabase;
+
+        return $this;
+    }
+
+    /**
+     * Gets users
+     *
+     * @return string[]
+     */
+    public function getUsers()
+    {
+        return $this->container['users'];
+    }
+
+    /**
+     * Sets users
+     *
+     * @param string[] $users List of users id.
+     *
+     * @return self
+     */
+    public function setUsers($users)
+    {
+        $this->container['users'] = $users;
+
+        return $this;
+    }
+
+    /**
+     * Gets userTuples
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUserTuplePayload[]
+     */
+    public function getUserTuples()
+    {
+        return $this->container['userTuples'];
+    }
+
+    /**
+     * Sets userTuples
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUserTuplePayload[] $userTuples User tuples.
+     *
+     * @return self
+     */
+    public function setUserTuples($userTuples)
+    {
+        $this->container['userTuples'] = $userTuples;
+
+        return $this;
+    }
+
+    /**
+     * Gets sourceUser
+     *
+     * @return string
+     */
+    public function getSourceUser()
+    {
+        return $this->container['sourceUser'];
+    }
+
+    /**
+     * Sets sourceUser
+     *
+     * @param string $sourceUser Source user id.
+     *
+     * @return self
+     */
+    public function setSourceUser($sourceUser)
+    {
+        $this->container['sourceUser'] = $sourceUser;
+
+        return $this;
+    }
+
+    /**
+     * Gets destinationUser
+     *
+     * @return string
+     */
+    public function getDestinationUser()
+    {
+        return $this->container['destinationUser'];
+    }
+
+    /**
+     * Sets destinationUser
+     *
+     * @param string $destinationUser Destination user id.
+     *
+     * @return self
+     */
+    public function setDestinationUser($destinationUser)
+    {
+        $this->container['destinationUser'] = $destinationUser;
+
+        return $this;
+    }
+
+    /**
+     * Gets accessCode
+     *
+     * @return string
+     */
+    public function getAccessCode()
+    {
+        return $this->container['accessCode'];
+    }
+
+    /**
+     * Sets accessCode
+     *
+     * @param string $accessCode Access code. Format: dataGatewayType~~system~dealerCode-repCode.
+     *
+     * @return self
+     */
+    public function setAccessCode($accessCode)
+    {
+        $this->container['accessCode'] = $accessCode;
+
+        return $this;
+    }
+
+    /**
+     * Gets sourceDistributionList
+     *
+     * @return string|null
+     */
+    public function getSourceDistributionList()
+    {
+        return $this->container['sourceDistributionList'];
+    }
+
+    /**
+     * Sets sourceDistributionList
+     *
+     * @param string|null $sourceDistributionList Source distribution list.
+     *
+     * @return self
+     */
+    public function setSourceDistributionList($sourceDistributionList)
+    {
+        $this->container['sourceDistributionList'] = $sourceDistributionList;
+
+        return $this;
+    }
+
+    /**
+     * Gets datagatewayAccessMappings
+     *
+     * @return array<string,string>|null
+     */
+    public function getDatagatewayAccessMappings()
+    {
+        return $this->container['datagatewayAccessMappings'];
+    }
+
+    /**
+     * Sets datagatewayAccessMappings
+     *
+     * @param array<string,string>|null $datagatewayAccessMappings Data gateway access mapping.
+     *
+     * @return self
+     */
+    public function setDatagatewayAccessMappings($datagatewayAccessMappings)
+    {
+        $this->container['datagatewayAccessMappings'] = $datagatewayAccessMappings;
+
+        return $this;
+    }
+
+    /**
+     * Gets transferOption
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption
+     */
+    public function getTransferOption()
+    {
+        return $this->container['transferOption'];
+    }
+
+    /**
+     * Sets transferOption
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption $transferOption transferOption
+     *
+     * @return self
+     */
+    public function setTransferOption($transferOption)
+    {
+        $this->container['transferOption'] = $transferOption;
+
+        return $this;
+    }
+
+    /**
+     * Gets capsilFile
+     *
+     * @return string|null
+     */
+    public function getCapsilFile()
+    {
+        return $this->container['capsilFile'];
+    }
+
+    /**
+     * Sets capsilFile
+     *
+     * @param string|null $capsilFile Path to the Capsil file.
+     *
+     * @return self
+     */
+    public function setCapsilFile($capsilFile)
+    {
+        $this->container['capsilFile'] = $capsilFile;
+
+        return $this;
+    }
+
+    /**
+     * Gets univerisFile
+     *
+     * @return string|null
+     */
+    public function getUniverisFile()
+    {
+        return $this->container['univerisFile'];
+    }
+
+    /**
+     * Sets univerisFile
+     *
+     * @param string|null $univerisFile Path to the Univeris file. Deprecated: Univeris file is not supported anymore and will be removed in a future version.
+     *
+     * @return self
+     */
+    public function setUniverisFile($univerisFile)
+    {
+        $this->container['univerisFile'] = $univerisFile;
+
+        return $this;
+    }
+
+    /**
+     * Gets dataphileFile
+     *
+     * @return string|null
+     */
+    public function getDataphileFile()
+    {
+        return $this->container['dataphileFile'];
+    }
+
+    /**
+     * Sets dataphileFile
+     *
+     * @param string|null $dataphileFile Path to the Dataphile.
+     *
+     * @return self
+     */
+    public function setDataphileFile($dataphileFile)
+    {
+        $this->container['dataphileFile'] = $dataphileFile;
 
         return $this;
     }

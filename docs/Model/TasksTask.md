@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **category** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValue**](FieldValue.md) | Event category. | [optional]
 **subCategory** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValue**](FieldValue.md) | Event sub category. | [optional]
 **priority** | **int** | Importance/Priority of an event or task. 5 is the most important. |
-**visibility** | **string** | Confidentiality level of the Event (private or not). [NORMAL, PRIVATE]. |
+**visibility** | [**\Equisoft\SDK\EquisoftConnect\Model\TasksVisibilityType**](TasksVisibilityType.md) |  |
 **creationTime** | **\DateTime** | Creation time. As defined by date-time - RFC3339. | [optional]
 **updateTime** | **\DateTime** | Date time of last modification. As defined by date-time - RFC3339. | [optional]
 **completionTime** | **\DateTime** | Completion time. As defined by date-time - RFC3339. | [optional]

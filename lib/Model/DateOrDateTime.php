@@ -35,6 +35,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * DateOrDateTime Class Doc Comment
  *
  * @category Class
+ * @description Date or datetime.
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech

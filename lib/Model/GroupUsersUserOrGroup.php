@@ -1,6 +1,6 @@
 <?php
 /**
- * LegacyProvisioningGetOrganizationResponse
+ * GroupUsersUserOrGroup
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * LegacyProvisioningGetOrganizationResponse Class Doc Comment
+ * GroupUsersUserOrGroup Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
@@ -40,7 +40,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class LegacyProvisioningGetOrganizationResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class GroupUsersUserOrGroup implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class LegacyProvisioningGetOrganizationResponse implements ModelInterface, Array
       *
       * @var string
       */
-    protected static $openAPIModelName = 'legacy.provisioning.GetOrganizationResponse';
+    protected static $openAPIModelName = 'groupUsers.UserOrGroup';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,10 +57,9 @@ class LegacyProvisioningGetOrganizationResponse implements ModelInterface, Array
       * @var string[]
       */
     protected static $openAPITypes = [
-        'stat' => 'string',
-        'errorCode' => 'string',
-        'errorMsg' => 'string',
-        'organization' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem'
+        'id' => 'int',
+        'displayName' => 'string',
+        'type' => 'string'
     ];
 
     /**
@@ -71,10 +70,9 @@ class LegacyProvisioningGetOrganizationResponse implements ModelInterface, Array
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'stat' => null,
-        'errorCode' => null,
-        'errorMsg' => null,
-        'organization' => null
+        'id' => null,
+        'displayName' => null,
+        'type' => null
     ];
 
     /**
@@ -104,10 +102,9 @@ class LegacyProvisioningGetOrganizationResponse implements ModelInterface, Array
      * @var string[]
      */
     protected static $attributeMap = [
-        'stat' => 'stat',
-        'errorCode' => 'error_code',
-        'errorMsg' => 'error_msg',
-        'organization' => 'organization'
+        'id' => 'id',
+        'displayName' => 'displayName',
+        'type' => 'type'
     ];
 
     /**
@@ -116,10 +113,9 @@ class LegacyProvisioningGetOrganizationResponse implements ModelInterface, Array
      * @var string[]
      */
     protected static $setters = [
-        'stat' => 'setStat',
-        'errorCode' => 'setErrorCode',
-        'errorMsg' => 'setErrorMsg',
-        'organization' => 'setOrganization'
+        'id' => 'setId',
+        'displayName' => 'setDisplayName',
+        'type' => 'setType'
     ];
 
     /**
@@ -128,10 +124,9 @@ class LegacyProvisioningGetOrganizationResponse implements ModelInterface, Array
      * @var string[]
      */
     protected static $getters = [
-        'stat' => 'getStat',
-        'errorCode' => 'getErrorCode',
-        'errorMsg' => 'getErrorMsg',
-        'organization' => 'getOrganization'
+        'id' => 'getId',
+        'displayName' => 'getDisplayName',
+        'type' => 'getType'
     ];
 
     /**
@@ -175,6 +170,23 @@ class LegacyProvisioningGetOrganizationResponse implements ModelInterface, Array
         return self::$openAPIModelName;
     }
 
+    public const TYPE_USER = 'USER';
+    public const TYPE_GROUP = 'GROUP';
+    public const TYPE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_USER,
+            self::TYPE_GROUP,
+            self::TYPE_UNKNOWN_DEFAULT_OPEN_API,
+        ];
+    }
 
     /**
      * Associative array for storing property values
@@ -191,10 +203,9 @@ class LegacyProvisioningGetOrganizationResponse implements ModelInterface, Array
      */
     public function __construct(array $data = null)
     {
-        $this->container['stat'] = $data['stat'] ?? null;
-        $this->container['errorCode'] = $data['errorCode'] ?? null;
-        $this->container['errorMsg'] = $data['errorMsg'] ?? null;
-        $this->container['organization'] = $data['organization'] ?? null;
+        $this->container['id'] = $data['id'] ?? null;
+        $this->container['displayName'] = $data['displayName'] ?? null;
+        $this->container['type'] = $data['type'] ?? null;
     }
 
     /**
@@ -206,9 +217,15 @@ class LegacyProvisioningGetOrganizationResponse implements ModelInterface, Array
     {
         $invalidProperties = [];
 
-        if ($this->container['organization'] === null) {
-            $invalidProperties[] = "'organization' can't be null";
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'type', must be one of '%s'",
+                $this->container['type'],
+                implode("', '", $allowedValues)
+            );
         }
+
         return $invalidProperties;
     }
 
@@ -225,97 +242,83 @@ class LegacyProvisioningGetOrganizationResponse implements ModelInterface, Array
 
 
     /**
-     * Gets stat
+     * Gets id
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getStat()
+    public function getId()
     {
-        return $this->container['stat'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets stat
+     * Sets id
      *
-     * @param string|null $stat Status of the request that has been made. Can be 'ok' or 'fail'.
+     * @param int|null $id Id.
      *
      * @return self
      */
-    public function setStat($stat)
+    public function setId($id)
     {
-        $this->container['stat'] = $stat;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets errorCode
+     * Gets displayName
      *
      * @return string|null
      */
-    public function getErrorCode()
+    public function getDisplayName()
     {
-        return $this->container['errorCode'];
+        return $this->container['displayName'];
     }
 
     /**
-     * Sets errorCode
+     * Sets displayName
      *
-     * @param string|null $errorCode If the request has failed, this element will contain the error code related to the problem encountered.
+     * @param string|null $displayName Display name.
      *
      * @return self
      */
-    public function setErrorCode($errorCode)
+    public function setDisplayName($displayName)
     {
-        $this->container['errorCode'] = $errorCode;
+        $this->container['displayName'] = $displayName;
 
         return $this;
     }
 
     /**
-     * Gets errorMsg
+     * Gets type
      *
      * @return string|null
      */
-    public function getErrorMsg()
+    public function getType()
     {
-        return $this->container['errorMsg'];
+        return $this->container['type'];
     }
 
     /**
-     * Sets errorMsg
+     * Sets type
      *
-     * @param string|null $errorMsg If the request has failed, this element will contain the error message related to the problem encountered.
+     * @param string|null $type Type.
      *
      * @return self
      */
-    public function setErrorMsg($errorMsg)
+    public function setType($type)
     {
-        $this->container['errorMsg'] = $errorMsg;
-
-        return $this;
-    }
-
-    /**
-     * Gets organization
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem
-     */
-    public function getOrganization()
-    {
-        return $this->container['organization'];
-    }
-
-    /**
-     * Sets organization
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationItem $organization organization
-     *
-     * @return self
-     */
-    public function setOrganization($organization)
-    {
-        $this->container['organization'] = $organization;
+        $allowedValues = $this->getTypeAllowableValues();
+        if (!is_null($type) && !in_array($type, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'type', must be one of '%s'",
+                    $type,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['type'] = $type;
 
         return $this;
     }
