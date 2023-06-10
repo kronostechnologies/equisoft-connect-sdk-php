@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * UsersRoleTest Class Doc Comment
  *
  * @category    Class
- * @description User&#39;s role.
+ * @description UsersRole
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * EventsEventTypeTest Class Doc Comment
  *
  * @category    Class
- * @description Event type.
+ * @description EventsEventType
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

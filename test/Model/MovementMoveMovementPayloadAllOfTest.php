@@ -1,6 +1,6 @@
 <?php
 /**
- * FieldValueLinkGroupValuePayloadTest
+ * MovementMoveMovementPayloadAllOfTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * FieldValueLinkGroupValuePayloadTest Class Doc Comment
+ * MovementMoveMovementPayloadAllOfTest Class Doc Comment
  *
  * @category    Class
- * @description FieldValueLinkGroupValuePayload
+ * @description MovementMoveMovementPayloadAllOf
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class FieldValueLinkGroupValuePayloadTest extends TestCase
+class MovementMoveMovementPayloadAllOfTest extends TestCase
 {
 
     /**
@@ -71,18 +71,45 @@ class FieldValueLinkGroupValuePayloadTest extends TestCase
     }
 
     /**
-     * Test "FieldValueLinkGroupValuePayload"
+     * Test "MovementMoveMovementPayloadAllOf"
      */
-    public function testFieldValueLinkGroupValuePayload()
+    public function testMovementMoveMovementPayloadAllOf()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "groupId"
+     * Test attribute "type"
      */
-    public function testPropertyGroupId()
+    public function testPropertyType()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "sourceDatabase"
+     */
+    public function testPropertySourceDatabase()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "destinationDatabase"
+     */
+    public function testPropertyDestinationDatabase()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "users"
+     */
+    public function testPropertyUsers()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
