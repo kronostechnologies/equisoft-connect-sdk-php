@@ -33,6 +33,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * EventsEventType Class Doc Comment
  *
  * @category Class
+ * @description Event type.
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech

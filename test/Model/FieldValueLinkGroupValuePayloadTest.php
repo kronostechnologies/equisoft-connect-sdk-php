@@ -1,6 +1,6 @@
 <?php
 /**
- * MovementMoveMovementPayloadAllOfTest
+ * FieldValueLinkGroupValuePayloadTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * MovementMoveMovementPayloadAllOfTest Class Doc Comment
+ * FieldValueLinkGroupValuePayloadTest Class Doc Comment
  *
  * @category    Class
- * @description MovementMoveMovementPayloadAllOf
+ * @description FieldValueLinkGroupValuePayload
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class MovementMoveMovementPayloadAllOfTest extends TestCase
+class FieldValueLinkGroupValuePayloadTest extends TestCase
 {
 
     /**
@@ -71,45 +71,18 @@ class MovementMoveMovementPayloadAllOfTest extends TestCase
     }
 
     /**
-     * Test "MovementMoveMovementPayloadAllOf"
+     * Test "FieldValueLinkGroupValuePayload"
      */
-    public function testMovementMoveMovementPayloadAllOf()
+    public function testFieldValueLinkGroupValuePayload()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "type"
+     * Test attribute "groupId"
      */
-    public function testPropertyType()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "sourceDatabase"
-     */
-    public function testPropertySourceDatabase()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "destinationDatabase"
-     */
-    public function testPropertyDestinationDatabase()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "users"
-     */
-    public function testPropertyUsers()
+    public function testPropertyGroupId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

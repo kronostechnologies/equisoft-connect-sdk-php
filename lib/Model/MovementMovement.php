@@ -64,6 +64,7 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
+        'type' => '\Equisoft\SDK\EquisoftConnect\Model\MovementMovementType',
         'id' => 'int',
         'status' => 'string',
         'availableAction' => 'string',
@@ -72,7 +73,20 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
         'addedDate' => 'string',
         'addedBy' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
         'cancelledDate' => 'string',
-        'cancelledBy' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser'
+        'cancelledBy' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
+        'sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
+        'destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
+        'users' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser[]',
+        'userTuples' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUserTuple[]',
+        'sourceUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
+        'destinationUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
+        'accessCode' => '\Equisoft\SDK\EquisoftConnect\Model\MovementGatewayAccessCode',
+        'sourceDistributionList' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDistributionList',
+        'datagatewayAccessMappings' => 'array<string,string>',
+        'transferOption' => '\Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption',
+        'capsil' => 'bool',
+        'univeris' => 'bool',
+        'dataphile' => 'bool'
     ];
 
     /**
@@ -83,6 +97,7 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'type' => null,
         'id' => null,
         'status' => null,
         'availableAction' => null,
@@ -91,7 +106,20 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
         'addedDate' => null,
         'addedBy' => null,
         'cancelledDate' => null,
-        'cancelledBy' => null
+        'cancelledBy' => null,
+        'sourceDatabase' => null,
+        'destinationDatabase' => null,
+        'users' => null,
+        'userTuples' => null,
+        'sourceUser' => null,
+        'destinationUser' => null,
+        'accessCode' => null,
+        'sourceDistributionList' => null,
+        'datagatewayAccessMappings' => null,
+        'transferOption' => null,
+        'capsil' => null,
+        'univeris' => null,
+        'dataphile' => null
     ];
 
     /**
@@ -121,6 +149,7 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
+        'type' => 'type',
         'id' => 'id',
         'status' => 'status',
         'availableAction' => 'availableAction',
@@ -129,7 +158,20 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
         'addedDate' => 'addedDate',
         'addedBy' => 'addedBy',
         'cancelledDate' => 'cancelledDate',
-        'cancelledBy' => 'cancelledBy'
+        'cancelledBy' => 'cancelledBy',
+        'sourceDatabase' => 'sourceDatabase',
+        'destinationDatabase' => 'destinationDatabase',
+        'users' => 'users',
+        'userTuples' => 'userTuples',
+        'sourceUser' => 'sourceUser',
+        'destinationUser' => 'destinationUser',
+        'accessCode' => 'accessCode',
+        'sourceDistributionList' => 'sourceDistributionList',
+        'datagatewayAccessMappings' => 'datagatewayAccessMappings',
+        'transferOption' => 'transferOption',
+        'capsil' => 'capsil',
+        'univeris' => 'univeris',
+        'dataphile' => 'dataphile'
     ];
 
     /**
@@ -138,6 +180,7 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
+        'type' => 'setType',
         'id' => 'setId',
         'status' => 'setStatus',
         'availableAction' => 'setAvailableAction',
@@ -146,7 +189,20 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
         'addedDate' => 'setAddedDate',
         'addedBy' => 'setAddedBy',
         'cancelledDate' => 'setCancelledDate',
-        'cancelledBy' => 'setCancelledBy'
+        'cancelledBy' => 'setCancelledBy',
+        'sourceDatabase' => 'setSourceDatabase',
+        'destinationDatabase' => 'setDestinationDatabase',
+        'users' => 'setUsers',
+        'userTuples' => 'setUserTuples',
+        'sourceUser' => 'setSourceUser',
+        'destinationUser' => 'setDestinationUser',
+        'accessCode' => 'setAccessCode',
+        'sourceDistributionList' => 'setSourceDistributionList',
+        'datagatewayAccessMappings' => 'setDatagatewayAccessMappings',
+        'transferOption' => 'setTransferOption',
+        'capsil' => 'setCapsil',
+        'univeris' => 'setUniveris',
+        'dataphile' => 'setDataphile'
     ];
 
     /**
@@ -155,6 +211,7 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
+        'type' => 'getType',
         'id' => 'getId',
         'status' => 'getStatus',
         'availableAction' => 'getAvailableAction',
@@ -163,7 +220,20 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
         'addedDate' => 'getAddedDate',
         'addedBy' => 'getAddedBy',
         'cancelledDate' => 'getCancelledDate',
-        'cancelledBy' => 'getCancelledBy'
+        'cancelledBy' => 'getCancelledBy',
+        'sourceDatabase' => 'getSourceDatabase',
+        'destinationDatabase' => 'getDestinationDatabase',
+        'users' => 'getUsers',
+        'userTuples' => 'getUserTuples',
+        'sourceUser' => 'getSourceUser',
+        'destinationUser' => 'getDestinationUser',
+        'accessCode' => 'getAccessCode',
+        'sourceDistributionList' => 'getSourceDistributionList',
+        'datagatewayAccessMappings' => 'getDatagatewayAccessMappings',
+        'transferOption' => 'getTransferOption',
+        'capsil' => 'getCapsil',
+        'univeris' => 'getUniveris',
+        'dataphile' => 'getDataphile'
     ];
 
     /**
@@ -223,6 +293,7 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
+        $this->container['type'] = $data['type'] ?? null;
         $this->container['id'] = $data['id'] ?? null;
         $this->container['status'] = $data['status'] ?? null;
         $this->container['availableAction'] = $data['availableAction'] ?? null;
@@ -232,6 +303,19 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['addedBy'] = $data['addedBy'] ?? null;
         $this->container['cancelledDate'] = $data['cancelledDate'] ?? null;
         $this->container['cancelledBy'] = $data['cancelledBy'] ?? null;
+        $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
+        $this->container['destinationDatabase'] = $data['destinationDatabase'] ?? null;
+        $this->container['users'] = $data['users'] ?? null;
+        $this->container['userTuples'] = $data['userTuples'] ?? null;
+        $this->container['sourceUser'] = $data['sourceUser'] ?? null;
+        $this->container['destinationUser'] = $data['destinationUser'] ?? null;
+        $this->container['accessCode'] = $data['accessCode'] ?? null;
+        $this->container['sourceDistributionList'] = $data['sourceDistributionList'] ?? null;
+        $this->container['datagatewayAccessMappings'] = $data['datagatewayAccessMappings'] ?? null;
+        $this->container['transferOption'] = $data['transferOption'] ?? null;
+        $this->container['capsil'] = $data['capsil'] ?? null;
+        $this->container['univeris'] = $data['univeris'] ?? null;
+        $this->container['dataphile'] = $data['dataphile'] ?? null;
 
         // Initialize discriminator property with the model name.
         $this->container['type'] = static::$openAPIModelName;
@@ -246,6 +330,30 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
+        if ($this->container['sourceDatabase'] === null) {
+            $invalidProperties[] = "'sourceDatabase' can't be null";
+        }
+        if ($this->container['destinationDatabase'] === null) {
+            $invalidProperties[] = "'destinationDatabase' can't be null";
+        }
+        if ($this->container['users'] === null) {
+            $invalidProperties[] = "'users' can't be null";
+        }
+        if ($this->container['userTuples'] === null) {
+            $invalidProperties[] = "'userTuples' can't be null";
+        }
+        if ($this->container['sourceUser'] === null) {
+            $invalidProperties[] = "'sourceUser' can't be null";
+        }
+        if ($this->container['destinationUser'] === null) {
+            $invalidProperties[] = "'destinationUser' can't be null";
+        }
+        if ($this->container['accessCode'] === null) {
+            $invalidProperties[] = "'accessCode' can't be null";
+        }
+        if ($this->container['transferOption'] === null) {
+            $invalidProperties[] = "'transferOption' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -260,6 +368,30 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets type
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementMovementType|null
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementMovementType|null $type type
+     *
+     * @return self
+     */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
+
+        return $this;
+    }
 
     /**
      * Gets id
@@ -442,7 +574,7 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets cancelledDate
      *
-     * @param string|null $cancelledDate .Cancelled date.
+     * @param string|null $cancelledDate Cancelled date.
      *
      * @return self
      */
@@ -473,6 +605,318 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setCancelledBy($cancelledBy)
     {
         $this->container['cancelledBy'] = $cancelledBy;
+
+        return $this;
+    }
+
+    /**
+     * Gets sourceDatabase
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase
+     */
+    public function getSourceDatabase()
+    {
+        return $this->container['sourceDatabase'];
+    }
+
+    /**
+     * Sets sourceDatabase
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase $sourceDatabase sourceDatabase
+     *
+     * @return self
+     */
+    public function setSourceDatabase($sourceDatabase)
+    {
+        $this->container['sourceDatabase'] = $sourceDatabase;
+
+        return $this;
+    }
+
+    /**
+     * Gets destinationDatabase
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase
+     */
+    public function getDestinationDatabase()
+    {
+        return $this->container['destinationDatabase'];
+    }
+
+    /**
+     * Sets destinationDatabase
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase $destinationDatabase destinationDatabase
+     *
+     * @return self
+     */
+    public function setDestinationDatabase($destinationDatabase)
+    {
+        $this->container['destinationDatabase'] = $destinationDatabase;
+
+        return $this;
+    }
+
+    /**
+     * Gets users
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser[]
+     */
+    public function getUsers()
+    {
+        return $this->container['users'];
+    }
+
+    /**
+     * Sets users
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser[] $users List of users.
+     *
+     * @return self
+     */
+    public function setUsers($users)
+    {
+        $this->container['users'] = $users;
+
+        return $this;
+    }
+
+    /**
+     * Gets userTuples
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUserTuple[]
+     */
+    public function getUserTuples()
+    {
+        return $this->container['userTuples'];
+    }
+
+    /**
+     * Sets userTuples
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUserTuple[] $userTuples List of user tuples.
+     *
+     * @return self
+     */
+    public function setUserTuples($userTuples)
+    {
+        $this->container['userTuples'] = $userTuples;
+
+        return $this;
+    }
+
+    /**
+     * Gets sourceUser
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser
+     */
+    public function getSourceUser()
+    {
+        return $this->container['sourceUser'];
+    }
+
+    /**
+     * Sets sourceUser
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser $sourceUser sourceUser
+     *
+     * @return self
+     */
+    public function setSourceUser($sourceUser)
+    {
+        $this->container['sourceUser'] = $sourceUser;
+
+        return $this;
+    }
+
+    /**
+     * Gets destinationUser
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser
+     */
+    public function getDestinationUser()
+    {
+        return $this->container['destinationUser'];
+    }
+
+    /**
+     * Sets destinationUser
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser $destinationUser destinationUser
+     *
+     * @return self
+     */
+    public function setDestinationUser($destinationUser)
+    {
+        $this->container['destinationUser'] = $destinationUser;
+
+        return $this;
+    }
+
+    /**
+     * Gets accessCode
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementGatewayAccessCode
+     */
+    public function getAccessCode()
+    {
+        return $this->container['accessCode'];
+    }
+
+    /**
+     * Sets accessCode
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementGatewayAccessCode $accessCode accessCode
+     *
+     * @return self
+     */
+    public function setAccessCode($accessCode)
+    {
+        $this->container['accessCode'] = $accessCode;
+
+        return $this;
+    }
+
+    /**
+     * Gets sourceDistributionList
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDistributionList|null
+     */
+    public function getSourceDistributionList()
+    {
+        return $this->container['sourceDistributionList'];
+    }
+
+    /**
+     * Sets sourceDistributionList
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDistributionList|null $sourceDistributionList sourceDistributionList
+     *
+     * @return self
+     */
+    public function setSourceDistributionList($sourceDistributionList)
+    {
+        $this->container['sourceDistributionList'] = $sourceDistributionList;
+
+        return $this;
+    }
+
+    /**
+     * Gets datagatewayAccessMappings
+     *
+     * @return array<string,string>|null
+     */
+    public function getDatagatewayAccessMappings()
+    {
+        return $this->container['datagatewayAccessMappings'];
+    }
+
+    /**
+     * Sets datagatewayAccessMappings
+     *
+     * @param array<string,string>|null $datagatewayAccessMappings Data gateway access mapping.
+     *
+     * @return self
+     */
+    public function setDatagatewayAccessMappings($datagatewayAccessMappings)
+    {
+        $this->container['datagatewayAccessMappings'] = $datagatewayAccessMappings;
+
+        return $this;
+    }
+
+    /**
+     * Gets transferOption
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption
+     */
+    public function getTransferOption()
+    {
+        return $this->container['transferOption'];
+    }
+
+    /**
+     * Sets transferOption
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption $transferOption transferOption
+     *
+     * @return self
+     */
+    public function setTransferOption($transferOption)
+    {
+        $this->container['transferOption'] = $transferOption;
+
+        return $this;
+    }
+
+    /**
+     * Gets capsil
+     *
+     * @return bool|null
+     */
+    public function getCapsil()
+    {
+        return $this->container['capsil'];
+    }
+
+    /**
+     * Sets capsil
+     *
+     * @param bool|null $capsil Is Capsil.
+     *
+     * @return self
+     */
+    public function setCapsil($capsil)
+    {
+        $this->container['capsil'] = $capsil;
+
+        return $this;
+    }
+
+    /**
+     * Gets univeris
+     *
+     * @return bool|null
+     */
+    public function getUniveris()
+    {
+        return $this->container['univeris'];
+    }
+
+    /**
+     * Sets univeris
+     *
+     * @param bool|null $univeris Is Univeris. Deprecated: Univeris is not supported anymore and will be removed from future versions).
+     *
+     * @return self
+     */
+    public function setUniveris($univeris)
+    {
+        $this->container['univeris'] = $univeris;
+
+        return $this;
+    }
+
+    /**
+     * Gets dataphile
+     *
+     * @return bool|null
+     */
+    public function getDataphile()
+    {
+        return $this->container['dataphile'];
+    }
+
+    /**
+     * Sets dataphile
+     *
+     * @param bool|null $dataphile Is Dataphile.
+     *
+     * @return self
+     */
+    public function setDataphile($dataphile)
+    {
+        $this->container['dataphile'] = $dataphile;
 
         return $this;
     }
