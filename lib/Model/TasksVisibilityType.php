@@ -33,7 +33,6 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * TasksVisibilityType Class Doc Comment
  *
  * @category Class
- * @description Visibility type.
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech

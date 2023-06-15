@@ -84,48 +84,12 @@ class FieldValuesApiTest extends TestCase
     }
 
     /**
-     * Test case for createGroupValue
-     *
-     * Create a group value.
-     *
-     */
-    public function testCreateGroupValue()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for createValue
      *
      * Create a value.
      *
      */
     public function testCreateValue()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for deleteGroup
-     *
-     * Delete single group for a specific field name and group id.
-     *
-     */
-    public function testDeleteGroup()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for deleteValue
-     *
-     * Delete single value for a specific field name and value id.
-     *
-     */
-    public function testDeleteValue()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -150,18 +114,6 @@ class FieldValuesApiTest extends TestCase
      *
      */
     public function testGetValue()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for linkValueGroup
-     *
-     * Link a value to a group.
-     *
-     */
-    public function testLinkValueGroup()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

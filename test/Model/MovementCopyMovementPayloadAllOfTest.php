@@ -1,6 +1,6 @@
 <?php
 /**
- * GroupUsersUserOrGroupTest
+ * MovementCopyMovementPayloadAllOfTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * GroupUsersUserOrGroupTest Class Doc Comment
+ * MovementCopyMovementPayloadAllOfTest Class Doc Comment
  *
  * @category    Class
- * @description GroupUsersUserOrGroup
+ * @description MovementCopyMovementPayloadAllOf
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class GroupUsersUserOrGroupTest extends TestCase
+class MovementCopyMovementPayloadAllOfTest extends TestCase
 {
 
     /**
@@ -71,27 +71,9 @@ class GroupUsersUserOrGroupTest extends TestCase
     }
 
     /**
-     * Test "GroupUsersUserOrGroup"
+     * Test "MovementCopyMovementPayloadAllOf"
      */
-    public function testGroupUsersUserOrGroup()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "id"
-     */
-    public function testPropertyId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "displayName"
-     */
-    public function testPropertyDisplayName()
+    public function testMovementCopyMovementPayloadAllOf()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -101,6 +83,33 @@ class GroupUsersUserOrGroupTest extends TestCase
      * Test attribute "type"
      */
     public function testPropertyType()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "sourceDatabase"
+     */
+    public function testPropertySourceDatabase()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "destinationDatabase"
+     */
+    public function testPropertyDestinationDatabase()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "userTuples"
+     */
+    public function testPropertyUserTuples()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

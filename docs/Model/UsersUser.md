@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **initials** | **string** | The user&#39;s initials. | [optional]
 **locale** | **string** | The user&#39;s preferred locale. |
 **email** | **string** | The user&#39;s eMail address. |
-**role** | [**\Equisoft\SDK\EquisoftConnect\Model\UsersRole**](UsersRole.md) |  |
+**role** | **string** | The user&#39;s role. |
 **aclDelegationAllowed** | **bool** | Whether the user can delegate ACL to other users | [optional]
 **groups** | [**\Equisoft\SDK\EquisoftConnect\Model\UsersUserGroup[]**](UsersUserGroup.md) | User groups | [optional]
 

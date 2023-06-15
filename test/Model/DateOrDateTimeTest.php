@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * DateOrDateTimeTest Class Doc Comment
  *
  * @category    Class
- * @description Date or datetime.
+ * @description DateOrDateTime
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

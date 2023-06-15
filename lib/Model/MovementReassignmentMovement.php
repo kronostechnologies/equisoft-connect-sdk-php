@@ -27,8 +27,6 @@
  */
 
 namespace Equisoft\SDK\EquisoftConnect\Model;
-
-use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
@@ -40,7 +38,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class MovementReassignmentMovement implements ModelInterface, ArrayAccess, \JsonSerializable
+class MovementReassignmentMovement extends MovementMovement
 {
     public const DISCRIMINATOR = null;
 
@@ -58,15 +56,6 @@ class MovementReassignmentMovement implements ModelInterface, ArrayAccess, \Json
       */
     protected static $openAPITypes = [
         'type' => 'string',
-        'id' => 'int',
-        'status' => 'string',
-        'availableAction' => 'string',
-        'scheduledDate' => 'string',
-        'processedDate' => 'string',
-        'addedDate' => 'string',
-        'addedBy' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
-        'cancelledDate' => 'string',
-        'cancelledBy' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
         'sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
         'sourceUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
         'destinationUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
@@ -82,15 +71,6 @@ class MovementReassignmentMovement implements ModelInterface, ArrayAccess, \Json
       */
     protected static $openAPIFormats = [
         'type' => null,
-        'id' => null,
-        'status' => null,
-        'availableAction' => null,
-        'scheduledDate' => null,
-        'processedDate' => null,
-        'addedDate' => null,
-        'addedBy' => null,
-        'cancelledDate' => null,
-        'cancelledBy' => null,
         'sourceDatabase' => null,
         'sourceUser' => null,
         'destinationUser' => null,
@@ -104,7 +84,7 @@ class MovementReassignmentMovement implements ModelInterface, ArrayAccess, \Json
      */
     public static function openAPITypes()
     {
-        return self::$openAPITypes;
+        return self::$openAPITypes + parent::openAPITypes();
     }
 
     /**
@@ -114,7 +94,7 @@ class MovementReassignmentMovement implements ModelInterface, ArrayAccess, \Json
      */
     public static function openAPIFormats()
     {
-        return self::$openAPIFormats;
+        return self::$openAPIFormats + parent::openAPIFormats();
     }
 
     /**
@@ -125,15 +105,6 @@ class MovementReassignmentMovement implements ModelInterface, ArrayAccess, \Json
      */
     protected static $attributeMap = [
         'type' => 'type',
-        'id' => 'id',
-        'status' => 'status',
-        'availableAction' => 'availableAction',
-        'scheduledDate' => 'scheduledDate',
-        'processedDate' => 'processedDate',
-        'addedDate' => 'addedDate',
-        'addedBy' => 'addedBy',
-        'cancelledDate' => 'cancelledDate',
-        'cancelledBy' => 'cancelledBy',
         'sourceDatabase' => 'sourceDatabase',
         'sourceUser' => 'sourceUser',
         'destinationUser' => 'destinationUser',
@@ -147,15 +118,6 @@ class MovementReassignmentMovement implements ModelInterface, ArrayAccess, \Json
      */
     protected static $setters = [
         'type' => 'setType',
-        'id' => 'setId',
-        'status' => 'setStatus',
-        'availableAction' => 'setAvailableAction',
-        'scheduledDate' => 'setScheduledDate',
-        'processedDate' => 'setProcessedDate',
-        'addedDate' => 'setAddedDate',
-        'addedBy' => 'setAddedBy',
-        'cancelledDate' => 'setCancelledDate',
-        'cancelledBy' => 'setCancelledBy',
         'sourceDatabase' => 'setSourceDatabase',
         'sourceUser' => 'setSourceUser',
         'destinationUser' => 'setDestinationUser',
@@ -169,15 +131,6 @@ class MovementReassignmentMovement implements ModelInterface, ArrayAccess, \Json
      */
     protected static $getters = [
         'type' => 'getType',
-        'id' => 'getId',
-        'status' => 'getStatus',
-        'availableAction' => 'getAvailableAction',
-        'scheduledDate' => 'getScheduledDate',
-        'processedDate' => 'getProcessedDate',
-        'addedDate' => 'getAddedDate',
-        'addedBy' => 'getAddedBy',
-        'cancelledDate' => 'getCancelledDate',
-        'cancelledBy' => 'getCancelledBy',
         'sourceDatabase' => 'getSourceDatabase',
         'sourceUser' => 'getSourceUser',
         'destinationUser' => 'getDestinationUser',
@@ -192,7 +145,7 @@ class MovementReassignmentMovement implements ModelInterface, ArrayAccess, \Json
      */
     public static function attributeMap()
     {
-        return self::$attributeMap;
+        return parent::attributeMap() + self::$attributeMap;
     }
 
     /**
@@ -202,7 +155,7 @@ class MovementReassignmentMovement implements ModelInterface, ArrayAccess, \Json
      */
     public static function setters()
     {
-        return self::$setters;
+        return parent::setters() + self::$setters;
     }
 
     /**
@@ -212,7 +165,7 @@ class MovementReassignmentMovement implements ModelInterface, ArrayAccess, \Json
      */
     public static function getters()
     {
-        return self::$getters;
+        return parent::getters() + self::$getters;
     }
 
     /**
@@ -241,12 +194,6 @@ class MovementReassignmentMovement implements ModelInterface, ArrayAccess, \Json
         ];
     }
 
-    /**
-     * Associative array for storing property values
-     *
-     * @var mixed[]
-     */
-    protected $container = [];
 
     /**
      * Constructor
@@ -256,16 +203,9 @@ class MovementReassignmentMovement implements ModelInterface, ArrayAccess, \Json
      */
     public function __construct(array $data = null)
     {
+        parent::__construct($data);
+
         $this->container['type'] = $data['type'] ?? 'REASSIGNMENT';
-        $this->container['id'] = $data['id'] ?? null;
-        $this->container['status'] = $data['status'] ?? null;
-        $this->container['availableAction'] = $data['availableAction'] ?? null;
-        $this->container['scheduledDate'] = $data['scheduledDate'] ?? null;
-        $this->container['processedDate'] = $data['processedDate'] ?? null;
-        $this->container['addedDate'] = $data['addedDate'] ?? null;
-        $this->container['addedBy'] = $data['addedBy'] ?? null;
-        $this->container['cancelledDate'] = $data['cancelledDate'] ?? null;
-        $this->container['cancelledBy'] = $data['cancelledBy'] ?? null;
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['sourceUser'] = $data['sourceUser'] ?? null;
         $this->container['destinationUser'] = $data['destinationUser'] ?? null;
@@ -279,7 +219,7 @@ class MovementReassignmentMovement implements ModelInterface, ArrayAccess, \Json
      */
     public function listInvalidProperties()
     {
-        $invalidProperties = [];
+        $invalidProperties = parent::listInvalidProperties();
 
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
@@ -350,222 +290,6 @@ class MovementReassignmentMovement implements ModelInterface, ArrayAccess, \Json
             );
         }
         $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets id
-     *
-     * @return int|null
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param int|null $id Unique numerical identifier.
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets status
-     *
-     * @return string|null
-     */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-     * Sets status
-     *
-     * @param string|null $status Movement status.
-     *
-     * @return self
-     */
-    public function setStatus($status)
-    {
-        $this->container['status'] = $status;
-
-        return $this;
-    }
-
-    /**
-     * Gets availableAction
-     *
-     * @return string|null
-     */
-    public function getAvailableAction()
-    {
-        return $this->container['availableAction'];
-    }
-
-    /**
-     * Sets availableAction
-     *
-     * @param string|null $availableAction Available action.
-     *
-     * @return self
-     */
-    public function setAvailableAction($availableAction)
-    {
-        $this->container['availableAction'] = $availableAction;
-
-        return $this;
-    }
-
-    /**
-     * Gets scheduledDate
-     *
-     * @return string|null
-     */
-    public function getScheduledDate()
-    {
-        return $this->container['scheduledDate'];
-    }
-
-    /**
-     * Sets scheduledDate
-     *
-     * @param string|null $scheduledDate Scheduled date.
-     *
-     * @return self
-     */
-    public function setScheduledDate($scheduledDate)
-    {
-        $this->container['scheduledDate'] = $scheduledDate;
-
-        return $this;
-    }
-
-    /**
-     * Gets processedDate
-     *
-     * @return string|null
-     */
-    public function getProcessedDate()
-    {
-        return $this->container['processedDate'];
-    }
-
-    /**
-     * Sets processedDate
-     *
-     * @param string|null $processedDate Processed date.
-     *
-     * @return self
-     */
-    public function setProcessedDate($processedDate)
-    {
-        $this->container['processedDate'] = $processedDate;
-
-        return $this;
-    }
-
-    /**
-     * Gets addedDate
-     *
-     * @return string|null
-     */
-    public function getAddedDate()
-    {
-        return $this->container['addedDate'];
-    }
-
-    /**
-     * Sets addedDate
-     *
-     * @param string|null $addedDate Added date.
-     *
-     * @return self
-     */
-    public function setAddedDate($addedDate)
-    {
-        $this->container['addedDate'] = $addedDate;
-
-        return $this;
-    }
-
-    /**
-     * Gets addedBy
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null
-     */
-    public function getAddedBy()
-    {
-        return $this->container['addedBy'];
-    }
-
-    /**
-     * Sets addedBy
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null $addedBy Added by.
-     *
-     * @return self
-     */
-    public function setAddedBy($addedBy)
-    {
-        $this->container['addedBy'] = $addedBy;
-
-        return $this;
-    }
-
-    /**
-     * Gets cancelledDate
-     *
-     * @return string|null
-     */
-    public function getCancelledDate()
-    {
-        return $this->container['cancelledDate'];
-    }
-
-    /**
-     * Sets cancelledDate
-     *
-     * @param string|null $cancelledDate Cancelled date.
-     *
-     * @return self
-     */
-    public function setCancelledDate($cancelledDate)
-    {
-        $this->container['cancelledDate'] = $cancelledDate;
-
-        return $this;
-    }
-
-    /**
-     * Gets cancelledBy
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null
-     */
-    public function getCancelledBy()
-    {
-        return $this->container['cancelledBy'];
-    }
-
-    /**
-     * Sets cancelledBy
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null $cancelledBy Cancelled by.
-     *
-     * @return self
-     */
-    public function setCancelledBy($cancelledBy)
-    {
-        $this->container['cancelledBy'] = $cancelledBy;
 
         return $this;
     }
