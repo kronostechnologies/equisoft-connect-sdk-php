@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * TasksVisibilityTypeTest Class Doc Comment
  *
  * @category    Class
- * @description TasksVisibilityType
+ * @description Visibility type.
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

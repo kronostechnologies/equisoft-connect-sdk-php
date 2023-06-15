@@ -57,7 +57,7 @@ class GroupUsersListGroupUsersResponse implements ModelInterface, ArrayAccess, \
       * @var string[]
       */
     protected static $openAPITypes = [
-        'users' => 'mixed[]'
+        'users' => '\Equisoft\SDK\EquisoftConnect\Model\GroupUsersUserOrGroup[]'
     ];
 
     /**
@@ -188,9 +188,6 @@ class GroupUsersListGroupUsersResponse implements ModelInterface, ArrayAccess, \
     {
         $invalidProperties = [];
 
-        if ($this->container['users'] === null) {
-            $invalidProperties[] = "'users' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -209,7 +206,7 @@ class GroupUsersListGroupUsersResponse implements ModelInterface, ArrayAccess, \
     /**
      * Gets users
      *
-     * @return mixed[]
+     * @return \Equisoft\SDK\EquisoftConnect\Model\GroupUsersUserOrGroup[]|null
      */
     public function getUsers()
     {
@@ -219,7 +216,7 @@ class GroupUsersListGroupUsersResponse implements ModelInterface, ArrayAccess, \
     /**
      * Sets users
      *
-     * @param mixed[] $users users
+     * @param \Equisoft\SDK\EquisoftConnect\Model\GroupUsersUserOrGroup[]|null $users List of users.
      *
      * @return self
      */
