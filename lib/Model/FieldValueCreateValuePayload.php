@@ -61,7 +61,8 @@ class FieldValueCreateValuePayload implements ModelInterface, ArrayAccess, \Json
         'code' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValueLocalizedString',
         'description' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValueLocalizedString',
         'name' => 'string',
-        'isLocked' => 'bool'
+        'isLocked' => 'bool',
+        'isPrivate' => 'bool'
     ];
 
     /**
@@ -76,7 +77,8 @@ class FieldValueCreateValuePayload implements ModelInterface, ArrayAccess, \Json
         'code' => null,
         'description' => null,
         'name' => null,
-        'isLocked' => null
+        'isLocked' => null,
+        'isPrivate' => null
     ];
 
     /**
@@ -110,7 +112,8 @@ class FieldValueCreateValuePayload implements ModelInterface, ArrayAccess, \Json
         'code' => 'code',
         'description' => 'description',
         'name' => 'name',
-        'isLocked' => 'isLocked'
+        'isLocked' => 'isLocked',
+        'isPrivate' => 'isPrivate'
     ];
 
     /**
@@ -123,7 +126,8 @@ class FieldValueCreateValuePayload implements ModelInterface, ArrayAccess, \Json
         'code' => 'setCode',
         'description' => 'setDescription',
         'name' => 'setName',
-        'isLocked' => 'setIsLocked'
+        'isLocked' => 'setIsLocked',
+        'isPrivate' => 'setIsPrivate'
     ];
 
     /**
@@ -136,7 +140,8 @@ class FieldValueCreateValuePayload implements ModelInterface, ArrayAccess, \Json
         'code' => 'getCode',
         'description' => 'getDescription',
         'name' => 'getName',
-        'isLocked' => 'getIsLocked'
+        'isLocked' => 'getIsLocked',
+        'isPrivate' => 'getIsPrivate'
     ];
 
     /**
@@ -201,6 +206,7 @@ class FieldValueCreateValuePayload implements ModelInterface, ArrayAccess, \Json
         $this->container['description'] = $data['description'] ?? null;
         $this->container['name'] = $data['name'] ?? null;
         $this->container['isLocked'] = $data['isLocked'] ?? null;
+        $this->container['isPrivate'] = $data['isPrivate'] ?? null;
     }
 
     /**
@@ -346,6 +352,30 @@ class FieldValueCreateValuePayload implements ModelInterface, ArrayAccess, \Json
     public function setIsLocked($isLocked)
     {
         $this->container['isLocked'] = $isLocked;
+
+        return $this;
+    }
+
+    /**
+     * Gets isPrivate
+     *
+     * @return bool|null
+     */
+    public function getIsPrivate()
+    {
+        return $this->container['isPrivate'];
+    }
+
+    /**
+     * Sets isPrivate
+     *
+     * @param bool|null $isPrivate isPrivate
+     *
+     * @return self
+     */
+    public function setIsPrivate($isPrivate)
+    {
+        $this->container['isPrivate'] = $isPrivate;
 
         return $this;
     }
