@@ -27,8 +27,6 @@
  */
 
 namespace Equisoft\SDK\EquisoftConnect\Model;
-
-use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
@@ -40,7 +38,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class MovementClientBaseUsingDistributionListMovementPayload implements ModelInterface, ArrayAccess, \JsonSerializable
+class MovementClientBaseUsingDistributionListMovementPayload extends MovementMovementPayload
 {
     public const DISCRIMINATOR = null;
 
@@ -58,8 +56,6 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
       */
     protected static $openAPITypes = [
         'type' => 'string',
-        'date' => 'string',
-        'now' => 'bool',
         'sourceDatabase' => 'string',
         'sourceUser' => 'string',
         'sourceDistributionList' => 'string',
@@ -78,8 +74,6 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
       */
     protected static $openAPIFormats = [
         'type' => null,
-        'date' => null,
-        'now' => null,
         'sourceDatabase' => null,
         'sourceUser' => null,
         'sourceDistributionList' => null,
@@ -96,7 +90,7 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
      */
     public static function openAPITypes()
     {
-        return self::$openAPITypes;
+        return self::$openAPITypes + parent::openAPITypes();
     }
 
     /**
@@ -106,7 +100,7 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
      */
     public static function openAPIFormats()
     {
-        return self::$openAPIFormats;
+        return self::$openAPIFormats + parent::openAPIFormats();
     }
 
     /**
@@ -117,8 +111,6 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
      */
     protected static $attributeMap = [
         'type' => 'type',
-        'date' => 'date',
-        'now' => 'now',
         'sourceDatabase' => 'sourceDatabase',
         'sourceUser' => 'sourceUser',
         'sourceDistributionList' => 'sourceDistributionList',
@@ -135,8 +127,6 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
      */
     protected static $setters = [
         'type' => 'setType',
-        'date' => 'setDate',
-        'now' => 'setNow',
         'sourceDatabase' => 'setSourceDatabase',
         'sourceUser' => 'setSourceUser',
         'sourceDistributionList' => 'setSourceDistributionList',
@@ -153,8 +143,6 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
      */
     protected static $getters = [
         'type' => 'getType',
-        'date' => 'getDate',
-        'now' => 'getNow',
         'sourceDatabase' => 'getSourceDatabase',
         'sourceUser' => 'getSourceUser',
         'sourceDistributionList' => 'getSourceDistributionList',
@@ -172,7 +160,7 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
      */
     public static function attributeMap()
     {
-        return self::$attributeMap;
+        return parent::attributeMap() + self::$attributeMap;
     }
 
     /**
@@ -182,7 +170,7 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
      */
     public static function setters()
     {
-        return self::$setters;
+        return parent::setters() + self::$setters;
     }
 
     /**
@@ -192,7 +180,7 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
      */
     public static function getters()
     {
-        return self::$getters;
+        return parent::getters() + self::$getters;
     }
 
     /**
@@ -221,12 +209,6 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
         ];
     }
 
-    /**
-     * Associative array for storing property values
-     *
-     * @var mixed[]
-     */
-    protected $container = [];
 
     /**
      * Constructor
@@ -236,9 +218,9 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
      */
     public function __construct(array $data = null)
     {
+        parent::__construct($data);
+
         $this->container['type'] = $data['type'] ?? 'CLIENTBASE_USING_DISTLIST';
-        $this->container['date'] = $data['date'] ?? null;
-        $this->container['now'] = $data['now'] ?? null;
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['sourceUser'] = $data['sourceUser'] ?? null;
         $this->container['sourceDistributionList'] = $data['sourceDistributionList'] ?? null;
@@ -255,7 +237,7 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
      */
     public function listInvalidProperties()
     {
-        $invalidProperties = [];
+        $invalidProperties = parent::listInvalidProperties();
 
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
@@ -329,54 +311,6 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
             );
         }
         $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets date
-     *
-     * @return string|null
-     */
-    public function getDate()
-    {
-        return $this->container['date'];
-    }
-
-    /**
-     * Sets date
-     *
-     * @param string|null $date Movement date.
-     *
-     * @return self
-     */
-    public function setDate($date)
-    {
-        $this->container['date'] = $date;
-
-        return $this;
-    }
-
-    /**
-     * Gets now
-     *
-     * @return bool|null
-     */
-    public function getNow()
-    {
-        return $this->container['now'];
-    }
-
-    /**
-     * Sets now
-     *
-     * @param bool|null $now Is now.
-     *
-     * @return self
-     */
-    public function setNow($now)
-    {
-        $this->container['now'] = $now;
 
         return $this;
     }

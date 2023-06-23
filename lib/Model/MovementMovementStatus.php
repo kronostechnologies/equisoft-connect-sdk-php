@@ -33,7 +33,6 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * MovementMovementStatus Class Doc Comment
  *
  * @category Class
- * @description Movement status.
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech

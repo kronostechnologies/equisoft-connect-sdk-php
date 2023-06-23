@@ -68,7 +68,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
         'category' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue',
         'subCategory' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue',
         'priority' => 'int',
-        'visibility' => '\Equisoft\SDK\EquisoftConnect\Model\TasksVisibilityType',
+        'visibility' => 'string',
         'creationTime' => '\DateTime',
         'updateTime' => '\DateTime',
         'completionTime' => '\DateTime',
@@ -590,7 +590,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets visibility
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\TasksVisibilityType
+     * @return string
      */
     public function getVisibility()
     {
@@ -600,7 +600,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets visibility
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\TasksVisibilityType $visibility visibility
+     * @param string $visibility Confidentiality level of the Event (private or not). [NORMAL, PRIVATE].
      *
      * @return self
      */

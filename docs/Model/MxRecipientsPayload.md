@@ -1,11 +1,13 @@
-# # GroupUsersUserOrGroup
+# # MxRecipientsPayload
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | Id. | [optional]
-**displayName** | **string** | Display name. | [optional]
-**type** | **string** | Type. | [optional]
+**to** | **string** | to recipients |
+**cc** | **string** | cc recipients |
+**bcc** | **string** | bcc recipients |
+**groups** | **int[]** | group recipients |
+**contacts** | **int[]** | contact recipients |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

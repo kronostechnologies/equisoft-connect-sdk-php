@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * MovementMovementStatusTest Class Doc Comment
  *
  * @category    Class
- * @description Movement status.
+ * @description MovementMovementStatus
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

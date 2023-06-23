@@ -67,14 +67,14 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
         'description' => 'string',
         'internalNotes' => 'string',
         'location' => 'string',
-        'type' => '\Equisoft\SDK\EquisoftConnect\Model\EventsEventType',
+        'type' => 'string',
         'category' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue',
         'subCategory' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue',
         'recurrenceRule' => 'string',
         'recurringEventId' => 'string',
         'originalStartDate' => 'string',
         'priority' => 'int',
-        'visibility' => '\Equisoft\SDK\EquisoftConnect\Model\EventsVisibilityType',
+        'visibility' => 'string',
         'creationTime' => '\DateTime',
         'updateTime' => '\DateTime',
         'calendarId' => 'int',
@@ -629,7 +629,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets type
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\EventsEventType
+     * @return string
      */
     public function getType()
     {
@@ -639,7 +639,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets type
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\EventsEventType $type type
+     * @param string $type Event type (CALL, LETTER, MEETING, VACATION, FILE, NOTE).
      *
      * @return self
      */
@@ -797,7 +797,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets visibility
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\EventsVisibilityType
+     * @return string
      */
     public function getVisibility()
     {
@@ -807,7 +807,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets visibility
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\EventsVisibilityType $visibility visibility
+     * @param string $visibility Confidentiality level of the Event (private or not). [NORMAL, PRIVATE].
      *
      * @return self
      */

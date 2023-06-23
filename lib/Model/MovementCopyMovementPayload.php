@@ -27,8 +27,6 @@
  */
 
 namespace Equisoft\SDK\EquisoftConnect\Model;
-
-use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
@@ -40,7 +38,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonSerializable
+class MovementCopyMovementPayload extends MovementMovementPayload
 {
     public const DISCRIMINATOR = null;
 
@@ -58,8 +56,6 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonS
       */
     protected static $openAPITypes = [
         'type' => 'string',
-        'date' => 'string',
-        'now' => 'bool',
         'sourceDatabase' => 'string',
         'destinationDatabase' => 'string',
         'userTuples' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUserTuplePayload[]'
@@ -74,8 +70,6 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonS
       */
     protected static $openAPIFormats = [
         'type' => null,
-        'date' => null,
-        'now' => null,
         'sourceDatabase' => null,
         'destinationDatabase' => null,
         'userTuples' => null
@@ -88,7 +82,7 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonS
      */
     public static function openAPITypes()
     {
-        return self::$openAPITypes;
+        return self::$openAPITypes + parent::openAPITypes();
     }
 
     /**
@@ -98,7 +92,7 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonS
      */
     public static function openAPIFormats()
     {
-        return self::$openAPIFormats;
+        return self::$openAPIFormats + parent::openAPIFormats();
     }
 
     /**
@@ -109,8 +103,6 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonS
      */
     protected static $attributeMap = [
         'type' => 'type',
-        'date' => 'date',
-        'now' => 'now',
         'sourceDatabase' => 'sourceDatabase',
         'destinationDatabase' => 'destinationDatabase',
         'userTuples' => 'userTuples'
@@ -123,8 +115,6 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonS
      */
     protected static $setters = [
         'type' => 'setType',
-        'date' => 'setDate',
-        'now' => 'setNow',
         'sourceDatabase' => 'setSourceDatabase',
         'destinationDatabase' => 'setDestinationDatabase',
         'userTuples' => 'setUserTuples'
@@ -137,8 +127,6 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonS
      */
     protected static $getters = [
         'type' => 'getType',
-        'date' => 'getDate',
-        'now' => 'getNow',
         'sourceDatabase' => 'getSourceDatabase',
         'destinationDatabase' => 'getDestinationDatabase',
         'userTuples' => 'getUserTuples'
@@ -152,7 +140,7 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonS
      */
     public static function attributeMap()
     {
-        return self::$attributeMap;
+        return parent::attributeMap() + self::$attributeMap;
     }
 
     /**
@@ -162,7 +150,7 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonS
      */
     public static function setters()
     {
-        return self::$setters;
+        return parent::setters() + self::$setters;
     }
 
     /**
@@ -172,7 +160,7 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonS
      */
     public static function getters()
     {
-        return self::$getters;
+        return parent::getters() + self::$getters;
     }
 
     /**
@@ -201,12 +189,6 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonS
         ];
     }
 
-    /**
-     * Associative array for storing property values
-     *
-     * @var mixed[]
-     */
-    protected $container = [];
 
     /**
      * Constructor
@@ -216,9 +198,9 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonS
      */
     public function __construct(array $data = null)
     {
+        parent::__construct($data);
+
         $this->container['type'] = $data['type'] ?? 'COPY';
-        $this->container['date'] = $data['date'] ?? null;
-        $this->container['now'] = $data['now'] ?? null;
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['destinationDatabase'] = $data['destinationDatabase'] ?? null;
         $this->container['userTuples'] = $data['userTuples'] ?? null;
@@ -231,7 +213,7 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonS
      */
     public function listInvalidProperties()
     {
-        $invalidProperties = [];
+        $invalidProperties = parent::listInvalidProperties();
 
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
@@ -299,54 +281,6 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonS
             );
         }
         $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets date
-     *
-     * @return string|null
-     */
-    public function getDate()
-    {
-        return $this->container['date'];
-    }
-
-    /**
-     * Sets date
-     *
-     * @param string|null $date Movement date.
-     *
-     * @return self
-     */
-    public function setDate($date)
-    {
-        $this->container['date'] = $date;
-
-        return $this;
-    }
-
-    /**
-     * Gets now
-     *
-     * @return bool|null
-     */
-    public function getNow()
-    {
-        return $this->container['now'];
-    }
-
-    /**
-     * Sets now
-     *
-     * @param bool|null $now Is now.
-     *
-     * @return self
-     */
-    public function setNow($now)
-    {
-        $this->container['now'] = $now;
 
         return $this;
     }
