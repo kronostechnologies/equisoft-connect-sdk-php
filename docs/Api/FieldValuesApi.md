@@ -679,7 +679,7 @@ Name | Type | Description  | Notes
 ## `listValues()`
 
 ```php
-listValues($fieldName, $systemName, $privateValue): \Equisoft\SDK\EquisoftConnect\Model\FieldValueListValueResponse
+listValues($fieldName, $systemName): \Equisoft\SDK\EquisoftConnect\Model\FieldValueListValueResponse
 ```
 
 List values for a specific field name
@@ -703,10 +703,9 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\FieldValuesApi(
 );
 $fieldName = 'fieldName_example'; // string | Field unique identifier.
 $systemName = 'systemName_example'; // string | Value unique identifier.
-$privateValue = True; // bool | Private value only.
 
 try {
-    $result = $apiInstance->listValues($fieldName, $systemName, $privateValue);
+    $result = $apiInstance->listValues($fieldName, $systemName);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FieldValuesApi->listValues: ', $e->getMessage(), PHP_EOL;
@@ -719,7 +718,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fieldName** | **string**| Field unique identifier. |
  **systemName** | **string**| Value unique identifier. | [optional]
- **privateValue** | **bool**| Private value only. | [optional]
 
 ### Return type
 

@@ -123,13 +123,4 @@ class FieldValueCreateValuePayloadTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
-
-    /**
-     * Test attribute "isPrivate"
-     */
-    public function testPropertyIsPrivate()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
 }

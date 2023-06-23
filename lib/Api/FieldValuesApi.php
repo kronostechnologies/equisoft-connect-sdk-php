@@ -3881,15 +3881,14 @@ class FieldValuesApi
      *
      * @param  string $fieldName Field unique identifier. (required)
      * @param  string $systemName Value unique identifier. (optional)
-     * @param  bool $privateValue Private value only. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValueListValueResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
-    public function listValues($fieldName, $systemName = null, $privateValue = null)
+    public function listValues($fieldName, $systemName = null)
     {
-        list($response) = $this->listValuesWithHttpInfo($fieldName, $systemName, $privateValue);
+        list($response) = $this->listValuesWithHttpInfo($fieldName, $systemName);
         return $response;
     }
 
@@ -3900,15 +3899,14 @@ class FieldValuesApi
      *
      * @param  string $fieldName Field unique identifier. (required)
      * @param  string $systemName Value unique identifier. (optional)
-     * @param  bool $privateValue Private value only. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Equisoft\SDK\EquisoftConnect\Model\FieldValueListValueResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listValuesWithHttpInfo($fieldName, $systemName = null, $privateValue = null)
+    public function listValuesWithHttpInfo($fieldName, $systemName = null)
     {
-        $request = $this->listValuesRequest($fieldName, $systemName, $privateValue);
+        $request = $this->listValuesRequest($fieldName, $systemName);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4070,14 +4068,13 @@ class FieldValuesApi
      *
      * @param  string $fieldName Field unique identifier. (required)
      * @param  string $systemName Value unique identifier. (optional)
-     * @param  bool $privateValue Private value only. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listValuesAsync($fieldName, $systemName = null, $privateValue = null)
+    public function listValuesAsync($fieldName, $systemName = null)
     {
-        return $this->listValuesAsyncWithHttpInfo($fieldName, $systemName, $privateValue)
+        return $this->listValuesAsyncWithHttpInfo($fieldName, $systemName)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4092,15 +4089,14 @@ class FieldValuesApi
      *
      * @param  string $fieldName Field unique identifier. (required)
      * @param  string $systemName Value unique identifier. (optional)
-     * @param  bool $privateValue Private value only. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listValuesAsyncWithHttpInfo($fieldName, $systemName = null, $privateValue = null)
+    public function listValuesAsyncWithHttpInfo($fieldName, $systemName = null)
     {
         $returnType = '\Equisoft\SDK\EquisoftConnect\Model\FieldValueListValueResponse';
-        $request = $this->listValuesRequest($fieldName, $systemName, $privateValue);
+        $request = $this->listValuesRequest($fieldName, $systemName);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4143,12 +4139,11 @@ class FieldValuesApi
      *
      * @param  string $fieldName Field unique identifier. (required)
      * @param  string $systemName Value unique identifier. (optional)
-     * @param  bool $privateValue Private value only. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function listValuesRequest($fieldName, $systemName = null, $privateValue = null)
+    public function listValuesRequest($fieldName, $systemName = null)
     {
         // verify the required parameter 'fieldName' is set
         if ($fieldName === null || (is_array($fieldName) && count($fieldName) === 0)) {
@@ -4169,15 +4164,6 @@ class FieldValuesApi
             $systemName,
             'systemName', // param base name
             'string', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $privateValue,
-            'privateValue', // param base name
-            'boolean', // openApiType
             'form', // style
             true, // explode
             false // required
