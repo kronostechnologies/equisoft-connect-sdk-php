@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * MovementTransferOptionTest Class Doc Comment
  *
  * @category    Class
- * @description MovementTransferOption
+ * @description Movement transfert option.
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

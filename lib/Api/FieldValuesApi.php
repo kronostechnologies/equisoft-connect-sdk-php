@@ -486,6 +486,395 @@ class FieldValuesApi
     }
 
     /**
+     * Operation createGroupValue
+     *
+     * Create a group value
+     *
+     * @param  string $fieldName Field unique identifier. (required)
+     * @param  int $id group unique identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateValuePayload $fieldValueCreateValuePayload fieldValueCreateValuePayload (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateValueResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+     */
+    public function createGroupValue($fieldName, $id, $fieldValueCreateValuePayload)
+    {
+        list($response) = $this->createGroupValueWithHttpInfo($fieldName, $id, $fieldValueCreateValuePayload);
+        return $response;
+    }
+
+    /**
+     * Operation createGroupValueWithHttpInfo
+     *
+     * Create a group value
+     *
+     * @param  string $fieldName Field unique identifier. (required)
+     * @param  int $id group unique identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateValuePayload $fieldValueCreateValuePayload (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateValueResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function createGroupValueWithHttpInfo($fieldName, $id, $fieldValueCreateValuePayload)
+    {
+        $request = $this->createGroupValueRequest($fieldName, $id, $fieldValueCreateValuePayload);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateValueResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateValueResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateValueResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 404:
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateValueResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateValueResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation createGroupValueAsync
+     *
+     * Create a group value
+     *
+     * @param  string $fieldName Field unique identifier. (required)
+     * @param  int $id group unique identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateValuePayload $fieldValueCreateValuePayload (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function createGroupValueAsync($fieldName, $id, $fieldValueCreateValuePayload)
+    {
+        return $this->createGroupValueAsyncWithHttpInfo($fieldName, $id, $fieldValueCreateValuePayload)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation createGroupValueAsyncWithHttpInfo
+     *
+     * Create a group value
+     *
+     * @param  string $fieldName Field unique identifier. (required)
+     * @param  int $id group unique identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateValuePayload $fieldValueCreateValuePayload (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function createGroupValueAsyncWithHttpInfo($fieldName, $id, $fieldValueCreateValuePayload)
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateValueResponse';
+        $request = $this->createGroupValueRequest($fieldName, $id, $fieldValueCreateValuePayload);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'createGroupValue'
+     *
+     * @param  string $fieldName Field unique identifier. (required)
+     * @param  int $id group unique identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateValuePayload $fieldValueCreateValuePayload (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function createGroupValueRequest($fieldName, $id, $fieldValueCreateValuePayload)
+    {
+        // verify the required parameter 'fieldName' is set
+        if ($fieldName === null || (is_array($fieldName) && count($fieldName) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $fieldName when calling createGroupValue'
+            );
+        }
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling createGroupValue'
+            );
+        }
+        // verify the required parameter 'fieldValueCreateValuePayload' is set
+        if ($fieldValueCreateValuePayload === null || (is_array($fieldValueCreateValuePayload) && count($fieldValueCreateValuePayload) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $fieldValueCreateValuePayload when calling createGroupValue'
+            );
+        }
+
+        $resourcePath = '/crm/api/v1/fields/{fieldName}/groups/{id}/values';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if ($fieldName !== null) {
+            $resourcePath = str_replace(
+                '{' . 'fieldName' . '}',
+                ObjectSerializer::toPathValue($fieldName),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($fieldValueCreateValuePayload)) {
+            if ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($fieldValueCreateValuePayload));
+            } else {
+                $httpBody = $fieldValueCreateValuePayload;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation createValue
      *
      * Create a value
@@ -849,6 +1238,552 @@ class FieldValuesApi
         $query = ObjectSerializer::buildQuery($queryParams);
         return new Request(
             'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation deleteGroup
+     *
+     * Delete single group for a specific field name and group id
+     *
+     * @param  string $fieldName Field unique identifier. (required)
+     * @param  int $id group unique identifier. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function deleteGroup($fieldName, $id)
+    {
+        $this->deleteGroupWithHttpInfo($fieldName, $id);
+    }
+
+    /**
+     * Operation deleteGroupWithHttpInfo
+     *
+     * Delete single group for a specific field name and group id
+     *
+     * @param  string $fieldName Field unique identifier. (required)
+     * @param  int $id group unique identifier. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function deleteGroupWithHttpInfo($fieldName, $id)
+    {
+        $request = $this->deleteGroupRequest($fieldName, $id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation deleteGroupAsync
+     *
+     * Delete single group for a specific field name and group id
+     *
+     * @param  string $fieldName Field unique identifier. (required)
+     * @param  int $id group unique identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function deleteGroupAsync($fieldName, $id)
+    {
+        return $this->deleteGroupAsyncWithHttpInfo($fieldName, $id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation deleteGroupAsyncWithHttpInfo
+     *
+     * Delete single group for a specific field name and group id
+     *
+     * @param  string $fieldName Field unique identifier. (required)
+     * @param  int $id group unique identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function deleteGroupAsyncWithHttpInfo($fieldName, $id)
+    {
+        $returnType = '';
+        $request = $this->deleteGroupRequest($fieldName, $id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'deleteGroup'
+     *
+     * @param  string $fieldName Field unique identifier. (required)
+     * @param  int $id group unique identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function deleteGroupRequest($fieldName, $id)
+    {
+        // verify the required parameter 'fieldName' is set
+        if ($fieldName === null || (is_array($fieldName) && count($fieldName) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $fieldName when calling deleteGroup'
+            );
+        }
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling deleteGroup'
+            );
+        }
+
+        $resourcePath = '/crm/api/v1/fields/{fieldName}/groups/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if ($fieldName !== null) {
+            $resourcePath = str_replace(
+                '{' . 'fieldName' . '}',
+                ObjectSerializer::toPathValue($fieldName),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'DELETE',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation deleteValue
+     *
+     * Delete single value for a specific field name and value id
+     *
+     * @param  string $fieldName Field unique identifier. (required)
+     * @param  int $id value unique identifier. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function deleteValue($fieldName, $id)
+    {
+        $this->deleteValueWithHttpInfo($fieldName, $id);
+    }
+
+    /**
+     * Operation deleteValueWithHttpInfo
+     *
+     * Delete single value for a specific field name and value id
+     *
+     * @param  string $fieldName Field unique identifier. (required)
+     * @param  int $id value unique identifier. (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function deleteValueWithHttpInfo($fieldName, $id)
+    {
+        $request = $this->deleteValueRequest($fieldName, $id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation deleteValueAsync
+     *
+     * Delete single value for a specific field name and value id
+     *
+     * @param  string $fieldName Field unique identifier. (required)
+     * @param  int $id value unique identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function deleteValueAsync($fieldName, $id)
+    {
+        return $this->deleteValueAsyncWithHttpInfo($fieldName, $id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation deleteValueAsyncWithHttpInfo
+     *
+     * Delete single value for a specific field name and value id
+     *
+     * @param  string $fieldName Field unique identifier. (required)
+     * @param  int $id value unique identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function deleteValueAsyncWithHttpInfo($fieldName, $id)
+    {
+        $returnType = '';
+        $request = $this->deleteValueRequest($fieldName, $id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'deleteValue'
+     *
+     * @param  string $fieldName Field unique identifier. (required)
+     * @param  int $id value unique identifier. (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function deleteValueRequest($fieldName, $id)
+    {
+        // verify the required parameter 'fieldName' is set
+        if ($fieldName === null || (is_array($fieldName) && count($fieldName) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $fieldName when calling deleteValue'
+            );
+        }
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling deleteValue'
+            );
+        }
+
+        $resourcePath = '/crm/api/v1/fields/{fieldName}/values/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if ($fieldName !== null) {
+            $resourcePath = str_replace(
+                '{' . 'fieldName' . '}',
+                ObjectSerializer::toPathValue($fieldName),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'DELETE',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
@@ -1593,6 +2528,296 @@ class FieldValuesApi
         $query = ObjectSerializer::buildQuery($queryParams);
         return new Request(
             'GET',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation linkValueGroup
+     *
+     * Link a value to a group
+     *
+     * @param  string $fieldName Field unique identifier. (required)
+     * @param  int $id value unique identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\FieldValueLinkGroupValuePayload $fieldValueLinkGroupValuePayload fieldValueLinkGroupValuePayload (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function linkValueGroup($fieldName, $id, $fieldValueLinkGroupValuePayload)
+    {
+        $this->linkValueGroupWithHttpInfo($fieldName, $id, $fieldValueLinkGroupValuePayload);
+    }
+
+    /**
+     * Operation linkValueGroupWithHttpInfo
+     *
+     * Link a value to a group
+     *
+     * @param  string $fieldName Field unique identifier. (required)
+     * @param  int $id value unique identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\FieldValueLinkGroupValuePayload $fieldValueLinkGroupValuePayload (required)
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function linkValueGroupWithHttpInfo($fieldName, $id, $fieldValueLinkGroupValuePayload)
+    {
+        $request = $this->linkValueGroupRequest($fieldName, $id, $fieldValueLinkGroupValuePayload);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation linkValueGroupAsync
+     *
+     * Link a value to a group
+     *
+     * @param  string $fieldName Field unique identifier. (required)
+     * @param  int $id value unique identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\FieldValueLinkGroupValuePayload $fieldValueLinkGroupValuePayload (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function linkValueGroupAsync($fieldName, $id, $fieldValueLinkGroupValuePayload)
+    {
+        return $this->linkValueGroupAsyncWithHttpInfo($fieldName, $id, $fieldValueLinkGroupValuePayload)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation linkValueGroupAsyncWithHttpInfo
+     *
+     * Link a value to a group
+     *
+     * @param  string $fieldName Field unique identifier. (required)
+     * @param  int $id value unique identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\FieldValueLinkGroupValuePayload $fieldValueLinkGroupValuePayload (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function linkValueGroupAsyncWithHttpInfo($fieldName, $id, $fieldValueLinkGroupValuePayload)
+    {
+        $returnType = '';
+        $request = $this->linkValueGroupRequest($fieldName, $id, $fieldValueLinkGroupValuePayload);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'linkValueGroup'
+     *
+     * @param  string $fieldName Field unique identifier. (required)
+     * @param  int $id value unique identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\FieldValueLinkGroupValuePayload $fieldValueLinkGroupValuePayload (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function linkValueGroupRequest($fieldName, $id, $fieldValueLinkGroupValuePayload)
+    {
+        // verify the required parameter 'fieldName' is set
+        if ($fieldName === null || (is_array($fieldName) && count($fieldName) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $fieldName when calling linkValueGroup'
+            );
+        }
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling linkValueGroup'
+            );
+        }
+        // verify the required parameter 'fieldValueLinkGroupValuePayload' is set
+        if ($fieldValueLinkGroupValuePayload === null || (is_array($fieldValueLinkGroupValuePayload) && count($fieldValueLinkGroupValuePayload) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $fieldValueLinkGroupValuePayload when calling linkValueGroup'
+            );
+        }
+
+        $resourcePath = '/crm/api/v1/fields/{fieldName}/values/{id}/groups';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if ($fieldName !== null) {
+            $resourcePath = str_replace(
+                '{' . 'fieldName' . '}',
+                ObjectSerializer::toPathValue($fieldName),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($fieldValueLinkGroupValuePayload)) {
+            if ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode(ObjectSerializer::sanitizeForSerialization($fieldValueLinkGroupValuePayload));
+            } else {
+                $httpBody = $fieldValueLinkGroupValuePayload;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'PUT',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
@@ -2656,14 +3881,15 @@ class FieldValuesApi
      *
      * @param  string $fieldName Field unique identifier. (required)
      * @param  string $systemName Value unique identifier. (optional)
+     * @param  bool $privateValue Private value only. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValueListValueResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
-    public function listValues($fieldName, $systemName = null)
+    public function listValues($fieldName, $systemName = null, $privateValue = null)
     {
-        list($response) = $this->listValuesWithHttpInfo($fieldName, $systemName);
+        list($response) = $this->listValuesWithHttpInfo($fieldName, $systemName, $privateValue);
         return $response;
     }
 
@@ -2674,14 +3900,15 @@ class FieldValuesApi
      *
      * @param  string $fieldName Field unique identifier. (required)
      * @param  string $systemName Value unique identifier. (optional)
+     * @param  bool $privateValue Private value only. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Equisoft\SDK\EquisoftConnect\Model\FieldValueListValueResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listValuesWithHttpInfo($fieldName, $systemName = null)
+    public function listValuesWithHttpInfo($fieldName, $systemName = null, $privateValue = null)
     {
-        $request = $this->listValuesRequest($fieldName, $systemName);
+        $request = $this->listValuesRequest($fieldName, $systemName, $privateValue);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2843,13 +4070,14 @@ class FieldValuesApi
      *
      * @param  string $fieldName Field unique identifier. (required)
      * @param  string $systemName Value unique identifier. (optional)
+     * @param  bool $privateValue Private value only. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listValuesAsync($fieldName, $systemName = null)
+    public function listValuesAsync($fieldName, $systemName = null, $privateValue = null)
     {
-        return $this->listValuesAsyncWithHttpInfo($fieldName, $systemName)
+        return $this->listValuesAsyncWithHttpInfo($fieldName, $systemName, $privateValue)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2864,14 +4092,15 @@ class FieldValuesApi
      *
      * @param  string $fieldName Field unique identifier. (required)
      * @param  string $systemName Value unique identifier. (optional)
+     * @param  bool $privateValue Private value only. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listValuesAsyncWithHttpInfo($fieldName, $systemName = null)
+    public function listValuesAsyncWithHttpInfo($fieldName, $systemName = null, $privateValue = null)
     {
         $returnType = '\Equisoft\SDK\EquisoftConnect\Model\FieldValueListValueResponse';
-        $request = $this->listValuesRequest($fieldName, $systemName);
+        $request = $this->listValuesRequest($fieldName, $systemName, $privateValue);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2914,11 +4143,12 @@ class FieldValuesApi
      *
      * @param  string $fieldName Field unique identifier. (required)
      * @param  string $systemName Value unique identifier. (optional)
+     * @param  bool $privateValue Private value only. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function listValuesRequest($fieldName, $systemName = null)
+    public function listValuesRequest($fieldName, $systemName = null, $privateValue = null)
     {
         // verify the required parameter 'fieldName' is set
         if ($fieldName === null || (is_array($fieldName) && count($fieldName) === 0)) {
@@ -2939,6 +4169,15 @@ class FieldValuesApi
             $systemName,
             'systemName', // param base name
             'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $privateValue,
+            'privateValue', // param base name
+            'boolean', // openApiType
             'form', // style
             true, // explode
             false // required
