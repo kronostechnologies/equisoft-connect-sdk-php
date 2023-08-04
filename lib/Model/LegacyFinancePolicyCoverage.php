@@ -285,23 +285,6 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
         return self::$openAPIModelName;
     }
 
-    public const COVERAGE_TYPE_BASE = 'BASE';
-    public const COVERAGE_TYPE_RIDER = 'RIDER';
-    public const COVERAGE_TYPE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getCoverageTypeAllowableValues()
-    {
-        return [
-            self::COVERAGE_TYPE_BASE,
-            self::COVERAGE_TYPE_RIDER,
-            self::COVERAGE_TYPE_UNKNOWN_DEFAULT_OPEN_API,
-        ];
-    }
 
     /**
      * Associative array for storing property values
@@ -354,15 +337,6 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        $allowedValues = $this->getCoverageTypeAllowableValues();
-        if (!is_null($this->container['coverageType']) && !in_array($this->container['coverageType'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'coverageType', must be one of '%s'",
-                $this->container['coverageType'],
-                implode("', '", $allowedValues)
-            );
-        }
 
         return $invalidProperties;
     }
@@ -422,16 +396,6 @@ class LegacyFinancePolicyCoverage implements ModelInterface, ArrayAccess, \JsonS
      */
     public function setCoverageType($coverageType)
     {
-        $allowedValues = $this->getCoverageTypeAllowableValues();
-        if (!is_null($coverageType) && !in_array($coverageType, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'coverageType', must be one of '%s'",
-                    $coverageType,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
         $this->container['coverageType'] = $coverageType;
 
         return $this;
