@@ -105,13 +105,4 @@ class LegacyFinancePolicyCoverageInsuredTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
-
-    /**
-     * Test attribute "fnaExternalId"
-     */
-    public function testPropertyFnaExternalId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
 }

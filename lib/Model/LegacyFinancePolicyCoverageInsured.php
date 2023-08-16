@@ -59,8 +59,7 @@ class LegacyFinancePolicyCoverageInsured implements ModelInterface, ArrayAccess,
     protected static $openAPITypes = [
         'name' => 'string',
         'insuranceClass' => 'string',
-        'smoker' => 'string',
-        'fnaExternalId' => 'string'
+        'smoker' => 'string'
     ];
 
     /**
@@ -73,8 +72,7 @@ class LegacyFinancePolicyCoverageInsured implements ModelInterface, ArrayAccess,
     protected static $openAPIFormats = [
         'name' => null,
         'insuranceClass' => null,
-        'smoker' => null,
-        'fnaExternalId' => null
+        'smoker' => null
     ];
 
     /**
@@ -106,8 +104,7 @@ class LegacyFinancePolicyCoverageInsured implements ModelInterface, ArrayAccess,
     protected static $attributeMap = [
         'name' => 'name',
         'insuranceClass' => 'insuranceClass',
-        'smoker' => 'smoker',
-        'fnaExternalId' => 'fnaExternalId'
+        'smoker' => 'smoker'
     ];
 
     /**
@@ -118,8 +115,7 @@ class LegacyFinancePolicyCoverageInsured implements ModelInterface, ArrayAccess,
     protected static $setters = [
         'name' => 'setName',
         'insuranceClass' => 'setInsuranceClass',
-        'smoker' => 'setSmoker',
-        'fnaExternalId' => 'setFnaExternalId'
+        'smoker' => 'setSmoker'
     ];
 
     /**
@@ -130,8 +126,7 @@ class LegacyFinancePolicyCoverageInsured implements ModelInterface, ArrayAccess,
     protected static $getters = [
         'name' => 'getName',
         'insuranceClass' => 'getInsuranceClass',
-        'smoker' => 'getSmoker',
-        'fnaExternalId' => 'getFnaExternalId'
+        'smoker' => 'getSmoker'
     ];
 
     /**
@@ -194,7 +189,6 @@ class LegacyFinancePolicyCoverageInsured implements ModelInterface, ArrayAccess,
         $this->container['name'] = $data['name'] ?? null;
         $this->container['insuranceClass'] = $data['insuranceClass'] ?? null;
         $this->container['smoker'] = $data['smoker'] ?? null;
-        $this->container['fnaExternalId'] = $data['fnaExternalId'] ?? null;
     }
 
     /**
@@ -289,30 +283,6 @@ class LegacyFinancePolicyCoverageInsured implements ModelInterface, ArrayAccess,
     public function setSmoker($smoker)
     {
         $this->container['smoker'] = $smoker;
-
-        return $this;
-    }
-
-    /**
-     * Gets fnaExternalId
-     *
-     * @return string|null
-     */
-    public function getFnaExternalId()
-    {
-        return $this->container['fnaExternalId'];
-    }
-
-    /**
-     * Sets fnaExternalId
-     *
-     * @param string|null $fnaExternalId FNA external id.
-     *
-     * @return self
-     */
-    public function setFnaExternalId($fnaExternalId)
-    {
-        $this->container['fnaExternalId'] = $fnaExternalId;
 
         return $this;
     }
