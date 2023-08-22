@@ -450,15 +450,14 @@ class LegacyFinanceApi
      *
      * @param  string $contactId Contact identifier. (required)
      * @param  bool $includeUnmanagedAssets Include unmagned assets. Default: false. (optional)
-     * @param  bool $fetchPoliciesByInsured Fetch policies by insured instead of owner. Default: false. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceGetAccountStatementResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
      */
-    public function legacyFinanceGetAccountStatement($contactId, $includeUnmanagedAssets = null, $fetchPoliciesByInsured = null)
+    public function legacyFinanceGetAccountStatement($contactId, $includeUnmanagedAssets = null)
     {
-        list($response) = $this->legacyFinanceGetAccountStatementWithHttpInfo($contactId, $includeUnmanagedAssets, $fetchPoliciesByInsured);
+        list($response) = $this->legacyFinanceGetAccountStatementWithHttpInfo($contactId, $includeUnmanagedAssets);
         return $response;
     }
 
@@ -469,15 +468,14 @@ class LegacyFinanceApi
      *
      * @param  string $contactId Contact identifier. (required)
      * @param  bool $includeUnmanagedAssets Include unmagned assets. Default: false. (optional)
-     * @param  bool $fetchPoliciesByInsured Fetch policies by insured instead of owner. Default: false. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceGetAccountStatementResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse|\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function legacyFinanceGetAccountStatementWithHttpInfo($contactId, $includeUnmanagedAssets = null, $fetchPoliciesByInsured = null)
+    public function legacyFinanceGetAccountStatementWithHttpInfo($contactId, $includeUnmanagedAssets = null)
     {
-        $request = $this->legacyFinanceGetAccountStatementRequest($contactId, $includeUnmanagedAssets, $fetchPoliciesByInsured);
+        $request = $this->legacyFinanceGetAccountStatementRequest($contactId, $includeUnmanagedAssets);
 
         try {
             $options = $this->createHttpClientOption();
@@ -639,14 +637,13 @@ class LegacyFinanceApi
      *
      * @param  string $contactId Contact identifier. (required)
      * @param  bool $includeUnmanagedAssets Include unmagned assets. Default: false. (optional)
-     * @param  bool $fetchPoliciesByInsured Fetch policies by insured instead of owner. Default: false. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function legacyFinanceGetAccountStatementAsync($contactId, $includeUnmanagedAssets = null, $fetchPoliciesByInsured = null)
+    public function legacyFinanceGetAccountStatementAsync($contactId, $includeUnmanagedAssets = null)
     {
-        return $this->legacyFinanceGetAccountStatementAsyncWithHttpInfo($contactId, $includeUnmanagedAssets, $fetchPoliciesByInsured)
+        return $this->legacyFinanceGetAccountStatementAsyncWithHttpInfo($contactId, $includeUnmanagedAssets)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -661,15 +658,14 @@ class LegacyFinanceApi
      *
      * @param  string $contactId Contact identifier. (required)
      * @param  bool $includeUnmanagedAssets Include unmagned assets. Default: false. (optional)
-     * @param  bool $fetchPoliciesByInsured Fetch policies by insured instead of owner. Default: false. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function legacyFinanceGetAccountStatementAsyncWithHttpInfo($contactId, $includeUnmanagedAssets = null, $fetchPoliciesByInsured = null)
+    public function legacyFinanceGetAccountStatementAsyncWithHttpInfo($contactId, $includeUnmanagedAssets = null)
     {
         $returnType = '\Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceGetAccountStatementResponse';
-        $request = $this->legacyFinanceGetAccountStatementRequest($contactId, $includeUnmanagedAssets, $fetchPoliciesByInsured);
+        $request = $this->legacyFinanceGetAccountStatementRequest($contactId, $includeUnmanagedAssets);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -712,12 +708,11 @@ class LegacyFinanceApi
      *
      * @param  string $contactId Contact identifier. (required)
      * @param  bool $includeUnmanagedAssets Include unmagned assets. Default: false. (optional)
-     * @param  bool $fetchPoliciesByInsured Fetch policies by insured instead of owner. Default: false. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function legacyFinanceGetAccountStatementRequest($contactId, $includeUnmanagedAssets = null, $fetchPoliciesByInsured = null)
+    public function legacyFinanceGetAccountStatementRequest($contactId, $includeUnmanagedAssets = null)
     {
         // verify the required parameter 'contactId' is set
         if ($contactId === null || (is_array($contactId) && count($contactId) === 0)) {
@@ -746,15 +741,6 @@ class LegacyFinanceApi
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
             $includeUnmanagedAssets,
             'include_unmanaged_assets', // param base name
-            'boolean', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $fetchPoliciesByInsured,
-            'fetchPoliciesByInsured', // param base name
             'boolean', // openApiType
             'form', // style
             true, // explode
