@@ -66,6 +66,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $openAPITypes = [
         'type' => '\Equisoft\SDK\EquisoftConnect\Model\MovementMovementType',
         'date' => 'string',
+        'now' => 'bool',
         'sourceDatabase' => 'string',
         'destinationDatabase' => 'string',
         'users' => 'string[]',
@@ -91,6 +92,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $openAPIFormats = [
         'type' => null,
         'date' => null,
+        'now' => null,
         'sourceDatabase' => null,
         'destinationDatabase' => null,
         'users' => null,
@@ -135,6 +137,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $attributeMap = [
         'type' => 'type',
         'date' => 'date',
+        'now' => 'now',
         'sourceDatabase' => 'sourceDatabase',
         'destinationDatabase' => 'destinationDatabase',
         'users' => 'users',
@@ -158,6 +161,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $setters = [
         'type' => 'setType',
         'date' => 'setDate',
+        'now' => 'setNow',
         'sourceDatabase' => 'setSourceDatabase',
         'destinationDatabase' => 'setDestinationDatabase',
         'users' => 'setUsers',
@@ -181,6 +185,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $getters = [
         'type' => 'getType',
         'date' => 'getDate',
+        'now' => 'getNow',
         'sourceDatabase' => 'getSourceDatabase',
         'destinationDatabase' => 'getDestinationDatabase',
         'users' => 'getUsers',
@@ -255,6 +260,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
     {
         $this->container['type'] = $data['type'] ?? null;
         $this->container['date'] = $data['date'] ?? null;
+        $this->container['now'] = $data['now'] ?? null;
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['destinationDatabase'] = $data['destinationDatabase'] ?? null;
         $this->container['users'] = $data['users'] ?? null;
@@ -365,6 +371,30 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
     public function setDate($date)
     {
         $this->container['date'] = $date;
+
+        return $this;
+    }
+
+    /**
+     * Gets now
+     *
+     * @return bool|null
+     */
+    public function getNow()
+    {
+        return $this->container['now'];
+    }
+
+    /**
+     * Sets now
+     *
+     * @param bool|null $now Is now.
+     *
+     * @return self
+     */
+    public function setNow($now)
+    {
+        $this->container['now'] = $now;
 
         return $this;
     }

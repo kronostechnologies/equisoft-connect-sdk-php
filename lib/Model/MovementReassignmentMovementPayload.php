@@ -59,6 +59,7 @@ class MovementReassignmentMovementPayload implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
         'type' => 'string',
         'date' => 'string',
+        'now' => 'bool',
         'sourceDatabase' => 'string',
         'sourceUser' => 'string',
         'destinationUser' => 'string',
@@ -75,6 +76,7 @@ class MovementReassignmentMovementPayload implements ModelInterface, ArrayAccess
     protected static $openAPIFormats = [
         'type' => null,
         'date' => null,
+        'now' => null,
         'sourceDatabase' => null,
         'sourceUser' => null,
         'destinationUser' => null,
@@ -110,6 +112,7 @@ class MovementReassignmentMovementPayload implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'type' => 'type',
         'date' => 'date',
+        'now' => 'now',
         'sourceDatabase' => 'sourceDatabase',
         'sourceUser' => 'sourceUser',
         'destinationUser' => 'destinationUser',
@@ -124,6 +127,7 @@ class MovementReassignmentMovementPayload implements ModelInterface, ArrayAccess
     protected static $setters = [
         'type' => 'setType',
         'date' => 'setDate',
+        'now' => 'setNow',
         'sourceDatabase' => 'setSourceDatabase',
         'sourceUser' => 'setSourceUser',
         'destinationUser' => 'setDestinationUser',
@@ -138,6 +142,7 @@ class MovementReassignmentMovementPayload implements ModelInterface, ArrayAccess
     protected static $getters = [
         'type' => 'getType',
         'date' => 'getDate',
+        'now' => 'getNow',
         'sourceDatabase' => 'getSourceDatabase',
         'sourceUser' => 'getSourceUser',
         'destinationUser' => 'getDestinationUser',
@@ -218,6 +223,7 @@ class MovementReassignmentMovementPayload implements ModelInterface, ArrayAccess
     {
         $this->container['type'] = $data['type'] ?? 'REASSIGNMENT';
         $this->container['date'] = $data['date'] ?? null;
+        $this->container['now'] = $data['now'] ?? null;
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['sourceUser'] = $data['sourceUser'] ?? null;
         $this->container['destinationUser'] = $data['destinationUser'] ?? null;
@@ -326,6 +332,30 @@ class MovementReassignmentMovementPayload implements ModelInterface, ArrayAccess
     public function setDate($date)
     {
         $this->container['date'] = $date;
+
+        return $this;
+    }
+
+    /**
+     * Gets now
+     *
+     * @return bool|null
+     */
+    public function getNow()
+    {
+        return $this->container['now'];
+    }
+
+    /**
+     * Sets now
+     *
+     * @param bool|null $now Is now.
+     *
+     * @return self
+     */
+    public function setNow($now)
+    {
+        $this->container['now'] = $now;
 
         return $this;
     }
