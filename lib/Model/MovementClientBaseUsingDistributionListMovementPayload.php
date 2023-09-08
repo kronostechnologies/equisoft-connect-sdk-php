@@ -59,7 +59,6 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
     protected static $openAPITypes = [
         'type' => 'string',
         'date' => 'string',
-        'now' => 'bool',
         'sourceDatabase' => 'string',
         'sourceUser' => 'string',
         'sourceDistributionList' => 'string',
@@ -79,7 +78,6 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
     protected static $openAPIFormats = [
         'type' => null,
         'date' => null,
-        'now' => null,
         'sourceDatabase' => null,
         'sourceUser' => null,
         'sourceDistributionList' => null,
@@ -118,7 +116,6 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
     protected static $attributeMap = [
         'type' => 'type',
         'date' => 'date',
-        'now' => 'now',
         'sourceDatabase' => 'sourceDatabase',
         'sourceUser' => 'sourceUser',
         'sourceDistributionList' => 'sourceDistributionList',
@@ -136,7 +133,6 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
     protected static $setters = [
         'type' => 'setType',
         'date' => 'setDate',
-        'now' => 'setNow',
         'sourceDatabase' => 'setSourceDatabase',
         'sourceUser' => 'setSourceUser',
         'sourceDistributionList' => 'setSourceDistributionList',
@@ -154,7 +150,6 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
     protected static $getters = [
         'type' => 'getType',
         'date' => 'getDate',
-        'now' => 'getNow',
         'sourceDatabase' => 'getSourceDatabase',
         'sourceUser' => 'getSourceUser',
         'sourceDistributionList' => 'getSourceDistributionList',
@@ -238,7 +233,6 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
     {
         $this->container['type'] = $data['type'] ?? 'CLIENTBASE_USING_DISTLIST';
         $this->container['date'] = $data['date'] ?? null;
-        $this->container['now'] = $data['now'] ?? null;
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['sourceUser'] = $data['sourceUser'] ?? null;
         $this->container['sourceDistributionList'] = $data['sourceDistributionList'] ?? null;
@@ -353,30 +347,6 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
     public function setDate($date)
     {
         $this->container['date'] = $date;
-
-        return $this;
-    }
-
-    /**
-     * Gets now
-     *
-     * @return bool|null
-     */
-    public function getNow()
-    {
-        return $this->container['now'];
-    }
-
-    /**
-     * Sets now
-     *
-     * @param bool|null $now Is now.
-     *
-     * @return self
-     */
-    public function setNow($now)
-    {
-        $this->container['now'] = $now;
 
         return $this;
     }
