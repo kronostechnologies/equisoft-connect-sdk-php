@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **string** |  | [default to 'CLIENTBASE_USING_DISTLIST']
 **date** | **string** | Movement date. | [optional]
+**now** | **bool** | Is now. | [optional]
 **sourceDatabase** | **string** | Source database full name. |
 **sourceUser** | **string** | Source user id. |
 **sourceDistributionList** | **string** | Source distribution list. | [optional]
