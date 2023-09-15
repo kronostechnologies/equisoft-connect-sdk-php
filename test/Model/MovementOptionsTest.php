@@ -1,6 +1,6 @@
 <?php
 /**
- * MovementMovementPayloadTest
+ * MovementOptionsTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * MovementMovementPayloadTest Class Doc Comment
+ * MovementOptionsTest Class Doc Comment
  *
  * @category    Class
- * @description MovementMovementPayload
+ * @description MovementOptions
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class MovementMovementPayloadTest extends TestCase
+class MovementOptionsTest extends TestCase
 {
 
     /**
@@ -71,153 +71,99 @@ class MovementMovementPayloadTest extends TestCase
     }
 
     /**
-     * Test "MovementMovementPayload"
+     * Test "MovementOptions"
      */
-    public function testMovementMovementPayload()
+    public function testMovementOptions()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "type"
+     * Test attribute "copyAllMailMerge"
      */
-    public function testPropertyType()
+    public function testPropertyCopyAllMailMerge()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "date"
+     * Test attribute "copyAllProduct"
      */
-    public function testPropertyDate()
+    public function testPropertyCopyAllProduct()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "sourceDatabase"
+     * Test attribute "copyAllReport"
      */
-    public function testPropertySourceDatabase()
+    public function testPropertyCopyAllReport()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "destinationDatabase"
+     * Test attribute "copyAllVD"
      */
-    public function testPropertyDestinationDatabase()
+    public function testPropertyCopyAllVD()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "users"
+     * Test attribute "propagate"
      */
-    public function testPropertyUsers()
+    public function testPropertyPropagate()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "options"
+     * Test attribute "ignoreAction"
      */
-    public function testPropertyOptions()
+    public function testPropertyIgnoreAction()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "userTuples"
+     * Test attribute "ignoreCommission"
      */
-    public function testPropertyUserTuples()
+    public function testPropertyIgnoreCommission()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "sourceUser"
+     * Test attribute "ignoreDocument"
      */
-    public function testPropertySourceUser()
+    public function testPropertyIgnoreDocument()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "destinationUser"
+     * Test attribute "ignoreFinance"
      */
-    public function testPropertyDestinationUser()
+    public function testPropertyIgnoreFinance()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "accessCode"
+     * Test attribute "ignoreInsurance"
      */
-    public function testPropertyAccessCode()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "sourceDistributionList"
-     */
-    public function testPropertySourceDistributionList()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "datagatewayAccessMappings"
-     */
-    public function testPropertyDatagatewayAccessMappings()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "transferOption"
-     */
-    public function testPropertyTransferOption()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "capsilFile"
-     */
-    public function testPropertyCapsilFile()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "univerisFile"
-     */
-    public function testPropertyUniverisFile()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "dataphileFile"
-     */
-    public function testPropertyDataphileFile()
+    public function testPropertyIgnoreInsurance()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

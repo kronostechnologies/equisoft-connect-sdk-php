@@ -123,4 +123,13 @@ class MovementCopyMovementPayloadTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "options"
+     */
+    public function testPropertyOptions()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

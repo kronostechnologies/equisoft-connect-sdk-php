@@ -191,7 +191,6 @@ Class | Method | HTTP request | Description
 *MovementApi* | [**addMovement**](docs/Api/MovementApi.md#addmovement) | **POST** /crm/api/v1/movements | Add a movement
 *MovementApi* | [**cancelMovement**](docs/Api/MovementApi.md#cancelmovement) | **POST** /crm/api/v1/movements/{movementId}/cancel | Cancel a movement.
 *MovementApi* | [**deleteMovement**](docs/Api/MovementApi.md#deletemovement) | **DELETE** /crm/api/v1/movements/{movementId} | Delete a movement.
-*MovementApi* | [**getMovementStatus**](docs/Api/MovementApi.md#getmovementstatus) | **GET** /crm/api/v1/movements/{movementId}/status | Get movement status.
 *MovementApi* | [**listMovements**](docs/Api/MovementApi.md#listmovements) | **GET** /crm/api/v1/movements | List all movements
 *RemoteAccountApi* | [**getMailAccountAccessRights**](docs/Api/RemoteAccountApi.md#getmailaccountaccessrights) | **GET** /crm/api/v1/mailAccounts/{remoteAccountId}/accessRights | Return the mail account access rights granted to the currently connected user account.
 *TasksApi* | [**archiveTaskInternalNote**](docs/Api/TasksApi.md#archivetaskinternalnote) | **POST** /crm/api/v1/tasks/{taskId}/notes/{noteId}/archive | Archive an internal note for a task.
@@ -476,14 +475,13 @@ Class | Method | HTTP request | Description
 - [MovementDatabase](docs/Model/MovementDatabase.md)
 - [MovementDistributionList](docs/Model/MovementDistributionList.md)
 - [MovementGatewayAccessCode](docs/Model/MovementGatewayAccessCode.md)
-- [MovementGetStatusResponse](docs/Model/MovementGetStatusResponse.md)
 - [MovementListMovementResponse](docs/Model/MovementListMovementResponse.md)
 - [MovementMoveMovement](docs/Model/MovementMoveMovement.md)
 - [MovementMoveMovementPayload](docs/Model/MovementMoveMovementPayload.md)
 - [MovementMovement](docs/Model/MovementMovement.md)
 - [MovementMovementPayload](docs/Model/MovementMovementPayload.md)
-- [MovementMovementStatus](docs/Model/MovementMovementStatus.md)
 - [MovementMovementType](docs/Model/MovementMovementType.md)
+- [MovementOptions](docs/Model/MovementOptions.md)
 - [MovementReassignmentMovement](docs/Model/MovementReassignmentMovement.md)
 - [MovementReassignmentMovementPayload](docs/Model/MovementReassignmentMovementPayload.md)
 - [MovementTransferOption](docs/Model/MovementTransferOption.md)

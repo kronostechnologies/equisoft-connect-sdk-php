@@ -69,6 +69,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
         'sourceDatabase' => 'string',
         'destinationDatabase' => 'string',
         'users' => 'string[]',
+        'options' => '\Equisoft\SDK\EquisoftConnect\Model\MovementOptions',
         'userTuples' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUserTuplePayload[]',
         'sourceUser' => 'string',
         'destinationUser' => 'string',
@@ -94,6 +95,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
         'sourceDatabase' => null,
         'destinationDatabase' => null,
         'users' => null,
+        'options' => null,
         'userTuples' => null,
         'sourceUser' => null,
         'destinationUser' => null,
@@ -138,6 +140,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
         'sourceDatabase' => 'sourceDatabase',
         'destinationDatabase' => 'destinationDatabase',
         'users' => 'users',
+        'options' => 'options',
         'userTuples' => 'userTuples',
         'sourceUser' => 'sourceUser',
         'destinationUser' => 'destinationUser',
@@ -161,6 +164,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
         'sourceDatabase' => 'setSourceDatabase',
         'destinationDatabase' => 'setDestinationDatabase',
         'users' => 'setUsers',
+        'options' => 'setOptions',
         'userTuples' => 'setUserTuples',
         'sourceUser' => 'setSourceUser',
         'destinationUser' => 'setDestinationUser',
@@ -184,6 +188,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
         'sourceDatabase' => 'getSourceDatabase',
         'destinationDatabase' => 'getDestinationDatabase',
         'users' => 'getUsers',
+        'options' => 'getOptions',
         'userTuples' => 'getUserTuples',
         'sourceUser' => 'getSourceUser',
         'destinationUser' => 'getDestinationUser',
@@ -258,6 +263,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['destinationDatabase'] = $data['destinationDatabase'] ?? null;
         $this->container['users'] = $data['users'] ?? null;
+        $this->container['options'] = $data['options'] ?? null;
         $this->container['userTuples'] = $data['userTuples'] ?? null;
         $this->container['sourceUser'] = $data['sourceUser'] ?? null;
         $this->container['destinationUser'] = $data['destinationUser'] ?? null;
@@ -437,6 +443,30 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
     public function setUsers($users)
     {
         $this->container['users'] = $users;
+
+        return $this;
+    }
+
+    /**
+     * Gets options
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementOptions|null
+     */
+    public function getOptions()
+    {
+        return $this->container['options'];
+    }
+
+    /**
+     * Sets options
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementOptions|null $options Movement Options.
+     *
+     * @return self
+     */
+    public function setOptions($options)
+    {
+        $this->container['options'] = $options;
 
         return $this;
     }

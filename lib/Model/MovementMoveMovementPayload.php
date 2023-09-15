@@ -61,7 +61,8 @@ class MovementMoveMovementPayload implements ModelInterface, ArrayAccess, \JsonS
         'date' => 'string',
         'sourceDatabase' => 'string',
         'destinationDatabase' => 'string',
-        'users' => 'string[]'
+        'users' => 'string[]',
+        'options' => '\Equisoft\SDK\EquisoftConnect\Model\MovementOptions'
     ];
 
     /**
@@ -76,7 +77,8 @@ class MovementMoveMovementPayload implements ModelInterface, ArrayAccess, \JsonS
         'date' => null,
         'sourceDatabase' => null,
         'destinationDatabase' => null,
-        'users' => null
+        'users' => null,
+        'options' => null
     ];
 
     /**
@@ -110,7 +112,8 @@ class MovementMoveMovementPayload implements ModelInterface, ArrayAccess, \JsonS
         'date' => 'date',
         'sourceDatabase' => 'sourceDatabase',
         'destinationDatabase' => 'destinationDatabase',
-        'users' => 'users'
+        'users' => 'users',
+        'options' => 'options'
     ];
 
     /**
@@ -123,7 +126,8 @@ class MovementMoveMovementPayload implements ModelInterface, ArrayAccess, \JsonS
         'date' => 'setDate',
         'sourceDatabase' => 'setSourceDatabase',
         'destinationDatabase' => 'setDestinationDatabase',
-        'users' => 'setUsers'
+        'users' => 'setUsers',
+        'options' => 'setOptions'
     ];
 
     /**
@@ -136,7 +140,8 @@ class MovementMoveMovementPayload implements ModelInterface, ArrayAccess, \JsonS
         'date' => 'getDate',
         'sourceDatabase' => 'getSourceDatabase',
         'destinationDatabase' => 'getDestinationDatabase',
-        'users' => 'getUsers'
+        'users' => 'getUsers',
+        'options' => 'getOptions'
     ];
 
     /**
@@ -216,6 +221,7 @@ class MovementMoveMovementPayload implements ModelInterface, ArrayAccess, \JsonS
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['destinationDatabase'] = $data['destinationDatabase'] ?? null;
         $this->container['users'] = $data['users'] ?? null;
+        $this->container['options'] = $data['options'] ?? null;
     }
 
     /**
@@ -389,6 +395,30 @@ class MovementMoveMovementPayload implements ModelInterface, ArrayAccess, \JsonS
     public function setUsers($users)
     {
         $this->container['users'] = $users;
+
+        return $this;
+    }
+
+    /**
+     * Gets options
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementOptions|null
+     */
+    public function getOptions()
+    {
+        return $this->container['options'];
+    }
+
+    /**
+     * Sets options
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementOptions|null $options Movement Options.
+     *
+     * @return self
+     */
+    public function setOptions($options)
+    {
+        $this->container['options'] = $options;
 
         return $this;
     }

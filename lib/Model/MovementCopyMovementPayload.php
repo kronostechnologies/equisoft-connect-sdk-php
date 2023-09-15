@@ -61,7 +61,8 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonS
         'date' => 'string',
         'sourceDatabase' => 'string',
         'destinationDatabase' => 'string',
-        'userTuples' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUserTuplePayload[]'
+        'userTuples' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUserTuplePayload[]',
+        'options' => '\Equisoft\SDK\EquisoftConnect\Model\MovementOptions'
     ];
 
     /**
@@ -76,7 +77,8 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonS
         'date' => null,
         'sourceDatabase' => null,
         'destinationDatabase' => null,
-        'userTuples' => null
+        'userTuples' => null,
+        'options' => null
     ];
 
     /**
@@ -110,7 +112,8 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonS
         'date' => 'date',
         'sourceDatabase' => 'sourceDatabase',
         'destinationDatabase' => 'destinationDatabase',
-        'userTuples' => 'userTuples'
+        'userTuples' => 'userTuples',
+        'options' => 'options'
     ];
 
     /**
@@ -123,7 +126,8 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonS
         'date' => 'setDate',
         'sourceDatabase' => 'setSourceDatabase',
         'destinationDatabase' => 'setDestinationDatabase',
-        'userTuples' => 'setUserTuples'
+        'userTuples' => 'setUserTuples',
+        'options' => 'setOptions'
     ];
 
     /**
@@ -136,7 +140,8 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonS
         'date' => 'getDate',
         'sourceDatabase' => 'getSourceDatabase',
         'destinationDatabase' => 'getDestinationDatabase',
-        'userTuples' => 'getUserTuples'
+        'userTuples' => 'getUserTuples',
+        'options' => 'getOptions'
     ];
 
     /**
@@ -216,6 +221,7 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonS
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['destinationDatabase'] = $data['destinationDatabase'] ?? null;
         $this->container['userTuples'] = $data['userTuples'] ?? null;
+        $this->container['options'] = $data['options'] ?? null;
     }
 
     /**
@@ -389,6 +395,30 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonS
     public function setUserTuples($userTuples)
     {
         $this->container['userTuples'] = $userTuples;
+
+        return $this;
+    }
+
+    /**
+     * Gets options
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementOptions|null
+     */
+    public function getOptions()
+    {
+        return $this->container['options'];
+    }
+
+    /**
+     * Sets options
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementOptions|null $options Movement Options.
+     *
+     * @return self
+     */
+    public function setOptions($options)
+    {
+        $this->container['options'] = $options;
 
         return $this;
     }
