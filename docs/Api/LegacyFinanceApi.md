@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 ## `legacyFinanceGetAccountStatement()`
 
 ```php
-legacyFinanceGetAccountStatement($contactId, $includeUnmanagedAssets, $fetchPoliciesByInsured): \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceGetAccountStatementResponse
+legacyFinanceGetAccountStatement($contactId, $includeUnmanagedAssets, $fetchOwnedAndInsuredPolicies): \Equisoft\SDK\EquisoftConnect\Model\LegacyFinanceGetAccountStatementResponse
 ```
 
 Get Account Statement information for a contact.
@@ -99,10 +99,10 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\LegacyFinanceApi(
 );
 $contactId = 'contactId_example'; // string | Contact identifier.
 $includeUnmanagedAssets = True; // bool | Include unmagned assets. Default: false.
-$fetchPoliciesByInsured = True; // bool | Fetch policies by insured instead of owner. Default: false.
+$fetchOwnedAndInsuredPolicies = True; // bool | Fetch policies by both owner and insured. Default: false.
 
 try {
-    $result = $apiInstance->legacyFinanceGetAccountStatement($contactId, $includeUnmanagedAssets, $fetchPoliciesByInsured);
+    $result = $apiInstance->legacyFinanceGetAccountStatement($contactId, $includeUnmanagedAssets, $fetchOwnedAndInsuredPolicies);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling LegacyFinanceApi->legacyFinanceGetAccountStatement: ', $e->getMessage(), PHP_EOL;
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contactId** | **string**| Contact identifier. |
  **includeUnmanagedAssets** | **bool**| Include unmagned assets. Default: false. | [optional]
- **fetchPoliciesByInsured** | **bool**| Fetch policies by insured instead of owner. Default: false. | [optional]
+ **fetchOwnedAndInsuredPolicies** | **bool**| Fetch policies by both owner and insured. Default: false. | [optional]
 
 ### Return type
 
