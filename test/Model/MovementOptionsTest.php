@@ -1,6 +1,6 @@
 <?php
 /**
- * MovementClientBaseUsingFileMovementPayloadTest
+ * MovementOptionsTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * MovementClientBaseUsingFileMovementPayloadTest Class Doc Comment
+ * MovementOptionsTest Class Doc Comment
  *
  * @category    Class
- * @description MovementClientBaseUsingFileMovementPayload
+ * @description MovementOptions
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class MovementClientBaseUsingFileMovementPayloadTest extends TestCase
+class MovementOptionsTest extends TestCase
 {
 
     /**
@@ -71,90 +71,99 @@ class MovementClientBaseUsingFileMovementPayloadTest extends TestCase
     }
 
     /**
-     * Test "MovementClientBaseUsingFileMovementPayload"
+     * Test "MovementOptions"
      */
-    public function testMovementClientBaseUsingFileMovementPayload()
+    public function testMovementOptions()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "type"
+     * Test attribute "copyAllMailMerge"
      */
-    public function testPropertyType()
+    public function testPropertyCopyAllMailMerge()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "date"
+     * Test attribute "copyAllProduct"
      */
-    public function testPropertyDate()
+    public function testPropertyCopyAllProduct()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "sourceDatabase"
+     * Test attribute "copyAllReport"
      */
-    public function testPropertySourceDatabase()
+    public function testPropertyCopyAllReport()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "sourceUser"
+     * Test attribute "copyAllVD"
      */
-    public function testPropertySourceUser()
+    public function testPropertyCopyAllVD()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "destinationDatabase"
+     * Test attribute "propagate"
      */
-    public function testPropertyDestinationDatabase()
+    public function testPropertyPropagate()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "destinationUser"
+     * Test attribute "ignoreAction"
      */
-    public function testPropertyDestinationUser()
+    public function testPropertyIgnoreAction()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "capsilFile"
+     * Test attribute "ignoreCommission"
      */
-    public function testPropertyCapsilFile()
+    public function testPropertyIgnoreCommission()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "univerisFile"
+     * Test attribute "ignoreDocument"
      */
-    public function testPropertyUniverisFile()
+    public function testPropertyIgnoreDocument()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "dataphileFile"
+     * Test attribute "ignoreFinance"
      */
-    public function testPropertyDataphileFile()
+    public function testPropertyIgnoreFinance()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "ignoreInsurance"
+     */
+    public function testPropertyIgnoreInsurance()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

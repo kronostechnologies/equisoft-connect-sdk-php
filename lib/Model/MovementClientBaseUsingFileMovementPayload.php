@@ -59,7 +59,6 @@ class MovementClientBaseUsingFileMovementPayload implements ModelInterface, Arra
     protected static $openAPITypes = [
         'type' => 'string',
         'date' => 'string',
-        'now' => 'bool',
         'sourceDatabase' => 'string',
         'sourceUser' => 'string',
         'destinationDatabase' => 'string',
@@ -79,7 +78,6 @@ class MovementClientBaseUsingFileMovementPayload implements ModelInterface, Arra
     protected static $openAPIFormats = [
         'type' => null,
         'date' => null,
-        'now' => null,
         'sourceDatabase' => null,
         'sourceUser' => null,
         'destinationDatabase' => null,
@@ -118,7 +116,6 @@ class MovementClientBaseUsingFileMovementPayload implements ModelInterface, Arra
     protected static $attributeMap = [
         'type' => 'type',
         'date' => 'date',
-        'now' => 'now',
         'sourceDatabase' => 'sourceDatabase',
         'sourceUser' => 'sourceUser',
         'destinationDatabase' => 'destinationDatabase',
@@ -136,7 +133,6 @@ class MovementClientBaseUsingFileMovementPayload implements ModelInterface, Arra
     protected static $setters = [
         'type' => 'setType',
         'date' => 'setDate',
-        'now' => 'setNow',
         'sourceDatabase' => 'setSourceDatabase',
         'sourceUser' => 'setSourceUser',
         'destinationDatabase' => 'setDestinationDatabase',
@@ -154,7 +150,6 @@ class MovementClientBaseUsingFileMovementPayload implements ModelInterface, Arra
     protected static $getters = [
         'type' => 'getType',
         'date' => 'getDate',
-        'now' => 'getNow',
         'sourceDatabase' => 'getSourceDatabase',
         'sourceUser' => 'getSourceUser',
         'destinationDatabase' => 'getDestinationDatabase',
@@ -238,7 +233,6 @@ class MovementClientBaseUsingFileMovementPayload implements ModelInterface, Arra
     {
         $this->container['type'] = $data['type'] ?? 'CLIENTBASE_USING_FILE';
         $this->container['date'] = $data['date'] ?? null;
-        $this->container['now'] = $data['now'] ?? null;
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['sourceUser'] = $data['sourceUser'] ?? null;
         $this->container['destinationDatabase'] = $data['destinationDatabase'] ?? null;
@@ -350,30 +344,6 @@ class MovementClientBaseUsingFileMovementPayload implements ModelInterface, Arra
     public function setDate($date)
     {
         $this->container['date'] = $date;
-
-        return $this;
-    }
-
-    /**
-     * Gets now
-     *
-     * @return bool|null
-     */
-    public function getNow()
-    {
-        return $this->container['now'];
-    }
-
-    /**
-     * Sets now
-     *
-     * @param bool|null $now Is now.
-     *
-     * @return self
-     */
-    public function setNow($now)
-    {
-        $this->container['now'] = $now;
 
         return $this;
     }
