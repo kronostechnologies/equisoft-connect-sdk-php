@@ -59,10 +59,10 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonS
     protected static $openAPITypes = [
         'type' => 'string',
         'date' => 'string',
+        'now' => 'bool',
         'sourceDatabase' => 'string',
         'destinationDatabase' => 'string',
-        'userTuples' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUserTuplePayload[]',
-        'options' => '\Equisoft\SDK\EquisoftConnect\Model\MovementOptions'
+        'userTuples' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUserTuplePayload[]'
     ];
 
     /**
@@ -75,10 +75,10 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonS
     protected static $openAPIFormats = [
         'type' => null,
         'date' => null,
+        'now' => null,
         'sourceDatabase' => null,
         'destinationDatabase' => null,
-        'userTuples' => null,
-        'options' => null
+        'userTuples' => null
     ];
 
     /**
@@ -110,10 +110,10 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonS
     protected static $attributeMap = [
         'type' => 'type',
         'date' => 'date',
+        'now' => 'now',
         'sourceDatabase' => 'sourceDatabase',
         'destinationDatabase' => 'destinationDatabase',
-        'userTuples' => 'userTuples',
-        'options' => 'options'
+        'userTuples' => 'userTuples'
     ];
 
     /**
@@ -124,10 +124,10 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonS
     protected static $setters = [
         'type' => 'setType',
         'date' => 'setDate',
+        'now' => 'setNow',
         'sourceDatabase' => 'setSourceDatabase',
         'destinationDatabase' => 'setDestinationDatabase',
-        'userTuples' => 'setUserTuples',
-        'options' => 'setOptions'
+        'userTuples' => 'setUserTuples'
     ];
 
     /**
@@ -138,10 +138,10 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonS
     protected static $getters = [
         'type' => 'getType',
         'date' => 'getDate',
+        'now' => 'getNow',
         'sourceDatabase' => 'getSourceDatabase',
         'destinationDatabase' => 'getDestinationDatabase',
-        'userTuples' => 'getUserTuples',
-        'options' => 'getOptions'
+        'userTuples' => 'getUserTuples'
     ];
 
     /**
@@ -218,10 +218,10 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonS
     {
         $this->container['type'] = $data['type'] ?? 'COPY';
         $this->container['date'] = $data['date'] ?? null;
+        $this->container['now'] = $data['now'] ?? null;
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['destinationDatabase'] = $data['destinationDatabase'] ?? null;
         $this->container['userTuples'] = $data['userTuples'] ?? null;
-        $this->container['options'] = $data['options'] ?? null;
     }
 
     /**
@@ -328,6 +328,30 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonS
     }
 
     /**
+     * Gets now
+     *
+     * @return bool|null
+     */
+    public function getNow()
+    {
+        return $this->container['now'];
+    }
+
+    /**
+     * Sets now
+     *
+     * @param bool|null $now Is now.
+     *
+     * @return self
+     */
+    public function setNow($now)
+    {
+        $this->container['now'] = $now;
+
+        return $this;
+    }
+
+    /**
      * Gets sourceDatabase
      *
      * @return string
@@ -395,30 +419,6 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonS
     public function setUserTuples($userTuples)
     {
         $this->container['userTuples'] = $userTuples;
-
-        return $this;
-    }
-
-    /**
-     * Gets options
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementOptions|null
-     */
-    public function getOptions()
-    {
-        return $this->container['options'];
-    }
-
-    /**
-     * Sets options
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementOptions|null $options Movement Options.
-     *
-     * @return self
-     */
-    public function setOptions($options)
-    {
-        $this->container['options'] = $options;
 
         return $this;
     }

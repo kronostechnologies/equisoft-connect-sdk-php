@@ -1,6 +1,6 @@
 <?php
 /**
- * MovementReassignmentMovementPayloadTest
+ * MovementGetStatusResponseTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * MovementReassignmentMovementPayloadTest Class Doc Comment
+ * MovementGetStatusResponseTest Class Doc Comment
  *
  * @category    Class
- * @description MovementReassignmentMovementPayload
+ * @description MovementGetStatusResponse
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class MovementReassignmentMovementPayloadTest extends TestCase
+class MovementGetStatusResponseTest extends TestCase
 {
 
     /**
@@ -71,72 +71,18 @@ class MovementReassignmentMovementPayloadTest extends TestCase
     }
 
     /**
-     * Test "MovementReassignmentMovementPayload"
+     * Test "MovementGetStatusResponse"
      */
-    public function testMovementReassignmentMovementPayload()
+    public function testMovementGetStatusResponse()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "type"
+     * Test attribute "status"
      */
-    public function testPropertyType()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "date"
-     */
-    public function testPropertyDate()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "now"
-     */
-    public function testPropertyNow()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "sourceDatabase"
-     */
-    public function testPropertySourceDatabase()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "sourceUser"
-     */
-    public function testPropertySourceUser()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "destinationUser"
-     */
-    public function testPropertyDestinationUser()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "accessCode"
-     */
-    public function testPropertyAccessCode()
+    public function testPropertyStatus()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

@@ -1,6 +1,6 @@
 <?php
 /**
- * MovementCopyMovementPayloadTest
+ * MovementMovementStatusTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * MovementCopyMovementPayloadTest Class Doc Comment
+ * MovementMovementStatusTest Class Doc Comment
  *
  * @category    Class
- * @description MovementCopyMovementPayload
+ * @description Movement status.
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class MovementCopyMovementPayloadTest extends TestCase
+class MovementMovementStatusTest extends TestCase
 {
 
     /**
@@ -71,63 +71,9 @@ class MovementCopyMovementPayloadTest extends TestCase
     }
 
     /**
-     * Test "MovementCopyMovementPayload"
+     * Test "MovementMovementStatus"
      */
-    public function testMovementCopyMovementPayload()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "type"
-     */
-    public function testPropertyType()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "date"
-     */
-    public function testPropertyDate()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "now"
-     */
-    public function testPropertyNow()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "sourceDatabase"
-     */
-    public function testPropertySourceDatabase()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "destinationDatabase"
-     */
-    public function testPropertyDestinationDatabase()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "userTuples"
-     */
-    public function testPropertyUserTuples()
+    public function testMovementMovementStatus()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
