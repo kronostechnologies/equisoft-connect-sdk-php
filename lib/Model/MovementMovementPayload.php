@@ -66,10 +66,10 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $openAPITypes = [
         'type' => '\Equisoft\SDK\EquisoftConnect\Model\MovementMovementType',
         'date' => 'string',
-        'now' => 'bool',
         'sourceDatabase' => 'string',
         'destinationDatabase' => 'string',
         'users' => 'string[]',
+        'options' => '\Equisoft\SDK\EquisoftConnect\Model\MovementOptions',
         'userTuples' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUserTuplePayload[]',
         'sourceUser' => 'string',
         'destinationUser' => 'string',
@@ -92,10 +92,10 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $openAPIFormats = [
         'type' => null,
         'date' => null,
-        'now' => null,
         'sourceDatabase' => null,
         'destinationDatabase' => null,
         'users' => null,
+        'options' => null,
         'userTuples' => null,
         'sourceUser' => null,
         'destinationUser' => null,
@@ -137,10 +137,10 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $attributeMap = [
         'type' => 'type',
         'date' => 'date',
-        'now' => 'now',
         'sourceDatabase' => 'sourceDatabase',
         'destinationDatabase' => 'destinationDatabase',
         'users' => 'users',
+        'options' => 'options',
         'userTuples' => 'userTuples',
         'sourceUser' => 'sourceUser',
         'destinationUser' => 'destinationUser',
@@ -161,10 +161,10 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $setters = [
         'type' => 'setType',
         'date' => 'setDate',
-        'now' => 'setNow',
         'sourceDatabase' => 'setSourceDatabase',
         'destinationDatabase' => 'setDestinationDatabase',
         'users' => 'setUsers',
+        'options' => 'setOptions',
         'userTuples' => 'setUserTuples',
         'sourceUser' => 'setSourceUser',
         'destinationUser' => 'setDestinationUser',
@@ -185,10 +185,10 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
     protected static $getters = [
         'type' => 'getType',
         'date' => 'getDate',
-        'now' => 'getNow',
         'sourceDatabase' => 'getSourceDatabase',
         'destinationDatabase' => 'getDestinationDatabase',
         'users' => 'getUsers',
+        'options' => 'getOptions',
         'userTuples' => 'getUserTuples',
         'sourceUser' => 'getSourceUser',
         'destinationUser' => 'getDestinationUser',
@@ -260,10 +260,10 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
     {
         $this->container['type'] = $data['type'] ?? null;
         $this->container['date'] = $data['date'] ?? null;
-        $this->container['now'] = $data['now'] ?? null;
         $this->container['sourceDatabase'] = $data['sourceDatabase'] ?? null;
         $this->container['destinationDatabase'] = $data['destinationDatabase'] ?? null;
         $this->container['users'] = $data['users'] ?? null;
+        $this->container['options'] = $data['options'] ?? null;
         $this->container['userTuples'] = $data['userTuples'] ?? null;
         $this->container['sourceUser'] = $data['sourceUser'] ?? null;
         $this->container['destinationUser'] = $data['destinationUser'] ?? null;
@@ -376,30 +376,6 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
     }
 
     /**
-     * Gets now
-     *
-     * @return bool|null
-     */
-    public function getNow()
-    {
-        return $this->container['now'];
-    }
-
-    /**
-     * Sets now
-     *
-     * @param bool|null $now Is now.
-     *
-     * @return self
-     */
-    public function setNow($now)
-    {
-        $this->container['now'] = $now;
-
-        return $this;
-    }
-
-    /**
      * Gets sourceDatabase
      *
      * @return string
@@ -467,6 +443,30 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
     public function setUsers($users)
     {
         $this->container['users'] = $users;
+
+        return $this;
+    }
+
+    /**
+     * Gets options
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementOptions|null
+     */
+    public function getOptions()
+    {
+        return $this->container['options'];
+    }
+
+    /**
+     * Sets options
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementOptions|null $options Movement Options.
+     *
+     * @return self
+     */
+    public function setOptions($options)
+    {
+        $this->container['options'] = $options;
 
         return $this;
     }
