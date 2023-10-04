@@ -6,10 +6,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementMovementType**](MovementMovementType.md) |  | [optional]
 **date** | **string** | Movement date. | [optional]
+**now** | **bool** | Is now. | [optional]
 **sourceDatabase** | **string** | Source database full name. |
 **destinationDatabase** | **string** | Destination database full name. |
 **users** | **string[]** | List of users id. |
-**options** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementOptions**](MovementOptions.md) | Movement Options. | [optional]
 **userTuples** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementUserTuplePayload[]**](MovementUserTuplePayload.md) | User tuples. |
 **sourceUser** | **string** | Source user id. |
 **destinationUser** | **string** | Destination user id. |

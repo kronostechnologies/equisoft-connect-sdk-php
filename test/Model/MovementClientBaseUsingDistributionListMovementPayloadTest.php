@@ -98,6 +98,15 @@ class MovementClientBaseUsingDistributionListMovementPayloadTest extends TestCas
     }
 
     /**
+     * Test attribute "now"
+     */
+    public function testPropertyNow()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "sourceDatabase"
      */
     public function testPropertySourceDatabase()
