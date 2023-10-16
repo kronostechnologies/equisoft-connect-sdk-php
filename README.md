@@ -191,6 +191,7 @@ Class | Method | HTTP request | Description
 *MovementApi* | [**addMovement**](docs/Api/MovementApi.md#addmovement) | **POST** /crm/api/v1/movements | Add a movement
 *MovementApi* | [**cancelMovement**](docs/Api/MovementApi.md#cancelmovement) | **POST** /crm/api/v1/movements/{movementId}/cancel | Cancel a movement.
 *MovementApi* | [**deleteMovement**](docs/Api/MovementApi.md#deletemovement) | **DELETE** /crm/api/v1/movements/{movementId} | Delete a movement.
+*MovementApi* | [**getMovementStatistic**](docs/Api/MovementApi.md#getmovementstatistic) | **GET** /crm/api/v1/movements/statistic | Get movement statistic
 *MovementApi* | [**listMovements**](docs/Api/MovementApi.md#listmovements) | **GET** /crm/api/v1/movements | List all movements
 *RemoteAccountApi* | [**getMailAccountAccessRights**](docs/Api/RemoteAccountApi.md#getmailaccountaccessrights) | **GET** /crm/api/v1/mailAccounts/{remoteAccountId}/accessRights | Return the mail account access rights granted to the currently connected user account.
 *TasksApi* | [**archiveTaskInternalNote**](docs/Api/TasksApi.md#archivetaskinternalnote) | **POST** /crm/api/v1/tasks/{taskId}/notes/{noteId}/archive | Archive an internal note for a task.
@@ -480,6 +481,7 @@ Class | Method | HTTP request | Description
 - [MovementMoveMovementPayload](docs/Model/MovementMoveMovementPayload.md)
 - [MovementMovement](docs/Model/MovementMovement.md)
 - [MovementMovementPayload](docs/Model/MovementMovementPayload.md)
+- [MovementMovementStatisticResponse](docs/Model/MovementMovementStatisticResponse.md)
 - [MovementMovementType](docs/Model/MovementMovementType.md)
 - [MovementOptions](docs/Model/MovementOptions.md)
 - [MovementReassignmentMovement](docs/Model/MovementReassignmentMovement.md)
