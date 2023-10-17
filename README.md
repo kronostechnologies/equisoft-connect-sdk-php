@@ -88,6 +88,7 @@ Class | Method | HTTP request | Description
 *DatabasesApi* | [**getUser**](docs/Api/DatabasesApi.md#getuser) | **GET** /crm/api/v1/databases/{databaseUuid}/users/{userId} | Get a database&#39;s user
 *DatabasesApi* | [**listDatabases**](docs/Api/DatabasesApi.md#listdatabases) | **GET** /crm/api/v1/databases | List all databases
 *DatabasesApi* | [**listUsers**](docs/Api/DatabasesApi.md#listusers) | **GET** /crm/api/v1/databases/{databaseUuid}/users | List database&#39;s users
+*DatabasesApi* | [**updateState**](docs/Api/DatabasesApi.md#updatestate) | **PUT** /crm/api/v1/databases/{databaseUuid}/state | Update a database&#39;s state
 *DatabasesApi* | [**updateUser**](docs/Api/DatabasesApi.md#updateuser) | **PATCH** /crm/api/v1/databases/{databaseUuid}/users/{userId} | Update a database&#39;s user
 *EventsApi* | [**archiveEventInternalNote**](docs/Api/EventsApi.md#archiveeventinternalnote) | **POST** /crm/api/v1/events/{eventId}/notes/{noteId}/archive | Archive an internal note for an event.
 *EventsApi* | [**createEvent**](docs/Api/EventsApi.md#createevent) | **POST** /crm/api/v1/events | Create an event.
@@ -236,6 +237,7 @@ Class | Method | HTTP request | Description
 - [ContextUserContext](docs/Model/ContextUserContext.md)
 - [CredentialDto](docs/Model/CredentialDto.md)
 - [CredentialsResponse](docs/Model/CredentialsResponse.md)
+- [DatabaseUpdateStatePayload](docs/Model/DatabaseUpdateStatePayload.md)
 - [DatabasesDatabase](docs/Model/DatabasesDatabase.md)
 - [DatabasesListDatabasesResponse](docs/Model/DatabasesListDatabasesResponse.md)
 - [DateOrDateTime](docs/Model/DateOrDateTime.md)
