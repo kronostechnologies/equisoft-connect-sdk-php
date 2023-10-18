@@ -120,18 +120,6 @@ class DatabasesApiTest extends TestCase
     }
 
     /**
-     * Test case for updateState
-     *
-     * Update a database's state.
-     *
-     */
-    public function testUpdateState()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for updateUser
      *
      * Update a database's user.
