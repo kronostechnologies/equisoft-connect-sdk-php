@@ -523,7 +523,7 @@ Class | Method | HTTP request | Description
     - **crm:contact**: Read/Write access on contacts
     - **crm:event**: Read/Write access on events
     - **crm:database**: Read/Write access on databases
-    - **crm:document**: Read/Write access on documents
+    - **crm:file**: Read/Write access on documents
     - **crm:movement**: Read/Write access on movement
     - **crm:task**: Read/Write access on tasks
     - **crm:user**: Read/Write access on users
