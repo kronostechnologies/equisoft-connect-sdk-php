@@ -1,6 +1,6 @@
 <?php
 /**
- * LegacyContactContactListItemAllOfTest
+ * MovementMovementStatisticResponseTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * LegacyContactContactListItemAllOfTest Class Doc Comment
+ * MovementMovementStatisticResponseTest Class Doc Comment
  *
  * @category    Class
- * @description LegacyContactContactListItemAllOf
+ * @description MovementMovementStatisticResponse
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class LegacyContactContactListItemAllOfTest extends TestCase
+class MovementMovementStatisticResponseTest extends TestCase
 {
 
     /**
@@ -71,243 +71,252 @@ class LegacyContactContactListItemAllOfTest extends TestCase
     }
 
     /**
-     * Test "LegacyContactContactListItemAllOf"
+     * Test "MovementMovementStatisticResponse"
      */
-    public function testLegacyContactContactListItemAllOf()
+    public function testMovementMovementStatisticResponse()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "account"
      */
-    public function testPropertyId()
+    public function testPropertyAccount()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "mainEmail"
+     * Test attribute "action"
      */
-    public function testPropertyMainEmail()
+    public function testPropertyAction()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "mainPhone"
+     * Test attribute "commission"
      */
-    public function testPropertyMainPhone()
+    public function testPropertyCommission()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "addressLine1"
+     * Test attribute "contact"
      */
-    public function testPropertyAddressLine1()
+    public function testPropertyContact()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "addressLine2"
+     * Test attribute "document"
      */
-    public function testPropertyAddressLine2()
+    public function testPropertyDocument()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "city"
+     * Test attribute "fullFinanceUser"
      */
-    public function testPropertyCity()
+    public function testPropertyFullFinanceUser()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "stateProvince"
+     * Test attribute "imageFile"
      */
-    public function testPropertyStateProvince()
+    public function testPropertyImageFile()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "country"
+     * Test attribute "insurance"
      */
-    public function testPropertyCountry()
+    public function testPropertyInsurance()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "postalCode"
+     * Test attribute "invitation"
      */
-    public function testPropertyPostalCode()
+    public function testPropertyInvitation()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "civicNumber"
+     * Test attribute "kilometer"
      */
-    public function testPropertyCivicNumber()
+    public function testPropertyKilometer()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "road"
+     * Test attribute "mailTemplate"
      */
-    public function testPropertyRoad()
+    public function testPropertyMailTemplate()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "extType"
+     * Test attribute "notepad"
      */
-    public function testPropertyExtType()
+    public function testPropertyNotepad()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "extNumber"
+     * Test attribute "objective"
      */
-    public function testPropertyExtNumber()
+    public function testPropertyObjective()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "birthdate"
+     * Test attribute "opportunity"
      */
-    public function testPropertyBirthdate()
+    public function testPropertyOpportunity()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "gender"
+     * Test attribute "policy"
      */
-    public function testPropertyGender()
+    public function testPropertyPolicy()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "dateModified"
+     * Test attribute "product"
      */
-    public function testPropertyDateModified()
+    public function testPropertyProduct()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "dateCreated"
+     * Test attribute "project"
      */
-    public function testPropertyDateCreated()
+    public function testPropertyProject()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "lastUpdateDate"
+     * Test attribute "remoteAccount"
      */
-    public function testPropertyLastUpdateDate()
+    public function testPropertyRemoteAccount()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "spouseId"
+     * Test attribute "report"
      */
-    public function testPropertySpouseId()
+    public function testPropertyReport()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "spouseDisplayName"
+     * Test attribute "reportFilter"
      */
-    public function testPropertySpouseDisplayName()
+    public function testPropertyReportFilter()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "spouseFirstName"
+     * Test attribute "secureMail"
      */
-    public function testPropertySpouseFirstName()
+    public function testPropertySecureMail()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "spouseLastName"
+     * Test attribute "strategy"
      */
-    public function testPropertySpouseLastName()
+    public function testPropertyStrategy()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "spouseBirthdate"
+     * Test attribute "time"
      */
-    public function testPropertySpouseBirthdate()
+    public function testPropertyTime()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "spouseGender"
+     * Test attribute "vdvalue"
      */
-    public function testPropertySpouseGender()
+    public function testPropertyVdvalue()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "class"
+     * Test attribute "webuserStar"
      */
-    public function testPropertyClass()
+    public function testPropertyWebuserStar()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "classIds"
+     * Test attribute "xmlTemplate"
      */
-    public function testPropertyClassIds()
+    public function testPropertyXmlTemplate()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "documentSize"
+     */
+    public function testPropertyDocumentSize()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
