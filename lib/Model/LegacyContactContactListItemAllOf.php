@@ -74,6 +74,7 @@ class LegacyContactContactListItemAllOf implements ModelInterface, ArrayAccess, 
         'gender' => 'string',
         'dateModified' => 'string',
         'dateCreated' => 'string',
+        'lastUpdateDate' => 'string',
         'spouseId' => 'int',
         'spouseDisplayName' => 'string',
         'spouseFirstName' => 'string',
@@ -109,6 +110,7 @@ class LegacyContactContactListItemAllOf implements ModelInterface, ArrayAccess, 
         'gender' => null,
         'dateModified' => null,
         'dateCreated' => null,
+        'lastUpdateDate' => null,
         'spouseId' => null,
         'spouseDisplayName' => null,
         'spouseFirstName' => null,
@@ -163,6 +165,7 @@ class LegacyContactContactListItemAllOf implements ModelInterface, ArrayAccess, 
         'gender' => 'gender',
         'dateModified' => 'date_modified',
         'dateCreated' => 'date_created',
+        'lastUpdateDate' => 'lastUpdateDate',
         'spouseId' => 'spouseId',
         'spouseDisplayName' => 'spouseDisplayName',
         'spouseFirstName' => 'spouseFirstName',
@@ -196,6 +199,7 @@ class LegacyContactContactListItemAllOf implements ModelInterface, ArrayAccess, 
         'gender' => 'setGender',
         'dateModified' => 'setDateModified',
         'dateCreated' => 'setDateCreated',
+        'lastUpdateDate' => 'setLastUpdateDate',
         'spouseId' => 'setSpouseId',
         'spouseDisplayName' => 'setSpouseDisplayName',
         'spouseFirstName' => 'setSpouseFirstName',
@@ -229,6 +233,7 @@ class LegacyContactContactListItemAllOf implements ModelInterface, ArrayAccess, 
         'gender' => 'getGender',
         'dateModified' => 'getDateModified',
         'dateCreated' => 'getDateCreated',
+        'lastUpdateDate' => 'getLastUpdateDate',
         'spouseId' => 'getSpouseId',
         'spouseDisplayName' => 'getSpouseDisplayName',
         'spouseFirstName' => 'getSpouseFirstName',
@@ -313,6 +318,7 @@ class LegacyContactContactListItemAllOf implements ModelInterface, ArrayAccess, 
         $this->container['gender'] = $data['gender'] ?? null;
         $this->container['dateModified'] = $data['dateModified'] ?? null;
         $this->container['dateCreated'] = $data['dateCreated'] ?? null;
+        $this->container['lastUpdateDate'] = $data['lastUpdateDate'] ?? null;
         $this->container['spouseId'] = $data['spouseId'] ?? null;
         $this->container['spouseDisplayName'] = $data['spouseDisplayName'] ?? null;
         $this->container['spouseFirstName'] = $data['spouseFirstName'] ?? null;
@@ -711,6 +717,7 @@ class LegacyContactContactListItemAllOf implements ModelInterface, ArrayAccess, 
      * Gets dateModified
      *
      * @return string|null
+     * @deprecated
      */
     public function getDateModified()
     {
@@ -723,6 +730,7 @@ class LegacyContactContactListItemAllOf implements ModelInterface, ArrayAccess, 
      * @param string|null $dateModified Date modified.
      *
      * @return self
+     * @deprecated
      */
     public function setDateModified($dateModified)
     {
@@ -751,6 +759,30 @@ class LegacyContactContactListItemAllOf implements ModelInterface, ArrayAccess, 
     public function setDateCreated($dateCreated)
     {
         $this->container['dateCreated'] = $dateCreated;
+
+        return $this;
+    }
+
+    /**
+     * Gets lastUpdateDate
+     *
+     * @return string|null
+     */
+    public function getLastUpdateDate()
+    {
+        return $this->container['lastUpdateDate'];
+    }
+
+    /**
+     * Sets lastUpdateDate
+     *
+     * @param string|null $lastUpdateDate Last update date.
+     *
+     * @return self
+     */
+    public function setLastUpdateDate($lastUpdateDate)
+    {
+        $this->container['lastUpdateDate'] = $lastUpdateDate;
 
         return $this;
     }

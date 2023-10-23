@@ -368,6 +368,15 @@ class LegacyContactContactListItemTest extends TestCase
     }
 
     /**
+     * Test attribute "lastUpdateDate"
+     */
+    public function testPropertyLastUpdateDate()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "spouseId"
      */
     public function testPropertySpouseId()
