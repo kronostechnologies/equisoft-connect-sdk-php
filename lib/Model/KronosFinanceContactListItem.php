@@ -89,7 +89,6 @@ class KronosFinanceContactListItem implements ModelInterface, ArrayAccess, \Json
         'gender' => 'string',
         'dateModified' => 'string',
         'dateCreated' => 'string',
-        'lastUpdateDate' => 'string',
         'spouseId' => 'int',
         'spouseDisplayName' => 'string',
         'spouseFirstName' => 'string',
@@ -143,7 +142,6 @@ class KronosFinanceContactListItem implements ModelInterface, ArrayAccess, \Json
         'gender' => null,
         'dateModified' => null,
         'dateCreated' => null,
-        'lastUpdateDate' => null,
         'spouseId' => null,
         'spouseDisplayName' => null,
         'spouseFirstName' => null,
@@ -216,7 +214,6 @@ class KronosFinanceContactListItem implements ModelInterface, ArrayAccess, \Json
         'gender' => 'gender',
         'dateModified' => 'date_modified',
         'dateCreated' => 'date_created',
-        'lastUpdateDate' => 'lastUpdateDate',
         'spouseId' => 'spouseId',
         'spouseDisplayName' => 'spouseDisplayName',
         'spouseFirstName' => 'spouseFirstName',
@@ -268,7 +265,6 @@ class KronosFinanceContactListItem implements ModelInterface, ArrayAccess, \Json
         'gender' => 'setGender',
         'dateModified' => 'setDateModified',
         'dateCreated' => 'setDateCreated',
-        'lastUpdateDate' => 'setLastUpdateDate',
         'spouseId' => 'setSpouseId',
         'spouseDisplayName' => 'setSpouseDisplayName',
         'spouseFirstName' => 'setSpouseFirstName',
@@ -320,7 +316,6 @@ class KronosFinanceContactListItem implements ModelInterface, ArrayAccess, \Json
         'gender' => 'getGender',
         'dateModified' => 'getDateModified',
         'dateCreated' => 'getDateCreated',
-        'lastUpdateDate' => 'getLastUpdateDate',
         'spouseId' => 'getSpouseId',
         'spouseDisplayName' => 'getSpouseDisplayName',
         'spouseFirstName' => 'getSpouseFirstName',
@@ -423,7 +418,6 @@ class KronosFinanceContactListItem implements ModelInterface, ArrayAccess, \Json
         $this->container['gender'] = $data['gender'] ?? null;
         $this->container['dateModified'] = $data['dateModified'] ?? null;
         $this->container['dateCreated'] = $data['dateCreated'] ?? null;
-        $this->container['lastUpdateDate'] = $data['lastUpdateDate'] ?? null;
         $this->container['spouseId'] = $data['spouseId'] ?? null;
         $this->container['spouseDisplayName'] = $data['spouseDisplayName'] ?? null;
         $this->container['spouseFirstName'] = $data['spouseFirstName'] ?? null;
@@ -1185,7 +1179,6 @@ class KronosFinanceContactListItem implements ModelInterface, ArrayAccess, \Json
      * Gets dateModified
      *
      * @return string|null
-     * @deprecated
      */
     public function getDateModified()
     {
@@ -1198,7 +1191,6 @@ class KronosFinanceContactListItem implements ModelInterface, ArrayAccess, \Json
      * @param string|null $dateModified Date modified.
      *
      * @return self
-     * @deprecated
      */
     public function setDateModified($dateModified)
     {
@@ -1227,30 +1219,6 @@ class KronosFinanceContactListItem implements ModelInterface, ArrayAccess, \Json
     public function setDateCreated($dateCreated)
     {
         $this->container['dateCreated'] = $dateCreated;
-
-        return $this;
-    }
-
-    /**
-     * Gets lastUpdateDate
-     *
-     * @return string|null
-     */
-    public function getLastUpdateDate()
-    {
-        return $this->container['lastUpdateDate'];
-    }
-
-    /**
-     * Sets lastUpdateDate
-     *
-     * @param string|null $lastUpdateDate Last update date.
-     *
-     * @return self
-     */
-    public function setLastUpdateDate($lastUpdateDate)
-    {
-        $this->container['lastUpdateDate'] = $lastUpdateDate;
 
         return $this;
     }

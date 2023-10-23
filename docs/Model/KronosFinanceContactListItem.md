@@ -36,7 +36,6 @@ Name | Type | Description | Notes
 **gender** | **string** | Gender of the contact. Either MALE or FEMALE. | [optional]
 **dateModified** | **string** | Date modified. | [optional]
 **dateCreated** | **string** | Date created. | [optional]
-**lastUpdateDate** | **string** | Last update date. | [optional]
 **spouseId** | **int** | Id of the spouse contact. | [optional]
 **spouseDisplayName** | **string** | Display name  of the spouse contact. | [optional]
 **spouseFirstName** | **string** | First name of the spouse contact. | [optional]
