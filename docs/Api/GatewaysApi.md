@@ -6,10 +6,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createCapsilAccess()**](GatewaysApi.md#createCapsilAccess) | **POST** /crm/api/v1/gateways/capsil/accesses | Create a Capsil Access
 [**createEquisoftAnalyzeAccess()**](GatewaysApi.md#createEquisoftAnalyzeAccess) | **POST** /crm/api/v1/gateways/equisoftAnalyze/accesses | 
-[**deleteCapsilAccess()**](GatewaysApi.md#deleteCapsilAccess) | **DELETE** /crm/api/v1/gateways/capsil/accesses/{id} | Delete Capsil access
+[**deleteCapsilAccess()**](GatewaysApi.md#deleteCapsilAccess) | **DELETE** /crm/api/v1/gateways/capsil/accesses/{accessId} | Delete Capsil access
 [**deleteEquisoftAnalyzeAccess()**](GatewaysApi.md#deleteEquisoftAnalyzeAccess) | **DELETE** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} | 
 [**gatewayAdminLogin()**](GatewaysApi.md#gatewayAdminLogin) | **POST** /crm/api/v1/gateways/credentials-validation/admin-credentials/login | 
-[**getCapsilAccess()**](GatewaysApi.md#getCapsilAccess) | **GET** /crm/api/v1/gateways/capsil/accesses/{id} | Get Capsil access
+[**getCapsilAccess()**](GatewaysApi.md#getCapsilAccess) | **GET** /crm/api/v1/gateways/capsil/accesses/{accessId} | Get Capsil access
 [**listAssetBookCredentials()**](GatewaysApi.md#listAssetBookCredentials) | **GET** /crm/api/v1/gateways/assetbook/credentials | 
 [**listCapsilAccesses()**](GatewaysApi.md#listCapsilAccesses) | **GET** /crm/api/v1/gateways/capsil/accesses | List capsil accesses
 [**listCapsilCarrierAdminSystems()**](GatewaysApi.md#listCapsilCarrierAdminSystems) | **GET** /crm/api/v1/gateways/capsil/carrierAdminSystems | List carrier admin systems
@@ -19,7 +19,7 @@ Method | HTTP request | Description
 [**listGateways()**](GatewaysApi.md#listGateways) | **GET** /crm/api/v1/gateways/credentials-validation | 
 [**listGenericCredentials()**](GatewaysApi.md#listGenericCredentials) | **GET** /crm/api/v1/gateways/generic/{gatewayName}/credentials | 
 [**patchEquisoftAnalyzeAccess()**](GatewaysApi.md#patchEquisoftAnalyzeAccess) | **PATCH** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} | 
-[**updateCapsilAccess()**](GatewaysApi.md#updateCapsilAccess) | **PATCH** /crm/api/v1/gateways/capsil/accesses | Update a Capsil Access
+[**updateCapsilAccess()**](GatewaysApi.md#updateCapsilAccess) | **PATCH** /crm/api/v1/gateways/capsil/accesses/{accessId} | Update a Capsil Access
 [**updateCredentials()**](GatewaysApi.md#updateCredentials) | **PUT** /crm/api/v1/gateways/credentials-validation/{gatewayId}/credentials/{status} | 
 
 
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 ## `deleteCapsilAccess()`
 
 ```php
-deleteCapsilAccess($id)
+deleteCapsilAccess($accessId)
 ```
 
 Delete Capsil access
@@ -166,10 +166,10 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\GatewaysApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 56; // int | Unique identifier of a Capsil Access.
+$accessId = 56; // int | Unique identifier of a Capsil Access.
 
 try {
-    $apiInstance->deleteCapsilAccess($id);
+    $apiInstance->deleteCapsilAccess($accessId);
 } catch (Exception $e) {
     echo 'Exception when calling GatewaysApi->deleteCapsilAccess: ', $e->getMessage(), PHP_EOL;
 }
@@ -179,7 +179,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| Unique identifier of a Capsil Access. |
+ **accessId** | **int**| Unique identifier of a Capsil Access. |
 
 ### Return type
 
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 ## `getCapsilAccess()`
 
 ```php
-getCapsilAccess($id)
+getCapsilAccess($accessId): \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCapsilAccess
 ```
 
 Get Capsil access
@@ -342,10 +342,11 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\GatewaysApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 56; // int | Unique identifier of a Capsil Access.
+$accessId = 56; // int | Unique identifier of a Capsil Access.
 
 try {
-    $apiInstance->getCapsilAccess($id);
+    $result = $apiInstance->getCapsilAccess($accessId);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GatewaysApi->getCapsilAccess: ', $e->getMessage(), PHP_EOL;
 }
@@ -355,11 +356,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| Unique identifier of a Capsil Access. |
+ **accessId** | **int**| Unique identifier of a Capsil Access. |
 
 ### Return type
 
-void (empty response body)
+[**\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCapsilAccess**](../Model/GatewaysAccessesCapsilAccess.md)
 
 ### Authorization
 
@@ -432,7 +433,7 @@ This endpoint does not need any parameter.
 ## `listCapsilAccesses()`
 
 ```php
-listCapsilAccesses($userAccountUuid): \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCapsilAccessResponse
+listCapsilAccesses($userAccountUuid, $carrierAdminSystemId, $code): \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCapsilAccessResponse
 ```
 
 List capsil accesses
@@ -455,9 +456,11 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\GatewaysApi(
     $config
 );
 $userAccountUuid = 'userAccountUuid_example'; // string | UserAccount uuid.
+$carrierAdminSystemId = 56; // int | CarrierAdminSystem unique identifier.
+$code = 'code_example'; // string | Capsil agent code.
 
 try {
-    $result = $apiInstance->listCapsilAccesses($userAccountUuid);
+    $result = $apiInstance->listCapsilAccesses($userAccountUuid, $carrierAdminSystemId, $code);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GatewaysApi->listCapsilAccesses: ', $e->getMessage(), PHP_EOL;
@@ -469,6 +472,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userAccountUuid** | **string**| UserAccount uuid. | [optional]
+ **carrierAdminSystemId** | **int**| CarrierAdminSystem unique identifier. | [optional]
+ **code** | **string**| Capsil agent code. | [optional]
 
 ### Return type
 
@@ -905,7 +910,7 @@ void (empty response body)
 ## `updateCapsilAccess()`
 
 ```php
-updateCapsilAccess($id, $gatewaysAccessesUpdateCapsilAccessPayload): \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateOrUpdateCapsilAccessResponse
+updateCapsilAccess($accessId, $gatewaysAccessesUpdateCapsilAccessPayload): \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateOrUpdateCapsilAccessResponse
 ```
 
 Update a Capsil Access
@@ -927,11 +932,11 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\GatewaysApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 56; // int | Unique identifier of a Capsil Access.
+$accessId = 56; // int | Unique identifier of a Capsil Access.
 $gatewaysAccessesUpdateCapsilAccessPayload = new \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesUpdateCapsilAccessPayload(); // \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesUpdateCapsilAccessPayload
 
 try {
-    $result = $apiInstance->updateCapsilAccess($id, $gatewaysAccessesUpdateCapsilAccessPayload);
+    $result = $apiInstance->updateCapsilAccess($accessId, $gatewaysAccessesUpdateCapsilAccessPayload);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GatewaysApi->updateCapsilAccess: ', $e->getMessage(), PHP_EOL;
@@ -942,7 +947,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| Unique identifier of a Capsil Access. |
+ **accessId** | **int**| Unique identifier of a Capsil Access. |
  **gatewaysAccessesUpdateCapsilAccessPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesUpdateCapsilAccessPayload**](../Model/GatewaysAccessesUpdateCapsilAccessPayload.md)|  |
 
 ### Return type
