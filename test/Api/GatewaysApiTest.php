@@ -168,12 +168,12 @@ class GatewaysApiTest extends TestCase
     }
 
     /**
-     * Test case for listCarrierAdminSystems
+     * Test case for listCapsilCarrierAdminSystems
      *
      * List carrier admin systems.
      *
      */
-    public function testListCarrierAdminSystems()
+    public function testListCapsilCarrierAdminSystems()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
