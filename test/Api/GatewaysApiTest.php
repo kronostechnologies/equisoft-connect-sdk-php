@@ -72,36 +72,12 @@ class GatewaysApiTest extends TestCase
     }
 
     /**
-     * Test case for createCapsilAccess
-     *
-     * Create a Capsil Access.
-     *
-     */
-    public function testCreateCapsilAccess()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for createEquisoftAnalyzeAccess
      *
      * .
      *
      */
     public function testCreateEquisoftAnalyzeAccess()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for deleteCapsilAccess
-     *
-     * Delete Capsil access.
-     *
-     */
-    public function testDeleteCapsilAccess()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -132,48 +108,12 @@ class GatewaysApiTest extends TestCase
     }
 
     /**
-     * Test case for getCapsilAccess
-     *
-     * Get Capsil access.
-     *
-     */
-    public function testGetCapsilAccess()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for listAssetBookCredentials
      *
      * .
      *
      */
     public function testListAssetBookCredentials()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for listCapsilAccesses
-     *
-     * List capsil accesses.
-     *
-     */
-    public function testListCapsilAccesses()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for listCapsilCarrierAdminSystems
-     *
-     * List carrier admin systems.
-     *
-     */
-    public function testListCapsilCarrierAdminSystems()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -246,18 +186,6 @@ class GatewaysApiTest extends TestCase
      *
      */
     public function testPatchEquisoftAnalyzeAccess()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for updateCapsilAccess
-     *
-     * Update a Capsil Access.
-     *
-     */
-    public function testUpdateCapsilAccess()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
