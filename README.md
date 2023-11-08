@@ -88,6 +88,7 @@ Class | Method | HTTP request | Description
 *DatabasesApi* | [**getUser**](docs/Api/DatabasesApi.md#getuser) | **GET** /crm/api/v1/databases/{databaseUuid}/users/{userId} | Get a database&#39;s user
 *DatabasesApi* | [**listDatabases**](docs/Api/DatabasesApi.md#listdatabases) | **GET** /crm/api/v1/databases | List all databases
 *DatabasesApi* | [**listUsers**](docs/Api/DatabasesApi.md#listusers) | **GET** /crm/api/v1/databases/{databaseUuid}/users | List database&#39;s users
+*DatabasesApi* | [**updateState**](docs/Api/DatabasesApi.md#updatestate) | **PUT** /crm/api/v1/databases/{databaseUuid}/state | Update a database&#39;s state
 *DatabasesApi* | [**updateUser**](docs/Api/DatabasesApi.md#updateuser) | **PATCH** /crm/api/v1/databases/{databaseUuid}/users/{userId} | Update a database&#39;s user
 *EventsApi* | [**archiveEventInternalNote**](docs/Api/EventsApi.md#archiveeventinternalnote) | **POST** /crm/api/v1/events/{eventId}/notes/{noteId}/archive | Archive an internal note for an event.
 *EventsApi* | [**createEvent**](docs/Api/EventsApi.md#createevent) | **POST** /crm/api/v1/events | Create an event.
@@ -118,16 +119,22 @@ Class | Method | HTTP request | Description
 *FieldValuesApi* | [**listValues**](docs/Api/FieldValuesApi.md#listvalues) | **GET** /crm/api/v1/fields/{fieldName}/values | List values for a specific field name
 *FieldValuesApi* | [**updateGroup**](docs/Api/FieldValuesApi.md#updategroup) | **PUT** /crm/api/v1/fields/{fieldName}/groups/{id} | Update a group
 *FieldValuesApi* | [**updateValue**](docs/Api/FieldValuesApi.md#updatevalue) | **PUT** /crm/api/v1/fields/{fieldName}/values/{id} | Update a value
+*GatewaysApi* | [**createCapsilAccess**](docs/Api/GatewaysApi.md#createcapsilaccess) | **POST** /crm/api/v1/gateways/capsil/accesses | Create a Capsil Access
 *GatewaysApi* | [**createEquisoftAnalyzeAccess**](docs/Api/GatewaysApi.md#createequisoftanalyzeaccess) | **POST** /crm/api/v1/gateways/equisoftAnalyze/accesses | 
+*GatewaysApi* | [**deleteCapsilAccess**](docs/Api/GatewaysApi.md#deletecapsilaccess) | **DELETE** /crm/api/v1/gateways/capsil/accesses/{accessId} | Delete Capsil access
 *GatewaysApi* | [**deleteEquisoftAnalyzeAccess**](docs/Api/GatewaysApi.md#deleteequisoftanalyzeaccess) | **DELETE** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} | 
 *GatewaysApi* | [**gatewayAdminLogin**](docs/Api/GatewaysApi.md#gatewayadminlogin) | **POST** /crm/api/v1/gateways/credentials-validation/admin-credentials/login | 
+*GatewaysApi* | [**getCapsilAccess**](docs/Api/GatewaysApi.md#getcapsilaccess) | **GET** /crm/api/v1/gateways/capsil/accesses/{accessId} | Get Capsil access
 *GatewaysApi* | [**listAssetBookCredentials**](docs/Api/GatewaysApi.md#listassetbookcredentials) | **GET** /crm/api/v1/gateways/assetbook/credentials | 
+*GatewaysApi* | [**listCapsilAccesses**](docs/Api/GatewaysApi.md#listcapsilaccesses) | **GET** /crm/api/v1/gateways/capsil/accesses | List capsil accesses
+*GatewaysApi* | [**listCapsilCarrierAdminSystems**](docs/Api/GatewaysApi.md#listcapsilcarrieradminsystems) | **GET** /crm/api/v1/gateways/capsil/carrierAdminSystems | List carrier admin systems
 *GatewaysApi* | [**listCredentials**](docs/Api/GatewaysApi.md#listcredentials) | **GET** /crm/api/v1/gateways/credentials-validation/{gatewayId}/credentials/{status} | 
 *GatewaysApi* | [**listEquisoftAnalyzeAccesses**](docs/Api/GatewaysApi.md#listequisoftanalyzeaccesses) | **GET** /crm/api/v1/gateways/equisoftAnalyze/accesses | 
 *GatewaysApi* | [**listGatewayConfigurations**](docs/Api/GatewaysApi.md#listgatewayconfigurations) | **GET** /crm/api/v1/gateways/generic/{gatewayName}/configuration | 
 *GatewaysApi* | [**listGateways**](docs/Api/GatewaysApi.md#listgateways) | **GET** /crm/api/v1/gateways/credentials-validation | 
 *GatewaysApi* | [**listGenericCredentials**](docs/Api/GatewaysApi.md#listgenericcredentials) | **GET** /crm/api/v1/gateways/generic/{gatewayName}/credentials | 
 *GatewaysApi* | [**patchEquisoftAnalyzeAccess**](docs/Api/GatewaysApi.md#patchequisoftanalyzeaccess) | **PATCH** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} | 
+*GatewaysApi* | [**updateCapsilAccess**](docs/Api/GatewaysApi.md#updatecapsilaccess) | **PATCH** /crm/api/v1/gateways/capsil/accesses/{accessId} | Update a Capsil Access
 *GatewaysApi* | [**updateCredentials**](docs/Api/GatewaysApi.md#updatecredentials) | **PUT** /crm/api/v1/gateways/credentials-validation/{gatewayId}/credentials/{status} | 
 *LegacyContactApi* | [**legacyContactAddContact**](docs/Api/LegacyContactApi.md#legacycontactaddcontact) | **POST** /apps/api/kronos.contact.add | Create a new contact.
 *LegacyContactApi* | [**legacyContactDeleteContact**](docs/Api/LegacyContactApi.md#legacycontactdeletecontact) | **POST** /apps/api/kronos.contact.delete | Delete a contact.
@@ -191,6 +198,7 @@ Class | Method | HTTP request | Description
 *MovementApi* | [**addMovement**](docs/Api/MovementApi.md#addmovement) | **POST** /crm/api/v1/movements | Add a movement
 *MovementApi* | [**cancelMovement**](docs/Api/MovementApi.md#cancelmovement) | **POST** /crm/api/v1/movements/{movementId}/cancel | Cancel a movement.
 *MovementApi* | [**deleteMovement**](docs/Api/MovementApi.md#deletemovement) | **DELETE** /crm/api/v1/movements/{movementId} | Delete a movement.
+*MovementApi* | [**getMovementStatistic**](docs/Api/MovementApi.md#getmovementstatistic) | **GET** /crm/api/v1/movements/statistic | Get movement statistic
 *MovementApi* | [**listMovements**](docs/Api/MovementApi.md#listmovements) | **GET** /crm/api/v1/movements | List all movements
 *RemoteAccountApi* | [**getMailAccountAccessRights**](docs/Api/RemoteAccountApi.md#getmailaccountaccessrights) | **GET** /crm/api/v1/mailAccounts/{remoteAccountId}/accessRights | Return the mail account access rights granted to the currently connected user account.
 *TasksApi* | [**archiveTaskInternalNote**](docs/Api/TasksApi.md#archivetaskinternalnote) | **POST** /crm/api/v1/tasks/{taskId}/notes/{noteId}/archive | Archive an internal note for a task.
@@ -235,6 +243,7 @@ Class | Method | HTTP request | Description
 - [ContextUserContext](docs/Model/ContextUserContext.md)
 - [CredentialDto](docs/Model/CredentialDto.md)
 - [CredentialsResponse](docs/Model/CredentialsResponse.md)
+- [DatabaseUpdateStatePayload](docs/Model/DatabaseUpdateStatePayload.md)
 - [DatabasesDatabase](docs/Model/DatabasesDatabase.md)
 - [DatabasesListDatabasesResponse](docs/Model/DatabasesListDatabasesResponse.md)
 - [DateOrDateTime](docs/Model/DateOrDateTime.md)
@@ -270,11 +279,18 @@ Class | Method | HTTP request | Description
 - [FieldValueUpdateGroupPayload](docs/Model/FieldValueUpdateGroupPayload.md)
 - [FieldValueUpdateValuePayload](docs/Model/FieldValueUpdateValuePayload.md)
 - [FieldValueValue](docs/Model/FieldValueValue.md)
+- [GatewaysAccessesCapsilAccess](docs/Model/GatewaysAccessesCapsilAccess.md)
+- [GatewaysAccessesCarrierAdminSystem](docs/Model/GatewaysAccessesCarrierAdminSystem.md)
 - [GatewaysAccessesCreateAccessResponse](docs/Model/GatewaysAccessesCreateAccessResponse.md)
+- [GatewaysAccessesCreateCapsilAccessPayload](docs/Model/GatewaysAccessesCreateCapsilAccessPayload.md)
 - [GatewaysAccessesCreateEquisoftAnalyzeAccessPayload](docs/Model/GatewaysAccessesCreateEquisoftAnalyzeAccessPayload.md)
+- [GatewaysAccessesCreateOrUpdateCapsilAccessResponse](docs/Model/GatewaysAccessesCreateOrUpdateCapsilAccessResponse.md)
 - [GatewaysAccessesEquisoftAnalyzeAccess](docs/Model/GatewaysAccessesEquisoftAnalyzeAccess.md)
+- [GatewaysAccessesListCapsilAccessResponse](docs/Model/GatewaysAccessesListCapsilAccessResponse.md)
+- [GatewaysAccessesListCarrierAdminSystemResponse](docs/Model/GatewaysAccessesListCarrierAdminSystemResponse.md)
 - [GatewaysAccessesListGatewayAccessesResponse](docs/Model/GatewaysAccessesListGatewayAccessesResponse.md)
 - [GatewaysAccessesPatchEquisoftAnalyzeAccessPayload](docs/Model/GatewaysAccessesPatchEquisoftAnalyzeAccessPayload.md)
+- [GatewaysAccessesUpdateCapsilAccessPayload](docs/Model/GatewaysAccessesUpdateCapsilAccessPayload.md)
 - [GatewaysAccessesUser](docs/Model/GatewaysAccessesUser.md)
 - [GatewaysAccessesValidationAdminCredentialResponse](docs/Model/GatewaysAccessesValidationAdminCredentialResponse.md)
 - [GatewaysAccessesValidationGatewayAdminDto](docs/Model/GatewaysAccessesValidationGatewayAdminDto.md)
@@ -480,6 +496,7 @@ Class | Method | HTTP request | Description
 - [MovementMoveMovementPayload](docs/Model/MovementMoveMovementPayload.md)
 - [MovementMovement](docs/Model/MovementMovement.md)
 - [MovementMovementPayload](docs/Model/MovementMovementPayload.md)
+- [MovementMovementStatisticResponse](docs/Model/MovementMovementStatisticResponse.md)
 - [MovementMovementType](docs/Model/MovementMovementType.md)
 - [MovementOptions](docs/Model/MovementOptions.md)
 - [MovementReassignmentMovement](docs/Model/MovementReassignmentMovement.md)
@@ -519,7 +536,7 @@ Class | Method | HTTP request | Description
     - **crm:contact**: Read/Write access on contacts
     - **crm:event**: Read/Write access on events
     - **crm:database**: Read/Write access on databases
-    - **crm:document**: Read/Write access on documents
+    - **crm:file**: Read/Write access on documents
     - **crm:movement**: Read/Write access on movement
     - **crm:task**: Read/Write access on tasks
     - **crm:user**: Read/Write access on users
@@ -543,5 +560,5 @@ vendor/bin/phpunit
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
 - API version: `latest`
-    - Package version: `12.14.5`
+    - Package version: `12.15.1-SNAPSHOT`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`
