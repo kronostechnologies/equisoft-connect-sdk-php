@@ -121,20 +121,20 @@ Class | Method | HTTP request | Description
 *FieldValuesApi* | [**updateValue**](docs/Api/FieldValuesApi.md#updatevalue) | **PUT** /crm/api/v1/fields/{fieldName}/values/{id} | Update a value
 *GatewaysApi* | [**createCapsilAccess**](docs/Api/GatewaysApi.md#createcapsilaccess) | **POST** /crm/api/v1/gateways/capsil/accesses | Create a Capsil Access
 *GatewaysApi* | [**createEquisoftAnalyzeAccess**](docs/Api/GatewaysApi.md#createequisoftanalyzeaccess) | **POST** /crm/api/v1/gateways/equisoftAnalyze/accesses | 
-*GatewaysApi* | [**deleteCapsilAccess**](docs/Api/GatewaysApi.md#deletecapsilaccess) | **DELETE** /crm/api/v1/gateways/capsil/accesses/{id} | Delete Capsil access
+*GatewaysApi* | [**deleteCapsilAccess**](docs/Api/GatewaysApi.md#deletecapsilaccess) | **DELETE** /crm/api/v1/gateways/capsil/accesses/{accessId} | Delete Capsil access
 *GatewaysApi* | [**deleteEquisoftAnalyzeAccess**](docs/Api/GatewaysApi.md#deleteequisoftanalyzeaccess) | **DELETE** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} | 
 *GatewaysApi* | [**gatewayAdminLogin**](docs/Api/GatewaysApi.md#gatewayadminlogin) | **POST** /crm/api/v1/gateways/credentials-validation/admin-credentials/login | 
-*GatewaysApi* | [**getCapsilAccess**](docs/Api/GatewaysApi.md#getcapsilaccess) | **GET** /crm/api/v1/gateways/capsil/accesses/{id} | Get Capsil access
+*GatewaysApi* | [**getCapsilAccess**](docs/Api/GatewaysApi.md#getcapsilaccess) | **GET** /crm/api/v1/gateways/capsil/accesses/{accessId} | Get Capsil access
 *GatewaysApi* | [**listAssetBookCredentials**](docs/Api/GatewaysApi.md#listassetbookcredentials) | **GET** /crm/api/v1/gateways/assetbook/credentials | 
 *GatewaysApi* | [**listCapsilAccesses**](docs/Api/GatewaysApi.md#listcapsilaccesses) | **GET** /crm/api/v1/gateways/capsil/accesses | List capsil accesses
-*GatewaysApi* | [**listCarrierAdminSystems**](docs/Api/GatewaysApi.md#listcarrieradminsystems) | **GET** /crm/api/v1/gateways/capsil/carrierAdminSystems | List carrier admin systems
+*GatewaysApi* | [**listCapsilCarrierAdminSystems**](docs/Api/GatewaysApi.md#listcapsilcarrieradminsystems) | **GET** /crm/api/v1/gateways/capsil/carrierAdminSystems | List carrier admin systems
 *GatewaysApi* | [**listCredentials**](docs/Api/GatewaysApi.md#listcredentials) | **GET** /crm/api/v1/gateways/credentials-validation/{gatewayId}/credentials/{status} | 
 *GatewaysApi* | [**listEquisoftAnalyzeAccesses**](docs/Api/GatewaysApi.md#listequisoftanalyzeaccesses) | **GET** /crm/api/v1/gateways/equisoftAnalyze/accesses | 
 *GatewaysApi* | [**listGatewayConfigurations**](docs/Api/GatewaysApi.md#listgatewayconfigurations) | **GET** /crm/api/v1/gateways/generic/{gatewayName}/configuration | 
 *GatewaysApi* | [**listGateways**](docs/Api/GatewaysApi.md#listgateways) | **GET** /crm/api/v1/gateways/credentials-validation | 
 *GatewaysApi* | [**listGenericCredentials**](docs/Api/GatewaysApi.md#listgenericcredentials) | **GET** /crm/api/v1/gateways/generic/{gatewayName}/credentials | 
 *GatewaysApi* | [**patchEquisoftAnalyzeAccess**](docs/Api/GatewaysApi.md#patchequisoftanalyzeaccess) | **PATCH** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} | 
-*GatewaysApi* | [**updateCapsilAccess**](docs/Api/GatewaysApi.md#updatecapsilaccess) | **PATCH** /crm/api/v1/gateways/capsil/accesses | Update a Capsil Access
+*GatewaysApi* | [**updateCapsilAccess**](docs/Api/GatewaysApi.md#updatecapsilaccess) | **PATCH** /crm/api/v1/gateways/capsil/accesses/{accessId} | Update a Capsil Access
 *GatewaysApi* | [**updateCredentials**](docs/Api/GatewaysApi.md#updatecredentials) | **PUT** /crm/api/v1/gateways/credentials-validation/{gatewayId}/credentials/{status} | 
 *LegacyContactApi* | [**legacyContactAddContact**](docs/Api/LegacyContactApi.md#legacycontactaddcontact) | **POST** /apps/api/kronos.contact.add | Create a new contact.
 *LegacyContactApi* | [**legacyContactDeleteContact**](docs/Api/LegacyContactApi.md#legacycontactdeletecontact) | **POST** /apps/api/kronos.contact.delete | Delete a contact.
@@ -286,8 +286,8 @@ Class | Method | HTTP request | Description
 - [GatewaysAccessesCreateEquisoftAnalyzeAccessPayload](docs/Model/GatewaysAccessesCreateEquisoftAnalyzeAccessPayload.md)
 - [GatewaysAccessesCreateOrUpdateCapsilAccessResponse](docs/Model/GatewaysAccessesCreateOrUpdateCapsilAccessResponse.md)
 - [GatewaysAccessesEquisoftAnalyzeAccess](docs/Model/GatewaysAccessesEquisoftAnalyzeAccess.md)
-- [GatewaysAccessesListCapsilAccess](docs/Model/GatewaysAccessesListCapsilAccess.md)
-- [GatewaysAccessesListCarrierAdminSystem](docs/Model/GatewaysAccessesListCarrierAdminSystem.md)
+- [GatewaysAccessesListCapsilAccessResponse](docs/Model/GatewaysAccessesListCapsilAccessResponse.md)
+- [GatewaysAccessesListCarrierAdminSystemResponse](docs/Model/GatewaysAccessesListCarrierAdminSystemResponse.md)
 - [GatewaysAccessesListGatewayAccessesResponse](docs/Model/GatewaysAccessesListGatewayAccessesResponse.md)
 - [GatewaysAccessesPatchEquisoftAnalyzeAccessPayload](docs/Model/GatewaysAccessesPatchEquisoftAnalyzeAccessPayload.md)
 - [GatewaysAccessesUpdateCapsilAccessPayload](docs/Model/GatewaysAccessesUpdateCapsilAccessPayload.md)
