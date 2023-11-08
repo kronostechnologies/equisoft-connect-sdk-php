@@ -1,4 +1,4 @@
-# # GatewaysAccessesListCarrierAdminSystemResponse
+# # GatewaysAccessesListCarrierAdminSystem
 
 ## Properties
 

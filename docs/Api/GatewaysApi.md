@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**getCapsilAccess()**](GatewaysApi.md#getCapsilAccess) | **GET** /crm/api/v1/gateways/capsil/accesses/{id} | Get Capsil access
 [**listAssetBookCredentials()**](GatewaysApi.md#listAssetBookCredentials) | **GET** /crm/api/v1/gateways/assetbook/credentials | 
 [**listCapsilAccesses()**](GatewaysApi.md#listCapsilAccesses) | **GET** /crm/api/v1/gateways/capsil/accesses | List capsil accesses
-[**listCapsilCarrierAdminSystems()**](GatewaysApi.md#listCapsilCarrierAdminSystems) | **GET** /crm/api/v1/gateways/capsil/carrierAdminSystems | List carrier admin systems
+[**listCarrierAdminSystems()**](GatewaysApi.md#listCarrierAdminSystems) | **GET** /crm/api/v1/gateways/capsil/carrierAdminSystems | List carrier admin systems
 [**listCredentials()**](GatewaysApi.md#listCredentials) | **GET** /crm/api/v1/gateways/credentials-validation/{gatewayId}/credentials/{status} | 
 [**listEquisoftAnalyzeAccesses()**](GatewaysApi.md#listEquisoftAnalyzeAccesses) | **GET** /crm/api/v1/gateways/equisoftAnalyze/accesses | 
 [**listGatewayConfigurations()**](GatewaysApi.md#listGatewayConfigurations) | **GET** /crm/api/v1/gateways/generic/{gatewayName}/configuration | 
@@ -432,7 +432,7 @@ This endpoint does not need any parameter.
 ## `listCapsilAccesses()`
 
 ```php
-listCapsilAccesses($userAccountUuid): \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCapsilAccessResponse
+listCapsilAccesses($userAccountUuid): \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCapsilAccess
 ```
 
 List capsil accesses
@@ -472,7 +472,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCapsilAccessResponse**](../Model/GatewaysAccessesListCapsilAccessResponse.md)
+[**\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCapsilAccess**](../Model/GatewaysAccessesListCapsilAccess.md)
 
 ### Authorization
 
@@ -487,10 +487,10 @@ Name | Type | Description  | Notes
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `listCapsilCarrierAdminSystems()`
+## `listCarrierAdminSystems()`
 
 ```php
-listCapsilCarrierAdminSystems(): \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCarrierAdminSystemResponse
+listCarrierAdminSystems(): \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCarrierAdminSystem
 ```
 
 List carrier admin systems
@@ -514,10 +514,10 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\GatewaysApi(
 );
 
 try {
-    $result = $apiInstance->listCapsilCarrierAdminSystems();
+    $result = $apiInstance->listCarrierAdminSystems();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling GatewaysApi->listCapsilCarrierAdminSystems: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling GatewaysApi->listCarrierAdminSystems: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -527,7 +527,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCarrierAdminSystemResponse**](../Model/GatewaysAccessesListCarrierAdminSystemResponse.md)
+[**\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCarrierAdminSystem**](../Model/GatewaysAccessesListCarrierAdminSystem.md)
 
 ### Authorization
 
@@ -905,7 +905,7 @@ void (empty response body)
 ## `updateCapsilAccess()`
 
 ```php
-updateCapsilAccess($id, $gatewaysAccessesUpdateCapsilAccessPayload): \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateOrUpdateCapsilAccessResponse
+updateCapsilAccess($gatewaysAccessesUpdateCapsilAccessPayload): \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateOrUpdateCapsilAccessResponse
 ```
 
 Update a Capsil Access
@@ -927,11 +927,10 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\GatewaysApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 56; // int | Unique identifier of a Capsil Access.
 $gatewaysAccessesUpdateCapsilAccessPayload = new \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesUpdateCapsilAccessPayload(); // \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesUpdateCapsilAccessPayload
 
 try {
-    $result = $apiInstance->updateCapsilAccess($id, $gatewaysAccessesUpdateCapsilAccessPayload);
+    $result = $apiInstance->updateCapsilAccess($gatewaysAccessesUpdateCapsilAccessPayload);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GatewaysApi->updateCapsilAccess: ', $e->getMessage(), PHP_EOL;
@@ -942,7 +941,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| Unique identifier of a Capsil Access. |
  **gatewaysAccessesUpdateCapsilAccessPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesUpdateCapsilAccessPayload**](../Model/GatewaysAccessesUpdateCapsilAccessPayload.md)|  |
 
 ### Return type

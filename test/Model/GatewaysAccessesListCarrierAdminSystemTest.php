@@ -1,6 +1,6 @@
 <?php
 /**
- * GatewaysAccessesListCarrierAdminSystemResponseTest
+ * GatewaysAccessesListCarrierAdminSystemTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * GatewaysAccessesListCarrierAdminSystemResponseTest Class Doc Comment
+ * GatewaysAccessesListCarrierAdminSystemTest Class Doc Comment
  *
  * @category    Class
- * @description GatewaysAccessesListCarrierAdminSystemResponse
+ * @description GatewaysAccessesListCarrierAdminSystem
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class GatewaysAccessesListCarrierAdminSystemResponseTest extends TestCase
+class GatewaysAccessesListCarrierAdminSystemTest extends TestCase
 {
 
     /**
@@ -71,9 +71,9 @@ class GatewaysAccessesListCarrierAdminSystemResponseTest extends TestCase
     }
 
     /**
-     * Test "GatewaysAccessesListCarrierAdminSystemResponse"
+     * Test "GatewaysAccessesListCarrierAdminSystem"
      */
-    public function testGatewaysAccessesListCarrierAdminSystemResponse()
+    public function testGatewaysAccessesListCarrierAdminSystem()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

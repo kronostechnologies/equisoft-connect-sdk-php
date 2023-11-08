@@ -2233,7 +2233,7 @@ class GatewaysApi
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCapsilAccessResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+     * @return \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCapsilAccess|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
     public function listCapsilAccesses($userAccountUuid = null)
     {
@@ -2250,7 +2250,7 @@ class GatewaysApi
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCapsilAccessResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCapsilAccess|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCapsilAccessesWithHttpInfo($userAccountUuid = null)
     {
@@ -2293,17 +2293,17 @@ class GatewaysApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCapsilAccessResponse' === '\SplFileObject') {
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCapsilAccess' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCapsilAccessResponse' !== 'string') {
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCapsilAccess' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCapsilAccessResponse', []),
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCapsilAccess', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2339,7 +2339,7 @@ class GatewaysApi
                     ];
             }
 
-            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCapsilAccessResponse';
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCapsilAccess';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2360,7 +2360,7 @@ class GatewaysApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCapsilAccessResponse',
+                        '\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCapsilAccess',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2418,7 +2418,7 @@ class GatewaysApi
      */
     public function listCapsilAccessesAsyncWithHttpInfo($userAccountUuid = null)
     {
-        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCapsilAccessResponse';
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCapsilAccess';
         $request = $this->listCapsilAccessesRequest($userAccountUuid);
 
         return $this->client
@@ -2550,34 +2550,34 @@ class GatewaysApi
     }
 
     /**
-     * Operation listCapsilCarrierAdminSystems
+     * Operation listCarrierAdminSystems
      *
      * List carrier admin systems
      *
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCarrierAdminSystemResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+     * @return \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCarrierAdminSystem|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
-    public function listCapsilCarrierAdminSystems()
+    public function listCarrierAdminSystems()
     {
-        list($response) = $this->listCapsilCarrierAdminSystemsWithHttpInfo();
+        list($response) = $this->listCarrierAdminSystemsWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation listCapsilCarrierAdminSystemsWithHttpInfo
+     * Operation listCarrierAdminSystemsWithHttpInfo
      *
      * List carrier admin systems
      *
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCarrierAdminSystemResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCarrierAdminSystem|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listCapsilCarrierAdminSystemsWithHttpInfo()
+    public function listCarrierAdminSystemsWithHttpInfo()
     {
-        $request = $this->listCapsilCarrierAdminSystemsRequest();
+        $request = $this->listCarrierAdminSystemsRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -2616,17 +2616,17 @@ class GatewaysApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCarrierAdminSystemResponse' === '\SplFileObject') {
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCarrierAdminSystem' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCarrierAdminSystemResponse' !== 'string') {
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCarrierAdminSystem' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCarrierAdminSystemResponse', []),
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCarrierAdminSystem', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2662,7 +2662,7 @@ class GatewaysApi
                     ];
             }
 
-            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCarrierAdminSystemResponse';
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCarrierAdminSystem';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2683,7 +2683,7 @@ class GatewaysApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCarrierAdminSystemResponse',
+                        '\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCarrierAdminSystem',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2710,7 +2710,7 @@ class GatewaysApi
     }
 
     /**
-     * Operation listCapsilCarrierAdminSystemsAsync
+     * Operation listCarrierAdminSystemsAsync
      *
      * List carrier admin systems
      *
@@ -2718,9 +2718,9 @@ class GatewaysApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listCapsilCarrierAdminSystemsAsync()
+    public function listCarrierAdminSystemsAsync()
     {
-        return $this->listCapsilCarrierAdminSystemsAsyncWithHttpInfo()
+        return $this->listCarrierAdminSystemsAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2729,7 +2729,7 @@ class GatewaysApi
     }
 
     /**
-     * Operation listCapsilCarrierAdminSystemsAsyncWithHttpInfo
+     * Operation listCarrierAdminSystemsAsyncWithHttpInfo
      *
      * List carrier admin systems
      *
@@ -2737,10 +2737,10 @@ class GatewaysApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listCapsilCarrierAdminSystemsAsyncWithHttpInfo()
+    public function listCarrierAdminSystemsAsyncWithHttpInfo()
     {
-        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCarrierAdminSystemResponse';
-        $request = $this->listCapsilCarrierAdminSystemsRequest();
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCarrierAdminSystem';
+        $request = $this->listCarrierAdminSystemsRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2779,13 +2779,13 @@ class GatewaysApi
     }
 
     /**
-     * Create request for operation 'listCapsilCarrierAdminSystems'
+     * Create request for operation 'listCarrierAdminSystems'
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function listCapsilCarrierAdminSystemsRequest()
+    public function listCarrierAdminSystemsRequest()
     {
 
         $resourcePath = '/crm/api/v1/gateways/capsil/carrierAdminSystems';
@@ -4807,16 +4807,15 @@ class GatewaysApi
      *
      * Update a Capsil Access
      *
-     * @param  int $id Unique identifier of a Capsil Access. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesUpdateCapsilAccessPayload $gatewaysAccessesUpdateCapsilAccessPayload gatewaysAccessesUpdateCapsilAccessPayload (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateOrUpdateCapsilAccessResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
-    public function updateCapsilAccess($id, $gatewaysAccessesUpdateCapsilAccessPayload)
+    public function updateCapsilAccess($gatewaysAccessesUpdateCapsilAccessPayload)
     {
-        list($response) = $this->updateCapsilAccessWithHttpInfo($id, $gatewaysAccessesUpdateCapsilAccessPayload);
+        list($response) = $this->updateCapsilAccessWithHttpInfo($gatewaysAccessesUpdateCapsilAccessPayload);
         return $response;
     }
 
@@ -4825,16 +4824,15 @@ class GatewaysApi
      *
      * Update a Capsil Access
      *
-     * @param  int $id Unique identifier of a Capsil Access. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesUpdateCapsilAccessPayload $gatewaysAccessesUpdateCapsilAccessPayload (required)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateOrUpdateCapsilAccessResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateCapsilAccessWithHttpInfo($id, $gatewaysAccessesUpdateCapsilAccessPayload)
+    public function updateCapsilAccessWithHttpInfo($gatewaysAccessesUpdateCapsilAccessPayload)
     {
-        $request = $this->updateCapsilAccessRequest($id, $gatewaysAccessesUpdateCapsilAccessPayload);
+        $request = $this->updateCapsilAccessRequest($gatewaysAccessesUpdateCapsilAccessPayload);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4994,15 +4992,14 @@ class GatewaysApi
      *
      * Update a Capsil Access
      *
-     * @param  int $id Unique identifier of a Capsil Access. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesUpdateCapsilAccessPayload $gatewaysAccessesUpdateCapsilAccessPayload (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateCapsilAccessAsync($id, $gatewaysAccessesUpdateCapsilAccessPayload)
+    public function updateCapsilAccessAsync($gatewaysAccessesUpdateCapsilAccessPayload)
     {
-        return $this->updateCapsilAccessAsyncWithHttpInfo($id, $gatewaysAccessesUpdateCapsilAccessPayload)
+        return $this->updateCapsilAccessAsyncWithHttpInfo($gatewaysAccessesUpdateCapsilAccessPayload)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5015,16 +5012,15 @@ class GatewaysApi
      *
      * Update a Capsil Access
      *
-     * @param  int $id Unique identifier of a Capsil Access. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesUpdateCapsilAccessPayload $gatewaysAccessesUpdateCapsilAccessPayload (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateCapsilAccessAsyncWithHttpInfo($id, $gatewaysAccessesUpdateCapsilAccessPayload)
+    public function updateCapsilAccessAsyncWithHttpInfo($gatewaysAccessesUpdateCapsilAccessPayload)
     {
         $returnType = '\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateOrUpdateCapsilAccessResponse';
-        $request = $this->updateCapsilAccessRequest($id, $gatewaysAccessesUpdateCapsilAccessPayload);
+        $request = $this->updateCapsilAccessRequest($gatewaysAccessesUpdateCapsilAccessPayload);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5065,20 +5061,13 @@ class GatewaysApi
     /**
      * Create request for operation 'updateCapsilAccess'
      *
-     * @param  int $id Unique identifier of a Capsil Access. (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesUpdateCapsilAccessPayload $gatewaysAccessesUpdateCapsilAccessPayload (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function updateCapsilAccessRequest($id, $gatewaysAccessesUpdateCapsilAccessPayload)
+    public function updateCapsilAccessRequest($gatewaysAccessesUpdateCapsilAccessPayload)
     {
-        // verify the required parameter 'id' is set
-        if ($id === null || (is_array($id) && count($id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling updateCapsilAccess'
-            );
-        }
         // verify the required parameter 'gatewaysAccessesUpdateCapsilAccessPayload' is set
         if ($gatewaysAccessesUpdateCapsilAccessPayload === null || (is_array($gatewaysAccessesUpdateCapsilAccessPayload) && count($gatewaysAccessesUpdateCapsilAccessPayload) === 0)) {
             throw new \InvalidArgumentException(
@@ -5095,14 +5084,6 @@ class GatewaysApi
 
 
 
-        // path params
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'id' . '}',
-                ObjectSerializer::toPathValue($id),
-                $resourcePath
-            );
-        }
 
 
         if ($multipart) {

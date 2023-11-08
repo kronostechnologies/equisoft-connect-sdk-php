@@ -1,4 +1,4 @@
-# # GatewaysAccessesListCapsilAccessResponse
+# # GatewaysAccessesListCapsilAccess
 
 ## Properties
 
