@@ -188,6 +188,15 @@ class ContactsContactTest extends TestCase
     }
 
     /**
+     * Test attribute "currentCivilStatus"
+     */
+    public function testPropertyCurrentCivilStatus()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "currentOccupation"
      */
     public function testPropertyCurrentOccupation()
