@@ -2331,14 +2331,15 @@ class GatewaysApi
      * @param  string $userAccountUuid UserAccount uuid. (optional)
      * @param  int $carrierAdminSystemId CarrierAdminSystem unique identifier. (optional)
      * @param  string $code Capsil agent code. (optional)
+     * @param  string $databaseUuid Database unique identifier. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCapsilAccessResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
-    public function listCapsilAccesses($userAccountUuid = null, $carrierAdminSystemId = null, $code = null)
+    public function listCapsilAccesses($userAccountUuid = null, $carrierAdminSystemId = null, $code = null, $databaseUuid = null)
     {
-        list($response) = $this->listCapsilAccessesWithHttpInfo($userAccountUuid, $carrierAdminSystemId, $code);
+        list($response) = $this->listCapsilAccessesWithHttpInfo($userAccountUuid, $carrierAdminSystemId, $code, $databaseUuid);
         return $response;
     }
 
@@ -2350,14 +2351,15 @@ class GatewaysApi
      * @param  string $userAccountUuid UserAccount uuid. (optional)
      * @param  int $carrierAdminSystemId CarrierAdminSystem unique identifier. (optional)
      * @param  string $code Capsil agent code. (optional)
+     * @param  string $databaseUuid Database unique identifier. (optional)
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCapsilAccessResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listCapsilAccessesWithHttpInfo($userAccountUuid = null, $carrierAdminSystemId = null, $code = null)
+    public function listCapsilAccessesWithHttpInfo($userAccountUuid = null, $carrierAdminSystemId = null, $code = null, $databaseUuid = null)
     {
-        $request = $this->listCapsilAccessesRequest($userAccountUuid, $carrierAdminSystemId, $code);
+        $request = $this->listCapsilAccessesRequest($userAccountUuid, $carrierAdminSystemId, $code, $databaseUuid);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2497,13 +2499,14 @@ class GatewaysApi
      * @param  string $userAccountUuid UserAccount uuid. (optional)
      * @param  int $carrierAdminSystemId CarrierAdminSystem unique identifier. (optional)
      * @param  string $code Capsil agent code. (optional)
+     * @param  string $databaseUuid Database unique identifier. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listCapsilAccessesAsync($userAccountUuid = null, $carrierAdminSystemId = null, $code = null)
+    public function listCapsilAccessesAsync($userAccountUuid = null, $carrierAdminSystemId = null, $code = null, $databaseUuid = null)
     {
-        return $this->listCapsilAccessesAsyncWithHttpInfo($userAccountUuid, $carrierAdminSystemId, $code)
+        return $this->listCapsilAccessesAsyncWithHttpInfo($userAccountUuid, $carrierAdminSystemId, $code, $databaseUuid)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2519,14 +2522,15 @@ class GatewaysApi
      * @param  string $userAccountUuid UserAccount uuid. (optional)
      * @param  int $carrierAdminSystemId CarrierAdminSystem unique identifier. (optional)
      * @param  string $code Capsil agent code. (optional)
+     * @param  string $databaseUuid Database unique identifier. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listCapsilAccessesAsyncWithHttpInfo($userAccountUuid = null, $carrierAdminSystemId = null, $code = null)
+    public function listCapsilAccessesAsyncWithHttpInfo($userAccountUuid = null, $carrierAdminSystemId = null, $code = null, $databaseUuid = null)
     {
         $returnType = '\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCapsilAccessResponse';
-        $request = $this->listCapsilAccessesRequest($userAccountUuid, $carrierAdminSystemId, $code);
+        $request = $this->listCapsilAccessesRequest($userAccountUuid, $carrierAdminSystemId, $code, $databaseUuid);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2570,11 +2574,12 @@ class GatewaysApi
      * @param  string $userAccountUuid UserAccount uuid. (optional)
      * @param  int $carrierAdminSystemId CarrierAdminSystem unique identifier. (optional)
      * @param  string $code Capsil agent code. (optional)
+     * @param  string $databaseUuid Database unique identifier. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function listCapsilAccessesRequest($userAccountUuid = null, $carrierAdminSystemId = null, $code = null)
+    public function listCapsilAccessesRequest($userAccountUuid = null, $carrierAdminSystemId = null, $code = null, $databaseUuid = null)
     {
 
         $resourcePath = '/crm/api/v1/gateways/capsil/accesses';
@@ -2606,6 +2611,15 @@ class GatewaysApi
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
             $code,
             'code', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $databaseUuid,
+            'databaseUuid', // param base name
             'string', // openApiType
             'form', // style
             true, // explode

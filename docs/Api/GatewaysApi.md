@@ -433,7 +433,7 @@ This endpoint does not need any parameter.
 ## `listCapsilAccesses()`
 
 ```php
-listCapsilAccesses($userAccountUuid, $carrierAdminSystemId, $code): \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCapsilAccessResponse
+listCapsilAccesses($userAccountUuid, $carrierAdminSystemId, $code, $databaseUuid): \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesListCapsilAccessResponse
 ```
 
 List capsil accesses
@@ -458,9 +458,10 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\GatewaysApi(
 $userAccountUuid = 'userAccountUuid_example'; // string | UserAccount uuid.
 $carrierAdminSystemId = 56; // int | CarrierAdminSystem unique identifier.
 $code = 'code_example'; // string | Capsil agent code.
+$databaseUuid = 'databaseUuid_example'; // string | Database unique identifier.
 
 try {
-    $result = $apiInstance->listCapsilAccesses($userAccountUuid, $carrierAdminSystemId, $code);
+    $result = $apiInstance->listCapsilAccesses($userAccountUuid, $carrierAdminSystemId, $code, $databaseUuid);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GatewaysApi->listCapsilAccesses: ', $e->getMessage(), PHP_EOL;
@@ -474,6 +475,7 @@ Name | Type | Description  | Notes
  **userAccountUuid** | **string**| UserAccount uuid. | [optional]
  **carrierAdminSystemId** | **int**| CarrierAdminSystem unique identifier. | [optional]
  **code** | **string**| Capsil agent code. | [optional]
+ **databaseUuid** | **string**| Database unique identifier. | [optional]
 
 ### Return type
 
