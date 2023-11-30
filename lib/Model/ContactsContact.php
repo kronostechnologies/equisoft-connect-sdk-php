@@ -75,7 +75,8 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
         'addresses' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactAddress[]',
         'phones' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactPhone[]',
         'emails' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactEmail[]',
-        'websites' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactWebsite[]'
+        'websites' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactWebsite[]',
+        'links' => '\Equisoft\SDK\EquisoftConnect\Model\ContactLink[]'
     ];
 
     /**
@@ -104,7 +105,8 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
         'addresses' => null,
         'phones' => null,
         'emails' => null,
-        'websites' => null
+        'websites' => null,
+        'links' => null
     ];
 
     /**
@@ -152,7 +154,8 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
         'addresses' => 'addresses',
         'phones' => 'phones',
         'emails' => 'emails',
-        'websites' => 'websites'
+        'websites' => 'websites',
+        'links' => 'links'
     ];
 
     /**
@@ -179,7 +182,8 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
         'addresses' => 'setAddresses',
         'phones' => 'setPhones',
         'emails' => 'setEmails',
-        'websites' => 'setWebsites'
+        'websites' => 'setWebsites',
+        'links' => 'setLinks'
     ];
 
     /**
@@ -206,7 +210,8 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
         'addresses' => 'getAddresses',
         'phones' => 'getPhones',
         'emails' => 'getEmails',
-        'websites' => 'getWebsites'
+        'websites' => 'getWebsites',
+        'links' => 'getLinks'
     ];
 
     /**
@@ -285,6 +290,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['phones'] = $data['phones'] ?? null;
         $this->container['emails'] = $data['emails'] ?? null;
         $this->container['websites'] = $data['websites'] ?? null;
+        $this->container['links'] = $data['links'] ?? null;
     }
 
     /**
@@ -774,6 +780,30 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setWebsites($websites)
     {
         $this->container['websites'] = $websites;
+
+        return $this;
+    }
+
+    /**
+     * Gets links
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactLink[]|null
+     */
+    public function getLinks()
+    {
+        return $this->container['links'];
+    }
+
+    /**
+     * Sets links
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactLink[]|null $links List of contact's links
+     *
+     * @return self
+     */
+    public function setLinks($links)
+    {
+        $this->container['links'] = $links;
 
         return $this;
     }

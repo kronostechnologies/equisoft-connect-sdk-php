@@ -231,6 +231,8 @@ Class | Method | HTTP request | Description
 - [ContactContactPhone](docs/Model/ContactContactPhone.md)
 - [ContactContactSegmentation](docs/Model/ContactContactSegmentation.md)
 - [ContactContactWebsite](docs/Model/ContactContactWebsite.md)
+- [ContactLink](docs/Model/ContactLink.md)
+- [ContactLinkParticipant](docs/Model/ContactLinkParticipant.md)
 - [ContactPatchContactPayload](docs/Model/ContactPatchContactPayload.md)
 - [ContactPatchDto](docs/Model/ContactPatchDto.md)
 - [ContactsContact](docs/Model/ContactsContact.md)
