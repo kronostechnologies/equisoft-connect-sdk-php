@@ -12,8 +12,8 @@ Name | Type | Description | Notes
 **completedDate** | **\DateTime** | Date the task was completed / done. As defined by full-date - RFC3339. | [optional]
 **description** | **string** | Public description of the Event. | [optional]
 **internalNotes** | **string** | Internal notes on the Event. Not synced on remote sources. | [optional]
-**category** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValue**](FieldValue.md) | Event category. | [optional]
-**subCategory** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValue**](FieldValue.md) | Event sub category. | [optional]
+**category** | [**\Equisoft\SDK\EquisoftConnect\Model\TasksTaskCategory**](TasksTaskCategory.md) |  | [optional]
+**subCategory** | [**\Equisoft\SDK\EquisoftConnect\Model\TasksTaskSubCategory**](TasksTaskSubCategory.md) |  | [optional]
 **priority** | **int** | Importance/Priority of an event or task. 5 is the most important. |
 **visibility** | [**\Equisoft\SDK\EquisoftConnect\Model\TasksVisibilityType**](TasksVisibilityType.md) |  |
 **creationTime** | **\DateTime** | Creation time. As defined by date-time - RFC3339. | [optional]
