@@ -23,5 +23,6 @@ Name | Type | Description | Notes
 **phones** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactContactPhone[]**](ContactContactPhone.md) | List of contact&#39;s phones | [optional]
 **emails** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactContactEmail[]**](ContactContactEmail.md) | List of contact&#39;s emails | [optional]
 **websites** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactContactWebsite[]**](ContactContactWebsite.md) | List of contact&#39;s websites | [optional]
+**links** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactLink[]**](ContactLink.md) | List of contact&#39;s links | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

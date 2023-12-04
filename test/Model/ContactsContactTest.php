@@ -249,4 +249,13 @@ class ContactsContactTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "links"
+     */
+    public function testPropertyLinks()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }
