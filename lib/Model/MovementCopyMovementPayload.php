@@ -62,7 +62,7 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonS
         'sourceDatabase' => 'string',
         'destinationDatabase' => 'string',
         'userTuples' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUserTuplePayload[]',
-        'options' => '\Equisoft\SDK\EquisoftConnect\Model\MovementCopyMovementPayloadOptions'
+        'options' => '\Equisoft\SDK\EquisoftConnect\Model\MovementOptions'
     ];
 
     /**
@@ -508,7 +508,7 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets options
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementCopyMovementPayloadOptions|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementOptions|null
      */
     public function getOptions()
     {
@@ -518,7 +518,7 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets options
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementCopyMovementPayloadOptions|null $options options
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementOptions|null $options options
      *
      * @return self
      */

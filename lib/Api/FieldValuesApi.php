@@ -552,22 +552,10 @@ class FieldValuesApi
                 foreach ($formParams as $formParamName => $formParamValue) {
                     $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
                     foreach ($formParamValueItems as $formParamValueItem) {
-                        if (is_string($formParamValueItem)) {
-                            // JSON part
-                            $multipartContents[] = [
-                                'name' => $formParamName,
-                                'contents' => $formParamValueItem,
-                                'headers' => [
-                                    'Content-Disposition' => "form-data; name=\"$formParamName\"; filename=\"$formParamName.json\"",
-                                    'Content-Type' => 'application/json; charset=UTF-8'
-                                ]
-                            ];
-                        } else {
-                            $multipartContents[] = [
-                                'name' => $formParamName,
-                                'contents' => $formParamValueItem
-                            ];
-                        }
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
                     }
                 }
                 // for HTTP post (form)
@@ -1019,22 +1007,10 @@ class FieldValuesApi
                 foreach ($formParams as $formParamName => $formParamValue) {
                     $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
                     foreach ($formParamValueItems as $formParamValueItem) {
-                        if (is_string($formParamValueItem)) {
-                            // JSON part
-                            $multipartContents[] = [
-                                'name' => $formParamName,
-                                'contents' => $formParamValueItem,
-                                'headers' => [
-                                    'Content-Disposition' => "form-data; name=\"$formParamName\"; filename=\"$formParamName.json\"",
-                                    'Content-Type' => 'application/json; charset=UTF-8'
-                                ]
-                            ];
-                        } else {
-                            $multipartContents[] = [
-                                'name' => $formParamName,
-                                'contents' => $formParamValueItem
-                            ];
-                        }
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
                     }
                 }
                 // for HTTP post (form)
@@ -1466,22 +1442,10 @@ class FieldValuesApi
                 foreach ($formParams as $formParamName => $formParamValue) {
                     $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
                     foreach ($formParamValueItems as $formParamValueItem) {
-                        if (is_string($formParamValueItem)) {
-                            // JSON part
-                            $multipartContents[] = [
-                                'name' => $formParamName,
-                                'contents' => $formParamValueItem,
-                                'headers' => [
-                                    'Content-Disposition' => "form-data; name=\"$formParamName\"; filename=\"$formParamName.json\"",
-                                    'Content-Type' => 'application/json; charset=UTF-8'
-                                ]
-                            ];
-                        } else {
-                            $multipartContents[] = [
-                                'name' => $formParamName,
-                                'contents' => $formParamValueItem
-                            ];
-                        }
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
                     }
                 }
                 // for HTTP post (form)
@@ -1755,22 +1719,10 @@ class FieldValuesApi
                 foreach ($formParams as $formParamName => $formParamValue) {
                     $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
                     foreach ($formParamValueItems as $formParamValueItem) {
-                        if (is_string($formParamValueItem)) {
-                            // JSON part
-                            $multipartContents[] = [
-                                'name' => $formParamName,
-                                'contents' => $formParamValueItem,
-                                'headers' => [
-                                    'Content-Disposition' => "form-data; name=\"$formParamName\"; filename=\"$formParamName.json\"",
-                                    'Content-Type' => 'application/json; charset=UTF-8'
-                                ]
-                            ];
-                        } else {
-                            $multipartContents[] = [
-                                'name' => $formParamName,
-                                'contents' => $formParamValueItem
-                            ];
-                        }
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
                     }
                 }
                 // for HTTP post (form)
@@ -2044,22 +1996,10 @@ class FieldValuesApi
                 foreach ($formParams as $formParamName => $formParamValue) {
                     $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
                     foreach ($formParamValueItems as $formParamValueItem) {
-                        if (is_string($formParamValueItem)) {
-                            // JSON part
-                            $multipartContents[] = [
-                                'name' => $formParamName,
-                                'contents' => $formParamValueItem,
-                                'headers' => [
-                                    'Content-Disposition' => "form-data; name=\"$formParamName\"; filename=\"$formParamName.json\"",
-                                    'Content-Type' => 'application/json; charset=UTF-8'
-                                ]
-                            ];
-                        } else {
-                            $multipartContents[] = [
-                                'name' => $formParamName,
-                                'contents' => $formParamValueItem
-                            ];
-                        }
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
                     }
                 }
                 // for HTTP post (form)
@@ -2492,22 +2432,10 @@ class FieldValuesApi
                 foreach ($formParams as $formParamName => $formParamValue) {
                     $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
                     foreach ($formParamValueItems as $formParamValueItem) {
-                        if (is_string($formParamValueItem)) {
-                            // JSON part
-                            $multipartContents[] = [
-                                'name' => $formParamName,
-                                'contents' => $formParamValueItem,
-                                'headers' => [
-                                    'Content-Disposition' => "form-data; name=\"$formParamName\"; filename=\"$formParamName.json\"",
-                                    'Content-Type' => 'application/json; charset=UTF-8'
-                                ]
-                            ];
-                        } else {
-                            $multipartContents[] = [
-                                'name' => $formParamName,
-                                'contents' => $formParamValueItem
-                            ];
-                        }
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
                     }
                 }
                 // for HTTP post (form)
@@ -2940,22 +2868,10 @@ class FieldValuesApi
                 foreach ($formParams as $formParamName => $formParamValue) {
                     $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
                     foreach ($formParamValueItems as $formParamValueItem) {
-                        if (is_string($formParamValueItem)) {
-                            // JSON part
-                            $multipartContents[] = [
-                                'name' => $formParamName,
-                                'contents' => $formParamValueItem,
-                                'headers' => [
-                                    'Content-Disposition' => "form-data; name=\"$formParamName\"; filename=\"$formParamName.json\"",
-                                    'Content-Type' => 'application/json; charset=UTF-8'
-                                ]
-                            ];
-                        } else {
-                            $multipartContents[] = [
-                                'name' => $formParamName,
-                                'contents' => $formParamValueItem
-                            ];
-                        }
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
                     }
                 }
                 // for HTTP post (form)
@@ -3248,22 +3164,10 @@ class FieldValuesApi
                 foreach ($formParams as $formParamName => $formParamValue) {
                     $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
                     foreach ($formParamValueItems as $formParamValueItem) {
-                        if (is_string($formParamValueItem)) {
-                            // JSON part
-                            $multipartContents[] = [
-                                'name' => $formParamName,
-                                'contents' => $formParamValueItem,
-                                'headers' => [
-                                    'Content-Disposition' => "form-data; name=\"$formParamName\"; filename=\"$formParamName.json\"",
-                                    'Content-Type' => 'application/json; charset=UTF-8'
-                                ]
-                            ];
-                        } else {
-                            $multipartContents[] = [
-                                'name' => $formParamName,
-                                'contents' => $formParamValueItem
-                            ];
-                        }
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
                     }
                 }
                 // for HTTP post (form)
@@ -3621,22 +3525,10 @@ class FieldValuesApi
                 foreach ($formParams as $formParamName => $formParamValue) {
                     $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
                     foreach ($formParamValueItems as $formParamValueItem) {
-                        if (is_string($formParamValueItem)) {
-                            // JSON part
-                            $multipartContents[] = [
-                                'name' => $formParamName,
-                                'contents' => $formParamValueItem,
-                                'headers' => [
-                                    'Content-Disposition' => "form-data; name=\"$formParamName\"; filename=\"$formParamName.json\"",
-                                    'Content-Type' => 'application/json; charset=UTF-8'
-                                ]
-                            ];
-                        } else {
-                            $multipartContents[] = [
-                                'name' => $formParamName,
-                                'contents' => $formParamValueItem
-                            ];
-                        }
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
                     }
                 }
                 // for HTTP post (form)
@@ -4069,22 +3961,10 @@ class FieldValuesApi
                 foreach ($formParams as $formParamName => $formParamValue) {
                     $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
                     foreach ($formParamValueItems as $formParamValueItem) {
-                        if (is_string($formParamValueItem)) {
-                            // JSON part
-                            $multipartContents[] = [
-                                'name' => $formParamName,
-                                'contents' => $formParamValueItem,
-                                'headers' => [
-                                    'Content-Disposition' => "form-data; name=\"$formParamName\"; filename=\"$formParamName.json\"",
-                                    'Content-Type' => 'application/json; charset=UTF-8'
-                                ]
-                            ];
-                        } else {
-                            $multipartContents[] = [
-                                'name' => $formParamName,
-                                'contents' => $formParamValueItem
-                            ];
-                        }
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
                     }
                 }
                 // for HTTP post (form)
@@ -4512,22 +4392,10 @@ class FieldValuesApi
                 foreach ($formParams as $formParamName => $formParamValue) {
                     $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
                     foreach ($formParamValueItems as $formParamValueItem) {
-                        if (is_string($formParamValueItem)) {
-                            // JSON part
-                            $multipartContents[] = [
-                                'name' => $formParamName,
-                                'contents' => $formParamValueItem,
-                                'headers' => [
-                                    'Content-Disposition' => "form-data; name=\"$formParamName\"; filename=\"$formParamName.json\"",
-                                    'Content-Type' => 'application/json; charset=UTF-8'
-                                ]
-                            ];
-                        } else {
-                            $multipartContents[] = [
-                                'name' => $formParamName,
-                                'contents' => $formParamValueItem
-                            ];
-                        }
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
                     }
                 }
                 // for HTTP post (form)
@@ -4970,22 +4838,10 @@ class FieldValuesApi
                 foreach ($formParams as $formParamName => $formParamValue) {
                     $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
                     foreach ($formParamValueItems as $formParamValueItem) {
-                        if (is_string($formParamValueItem)) {
-                            // JSON part
-                            $multipartContents[] = [
-                                'name' => $formParamName,
-                                'contents' => $formParamValueItem,
-                                'headers' => [
-                                    'Content-Disposition' => "form-data; name=\"$formParamName\"; filename=\"$formParamName.json\"",
-                                    'Content-Type' => 'application/json; charset=UTF-8'
-                                ]
-                            ];
-                        } else {
-                            $multipartContents[] = [
-                                'name' => $formParamName,
-                                'contents' => $formParamValueItem
-                            ];
-                        }
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
                     }
                 }
                 // for HTTP post (form)
@@ -5437,22 +5293,10 @@ class FieldValuesApi
                 foreach ($formParams as $formParamName => $formParamValue) {
                     $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
                     foreach ($formParamValueItems as $formParamValueItem) {
-                        if (is_string($formParamValueItem)) {
-                            // JSON part
-                            $multipartContents[] = [
-                                'name' => $formParamName,
-                                'contents' => $formParamValueItem,
-                                'headers' => [
-                                    'Content-Disposition' => "form-data; name=\"$formParamName\"; filename=\"$formParamName.json\"",
-                                    'Content-Type' => 'application/json; charset=UTF-8'
-                                ]
-                            ];
-                        } else {
-                            $multipartContents[] = [
-                                'name' => $formParamName,
-                                'contents' => $formParamValueItem
-                            ];
-                        }
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
                     }
                 }
                 // for HTTP post (form)
@@ -5904,22 +5748,10 @@ class FieldValuesApi
                 foreach ($formParams as $formParamName => $formParamValue) {
                     $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
                     foreach ($formParamValueItems as $formParamValueItem) {
-                        if (is_string($formParamValueItem)) {
-                            // JSON part
-                            $multipartContents[] = [
-                                'name' => $formParamName,
-                                'contents' => $formParamValueItem,
-                                'headers' => [
-                                    'Content-Disposition' => "form-data; name=\"$formParamName\"; filename=\"$formParamName.json\"",
-                                    'Content-Type' => 'application/json; charset=UTF-8'
-                                ]
-                            ];
-                        } else {
-                            $multipartContents[] = [
-                                'name' => $formParamName,
-                                'contents' => $formParamValueItem
-                            ];
-                        }
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
                     }
                 }
                 // for HTTP post (form)

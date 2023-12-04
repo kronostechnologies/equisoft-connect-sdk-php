@@ -64,9 +64,9 @@ class MovementMoveMovement implements ModelInterface, ArrayAccess, \JsonSerializ
         'scheduledDate' => 'string',
         'processedDate' => 'string',
         'addedDate' => 'string',
-        'addedBy' => '\Equisoft\SDK\EquisoftConnect\Model\MovementClientBaseUsingDistributionListMovementAddedBy',
+        'addedBy' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
         'cancelledDate' => 'string',
-        'cancelledBy' => '\Equisoft\SDK\EquisoftConnect\Model\MovementClientBaseUsingDistributionListMovementCancelledBy',
+        'cancelledBy' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
         'sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
         'destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
         'users' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser[]'
@@ -632,7 +632,7 @@ class MovementMoveMovement implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets addedBy
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementClientBaseUsingDistributionListMovementAddedBy|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null
      */
     public function getAddedBy()
     {
@@ -642,7 +642,7 @@ class MovementMoveMovement implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets addedBy
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementClientBaseUsingDistributionListMovementAddedBy|null $addedBy addedBy
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null $addedBy addedBy
      *
      * @return self
      */
@@ -700,7 +700,7 @@ class MovementMoveMovement implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets cancelledBy
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementClientBaseUsingDistributionListMovementCancelledBy|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null
      */
     public function getCancelledBy()
     {
@@ -710,7 +710,7 @@ class MovementMoveMovement implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets cancelledBy
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementClientBaseUsingDistributionListMovementCancelledBy|null $cancelledBy cancelledBy
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null $cancelledBy cancelledBy
      *
      * @return self
      */

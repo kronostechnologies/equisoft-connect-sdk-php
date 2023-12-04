@@ -65,8 +65,8 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
         'completedDate' => '\DateTime',
         'description' => 'string',
         'internalNotes' => 'string',
-        'category' => '\Equisoft\SDK\EquisoftConnect\Model\TasksTaskCategory',
-        'subCategory' => '\Equisoft\SDK\EquisoftConnect\Model\TasksTaskSubCategory',
+        'category' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue',
+        'subCategory' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue',
         'priority' => 'int',
         'visibility' => '\Equisoft\SDK\EquisoftConnect\Model\TasksVisibilityType',
         'creationTime' => '\DateTime',
@@ -666,7 +666,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets category
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\TasksTaskCategory|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null
      */
     public function getCategory()
     {
@@ -676,7 +676,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets category
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\TasksTaskCategory|null $category category
+     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $category category
      *
      * @return self
      */
@@ -700,7 +700,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets subCategory
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\TasksTaskSubCategory|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null
      */
     public function getSubCategory()
     {
@@ -710,7 +710,7 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets subCategory
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\TasksTaskSubCategory|null $subCategory subCategory
+     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $subCategory subCategory
      *
      * @return self
      */

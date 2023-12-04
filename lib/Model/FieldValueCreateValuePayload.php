@@ -58,8 +58,8 @@ class FieldValueCreateValuePayload implements ModelInterface, ArrayAccess, \Json
       */
     protected static $openAPITypes = [
         'label' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValueLocalizedString',
-        'code' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateGroupPayloadDescription',
-        'description' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateGroupPayloadDescription',
+        'code' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValueLocalizedString',
+        'description' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValueLocalizedString',
         'name' => 'string',
         'isLocked' => 'bool',
         'isPrivate' => 'bool'
@@ -357,7 +357,7 @@ class FieldValueCreateValuePayload implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets code
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateGroupPayloadDescription|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValueLocalizedString|null
      */
     public function getCode()
     {
@@ -367,7 +367,7 @@ class FieldValueCreateValuePayload implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets code
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateGroupPayloadDescription|null $code code
+     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValueLocalizedString|null $code code
      *
      * @return self
      */
@@ -391,7 +391,7 @@ class FieldValueCreateValuePayload implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets description
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateGroupPayloadDescription|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValueLocalizedString|null
      */
     public function getDescription()
     {
@@ -401,7 +401,7 @@ class FieldValueCreateValuePayload implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets description
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateGroupPayloadDescription|null $description description
+     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValueLocalizedString|null $description description
      *
      * @return self
      */

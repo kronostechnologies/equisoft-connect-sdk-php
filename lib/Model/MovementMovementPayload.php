@@ -69,7 +69,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
         'sourceDatabase' => 'string',
         'destinationDatabase' => 'string',
         'users' => 'string[]',
-        'options' => '\Equisoft\SDK\EquisoftConnect\Model\MovementCopyMovementPayloadOptions',
+        'options' => '\Equisoft\SDK\EquisoftConnect\Model\MovementOptions',
         'userTuples' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUserTuplePayload[]',
         'sourceUser' => 'string',
         'destinationUser' => 'string',
@@ -119,7 +119,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
 		'sourceDatabase' => false,
 		'destinationDatabase' => false,
 		'users' => false,
-		'options' => true,
+		'options' => false,
 		'userTuples' => false,
 		'sourceUser' => false,
 		'destinationUser' => false,
@@ -566,7 +566,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets options
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementCopyMovementPayloadOptions|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementOptions|null
      */
     public function getOptions()
     {
@@ -576,21 +576,14 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets options
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementCopyMovementPayloadOptions|null $options options
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementOptions|null $options options
      *
      * @return self
      */
     public function setOptions($options)
     {
         if (is_null($options)) {
-            array_push($this->openAPINullablesSetToNull, 'options');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('options', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+            throw new \InvalidArgumentException('non-nullable options cannot be null');
         }
         $this->container['options'] = $options;
 

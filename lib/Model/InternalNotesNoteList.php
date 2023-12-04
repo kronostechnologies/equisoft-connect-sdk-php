@@ -58,7 +58,7 @@ class InternalNotesNoteList implements ModelInterface, ArrayAccess, \JsonSeriali
       */
     protected static $openAPITypes = [
         'notes' => '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesNote[]',
-        'legacyNote' => '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteListLegacyNote'
+        'legacyNote' => '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesLegacyNote'
     ];
 
     /**
@@ -329,7 +329,7 @@ class InternalNotesNoteList implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets legacyNote
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteListLegacyNote|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\InternalNotesLegacyNote|null
      */
     public function getLegacyNote()
     {
@@ -339,7 +339,7 @@ class InternalNotesNoteList implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets legacyNote
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteListLegacyNote|null $legacyNote legacyNote
+     * @param \Equisoft\SDK\EquisoftConnect\Model\InternalNotesLegacyNote|null $legacyNote legacyNote
      *
      * @return self
      */

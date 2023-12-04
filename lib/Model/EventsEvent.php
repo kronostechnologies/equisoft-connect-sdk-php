@@ -68,8 +68,8 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
         'internalNotes' => 'string',
         'location' => 'string',
         'type' => '\Equisoft\SDK\EquisoftConnect\Model\EventsEventType',
-        'category' => '\Equisoft\SDK\EquisoftConnect\Model\EventsEventCategory',
-        'subCategory' => '\Equisoft\SDK\EquisoftConnect\Model\EventsEventSubCategory',
+        'category' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue',
+        'subCategory' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue',
         'recurrenceRule' => 'string',
         'recurringEventId' => 'string',
         'originalStartDate' => 'string',
@@ -804,7 +804,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets category
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\EventsEventCategory|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null
      */
     public function getCategory()
     {
@@ -814,7 +814,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets category
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\EventsEventCategory|null $category category
+     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $category category
      *
      * @return self
      */
@@ -838,7 +838,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets subCategory
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\EventsEventSubCategory|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null
      */
     public function getSubCategory()
     {
@@ -848,7 +848,7 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets subCategory
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\EventsEventSubCategory|null $subCategory subCategory
+     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $subCategory subCategory
      *
      * @return self
      */

@@ -58,10 +58,10 @@ class InternalNotesNote implements ModelInterface, ArrayAccess, \JsonSerializabl
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'author' => '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteAuthor',
+        'author' => '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesAuthor',
         'firstRevisionCreatedAt' => '\DateTime',
         'accessRights' => '\Equisoft\SDK\EquisoftConnect\Model\AccessRights',
-        'currentRevision' => '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteCurrentRevision',
+        'currentRevision' => '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteRevision',
         'previousRevisions' => '\Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteRevision[]'
     ];
 
@@ -376,7 +376,7 @@ class InternalNotesNote implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets author
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteAuthor
+     * @return \Equisoft\SDK\EquisoftConnect\Model\InternalNotesAuthor
      */
     public function getAuthor()
     {
@@ -386,7 +386,7 @@ class InternalNotesNote implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets author
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteAuthor $author author
+     * @param \Equisoft\SDK\EquisoftConnect\Model\InternalNotesAuthor $author author
      *
      * @return self
      */
@@ -471,7 +471,7 @@ class InternalNotesNote implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets currentRevision
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteCurrentRevision
+     * @return \Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteRevision
      */
     public function getCurrentRevision()
     {
@@ -481,7 +481,7 @@ class InternalNotesNote implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets currentRevision
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteCurrentRevision $currentRevision currentRevision
+     * @param \Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteRevision $currentRevision currentRevision
      *
      * @return self
      */

@@ -68,9 +68,9 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
         'lastUpdateDate' => '\DateTime',
         'identification' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactIdentification',
         'additionalInformation' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactAdditionalInformation',
-        'currentMaritalStatus' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactCurrentMaritalStatus',
-        'currentCivilStatus' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactCurrentCivilStatus',
-        'currentOccupation' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactCurrentOccupation',
+        'currentMaritalStatus' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactMaritalStatus',
+        'currentCivilStatus' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactMaritalStatus',
+        'currentOccupation' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactOccupation',
         'segmentation' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactSegmentation',
         'addresses' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactAddress[]',
         'phones' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactPhone[]',
@@ -738,8 +738,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets currentMaritalStatus
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactCurrentMaritalStatus|null
-     * @deprecated
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactContactMaritalStatus|null
      */
     public function getCurrentMaritalStatus()
     {
@@ -749,10 +748,9 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets currentMaritalStatus
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactCurrentMaritalStatus|null $currentMaritalStatus currentMaritalStatus
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactContactMaritalStatus|null $currentMaritalStatus currentMaritalStatus
      *
      * @return self
-     * @deprecated
      */
     public function setCurrentMaritalStatus($currentMaritalStatus)
     {
@@ -774,7 +772,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets currentCivilStatus
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactCurrentCivilStatus|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactContactMaritalStatus|null
      */
     public function getCurrentCivilStatus()
     {
@@ -784,7 +782,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets currentCivilStatus
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactCurrentCivilStatus|null $currentCivilStatus currentCivilStatus
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactContactMaritalStatus|null $currentCivilStatus currentCivilStatus
      *
      * @return self
      */
@@ -808,7 +806,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets currentOccupation
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactCurrentOccupation|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactContactOccupation|null
      */
     public function getCurrentOccupation()
     {
@@ -818,7 +816,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets currentOccupation
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactCurrentOccupation|null $currentOccupation currentOccupation
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactContactOccupation|null $currentOccupation currentOccupation
      *
      * @return self
      */

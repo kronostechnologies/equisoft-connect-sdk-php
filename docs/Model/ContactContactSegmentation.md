@@ -9,12 +9,12 @@ Name | Type | Description | Notes
 **hobbies** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValue[]**](FieldValue.md) | Contact&#39;s hobbies |
 **referredBy** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValue[]**](FieldValue.md) | Contact&#39;s references |
 **industries** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValue[]**](FieldValue.md) | Contact&#39;s industries |
-**segmentation1** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactContactSegmentationSegmentation1**](ContactContactSegmentationSegmentation1.md) |  | [optional]
-**segmentation2** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactContactSegmentationSegmentation2**](ContactContactSegmentationSegmentation2.md) |  | [optional]
-**segmentation3** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactContactSegmentationSegmentation3**](ContactContactSegmentationSegmentation3.md) |  | [optional]
-**segmentation4** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactContactSegmentationSegmentation4**](ContactContactSegmentationSegmentation4.md) |  | [optional]
-**segmentation5** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactContactSegmentationSegmentation5**](ContactContactSegmentationSegmentation5.md) |  | [optional]
-**segmentation6** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactContactSegmentationSegmentation6**](ContactContactSegmentationSegmentation6.md) |  | [optional]
-**territory** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactContactSegmentationTerritory**](ContactContactSegmentationTerritory.md) |  | [optional]
+**segmentation1** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValue**](FieldValue.md) |  | [optional]
+**segmentation2** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValue**](FieldValue.md) |  | [optional]
+**segmentation3** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValue**](FieldValue.md) |  | [optional]
+**segmentation4** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValue**](FieldValue.md) |  | [optional]
+**segmentation5** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValue**](FieldValue.md) |  | [optional]
+**segmentation6** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValue**](FieldValue.md) |  | [optional]
+**territory** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValue**](FieldValue.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

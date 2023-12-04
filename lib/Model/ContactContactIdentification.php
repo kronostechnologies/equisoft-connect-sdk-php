@@ -57,7 +57,7 @@ class ContactContactIdentification implements ModelInterface, ArrayAccess, \Json
       * @var string[]
       */
     protected static $openAPITypes = [
-        'title' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactIdentificationTitle',
+        'title' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue',
         'gender' => 'string',
         'firstName' => 'string',
         'middleName' => 'string',
@@ -348,7 +348,7 @@ class ContactContactIdentification implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets title
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactContactIdentificationTitle|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null
      */
     public function getTitle()
     {
@@ -358,7 +358,7 @@ class ContactContactIdentification implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets title
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactContactIdentificationTitle|null $title title
+     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValue|null $title title
      *
      * @return self
      */

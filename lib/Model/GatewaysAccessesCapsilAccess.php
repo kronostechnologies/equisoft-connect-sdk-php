@@ -60,7 +60,7 @@ class GatewaysAccessesCapsilAccess implements ModelInterface, ArrayAccess, \Json
         'id' => 'int',
         'code' => 'string',
         'userAccountUuid' => 'string',
-        'carrierAdminSystem' => '\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCapsilAccessCarrierAdminSystem'
+        'carrierAdminSystem' => '\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCarrierAdminSystem'
     ];
 
     /**
@@ -397,7 +397,7 @@ class GatewaysAccessesCapsilAccess implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets carrierAdminSystem
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCapsilAccessCarrierAdminSystem|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCarrierAdminSystem|null
      */
     public function getCarrierAdminSystem()
     {
@@ -407,7 +407,7 @@ class GatewaysAccessesCapsilAccess implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets carrierAdminSystem
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCapsilAccessCarrierAdminSystem|null $carrierAdminSystem carrierAdminSystem
+     * @param \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCarrierAdminSystem|null $carrierAdminSystem carrierAdminSystem
      *
      * @return self
      */

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **facebookLink** | **string** | Facebook link | [optional]
 **twitterLink** | **string** | Twitter link | [optional]
 **linkedInLink** | **string** | LinkedIn link | [optional]
-**language** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactContactAdditionalInformationLanguage**](ContactContactAdditionalInformationLanguage.md) |  | [optional]
+**language** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValue**](FieldValue.md) |  | [optional]
 **pictureId** | **int** | Contact&#39;s picture document id | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -64,9 +64,9 @@ class MovementClientBaseUsingFileMovement implements ModelInterface, ArrayAccess
         'scheduledDate' => 'string',
         'processedDate' => 'string',
         'addedDate' => 'string',
-        'addedBy' => '\Equisoft\SDK\EquisoftConnect\Model\MovementClientBaseUsingDistributionListMovementAddedBy',
+        'addedBy' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
         'cancelledDate' => 'string',
-        'cancelledBy' => '\Equisoft\SDK\EquisoftConnect\Model\MovementClientBaseUsingDistributionListMovementCancelledBy',
+        'cancelledBy' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
         'sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
         'sourceUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
         'destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
@@ -663,7 +663,7 @@ class MovementClientBaseUsingFileMovement implements ModelInterface, ArrayAccess
     /**
      * Gets addedBy
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementClientBaseUsingDistributionListMovementAddedBy|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null
      */
     public function getAddedBy()
     {
@@ -673,7 +673,7 @@ class MovementClientBaseUsingFileMovement implements ModelInterface, ArrayAccess
     /**
      * Sets addedBy
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementClientBaseUsingDistributionListMovementAddedBy|null $addedBy addedBy
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null $addedBy addedBy
      *
      * @return self
      */
@@ -731,7 +731,7 @@ class MovementClientBaseUsingFileMovement implements ModelInterface, ArrayAccess
     /**
      * Gets cancelledBy
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementClientBaseUsingDistributionListMovementCancelledBy|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null
      */
     public function getCancelledBy()
     {
@@ -741,7 +741,7 @@ class MovementClientBaseUsingFileMovement implements ModelInterface, ArrayAccess
     /**
      * Sets cancelledBy
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementClientBaseUsingDistributionListMovementCancelledBy|null $cancelledBy cancelledBy
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null $cancelledBy cancelledBy
      *
      * @return self
      */

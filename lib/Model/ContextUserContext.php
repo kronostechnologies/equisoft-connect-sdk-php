@@ -60,7 +60,7 @@ class ContextUserContext implements ModelInterface, ArrayAccess, \JsonSerializab
         'site' => 'string',
         'environment' => 'string',
         'user' => '\Equisoft\SDK\EquisoftConnect\Model\ContextUser',
-        'actor' => '\Equisoft\SDK\EquisoftConnect\Model\ContextUserContextActor',
+        'actor' => '\Equisoft\SDK\EquisoftConnect\Model\ContextActor',
         'equisoftConnect' => '\Equisoft\SDK\EquisoftConnect\Model\ContextEquisoftConnect'
     ];
 
@@ -413,7 +413,7 @@ class ContextUserContext implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets actor
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContextUserContextActor|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContextActor|null
      */
     public function getActor()
     {
@@ -423,7 +423,7 @@ class ContextUserContext implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets actor
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContextUserContextActor|null $actor actor
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContextActor|null $actor actor
      *
      * @return self
      */

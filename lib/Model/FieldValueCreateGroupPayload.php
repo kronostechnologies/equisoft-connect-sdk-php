@@ -58,7 +58,7 @@ class FieldValueCreateGroupPayload implements ModelInterface, ArrayAccess, \Json
       */
     protected static $openAPITypes = [
         'label' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValueLocalizedString',
-        'description' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateGroupPayloadDescription',
+        'description' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValueLocalizedString',
         'name' => 'string'
     ];
 
@@ -336,7 +336,7 @@ class FieldValueCreateGroupPayload implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets description
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateGroupPayloadDescription|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValueLocalizedString|null
      */
     public function getDescription()
     {
@@ -346,7 +346,7 @@ class FieldValueCreateGroupPayload implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets description
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateGroupPayloadDescription|null $description description
+     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValueLocalizedString|null $description description
      *
      * @return self
      */

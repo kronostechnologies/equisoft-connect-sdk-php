@@ -71,9 +71,9 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
         'scheduledDate' => 'string',
         'processedDate' => 'string',
         'addedDate' => 'string',
-        'addedBy' => 'OneOfMovementUser',
+        'addedBy' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
         'cancelledDate' => 'string',
-        'cancelledBy' => 'OneOfMovementUser',
+        'cancelledBy' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
         'sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
         'destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
         'users' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser[]',
@@ -690,7 +690,7 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets addedBy
      *
-     * @return OneOfMovementUser|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null
      */
     public function getAddedBy()
     {
@@ -700,7 +700,7 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets addedBy
      *
-     * @param OneOfMovementUser|null $addedBy Added by.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null $addedBy addedBy
      *
      * @return self
      */
@@ -758,7 +758,7 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets cancelledBy
      *
-     * @return OneOfMovementUser|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null
      */
     public function getCancelledBy()
     {
@@ -768,7 +768,7 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets cancelledBy
      *
-     * @param OneOfMovementUser|null $cancelledBy Cancelled by.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser|null $cancelledBy cancelledBy
      *
      * @return self
      */
