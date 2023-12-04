@@ -127,9 +127,9 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
 		'sourceDistributionList' => false,
 		'datagatewayAccessMappings' => false,
 		'transferOption' => false,
-		'capsilFile' => false,
+		'capsilFile' => true,
 		'univerisFile' => true,
-		'dataphileFile' => false
+		'dataphileFile' => true
     ];
 
     /**
@@ -799,7 +799,14 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
     public function setCapsilFile($capsilFile)
     {
         if (is_null($capsilFile)) {
-            throw new \InvalidArgumentException('non-nullable capsilFile cannot be null');
+            array_push($this->openAPINullablesSetToNull, 'capsilFile');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('capsilFile', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
         $this->container['capsilFile'] = $capsilFile;
 
@@ -860,7 +867,14 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
     public function setDataphileFile($dataphileFile)
     {
         if (is_null($dataphileFile)) {
-            throw new \InvalidArgumentException('non-nullable dataphileFile cannot be null');
+            array_push($this->openAPINullablesSetToNull, 'dataphileFile');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('dataphileFile', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
         $this->container['dataphileFile'] = $dataphileFile;
 
