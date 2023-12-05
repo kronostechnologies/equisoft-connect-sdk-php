@@ -15,12 +15,14 @@ Name | Type | Description | Notes
 **lastUpdateDate** | **\DateTime** | Last update time. As defined by date-time - RFC3339 | [optional]
 **identification** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactContactIdentification**](ContactContactIdentification.md) |  | [optional]
 **additionalInformation** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactContactAdditionalInformation**](ContactContactAdditionalInformation.md) |  | [optional]
-**currentMaritalStatus** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactContactMaritalStatus**](ContactContactMaritalStatus.md) | Contact current marital status | [optional]
+**currentMaritalStatus** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactContactMaritalStatus**](ContactContactMaritalStatus.md) | Contact current marital status, prefer current civil status property | [optional]
+**currentCivilStatus** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactContactMaritalStatus**](ContactContactMaritalStatus.md) | Contact current civil status | [optional]
 **currentOccupation** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactContactOccupation**](ContactContactOccupation.md) | Contact current occupation | [optional]
 **segmentation** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactContactSegmentation**](ContactContactSegmentation.md) |  | [optional]
 **addresses** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactContactAddress[]**](ContactContactAddress.md) | List of contact&#39;s addresses | [optional]
 **phones** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactContactPhone[]**](ContactContactPhone.md) | List of contact&#39;s phones | [optional]
 **emails** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactContactEmail[]**](ContactContactEmail.md) | List of contact&#39;s emails | [optional]
 **websites** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactContactWebsite[]**](ContactContactWebsite.md) | List of contact&#39;s websites | [optional]
+**links** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactLink[]**](ContactLink.md) | List of contact&#39;s links | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

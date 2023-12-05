@@ -69,12 +69,14 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
         'identification' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactIdentification',
         'additionalInformation' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactAdditionalInformation',
         'currentMaritalStatus' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactMaritalStatus',
+        'currentCivilStatus' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactMaritalStatus',
         'currentOccupation' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactOccupation',
         'segmentation' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactSegmentation',
         'addresses' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactAddress[]',
         'phones' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactPhone[]',
         'emails' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactEmail[]',
-        'websites' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactWebsite[]'
+        'websites' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactWebsite[]',
+        'links' => '\Equisoft\SDK\EquisoftConnect\Model\ContactLink[]'
     ];
 
     /**
@@ -97,12 +99,14 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
         'identification' => null,
         'additionalInformation' => null,
         'currentMaritalStatus' => null,
+        'currentCivilStatus' => null,
         'currentOccupation' => null,
         'segmentation' => null,
         'addresses' => null,
         'phones' => null,
         'emails' => null,
-        'websites' => null
+        'websites' => null,
+        'links' => null
     ];
 
     /**
@@ -144,12 +148,14 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
         'identification' => 'identification',
         'additionalInformation' => 'additionalInformation',
         'currentMaritalStatus' => 'currentMaritalStatus',
+        'currentCivilStatus' => 'currentCivilStatus',
         'currentOccupation' => 'currentOccupation',
         'segmentation' => 'segmentation',
         'addresses' => 'addresses',
         'phones' => 'phones',
         'emails' => 'emails',
-        'websites' => 'websites'
+        'websites' => 'websites',
+        'links' => 'links'
     ];
 
     /**
@@ -170,12 +176,14 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
         'identification' => 'setIdentification',
         'additionalInformation' => 'setAdditionalInformation',
         'currentMaritalStatus' => 'setCurrentMaritalStatus',
+        'currentCivilStatus' => 'setCurrentCivilStatus',
         'currentOccupation' => 'setCurrentOccupation',
         'segmentation' => 'setSegmentation',
         'addresses' => 'setAddresses',
         'phones' => 'setPhones',
         'emails' => 'setEmails',
-        'websites' => 'setWebsites'
+        'websites' => 'setWebsites',
+        'links' => 'setLinks'
     ];
 
     /**
@@ -196,12 +204,14 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
         'identification' => 'getIdentification',
         'additionalInformation' => 'getAdditionalInformation',
         'currentMaritalStatus' => 'getCurrentMaritalStatus',
+        'currentCivilStatus' => 'getCurrentCivilStatus',
         'currentOccupation' => 'getCurrentOccupation',
         'segmentation' => 'getSegmentation',
         'addresses' => 'getAddresses',
         'phones' => 'getPhones',
         'emails' => 'getEmails',
-        'websites' => 'getWebsites'
+        'websites' => 'getWebsites',
+        'links' => 'getLinks'
     ];
 
     /**
@@ -273,12 +283,14 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->container['identification'] = $data['identification'] ?? null;
         $this->container['additionalInformation'] = $data['additionalInformation'] ?? null;
         $this->container['currentMaritalStatus'] = $data['currentMaritalStatus'] ?? null;
+        $this->container['currentCivilStatus'] = $data['currentCivilStatus'] ?? null;
         $this->container['currentOccupation'] = $data['currentOccupation'] ?? null;
         $this->container['segmentation'] = $data['segmentation'] ?? null;
         $this->container['addresses'] = $data['addresses'] ?? null;
         $this->container['phones'] = $data['phones'] ?? null;
         $this->container['emails'] = $data['emails'] ?? null;
         $this->container['websites'] = $data['websites'] ?? null;
+        $this->container['links'] = $data['links'] ?? null;
     }
 
     /**
@@ -582,6 +594,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
      * Gets currentMaritalStatus
      *
      * @return \Equisoft\SDK\EquisoftConnect\Model\ContactContactMaritalStatus|null
+     * @deprecated
      */
     public function getCurrentMaritalStatus()
     {
@@ -591,13 +604,38 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets currentMaritalStatus
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactContactMaritalStatus|null $currentMaritalStatus Contact current marital status
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactContactMaritalStatus|null $currentMaritalStatus Contact current marital status, prefer current civil status property
      *
      * @return self
+     * @deprecated
      */
     public function setCurrentMaritalStatus($currentMaritalStatus)
     {
         $this->container['currentMaritalStatus'] = $currentMaritalStatus;
+
+        return $this;
+    }
+
+    /**
+     * Gets currentCivilStatus
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactContactMaritalStatus|null
+     */
+    public function getCurrentCivilStatus()
+    {
+        return $this->container['currentCivilStatus'];
+    }
+
+    /**
+     * Sets currentCivilStatus
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactContactMaritalStatus|null $currentCivilStatus Contact current civil status
+     *
+     * @return self
+     */
+    public function setCurrentCivilStatus($currentCivilStatus)
+    {
+        $this->container['currentCivilStatus'] = $currentCivilStatus;
 
         return $this;
     }
@@ -742,6 +780,30 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setWebsites($websites)
     {
         $this->container['websites'] = $websites;
+
+        return $this;
+    }
+
+    /**
+     * Gets links
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactLink[]|null
+     */
+    public function getLinks()
+    {
+        return $this->container['links'];
+    }
+
+    /**
+     * Sets links
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactLink[]|null $links List of contact's links
+     *
+     * @return self
+     */
+    public function setLinks($links)
+    {
+        $this->container['links'] = $links;
 
         return $this;
     }
