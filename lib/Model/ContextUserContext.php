@@ -324,7 +324,7 @@ class ContextUserContext implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets actor
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContextActor|null $actor Actor
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContextActor|null $actor actor
      *
      * @return self
      */
