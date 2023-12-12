@@ -1,23 +1,23 @@
 # Equisoft\SDK\EquisoftConnect\FieldValuesApi
 
-All URIs are relative to http://localhost, except if the operation defines another base path.
+All URIs are relative to http://localhost.
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**createGroup()**](FieldValuesApi.md#createGroup) | **POST** /crm/api/v1/fields/{fieldName}/groups | Create a group |
-| [**createGroupValue()**](FieldValuesApi.md#createGroupValue) | **POST** /crm/api/v1/fields/{fieldName}/groups/{id}/values | Create a group value |
-| [**createValue()**](FieldValuesApi.md#createValue) | **POST** /crm/api/v1/fields/{fieldName}/values | Create a value |
-| [**deleteGroup()**](FieldValuesApi.md#deleteGroup) | **DELETE** /crm/api/v1/fields/{fieldName}/groups/{id} | Delete single group for a specific field name and group id |
-| [**deleteValue()**](FieldValuesApi.md#deleteValue) | **DELETE** /crm/api/v1/fields/{fieldName}/values/{id} | Delete single value for a specific field name and value id |
-| [**getGroup()**](FieldValuesApi.md#getGroup) | **GET** /crm/api/v1/fields/{fieldName}/groups/{id} | Get single group for a specific field name and group id |
-| [**getValue()**](FieldValuesApi.md#getValue) | **GET** /crm/api/v1/fields/{fieldName}/values/{id} | Get single value for a specific field name and value id |
-| [**linkValueGroup()**](FieldValuesApi.md#linkValueGroup) | **PUT** /crm/api/v1/fields/{fieldName}/values/{id}/groups | Link a value to a group |
-| [**listFields()**](FieldValuesApi.md#listFields) | **GET** /crm/api/v1/fields | List fields with values list (values domain). |
-| [**listGroupValues()**](FieldValuesApi.md#listGroupValues) | **GET** /crm/api/v1/fields/{fieldName}/groups/{id}/values | List values for a specific field name and group |
-| [**listGroups()**](FieldValuesApi.md#listGroups) | **GET** /crm/api/v1/fields/{fieldName}/groups | List groups for a specific field name |
-| [**listValues()**](FieldValuesApi.md#listValues) | **GET** /crm/api/v1/fields/{fieldName}/values | List values for a specific field name |
-| [**updateGroup()**](FieldValuesApi.md#updateGroup) | **PUT** /crm/api/v1/fields/{fieldName}/groups/{id} | Update a group |
-| [**updateValue()**](FieldValuesApi.md#updateValue) | **PUT** /crm/api/v1/fields/{fieldName}/values/{id} | Update a value |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**createGroup()**](FieldValuesApi.md#createGroup) | **POST** /crm/api/v1/fields/{fieldName}/groups | Create a group
+[**createGroupValue()**](FieldValuesApi.md#createGroupValue) | **POST** /crm/api/v1/fields/{fieldName}/groups/{id}/values | Create a group value
+[**createValue()**](FieldValuesApi.md#createValue) | **POST** /crm/api/v1/fields/{fieldName}/values | Create a value
+[**deleteGroup()**](FieldValuesApi.md#deleteGroup) | **DELETE** /crm/api/v1/fields/{fieldName}/groups/{id} | Delete single group for a specific field name and group id
+[**deleteValue()**](FieldValuesApi.md#deleteValue) | **DELETE** /crm/api/v1/fields/{fieldName}/values/{id} | Delete single value for a specific field name and value id
+[**getGroup()**](FieldValuesApi.md#getGroup) | **GET** /crm/api/v1/fields/{fieldName}/groups/{id} | Get single group for a specific field name and group id
+[**getValue()**](FieldValuesApi.md#getValue) | **GET** /crm/api/v1/fields/{fieldName}/values/{id} | Get single value for a specific field name and value id
+[**linkValueGroup()**](FieldValuesApi.md#linkValueGroup) | **PUT** /crm/api/v1/fields/{fieldName}/values/{id}/groups | Link a value to a group
+[**listFields()**](FieldValuesApi.md#listFields) | **GET** /crm/api/v1/fields | List fields with values list (values domain).
+[**listGroupValues()**](FieldValuesApi.md#listGroupValues) | **GET** /crm/api/v1/fields/{fieldName}/groups/{id}/values | List values for a specific field name and group
+[**listGroups()**](FieldValuesApi.md#listGroups) | **GET** /crm/api/v1/fields/{fieldName}/groups | List groups for a specific field name
+[**listValues()**](FieldValuesApi.md#listValues) | **GET** /crm/api/v1/fields/{fieldName}/values | List values for a specific field name
+[**updateGroup()**](FieldValuesApi.md#updateGroup) | **PUT** /crm/api/v1/fields/{fieldName}/groups/{id} | Update a group
+[**updateValue()**](FieldValuesApi.md#updateValue) | **PUT** /crm/api/v1/fields/{fieldName}/values/{id} | Update a value
 
 
 ## `createGroup()`
@@ -58,10 +58,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **fieldName** | **string**| Field unique identifier. | |
-| **fieldValueCreateGroupPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateGroupPayload**](../Model/FieldValueCreateGroupPayload.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fieldName** | **string**| Field unique identifier. |
+ **fieldValueCreateGroupPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateGroupPayload**](../Model/FieldValueCreateGroupPayload.md)|  |
 
 ### Return type
 
@@ -119,11 +119,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **fieldName** | **string**| Field unique identifier. | |
-| **id** | **int**| group unique identifier. | |
-| **fieldValueCreateValuePayload** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateValuePayload**](../Model/FieldValueCreateValuePayload.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fieldName** | **string**| Field unique identifier. |
+ **id** | **int**| group unique identifier. |
+ **fieldValueCreateValuePayload** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateValuePayload**](../Model/FieldValueCreateValuePayload.md)|  |
 
 ### Return type
 
@@ -180,10 +180,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **fieldName** | **string**| Field unique identifier. | |
-| **fieldValueCreateValuePayload** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateValuePayload**](../Model/FieldValueCreateValuePayload.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fieldName** | **string**| Field unique identifier. |
+ **fieldValueCreateValuePayload** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateValuePayload**](../Model/FieldValueCreateValuePayload.md)|  |
 
 ### Return type
 
@@ -239,10 +239,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **fieldName** | **string**| Field unique identifier. | |
-| **id** | **int**| group unique identifier. | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fieldName** | **string**| Field unique identifier. |
+ **id** | **int**| group unique identifier. |
 
 ### Return type
 
@@ -298,10 +298,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **fieldName** | **string**| Field unique identifier. | |
-| **id** | **int**| value unique identifier. | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fieldName** | **string**| Field unique identifier. |
+ **id** | **int**| value unique identifier. |
 
 ### Return type
 
@@ -358,10 +358,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **fieldName** | **string**| Field unique identifier. | |
-| **id** | **int**| group unique identifier. | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fieldName** | **string**| Field unique identifier. |
+ **id** | **int**| group unique identifier. |
 
 ### Return type
 
@@ -418,10 +418,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **fieldName** | **string**| Field unique identifier. | |
-| **id** | **int**| value unique identifier. | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fieldName** | **string**| Field unique identifier. |
+ **id** | **int**| value unique identifier. |
 
 ### Return type
 
@@ -478,11 +478,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **fieldName** | **string**| Field unique identifier. | |
-| **id** | **int**| value unique identifier. | |
-| **fieldValueLinkGroupValuePayload** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValueLinkGroupValuePayload**](../Model/FieldValueLinkGroupValuePayload.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fieldName** | **string**| Field unique identifier. |
+ **id** | **int**| value unique identifier. |
+ **fieldValueLinkGroupValuePayload** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValueLinkGroupValuePayload**](../Model/FieldValueLinkGroupValuePayload.md)|  |
 
 ### Return type
 
@@ -594,10 +594,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **fieldName** | **string**| Field unique identifier. | |
-| **id** | **int**| group unique identifier. | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fieldName** | **string**| Field unique identifier. |
+ **id** | **int**| group unique identifier. |
 
 ### Return type
 
@@ -654,10 +654,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **fieldName** | **string**| Field unique identifier. | |
-| **systemName** | **string**| Value unique identifier. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fieldName** | **string**| Field unique identifier. |
+ **systemName** | **string**| Value unique identifier. | [optional]
 
 ### Return type
 
@@ -715,11 +715,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **fieldName** | **string**| Field unique identifier. | |
-| **systemName** | **string**| Value unique identifier. | [optional] |
-| **privateValue** | **bool**| Private value only. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fieldName** | **string**| Field unique identifier. |
+ **systemName** | **string**| Value unique identifier. | [optional]
+ **privateValue** | **bool**| Private value only. | [optional]
 
 ### Return type
 
@@ -777,11 +777,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **fieldName** | **string**| Field unique identifier. | |
-| **id** | **int**| group unique identifier. | |
-| **fieldValueUpdateGroupPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValueUpdateGroupPayload**](../Model/FieldValueUpdateGroupPayload.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fieldName** | **string**| Field unique identifier. |
+ **id** | **int**| group unique identifier. |
+ **fieldValueUpdateGroupPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValueUpdateGroupPayload**](../Model/FieldValueUpdateGroupPayload.md)|  |
 
 ### Return type
 
@@ -839,11 +839,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **fieldName** | **string**| Field unique identifier. | |
-| **id** | **int**| value unique identifier. | |
-| **fieldValueUpdateValuePayload** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValueUpdateValuePayload**](../Model/FieldValueUpdateValuePayload.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fieldName** | **string**| Field unique identifier. |
+ **id** | **int**| value unique identifier. |
+ **fieldValueUpdateValuePayload** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValueUpdateValuePayload**](../Model/FieldValueUpdateValuePayload.md)|  |
 
 ### Return type
 

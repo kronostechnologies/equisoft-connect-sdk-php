@@ -1,10 +1,10 @@
 # Equisoft\SDK\EquisoftConnect\RemoteAccountApi
 
-All URIs are relative to http://localhost, except if the operation defines another base path.
+All URIs are relative to http://localhost.
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**getMailAccountAccessRights()**](RemoteAccountApi.md#getMailAccountAccessRights) | **GET** /crm/api/v1/mailAccounts/{remoteAccountId}/accessRights | Return the mail account access rights granted to the currently connected user account. |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**getMailAccountAccessRights()**](RemoteAccountApi.md#getMailAccountAccessRights) | **GET** /crm/api/v1/mailAccounts/{remoteAccountId}/accessRights | Return the mail account access rights granted to the currently connected user account.
 
 
 ## `getMailAccountAccessRights()`
@@ -44,9 +44,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **remoteAccountId** | **string**| Remote account identifier. | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **remoteAccountId** | **string**| Remote account identifier. |
 
 ### Return type
 
