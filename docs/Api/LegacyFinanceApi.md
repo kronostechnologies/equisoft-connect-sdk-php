@@ -1,17 +1,17 @@
 # Equisoft\SDK\EquisoftConnect\LegacyFinanceApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**legacyFinanceAddContact()**](LegacyFinanceApi.md#legacyFinanceAddContact) | **POST** /apps/api/kronos.finance.addContact | Create a new contact.
-[**legacyFinanceGetAccountStatement()**](LegacyFinanceApi.md#legacyFinanceGetAccountStatement) | **GET** /apps/api/kronos.finance.getAccountStatement | Get Account Statement information for a contact.
-[**legacyFinanceGetAccountStatementByExternalId()**](LegacyFinanceApi.md#legacyFinanceGetAccountStatementByExternalId) | **GET** /apps/api/kronos.finance.getAccountStatementByExternalId | Get Account Statement information for a contact.
-[**legacyFinanceGetAssetDetail()**](LegacyFinanceApi.md#legacyFinanceGetAssetDetail) | **GET** /apps/api/kronos.finance.getAssetDetail | Get asset detail with transactions.
-[**legacyFinanceGetContact()**](LegacyFinanceApi.md#legacyFinanceGetContact) | **GET** /apps/api/kronos.finance.getContact | Get complete data for a contact.
-[**legacyFinanceGetContactList()**](LegacyFinanceApi.md#legacyFinanceGetContactList) | **GET** /apps/api/kronos.finance.getContactList | Get a list of all contacts.
-[**legacyFinanceGetLiabilities()**](LegacyFinanceApi.md#legacyFinanceGetLiabilities) | **GET** /apps/api/kronos.finance.getLiabilities | Get Liabilities information for a contact.
-[**legacyFinanceUpdateContact()**](LegacyFinanceApi.md#legacyFinanceUpdateContact) | **POST** /apps/api/kronos.finance.updateContact | Update a contact.
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**legacyFinanceAddContact()**](LegacyFinanceApi.md#legacyFinanceAddContact) | **POST** /apps/api/kronos.finance.addContact | Create a new contact. |
+| [**legacyFinanceGetAccountStatement()**](LegacyFinanceApi.md#legacyFinanceGetAccountStatement) | **GET** /apps/api/kronos.finance.getAccountStatement | Get Account Statement information for a contact. |
+| [**legacyFinanceGetAccountStatementByExternalId()**](LegacyFinanceApi.md#legacyFinanceGetAccountStatementByExternalId) | **GET** /apps/api/kronos.finance.getAccountStatementByExternalId | Get Account Statement information for a contact. |
+| [**legacyFinanceGetAssetDetail()**](LegacyFinanceApi.md#legacyFinanceGetAssetDetail) | **GET** /apps/api/kronos.finance.getAssetDetail | Get asset detail with transactions. |
+| [**legacyFinanceGetContact()**](LegacyFinanceApi.md#legacyFinanceGetContact) | **GET** /apps/api/kronos.finance.getContact | Get complete data for a contact. |
+| [**legacyFinanceGetContactList()**](LegacyFinanceApi.md#legacyFinanceGetContactList) | **GET** /apps/api/kronos.finance.getContactList | Get a list of all contacts. |
+| [**legacyFinanceGetLiabilities()**](LegacyFinanceApi.md#legacyFinanceGetLiabilities) | **GET** /apps/api/kronos.finance.getLiabilities | Get Liabilities information for a contact. |
+| [**legacyFinanceUpdateContact()**](LegacyFinanceApi.md#legacyFinanceUpdateContact) | **POST** /apps/api/kronos.finance.updateContact | Update a contact. |
 
 
 ## `legacyFinanceAddContact()`
@@ -51,9 +51,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **kronosFinanceContactPayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\KronosFinanceContactPayloadRequest**](../Model/KronosFinanceContactPayloadRequest.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **kronosFinanceContactPayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\KronosFinanceContactPayloadRequest**](../Model/KronosFinanceContactPayloadRequest.md)|  | |
 
 ### Return type
 
@@ -111,11 +111,11 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **contactId** | **string**| Contact identifier. |
- **includeUnmanagedAssets** | **bool**| Include unmagned assets. Default: false. | [optional]
- **fetchOwnedAndInsuredPolicies** | **bool**| Fetch policies by both owner and insured. Default: false. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contactId** | **string**| Contact identifier. | |
+| **includeUnmanagedAssets** | **bool**| Include unmagned assets. Default: false. | [optional] |
+| **fetchOwnedAndInsuredPolicies** | **bool**| Fetch policies by both owner and insured. Default: false. | [optional] |
 
 ### Return type
 
@@ -172,10 +172,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **externalId** | **string**| External id for the contact in the current consumer. |
- **includeUnmanagedAssets** | **bool**| Include unmagned assets. Default: false. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **externalId** | **string**| External id for the contact in the current consumer. | |
+| **includeUnmanagedAssets** | **bool**| Include unmagned assets. Default: false. | [optional] |
 
 ### Return type
 
@@ -231,9 +231,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **assetId** | **string**| Identifier of the account product. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **assetId** | **string**| Identifier of the account product. | |
 
 ### Return type
 
@@ -289,9 +289,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Contact identifier. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| Contact identifier. | |
 
 ### Return type
 
@@ -350,10 +350,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **legacyContactContactGetListPayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyContactContactGetListPayloadRequest**](../Model/LegacyContactContactGetListPayloadRequest.md)|  |
- **lastModifiedTime** | **string**| To Fetch all documents, which got modified / created after specified date. If the value \&quot;auto\&quot; is used, the last access date to this method will be used. Set the value to \&quot;reset\&quot; to reset the last access date. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **legacyContactContactGetListPayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyContactContactGetListPayloadRequest**](../Model/LegacyContactContactGetListPayloadRequest.md)|  | |
+| **lastModifiedTime** | **string**| To Fetch all documents, which got modified / created after specified date. If the value \&quot;auto\&quot; is used, the last access date to this method will be used. Set the value to \&quot;reset\&quot; to reset the last access date. | [optional] |
 
 ### Return type
 
@@ -409,9 +409,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **contactId** | **string**| Contact identifier. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contactId** | **string**| Contact identifier. | |
 
 ### Return type
 
@@ -467,9 +467,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **kronosFinanceContactPayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\KronosFinanceContactPayloadRequest**](../Model/KronosFinanceContactPayloadRequest.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **kronosFinanceContactPayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\KronosFinanceContactPayloadRequest**](../Model/KronosFinanceContactPayloadRequest.md)|  | |
 
 ### Return type
 

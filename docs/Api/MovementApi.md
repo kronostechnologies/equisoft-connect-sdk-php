@@ -1,14 +1,14 @@
 # Equisoft\SDK\EquisoftConnect\MovementApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**addMovement()**](MovementApi.md#addMovement) | **POST** /crm/api/v1/movements | Add a movement
-[**cancelMovement()**](MovementApi.md#cancelMovement) | **POST** /crm/api/v1/movements/{movementId}/cancel | Cancel a movement.
-[**deleteMovement()**](MovementApi.md#deleteMovement) | **DELETE** /crm/api/v1/movements/{movementId} | Delete a movement.
-[**getMovementStatistic()**](MovementApi.md#getMovementStatistic) | **GET** /crm/api/v1/movements/statistic | Get movement statistic
-[**listMovements()**](MovementApi.md#listMovements) | **GET** /crm/api/v1/movements | List all movements
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**addMovement()**](MovementApi.md#addMovement) | **POST** /crm/api/v1/movements | Add a movement |
+| [**cancelMovement()**](MovementApi.md#cancelMovement) | **POST** /crm/api/v1/movements/{movementId}/cancel | Cancel a movement. |
+| [**deleteMovement()**](MovementApi.md#deleteMovement) | **DELETE** /crm/api/v1/movements/{movementId} | Delete a movement. |
+| [**getMovementStatistic()**](MovementApi.md#getMovementStatistic) | **GET** /crm/api/v1/movements/statistic | Get movement statistic |
+| [**listMovements()**](MovementApi.md#listMovements) | **GET** /crm/api/v1/movements | List all movements |
 
 
 ## `addMovement()`
@@ -48,9 +48,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **movementMovementPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementMovementPayload**](../Model/MovementMovementPayload.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **movementMovementPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementMovementPayload**](../Model/MovementMovementPayload.md)|  | |
 
 ### Return type
 
@@ -105,9 +105,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **movementId** | **int**| Movement identifier |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **movementId** | **int**| Movement identifier | |
 
 ### Return type
 
@@ -162,9 +162,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **movementId** | **int**| Movement identifier |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **movementId** | **int**| Movement identifier | |
 
 ### Return type
 
@@ -220,9 +220,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **movementMovementPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementMovementPayload**](../Model/MovementMovementPayload.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **movementMovementPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementMovementPayload**](../Model/MovementMovementPayload.md)|  | |
 
 ### Return type
 
