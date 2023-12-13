@@ -1,18 +1,18 @@
 # Equisoft\SDK\EquisoftConnect\LegacyContactApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**legacyContactAddContact()**](LegacyContactApi.md#legacyContactAddContact) | **POST** /apps/api/kronos.contact.add | Create a new contact.
-[**legacyContactDeleteContact()**](LegacyContactApi.md#legacyContactDeleteContact) | **POST** /apps/api/kronos.contact.delete | Delete a contact.
-[**legacyContactGetContact()**](LegacyContactApi.md#legacyContactGetContact) | **GET** /apps/api/kronos.contact.get | Get complete record for a contact.
-[**legacyContactGetContactAccessRights()**](LegacyContactApi.md#legacyContactGetContactAccessRights) | **GET** /apps/api/kronos.contact.getAccessRights | Get access rights for a contact.
-[**legacyContactGetContactAccessRightsByExternalId()**](LegacyContactApi.md#legacyContactGetContactAccessRightsByExternalId) | **GET** /apps/api/kronos.contact.getAccessRightsByExternalId | Get access rights for a contact using external id.
-[**legacyContactGetContactList()**](LegacyContactApi.md#legacyContactGetContactList) | **GET** /apps/api/kronos.contact.getList | Get a list of all contacts.
-[**legacyContactGetDatagatewayUniverisContact()**](LegacyContactApi.md#legacyContactGetDatagatewayUniverisContact) | **GET** /apps/api/kronos.contact.getDatagatewayUniverisContact | Get access rights for a contact using external key.
-[**legacyContactPatchContact()**](LegacyContactApi.md#legacyContactPatchContact) | **POST** /apps/api/kronos.contact.patchContact | Patch a contact.
-[**legacyContactUpdateContact()**](LegacyContactApi.md#legacyContactUpdateContact) | **POST** /apps/api/kronos.contact.update | Update a contact.
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**legacyContactAddContact()**](LegacyContactApi.md#legacyContactAddContact) | **POST** /apps/api/kronos.contact.add | Create a new contact. |
+| [**legacyContactDeleteContact()**](LegacyContactApi.md#legacyContactDeleteContact) | **POST** /apps/api/kronos.contact.delete | Delete a contact. |
+| [**legacyContactGetContact()**](LegacyContactApi.md#legacyContactGetContact) | **GET** /apps/api/kronos.contact.get | Get complete record for a contact. |
+| [**legacyContactGetContactAccessRights()**](LegacyContactApi.md#legacyContactGetContactAccessRights) | **GET** /apps/api/kronos.contact.getAccessRights | Get access rights for a contact. |
+| [**legacyContactGetContactAccessRightsByExternalId()**](LegacyContactApi.md#legacyContactGetContactAccessRightsByExternalId) | **GET** /apps/api/kronos.contact.getAccessRightsByExternalId | Get access rights for a contact using external id. |
+| [**legacyContactGetContactList()**](LegacyContactApi.md#legacyContactGetContactList) | **GET** /apps/api/kronos.contact.getList | Get a list of all contacts. |
+| [**legacyContactGetDatagatewayUniverisContact()**](LegacyContactApi.md#legacyContactGetDatagatewayUniverisContact) | **GET** /apps/api/kronos.contact.getDatagatewayUniverisContact | Get access rights for a contact using external key. |
+| [**legacyContactPatchContact()**](LegacyContactApi.md#legacyContactPatchContact) | **POST** /apps/api/kronos.contact.patchContact | Patch a contact. |
+| [**legacyContactUpdateContact()**](LegacyContactApi.md#legacyContactUpdateContact) | **POST** /apps/api/kronos.contact.update | Update a contact. |
 
 
 ## `legacyContactAddContact()`
@@ -52,9 +52,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **legacyContactContactPayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyContactContactPayloadRequest**](../Model/LegacyContactContactPayloadRequest.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **legacyContactContactPayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyContactContactPayloadRequest**](../Model/LegacyContactContactPayloadRequest.md)|  | |
 
 ### Return type
 
@@ -110,9 +110,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Contact identifier. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| Contact identifier. | |
 
 ### Return type
 
@@ -168,9 +168,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Contact identifier. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| Contact identifier. | |
 
 ### Return type
 
@@ -226,9 +226,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Contact identifier. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **id** | **string**| Contact identifier. | |
 
 ### Return type
 
@@ -284,9 +284,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **externalId** | **string**| External id for the contact in the current consumer. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **externalId** | **string**| External id for the contact in the current consumer. | |
 
 ### Return type
 
@@ -345,10 +345,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **legacyContactContactGetListPayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyContactContactGetListPayloadRequest**](../Model/LegacyContactContactGetListPayloadRequest.md)|  |
- **lastModifiedTime** | **string**| To Fetch all documents, which got modified / created after specified date. If the value \&quot;auto\&quot; is used, the last access date to this method will be used. Set the value to \&quot;reset\&quot; to reset the last access date. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **legacyContactContactGetListPayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyContactContactGetListPayloadRequest**](../Model/LegacyContactContactGetListPayloadRequest.md)|  | |
+| **lastModifiedTime** | **string**| To Fetch all documents, which got modified / created after specified date. If the value \&quot;auto\&quot; is used, the last access date to this method will be used. Set the value to \&quot;reset\&quot; to reset the last access date. | [optional] |
 
 ### Return type
 
@@ -404,9 +404,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **externalKey** | **string**| External key for the contact in the current consumer. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **externalKey** | **string**| External key for the contact in the current consumer. | |
 
 ### Return type
 
@@ -463,10 +463,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **contactId** | **string**| Contact identifier. |
- **legacyContactPatchContactPayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyContactPatchContactPayloadRequest**](../Model/LegacyContactPatchContactPayloadRequest.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contactId** | **string**| Contact identifier. | |
+| **legacyContactPatchContactPayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyContactPatchContactPayloadRequest**](../Model/LegacyContactPatchContactPayloadRequest.md)|  | |
 
 ### Return type
 
@@ -522,9 +522,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **legacyContactContactPayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyContactContactPayloadRequest**](../Model/LegacyContactContactPayloadRequest.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **legacyContactContactPayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyContactContactPayloadRequest**](../Model/LegacyContactContactPayloadRequest.md)|  | |
 
 ### Return type
 

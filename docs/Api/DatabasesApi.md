@@ -1,15 +1,15 @@
 # Equisoft\SDK\EquisoftConnect\DatabasesApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getDatabase()**](DatabasesApi.md#getDatabase) | **GET** /crm/api/v1/databases/{databaseUuid} | Get a database
-[**getUser()**](DatabasesApi.md#getUser) | **GET** /crm/api/v1/databases/{databaseUuid}/users/{userId} | Get a database&#39;s user
-[**listDatabases()**](DatabasesApi.md#listDatabases) | **GET** /crm/api/v1/databases | List all databases
-[**listUsers()**](DatabasesApi.md#listUsers) | **GET** /crm/api/v1/databases/{databaseUuid}/users | List database&#39;s users
-[**updateState()**](DatabasesApi.md#updateState) | **PUT** /crm/api/v1/databases/{databaseUuid}/state | Update a database&#39;s state
-[**updateUser()**](DatabasesApi.md#updateUser) | **PATCH** /crm/api/v1/databases/{databaseUuid}/users/{userId} | Update a database&#39;s user
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**getDatabase()**](DatabasesApi.md#getDatabase) | **GET** /crm/api/v1/databases/{databaseUuid} | Get a database |
+| [**getUser()**](DatabasesApi.md#getUser) | **GET** /crm/api/v1/databases/{databaseUuid}/users/{userId} | Get a database&#39;s user |
+| [**listDatabases()**](DatabasesApi.md#listDatabases) | **GET** /crm/api/v1/databases | List all databases |
+| [**listUsers()**](DatabasesApi.md#listUsers) | **GET** /crm/api/v1/databases/{databaseUuid}/users | List database&#39;s users |
+| [**updateState()**](DatabasesApi.md#updateState) | **PUT** /crm/api/v1/databases/{databaseUuid}/state | Update a database&#39;s state |
+| [**updateUser()**](DatabasesApi.md#updateUser) | **PATCH** /crm/api/v1/databases/{databaseUuid}/users/{userId} | Update a database&#39;s user |
 
 
 ## `getDatabase()`
@@ -49,9 +49,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **databaseUuid** | **string**| Database unique identifier. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **databaseUuid** | **string**| Database unique identifier. | |
 
 ### Return type
 
@@ -108,10 +108,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **databaseUuid** | **string**| Database unique identifier. |
- **userId** | **int**| User identifier. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **databaseUuid** | **string**| Database unique identifier. | |
+| **userId** | **int**| User identifier. | |
 
 ### Return type
 
@@ -168,10 +168,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organizationUuid** | **string**| Organization unique identifier. | [optional]
- **databaseName** | **string**| Database name. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **organizationUuid** | **string**| Organization unique identifier. | [optional] |
+| **databaseName** | **string**| Database name. | [optional] |
 
 ### Return type
 
@@ -227,9 +227,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **databaseUuid** | **string**| Database unique identifier. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **databaseUuid** | **string**| Database unique identifier. | |
 
 ### Return type
 
@@ -285,10 +285,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **databaseUuid** | **string**| Database unique identifier. |
- **databaseUpdateStatePayload** | [**\Equisoft\SDK\EquisoftConnect\Model\DatabaseUpdateStatePayload**](../Model/DatabaseUpdateStatePayload.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **databaseUuid** | **string**| Database unique identifier. | |
+| **databaseUpdateStatePayload** | [**\Equisoft\SDK\EquisoftConnect\Model\DatabaseUpdateStatePayload**](../Model/DatabaseUpdateStatePayload.md)|  | |
 
 ### Return type
 
@@ -345,11 +345,11 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **databaseUuid** | **string**| Database unique identifier. |
- **userId** | **int**| User identifier. |
- **usersUpdateUserPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\UsersUpdateUserPayload**](../Model/UsersUpdateUserPayload.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **databaseUuid** | **string**| Database unique identifier. | |
+| **userId** | **int**| User identifier. | |
+| **usersUpdateUserPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\UsersUpdateUserPayload**](../Model/UsersUpdateUserPayload.md)|  | |
 
 ### Return type
 
