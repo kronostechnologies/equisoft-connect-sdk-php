@@ -1,10 +1,10 @@
 # Equisoft\SDK\EquisoftConnect\LegacyParametersApi
 
-All URIs are relative to http://localhost, except if the operation defines another base path.
+All URIs are relative to http://localhost.
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**legacyParametersGet()**](LegacyParametersApi.md#legacyParametersGet) | **GET** /apps/api/kronos.parameters.get | Get the system parameters. |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**legacyParametersGet()**](LegacyParametersApi.md#legacyParametersGet) | **GET** /apps/api/kronos.parameters.get | Get the system parameters.
 
 
 ## `legacyParametersGet()`

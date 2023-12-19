@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**linkRole** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValue**](FieldValue.md) |  | [optional]
+**linkRole** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValue**](FieldValue.md) | Link role | [optional]
 **uuid** | **string** | Link participant unique identifier | [optional]
 **displayName** | **string** | Link participant display name | [optional]
 **firstName** | **string** | Link participant first name | [optional]

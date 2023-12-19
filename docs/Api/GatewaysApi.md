@@ -1,26 +1,26 @@
 # Equisoft\SDK\EquisoftConnect\GatewaysApi
 
-All URIs are relative to http://localhost, except if the operation defines another base path.
+All URIs are relative to http://localhost.
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**createCapsilAccess()**](GatewaysApi.md#createCapsilAccess) | **POST** /crm/api/v1/gateways/capsil/accesses | Create a Capsil Access |
-| [**createEquisoftAnalyzeAccess()**](GatewaysApi.md#createEquisoftAnalyzeAccess) | **POST** /crm/api/v1/gateways/equisoftAnalyze/accesses |  |
-| [**deleteCapsilAccess()**](GatewaysApi.md#deleteCapsilAccess) | **DELETE** /crm/api/v1/gateways/capsil/accesses/{accessId} | Delete Capsil access |
-| [**deleteEquisoftAnalyzeAccess()**](GatewaysApi.md#deleteEquisoftAnalyzeAccess) | **DELETE** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} |  |
-| [**gatewayAdminLogin()**](GatewaysApi.md#gatewayAdminLogin) | **POST** /crm/api/v1/gateways/credentials-validation/admin-credentials/login |  |
-| [**getCapsilAccess()**](GatewaysApi.md#getCapsilAccess) | **GET** /crm/api/v1/gateways/capsil/accesses/{accessId} | Get Capsil access |
-| [**listAssetBookCredentials()**](GatewaysApi.md#listAssetBookCredentials) | **GET** /crm/api/v1/gateways/assetbook/credentials |  |
-| [**listCapsilAccesses()**](GatewaysApi.md#listCapsilAccesses) | **GET** /crm/api/v1/gateways/capsil/accesses | List capsil accesses |
-| [**listCapsilCarrierAdminSystems()**](GatewaysApi.md#listCapsilCarrierAdminSystems) | **GET** /crm/api/v1/gateways/capsil/carrierAdminSystems | List carrier admin systems |
-| [**listCredentials()**](GatewaysApi.md#listCredentials) | **GET** /crm/api/v1/gateways/credentials-validation/{gatewayId}/credentials/{status} |  |
-| [**listEquisoftAnalyzeAccesses()**](GatewaysApi.md#listEquisoftAnalyzeAccesses) | **GET** /crm/api/v1/gateways/equisoftAnalyze/accesses |  |
-| [**listGatewayConfigurations()**](GatewaysApi.md#listGatewayConfigurations) | **GET** /crm/api/v1/gateways/generic/{gatewayName}/configuration |  |
-| [**listGateways()**](GatewaysApi.md#listGateways) | **GET** /crm/api/v1/gateways/credentials-validation |  |
-| [**listGenericCredentials()**](GatewaysApi.md#listGenericCredentials) | **GET** /crm/api/v1/gateways/generic/{gatewayName}/credentials |  |
-| [**patchEquisoftAnalyzeAccess()**](GatewaysApi.md#patchEquisoftAnalyzeAccess) | **PATCH** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} |  |
-| [**updateCapsilAccess()**](GatewaysApi.md#updateCapsilAccess) | **PATCH** /crm/api/v1/gateways/capsil/accesses/{accessId} | Update a Capsil Access |
-| [**updateCredentials()**](GatewaysApi.md#updateCredentials) | **PUT** /crm/api/v1/gateways/credentials-validation/{gatewayId}/credentials/{status} |  |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**createCapsilAccess()**](GatewaysApi.md#createCapsilAccess) | **POST** /crm/api/v1/gateways/capsil/accesses | Create a Capsil Access
+[**createEquisoftAnalyzeAccess()**](GatewaysApi.md#createEquisoftAnalyzeAccess) | **POST** /crm/api/v1/gateways/equisoftAnalyze/accesses | 
+[**deleteCapsilAccess()**](GatewaysApi.md#deleteCapsilAccess) | **DELETE** /crm/api/v1/gateways/capsil/accesses/{accessId} | Delete Capsil access
+[**deleteEquisoftAnalyzeAccess()**](GatewaysApi.md#deleteEquisoftAnalyzeAccess) | **DELETE** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} | 
+[**gatewayAdminLogin()**](GatewaysApi.md#gatewayAdminLogin) | **POST** /crm/api/v1/gateways/credentials-validation/admin-credentials/login | 
+[**getCapsilAccess()**](GatewaysApi.md#getCapsilAccess) | **GET** /crm/api/v1/gateways/capsil/accesses/{accessId} | Get Capsil access
+[**listAssetBookCredentials()**](GatewaysApi.md#listAssetBookCredentials) | **GET** /crm/api/v1/gateways/assetbook/credentials | 
+[**listCapsilAccesses()**](GatewaysApi.md#listCapsilAccesses) | **GET** /crm/api/v1/gateways/capsil/accesses | List capsil accesses
+[**listCapsilCarrierAdminSystems()**](GatewaysApi.md#listCapsilCarrierAdminSystems) | **GET** /crm/api/v1/gateways/capsil/carrierAdminSystems | List carrier admin systems
+[**listCredentials()**](GatewaysApi.md#listCredentials) | **GET** /crm/api/v1/gateways/credentials-validation/{gatewayId}/credentials/{status} | 
+[**listEquisoftAnalyzeAccesses()**](GatewaysApi.md#listEquisoftAnalyzeAccesses) | **GET** /crm/api/v1/gateways/equisoftAnalyze/accesses | 
+[**listGatewayConfigurations()**](GatewaysApi.md#listGatewayConfigurations) | **GET** /crm/api/v1/gateways/generic/{gatewayName}/configuration | 
+[**listGateways()**](GatewaysApi.md#listGateways) | **GET** /crm/api/v1/gateways/credentials-validation | 
+[**listGenericCredentials()**](GatewaysApi.md#listGenericCredentials) | **GET** /crm/api/v1/gateways/generic/{gatewayName}/credentials | 
+[**patchEquisoftAnalyzeAccess()**](GatewaysApi.md#patchEquisoftAnalyzeAccess) | **PATCH** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} | 
+[**updateCapsilAccess()**](GatewaysApi.md#updateCapsilAccess) | **PATCH** /crm/api/v1/gateways/capsil/accesses/{accessId} | Update a Capsil Access
+[**updateCredentials()**](GatewaysApi.md#updateCredentials) | **PUT** /crm/api/v1/gateways/credentials-validation/{gatewayId}/credentials/{status} | 
 
 
 ## `createCapsilAccess()`
@@ -60,9 +60,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **gatewaysAccessesCreateCapsilAccessPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateCapsilAccessPayload**](../Model/GatewaysAccessesCreateCapsilAccessPayload.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **gatewaysAccessesCreateCapsilAccessPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateCapsilAccessPayload**](../Model/GatewaysAccessesCreateCapsilAccessPayload.md)|  |
 
 ### Return type
 
@@ -120,9 +120,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **gatewaysAccessesCreateEquisoftAnalyzeAccessPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateEquisoftAnalyzeAccessPayload**](../Model/GatewaysAccessesCreateEquisoftAnalyzeAccessPayload.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **gatewaysAccessesCreateEquisoftAnalyzeAccessPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateEquisoftAnalyzeAccessPayload**](../Model/GatewaysAccessesCreateEquisoftAnalyzeAccessPayload.md)|  |
 
 ### Return type
 
@@ -177,9 +177,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **accessId** | **int**| Unique identifier of a Capsil Access. | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accessId** | **int**| Unique identifier of a Capsil Access. |
 
 ### Return type
 
@@ -236,9 +236,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **accessId** | **int**|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accessId** | **int**|  |
 
 ### Return type
 
@@ -295,10 +295,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **authorization** | **string**| Authorization header using the Bearer scheme | |
-| **adminCredentialPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\AdminCredentialPayload**](../Model/AdminCredentialPayload.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **string**| Authorization header using the Bearer scheme |
+ **adminCredentialPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\AdminCredentialPayload**](../Model/AdminCredentialPayload.md)|  |
 
 ### Return type
 
@@ -354,9 +354,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **accessId** | **int**| Unique identifier of a Capsil Access. | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accessId** | **int**| Unique identifier of a Capsil Access. |
 
 ### Return type
 
@@ -470,12 +470,12 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **userAccountUuid** | **string**| UserAccount uuid. | [optional] |
-| **carrierAdminSystemId** | **int**| CarrierAdminSystem unique identifier. | [optional] |
-| **code** | **string**| Capsil agent code. | [optional] |
-| **databaseUuid** | **string**| Database unique identifier. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userAccountUuid** | **string**| UserAccount uuid. | [optional]
+ **carrierAdminSystemId** | **int**| CarrierAdminSystem unique identifier. | [optional]
+ **code** | **string**| Capsil agent code. | [optional]
+ **databaseUuid** | **string**| Database unique identifier. | [optional]
 
 ### Return type
 
@@ -588,11 +588,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **gatewayId** | **string**|  | |
-| **status** | **string**|  | |
-| **authorization** | **string**| Authorization header using the Bearer scheme | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **gatewayId** | **string**|  |
+ **status** | **string**|  |
+ **authorization** | **string**| Authorization header using the Bearer scheme |
 
 ### Return type
 
@@ -650,9 +650,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **userUuid** | **string**|  | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userUuid** | **string**|  | [optional]
 
 ### Return type
 
@@ -707,9 +707,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **gatewayName** | **string**|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **gatewayName** | **string**|  |
 
 ### Return type
 
@@ -766,10 +766,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **authorization** | **string**| Authorization header using the Bearer scheme | |
-| **gatewaysId** | **string**| Many ids can be passed to this argument separated by coma. Ex: &#39;?gatewaysId&#x3D;1,2,3&#39;. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **authorization** | **string**| Authorization header using the Bearer scheme |
+ **gatewaysId** | **string**| Many ids can be passed to this argument separated by coma. Ex: &#39;?gatewaysId&#x3D;1,2,3&#39;. | [optional]
 
 ### Return type
 
@@ -826,10 +826,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **gatewayName** | **string**|  | |
-| **includeSsn** | **bool**| Include the list of SSN for each credentials. Defaults to false | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **gatewayName** | **string**|  |
+ **includeSsn** | **bool**| Include the list of SSN for each credentials. Defaults to false | [optional]
 
 ### Return type
 
@@ -887,10 +887,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **accessId** | **int**|  | |
-| **gatewaysAccessesPatchEquisoftAnalyzeAccessPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesPatchEquisoftAnalyzeAccessPayload**](../Model/GatewaysAccessesPatchEquisoftAnalyzeAccessPayload.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accessId** | **int**|  |
+ **gatewaysAccessesPatchEquisoftAnalyzeAccessPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesPatchEquisoftAnalyzeAccessPayload**](../Model/GatewaysAccessesPatchEquisoftAnalyzeAccessPayload.md)|  |
 
 ### Return type
 
@@ -947,10 +947,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **accessId** | **int**| Unique identifier of a Capsil Access. | |
-| **gatewaysAccessesUpdateCapsilAccessPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesUpdateCapsilAccessPayload**](../Model/GatewaysAccessesUpdateCapsilAccessPayload.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accessId** | **int**| Unique identifier of a Capsil Access. |
+ **gatewaysAccessesUpdateCapsilAccessPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesUpdateCapsilAccessPayload**](../Model/GatewaysAccessesUpdateCapsilAccessPayload.md)|  |
 
 ### Return type
 
@@ -1009,12 +1009,12 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **gatewayId** | **string**|  | |
-| **status** | **string**|  | |
-| **authorization** | **string**| Authorization header using the Bearer scheme | |
-| **credentialIds** | [**int[]**](../Model/int.md)| Many ids can be passed to this argument separated by coma. Ex: &#39;?credentialIds&#x3D;1,2,3&#39;. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **gatewayId** | **string**|  |
+ **status** | **string**|  |
+ **authorization** | **string**| Authorization header using the Bearer scheme |
+ **credentialIds** | [**int[]**](../Model/int.md)| Many ids can be passed to this argument separated by coma. Ex: &#39;?credentialIds&#x3D;1,2,3&#39;. | [optional]
 
 ### Return type
 

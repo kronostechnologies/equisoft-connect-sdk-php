@@ -1,11 +1,11 @@
 # Equisoft\SDK\EquisoftConnect\LegacyFieldValuesApi
 
-All URIs are relative to http://localhost, except if the operation defines another base path.
+All URIs are relative to http://localhost.
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**legacyFieldValuesGet()**](LegacyFieldValuesApi.md#legacyFieldValuesGet) | **GET** /apps/api/kronos.fieldValues.get | Return a list of all available field values item. |
-| [**legacyFieldValuesGetList()**](LegacyFieldValuesApi.md#legacyFieldValuesGetList) | **GET** /apps/api/kronos.fieldValues.getList | Return a list of field values. |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**legacyFieldValuesGet()**](LegacyFieldValuesApi.md#legacyFieldValuesGet) | **GET** /apps/api/kronos.fieldValues.get | Return a list of all available field values item.
+[**legacyFieldValuesGetList()**](LegacyFieldValuesApi.md#legacyFieldValuesGetList) | **GET** /apps/api/kronos.fieldValues.getList | Return a list of field values.
 
 
 ## `legacyFieldValuesGet()`
@@ -45,9 +45,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| The fieldValue unique id or the fieldValue unique system name. | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| The fieldValue unique id or the fieldValue unique system name. |
 
 ### Return type
 
@@ -104,10 +104,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **module** | **string**| The module name. | [optional] |
-| **includeValues** | **bool**| Includes field value&#39;s values. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **module** | **string**| The module name. | [optional]
+ **includeValues** | **bool**| Includes field value&#39;s values. | [optional]
 
 ### Return type
 
