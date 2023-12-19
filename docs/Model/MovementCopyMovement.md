@@ -11,9 +11,9 @@ Name | Type | Description | Notes
 **scheduledDate** | **string** | Scheduled date. | [optional]
 **processedDate** | **string** | Processed date. | [optional]
 **addedDate** | **string** | Added date. | [optional]
-**addedBy** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementUser**](MovementUser.md) | Added by. | [optional]
+**addedBy** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementUser**](MovementUser.md) |  | [optional]
 **cancelledDate** | **string** | Cancelled date. | [optional]
-**cancelledBy** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementUser**](MovementUser.md) | Cancelled by. | [optional]
+**cancelledBy** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementUser**](MovementUser.md) |  | [optional]
 **sourceDatabase** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase**](MovementDatabase.md) |  |
 **destinationDatabase** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase**](MovementDatabase.md) |  |
 **userTuples** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementUserTuple[]**](MovementUserTuple.md) | List of user tuples. |

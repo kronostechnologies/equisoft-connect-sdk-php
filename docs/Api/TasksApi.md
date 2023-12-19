@@ -1,21 +1,21 @@
 # Equisoft\SDK\EquisoftConnect\TasksApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**archiveTaskInternalNote()**](TasksApi.md#archiveTaskInternalNote) | **POST** /crm/api/v1/tasks/{taskId}/notes/{noteId}/archive | Archive an internal note for a task.
-[**createTask()**](TasksApi.md#createTask) | **POST** /crm/api/v1/tasks | Create a task.
-[**createTaskInternalNote()**](TasksApi.md#createTaskInternalNote) | **POST** /crm/api/v1/tasks/{taskId}/notes | Add an internal note to a task.
-[**deleteTask()**](TasksApi.md#deleteTask) | **DELETE** /crm/api/v1/tasks/{taskId} | Delete a task.
-[**getTask()**](TasksApi.md#getTask) | **GET** /crm/api/v1/tasks/{taskId} | Return the detail of a task.
-[**getTaskInternalNoteList()**](TasksApi.md#getTaskInternalNoteList) | **GET** /crm/api/v1/tasks/{taskId}/notes | Get the internal notes list for a task.
-[**listTasks()**](TasksApi.md#listTasks) | **GET** /crm/api/v1/tasks | List or search tasks.
-[**patchTask()**](TasksApi.md#patchTask) | **PATCH** /crm/api/v1/tasks/{taskId} | Partially update a task.
-[**patchTaskInternalNote()**](TasksApi.md#patchTaskInternalNote) | **PATCH** /crm/api/v1/tasks/{taskId}/notes/{noteId} | Edit an internal note for a task.
-[**putTaskLinksDocuments()**](TasksApi.md#putTaskLinksDocuments) | **PUT** /crm/api/v1/tasks/{taskId}/documents | Update the links between a task and existing documents.
-[**restoreTaskInternalNote()**](TasksApi.md#restoreTaskInternalNote) | **POST** /crm/api/v1/tasks/{taskId}/notes/{noteId}/restore | Restore an archived internal note for a task.
-[**transferTaskToCompleted()**](TasksApi.md#transferTaskToCompleted) | **POST** /crm/api/v1/tasks/{taskId}/transferToCompleted | Transfer a task to completed/done.
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**archiveTaskInternalNote()**](TasksApi.md#archiveTaskInternalNote) | **POST** /crm/api/v1/tasks/{taskId}/notes/{noteId}/archive | Archive an internal note for a task. |
+| [**createTask()**](TasksApi.md#createTask) | **POST** /crm/api/v1/tasks | Create a task. |
+| [**createTaskInternalNote()**](TasksApi.md#createTaskInternalNote) | **POST** /crm/api/v1/tasks/{taskId}/notes | Add an internal note to a task. |
+| [**deleteTask()**](TasksApi.md#deleteTask) | **DELETE** /crm/api/v1/tasks/{taskId} | Delete a task. |
+| [**getTask()**](TasksApi.md#getTask) | **GET** /crm/api/v1/tasks/{taskId} | Return the detail of a task. |
+| [**getTaskInternalNoteList()**](TasksApi.md#getTaskInternalNoteList) | **GET** /crm/api/v1/tasks/{taskId}/notes | Get the internal notes list for a task. |
+| [**listTasks()**](TasksApi.md#listTasks) | **GET** /crm/api/v1/tasks | List or search tasks. |
+| [**patchTask()**](TasksApi.md#patchTask) | **PATCH** /crm/api/v1/tasks/{taskId} | Partially update a task. |
+| [**patchTaskInternalNote()**](TasksApi.md#patchTaskInternalNote) | **PATCH** /crm/api/v1/tasks/{taskId}/notes/{noteId} | Edit an internal note for a task. |
+| [**putTaskLinksDocuments()**](TasksApi.md#putTaskLinksDocuments) | **PUT** /crm/api/v1/tasks/{taskId}/documents | Update the links between a task and existing documents. |
+| [**restoreTaskInternalNote()**](TasksApi.md#restoreTaskInternalNote) | **POST** /crm/api/v1/tasks/{taskId}/notes/{noteId}/restore | Restore an archived internal note for a task. |
+| [**transferTaskToCompleted()**](TasksApi.md#transferTaskToCompleted) | **POST** /crm/api/v1/tasks/{taskId}/transferToCompleted | Transfer a task to completed/done. |
 
 
 ## `archiveTaskInternalNote()`
@@ -56,11 +56,11 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **taskId** | **string**| Task unique identifier. |
- **noteId** | **int**| Note unique identifier. |
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **taskId** | **string**| Task unique identifier. | |
+| **noteId** | **int**| Note unique identifier. | |
+| **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional] |
 
 ### Return type
 
@@ -117,10 +117,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **tasksCreateTaskPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\TasksCreateTaskPayload**](../Model/TasksCreateTaskPayload.md)|  |
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **tasksCreateTaskPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\TasksCreateTaskPayload**](../Model/TasksCreateTaskPayload.md)|  | |
+| **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional] |
 
 ### Return type
 
@@ -178,11 +178,11 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **taskId** | **string**| Task unique identifier. |
- **internalNotesCreateNotePayload** | [**\Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNotePayload**](../Model/InternalNotesCreateNotePayload.md)|  |
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **taskId** | **string**| Task unique identifier. | |
+| **internalNotesCreateNotePayload** | [**\Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNotePayload**](../Model/InternalNotesCreateNotePayload.md)|  | |
+| **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional] |
 
 ### Return type
 
@@ -237,9 +237,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **taskId** | **string**| Task unique identifier. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **taskId** | **string**| Task unique identifier. | |
 
 ### Return type
 
@@ -296,10 +296,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **taskId** | **string**| Task unique identifier. |
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **taskId** | **string**| Task unique identifier. | |
+| **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional] |
 
 ### Return type
 
@@ -357,11 +357,11 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **taskId** | **string**| Task unique identifier. |
- **history** | [**InternalNotesHistoryType**](../Model/.md)| Query all revisions or not. | [optional]
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **taskId** | **string**| Task unique identifier. | |
+| **history** | [**InternalNotesHistoryType**](../Model/.md)| Query all revisions or not. | [optional] |
+| **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional] |
 
 ### Return type
 
@@ -426,18 +426,18 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ownerId** | **string**| Owner ID filter param. | [optional]
- **contactIds** | [**int[]**](../Model/int.md)| Contact ID filter param. Many ids can be passed to this argument separated by coma. Ex: &#39;?contactIds&#x3D;1,2,3&#39;. Any of the given contacts will be returned in the result. | [optional]
- **minDueDate** | **\DateTime**| Minimum (inclusive) due date of the task. | [optional]
- **maxDueDate** | **\DateTime**| Maximum (exclusive) due date of the task. | [optional]
- **isCompleted** | **bool**| If true, include only completed tasks. If false, include only TODO tasks. If not set or null, include both. | [optional]
- **dueDateFilter** | [**TasksDueDateFilter**](../Model/.md)| Include or exclude tasks with or without due date. | [optional]
- **orderBy** | [**TasksOrderByType**](../Model/.md)| Specify the order of the results. | [optional]
- **pageToken** | **string**| Token to specify which page to fetch. | [optional]
- **maxResults** | **string**| Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. | [optional]
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **ownerId** | **string**| Owner ID filter param. | [optional] |
+| **contactIds** | [**int[]**](../Model/int.md)| Contact ID filter param. Many ids can be passed to this argument separated by coma. Ex: &#39;?contactIds&#x3D;1,2,3&#39;. Any of the given contacts will be returned in the result. | [optional] |
+| **minDueDate** | **\DateTime**| Minimum (inclusive) due date of the task. | [optional] |
+| **maxDueDate** | **\DateTime**| Maximum (exclusive) due date of the task. | [optional] |
+| **isCompleted** | **bool**| If true, include only completed tasks. If false, include only TODO tasks. If not set or null, include both. | [optional] |
+| **dueDateFilter** | [**TasksDueDateFilter**](../Model/.md)| Include or exclude tasks with or without due date. | [optional] |
+| **orderBy** | [**TasksOrderByType**](../Model/.md)| Specify the order of the results. | [optional] |
+| **pageToken** | **string**| Token to specify which page to fetch. | [optional] |
+| **maxResults** | **string**| Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. | [optional] |
+| **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional] |
 
 ### Return type
 
@@ -495,11 +495,11 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **taskId** | **string**| Task unique identifier. |
- **tasksPatchTaskPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\TasksPatchTaskPayload**](../Model/TasksPatchTaskPayload.md)| Event fields to update. The body of the patch request includes only the resource fields you want to modify. To delete a field, set it to null. Collections are always overridden if defined. |
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **taskId** | **string**| Task unique identifier. | |
+| **tasksPatchTaskPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\TasksPatchTaskPayload**](../Model/TasksPatchTaskPayload.md)| Event fields to update. The body of the patch request includes only the resource fields you want to modify. To delete a field, set it to null. Collections are always overridden if defined. | |
+| **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional] |
 
 ### Return type
 
@@ -558,12 +558,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **taskId** | **string**| Task unique identifier. |
- **noteId** | **int**| Note unique identifier. |
- **internalNotesPatchNotePayload** | [**\Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNotePayload**](../Model/InternalNotesPatchNotePayload.md)|  |
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **taskId** | **string**| Task unique identifier. | |
+| **noteId** | **int**| Note unique identifier. | |
+| **internalNotesPatchNotePayload** | [**\Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNotePayload**](../Model/InternalNotesPatchNotePayload.md)|  | |
+| **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional] |
 
 ### Return type
 
@@ -620,11 +620,11 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **taskId** | **string**| Task unique identifier. |
- **tasksPutTaskLinkDocumentsPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload**](../Model/TasksPutTaskLinkDocumentsPayload.md)| Contains an array of Ids for the documents to link with the task. To remove all links, documentIds set to an empty array  Collections are always overridden if defined. |
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **taskId** | **string**| Task unique identifier. | |
+| **tasksPutTaskLinkDocumentsPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\TasksPutTaskLinkDocumentsPayload**](../Model/TasksPutTaskLinkDocumentsPayload.md)| Contains an array of Ids for the documents to link with the task. To remove all links, documentIds set to an empty array  Collections are always overridden if defined. | |
+| **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional] |
 
 ### Return type
 
@@ -681,11 +681,11 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **taskId** | **string**| Task unique identifier. |
- **noteId** | **int**| Note unique identifier. |
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **taskId** | **string**| Task unique identifier. | |
+| **noteId** | **int**| Note unique identifier. | |
+| **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional] |
 
 ### Return type
 
@@ -741,9 +741,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **taskId** | **string**| Task unique identifier. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **taskId** | **string**| Task unique identifier. | |
 
 ### Return type
 

@@ -1,11 +1,11 @@
 # Equisoft\SDK\EquisoftConnect\UsersApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getCurrentUser()**](UsersApi.md#getCurrentUser) | **GET** /crm/api/v1/users/me | Get informations about the current user
-[**getUserContext()**](UsersApi.md#getUserContext) | **GET** /crm/api/v1/context | Get user context metadata.
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**getCurrentUser()**](UsersApi.md#getCurrentUser) | **GET** /crm/api/v1/users/me | Get informations about the current user |
+| [**getUserContext()**](UsersApi.md#getUserContext) | **GET** /crm/api/v1/context | Get user context metadata. |
 
 
 ## `getCurrentUser()`
@@ -45,9 +45,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional] |
 
 ### Return type
 

@@ -1,14 +1,14 @@
 # Equisoft\SDK\EquisoftConnect\DSFApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**createDsfFinancialCenter()**](DSFApi.md#createDsfFinancialCenter) | **POST** /crm/api/v1/dsf/financialCenters | Create a financial center
-[**deleteDsfFinancialCenter()**](DSFApi.md#deleteDsfFinancialCenter) | **DELETE** /crm/api/v1/dsf/financialCenters/{financialCenterId} | Delete a financial center
-[**getDsfFinancialCenters()**](DSFApi.md#getDsfFinancialCenters) | **GET** /crm/api/v1/dsf/financialCenters/{financialCenterId} | Get a financial center
-[**listDsfFinancialCenters()**](DSFApi.md#listDsfFinancialCenters) | **GET** /crm/api/v1/dsf/financialCenters | List all financial centers
-[**updateDsfFinancialCenter()**](DSFApi.md#updateDsfFinancialCenter) | **POST** /crm/api/v1/dsf/financialCenters/{financialCenterId} | Update a financial center
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**createDsfFinancialCenter()**](DSFApi.md#createDsfFinancialCenter) | **POST** /crm/api/v1/dsf/financialCenters | Create a financial center |
+| [**deleteDsfFinancialCenter()**](DSFApi.md#deleteDsfFinancialCenter) | **DELETE** /crm/api/v1/dsf/financialCenters/{financialCenterId} | Delete a financial center |
+| [**getDsfFinancialCenters()**](DSFApi.md#getDsfFinancialCenters) | **GET** /crm/api/v1/dsf/financialCenters/{financialCenterId} | Get a financial center |
+| [**listDsfFinancialCenters()**](DSFApi.md#listDsfFinancialCenters) | **GET** /crm/api/v1/dsf/financialCenters | List all financial centers |
+| [**updateDsfFinancialCenter()**](DSFApi.md#updateDsfFinancialCenter) | **POST** /crm/api/v1/dsf/financialCenters/{financialCenterId} | Update a financial center |
 
 
 ## `createDsfFinancialCenter()`
@@ -48,9 +48,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **dsfFinancialCenterPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload**](../Model/DsfFinancialCenterPayload.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **dsfFinancialCenterPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload**](../Model/DsfFinancialCenterPayload.md)|  | |
 
 ### Return type
 
@@ -105,9 +105,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **financialCenterId** | **int**| Financial center identifier. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **financialCenterId** | **int**| Financial center identifier. | |
 
 ### Return type
 
@@ -163,9 +163,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **financialCenterId** | **int**| Financial center identifier. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **financialCenterId** | **int**| Financial center identifier. | |
 
 ### Return type
 
@@ -277,10 +277,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **financialCenterId** | **int**| Financial center identifier. |
- **dsfFinancialCenterPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload**](../Model/DsfFinancialCenterPayload.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **financialCenterId** | **int**| Financial center identifier. | |
+| **dsfFinancialCenterPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\DsfFinancialCenterPayload**](../Model/DsfFinancialCenterPayload.md)|  | |
 
 ### Return type
 
