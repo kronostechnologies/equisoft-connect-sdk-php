@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **string** |  | [default to 'CLIENTBASE_USING_DISTLIST']
+**type** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementMovementType**](MovementMovementType.md) |  |
 **id** | **int** | Unique numerical identifier. | [optional]
 **status** | **string** | Movement status. | [optional]
 **availableAction** | **string** | Available action. | [optional]
