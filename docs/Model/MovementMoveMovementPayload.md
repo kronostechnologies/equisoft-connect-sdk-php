@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **string** |  | [default to 'MOVE']
+**type** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementMovementType**](MovementMovementType.md) |  |
 **date** | **string** | Movement date. | [optional]
 **sourceDatabase** | **string** | Source database full name. |
 **destinationDatabase** | **string** | Destination database full name. |
