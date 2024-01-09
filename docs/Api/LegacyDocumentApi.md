@@ -1,17 +1,17 @@
 # Equisoft\SDK\EquisoftConnect\LegacyDocumentApi
 
-All URIs are relative to http://localhost, except if the operation defines another base path.
+All URIs are relative to http://localhost.
 
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**legacyDocumentAddDocument()**](LegacyDocumentApi.md#legacyDocumentAddDocument) | **POST** /apps/api/kronos.document.add | Create a new document. |
-| [**legacyDocumentDeleteDocument()**](LegacyDocumentApi.md#legacyDocumentDeleteDocument) | **POST** /apps/api/kronos.document.delete | Delete a document and it&#39;s related files. |
-| [**legacyDocumentDeleteDocumentFile()**](LegacyDocumentApi.md#legacyDocumentDeleteDocumentFile) | **POST** /apps/api/kronos.document.deleteFile | Delete one file from a document. |
-| [**legacyDocumentDownloadDocumentFile()**](LegacyDocumentApi.md#legacyDocumentDownloadDocumentFile) | **GET** /apps/api/kronos.document.downloadFile | Download a file. File data is encoded in base64. |
-| [**legacyDocumentGetDocument()**](LegacyDocumentApi.md#legacyDocumentGetDocument) | **GET** /apps/api/kronos.document.get | Get all data for a document record. |
-| [**legacyDocumentGetDocumentList()**](LegacyDocumentApi.md#legacyDocumentGetDocumentList) | **GET** /apps/api/kronos.document.getList | Get a list of all documents. |
-| [**legacyDocumentUpdateDocument()**](LegacyDocumentApi.md#legacyDocumentUpdateDocument) | **POST** /apps/api/kronos.document.update | Update a document. |
-| [**legacyDocumentUploadDocumentFile()**](LegacyDocumentApi.md#legacyDocumentUploadDocumentFile) | **POST** /apps/api/kronos.document.uploadFile | Upload a new file in a document. |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**legacyDocumentAddDocument()**](LegacyDocumentApi.md#legacyDocumentAddDocument) | **POST** /apps/api/kronos.document.add | Create a new document.
+[**legacyDocumentDeleteDocument()**](LegacyDocumentApi.md#legacyDocumentDeleteDocument) | **POST** /apps/api/kronos.document.delete | Delete a document and it&#39;s related files.
+[**legacyDocumentDeleteDocumentFile()**](LegacyDocumentApi.md#legacyDocumentDeleteDocumentFile) | **POST** /apps/api/kronos.document.deleteFile | Delete one file from a document.
+[**legacyDocumentDownloadDocumentFile()**](LegacyDocumentApi.md#legacyDocumentDownloadDocumentFile) | **GET** /apps/api/kronos.document.downloadFile | Download a file. File data is encoded in base64.
+[**legacyDocumentGetDocument()**](LegacyDocumentApi.md#legacyDocumentGetDocument) | **GET** /apps/api/kronos.document.get | Get all data for a document record.
+[**legacyDocumentGetDocumentList()**](LegacyDocumentApi.md#legacyDocumentGetDocumentList) | **GET** /apps/api/kronos.document.getList | Get a list of all documents.
+[**legacyDocumentUpdateDocument()**](LegacyDocumentApi.md#legacyDocumentUpdateDocument) | **POST** /apps/api/kronos.document.update | Update a document.
+[**legacyDocumentUploadDocumentFile()**](LegacyDocumentApi.md#legacyDocumentUploadDocumentFile) | **POST** /apps/api/kronos.document.uploadFile | Upload a new file in a document.
 
 
 ## `legacyDocumentAddDocument()`
@@ -51,9 +51,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **legacyDocumentDocumentPayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentPayloadRequest**](../Model/LegacyDocumentDocumentPayloadRequest.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **legacyDocumentDocumentPayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentPayloadRequest**](../Model/LegacyDocumentDocumentPayloadRequest.md)|  |
 
 ### Return type
 
@@ -109,9 +109,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| Document identifier. | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Document identifier. |
 
 ### Return type
 
@@ -167,9 +167,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| Document file identifier. | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Document file identifier. |
 
 ### Return type
 
@@ -225,9 +225,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| Document file identifier. | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Document file identifier. |
 
 ### Return type
 
@@ -283,9 +283,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| Document identifier. | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Document identifier. |
 
 ### Return type
 
@@ -344,10 +344,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **legacyDocumentDocumentGetListPayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentGetListPayloadRequest**](../Model/LegacyDocumentDocumentGetListPayloadRequest.md)|  | |
-| **lastModifiedTime** | **string**| To Fetch all documents, which got modified / created after specified date. If the value \&quot;auto\&quot; is used, the last access date to this method will be used. Set the value to \&quot;reset\&quot; to reset the last access date. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **legacyDocumentDocumentGetListPayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentGetListPayloadRequest**](../Model/LegacyDocumentDocumentGetListPayloadRequest.md)|  |
+ **lastModifiedTime** | **string**| To Fetch all documents, which got modified / created after specified date. If the value \&quot;auto\&quot; is used, the last access date to this method will be used. Set the value to \&quot;reset\&quot; to reset the last access date. | [optional]
 
 ### Return type
 
@@ -403,9 +403,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **legacyDocumentDocumentPayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentPayloadRequest**](../Model/LegacyDocumentDocumentPayloadRequest.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **legacyDocumentDocumentPayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentDocumentPayloadRequest**](../Model/LegacyDocumentDocumentPayloadRequest.md)|  |
 
 ### Return type
 
@@ -462,10 +462,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| Document identifier. | |
-| **legacyDocumentUploadDocumentFileRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentUploadDocumentFileRequest**](../Model/LegacyDocumentUploadDocumentFileRequest.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**| Document identifier. |
+ **legacyDocumentUploadDocumentFileRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentUploadDocumentFileRequest**](../Model/LegacyDocumentUploadDocumentFileRequest.md)|  |
 
 ### Return type
 

@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **author** | [**\Equisoft\SDK\EquisoftConnect\Model\InternalNotesAuthor**](InternalNotesAuthor.md) |  |
 **firstRevisionCreatedAt** | **\DateTime** | First revision created at. |
 **accessRights** | [**\Equisoft\SDK\EquisoftConnect\Model\AccessRights**](AccessRights.md) |  |
-**currentRevision** | [**\Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteRevision**](InternalNotesNoteRevision.md) |  |
+**currentRevision** | [**\Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteRevision**](InternalNotesNoteRevision.md) | Current note revision. |
 **previousRevisions** | [**\Equisoft\SDK\EquisoftConnect\Model\InternalNotesNoteRevision[]**](InternalNotesNoteRevision.md) | List of previous revisions. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
