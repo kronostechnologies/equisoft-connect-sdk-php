@@ -1,11 +1,11 @@
 # Equisoft\SDK\EquisoftConnect\ContactsApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getByUuid()**](ContactsApi.md#getByUuid) | **GET** /crm/api/v1/contacts/{contactUuid} | Return the detail of a contact.
-[**patchContact()**](ContactsApi.md#patchContact) | **PATCH** /crm/api/v1/contacts/{contactUuid} | Update a contact
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**getByUuid()**](ContactsApi.md#getByUuid) | **GET** /crm/api/v1/contacts/{contactUuid} | Return the detail of a contact. |
+| [**patchContact()**](ContactsApi.md#patchContact) | **PATCH** /crm/api/v1/contacts/{contactUuid} | Update a contact |
 
 
 ## `getByUuid()`
@@ -46,10 +46,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **contactUuid** | **string**| Contact unique identifier. |
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contactUuid** | **string**| Contact unique identifier. | |
+| **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional] |
 
 ### Return type
 
@@ -106,10 +106,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **contactUuid** | **string**| Contact unique identifier. |
- **contactPatchContactPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactPatchContactPayload**](../Model/ContactPatchContactPayload.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contactUuid** | **string**| Contact unique identifier. | |
+| **contactPatchContactPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactPatchContactPayload**](../Model/ContactPatchContactPayload.md)|  | |
 
 ### Return type
 

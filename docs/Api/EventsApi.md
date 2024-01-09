@@ -1,24 +1,24 @@
 # Equisoft\SDK\EquisoftConnect\EventsApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**archiveEventInternalNote()**](EventsApi.md#archiveEventInternalNote) | **POST** /crm/api/v1/events/{eventId}/notes/{noteId}/archive | Archive an internal note for an event.
-[**createEvent()**](EventsApi.md#createEvent) | **POST** /crm/api/v1/events | Create an event.
-[**createEventInternalNote()**](EventsApi.md#createEventInternalNote) | **POST** /crm/api/v1/events/{eventId}/notes | Add an internal note to an event.
-[**deleteEvent()**](EventsApi.md#deleteEvent) | **DELETE** /crm/api/v1/events/{eventId} | Delete an event.
-[**getCalendar()**](EventsApi.md#getCalendar) | **GET** /crm/api/v1/calendars/{calendarId} | Get informations about a calendar or a default calendar.
-[**getEvent()**](EventsApi.md#getEvent) | **GET** /crm/api/v1/events/{eventId} | Return the detail of an event.
-[**getEventInstances()**](EventsApi.md#getEventInstances) | **GET** /crm/api/v1/events/{eventId}/instances | Get a recurring event instances.
-[**getEventInternalNoteList()**](EventsApi.md#getEventInternalNoteList) | **GET** /crm/api/v1/events/{eventId}/notes | Get the internal notes list for an event.
-[**listCalendars()**](EventsApi.md#listCalendars) | **GET** /crm/api/v1/calendars | Get the list of available calendarslol.
-[**listEvents()**](EventsApi.md#listEvents) | **GET** /crm/api/v1/events | List or search events.
-[**patchEvent()**](EventsApi.md#patchEvent) | **PATCH** /crm/api/v1/events/{eventId} | Partially update an event.
-[**patchEventInternalNote()**](EventsApi.md#patchEventInternalNote) | **PATCH** /crm/api/v1/events/{eventId}/notes/{noteId} | Update an internal note of an event.
-[**putEventLinksDocuments()**](EventsApi.md#putEventLinksDocuments) | **PUT** /crm/api/v1/events/{eventId}/documents | Update the links between an event and existing documents
-[**restoreEventInternalNote()**](EventsApi.md#restoreEventInternalNote) | **POST** /crm/api/v1/events/{eventId}/notes/{noteId}/restore | Restore an archived internal note for an event.
-[**transferEventToCompleted()**](EventsApi.md#transferEventToCompleted) | **POST** /crm/api/v1/events/{eventId}/transferToCompleted | Transfer an event to the completed/done calendar.
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**archiveEventInternalNote()**](EventsApi.md#archiveEventInternalNote) | **POST** /crm/api/v1/events/{eventId}/notes/{noteId}/archive | Archive an internal note for an event. |
+| [**createEvent()**](EventsApi.md#createEvent) | **POST** /crm/api/v1/events | Create an event. |
+| [**createEventInternalNote()**](EventsApi.md#createEventInternalNote) | **POST** /crm/api/v1/events/{eventId}/notes | Add an internal note to an event. |
+| [**deleteEvent()**](EventsApi.md#deleteEvent) | **DELETE** /crm/api/v1/events/{eventId} | Delete an event. |
+| [**getCalendar()**](EventsApi.md#getCalendar) | **GET** /crm/api/v1/calendars/{calendarId} | Get informations about a calendar or a default calendar. |
+| [**getEvent()**](EventsApi.md#getEvent) | **GET** /crm/api/v1/events/{eventId} | Return the detail of an event. |
+| [**getEventInstances()**](EventsApi.md#getEventInstances) | **GET** /crm/api/v1/events/{eventId}/instances | Get a recurring event instances. |
+| [**getEventInternalNoteList()**](EventsApi.md#getEventInternalNoteList) | **GET** /crm/api/v1/events/{eventId}/notes | Get the internal notes list for an event. |
+| [**listCalendars()**](EventsApi.md#listCalendars) | **GET** /crm/api/v1/calendars | Get the list of available calendarslol. |
+| [**listEvents()**](EventsApi.md#listEvents) | **GET** /crm/api/v1/events | List or search events. |
+| [**patchEvent()**](EventsApi.md#patchEvent) | **PATCH** /crm/api/v1/events/{eventId} | Partially update an event. |
+| [**patchEventInternalNote()**](EventsApi.md#patchEventInternalNote) | **PATCH** /crm/api/v1/events/{eventId}/notes/{noteId} | Update an internal note of an event. |
+| [**putEventLinksDocuments()**](EventsApi.md#putEventLinksDocuments) | **PUT** /crm/api/v1/events/{eventId}/documents | Update the links between an event and existing documents |
+| [**restoreEventInternalNote()**](EventsApi.md#restoreEventInternalNote) | **POST** /crm/api/v1/events/{eventId}/notes/{noteId}/restore | Restore an archived internal note for an event. |
+| [**transferEventToCompleted()**](EventsApi.md#transferEventToCompleted) | **POST** /crm/api/v1/events/{eventId}/transferToCompleted | Transfer an event to the completed/done calendar. |
 
 
 ## `archiveEventInternalNote()`
@@ -59,11 +59,11 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **eventId** | **string**| Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. |
- **noteId** | **int**| Note unique identifier. |
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **eventId** | **string**| Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. | |
+| **noteId** | **int**| Note unique identifier. | |
+| **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional] |
 
 ### Return type
 
@@ -120,10 +120,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **eventsCreateEventPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\EventsCreateEventPayload**](../Model/EventsCreateEventPayload.md)|  |
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **eventsCreateEventPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\EventsCreateEventPayload**](../Model/EventsCreateEventPayload.md)|  | |
+| **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional] |
 
 ### Return type
 
@@ -181,11 +181,11 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **eventId** | **string**| Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. |
- **internalNotesCreateNotePayload** | [**\Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNotePayload**](../Model/InternalNotesCreateNotePayload.md)|  |
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **eventId** | **string**| Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. | |
+| **internalNotesCreateNotePayload** | [**\Equisoft\SDK\EquisoftConnect\Model\InternalNotesCreateNotePayload**](../Model/InternalNotesCreateNotePayload.md)|  | |
+| **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional] |
 
 ### Return type
 
@@ -242,9 +242,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **eventId** | **string**| Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **eventId** | **string**| Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. | |
 
 ### Return type
 
@@ -301,10 +301,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **calendarId** | **string**| Calendar ID filter param. An id returned by listCalendars. The string &#x60;primary&#x60; for the current connected user primary (TODO) calendar. The string &#x60;completed&#x60; for the current connected user completed (DONE) calendar. |
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **calendarId** | **string**| Calendar ID filter param. An id returned by listCalendars. The string &#x60;primary&#x60; for the current connected user primary (TODO) calendar. The string &#x60;completed&#x60; for the current connected user completed (DONE) calendar. | |
+| **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional] |
 
 ### Return type
 
@@ -361,10 +361,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **eventId** | **string**| Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. |
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **eventId** | **string**| Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. | |
+| **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional] |
 
 ### Return type
 
@@ -425,14 +425,14 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **eventId** | **string**| Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. |
- **minTime** | **\DateTime**| Minimum (inclusive) date and time of the event start time. As defined by date-time - RFC3339. | [optional]
- **maxTime** | **\DateTime**| Maximum (exclusive) date and time of the event start time. As defined by date-time - RFC3339. | [optional]
- **pageToken** | **string**| Token to specify which page to fetch. | [optional]
- **maxResults** | **string**| Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. | [optional]
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **eventId** | **string**| Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. | |
+| **minTime** | **\DateTime**| Minimum (inclusive) date and time of the event start time. As defined by date-time - RFC3339. | [optional] |
+| **maxTime** | **\DateTime**| Maximum (exclusive) date and time of the event start time. As defined by date-time - RFC3339. | [optional] |
+| **pageToken** | **string**| Token to specify which page to fetch. | [optional] |
+| **maxResults** | **string**| Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. | [optional] |
+| **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional] |
 
 ### Return type
 
@@ -490,11 +490,11 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **eventId** | **string**| Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. |
- **history** | [**InternalNotesHistoryType**](../Model/.md)| Query all revisions or not. | [optional]
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **eventId** | **string**| Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. | |
+| **history** | [**InternalNotesHistoryType**](../Model/.md)| Query all revisions or not. | [optional] |
+| **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional] |
 
 ### Return type
 
@@ -550,9 +550,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional] |
 
 ### Return type
 
@@ -618,19 +618,19 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **calendarId** | **string**| Calendar ID filter param. An id returned by listCalendars. The string &#x60;primary&#x60; for the current connected user primary (TODO) calendar. The string &#x60;completed&#x60; for the current connected user completed (DONE) calendar. | [optional]
- **ownerId** | **string**| Owner ID filter param. | [optional]
- **contactIds** | [**int[]**](../Model/int.md)| Contact ID filter param. Many ids can be passed to this argument separated by coma. Ex: &#39;?contactIds&#x3D;1,2,3&#39;. Any of the given contacts will be returned in the result. | [optional]
- **minTime** | **\DateTime**| Minimum (inclusive) date and time of the event start time. As defined by date-time - RFC3339. | [optional]
- **maxTime** | **\DateTime**| Maximum (exclusive) date and time of the event start time. As defined by date-time - RFC3339. | [optional]
- **singleEvents** | **bool**| Expand recurring events into occurrences. When singleEvents is true, master recurrences are not returned in list. | [optional]
- **isCompleted** | **bool**| If true, include only completed events. If false, include only TODO event. If not set or null, include both. | [optional]
- **orderBy** | [**EventsOrderByType**](../Model/.md)| Specify the order of the results. &#x60;startTime&#x60; may result in inconsistant sort when used without the &#x60;singleEvents&#x60; option. | [optional]
- **pageToken** | **string**| Token to specify which page to fetch. | [optional]
- **maxResults** | **string**| Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. | [optional]
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **calendarId** | **string**| Calendar ID filter param. An id returned by listCalendars. The string &#x60;primary&#x60; for the current connected user primary (TODO) calendar. The string &#x60;completed&#x60; for the current connected user completed (DONE) calendar. | [optional] |
+| **ownerId** | **string**| Owner ID filter param. | [optional] |
+| **contactIds** | [**int[]**](../Model/int.md)| Contact ID filter param. Many ids can be passed to this argument separated by coma. Ex: &#39;?contactIds&#x3D;1,2,3&#39;. Any of the given contacts will be returned in the result. | [optional] |
+| **minTime** | **\DateTime**| Minimum (inclusive) date and time of the event start time. As defined by date-time - RFC3339. | [optional] |
+| **maxTime** | **\DateTime**| Maximum (exclusive) date and time of the event start time. As defined by date-time - RFC3339. | [optional] |
+| **singleEvents** | **bool**| Expand recurring events into occurrences. When singleEvents is true, master recurrences are not returned in list. | [optional] |
+| **isCompleted** | **bool**| If true, include only completed events. If false, include only TODO event. If not set or null, include both. | [optional] |
+| **orderBy** | [**EventsOrderByType**](../Model/.md)| Specify the order of the results. &#x60;startTime&#x60; may result in inconsistant sort when used without the &#x60;singleEvents&#x60; option. | [optional] |
+| **pageToken** | **string**| Token to specify which page to fetch. | [optional] |
+| **maxResults** | **string**| Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. | [optional] |
+| **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional] |
 
 ### Return type
 
@@ -690,11 +690,11 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **eventId** | **string**| Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. |
- **eventsPatchEventPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\EventsPatchEventPayload**](../Model/EventsPatchEventPayload.md)| Event fields to update. The body of the patch request includes only the resource fields you want to modify. To delete a field, set it to null. Collections are always overridden if defined. |
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **eventId** | **string**| Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. | |
+| **eventsPatchEventPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\EventsPatchEventPayload**](../Model/EventsPatchEventPayload.md)| Event fields to update. The body of the patch request includes only the resource fields you want to modify. To delete a field, set it to null. Collections are always overridden if defined. | |
+| **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional] |
 
 ### Return type
 
@@ -753,12 +753,12 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **eventId** | **string**| Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. |
- **noteId** | **int**| Note unique identifier. |
- **internalNotesPatchNotePayload** | [**\Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNotePayload**](../Model/InternalNotesPatchNotePayload.md)|  |
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **eventId** | **string**| Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. | |
+| **noteId** | **int**| Note unique identifier. | |
+| **internalNotesPatchNotePayload** | [**\Equisoft\SDK\EquisoftConnect\Model\InternalNotesPatchNotePayload**](../Model/InternalNotesPatchNotePayload.md)|  | |
+| **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional] |
 
 ### Return type
 
@@ -815,11 +815,11 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **eventId** | **string**| Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. |
- **eventsPutEventLinkDocumentsPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\EventsPutEventLinkDocumentsPayload**](../Model/EventsPutEventLinkDocumentsPayload.md)| Contains an array of Ids for the documents to link with the event. To remove all links, documentIds set to an empty array. Collections are always overridden if defined. |
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **eventId** | **string**| Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. | |
+| **eventsPutEventLinkDocumentsPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\EventsPutEventLinkDocumentsPayload**](../Model/EventsPutEventLinkDocumentsPayload.md)| Contains an array of Ids for the documents to link with the event. To remove all links, documentIds set to an empty array. Collections are always overridden if defined. | |
+| **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional] |
 
 ### Return type
 
@@ -876,11 +876,11 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **eventId** | **string**| Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. |
- **noteId** | **int**| Note unique identifier. |
- **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **eventId** | **string**| Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. | |
+| **noteId** | **int**| Note unique identifier. | |
+| **acceptLanguage** | **string**| Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. | [optional] |
 
 ### Return type
 
@@ -936,9 +936,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **eventId** | **string**| Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **eventId** | **string**| Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. | |
 
 ### Return type
 
