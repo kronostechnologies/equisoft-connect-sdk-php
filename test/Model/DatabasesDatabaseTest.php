@@ -186,4 +186,13 @@ class DatabasesDatabaseTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "billable"
+     */
+    public function testPropertyBillable()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

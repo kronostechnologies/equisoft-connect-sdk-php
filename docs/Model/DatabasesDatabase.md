@@ -16,5 +16,6 @@ Name | Type | Description | Notes
 **distributorCode** | **string** | Distributor Code | [optional]
 **chargebeeCustomerId** | **string** | Chargebee Customer Id | [optional]
 **organizationUuid** | **string** | Organization uuid | [optional]
+**billable** | **bool** | Is Database Billable |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
