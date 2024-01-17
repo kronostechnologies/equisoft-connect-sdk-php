@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementMovementType**](MovementMovementType.md) |  |
+**type** | **string** |  | [default to 'CLIENTBASE_USING_DISTLIST']
 **date** | **string** | Movement date. | [optional]
 **sourceDatabase** | **string** | Source database full name. |
 **sourceUser** | **string** | Source user id. |
