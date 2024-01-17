@@ -68,8 +68,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
         'equisoftPlanEnabled' => 'bool',
         'distributorCode' => 'string',
         'chargebeeCustomerId' => 'string',
-        'organizationUuid' => 'string',
-        'billable' => 'bool'
+        'organizationUuid' => 'string'
     ];
 
     /**
@@ -91,8 +90,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
         'equisoftPlanEnabled' => null,
         'distributorCode' => null,
         'chargebeeCustomerId' => null,
-        'organizationUuid' => null,
-        'billable' => null
+        'organizationUuid' => null
     ];
 
     /**
@@ -112,8 +110,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
 		'equisoftPlanEnabled' => false,
 		'distributorCode' => true,
 		'chargebeeCustomerId' => true,
-		'organizationUuid' => true,
-		'billable' => false
+		'organizationUuid' => true
     ];
 
     /**
@@ -213,8 +210,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
         'equisoftPlanEnabled' => 'equisoftPlanEnabled',
         'distributorCode' => 'distributorCode',
         'chargebeeCustomerId' => 'chargebeeCustomerId',
-        'organizationUuid' => 'organizationUuid',
-        'billable' => 'billable'
+        'organizationUuid' => 'organizationUuid'
     ];
 
     /**
@@ -234,8 +230,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
         'equisoftPlanEnabled' => 'setEquisoftPlanEnabled',
         'distributorCode' => 'setDistributorCode',
         'chargebeeCustomerId' => 'setChargebeeCustomerId',
-        'organizationUuid' => 'setOrganizationUuid',
-        'billable' => 'setBillable'
+        'organizationUuid' => 'setOrganizationUuid'
     ];
 
     /**
@@ -255,8 +250,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
         'equisoftPlanEnabled' => 'getEquisoftPlanEnabled',
         'distributorCode' => 'getDistributorCode',
         'chargebeeCustomerId' => 'getChargebeeCustomerId',
-        'organizationUuid' => 'getOrganizationUuid',
-        'billable' => 'getBillable'
+        'organizationUuid' => 'getOrganizationUuid'
     ];
 
     /**
@@ -328,7 +322,6 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
         $this->setIfExists('distributorCode', $data ?? [], null);
         $this->setIfExists('chargebeeCustomerId', $data ?? [], null);
         $this->setIfExists('organizationUuid', $data ?? [], null);
-        $this->setIfExists('billable', $data ?? [], null);
     }
 
     /**
@@ -381,9 +374,6 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
         }
         if ($this->container['isMultiUser'] === null) {
             $invalidProperties[] = "'isMultiUser' can't be null";
-        }
-        if ($this->container['billable'] === null) {
-            $invalidProperties[] = "'billable' can't be null";
         }
         return $invalidProperties;
     }
@@ -741,33 +731,6 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
             }
         }
         $this->container['organizationUuid'] = $organizationUuid;
-
-        return $this;
-    }
-
-    /**
-     * Gets billable
-     *
-     * @return bool
-     */
-    public function getBillable()
-    {
-        return $this->container['billable'];
-    }
-
-    /**
-     * Sets billable
-     *
-     * @param bool $billable Is Database Billable
-     *
-     * @return self
-     */
-    public function setBillable($billable)
-    {
-        if (is_null($billable)) {
-            throw new \InvalidArgumentException('non-nullable billable cannot be null');
-        }
-        $this->container['billable'] = $billable;
 
         return $this;
     }
