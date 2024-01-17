@@ -1,40 +1,40 @@
 # Equisoft\SDK\EquisoftConnect\LegacyProvisioningApi
 
-All URIs are relative to http://localhost.
+All URIs are relative to http://localhost, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**legacyProvisioningActivateFnaForOrganization()**](LegacyProvisioningApi.md#legacyProvisioningActivateFnaForOrganization) | **POST** /apps/api/kronos.provisioning.activateFnaForOrganization | Activate FNA for an organization.
-[**legacyProvisioningActivateUser()**](LegacyProvisioningApi.md#legacyProvisioningActivateUser) | **POST** /apps/api/kronos.provisioning.activateUser | Activate a user.
-[**legacyProvisioningAddOrganization()**](LegacyProvisioningApi.md#legacyProvisioningAddOrganization) | **POST** /apps/api/kronos.provisioning.addOrganization | Add a new organization.
-[**legacyProvisioningAddUser()**](LegacyProvisioningApi.md#legacyProvisioningAddUser) | **POST** /apps/api/kronos.provisioning.addUser | Add a new user.
-[**legacyProvisioningChangeDatabaseProfile()**](LegacyProvisioningApi.md#legacyProvisioningChangeDatabaseProfile) | **POST** /apps/api/kronos.provisioning.changeDatabaseProfile | Change database profile.
-[**legacyProvisioningClearCache()**](LegacyProvisioningApi.md#legacyProvisioningClearCache) | **POST** /apps/api/kronos.provisioning.clearCache | Clear cache.
-[**legacyProvisioningCloseUserSession()**](LegacyProvisioningApi.md#legacyProvisioningCloseUserSession) | **POST** /apps/api/kronos.provisioning.closeUserSession | Close all sessions open for a user.
-[**legacyProvisioningDeactivateUser()**](LegacyProvisioningApi.md#legacyProvisioningDeactivateUser) | **POST** /apps/api/kronos.provisioning.deactivateUser | Deactivate a user.
-[**legacyProvisioningDeleteOrganization()**](LegacyProvisioningApi.md#legacyProvisioningDeleteOrganization) | **POST** /apps/api/kronos.provisioning.deleteOrganization | Delete an organization.
-[**legacyProvisioningDeleteUser()**](LegacyProvisioningApi.md#legacyProvisioningDeleteUser) | **POST** /apps/api/kronos.provisioning.deleteUser | Delete a user.
-[**legacyProvisioningEnableContactPersonalizedFieldsModule()**](LegacyProvisioningApi.md#legacyProvisioningEnableContactPersonalizedFieldsModule) | **POST** /apps/api/kronos.provisioning.enableContactPersonalizedFieldsModule | Enable Contact Personalized Fields module for a database.
-[**legacyProvisioningEnableFnaForUser()**](LegacyProvisioningApi.md#legacyProvisioningEnableFnaForUser) | **POST** /apps/api/kronos.provisioning.enableFnaForUser | Enable FNA for user.
-[**legacyProvisioningGetCrmGatewaysAccessReport()**](LegacyProvisioningApi.md#legacyProvisioningGetCrmGatewaysAccessReport) | **GET** /apps/api/kronos.provisioning.getCrmGatewaysAccessReport | Get a report of active accesses for all CRM datagateways.
-[**legacyProvisioningGetFFGatewaysAccessReport()**](LegacyProvisioningApi.md#legacyProvisioningGetFFGatewaysAccessReport) | **GET** /apps/api/kronos.provisioning.getFFGatewaysAccessReport | Get a report of active accesses for all FF datagateways.
-[**legacyProvisioningGetGatewayArchiveByDate()**](LegacyProvisioningApi.md#legacyProvisioningGetGatewayArchiveByDate) | **GET** /apps/api/kronos.provisioning.getGatewayArchiveByDate | Get the archives for a given gateway at the given date.
-[**legacyProvisioningGetGatewayArchiveListByDate()**](LegacyProvisioningApi.md#legacyProvisioningGetGatewayArchiveListByDate) | **GET** /apps/api/kronos.provisioning.getGatewayArchiveListByDate | Get the archives list for a given gateway at the given date.
-[**legacyProvisioningGetLoginLog()**](LegacyProvisioningApi.md#legacyProvisioningGetLoginLog) | **GET** /apps/api/kronos.provisioning.getLoginLog | Get the login log based on given options.
-[**legacyProvisioningGetMoveUserToOrganizationStatus()**](LegacyProvisioningApi.md#legacyProvisioningGetMoveUserToOrganizationStatus) | **GET** /apps/api/kronos.provisioning.getMoveUserToOrganizationStatus | Get the progression status of a previous call to moveUserToOrganization.
-[**legacyProvisioningGetOrganization()**](LegacyProvisioningApi.md#legacyProvisioningGetOrganization) | **GET** /apps/api/kronos.provisioning.getOrganization | Get all informations about an organization.
-[**legacyProvisioningGetOrganizationList()**](LegacyProvisioningApi.md#legacyProvisioningGetOrganizationList) | **GET** /apps/api/kronos.provisioning.getOrganizationList | List all organizations.
-[**legacyProvisioningGetOrganizationStatus()**](LegacyProvisioningApi.md#legacyProvisioningGetOrganizationStatus) | **POST** /apps/api/kronos.provisioning.getOrganizationStatus | Return the state of a given database.
-[**legacyProvisioningGetSyncControlDataForAllDatabaseStatus()**](LegacyProvisioningApi.md#legacyProvisioningGetSyncControlDataForAllDatabaseStatus) | **GET** /apps/api/kronos.provisioning.getSyncControlDataForAllDatabaseStatus | Get the progression status of a previous call to moveUserToOrganization.
-[**legacyProvisioningGetUser()**](LegacyProvisioningApi.md#legacyProvisioningGetUser) | **GET** /apps/api/kronos.provisioning.getUser | Get all informations about a user.
-[**legacyProvisioningGetUserList()**](LegacyProvisioningApi.md#legacyProvisioningGetUserList) | **GET** /apps/api/kronos.provisioning.getUserList | List all users in an organization.
-[**legacyProvisioningGetWebuserDatabaseListByValue()**](LegacyProvisioningApi.md#legacyProvisioningGetWebuserDatabaseListByValue) | **GET** /apps/api/kronos.provisioning.getWebuserDatabaseListByValue | Get a list of webuser&#39;s databases.
-[**legacyProvisioningMonitorDatagateways()**](LegacyProvisioningApi.md#legacyProvisioningMonitorDatagateways) | **GET** /apps/api/kronos.provisioning.monitorDatagateways | Monitor stats of the datagateways for a given environment.
-[**legacyProvisioningMoveUserToOrganization()**](LegacyProvisioningApi.md#legacyProvisioningMoveUserToOrganization) | **POST** /apps/api/kronos.provisioning.moveUserToOrganization | Move a user to another organization.
-[**legacyProvisioningSyncControlData()**](LegacyProvisioningApi.md#legacyProvisioningSyncControlData) | **POST** /apps/api/kronos.provisioning.syncControlData | Sync one database pilotage.
-[**legacyProvisioningSyncControlDataForAllDatabase()**](LegacyProvisioningApi.md#legacyProvisioningSyncControlDataForAllDatabase) | **POST** /apps/api/kronos.provisioning.syncControlDataForAllDatabase | Use gearman to sync all database for a given profile.
-[**legacyProvisioningUnlockUser()**](LegacyProvisioningApi.md#legacyProvisioningUnlockUser) | **POST** /apps/api/kronos.provisioning.unlockUser | Unlock a user.
-[**legacyProvisioningUpdateUser()**](LegacyProvisioningApi.md#legacyProvisioningUpdateUser) | **POST** /apps/api/kronos.provisioning.updateUser | Update a user.
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**legacyProvisioningActivateFnaForOrganization()**](LegacyProvisioningApi.md#legacyProvisioningActivateFnaForOrganization) | **POST** /apps/provisioning/kronos.provisioning.activateFnaForOrganization | Activate FNA for an organization. |
+| [**legacyProvisioningActivateUser()**](LegacyProvisioningApi.md#legacyProvisioningActivateUser) | **POST** /apps/provisioning/kronos.provisioning.activateUser | Activate a user. |
+| [**legacyProvisioningAddOrganization()**](LegacyProvisioningApi.md#legacyProvisioningAddOrganization) | **POST** /apps/provisioning/kronos.provisioning.addOrganization | Add a new organization. |
+| [**legacyProvisioningAddUser()**](LegacyProvisioningApi.md#legacyProvisioningAddUser) | **POST** /apps/provisioning/kronos.provisioning.addUser | Add a new user. |
+| [**legacyProvisioningChangeDatabaseProfile()**](LegacyProvisioningApi.md#legacyProvisioningChangeDatabaseProfile) | **POST** /apps/provisioning/kronos.provisioning.changeDatabaseProfile | Change database profile. |
+| [**legacyProvisioningClearCache()**](LegacyProvisioningApi.md#legacyProvisioningClearCache) | **POST** /apps/provisioning/kronos.provisioning.clearCache | Clear cache. |
+| [**legacyProvisioningCloseUserSession()**](LegacyProvisioningApi.md#legacyProvisioningCloseUserSession) | **POST** /apps/provisioning/kronos.provisioning.closeUserSession | Close all sessions open for a user. |
+| [**legacyProvisioningDeactivateUser()**](LegacyProvisioningApi.md#legacyProvisioningDeactivateUser) | **POST** /apps/provisioning/kronos.provisioning.deactivateUser | Deactivate a user. |
+| [**legacyProvisioningDeleteOrganization()**](LegacyProvisioningApi.md#legacyProvisioningDeleteOrganization) | **POST** /apps/provisioning/kronos.provisioning.deleteOrganization | Delete an organization. |
+| [**legacyProvisioningDeleteUser()**](LegacyProvisioningApi.md#legacyProvisioningDeleteUser) | **POST** /apps/provisioning/kronos.provisioning.deleteUser | Delete a user. |
+| [**legacyProvisioningEnableContactPersonalizedFieldsModule()**](LegacyProvisioningApi.md#legacyProvisioningEnableContactPersonalizedFieldsModule) | **POST** /apps/provisioning/kronos.provisioning.enableContactPersonalizedFieldsModule | Enable Contact Personalized Fields module for a database. |
+| [**legacyProvisioningEnableFnaForUser()**](LegacyProvisioningApi.md#legacyProvisioningEnableFnaForUser) | **POST** /apps/provisioning/kronos.provisioning.enableFnaForUser | Enable FNA for user. |
+| [**legacyProvisioningGetCrmGatewaysAccessReport()**](LegacyProvisioningApi.md#legacyProvisioningGetCrmGatewaysAccessReport) | **GET** /apps/provisioning/kronos.provisioning.getCrmGatewaysAccessReport | Get a report of active accesses for all CRM datagateways. |
+| [**legacyProvisioningGetFFGatewaysAccessReport()**](LegacyProvisioningApi.md#legacyProvisioningGetFFGatewaysAccessReport) | **GET** /apps/provisioning/kronos.provisioning.getFFGatewaysAccessReport | Get a report of active accesses for all FF datagateways. |
+| [**legacyProvisioningGetGatewayArchiveByDate()**](LegacyProvisioningApi.md#legacyProvisioningGetGatewayArchiveByDate) | **GET** /apps/provisioning/kronos.provisioning.getGatewayArchiveByDate | Get the archives for a given gateway at the given date. |
+| [**legacyProvisioningGetGatewayArchiveListByDate()**](LegacyProvisioningApi.md#legacyProvisioningGetGatewayArchiveListByDate) | **GET** /apps/provisioning/kronos.provisioning.getGatewayArchiveListByDate | Get the archives list for a given gateway at the given date. |
+| [**legacyProvisioningGetLoginLog()**](LegacyProvisioningApi.md#legacyProvisioningGetLoginLog) | **GET** /apps/provisioning/kronos.provisioning.getLoginLog | Get the login log based on given options. |
+| [**legacyProvisioningGetMoveUserToOrganizationStatus()**](LegacyProvisioningApi.md#legacyProvisioningGetMoveUserToOrganizationStatus) | **GET** /apps/provisioning/kronos.provisioning.getMoveUserToOrganizationStatus | Get the progression status of a previous call to moveUserToOrganization. |
+| [**legacyProvisioningGetOrganization()**](LegacyProvisioningApi.md#legacyProvisioningGetOrganization) | **GET** /apps/provisioning/kronos.provisioning.getOrganization | Get all informations about an organization. |
+| [**legacyProvisioningGetOrganizationList()**](LegacyProvisioningApi.md#legacyProvisioningGetOrganizationList) | **GET** /apps/provisioning/kronos.provisioning.getOrganizationList | List all organizations. |
+| [**legacyProvisioningGetOrganizationStatus()**](LegacyProvisioningApi.md#legacyProvisioningGetOrganizationStatus) | **POST** /apps/provisioning/kronos.provisioning.getOrganizationStatus | Return the state of a given database. |
+| [**legacyProvisioningGetSyncControlDataForAllDatabaseStatus()**](LegacyProvisioningApi.md#legacyProvisioningGetSyncControlDataForAllDatabaseStatus) | **GET** /apps/provisioning/kronos.provisioning.getSyncControlDataForAllDatabaseStatus | Get the progression status of a previous call to moveUserToOrganization. |
+| [**legacyProvisioningGetUser()**](LegacyProvisioningApi.md#legacyProvisioningGetUser) | **GET** /apps/provisioning/kronos.provisioning.getUser | Get all informations about a user. |
+| [**legacyProvisioningGetUserList()**](LegacyProvisioningApi.md#legacyProvisioningGetUserList) | **GET** /apps/provisioning/kronos.provisioning.getUserList | List all users in an organization. |
+| [**legacyProvisioningGetWebuserDatabaseListByValue()**](LegacyProvisioningApi.md#legacyProvisioningGetWebuserDatabaseListByValue) | **GET** /apps/provisioning/kronos.provisioning.getWebuserDatabaseListByValue | Get a list of webuser&#39;s databases. |
+| [**legacyProvisioningMonitorDatagateways()**](LegacyProvisioningApi.md#legacyProvisioningMonitorDatagateways) | **GET** /apps/provisioning/kronos.provisioning.monitorDatagateways | Monitor stats of the datagateways for a given environment. |
+| [**legacyProvisioningMoveUserToOrganization()**](LegacyProvisioningApi.md#legacyProvisioningMoveUserToOrganization) | **POST** /apps/provisioning/kronos.provisioning.moveUserToOrganization | Move a user to another organization. |
+| [**legacyProvisioningSyncControlData()**](LegacyProvisioningApi.md#legacyProvisioningSyncControlData) | **POST** /apps/provisioning/kronos.provisioning.syncControlData | Sync one database pilotage. |
+| [**legacyProvisioningSyncControlDataForAllDatabase()**](LegacyProvisioningApi.md#legacyProvisioningSyncControlDataForAllDatabase) | **POST** /apps/provisioning/kronos.provisioning.syncControlDataForAllDatabase | Use gearman to sync all database for a given profile. |
+| [**legacyProvisioningUnlockUser()**](LegacyProvisioningApi.md#legacyProvisioningUnlockUser) | **POST** /apps/provisioning/kronos.provisioning.unlockUser | Unlock a user. |
+| [**legacyProvisioningUpdateUser()**](LegacyProvisioningApi.md#legacyProvisioningUpdateUser) | **POST** /apps/provisioning/kronos.provisioning.updateUser | Update a user. |
 
 
 ## `legacyProvisioningActivateFnaForOrganization()`
@@ -75,10 +75,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **orgId** | **string**| Organization identifier. |
- **activateOnly** | **bool**| Only activate FNA if true, create FNA accounts for all active users if false. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **orgId** | **string**| Organization identifier. | |
+| **activateOnly** | **bool**| Only activate FNA if true, create FNA accounts for all active users if false. | |
 
 ### Return type
 
@@ -134,9 +134,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userId** | **string**| User identifier. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **string**| User identifier. | |
 
 ### Return type
 
@@ -194,9 +194,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **legacyProvisioningOrganizationPayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationPayloadRequest**](../Model/LegacyProvisioningOrganizationPayloadRequest.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **legacyProvisioningOrganizationPayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningOrganizationPayloadRequest**](../Model/LegacyProvisioningOrganizationPayloadRequest.md)|  | |
 
 ### Return type
 
@@ -253,10 +253,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **orgId** | **string**| Organization identifier. |
- **legacyProvisioningUserPayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserPayloadRequest**](../Model/LegacyProvisioningUserPayloadRequest.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **orgId** | **string**| Organization identifier. | |
+| **legacyProvisioningUserPayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserPayloadRequest**](../Model/LegacyProvisioningUserPayloadRequest.md)|  | |
 
 ### Return type
 
@@ -313,10 +313,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **orgId** | **string**| Organization identifier. |
- **legacyProvisioningChangeDatabaseProfilePayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningChangeDatabaseProfilePayloadRequest**](../Model/LegacyProvisioningChangeDatabaseProfilePayloadRequest.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **orgId** | **string**| Organization identifier. | |
+| **legacyProvisioningChangeDatabaseProfilePayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningChangeDatabaseProfilePayloadRequest**](../Model/LegacyProvisioningChangeDatabaseProfilePayloadRequest.md)|  | |
 
 ### Return type
 
@@ -372,9 +372,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **legacyProvisioningClearCachePayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningClearCachePayloadRequest**](../Model/LegacyProvisioningClearCachePayloadRequest.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **legacyProvisioningClearCachePayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningClearCachePayloadRequest**](../Model/LegacyProvisioningClearCachePayloadRequest.md)|  | |
 
 ### Return type
 
@@ -430,9 +430,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userId** | **string**| User identifier. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **string**| User identifier. | |
 
 ### Return type
 
@@ -488,9 +488,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userId** | **string**| User identifier. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **string**| User identifier. | |
 
 ### Return type
 
@@ -548,11 +548,11 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **orgId** | **string**| Organization identifier. |
- **legacyProvisioningDeleteOrganizationOptionRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningDeleteOrganizationOptionRequest**](../Model/LegacyProvisioningDeleteOrganizationOptionRequest.md)|  |
- **testIfOrgExists** | **bool**| Test if the organization exists. | [optional]
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **orgId** | **string**| Organization identifier. | |
+| **legacyProvisioningDeleteOrganizationOptionRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningDeleteOrganizationOptionRequest**](../Model/LegacyProvisioningDeleteOrganizationOptionRequest.md)|  | |
+| **testIfOrgExists** | **bool**| Test if the organization exists. | [optional] |
 
 ### Return type
 
@@ -609,10 +609,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userId** | **string**| User identifier. |
- **legacyProvisioningDeleteUserOptionRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningDeleteUserOptionRequest**](../Model/LegacyProvisioningDeleteUserOptionRequest.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **string**| User identifier. | |
+| **legacyProvisioningDeleteUserOptionRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningDeleteUserOptionRequest**](../Model/LegacyProvisioningDeleteUserOptionRequest.md)|  | |
 
 ### Return type
 
@@ -668,9 +668,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **orgId** | **string**| Organization identifier. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **orgId** | **string**| Organization identifier. | |
 
 ### Return type
 
@@ -726,9 +726,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userId** | **string**| User identifier. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **string**| User identifier. | |
 
 ### Return type
 
@@ -894,9 +894,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **legacyProvisioningGatewayArchivePayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGatewayArchivePayloadRequest**](../Model/LegacyProvisioningGatewayArchivePayloadRequest.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **legacyProvisioningGatewayArchivePayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGatewayArchivePayloadRequest**](../Model/LegacyProvisioningGatewayArchivePayloadRequest.md)|  | |
 
 ### Return type
 
@@ -952,9 +952,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **legacyProvisioningGatewayArchivePayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGatewayArchivePayloadRequest**](../Model/LegacyProvisioningGatewayArchivePayloadRequest.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **legacyProvisioningGatewayArchivePayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGatewayArchivePayloadRequest**](../Model/LegacyProvisioningGatewayArchivePayloadRequest.md)|  | |
 
 ### Return type
 
@@ -1010,9 +1010,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **legacyProvisioningLoginLogOptionsRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningLoginLogOptionsRequest**](../Model/LegacyProvisioningLoginLogOptionsRequest.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **legacyProvisioningLoginLogOptionsRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningLoginLogOptionsRequest**](../Model/LegacyProvisioningLoginLogOptionsRequest.md)|  | |
 
 ### Return type
 
@@ -1070,9 +1070,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **moveId** | **string**| Move request unique identifier. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **moveId** | **string**| Move request unique identifier. | |
 
 ### Return type
 
@@ -1128,9 +1128,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **orgId** | **string**| Organization identifier. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **orgId** | **string**| Organization identifier. | |
 
 ### Return type
 
@@ -1241,9 +1241,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **orgId** | **string**| Organization identifier. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **orgId** | **string**| Organization identifier. | |
 
 ### Return type
 
@@ -1301,9 +1301,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **jobId** | **string**| Job identifier. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **jobId** | **string**| Job identifier. | |
 
 ### Return type
 
@@ -1359,9 +1359,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userId** | **string**| User identifier. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **string**| User identifier. | |
 
 ### Return type
 
@@ -1417,9 +1417,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **legacyProvisioningUserListOptionsRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserListOptionsRequest**](../Model/LegacyProvisioningUserListOptionsRequest.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **legacyProvisioningUserListOptionsRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserListOptionsRequest**](../Model/LegacyProvisioningUserListOptionsRequest.md)|  | |
 
 ### Return type
 
@@ -1475,9 +1475,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **legacyProvisioningWebuserDatabasePayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningWebuserDatabasePayloadRequest**](../Model/LegacyProvisioningWebuserDatabasePayloadRequest.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **legacyProvisioningWebuserDatabasePayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningWebuserDatabasePayloadRequest**](../Model/LegacyProvisioningWebuserDatabasePayloadRequest.md)|  | |
 
 ### Return type
 
@@ -1533,9 +1533,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **environment** | **string**| The environment. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **environment** | **string**| The environment. | |
 
 ### Return type
 
@@ -1592,10 +1592,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userId** | **string**| User identifier. |
- **toOrgId** | **string**| Unique identifier of the target organization. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **string**| User identifier. | |
+| **toOrgId** | **string**| Unique identifier of the target organization. | |
 
 ### Return type
 
@@ -1651,9 +1651,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **database** | **string**| Database identifier. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **database** | **string**| Database identifier. | |
 
 ### Return type
 
@@ -1709,9 +1709,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **profile** | **string**| Profile identifier. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **profile** | **string**| Profile identifier. | |
 
 ### Return type
 
@@ -1767,9 +1767,9 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userId** | **string**| User identifier. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **string**| User identifier. | |
 
 ### Return type
 
@@ -1826,10 +1826,10 @@ try {
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **userId** | **string**| User identifier. |
- **legacyProvisioningUserPayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserPayloadRequest**](../Model/LegacyProvisioningUserPayloadRequest.md)|  |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **string**| User identifier. | |
+| **legacyProvisioningUserPayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserPayloadRequest**](../Model/LegacyProvisioningUserPayloadRequest.md)|  | |
 
 ### Return type
 
