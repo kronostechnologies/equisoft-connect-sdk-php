@@ -599,7 +599,7 @@ class LegacyProvisioningApi
         }
 
 
-        $resourcePath = '/apps/api/kronos.provisioning.activateFnaForOrganization';
+        $resourcePath = '/apps/provisioning/kronos.provisioning.activateFnaForOrganization';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1072,7 +1072,7 @@ class LegacyProvisioningApi
         }
 
 
-        $resourcePath = '/apps/api/kronos.provisioning.activateUser';
+        $resourcePath = '/apps/provisioning/kronos.provisioning.activateUser';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1501,7 +1501,7 @@ class LegacyProvisioningApi
         }
 
 
-        $resourcePath = '/apps/api/kronos.provisioning.addOrganization';
+        $resourcePath = '/apps/provisioning/kronos.provisioning.addOrganization';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1975,7 +1975,7 @@ class LegacyProvisioningApi
         }
 
 
-        $resourcePath = '/apps/api/kronos.provisioning.addUser';
+        $resourcePath = '/apps/provisioning/kronos.provisioning.addUser';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2458,7 +2458,7 @@ class LegacyProvisioningApi
         }
 
 
-        $resourcePath = '/apps/api/kronos.provisioning.changeDatabaseProfile';
+        $resourcePath = '/apps/provisioning/kronos.provisioning.changeDatabaseProfile';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2894,7 +2894,7 @@ class LegacyProvisioningApi
         }
 
 
-        $resourcePath = '/apps/api/kronos.provisioning.clearCache';
+        $resourcePath = '/apps/provisioning/kronos.provisioning.clearCache';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3356,7 +3356,7 @@ class LegacyProvisioningApi
         }
 
 
-        $resourcePath = '/apps/api/kronos.provisioning.closeUserSession';
+        $resourcePath = '/apps/provisioning/kronos.provisioning.closeUserSession';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3820,7 +3820,7 @@ class LegacyProvisioningApi
         }
 
 
-        $resourcePath = '/apps/api/kronos.provisioning.deactivateUser';
+        $resourcePath = '/apps/provisioning/kronos.provisioning.deactivateUser';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -4302,7 +4302,7 @@ class LegacyProvisioningApi
 
 
 
-        $resourcePath = '/apps/api/kronos.provisioning.deleteOrganization';
+        $resourcePath = '/apps/provisioning/kronos.provisioning.deleteOrganization';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -4794,7 +4794,7 @@ class LegacyProvisioningApi
         }
 
 
-        $resourcePath = '/apps/api/kronos.provisioning.deleteUser';
+        $resourcePath = '/apps/provisioning/kronos.provisioning.deleteUser';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -5265,7 +5265,7 @@ class LegacyProvisioningApi
         }
 
 
-        $resourcePath = '/apps/api/kronos.provisioning.enableContactPersonalizedFieldsModule';
+        $resourcePath = '/apps/provisioning/kronos.provisioning.enableContactPersonalizedFieldsModule';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -5729,7 +5729,7 @@ class LegacyProvisioningApi
         }
 
 
-        $resourcePath = '/apps/api/kronos.provisioning.enableFnaForUser';
+        $resourcePath = '/apps/provisioning/kronos.provisioning.enableFnaForUser';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -6146,7 +6146,7 @@ class LegacyProvisioningApi
     {
 
 
-        $resourcePath = '/apps/api/kronos.provisioning.getCrmGatewaysAccessReport';
+        $resourcePath = '/apps/provisioning/kronos.provisioning.getCrmGatewaysAccessReport';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -6554,7 +6554,7 @@ class LegacyProvisioningApi
     {
 
 
-        $resourcePath = '/apps/api/kronos.provisioning.getFFGatewaysAccessReport';
+        $resourcePath = '/apps/provisioning/kronos.provisioning.getFFGatewaysAccessReport';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -6974,7 +6974,7 @@ class LegacyProvisioningApi
         }
 
 
-        $resourcePath = '/apps/api/kronos.provisioning.getGatewayArchiveByDate';
+        $resourcePath = '/apps/provisioning/kronos.provisioning.getGatewayArchiveByDate';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -7401,7 +7401,7 @@ class LegacyProvisioningApi
         }
 
 
-        $resourcePath = '/apps/api/kronos.provisioning.getGatewayArchiveListByDate';
+        $resourcePath = '/apps/provisioning/kronos.provisioning.getGatewayArchiveListByDate';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -7863,7 +7863,7 @@ class LegacyProvisioningApi
         }
 
 
-        $resourcePath = '/apps/api/kronos.provisioning.getLoginLog';
+        $resourcePath = '/apps/provisioning/kronos.provisioning.getLoginLog';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -8325,7 +8325,7 @@ class LegacyProvisioningApi
         }
 
 
-        $resourcePath = '/apps/api/kronos.provisioning.getMoveUserToOrganizationStatus';
+        $resourcePath = '/apps/provisioning/kronos.provisioning.getMoveUserToOrganizationStatus';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -8789,7 +8789,7 @@ class LegacyProvisioningApi
         }
 
 
-        $resourcePath = '/apps/api/kronos.provisioning.getOrganization';
+        $resourcePath = '/apps/provisioning/kronos.provisioning.getOrganization';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -9171,7 +9171,7 @@ class LegacyProvisioningApi
     {
 
 
-        $resourcePath = '/apps/api/kronos.provisioning.getOrganizationList';
+        $resourcePath = '/apps/provisioning/kronos.provisioning.getOrganizationList';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -9626,7 +9626,7 @@ class LegacyProvisioningApi
         }
 
 
-        $resourcePath = '/apps/api/kronos.provisioning.getOrganizationStatus';
+        $resourcePath = '/apps/provisioning/kronos.provisioning.getOrganizationStatus';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -10090,7 +10090,7 @@ class LegacyProvisioningApi
         }
 
 
-        $resourcePath = '/apps/api/kronos.provisioning.getSyncControlDataForAllDatabaseStatus';
+        $resourcePath = '/apps/provisioning/kronos.provisioning.getSyncControlDataForAllDatabaseStatus';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -10554,7 +10554,7 @@ class LegacyProvisioningApi
         }
 
 
-        $resourcePath = '/apps/api/kronos.provisioning.getUser';
+        $resourcePath = '/apps/provisioning/kronos.provisioning.getUser';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -11018,7 +11018,7 @@ class LegacyProvisioningApi
         }
 
 
-        $resourcePath = '/apps/api/kronos.provisioning.getUserList';
+        $resourcePath = '/apps/provisioning/kronos.provisioning.getUserList';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -11445,7 +11445,7 @@ class LegacyProvisioningApi
         }
 
 
-        $resourcePath = '/apps/api/kronos.provisioning.getWebuserDatabaseListByValue';
+        $resourcePath = '/apps/provisioning/kronos.provisioning.getWebuserDatabaseListByValue';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -11872,7 +11872,7 @@ class LegacyProvisioningApi
         }
 
 
-        $resourcePath = '/apps/api/kronos.provisioning.monitorDatagateways';
+        $resourcePath = '/apps/provisioning/kronos.provisioning.monitorDatagateways';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -12348,7 +12348,7 @@ class LegacyProvisioningApi
         }
 
 
-        $resourcePath = '/apps/api/kronos.provisioning.moveUserToOrganization';
+        $resourcePath = '/apps/provisioning/kronos.provisioning.moveUserToOrganization';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -12786,7 +12786,7 @@ class LegacyProvisioningApi
         }
 
 
-        $resourcePath = '/apps/api/kronos.provisioning.syncControlData';
+        $resourcePath = '/apps/provisioning/kronos.provisioning.syncControlData';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -13215,7 +13215,7 @@ class LegacyProvisioningApi
         }
 
 
-        $resourcePath = '/apps/api/kronos.provisioning.syncControlDataForAllDatabase';
+        $resourcePath = '/apps/provisioning/kronos.provisioning.syncControlDataForAllDatabase';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -13679,7 +13679,7 @@ class LegacyProvisioningApi
         }
 
 
-        $resourcePath = '/apps/api/kronos.provisioning.unlockUser';
+        $resourcePath = '/apps/provisioning/kronos.provisioning.unlockUser';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -14155,7 +14155,7 @@ class LegacyProvisioningApi
         }
 
 
-        $resourcePath = '/apps/api/kronos.provisioning.updateUser';
+        $resourcePath = '/apps/provisioning/kronos.provisioning.updateUser';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
