@@ -1090,6 +1090,7 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
      * Gets univeris
      *
      * @return bool|null
+     * @deprecated
      */
     public function getUniveris()
     {
@@ -1102,6 +1103,7 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
      * @param bool|null $univeris Is Univeris. Deprecated: Univeris is not supported anymore and will be removed from future versions).
      *
      * @return self
+     * @deprecated
      */
     public function setUniveris($univeris)
     {

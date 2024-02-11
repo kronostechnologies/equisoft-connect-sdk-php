@@ -560,6 +560,7 @@ class MovementClientBaseUsingFileMovementPayload implements ModelInterface, Arra
      * Gets univerisFile
      *
      * @return string|null
+     * @deprecated
      */
     public function getUniverisFile()
     {
@@ -572,6 +573,7 @@ class MovementClientBaseUsingFileMovementPayload implements ModelInterface, Arra
      * @param string|null $univerisFile Path to the Univeris file. Deprecated: Univeris file is not supported anymore and will be removed in a future version.
      *
      * @return self
+     * @deprecated
      */
     public function setUniverisFile($univerisFile)
     {

@@ -817,6 +817,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
      * Gets univerisFile
      *
      * @return string|null
+     * @deprecated
      */
     public function getUniverisFile()
     {
@@ -829,6 +830,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
      * @param string|null $univerisFile Path to the Univeris file. Deprecated: Univeris file is not supported anymore and will be removed in a future version.
      *
      * @return self
+     * @deprecated
      */
     public function setUniverisFile($univerisFile)
     {

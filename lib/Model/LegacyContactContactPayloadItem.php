@@ -2055,6 +2055,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
      * Gets publish
      *
      * @return string|null
+     * @deprecated
      */
     public function getPublish()
     {
@@ -2067,6 +2068,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, \J
      * @param string|null $publish Publish (boolean).
      *
      * @return self
+     * @deprecated
      */
     public function setPublish($publish)
     {

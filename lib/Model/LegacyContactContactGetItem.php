@@ -2174,6 +2174,7 @@ class LegacyContactContactGetItem implements ModelInterface, ArrayAccess, \JsonS
      * Gets publish
      *
      * @return string|null
+     * @deprecated
      */
     public function getPublish()
     {
@@ -2186,6 +2187,7 @@ class LegacyContactContactGetItem implements ModelInterface, ArrayAccess, \JsonS
      * @param string|null $publish Publish (boolean).
      *
      * @return self
+     * @deprecated
      */
     public function setPublish($publish)
     {

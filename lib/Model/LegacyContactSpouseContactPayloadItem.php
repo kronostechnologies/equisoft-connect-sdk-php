@@ -1957,6 +1957,7 @@ class LegacyContactSpouseContactPayloadItem implements ModelInterface, ArrayAcce
      * Gets publish
      *
      * @return string|null
+     * @deprecated
      */
     public function getPublish()
     {
@@ -1969,6 +1970,7 @@ class LegacyContactSpouseContactPayloadItem implements ModelInterface, ArrayAcce
      * @param string|null $publish Publish (boolean).
      *
      * @return self
+     * @deprecated
      */
     public function setPublish($publish)
     {

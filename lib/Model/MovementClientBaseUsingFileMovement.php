@@ -867,6 +867,7 @@ class MovementClientBaseUsingFileMovement implements ModelInterface, ArrayAccess
      * Gets univeris
      *
      * @return bool|null
+     * @deprecated
      */
     public function getUniveris()
     {
@@ -879,6 +880,7 @@ class MovementClientBaseUsingFileMovement implements ModelInterface, ArrayAccess
      * @param bool|null $univeris Is Univeris. Deprecated: Univeris is not supported anymore and will be removed from future versions).
      *
      * @return self
+     * @deprecated
      */
     public function setUniveris($univeris)
     {
