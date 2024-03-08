@@ -494,10 +494,15 @@ Authentication schemes defined for the API:
 - **Authorization URL**: `https://secure.kronos-web.com/oauth/authorize`
 - **Scopes**: 
     - **crm:contact**: Read/Write access on contacts
-    - **crm:event**: Read/Write access on events
     - **crm:database**: Read/Write access on databases
+    - **crm:datagateway**: Read/Write access on gateways
+    - **crm:event**: Read/Write access on events
+    - **crm:fieldValue**: Read/Write access on field values
     - **crm:file**: Read/Write access on documents
+    - **crm:insurance:read**: Read access on insurance
+    - **crm:investment:read**: Read access on investment
     - **crm:movement**: Read/Write access on movement
+    - **crm:remoteAccount**: Read/Write access on mail accounts
     - **crm:task**: Read/Write access on tasks
     - **crm:user**: Read/Write access on users
     - **profile**: Read/Write access on profile
