@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **databaseName** | **string** | Database name |
 **displayName** | **string** | Display name |
 **profileName** | **string** | Profile name |
-**state** | **string** | Database state |
+**state** | [**\Equisoft\SDK\EquisoftConnect\Model\DatabaseState**](DatabaseState.md) |  |
 **datagatewayEnabled** | **bool** | Is Datagateway Enabled |
 **isMultiUser** | **bool** | Is Multi User |
 **equisoftPlanEnabled** | **bool** | Is Equisoft Plan Enabled | [optional]

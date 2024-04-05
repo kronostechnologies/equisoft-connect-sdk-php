@@ -44,6 +44,7 @@ docs/Model/ContextUser.md
 docs/Model/ContextUserContext.md
 docs/Model/CredentialDto.md
 docs/Model/CredentialsResponse.md
+docs/Model/DatabaseState.md
 docs/Model/DatabaseUpdateStatePayload.md
 docs/Model/DatabasesDatabase.md
 docs/Model/DatabasesListDatabasesResponse.md
@@ -329,6 +330,7 @@ lib/Model/ContextUser.php
 lib/Model/ContextUserContext.php
 lib/Model/CredentialDto.php
 lib/Model/CredentialsResponse.php
+lib/Model/DatabaseState.php
 lib/Model/DatabaseUpdateStatePayload.php
 lib/Model/DatabasesDatabase.php
 lib/Model/DatabasesListDatabasesResponse.php
@@ -613,6 +615,7 @@ test/Model/ContextUserContextTest.php
 test/Model/ContextUserTest.php
 test/Model/CredentialDtoTest.php
 test/Model/CredentialsResponseTest.php
+test/Model/DatabaseStateTest.php
 test/Model/DatabaseUpdateStatePayloadTest.php
 test/Model/DatabasesDatabaseTest.php
 test/Model/DatabasesListDatabasesResponseTest.php

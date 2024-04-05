@@ -245,6 +245,7 @@ Class | Method | HTTP request | Description
 - [ContextUserContext](docs/Model/ContextUserContext.md)
 - [CredentialDto](docs/Model/CredentialDto.md)
 - [CredentialsResponse](docs/Model/CredentialsResponse.md)
+- [DatabaseState](docs/Model/DatabaseState.md)
 - [DatabaseUpdateStatePayload](docs/Model/DatabaseUpdateStatePayload.md)
 - [DatabasesDatabase](docs/Model/DatabasesDatabase.md)
 - [DatabasesListDatabasesResponse](docs/Model/DatabasesListDatabasesResponse.md)

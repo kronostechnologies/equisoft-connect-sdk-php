@@ -62,7 +62,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
         'databaseName' => 'string',
         'displayName' => 'string',
         'profileName' => 'string',
-        'state' => 'string',
+        'state' => '\Equisoft\SDK\EquisoftConnect\Model\DatabaseState',
         'datagatewayEnabled' => 'bool',
         'isMultiUser' => 'bool',
         'equisoftPlanEnabled' => 'bool',
@@ -538,7 +538,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Gets state
      *
-     * @return string
+     * @return \Equisoft\SDK\EquisoftConnect\Model\DatabaseState
      */
     public function getState()
     {
@@ -548,7 +548,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
     /**
      * Sets state
      *
-     * @param string $state Database state
+     * @param \Equisoft\SDK\EquisoftConnect\Model\DatabaseState $state state
      *
      * @return self
      */
