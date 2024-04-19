@@ -302,8 +302,6 @@ Class | Method | HTTP request | Description
 - [GatewaysFullfinanceScrapeJob](docs/Model/GatewaysFullfinanceScrapeJob.md)
 - [GatewaysFullfinanceScrapeJobStatus](docs/Model/GatewaysFullfinanceScrapeJobStatus.md)
 - [GatewaysGatewayDto](docs/Model/GatewaysGatewayDto.md)
-- [GatewaysGatewayName](docs/Model/GatewaysGatewayName.md)
-- [GatewaysGatewayType](docs/Model/GatewaysGatewayType.md)
 - [GatewaysGatewaysResponse](docs/Model/GatewaysGatewaysResponse.md)
 - [GatewaysListCredentialsResponse](docs/Model/GatewaysListCredentialsResponse.md)
 - [GroupUsersListGroupUsersResponse](docs/Model/GroupUsersListGroupUsersResponse.md)
