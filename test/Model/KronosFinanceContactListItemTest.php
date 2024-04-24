@@ -350,6 +350,15 @@ class KronosFinanceContactListItemTest extends TestCase
     }
 
     /**
+     * Test attribute "customerNumber"
+     */
+    public function testPropertyCustomerNumber()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "dateModified"
      */
     public function testPropertyDateModified()

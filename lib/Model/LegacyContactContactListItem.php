@@ -87,6 +87,7 @@ class LegacyContactContactListItem implements ModelInterface, ArrayAccess, \Json
         'extNumber' => 'string',
         'birthdate' => 'string',
         'gender' => 'string',
+        'customerNumber' => 'string',
         'dateModified' => 'string',
         'dateCreated' => 'string',
         'lastUpdateDate' => 'string',
@@ -138,6 +139,7 @@ class LegacyContactContactListItem implements ModelInterface, ArrayAccess, \Json
         'extNumber' => null,
         'birthdate' => null,
         'gender' => null,
+        'customerNumber' => null,
         'dateModified' => null,
         'dateCreated' => null,
         'lastUpdateDate' => null,
@@ -187,6 +189,7 @@ class LegacyContactContactListItem implements ModelInterface, ArrayAccess, \Json
 		'extNumber' => false,
 		'birthdate' => false,
 		'gender' => false,
+		'customerNumber' => false,
 		'dateModified' => false,
 		'dateCreated' => false,
 		'lastUpdateDate' => false,
@@ -316,6 +319,7 @@ class LegacyContactContactListItem implements ModelInterface, ArrayAccess, \Json
         'extNumber' => 'extNumber',
         'birthdate' => 'birthdate',
         'gender' => 'gender',
+        'customerNumber' => 'customerNumber',
         'dateModified' => 'date_modified',
         'dateCreated' => 'date_created',
         'lastUpdateDate' => 'lastUpdateDate',
@@ -365,6 +369,7 @@ class LegacyContactContactListItem implements ModelInterface, ArrayAccess, \Json
         'extNumber' => 'setExtNumber',
         'birthdate' => 'setBirthdate',
         'gender' => 'setGender',
+        'customerNumber' => 'setCustomerNumber',
         'dateModified' => 'setDateModified',
         'dateCreated' => 'setDateCreated',
         'lastUpdateDate' => 'setLastUpdateDate',
@@ -414,6 +419,7 @@ class LegacyContactContactListItem implements ModelInterface, ArrayAccess, \Json
         'extNumber' => 'getExtNumber',
         'birthdate' => 'getBirthdate',
         'gender' => 'getGender',
+        'customerNumber' => 'getCustomerNumber',
         'dateModified' => 'getDateModified',
         'dateCreated' => 'getDateCreated',
         'lastUpdateDate' => 'getLastUpdateDate',
@@ -514,6 +520,7 @@ class LegacyContactContactListItem implements ModelInterface, ArrayAccess, \Json
         $this->setIfExists('extNumber', $data ?? [], null);
         $this->setIfExists('birthdate', $data ?? [], null);
         $this->setIfExists('gender', $data ?? [], null);
+        $this->setIfExists('customerNumber', $data ?? [], null);
         $this->setIfExists('dateModified', $data ?? [], null);
         $this->setIfExists('dateCreated', $data ?? [], null);
         $this->setIfExists('lastUpdateDate', $data ?? [], null);
@@ -1375,6 +1382,33 @@ class LegacyContactContactListItem implements ModelInterface, ArrayAccess, \Json
             throw new \InvalidArgumentException('non-nullable gender cannot be null');
         }
         $this->container['gender'] = $gender;
+
+        return $this;
+    }
+
+    /**
+     * Gets customerNumber
+     *
+     * @return string|null
+     */
+    public function getCustomerNumber()
+    {
+        return $this->container['customerNumber'];
+    }
+
+    /**
+     * Sets customerNumber
+     *
+     * @param string|null $customerNumber Customer Number.
+     *
+     * @return self
+     */
+    public function setCustomerNumber($customerNumber)
+    {
+        if (is_null($customerNumber)) {
+            throw new \InvalidArgumentException('non-nullable customerNumber cannot be null');
+        }
+        $this->container['customerNumber'] = $customerNumber;
 
         return $this;
     }

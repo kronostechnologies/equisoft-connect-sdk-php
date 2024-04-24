@@ -34,6 +34,7 @@ Name | Type | Description | Notes
 **extNumber** | **string** | Industrielle Alliance Only. | [optional]
 **birthdate** | **string** | Birthdate. | [optional]
 **gender** | **string** | Gender of the contact. Either MALE or FEMALE. | [optional]
+**customerNumber** | **string** | Customer Number. | [optional]
 **dateModified** | **string** | Date modified. | [optional]
 **dateCreated** | **string** | Date created. | [optional]
 **lastUpdateDate** | **string** | Last update date. | [optional]
