@@ -1573,7 +1573,7 @@ class KronosFinanceGetContactItem implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets gender
      *
-     * @param string|null $gender Gender of the contact. Either MALE or FEMALE.
+     * @param string|null $gender Gender of the contact. Either MALE, FEMALE or UNKNOWN.
      *
      * @return self
      */

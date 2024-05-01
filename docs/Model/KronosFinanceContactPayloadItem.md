@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 **linkedinLink** | **string** | LinkedIn link. | [optional]
 **avatar** | **int** | Avatar. | [optional]
 **picture** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyContactPicture**](LegacyContactPicture.md) |  | [optional]
-**gender** | **string** | Gender of the contact. Either MALE or FEMALE. | [optional]
+**gender** | **string** | Gender of the contact. Either MALE, FEMALE or UNKNOWN. | [optional]
 **sin** | **string** | Sin of the contact. | [optional]
 **birthdate** | **string** | Birthdate of the contact. | [optional]
 **smoker** | **string** | Smoker status of the contact. | [optional]
