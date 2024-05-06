@@ -179,15 +179,6 @@ class LegacyProvisioningUserPayloadTest extends TestCase
     }
 
     /**
-     * Test attribute "gender"
-     */
-    public function testPropertyGender()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "phoneWork"
      */
     public function testPropertyPhoneWork()

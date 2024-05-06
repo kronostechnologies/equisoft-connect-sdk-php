@@ -258,40 +258,6 @@ class LegacyProvisioningUserListOptions implements ModelInterface, ArrayAccess, 
         return self::$openAPIModelName;
     }
 
-    public const ACTIVE_FALSE = 'false';
-    public const ACTIVE_TRUE = 'true';
-    public const ACTIVE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
-    public const LOCKED_FALSE = 'false';
-    public const LOCKED_TRUE = 'true';
-    public const LOCKED_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getActiveAllowableValues()
-    {
-        return [
-            self::ACTIVE_FALSE,
-            self::ACTIVE_TRUE,
-            self::ACTIVE_UNKNOWN_DEFAULT_OPEN_API,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getLockedAllowableValues()
-    {
-        return [
-            self::LOCKED_FALSE,
-            self::LOCKED_TRUE,
-            self::LOCKED_UNKNOWN_DEFAULT_OPEN_API,
-        ];
-    }
 
     /**
      * Associative array for storing property values
@@ -342,24 +308,6 @@ class LegacyProvisioningUserListOptions implements ModelInterface, ArrayAccess, 
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        $allowedValues = $this->getActiveAllowableValues();
-        if (!is_null($this->container['active']) && !in_array($this->container['active'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'active', must be one of '%s'",
-                $this->container['active'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getLockedAllowableValues();
-        if (!is_null($this->container['locked']) && !in_array($this->container['locked'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'locked', must be one of '%s'",
-                $this->container['locked'],
-                implode("', '", $allowedValues)
-            );
-        }
 
         return $invalidProperties;
     }
@@ -416,7 +364,7 @@ class LegacyProvisioningUserListOptions implements ModelInterface, ArrayAccess, 
     /**
      * Sets active
      *
-     * @param string|null $active Filter active users. Default: true.
+     * @param string|null $active Filter active users (false, true).
      *
      * @return self
      */
@@ -424,16 +372,6 @@ class LegacyProvisioningUserListOptions implements ModelInterface, ArrayAccess, 
     {
         if (is_null($active)) {
             throw new \InvalidArgumentException('non-nullable active cannot be null');
-        }
-        $allowedValues = $this->getActiveAllowableValues();
-        if (!in_array($active, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'active', must be one of '%s'",
-                    $active,
-                    implode("', '", $allowedValues)
-                )
-            );
         }
         $this->container['active'] = $active;
 
@@ -453,7 +391,7 @@ class LegacyProvisioningUserListOptions implements ModelInterface, ArrayAccess, 
     /**
      * Sets locked
      *
-     * @param string|null $locked Filter locked users.
+     * @param string|null $locked Filter locked users (false, true).
      *
      * @return self
      */
@@ -461,16 +399,6 @@ class LegacyProvisioningUserListOptions implements ModelInterface, ArrayAccess, 
     {
         if (is_null($locked)) {
             throw new \InvalidArgumentException('non-nullable locked cannot be null');
-        }
-        $allowedValues = $this->getLockedAllowableValues();
-        if (!in_array($locked, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'locked', must be one of '%s'",
-                    $locked,
-                    implode("', '", $allowedValues)
-                )
-            );
         }
         $this->container['locked'] = $locked;
 

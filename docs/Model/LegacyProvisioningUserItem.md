@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **concurrentAccess** | **int** | Number of allowed concurrent accesses with this user. Default 1. | [optional]
 **active** | **string** | Is the user active (N: false, Y: true). | [optional]
 **locked** | **string** | Is the user locked (N: false, Y: true). | [optional]
-**enableMobile** | **string** | Enable Mobile version. Default: false. | [optional]
+**enableMobile** | **bool** | Enable Mobile version. Default: false. | [optional]
 **gender** | **string** | Gender of this user. | [optional]
 **phoneWork** | **string** | Work phone number of this user. | [optional]
 **phoneWorkExtension** | **string** | Extension of work phone number of this user. | [optional]

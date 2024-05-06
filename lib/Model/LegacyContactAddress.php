@@ -324,12 +324,18 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess, \JsonSerializ
         return self::$openAPIModelName;
     }
 
+    public const MAIN_N = 'N';
+    public const MAIN_Y = 'Y';
     public const MAIN_FALSE = 'false';
     public const MAIN_TRUE = 'true';
     public const MAIN_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
+    public const POSTAL_N = 'N';
+    public const POSTAL_Y = 'Y';
     public const POSTAL_FALSE = 'false';
     public const POSTAL_TRUE = 'true';
     public const POSTAL_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
+    public const LOCKED_N = 'N';
+    public const LOCKED_Y = 'Y';
     public const LOCKED_FALSE = 'false';
     public const LOCKED_TRUE = 'true';
     public const LOCKED_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
@@ -342,6 +348,8 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess, \JsonSerializ
     public function getMainAllowableValues()
     {
         return [
+            self::MAIN_N,
+            self::MAIN_Y,
             self::MAIN_FALSE,
             self::MAIN_TRUE,
             self::MAIN_UNKNOWN_DEFAULT_OPEN_API,
@@ -356,6 +364,8 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess, \JsonSerializ
     public function getPostalAllowableValues()
     {
         return [
+            self::POSTAL_N,
+            self::POSTAL_Y,
             self::POSTAL_FALSE,
             self::POSTAL_TRUE,
             self::POSTAL_UNKNOWN_DEFAULT_OPEN_API,
@@ -370,6 +380,8 @@ class LegacyContactAddress implements ModelInterface, ArrayAccess, \JsonSerializ
     public function getLockedAllowableValues()
     {
         return [
+            self::LOCKED_N,
+            self::LOCKED_Y,
             self::LOCKED_FALSE,
             self::LOCKED_TRUE,
             self::LOCKED_UNKNOWN_DEFAULT_OPEN_API,

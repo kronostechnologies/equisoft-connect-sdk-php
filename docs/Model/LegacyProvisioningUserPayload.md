@@ -14,8 +14,7 @@ Name | Type | Description | Notes
 **noPassword** | **string** | This option does nothing. | [optional]
 **requirePasswordChange** | **string** | This option does nothing. | [optional]
 **enableMobile** | **string** | This option does nothing. | [optional]
-**allowDelegation** | **string** | Allow the user to delegate access to his data. Default: false. | [optional]
-**gender** | **string** | Gender of this user. | [optional]
+**allowDelegation** | **string** | Allow the user to delegate access to his data (false, true. Default: false). | [optional]
 **phoneWork** | **string** | Work phone number of this user. | [optional]
 **phoneWorkExtension** | **string** | Extension of work phone number of this user. | [optional]
 **phoneHome** | **string** | Home phone number of this user. | [optional]
@@ -23,6 +22,6 @@ Name | Type | Description | Notes
 **phoneFax** | **string** | Fax phone number of this user. | [optional]
 **phoneMain** | **string** | The phone type to be the main phone number. Default: work. | [optional]
 **address** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyContactAddress[]**](LegacyContactAddress.md) | Address of this user. | [optional]
-**noFNA** | **string** | Skip Equisoft Plan. Default: false. | [optional]
+**noFNA** | **string** | Skip Equisoft Plan (false, true. Default: false). | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

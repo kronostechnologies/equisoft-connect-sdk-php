@@ -70,7 +70,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess, \JsonSe
         'concurrentAccess' => 'int',
         'active' => 'string',
         'locked' => 'string',
-        'enableMobile' => 'string',
+        'enableMobile' => 'bool',
         'gender' => 'string',
         'phoneWork' => 'string',
         'phoneWorkExtension' => 'string',
@@ -375,8 +375,8 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess, \JsonSe
     public const ROLE_USER = 'USER';
     public const ROLE_ADMIN = 'ADMIN';
     public const ROLE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
-    public const LANG_EN = 'EN';
-    public const LANG_FR = 'FR';
+    public const LANG_EN = 'en';
+    public const LANG_FR = 'fr';
     public const LANG_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
     public const ACTIVE_N = 'N';
     public const ACTIVE_Y = 'Y';
@@ -384,11 +384,10 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess, \JsonSe
     public const LOCKED_N = 'N';
     public const LOCKED_Y = 'Y';
     public const LOCKED_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
-    public const ENABLE_MOBILE_FALSE = 'false';
-    public const ENABLE_MOBILE_TRUE = 'true';
-    public const ENABLE_MOBILE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
     public const GENDER_F = 'F';
     public const GENDER_M = 'M';
+    public const GENDER_UNKNOWN = 'UNKNOWN';
+    public const GENDER_EMPTY = '';
     public const GENDER_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
     public const ALLOW_DELEGATION_FALSE = 'false';
     public const ALLOW_DELEGATION_TRUE = 'true';
@@ -458,25 +457,13 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return string[]
      */
-    public function getEnableMobileAllowableValues()
-    {
-        return [
-            self::ENABLE_MOBILE_FALSE,
-            self::ENABLE_MOBILE_TRUE,
-            self::ENABLE_MOBILE_UNKNOWN_DEFAULT_OPEN_API,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
     public function getGenderAllowableValues()
     {
         return [
             self::GENDER_F,
             self::GENDER_M,
+            self::GENDER_UNKNOWN,
+            self::GENDER_EMPTY,
             self::GENDER_UNKNOWN_DEFAULT_OPEN_API,
         ];
     }
@@ -610,15 +597,6 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess, \JsonSe
             $invalidProperties[] = sprintf(
                 "invalid value '%s' for 'locked', must be one of '%s'",
                 $this->container['locked'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getEnableMobileAllowableValues();
-        if (!is_null($this->container['enableMobile']) && !in_array($this->container['enableMobile'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'enableMobile', must be one of '%s'",
-                $this->container['enableMobile'],
                 implode("', '", $allowedValues)
             );
         }
@@ -1059,7 +1037,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets enableMobile
      *
-     * @return string|null
+     * @return bool|null
      */
     public function getEnableMobile()
     {
@@ -1069,7 +1047,7 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets enableMobile
      *
-     * @param string|null $enableMobile Enable Mobile version. Default: false.
+     * @param bool|null $enableMobile Enable Mobile version. Default: false.
      *
      * @return self
      */
@@ -1077,16 +1055,6 @@ class LegacyProvisioningUserItem implements ModelInterface, ArrayAccess, \JsonSe
     {
         if (is_null($enableMobile)) {
             throw new \InvalidArgumentException('non-nullable enableMobile cannot be null');
-        }
-        $allowedValues = $this->getEnableMobileAllowableValues();
-        if (!in_array($enableMobile, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'enableMobile', must be one of '%s'",
-                    $enableMobile,
-                    implode("', '", $allowedValues)
-                )
-            );
         }
         $this->container['enableMobile'] = $enableMobile;
 
