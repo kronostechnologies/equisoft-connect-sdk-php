@@ -68,6 +68,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
         'requirePasswordChange' => 'string',
         'enableMobile' => 'string',
         'allowDelegation' => 'string',
+        'gender' => 'string',
         'phoneWork' => 'string',
         'phoneWorkExtension' => 'string',
         'phoneHome' => 'string',
@@ -97,6 +98,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
         'requirePasswordChange' => null,
         'enableMobile' => null,
         'allowDelegation' => null,
+        'gender' => null,
         'phoneWork' => null,
         'phoneWorkExtension' => null,
         'phoneHome' => null,
@@ -124,6 +126,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
 		'requirePasswordChange' => false,
 		'enableMobile' => false,
 		'allowDelegation' => false,
+		'gender' => false,
 		'phoneWork' => false,
 		'phoneWorkExtension' => false,
 		'phoneHome' => false,
@@ -231,6 +234,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
         'requirePasswordChange' => 'requirePasswordChange',
         'enableMobile' => 'enableMobile',
         'allowDelegation' => 'allowDelegation',
+        'gender' => 'gender',
         'phoneWork' => 'phoneWork',
         'phoneWorkExtension' => 'phoneWorkExtension',
         'phoneHome' => 'phoneHome',
@@ -258,6 +262,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
         'requirePasswordChange' => 'setRequirePasswordChange',
         'enableMobile' => 'setEnableMobile',
         'allowDelegation' => 'setAllowDelegation',
+        'gender' => 'setGender',
         'phoneWork' => 'setPhoneWork',
         'phoneWorkExtension' => 'setPhoneWorkExtension',
         'phoneHome' => 'setPhoneHome',
@@ -285,6 +290,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
         'requirePasswordChange' => 'getRequirePasswordChange',
         'enableMobile' => 'getEnableMobile',
         'allowDelegation' => 'getAllowDelegation',
+        'gender' => 'getGender',
         'phoneWork' => 'getPhoneWork',
         'phoneWorkExtension' => 'getPhoneWorkExtension',
         'phoneHome' => 'getPhoneHome',
@@ -343,6 +349,10 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
     public const ROLE_USER = 'USER';
     public const ROLE_KRONOS = 'KRONOS';
     public const ROLE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
+    public const GENDER_F = 'F';
+    public const GENDER_M = 'M';
+    public const GENDER_UNKNOWN = 'UNKNOWN';
+    public const GENDER_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
     public const PHONE_MAIN_CELL = 'cell';
     public const PHONE_MAIN_FAX = 'fax';
     public const PHONE_MAIN_HOME = 'home';
@@ -375,6 +385,21 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
             self::ROLE_USER,
             self::ROLE_KRONOS,
             self::ROLE_UNKNOWN_DEFAULT_OPEN_API,
+        ];
+    }
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getGenderAllowableValues()
+    {
+        return [
+            self::GENDER_F,
+            self::GENDER_M,
+            self::GENDER_UNKNOWN,
+            self::GENDER_UNKNOWN_DEFAULT_OPEN_API,
         ];
     }
 
@@ -420,6 +445,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
         $this->setIfExists('requirePasswordChange', $data ?? [], null);
         $this->setIfExists('enableMobile', $data ?? [], null);
         $this->setIfExists('allowDelegation', $data ?? [], null);
+        $this->setIfExists('gender', $data ?? [], null);
         $this->setIfExists('phoneWork', $data ?? [], null);
         $this->setIfExists('phoneWorkExtension', $data ?? [], null);
         $this->setIfExists('phoneHome', $data ?? [], null);
@@ -471,6 +497,15 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
             $invalidProperties[] = sprintf(
                 "invalid value '%s' for 'role', must be one of '%s'",
                 $this->container['role'],
+                implode("', '", $allowedValues)
+            );
+        }
+
+        $allowedValues = $this->getGenderAllowableValues();
+        if (!is_null($this->container['gender']) && !in_array($this->container['gender'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'gender', must be one of '%s'",
+                $this->container['gender'],
                 implode("', '", $allowedValues)
             );
         }
@@ -820,6 +855,43 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, \Jso
             throw new \InvalidArgumentException('non-nullable allowDelegation cannot be null');
         }
         $this->container['allowDelegation'] = $allowDelegation;
+
+        return $this;
+    }
+
+    /**
+     * Gets gender
+     *
+     * @return string|null
+     */
+    public function getGender()
+    {
+        return $this->container['gender'];
+    }
+
+    /**
+     * Sets gender
+     *
+     * @param string|null $gender Gender of this user.
+     *
+     * @return self
+     */
+    public function setGender($gender)
+    {
+        if (is_null($gender)) {
+            throw new \InvalidArgumentException('non-nullable gender cannot be null');
+        }
+        $allowedValues = $this->getGenderAllowableValues();
+        if (!in_array($gender, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'gender', must be one of '%s'",
+                    $gender,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['gender'] = $gender;
 
         return $this;
     }

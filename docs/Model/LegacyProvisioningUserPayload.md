@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **requirePasswordChange** | **string** | This option does nothing. | [optional]
 **enableMobile** | **string** | This option does nothing. | [optional]
 **allowDelegation** | **string** | Allow the user to delegate access to his data (false, true. Default: false). | [optional]
+**gender** | **string** | Gender of this user. | [optional]
 **phoneWork** | **string** | Work phone number of this user. | [optional]
 **phoneWorkExtension** | **string** | Extension of work phone number of this user. | [optional]
 **phoneHome** | **string** | Home phone number of this user. | [optional]
