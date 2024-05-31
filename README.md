@@ -300,7 +300,6 @@ Class | Method | HTTP request | Description
 - [GatewaysCredentials](docs/Model/GatewaysCredentials.md)
 - [GatewaysCredentialsWithSsn](docs/Model/GatewaysCredentialsWithSsn.md)
 - [GatewaysFullfinanceScrapeJob](docs/Model/GatewaysFullfinanceScrapeJob.md)
-- [GatewaysFullfinanceScrapeJobStatus](docs/Model/GatewaysFullfinanceScrapeJobStatus.md)
 - [GatewaysGatewayDto](docs/Model/GatewaysGatewayDto.md)
 - [GatewaysGatewaysResponse](docs/Model/GatewaysGatewaysResponse.md)
 - [GatewaysListCredentialsResponse](docs/Model/GatewaysListCredentialsResponse.md)

@@ -60,7 +60,7 @@ class GatewaysFullfinanceScrapeJob implements ModelInterface, ArrayAccess, \Json
         'id' => 'string',
         'completionDate' => '\DateTime',
         'creationDate' => '\DateTime',
-        'status' => '\Equisoft\SDK\EquisoftConnect\Model\GatewaysFullfinanceScrapeJobStatus'
+        'status' => 'mixed'
     ];
 
     /**
@@ -86,7 +86,7 @@ class GatewaysFullfinanceScrapeJob implements ModelInterface, ArrayAccess, \Json
         'id' => false,
 		'completionDate' => true,
 		'creationDate' => false,
-		'status' => false
+		'status' => true
     ];
 
     /**
@@ -410,7 +410,7 @@ class GatewaysFullfinanceScrapeJob implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets status
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\GatewaysFullfinanceScrapeJobStatus
+     * @return mixed
      */
     public function getStatus()
     {
@@ -420,14 +420,21 @@ class GatewaysFullfinanceScrapeJob implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets status
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\GatewaysFullfinanceScrapeJobStatus $status status
+     * @param mixed $status status
      *
      * @return self
      */
     public function setStatus($status)
     {
         if (is_null($status)) {
-            throw new \InvalidArgumentException('non-nullable status cannot be null');
+            array_push($this->openAPINullablesSetToNull, 'status');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('status', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
         $this->container['status'] = $status;
 
