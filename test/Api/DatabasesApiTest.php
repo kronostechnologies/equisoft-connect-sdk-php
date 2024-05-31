@@ -120,6 +120,30 @@ class DatabasesApiTest extends TestCase
     }
 
     /**
+     * Test case for setDatabaseDistributor
+     *
+     * Set the database's distributor.
+     *
+     */
+    public function testSetDatabaseDistributor()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for unsetDatabaseDistributor
+     *
+     * Unset the database's distributor.
+     *
+     */
+    public function testUnsetDatabaseDistributor()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for updateState
      *
      * Update a database's state.
