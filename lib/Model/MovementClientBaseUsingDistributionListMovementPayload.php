@@ -65,7 +65,7 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
         'destinationDatabase' => 'string',
         'destinationUser' => 'string',
         'datagatewayAccessMappings' => 'array<string,string>',
-        'transferOption' => '\Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption'
+        'transferOption' => 'string'
     ];
 
     /**
@@ -101,7 +101,7 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
 		'destinationDatabase' => false,
 		'destinationUser' => false,
 		'datagatewayAccessMappings' => false,
-		'transferOption' => false
+		'transferOption' => true
     ];
 
     /**
@@ -276,6 +276,23 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
         return self::$openAPIModelName;
     }
 
+    public const TRANSFER_OPTION_COPY = 'COPY';
+    public const TRANSFER_OPTION_TRANSFER = 'TRANSFER';
+    public const TRANSFER_OPTION_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getTransferOptionAllowableValues()
+    {
+        return [
+            self::TRANSFER_OPTION_COPY,
+            self::TRANSFER_OPTION_TRANSFER,
+            self::TRANSFER_OPTION_UNKNOWN_DEFAULT_OPEN_API,
+        ];
+    }
 
     /**
      * Associative array for storing property values
@@ -348,6 +365,15 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
         if ($this->container['transferOption'] === null) {
             $invalidProperties[] = "'transferOption' can't be null";
         }
+        $allowedValues = $this->getTransferOptionAllowableValues();
+        if (!is_null($this->container['transferOption']) && !in_array($this->container['transferOption'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'transferOption', must be one of '%s'",
+                $this->container['transferOption'],
+                implode("', '", $allowedValues)
+            );
+        }
+
         return $invalidProperties;
     }
 
@@ -582,7 +608,7 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
     /**
      * Gets transferOption
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption
+     * @return string
      */
     public function getTransferOption()
     {
@@ -592,14 +618,31 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
     /**
      * Sets transferOption
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption $transferOption transferOption
+     * @param string $transferOption Transfer option.
      *
      * @return self
      */
     public function setTransferOption($transferOption)
     {
         if (is_null($transferOption)) {
-            throw new \InvalidArgumentException('non-nullable transferOption cannot be null');
+            array_push($this->openAPINullablesSetToNull, 'transferOption');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('transferOption', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $allowedValues = $this->getTransferOptionAllowableValues();
+        if (!is_null($transferOption) && !in_array($transferOption, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'transferOption', must be one of '%s'",
+                    $transferOption,
+                    implode("', '", $allowedValues)
+                )
+            );
         }
         $this->container['transferOption'] = $transferOption;
 

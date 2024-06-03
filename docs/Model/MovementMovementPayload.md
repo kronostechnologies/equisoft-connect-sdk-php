@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **accessCode** | **string** | Access code. Format: dataGatewayType~~system~dealerCode-repCode. |
 **sourceDistributionList** | **string** | Source distribution list. | [optional]
 **datagatewayAccessMappings** | **array<string,string>** | Data gateway access mapping. | [optional]
-**transferOption** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption**](MovementTransferOption.md) |  |
+**transferOption** | **string** | Transfer option. |
 **capsilFile** | **string** | Path to the Capsil file. | [optional]
 **univerisFile** | **string** | Path to the Univeris file. Deprecated: Univeris file is not supported anymore and will be removed in a future version. | [optional]
 **dataphileFile** | **string** | Path to the Dataphile. | [optional]

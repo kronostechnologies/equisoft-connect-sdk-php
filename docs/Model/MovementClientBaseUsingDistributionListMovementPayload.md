@@ -12,6 +12,6 @@ Name | Type | Description | Notes
 **destinationDatabase** | **string** | Destination database full name. |
 **destinationUser** | **string** | Destination user id. |
 **datagatewayAccessMappings** | **array<string,string>** | Data gateway access mapping. | [optional]
-**transferOption** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption**](MovementTransferOption.md) |  |
+**transferOption** | **string** | Transfer option. |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
