@@ -119,7 +119,7 @@ class LegacyFinanceLiability implements ModelInterface, ArrayAccess, \JsonSerial
 		'instalmentFrequency' => false,
 		'dateStart' => false,
 		'dateEnd' => false,
-		'dateUpdated' => false,
+		'dateUpdated' => true,
 		'notes' => false
     ];
 
@@ -759,7 +759,14 @@ class LegacyFinanceLiability implements ModelInterface, ArrayAccess, \JsonSerial
     public function setDateUpdated($dateUpdated)
     {
         if (is_null($dateUpdated)) {
-            throw new \InvalidArgumentException('non-nullable dateUpdated cannot be null');
+            array_push($this->openAPINullablesSetToNull, 'dateUpdated');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('dateUpdated', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
         $this->container['dateUpdated'] = $dateUpdated;
 
