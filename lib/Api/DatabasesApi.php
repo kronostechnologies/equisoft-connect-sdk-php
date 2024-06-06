@@ -83,6 +83,12 @@ class DatabasesApi
         'listUsers' => [
             'application/json',
         ],
+        'setDatabaseDistributor' => [
+            'application/json',
+        ],
+        'unsetDatabaseDistributor' => [
+            'application/json',
+        ],
         'updateState' => [
             'application/json',
         ],
@@ -1838,6 +1844,563 @@ class DatabasesApi
         $query = ObjectSerializer::buildQuery($queryParams);
         return new Request(
             'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation setDatabaseDistributor
+     *
+     * Set the database&#39;s distributor
+     *
+     * @param  string $databaseUuid Database unique identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\DatabaseSetDistributorPayload $databaseSetDistributorPayload databaseSetDistributorPayload (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['setDatabaseDistributor'] to see the possible values for this operation
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function setDatabaseDistributor($databaseUuid, $databaseSetDistributorPayload, string $contentType = self::contentTypes['setDatabaseDistributor'][0])
+    {
+        $this->setDatabaseDistributorWithHttpInfo($databaseUuid, $databaseSetDistributorPayload, $contentType);
+    }
+
+    /**
+     * Operation setDatabaseDistributorWithHttpInfo
+     *
+     * Set the database&#39;s distributor
+     *
+     * @param  string $databaseUuid Database unique identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\DatabaseSetDistributorPayload $databaseSetDistributorPayload (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['setDatabaseDistributor'] to see the possible values for this operation
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function setDatabaseDistributorWithHttpInfo($databaseUuid, $databaseSetDistributorPayload, string $contentType = self::contentTypes['setDatabaseDistributor'][0])
+    {
+        $request = $this->setDatabaseDistributorRequest($databaseUuid, $databaseSetDistributorPayload, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation setDatabaseDistributorAsync
+     *
+     * Set the database&#39;s distributor
+     *
+     * @param  string $databaseUuid Database unique identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\DatabaseSetDistributorPayload $databaseSetDistributorPayload (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['setDatabaseDistributor'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function setDatabaseDistributorAsync($databaseUuid, $databaseSetDistributorPayload, string $contentType = self::contentTypes['setDatabaseDistributor'][0])
+    {
+        return $this->setDatabaseDistributorAsyncWithHttpInfo($databaseUuid, $databaseSetDistributorPayload, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation setDatabaseDistributorAsyncWithHttpInfo
+     *
+     * Set the database&#39;s distributor
+     *
+     * @param  string $databaseUuid Database unique identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\DatabaseSetDistributorPayload $databaseSetDistributorPayload (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['setDatabaseDistributor'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function setDatabaseDistributorAsyncWithHttpInfo($databaseUuid, $databaseSetDistributorPayload, string $contentType = self::contentTypes['setDatabaseDistributor'][0])
+    {
+        $returnType = '';
+        $request = $this->setDatabaseDistributorRequest($databaseUuid, $databaseSetDistributorPayload, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'setDatabaseDistributor'
+     *
+     * @param  string $databaseUuid Database unique identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\DatabaseSetDistributorPayload $databaseSetDistributorPayload (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['setDatabaseDistributor'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function setDatabaseDistributorRequest($databaseUuid, $databaseSetDistributorPayload, string $contentType = self::contentTypes['setDatabaseDistributor'][0])
+    {
+
+        // verify the required parameter 'databaseUuid' is set
+        if ($databaseUuid === null || (is_array($databaseUuid) && count($databaseUuid) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $databaseUuid when calling setDatabaseDistributor'
+            );
+        }
+
+        // verify the required parameter 'databaseSetDistributorPayload' is set
+        if ($databaseSetDistributorPayload === null || (is_array($databaseSetDistributorPayload) && count($databaseSetDistributorPayload) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $databaseSetDistributorPayload when calling setDatabaseDistributor'
+            );
+        }
+
+
+        $resourcePath = '/crm/api/v1/databases/{databaseUuid}/distributor';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if ($databaseUuid !== null) {
+            $resourcePath = str_replace(
+                '{' . 'databaseUuid' . '}',
+                ObjectSerializer::toPathValue($databaseUuid),
+                $resourcePath
+            );
+        }
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($databaseSetDistributorPayload)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($databaseSetDistributorPayload));
+            } else {
+                $httpBody = $databaseSetDistributorPayload;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        if (is_string($formParamValueItem)) {
+                            // JSON part
+                            $multipartContents[] = [
+                                'name' => $formParamName,
+                                'contents' => $formParamValueItem,
+                                'headers' => [
+                                    'Content-Disposition' => "form-data; name=\"$formParamName\"; filename=\"$formParamName.json\"",
+                                    'Content-Type' => 'application/json; charset=UTF-8'
+                                ]
+                            ];
+                        } else {
+                            $multipartContents[] = [
+                                'name' => $formParamName,
+                                'contents' => $formParamValueItem
+                            ];
+                        }
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'PUT',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation unsetDatabaseDistributor
+     *
+     * Unset the database&#39;s distributor
+     *
+     * @param  string $databaseUuid Database unique identifier. (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['unsetDatabaseDistributor'] to see the possible values for this operation
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function unsetDatabaseDistributor($databaseUuid, string $contentType = self::contentTypes['unsetDatabaseDistributor'][0])
+    {
+        $this->unsetDatabaseDistributorWithHttpInfo($databaseUuid, $contentType);
+    }
+
+    /**
+     * Operation unsetDatabaseDistributorWithHttpInfo
+     *
+     * Unset the database&#39;s distributor
+     *
+     * @param  string $databaseUuid Database unique identifier. (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['unsetDatabaseDistributor'] to see the possible values for this operation
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function unsetDatabaseDistributorWithHttpInfo($databaseUuid, string $contentType = self::contentTypes['unsetDatabaseDistributor'][0])
+    {
+        $request = $this->unsetDatabaseDistributorRequest($databaseUuid, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation unsetDatabaseDistributorAsync
+     *
+     * Unset the database&#39;s distributor
+     *
+     * @param  string $databaseUuid Database unique identifier. (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['unsetDatabaseDistributor'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function unsetDatabaseDistributorAsync($databaseUuid, string $contentType = self::contentTypes['unsetDatabaseDistributor'][0])
+    {
+        return $this->unsetDatabaseDistributorAsyncWithHttpInfo($databaseUuid, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation unsetDatabaseDistributorAsyncWithHttpInfo
+     *
+     * Unset the database&#39;s distributor
+     *
+     * @param  string $databaseUuid Database unique identifier. (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['unsetDatabaseDistributor'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function unsetDatabaseDistributorAsyncWithHttpInfo($databaseUuid, string $contentType = self::contentTypes['unsetDatabaseDistributor'][0])
+    {
+        $returnType = '';
+        $request = $this->unsetDatabaseDistributorRequest($databaseUuid, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'unsetDatabaseDistributor'
+     *
+     * @param  string $databaseUuid Database unique identifier. (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['unsetDatabaseDistributor'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function unsetDatabaseDistributorRequest($databaseUuid, string $contentType = self::contentTypes['unsetDatabaseDistributor'][0])
+    {
+
+        // verify the required parameter 'databaseUuid' is set
+        if ($databaseUuid === null || (is_array($databaseUuid) && count($databaseUuid) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $databaseUuid when calling unsetDatabaseDistributor'
+            );
+        }
+
+
+        $resourcePath = '/crm/api/v1/databases/{databaseUuid}/distributor';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if ($databaseUuid !== null) {
+            $resourcePath = str_replace(
+                '{' . 'databaseUuid' . '}',
+                ObjectSerializer::toPathValue($databaseUuid),
+                $resourcePath
+            );
+        }
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        if (is_string($formParamValueItem)) {
+                            // JSON part
+                            $multipartContents[] = [
+                                'name' => $formParamName,
+                                'contents' => $formParamValueItem,
+                                'headers' => [
+                                    'Content-Disposition' => "form-data; name=\"$formParamName\"; filename=\"$formParamName.json\"",
+                                    'Content-Type' => 'application/json; charset=UTF-8'
+                                ]
+                            ];
+                        } else {
+                            $multipartContents[] = [
+                                'name' => $formParamName,
+                                'contents' => $formParamValueItem
+                            ];
+                        }
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'DELETE',
             $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
