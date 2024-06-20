@@ -166,7 +166,6 @@ Class | Method | HTTP request | Description
 *LegacyFinanceApi* | [**legacyFinanceGetLiabilities**](docs/Api/LegacyFinanceApi.md#legacyfinancegetliabilities) | **GET** /apps/api/kronos.finance.getLiabilities | Get Liabilities information for a contact.
 *LegacyFinanceApi* | [**legacyFinanceUpdateContact**](docs/Api/LegacyFinanceApi.md#legacyfinanceupdatecontact) | **POST** /apps/api/kronos.finance.updateContact | Update a contact.
 *LegacyParametersApi* | [**legacyParametersGet**](docs/Api/LegacyParametersApi.md#legacyparametersget) | **GET** /apps/api/kronos.parameters.get | Get the system parameters.
-*LegacyProvisioningApi* | [**legacyProvisioningActivateFnaForOrganization**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningactivatefnafororganization) | **POST** /apps/provisioning/kronos.provisioning.activateFnaForOrganization | Activate FNA for an organization.
 *LegacyProvisioningApi* | [**legacyProvisioningActivateUser**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningactivateuser) | **POST** /apps/provisioning/kronos.provisioning.activateUser | Activate a user.
 *LegacyProvisioningApi* | [**legacyProvisioningAddOrganization**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningaddorganization) | **POST** /apps/provisioning/kronos.provisioning.addOrganization | Add a new organization.
 *LegacyProvisioningApi* | [**legacyProvisioningAddUser**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningadduser) | **POST** /apps/provisioning/kronos.provisioning.addUser | Add a new user.

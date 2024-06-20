@@ -4,7 +4,6 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**legacyProvisioningActivateFnaForOrganization()**](LegacyProvisioningApi.md#legacyProvisioningActivateFnaForOrganization) | **POST** /apps/provisioning/kronos.provisioning.activateFnaForOrganization | Activate FNA for an organization. |
 | [**legacyProvisioningActivateUser()**](LegacyProvisioningApi.md#legacyProvisioningActivateUser) | **POST** /apps/provisioning/kronos.provisioning.activateUser | Activate a user. |
 | [**legacyProvisioningAddOrganization()**](LegacyProvisioningApi.md#legacyProvisioningAddOrganization) | **POST** /apps/provisioning/kronos.provisioning.addOrganization | Add a new organization. |
 | [**legacyProvisioningAddUser()**](LegacyProvisioningApi.md#legacyProvisioningAddUser) | **POST** /apps/provisioning/kronos.provisioning.addUser | Add a new user. |
@@ -36,66 +35,6 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 | [**legacyProvisioningUnlockUser()**](LegacyProvisioningApi.md#legacyProvisioningUnlockUser) | **POST** /apps/provisioning/kronos.provisioning.unlockUser | Unlock a user. |
 | [**legacyProvisioningUpdateUser()**](LegacyProvisioningApi.md#legacyProvisioningUpdateUser) | **POST** /apps/provisioning/kronos.provisioning.updateUser | Update a user. |
 
-
-## `legacyProvisioningActivateFnaForOrganization()`
-
-```php
-legacyProvisioningActivateFnaForOrganization($orgId, $activateOnly): \Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
-```
-
-Activate FNA for an organization.
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure OAuth2 access token for authorization: OAuth2
-$config = Equisoft\SDK\EquisoftConnect\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\LegacyProvisioningApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$orgId = 'orgId_example'; // string | Organization identifier.
-$activateOnly = True; // bool | Only activate FNA if true, create FNA accounts for all active users if false.
-
-try {
-    $result = $apiInstance->legacyProvisioningActivateFnaForOrganization($orgId, $activateOnly);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling LegacyProvisioningApi->legacyProvisioningActivateFnaForOrganization: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **orgId** | **string**| Organization identifier. | |
-| **activateOnly** | **bool**| Only activate FNA if true, create FNA accounts for all active users if false. | |
-
-### Return type
-
-[**\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse**](../Model/LegacyResponse.md)
-
-### Authorization
-
-[OAuth2](../../README.md#OAuth2)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
 
 ## `legacyProvisioningActivateUser()`
 

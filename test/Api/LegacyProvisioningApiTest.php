@@ -72,18 +72,6 @@ class LegacyProvisioningApiTest extends TestCase
     }
 
     /**
-     * Test case for legacyProvisioningActivateFnaForOrganization
-     *
-     * Activate FNA for an organization..
-     *
-     */
-    public function testLegacyProvisioningActivateFnaForOrganization()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for legacyProvisioningActivateUser
      *
      * Activate a user..
