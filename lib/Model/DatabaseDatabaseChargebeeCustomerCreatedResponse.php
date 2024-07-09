@@ -1,6 +1,6 @@
 <?php
 /**
- * ErrorResponse
+ * DatabaseDatabaseChargebeeCustomerCreatedResponse
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * ErrorResponse Class Doc Comment
+ * DatabaseDatabaseChargebeeCustomerCreatedResponse Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
@@ -40,7 +40,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ErrorResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class DatabaseDatabaseChargebeeCustomerCreatedResponse implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ErrorResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ErrorResponse';
+    protected static $openAPIModelName = 'database.DatabaseChargebeeCustomerCreatedResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +57,7 @@ class ErrorResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'error' => 'string',
-        'errorDescription' => 'string',
-        'hint' => 'string'
+        'chargebeeCustomerId' => 'string'
     ];
 
     /**
@@ -70,9 +68,7 @@ class ErrorResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'error' => null,
-        'errorDescription' => null,
-        'hint' => null
+        'chargebeeCustomerId' => null
     ];
 
     /**
@@ -81,9 +77,7 @@ class ErrorResponse implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'error' => false,
-		'errorDescription' => true,
-		'hint' => true
+        'chargebeeCustomerId' => false
     ];
 
     /**
@@ -172,9 +166,7 @@ class ErrorResponse implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'error' => 'error',
-        'errorDescription' => 'error_description',
-        'hint' => 'hint'
+        'chargebeeCustomerId' => 'chargebeeCustomerId'
     ];
 
     /**
@@ -183,9 +175,7 @@ class ErrorResponse implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'error' => 'setError',
-        'errorDescription' => 'setErrorDescription',
-        'hint' => 'setHint'
+        'chargebeeCustomerId' => 'setChargebeeCustomerId'
     ];
 
     /**
@@ -194,9 +184,7 @@ class ErrorResponse implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'error' => 'getError',
-        'errorDescription' => 'getErrorDescription',
-        'hint' => 'getHint'
+        'chargebeeCustomerId' => 'getChargebeeCustomerId'
     ];
 
     /**
@@ -256,9 +244,7 @@ class ErrorResponse implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('error', $data ?? [], null);
-        $this->setIfExists('errorDescription', $data ?? [], null);
-        $this->setIfExists('hint', $data ?? [], null);
+        $this->setIfExists('chargebeeCustomerId', $data ?? [], null);
     }
 
     /**
@@ -288,6 +274,9 @@ class ErrorResponse implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
+        if ($this->container['chargebeeCustomerId'] === null) {
+            $invalidProperties[] = "'chargebeeCustomerId' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -304,96 +293,28 @@ class ErrorResponse implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets error
+     * Gets chargebeeCustomerId
      *
-     * @return string|null
+     * @return string
      */
-    public function getError()
+    public function getChargebeeCustomerId()
     {
-        return $this->container['error'];
+        return $this->container['chargebeeCustomerId'];
     }
 
     /**
-     * Sets error
+     * Sets chargebeeCustomerId
      *
-     * @param string|null $error Error.
+     * @param string $chargebeeCustomerId Created ChargeBee customer ID
      *
      * @return self
      */
-    public function setError($error)
+    public function setChargebeeCustomerId($chargebeeCustomerId)
     {
-        if (is_null($error)) {
-            throw new \InvalidArgumentException('non-nullable error cannot be null');
+        if (is_null($chargebeeCustomerId)) {
+            throw new \InvalidArgumentException('non-nullable chargebeeCustomerId cannot be null');
         }
-        $this->container['error'] = $error;
-
-        return $this;
-    }
-
-    /**
-     * Gets errorDescription
-     *
-     * @return string|null
-     */
-    public function getErrorDescription()
-    {
-        return $this->container['errorDescription'];
-    }
-
-    /**
-     * Sets errorDescription
-     *
-     * @param string|null $errorDescription Error description.
-     *
-     * @return self
-     */
-    public function setErrorDescription($errorDescription)
-    {
-        if (is_null($errorDescription)) {
-            array_push($this->openAPINullablesSetToNull, 'errorDescription');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('errorDescription', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['errorDescription'] = $errorDescription;
-
-        return $this;
-    }
-
-    /**
-     * Gets hint
-     *
-     * @return string|null
-     */
-    public function getHint()
-    {
-        return $this->container['hint'];
-    }
-
-    /**
-     * Sets hint
-     *
-     * @param string|null $hint Hint.
-     *
-     * @return self
-     */
-    public function setHint($hint)
-    {
-        if (is_null($hint)) {
-            array_push($this->openAPINullablesSetToNull, 'hint');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('hint', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['hint'] = $hint;
+        $this->container['chargebeeCustomerId'] = $chargebeeCustomerId;
 
         return $this;
     }

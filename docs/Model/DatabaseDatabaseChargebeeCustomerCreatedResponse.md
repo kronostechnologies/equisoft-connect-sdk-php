@@ -1,11 +1,9 @@
-# # ErrorResponse
+# # DatabaseDatabaseChargebeeCustomerCreatedResponse
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**error** | **string** | Error. | [optional]
-**errorDescription** | **string** | Error description. | [optional]
-**hint** | **string** | Hint. | [optional]
+**chargebeeCustomerId** | **string** | Created ChargeBee customer ID |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
