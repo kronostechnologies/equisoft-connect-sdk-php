@@ -1,6 +1,6 @@
 <?php
 /**
- * ErrorResponseTest
+ * DatabaseDatabaseChargebeeCustomerCreatedResponseTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ErrorResponseTest Class Doc Comment
+ * DatabaseDatabaseChargebeeCustomerCreatedResponseTest Class Doc Comment
  *
  * @category    Class
- * @description ErrorResponse
+ * @description DatabaseDatabaseChargebeeCustomerCreatedResponse
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ErrorResponseTest extends TestCase
+class DatabaseDatabaseChargebeeCustomerCreatedResponseTest extends TestCase
 {
 
     /**
@@ -71,36 +71,18 @@ class ErrorResponseTest extends TestCase
     }
 
     /**
-     * Test "ErrorResponse"
+     * Test "DatabaseDatabaseChargebeeCustomerCreatedResponse"
      */
-    public function testErrorResponse()
+    public function testDatabaseDatabaseChargebeeCustomerCreatedResponse()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "error"
+     * Test attribute "chargebeeCustomerId"
      */
-    public function testPropertyError()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "errorDescription"
-     */
-    public function testPropertyErrorDescription()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "hint"
-     */
-    public function testPropertyHint()
+    public function testPropertyChargebeeCustomerId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

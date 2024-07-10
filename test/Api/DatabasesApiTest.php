@@ -72,6 +72,18 @@ class DatabasesApiTest extends TestCase
     }
 
     /**
+     * Test case for createChargebeeCustomer
+     *
+     * Create a ChargeBee customer for the database.
+     *
+     */
+    public function testCreateChargebeeCustomer()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for getDatabase
      *
      * Get a database.
