@@ -450,6 +450,7 @@ Class | Method | HTTP request | Description
 - [MovementCopyMovementPayload](docs/Model/MovementCopyMovementPayload.md)
 - [MovementDatabase](docs/Model/MovementDatabase.md)
 - [MovementDistributionList](docs/Model/MovementDistributionList.md)
+- [MovementExecutedMovementInfoResponse](docs/Model/MovementExecutedMovementInfoResponse.md)
 - [MovementGatewayAccessCode](docs/Model/MovementGatewayAccessCode.md)
 - [MovementListMovementResponse](docs/Model/MovementListMovementResponse.md)
 - [MovementMoveMovement](docs/Model/MovementMoveMovement.md)

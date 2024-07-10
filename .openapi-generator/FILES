@@ -247,6 +247,7 @@ docs/Model/MovementCopyMovement.md
 docs/Model/MovementCopyMovementPayload.md
 docs/Model/MovementDatabase.md
 docs/Model/MovementDistributionList.md
+docs/Model/MovementExecutedMovementInfoResponse.md
 docs/Model/MovementGatewayAccessCode.md
 docs/Model/MovementListMovementResponse.md
 docs/Model/MovementMoveMovement.md
@@ -532,6 +533,7 @@ lib/Model/MovementCopyMovement.php
 lib/Model/MovementCopyMovementPayload.php
 lib/Model/MovementDatabase.php
 lib/Model/MovementDistributionList.php
+lib/Model/MovementExecutedMovementInfoResponse.php
 lib/Model/MovementGatewayAccessCode.php
 lib/Model/MovementListMovementResponse.php
 lib/Model/MovementMoveMovement.php
@@ -814,6 +816,7 @@ test/Model/MovementCopyMovementPayloadTest.php
 test/Model/MovementCopyMovementTest.php
 test/Model/MovementDatabaseTest.php
 test/Model/MovementDistributionListTest.php
+test/Model/MovementExecutedMovementInfoResponseTest.php
 test/Model/MovementGatewayAccessCodeTest.php
 test/Model/MovementListMovementResponseTest.php
 test/Model/MovementMoveMovementPayloadTest.php

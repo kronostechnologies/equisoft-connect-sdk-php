@@ -187,7 +187,7 @@ void (empty response body)
 ## `getExecutedMovementInfo()`
 
 ```php
-getExecutedMovementInfo($executedMovementId): mixed
+getExecutedMovementInfo($executedMovementId): \Equisoft\SDK\EquisoftConnect\Model\MovementExecutedMovementInfoResponse
 ```
 
 Get basic information about an executed movement
@@ -227,7 +227,7 @@ try {
 
 ### Return type
 
-**mixed**
+[**\Equisoft\SDK\EquisoftConnect\Model\MovementExecutedMovementInfoResponse**](../Model/MovementExecutedMovementInfoResponse.md)
 
 ### Authorization
 
