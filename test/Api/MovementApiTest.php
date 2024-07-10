@@ -108,6 +108,18 @@ class MovementApiTest extends TestCase
     }
 
     /**
+     * Test case for getExecutedMovementInfo
+     *
+     * Get basic information about an executed movement.
+     *
+     */
+    public function testGetExecutedMovementInfo()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for getMovementStatistic
      *
      * Get movement statistic.
