@@ -1477,7 +1477,7 @@ class MovementApi
         }
 
 
-        $resourcePath = '/movements/executed/{executedMovementId}';
+        $resourcePath = '/crm/api/v1/movements/executed/{executedMovementId}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
