@@ -15,6 +15,7 @@ docs/Api/LegacyParametersApi.md
 docs/Api/LegacyProvisioningApi.md
 docs/Api/MovementApi.md
 docs/Api/RemoteAccountApi.md
+docs/Api/SystemParametersApi.md
 docs/Api/TasksApi.md
 docs/Api/UsersApi.md
 docs/Model/AccessRights.md
@@ -266,6 +267,7 @@ docs/Model/MovementUserTuple.md
 docs/Model/MovementUserTuplePayload.md
 docs/Model/MovementValidationError.md
 docs/Model/MovementValidationErrorResponse.md
+docs/Model/SystemparametersCompanyResponse.md
 docs/Model/TasksCreateTaskPayload.md
 docs/Model/TasksCreateTaskResponse.md
 docs/Model/TasksDueDateFilter.md
@@ -298,6 +300,7 @@ lib/Api/LegacyParametersApi.php
 lib/Api/LegacyProvisioningApi.php
 lib/Api/MovementApi.php
 lib/Api/RemoteAccountApi.php
+lib/Api/SystemParametersApi.php
 lib/Api/TasksApi.php
 lib/Api/UsersApi.php
 lib/ApiException.php
@@ -553,6 +556,7 @@ lib/Model/MovementUserTuple.php
 lib/Model/MovementUserTuplePayload.php
 lib/Model/MovementValidationError.php
 lib/Model/MovementValidationErrorResponse.php
+lib/Model/SystemparametersCompanyResponse.php
 lib/Model/TasksCreateTaskPayload.php
 lib/Model/TasksCreateTaskResponse.php
 lib/Model/TasksDueDateFilter.php
@@ -586,6 +590,7 @@ test/Api/LegacyParametersApiTest.php
 test/Api/LegacyProvisioningApiTest.php
 test/Api/MovementApiTest.php
 test/Api/RemoteAccountApiTest.php
+test/Api/SystemParametersApiTest.php
 test/Api/TasksApiTest.php
 test/Api/UsersApiTest.php
 test/Model/AccessRightsTest.php
@@ -837,6 +842,7 @@ test/Model/MovementUserTuplePayloadTest.php
 test/Model/MovementUserTupleTest.php
 test/Model/MovementValidationErrorResponseTest.php
 test/Model/MovementValidationErrorTest.php
+test/Model/SystemparametersCompanyResponseTest.php
 test/Model/TasksCreateTaskPayloadTest.php
 test/Model/TasksCreateTaskResponseTest.php
 test/Model/TasksDueDateFilterTest.php
