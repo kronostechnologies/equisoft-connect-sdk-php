@@ -10,7 +10,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getCompanyDetails()`
 
 ```php
-getCompanyDetails($companyId): \Equisoft\SDK\EquisoftConnect\Model\MovementExecutedMovementInfoResponse
+getCompanyDetails($databaseUuid): \Equisoft\SDK\EquisoftConnect\Model\MovementExecutedMovementInfoResponse
 ```
 
 Get company information about the enterprise or an alternate company
@@ -32,10 +32,10 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\SystemParametersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$companyId = 56; // int | Alternate company id. Leave unspecified for the enterprise
+$databaseUuid = 'databaseUuid_example'; // string | Uuid of the database
 
 try {
-    $result = $apiInstance->getCompanyDetails($companyId);
+    $result = $apiInstance->getCompanyDetails($databaseUuid);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SystemParametersApi->getCompanyDetails: ', $e->getMessage(), PHP_EOL;
@@ -46,7 +46,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **companyId** | **int**| Alternate company id. Leave unspecified for the enterprise | [optional] |
+| **databaseUuid** | **string**| Uuid of the database | |
 
 ### Return type
 
