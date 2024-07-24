@@ -87,9 +87,9 @@ class SystemparametersCompanyResponse implements ModelInterface, ArrayAccess, \J
     protected static array $openAPINullables = [
         'id' => true,
 		'enterprise' => false,
-		'name' => false,
-		'address' => false,
-		'website' => false
+		'name' => true,
+		'address' => true,
+		'website' => true
     ];
 
     /**
@@ -398,7 +398,14 @@ class SystemparametersCompanyResponse implements ModelInterface, ArrayAccess, \J
     public function setName($name)
     {
         if (is_null($name)) {
-            throw new \InvalidArgumentException('non-nullable name cannot be null');
+            array_push($this->openAPINullablesSetToNull, 'name');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('name', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
         $this->container['name'] = $name;
 
@@ -425,7 +432,14 @@ class SystemparametersCompanyResponse implements ModelInterface, ArrayAccess, \J
     public function setAddress($address)
     {
         if (is_null($address)) {
-            throw new \InvalidArgumentException('non-nullable address cannot be null');
+            array_push($this->openAPINullablesSetToNull, 'address');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('address', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
         $this->container['address'] = $address;
 
@@ -452,7 +466,14 @@ class SystemparametersCompanyResponse implements ModelInterface, ArrayAccess, \J
     public function setWebsite($website)
     {
         if (is_null($website)) {
-            throw new \InvalidArgumentException('non-nullable website cannot be null');
+            array_push($this->openAPINullablesSetToNull, 'website');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('website', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
         $this->container['website'] = $website;
 

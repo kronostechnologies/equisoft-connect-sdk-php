@@ -10,7 +10,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getCompanyDetails()`
 
 ```php
-getCompanyDetails($databaseUuid): \Equisoft\SDK\EquisoftConnect\Model\MovementExecutedMovementInfoResponse
+getCompanyDetails($databaseUuid): \Equisoft\SDK\EquisoftConnect\Model\SystemparametersCompanyResponse
 ```
 
 Get company information about the enterprise or an alternate company
@@ -50,7 +50,7 @@ try {
 
 ### Return type
 
-[**\Equisoft\SDK\EquisoftConnect\Model\MovementExecutedMovementInfoResponse**](../Model/MovementExecutedMovementInfoResponse.md)
+[**\Equisoft\SDK\EquisoftConnect\Model\SystemparametersCompanyResponse**](../Model/SystemparametersCompanyResponse.md)
 
 ### Authorization
 
