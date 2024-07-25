@@ -128,15 +128,16 @@ class SystemParametersApi
      * Get company information about the enterprise or an alternate company
      *
      * @param  string $databaseUuid Uuid of the database (required)
+     * @param  int $companyId Id of the company, leave unspecified to get the enterprise company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCompanyDetails'] to see the possible values for this operation
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Equisoft\SDK\EquisoftConnect\Model\SystemparametersCompanyResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
-    public function getCompanyDetails($databaseUuid, string $contentType = self::contentTypes['getCompanyDetails'][0])
+    public function getCompanyDetails($databaseUuid, $companyId = null, string $contentType = self::contentTypes['getCompanyDetails'][0])
     {
-        list($response) = $this->getCompanyDetailsWithHttpInfo($databaseUuid, $contentType);
+        list($response) = $this->getCompanyDetailsWithHttpInfo($databaseUuid, $companyId, $contentType);
         return $response;
     }
 
@@ -146,15 +147,16 @@ class SystemParametersApi
      * Get company information about the enterprise or an alternate company
      *
      * @param  string $databaseUuid Uuid of the database (required)
+     * @param  int $companyId Id of the company, leave unspecified to get the enterprise company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCompanyDetails'] to see the possible values for this operation
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Equisoft\SDK\EquisoftConnect\Model\SystemparametersCompanyResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCompanyDetailsWithHttpInfo($databaseUuid, string $contentType = self::contentTypes['getCompanyDetails'][0])
+    public function getCompanyDetailsWithHttpInfo($databaseUuid, $companyId = null, string $contentType = self::contentTypes['getCompanyDetails'][0])
     {
-        $request = $this->getCompanyDetailsRequest($databaseUuid, $contentType);
+        $request = $this->getCompanyDetailsRequest($databaseUuid, $companyId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -375,14 +377,15 @@ class SystemParametersApi
      * Get company information about the enterprise or an alternate company
      *
      * @param  string $databaseUuid Uuid of the database (required)
+     * @param  int $companyId Id of the company, leave unspecified to get the enterprise company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCompanyDetails'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCompanyDetailsAsync($databaseUuid, string $contentType = self::contentTypes['getCompanyDetails'][0])
+    public function getCompanyDetailsAsync($databaseUuid, $companyId = null, string $contentType = self::contentTypes['getCompanyDetails'][0])
     {
-        return $this->getCompanyDetailsAsyncWithHttpInfo($databaseUuid, $contentType)
+        return $this->getCompanyDetailsAsyncWithHttpInfo($databaseUuid, $companyId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -396,15 +399,16 @@ class SystemParametersApi
      * Get company information about the enterprise or an alternate company
      *
      * @param  string $databaseUuid Uuid of the database (required)
+     * @param  int $companyId Id of the company, leave unspecified to get the enterprise company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCompanyDetails'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCompanyDetailsAsyncWithHttpInfo($databaseUuid, string $contentType = self::contentTypes['getCompanyDetails'][0])
+    public function getCompanyDetailsAsyncWithHttpInfo($databaseUuid, $companyId = null, string $contentType = self::contentTypes['getCompanyDetails'][0])
     {
         $returnType = '\Equisoft\SDK\EquisoftConnect\Model\SystemparametersCompanyResponse';
-        $request = $this->getCompanyDetailsRequest($databaseUuid, $contentType);
+        $request = $this->getCompanyDetailsRequest($databaseUuid, $companyId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -446,12 +450,13 @@ class SystemParametersApi
      * Create request for operation 'getCompanyDetails'
      *
      * @param  string $databaseUuid Uuid of the database (required)
+     * @param  int $companyId Id of the company, leave unspecified to get the enterprise company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCompanyDetails'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCompanyDetailsRequest($databaseUuid, string $contentType = self::contentTypes['getCompanyDetails'][0])
+    public function getCompanyDetailsRequest($databaseUuid, $companyId = null, string $contentType = self::contentTypes['getCompanyDetails'][0])
     {
 
         // verify the required parameter 'databaseUuid' is set
@@ -460,6 +465,7 @@ class SystemParametersApi
                 'Missing the required parameter $databaseUuid when calling getCompanyDetails'
             );
         }
+
 
 
         $resourcePath = '/crm/api/v1/system/account/company';
@@ -477,6 +483,15 @@ class SystemParametersApi
             'form', // style
             true, // explode
             true // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $companyId,
+            'companyId', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
         ) ?? []);
 
 

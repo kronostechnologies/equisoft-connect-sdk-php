@@ -10,7 +10,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getCompanyDetails()`
 
 ```php
-getCompanyDetails($databaseUuid): \Equisoft\SDK\EquisoftConnect\Model\SystemparametersCompanyResponse
+getCompanyDetails($databaseUuid, $companyId): \Equisoft\SDK\EquisoftConnect\Model\SystemparametersCompanyResponse
 ```
 
 Get company information about the enterprise or an alternate company
@@ -33,9 +33,10 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\SystemParametersApi(
     $config
 );
 $databaseUuid = 'databaseUuid_example'; // string | Uuid of the database
+$companyId = 56; // int | Id of the company, leave unspecified to get the enterprise company
 
 try {
-    $result = $apiInstance->getCompanyDetails($databaseUuid);
+    $result = $apiInstance->getCompanyDetails($databaseUuid, $companyId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SystemParametersApi->getCompanyDetails: ', $e->getMessage(), PHP_EOL;
@@ -47,6 +48,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **databaseUuid** | **string**| Uuid of the database | |
+| **companyId** | **int**| Id of the company, leave unspecified to get the enterprise company | [optional] |
 
 ### Return type
 
