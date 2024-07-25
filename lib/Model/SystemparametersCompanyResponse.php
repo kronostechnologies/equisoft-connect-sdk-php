@@ -63,8 +63,9 @@ class SystemparametersCompanyResponse implements ModelInterface, ArrayAccess, \J
         'nameLine2' => 'string',
         'addressLine1' => 'string',
         'addressLine2' => 'string',
-        'state' => 'string',
         'city' => 'string',
+        'state' => 'string',
+        'country' => 'string',
         'postalCode' => 'string',
         'website' => 'string',
         'phoneMain' => 'string',
@@ -86,8 +87,9 @@ class SystemparametersCompanyResponse implements ModelInterface, ArrayAccess, \J
         'nameLine2' => null,
         'addressLine1' => null,
         'addressLine2' => null,
-        'state' => null,
         'city' => null,
+        'state' => null,
+        'country' => null,
         'postalCode' => null,
         'website' => null,
         'phoneMain' => null,
@@ -107,8 +109,9 @@ class SystemparametersCompanyResponse implements ModelInterface, ArrayAccess, \J
 		'nameLine2' => true,
 		'addressLine1' => true,
 		'addressLine2' => true,
-		'state' => true,
 		'city' => true,
+		'state' => true,
+		'country' => true,
 		'postalCode' => true,
 		'website' => true,
 		'phoneMain' => true,
@@ -208,8 +211,9 @@ class SystemparametersCompanyResponse implements ModelInterface, ArrayAccess, \J
         'nameLine2' => 'nameLine2',
         'addressLine1' => 'addressLine1',
         'addressLine2' => 'addressLine2',
-        'state' => 'state',
         'city' => 'city',
+        'state' => 'state',
+        'country' => 'country',
         'postalCode' => 'postalCode',
         'website' => 'website',
         'phoneMain' => 'phoneMain',
@@ -229,8 +233,9 @@ class SystemparametersCompanyResponse implements ModelInterface, ArrayAccess, \J
         'nameLine2' => 'setNameLine2',
         'addressLine1' => 'setAddressLine1',
         'addressLine2' => 'setAddressLine2',
-        'state' => 'setState',
         'city' => 'setCity',
+        'state' => 'setState',
+        'country' => 'setCountry',
         'postalCode' => 'setPostalCode',
         'website' => 'setWebsite',
         'phoneMain' => 'setPhoneMain',
@@ -250,8 +255,9 @@ class SystemparametersCompanyResponse implements ModelInterface, ArrayAccess, \J
         'nameLine2' => 'getNameLine2',
         'addressLine1' => 'getAddressLine1',
         'addressLine2' => 'getAddressLine2',
-        'state' => 'getState',
         'city' => 'getCity',
+        'state' => 'getState',
+        'country' => 'getCountry',
         'postalCode' => 'getPostalCode',
         'website' => 'getWebsite',
         'phoneMain' => 'getPhoneMain',
@@ -322,8 +328,9 @@ class SystemparametersCompanyResponse implements ModelInterface, ArrayAccess, \J
         $this->setIfExists('nameLine2', $data ?? [], null);
         $this->setIfExists('addressLine1', $data ?? [], null);
         $this->setIfExists('addressLine2', $data ?? [], null);
-        $this->setIfExists('state', $data ?? [], null);
         $this->setIfExists('city', $data ?? [], null);
+        $this->setIfExists('state', $data ?? [], null);
+        $this->setIfExists('country', $data ?? [], null);
         $this->setIfExists('postalCode', $data ?? [], null);
         $this->setIfExists('website', $data ?? [], null);
         $this->setIfExists('phoneMain', $data ?? [], null);
@@ -571,6 +578,40 @@ class SystemparametersCompanyResponse implements ModelInterface, ArrayAccess, \J
     }
 
     /**
+     * Gets city
+     *
+     * @return string|null
+     */
+    public function getCity()
+    {
+        return $this->container['city'];
+    }
+
+    /**
+     * Sets city
+     *
+     * @param string|null $city city
+     *
+     * @return self
+     */
+    public function setCity($city)
+    {
+        if (is_null($city)) {
+            array_push($this->openAPINullablesSetToNull, 'city');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('city', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['city'] = $city;
+
+        return $this;
+    }
+
+    /**
      * Gets state
      *
      * @return string|null
@@ -605,35 +646,35 @@ class SystemparametersCompanyResponse implements ModelInterface, ArrayAccess, \J
     }
 
     /**
-     * Gets city
+     * Gets country
      *
      * @return string|null
      */
-    public function getCity()
+    public function getCountry()
     {
-        return $this->container['city'];
+        return $this->container['country'];
     }
 
     /**
-     * Sets city
+     * Sets country
      *
-     * @param string|null $city city
+     * @param string|null $country country
      *
      * @return self
      */
-    public function setCity($city)
+    public function setCountry($country)
     {
-        if (is_null($city)) {
-            array_push($this->openAPINullablesSetToNull, 'city');
+        if (is_null($country)) {
+            array_push($this->openAPINullablesSetToNull, 'country');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('city', $nullablesSetToNull);
+            $index = array_search('country', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['city'] = $city;
+        $this->container['country'] = $country;
 
         return $this;
     }

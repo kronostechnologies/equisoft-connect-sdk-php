@@ -134,6 +134,15 @@ class SystemparametersCompanyResponseTest extends TestCase
     }
 
     /**
+     * Test attribute "city"
+     */
+    public function testPropertyCity()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "state"
      */
     public function testPropertyState()
@@ -143,9 +152,9 @@ class SystemparametersCompanyResponseTest extends TestCase
     }
 
     /**
-     * Test attribute "city"
+     * Test attribute "country"
      */
-    public function testPropertyCity()
+    public function testPropertyCountry()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
