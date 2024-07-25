@@ -60,8 +60,16 @@ class SystemparametersCompanyResponse implements ModelInterface, ArrayAccess, \J
         'id' => 'int',
         'enterprise' => 'bool',
         'name' => 'string',
-        'address' => 'string',
-        'website' => 'string'
+        'nameLine2' => 'string',
+        'addressLine1' => 'string',
+        'addressLine2' => 'string',
+        'state' => 'string',
+        'city' => 'string',
+        'postalCode' => 'string',
+        'website' => 'string',
+        'phoneMain' => 'string',
+        'phoneTollfree' => 'string',
+        'phoneFax' => 'string'
     ];
 
     /**
@@ -75,8 +83,16 @@ class SystemparametersCompanyResponse implements ModelInterface, ArrayAccess, \J
         'id' => null,
         'enterprise' => null,
         'name' => null,
-        'address' => null,
-        'website' => null
+        'nameLine2' => null,
+        'addressLine1' => null,
+        'addressLine2' => null,
+        'state' => null,
+        'city' => null,
+        'postalCode' => null,
+        'website' => null,
+        'phoneMain' => null,
+        'phoneTollfree' => null,
+        'phoneFax' => null
     ];
 
     /**
@@ -88,8 +104,16 @@ class SystemparametersCompanyResponse implements ModelInterface, ArrayAccess, \J
         'id' => true,
 		'enterprise' => false,
 		'name' => true,
-		'address' => true,
-		'website' => true
+		'nameLine2' => true,
+		'addressLine1' => true,
+		'addressLine2' => true,
+		'state' => true,
+		'city' => true,
+		'postalCode' => true,
+		'website' => true,
+		'phoneMain' => true,
+		'phoneTollfree' => true,
+		'phoneFax' => true
     ];
 
     /**
@@ -181,8 +205,16 @@ class SystemparametersCompanyResponse implements ModelInterface, ArrayAccess, \J
         'id' => 'id',
         'enterprise' => 'enterprise',
         'name' => 'name',
-        'address' => 'address',
-        'website' => 'website'
+        'nameLine2' => 'nameLine2',
+        'addressLine1' => 'addressLine1',
+        'addressLine2' => 'addressLine2',
+        'state' => 'state',
+        'city' => 'city',
+        'postalCode' => 'postalCode',
+        'website' => 'website',
+        'phoneMain' => 'phoneMain',
+        'phoneTollfree' => 'phoneTollfree',
+        'phoneFax' => 'phoneFax'
     ];
 
     /**
@@ -194,8 +226,16 @@ class SystemparametersCompanyResponse implements ModelInterface, ArrayAccess, \J
         'id' => 'setId',
         'enterprise' => 'setEnterprise',
         'name' => 'setName',
-        'address' => 'setAddress',
-        'website' => 'setWebsite'
+        'nameLine2' => 'setNameLine2',
+        'addressLine1' => 'setAddressLine1',
+        'addressLine2' => 'setAddressLine2',
+        'state' => 'setState',
+        'city' => 'setCity',
+        'postalCode' => 'setPostalCode',
+        'website' => 'setWebsite',
+        'phoneMain' => 'setPhoneMain',
+        'phoneTollfree' => 'setPhoneTollfree',
+        'phoneFax' => 'setPhoneFax'
     ];
 
     /**
@@ -207,8 +247,16 @@ class SystemparametersCompanyResponse implements ModelInterface, ArrayAccess, \J
         'id' => 'getId',
         'enterprise' => 'getEnterprise',
         'name' => 'getName',
-        'address' => 'getAddress',
-        'website' => 'getWebsite'
+        'nameLine2' => 'getNameLine2',
+        'addressLine1' => 'getAddressLine1',
+        'addressLine2' => 'getAddressLine2',
+        'state' => 'getState',
+        'city' => 'getCity',
+        'postalCode' => 'getPostalCode',
+        'website' => 'getWebsite',
+        'phoneMain' => 'getPhoneMain',
+        'phoneTollfree' => 'getPhoneTollfree',
+        'phoneFax' => 'getPhoneFax'
     ];
 
     /**
@@ -271,8 +319,16 @@ class SystemparametersCompanyResponse implements ModelInterface, ArrayAccess, \J
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('enterprise', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('address', $data ?? [], null);
+        $this->setIfExists('nameLine2', $data ?? [], null);
+        $this->setIfExists('addressLine1', $data ?? [], null);
+        $this->setIfExists('addressLine2', $data ?? [], null);
+        $this->setIfExists('state', $data ?? [], null);
+        $this->setIfExists('city', $data ?? [], null);
+        $this->setIfExists('postalCode', $data ?? [], null);
         $this->setIfExists('website', $data ?? [], null);
+        $this->setIfExists('phoneMain', $data ?? [], null);
+        $this->setIfExists('phoneTollfree', $data ?? [], null);
+        $this->setIfExists('phoneFax', $data ?? [], null);
     }
 
     /**
@@ -413,35 +469,205 @@ class SystemparametersCompanyResponse implements ModelInterface, ArrayAccess, \J
     }
 
     /**
-     * Gets address
+     * Gets nameLine2
      *
      * @return string|null
      */
-    public function getAddress()
+    public function getNameLine2()
     {
-        return $this->container['address'];
+        return $this->container['nameLine2'];
     }
 
     /**
-     * Sets address
+     * Sets nameLine2
      *
-     * @param string|null $address address
+     * @param string|null $nameLine2 nameLine2
      *
      * @return self
      */
-    public function setAddress($address)
+    public function setNameLine2($nameLine2)
     {
-        if (is_null($address)) {
-            array_push($this->openAPINullablesSetToNull, 'address');
+        if (is_null($nameLine2)) {
+            array_push($this->openAPINullablesSetToNull, 'nameLine2');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('address', $nullablesSetToNull);
+            $index = array_search('nameLine2', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['address'] = $address;
+        $this->container['nameLine2'] = $nameLine2;
+
+        return $this;
+    }
+
+    /**
+     * Gets addressLine1
+     *
+     * @return string|null
+     */
+    public function getAddressLine1()
+    {
+        return $this->container['addressLine1'];
+    }
+
+    /**
+     * Sets addressLine1
+     *
+     * @param string|null $addressLine1 addressLine1
+     *
+     * @return self
+     */
+    public function setAddressLine1($addressLine1)
+    {
+        if (is_null($addressLine1)) {
+            array_push($this->openAPINullablesSetToNull, 'addressLine1');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('addressLine1', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['addressLine1'] = $addressLine1;
+
+        return $this;
+    }
+
+    /**
+     * Gets addressLine2
+     *
+     * @return string|null
+     */
+    public function getAddressLine2()
+    {
+        return $this->container['addressLine2'];
+    }
+
+    /**
+     * Sets addressLine2
+     *
+     * @param string|null $addressLine2 addressLine2
+     *
+     * @return self
+     */
+    public function setAddressLine2($addressLine2)
+    {
+        if (is_null($addressLine2)) {
+            array_push($this->openAPINullablesSetToNull, 'addressLine2');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('addressLine2', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['addressLine2'] = $addressLine2;
+
+        return $this;
+    }
+
+    /**
+     * Gets state
+     *
+     * @return string|null
+     */
+    public function getState()
+    {
+        return $this->container['state'];
+    }
+
+    /**
+     * Sets state
+     *
+     * @param string|null $state state
+     *
+     * @return self
+     */
+    public function setState($state)
+    {
+        if (is_null($state)) {
+            array_push($this->openAPINullablesSetToNull, 'state');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('state', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['state'] = $state;
+
+        return $this;
+    }
+
+    /**
+     * Gets city
+     *
+     * @return string|null
+     */
+    public function getCity()
+    {
+        return $this->container['city'];
+    }
+
+    /**
+     * Sets city
+     *
+     * @param string|null $city city
+     *
+     * @return self
+     */
+    public function setCity($city)
+    {
+        if (is_null($city)) {
+            array_push($this->openAPINullablesSetToNull, 'city');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('city', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['city'] = $city;
+
+        return $this;
+    }
+
+    /**
+     * Gets postalCode
+     *
+     * @return string|null
+     */
+    public function getPostalCode()
+    {
+        return $this->container['postalCode'];
+    }
+
+    /**
+     * Sets postalCode
+     *
+     * @param string|null $postalCode postalCode
+     *
+     * @return self
+     */
+    public function setPostalCode($postalCode)
+    {
+        if (is_null($postalCode)) {
+            array_push($this->openAPINullablesSetToNull, 'postalCode');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('postalCode', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['postalCode'] = $postalCode;
 
         return $this;
     }
@@ -476,6 +702,108 @@ class SystemparametersCompanyResponse implements ModelInterface, ArrayAccess, \J
             }
         }
         $this->container['website'] = $website;
+
+        return $this;
+    }
+
+    /**
+     * Gets phoneMain
+     *
+     * @return string|null
+     */
+    public function getPhoneMain()
+    {
+        return $this->container['phoneMain'];
+    }
+
+    /**
+     * Sets phoneMain
+     *
+     * @param string|null $phoneMain phoneMain
+     *
+     * @return self
+     */
+    public function setPhoneMain($phoneMain)
+    {
+        if (is_null($phoneMain)) {
+            array_push($this->openAPINullablesSetToNull, 'phoneMain');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('phoneMain', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['phoneMain'] = $phoneMain;
+
+        return $this;
+    }
+
+    /**
+     * Gets phoneTollfree
+     *
+     * @return string|null
+     */
+    public function getPhoneTollfree()
+    {
+        return $this->container['phoneTollfree'];
+    }
+
+    /**
+     * Sets phoneTollfree
+     *
+     * @param string|null $phoneTollfree phoneTollfree
+     *
+     * @return self
+     */
+    public function setPhoneTollfree($phoneTollfree)
+    {
+        if (is_null($phoneTollfree)) {
+            array_push($this->openAPINullablesSetToNull, 'phoneTollfree');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('phoneTollfree', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['phoneTollfree'] = $phoneTollfree;
+
+        return $this;
+    }
+
+    /**
+     * Gets phoneFax
+     *
+     * @return string|null
+     */
+    public function getPhoneFax()
+    {
+        return $this->container['phoneFax'];
+    }
+
+    /**
+     * Sets phoneFax
+     *
+     * @param string|null $phoneFax phoneFax
+     *
+     * @return self
+     */
+    public function setPhoneFax($phoneFax)
+    {
+        if (is_null($phoneFax)) {
+            array_push($this->openAPINullablesSetToNull, 'phoneFax');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('phoneFax', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['phoneFax'] = $phoneFax;
 
         return $this;
     }

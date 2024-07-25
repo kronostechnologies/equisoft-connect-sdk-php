@@ -107,9 +107,54 @@ class SystemparametersCompanyResponseTest extends TestCase
     }
 
     /**
-     * Test attribute "address"
+     * Test attribute "nameLine2"
      */
-    public function testPropertyAddress()
+    public function testPropertyNameLine2()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "addressLine1"
+     */
+    public function testPropertyAddressLine1()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "addressLine2"
+     */
+    public function testPropertyAddressLine2()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "state"
+     */
+    public function testPropertyState()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "city"
+     */
+    public function testPropertyCity()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "postalCode"
+     */
+    public function testPropertyPostalCode()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -119,6 +164,33 @@ class SystemparametersCompanyResponseTest extends TestCase
      * Test attribute "website"
      */
     public function testPropertyWebsite()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "phoneMain"
+     */
+    public function testPropertyPhoneMain()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "phoneTollfree"
+     */
+    public function testPropertyPhoneTollfree()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "phoneFax"
+     */
+    public function testPropertyPhoneFax()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
