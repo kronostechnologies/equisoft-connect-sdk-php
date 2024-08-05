@@ -82,4 +82,16 @@ class SystemParametersApiTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test case for getCompanyLogo
+     *
+     * Get company logo.
+     *
+     */
+    public function testGetCompanyLogo()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }
