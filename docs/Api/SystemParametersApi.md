@@ -71,7 +71,7 @@ try {
 ## `getCompanyLogo()`
 
 ```php
-getCompanyLogo($databaseUuid, $companyId)
+getCompanyLogo($databaseUuid, $companyId): \SplFileObject
 ```
 
 Get company logo
@@ -97,7 +97,8 @@ $databaseUuid = 'databaseUuid_example'; // string | Uuid of the database
 $companyId = 56; // int | Id of the company, leave unspecified to get the enterprise company
 
 try {
-    $apiInstance->getCompanyLogo($databaseUuid, $companyId);
+    $result = $apiInstance->getCompanyLogo($databaseUuid, $companyId);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SystemParametersApi->getCompanyLogo: ', $e->getMessage(), PHP_EOL;
 }
@@ -112,7 +113,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+**\SplFileObject**
 
 ### Authorization
 
