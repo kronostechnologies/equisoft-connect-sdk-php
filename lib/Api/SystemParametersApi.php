@@ -575,6 +575,7 @@ class SystemParametersApi
      * Get company logo
      *
      * @param  string $databaseUuid Uuid of the database (required)
+     * @param  string $type type (optional, default to 'web')
      * @param  int $companyId Id of the company, leave unspecified to get the enterprise company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCompanyLogo'] to see the possible values for this operation
      *
@@ -582,9 +583,9 @@ class SystemParametersApi
      * @throws \InvalidArgumentException
      * @return \SplFileObject|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
-    public function getCompanyLogo($databaseUuid, $companyId = null, string $contentType = self::contentTypes['getCompanyLogo'][0])
+    public function getCompanyLogo($databaseUuid, $type = 'web', $companyId = null, string $contentType = self::contentTypes['getCompanyLogo'][0])
     {
-        list($response) = $this->getCompanyLogoWithHttpInfo($databaseUuid, $companyId, $contentType);
+        list($response) = $this->getCompanyLogoWithHttpInfo($databaseUuid, $type, $companyId, $contentType);
         return $response;
     }
 
@@ -594,6 +595,7 @@ class SystemParametersApi
      * Get company logo
      *
      * @param  string $databaseUuid Uuid of the database (required)
+     * @param  string $type type (optional, default to 'web')
      * @param  int $companyId Id of the company, leave unspecified to get the enterprise company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCompanyLogo'] to see the possible values for this operation
      *
@@ -601,9 +603,9 @@ class SystemParametersApi
      * @throws \InvalidArgumentException
      * @return array of \SplFileObject|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCompanyLogoWithHttpInfo($databaseUuid, $companyId = null, string $contentType = self::contentTypes['getCompanyLogo'][0])
+    public function getCompanyLogoWithHttpInfo($databaseUuid, $type = 'web', $companyId = null, string $contentType = self::contentTypes['getCompanyLogo'][0])
     {
-        $request = $this->getCompanyLogoRequest($databaseUuid, $companyId, $contentType);
+        $request = $this->getCompanyLogoRequest($databaseUuid, $type, $companyId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -789,15 +791,16 @@ class SystemParametersApi
      * Get company logo
      *
      * @param  string $databaseUuid Uuid of the database (required)
+     * @param  string $type type (optional, default to 'web')
      * @param  int $companyId Id of the company, leave unspecified to get the enterprise company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCompanyLogo'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCompanyLogoAsync($databaseUuid, $companyId = null, string $contentType = self::contentTypes['getCompanyLogo'][0])
+    public function getCompanyLogoAsync($databaseUuid, $type = 'web', $companyId = null, string $contentType = self::contentTypes['getCompanyLogo'][0])
     {
-        return $this->getCompanyLogoAsyncWithHttpInfo($databaseUuid, $companyId, $contentType)
+        return $this->getCompanyLogoAsyncWithHttpInfo($databaseUuid, $type, $companyId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -811,16 +814,17 @@ class SystemParametersApi
      * Get company logo
      *
      * @param  string $databaseUuid Uuid of the database (required)
+     * @param  string $type type (optional, default to 'web')
      * @param  int $companyId Id of the company, leave unspecified to get the enterprise company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCompanyLogo'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getCompanyLogoAsyncWithHttpInfo($databaseUuid, $companyId = null, string $contentType = self::contentTypes['getCompanyLogo'][0])
+    public function getCompanyLogoAsyncWithHttpInfo($databaseUuid, $type = 'web', $companyId = null, string $contentType = self::contentTypes['getCompanyLogo'][0])
     {
         $returnType = '\SplFileObject';
-        $request = $this->getCompanyLogoRequest($databaseUuid, $companyId, $contentType);
+        $request = $this->getCompanyLogoRequest($databaseUuid, $type, $companyId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -862,13 +866,14 @@ class SystemParametersApi
      * Create request for operation 'getCompanyLogo'
      *
      * @param  string $databaseUuid Uuid of the database (required)
+     * @param  string $type type (optional, default to 'web')
      * @param  int $companyId Id of the company, leave unspecified to get the enterprise company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCompanyLogo'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getCompanyLogoRequest($databaseUuid, $companyId = null, string $contentType = self::contentTypes['getCompanyLogo'][0])
+    public function getCompanyLogoRequest($databaseUuid, $type = 'web', $companyId = null, string $contentType = self::contentTypes['getCompanyLogo'][0])
     {
 
         // verify the required parameter 'databaseUuid' is set
@@ -877,6 +882,7 @@ class SystemParametersApi
                 'Missing the required parameter $databaseUuid when calling getCompanyLogo'
             );
         }
+
 
 
 
@@ -907,6 +913,14 @@ class SystemParametersApi
         ) ?? []);
 
 
+        // path params
+        if ($type !== null) {
+            $resourcePath = str_replace(
+                '{' . 'type' . '}',
+                ObjectSerializer::toPathValue($type),
+                $resourcePath
+            );
+        }
 
 
         $headers = $this->headerSelector->selectHeaders(

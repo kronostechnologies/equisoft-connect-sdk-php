@@ -71,7 +71,7 @@ try {
 ## `getCompanyLogo()`
 
 ```php
-getCompanyLogo($databaseUuid, $companyId): \SplFileObject
+getCompanyLogo($databaseUuid, $type, $companyId): \SplFileObject
 ```
 
 Get company logo
@@ -94,10 +94,11 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\SystemParametersApi(
     $config
 );
 $databaseUuid = 'databaseUuid_example'; // string | Uuid of the database
+$type = 'web'; // string | type
 $companyId = 56; // int | Id of the company, leave unspecified to get the enterprise company
 
 try {
-    $result = $apiInstance->getCompanyLogo($databaseUuid, $companyId);
+    $result = $apiInstance->getCompanyLogo($databaseUuid, $type, $companyId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SystemParametersApi->getCompanyLogo: ', $e->getMessage(), PHP_EOL;
@@ -109,6 +110,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **databaseUuid** | **string**| Uuid of the database | |
+| **type** | **string**| type | [optional] [default to &#39;web&#39;] |
 | **companyId** | **int**| Id of the company, leave unspecified to get the enterprise company | [optional] |
 
 ### Return type
