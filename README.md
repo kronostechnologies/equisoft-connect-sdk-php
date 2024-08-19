@@ -492,8 +492,8 @@ Authentication schemes defined for the API:
 ### OAuth2
 
 - **Type**: `OAuth`
-- **Flow**: `implicit`
-- **Authorization URL**: `https://secure.kronos-web.com/oauth/authorize`
+- **Flow**: `accessCode`
+- **Authorization URL**: `https://apps.ca.equisoft.io/oauth/authorize`
 - **Scopes**: 
     - **crm:contact**: Read/Write access on contacts
     - **crm:database**: Read/Write access on databases
