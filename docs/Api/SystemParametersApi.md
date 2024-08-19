@@ -4,8 +4,8 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**getCompanyDetails()**](SystemParametersApi.md#getCompanyDetails) | **GET** /crm/api/v1/system/account/company | Get company information about the enterprise or an alternate company |
-| [**getCompanyLogo()**](SystemParametersApi.md#getCompanyLogo) | **GET** /crm/api/v1/system/account/company/logo | Get company logo |
+| [**getCompanyDetails()**](SystemParametersApi.md#getCompanyDetails) | **GET** /crm/api/v1/parameters/account/company | Get company information about the enterprise or an alternate company |
+| [**getCompanyLogo()**](SystemParametersApi.md#getCompanyLogo) | **GET** /crm/api/v1/parameters/account/company/logo | Get company logo |
 
 
 ## `getCompanyDetails()`

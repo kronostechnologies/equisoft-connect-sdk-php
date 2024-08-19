@@ -471,7 +471,7 @@ class SystemParametersApi
 
 
 
-        $resourcePath = '/crm/api/v1/system/account/company';
+        $resourcePath = '/crm/api/v1/parameters/account/company';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -886,7 +886,7 @@ class SystemParametersApi
 
 
 
-        $resourcePath = '/crm/api/v1/system/account/company/logo';
+        $resourcePath = '/crm/api/v1/parameters/account/company/logo';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
