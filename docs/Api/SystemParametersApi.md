@@ -33,7 +33,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\SystemParametersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$databaseUuid = 'databaseUuid_example'; // string | Uuid of the database
+$databaseUuid = 'databaseUuid_example'; // string | Database unique identifier.
 $companyId = 56; // int | Id of the company, leave unspecified to get the enterprise company
 
 try {
@@ -48,7 +48,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **databaseUuid** | **string**| Uuid of the database | |
+| **databaseUuid** | **string**| Database unique identifier. | |
 | **companyId** | **int**| Id of the company, leave unspecified to get the enterprise company | [optional] |
 
 ### Return type
@@ -93,7 +93,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\SystemParametersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$databaseUuid = 'databaseUuid_example'; // string | Uuid of the database
+$databaseUuid = 'databaseUuid_example'; // string | Database unique identifier.
 $type = 'web'; // string | type
 $companyId = 56; // int | Id of the company, leave unspecified to get the enterprise company
 
@@ -109,7 +109,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **databaseUuid** | **string**| Uuid of the database | |
+| **databaseUuid** | **string**| Database unique identifier. | |
 | **type** | **string**| type | [optional] [default to &#39;web&#39;] |
 | **companyId** | **int**| Id of the company, leave unspecified to get the enterprise company | [optional] |
 

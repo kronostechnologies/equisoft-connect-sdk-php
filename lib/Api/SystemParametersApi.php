@@ -130,7 +130,7 @@ class SystemParametersApi
      *
      * Get company information about the enterprise or an alternate company
      *
-     * @param  string $databaseUuid Uuid of the database (required)
+     * @param  string $databaseUuid Database unique identifier. (required)
      * @param  int $companyId Id of the company, leave unspecified to get the enterprise company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCompanyDetails'] to see the possible values for this operation
      *
@@ -149,7 +149,7 @@ class SystemParametersApi
      *
      * Get company information about the enterprise or an alternate company
      *
-     * @param  string $databaseUuid Uuid of the database (required)
+     * @param  string $databaseUuid Database unique identifier. (required)
      * @param  int $companyId Id of the company, leave unspecified to get the enterprise company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCompanyDetails'] to see the possible values for this operation
      *
@@ -379,7 +379,7 @@ class SystemParametersApi
      *
      * Get company information about the enterprise or an alternate company
      *
-     * @param  string $databaseUuid Uuid of the database (required)
+     * @param  string $databaseUuid Database unique identifier. (required)
      * @param  int $companyId Id of the company, leave unspecified to get the enterprise company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCompanyDetails'] to see the possible values for this operation
      *
@@ -401,7 +401,7 @@ class SystemParametersApi
      *
      * Get company information about the enterprise or an alternate company
      *
-     * @param  string $databaseUuid Uuid of the database (required)
+     * @param  string $databaseUuid Database unique identifier. (required)
      * @param  int $companyId Id of the company, leave unspecified to get the enterprise company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCompanyDetails'] to see the possible values for this operation
      *
@@ -452,7 +452,7 @@ class SystemParametersApi
     /**
      * Create request for operation 'getCompanyDetails'
      *
-     * @param  string $databaseUuid Uuid of the database (required)
+     * @param  string $databaseUuid Database unique identifier. (required)
      * @param  int $companyId Id of the company, leave unspecified to get the enterprise company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCompanyDetails'] to see the possible values for this operation
      *
@@ -574,7 +574,7 @@ class SystemParametersApi
      *
      * Get company logo
      *
-     * @param  string $databaseUuid Uuid of the database (required)
+     * @param  string $databaseUuid Database unique identifier. (required)
      * @param  string $type type (optional, default to 'web')
      * @param  int $companyId Id of the company, leave unspecified to get the enterprise company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCompanyLogo'] to see the possible values for this operation
@@ -594,7 +594,7 @@ class SystemParametersApi
      *
      * Get company logo
      *
-     * @param  string $databaseUuid Uuid of the database (required)
+     * @param  string $databaseUuid Database unique identifier. (required)
      * @param  string $type type (optional, default to 'web')
      * @param  int $companyId Id of the company, leave unspecified to get the enterprise company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCompanyLogo'] to see the possible values for this operation
@@ -790,7 +790,7 @@ class SystemParametersApi
      *
      * Get company logo
      *
-     * @param  string $databaseUuid Uuid of the database (required)
+     * @param  string $databaseUuid Database unique identifier. (required)
      * @param  string $type type (optional, default to 'web')
      * @param  int $companyId Id of the company, leave unspecified to get the enterprise company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCompanyLogo'] to see the possible values for this operation
@@ -813,7 +813,7 @@ class SystemParametersApi
      *
      * Get company logo
      *
-     * @param  string $databaseUuid Uuid of the database (required)
+     * @param  string $databaseUuid Database unique identifier. (required)
      * @param  string $type type (optional, default to 'web')
      * @param  int $companyId Id of the company, leave unspecified to get the enterprise company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCompanyLogo'] to see the possible values for this operation
@@ -865,7 +865,7 @@ class SystemParametersApi
     /**
      * Create request for operation 'getCompanyLogo'
      *
-     * @param  string $databaseUuid Uuid of the database (required)
+     * @param  string $databaseUuid Database unique identifier. (required)
      * @param  string $type type (optional, default to 'web')
      * @param  int $companyId Id of the company, leave unspecified to get the enterprise company (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getCompanyLogo'] to see the possible values for this operation
