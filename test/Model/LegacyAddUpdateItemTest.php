@@ -89,6 +89,15 @@ class LegacyAddUpdateItemTest extends TestCase
     }
 
     /**
+     * Test attribute "uuid"
+     */
+    public function testPropertyUuid()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "externalKey"
      */
     public function testPropertyExternalKey()

@@ -58,6 +58,7 @@ class LegacyAddUpdateItem implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static $openAPITypes = [
         'id' => 'string',
+        'uuid' => 'string',
         'externalKey' => 'string',
         'result' => 'string'
     ];
@@ -71,6 +72,7 @@ class LegacyAddUpdateItem implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static $openAPIFormats = [
         'id' => null,
+        'uuid' => null,
         'externalKey' => null,
         'result' => null
     ];
@@ -82,6 +84,7 @@ class LegacyAddUpdateItem implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static array $openAPINullables = [
         'id' => false,
+        'uuid' => false,
         'externalKey' => false,
         'result' => false
     ];
@@ -173,6 +176,7 @@ class LegacyAddUpdateItem implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'uuid' => 'uuid',
         'externalKey' => 'externalKey',
         'result' => 'result'
     ];
@@ -184,6 +188,7 @@ class LegacyAddUpdateItem implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     protected static $setters = [
         'id' => 'setId',
+        'uuid' => 'setUuid',
         'externalKey' => 'setExternalKey',
         'result' => 'setResult'
     ];
@@ -195,6 +200,7 @@ class LegacyAddUpdateItem implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     protected static $getters = [
         'id' => 'getId',
+        'uuid' => 'getUuid',
         'externalKey' => 'getExternalKey',
         'result' => 'getResult'
     ];
@@ -257,6 +263,7 @@ class LegacyAddUpdateItem implements ModelInterface, ArrayAccess, \JsonSerializa
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
+        $this->setIfExists('uuid', $data ?? [], null);
         $this->setIfExists('externalKey', $data ?? [], null);
         $this->setIfExists('result', $data ?? [], null);
     }
@@ -326,6 +333,33 @@ class LegacyAddUpdateItem implements ModelInterface, ArrayAccess, \JsonSerializa
             throw new \InvalidArgumentException('non-nullable id cannot be null');
         }
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets uuid
+     *
+     * @return string|null
+     */
+    public function getUuid()
+    {
+        return $this->container['uuid'];
+    }
+
+    /**
+     * Sets uuid
+     *
+     * @param string|null $uuid UUID of the added item.
+     *
+     * @return self
+     */
+    public function setUuid($uuid)
+    {
+        if (is_null($uuid)) {
+            throw new \InvalidArgumentException('non-nullable uuid cannot be null');
+        }
+        $this->container['uuid'] = $uuid;
 
         return $this;
     }
