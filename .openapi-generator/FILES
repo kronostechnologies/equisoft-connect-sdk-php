@@ -4,6 +4,7 @@ README.md
 docs/Api/ContactsApi.md
 docs/Api/DSFApi.md
 docs/Api/DatabasesApi.md
+docs/Api/DocumentsApi.md
 docs/Api/EventsApi.md
 docs/Api/FieldValuesApi.md
 docs/Api/GatewaysApi.md
@@ -286,6 +287,7 @@ git_push.sh
 lib/Api/ContactsApi.php
 lib/Api/DSFApi.php
 lib/Api/DatabasesApi.php
+lib/Api/DocumentsApi.php
 lib/Api/EventsApi.php
 lib/Api/FieldValuesApi.php
 lib/Api/GatewaysApi.php
@@ -573,6 +575,7 @@ phpunit.xml.dist
 test/Api/ContactsApiTest.php
 test/Api/DSFApiTest.php
 test/Api/DatabasesApiTest.php
+test/Api/DocumentsApiTest.php
 test/Api/EventsApiTest.php
 test/Api/FieldValuesApiTest.php
 test/Api/GatewaysApiTest.php

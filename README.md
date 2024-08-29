@@ -93,6 +93,8 @@ Class | Method | HTTP request | Description
 *DatabasesApi* | [**unsetDatabaseDistributor**](docs/Api/DatabasesApi.md#unsetdatabasedistributor) | **DELETE** /crm/api/v1/databases/{databaseUuid}/distributor | Unset the database&#39;s distributor
 *DatabasesApi* | [**updateState**](docs/Api/DatabasesApi.md#updatestate) | **PUT** /crm/api/v1/databases/{databaseUuid}/state | Update a database&#39;s state
 *DatabasesApi* | [**updateUser**](docs/Api/DatabasesApi.md#updateuser) | **PATCH** /crm/api/v1/databases/{databaseUuid}/users/{userId} | Update a database&#39;s user
+*DocumentsApi* | [**deleteDocument**](docs/Api/DocumentsApi.md#deletedocument) | **DELETE** /crm/api/v1/documents/{documentId} | Delete a document.
+*DocumentsApi* | [**deleteDocuments**](docs/Api/DocumentsApi.md#deletedocuments) | **DELETE** /crm/api/v1/documents | Delete specified documents.
 *EventsApi* | [**archiveEventInternalNote**](docs/Api/EventsApi.md#archiveeventinternalnote) | **POST** /crm/api/v1/events/{eventId}/notes/{noteId}/archive | Archive an internal note for an event.
 *EventsApi* | [**createEvent**](docs/Api/EventsApi.md#createevent) | **POST** /crm/api/v1/events | Create an event.
 *EventsApi* | [**createEventInternalNote**](docs/Api/EventsApi.md#createeventinternalnote) | **POST** /crm/api/v1/events/{eventId}/notes | Add an internal note to an event.
