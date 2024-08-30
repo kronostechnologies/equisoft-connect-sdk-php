@@ -120,6 +120,18 @@ class EventsApiTest extends TestCase
     }
 
     /**
+     * Test case for deleteEvents
+     *
+     * Delete some events..
+     *
+     */
+    public function testDeleteEvents()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for getCalendar
      *
      * Get informations about a calendar or a default calendar..

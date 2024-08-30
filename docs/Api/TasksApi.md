@@ -8,6 +8,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 | [**createTask()**](TasksApi.md#createTask) | **POST** /crm/api/v1/tasks | Create a task. |
 | [**createTaskInternalNote()**](TasksApi.md#createTaskInternalNote) | **POST** /crm/api/v1/tasks/{taskId}/notes | Add an internal note to a task. |
 | [**deleteTask()**](TasksApi.md#deleteTask) | **DELETE** /crm/api/v1/tasks/{taskId} | Delete a task. |
+| [**deleteTasks()**](TasksApi.md#deleteTasks) | **DELETE** /crm/api/v1/tasks | Delete some tasks. |
 | [**getTask()**](TasksApi.md#getTask) | **GET** /crm/api/v1/tasks/{taskId} | Return the detail of a task. |
 | [**getTaskInternalNoteList()**](TasksApi.md#getTaskInternalNoteList) | **GET** /crm/api/v1/tasks/{taskId}/notes | Get the internal notes list for a task. |
 | [**listTasks()**](TasksApi.md#listTasks) | **GET** /crm/api/v1/tasks | List or search tasks. |
@@ -240,6 +241,60 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **taskId** | **string**| Task unique identifier. | |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[OAuth2](../../README.md#OAuth2)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `deleteTasks()`
+
+```php
+deleteTasks()
+```
+
+Delete some tasks.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Equisoft\SDK\EquisoftConnect\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\TasksApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+
+try {
+    $apiInstance->deleteTasks();
+} catch (Exception $e) {
+    echo 'Exception when calling TasksApi->deleteTasks: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
 
 ### Return type
 

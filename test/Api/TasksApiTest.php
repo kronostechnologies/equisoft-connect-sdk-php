@@ -120,6 +120,18 @@ class TasksApiTest extends TestCase
     }
 
     /**
+     * Test case for deleteTasks
+     *
+     * Delete some tasks..
+     *
+     */
+    public function testDeleteTasks()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for getTask
      *
      * Return the detail of a task..

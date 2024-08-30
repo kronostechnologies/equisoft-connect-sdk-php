@@ -8,6 +8,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 | [**createEvent()**](EventsApi.md#createEvent) | **POST** /crm/api/v1/events | Create an event. |
 | [**createEventInternalNote()**](EventsApi.md#createEventInternalNote) | **POST** /crm/api/v1/events/{eventId}/notes | Add an internal note to an event. |
 | [**deleteEvent()**](EventsApi.md#deleteEvent) | **DELETE** /crm/api/v1/events/{eventId} | Delete an event. |
+| [**deleteEvents()**](EventsApi.md#deleteEvents) | **DELETE** /crm/api/v1/events | Delete some events. |
 | [**getCalendar()**](EventsApi.md#getCalendar) | **GET** /crm/api/v1/calendars/{calendarId} | Get informations about a calendar or a default calendar. |
 | [**getEvent()**](EventsApi.md#getEvent) | **GET** /crm/api/v1/events/{eventId} | Return the detail of an event. |
 | [**getEventInstances()**](EventsApi.md#getEventInstances) | **GET** /crm/api/v1/events/{eventId}/instances | Get a recurring event instances. |
@@ -245,6 +246,62 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **eventId** | **string**| Event unique identifier. For recurrence occurrence/exception, eventId is suffixed with the original start date of the occurrence. For example 999_20180101. | |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[OAuth2](../../README.md#OAuth2)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `deleteEvents()`
+
+```php
+deleteEvents()
+```
+
+Delete some events.
+
+**Note:** To delete an instance of recurring event, use the master event id suffixed by the original start date of the occurrence.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Equisoft\SDK\EquisoftConnect\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\EventsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+
+try {
+    $apiInstance->deleteEvents();
+} catch (Exception $e) {
+    echo 'Exception when calling EventsApi->deleteEvents: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
 
 ### Return type
 

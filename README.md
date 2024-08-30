@@ -99,6 +99,7 @@ Class | Method | HTTP request | Description
 *EventsApi* | [**createEvent**](docs/Api/EventsApi.md#createevent) | **POST** /crm/api/v1/events | Create an event.
 *EventsApi* | [**createEventInternalNote**](docs/Api/EventsApi.md#createeventinternalnote) | **POST** /crm/api/v1/events/{eventId}/notes | Add an internal note to an event.
 *EventsApi* | [**deleteEvent**](docs/Api/EventsApi.md#deleteevent) | **DELETE** /crm/api/v1/events/{eventId} | Delete an event.
+*EventsApi* | [**deleteEvents**](docs/Api/EventsApi.md#deleteevents) | **DELETE** /crm/api/v1/events | Delete some events.
 *EventsApi* | [**getCalendar**](docs/Api/EventsApi.md#getcalendar) | **GET** /crm/api/v1/calendars/{calendarId} | Get informations about a calendar or a default calendar.
 *EventsApi* | [**getEvent**](docs/Api/EventsApi.md#getevent) | **GET** /crm/api/v1/events/{eventId} | Return the detail of an event.
 *EventsApi* | [**getEventInstances**](docs/Api/EventsApi.md#geteventinstances) | **GET** /crm/api/v1/events/{eventId}/instances | Get a recurring event instances.
@@ -209,6 +210,7 @@ Class | Method | HTTP request | Description
 *TasksApi* | [**createTask**](docs/Api/TasksApi.md#createtask) | **POST** /crm/api/v1/tasks | Create a task.
 *TasksApi* | [**createTaskInternalNote**](docs/Api/TasksApi.md#createtaskinternalnote) | **POST** /crm/api/v1/tasks/{taskId}/notes | Add an internal note to a task.
 *TasksApi* | [**deleteTask**](docs/Api/TasksApi.md#deletetask) | **DELETE** /crm/api/v1/tasks/{taskId} | Delete a task.
+*TasksApi* | [**deleteTasks**](docs/Api/TasksApi.md#deletetasks) | **DELETE** /crm/api/v1/tasks | Delete some tasks.
 *TasksApi* | [**getTask**](docs/Api/TasksApi.md#gettask) | **GET** /crm/api/v1/tasks/{taskId} | Return the detail of a task.
 *TasksApi* | [**getTaskInternalNoteList**](docs/Api/TasksApi.md#gettaskinternalnotelist) | **GET** /crm/api/v1/tasks/{taskId}/notes | Get the internal notes list for a task.
 *TasksApi* | [**listTasks**](docs/Api/TasksApi.md#listtasks) | **GET** /crm/api/v1/tasks | List or search tasks.
