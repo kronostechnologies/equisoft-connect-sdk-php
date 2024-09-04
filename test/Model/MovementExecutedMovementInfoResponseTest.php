@@ -80,18 +80,36 @@ class MovementExecutedMovementInfoResponseTest extends TestCase
     }
 
     /**
-     * Test attribute "sourceDatabase"
+     * Test attribute "srcDbName"
      */
-    public function testPropertySourceDatabase()
+    public function testPropertySrcDbName()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "destinationDatabase"
+     * Test attribute "srcDbUuid"
      */
-    public function testPropertyDestinationDatabase()
+    public function testPropertySrcDbUuid()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "dstDbName"
+     */
+    public function testPropertyDstDbName()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "dstDbUuid"
+     */
+    public function testPropertyDstDbUuid()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

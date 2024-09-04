@@ -57,8 +57,10 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $openAPITypes = [
-        'sourceDatabase' => 'string',
-        'destinationDatabase' => 'string'
+        'srcDbName' => 'string',
+        'srcDbUuid' => 'string',
+        'dstDbName' => 'string',
+        'dstDbUuid' => 'string'
     ];
 
     /**
@@ -69,8 +71,10 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'sourceDatabase' => null,
-        'destinationDatabase' => null
+        'srcDbName' => null,
+        'srcDbUuid' => null,
+        'dstDbName' => null,
+        'dstDbUuid' => null
     ];
 
     /**
@@ -79,8 +83,10 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'sourceDatabase' => false,
-        'destinationDatabase' => false
+        'srcDbName' => false,
+        'srcDbUuid' => false,
+        'dstDbName' => false,
+        'dstDbUuid' => false
     ];
 
     /**
@@ -169,8 +175,10 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $attributeMap = [
-        'sourceDatabase' => 'sourceDatabase',
-        'destinationDatabase' => 'destinationDatabase'
+        'srcDbName' => 'srcDbName',
+        'srcDbUuid' => 'srcDbUuid',
+        'dstDbName' => 'dstDbName',
+        'dstDbUuid' => 'dstDbUuid'
     ];
 
     /**
@@ -179,8 +187,10 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $setters = [
-        'sourceDatabase' => 'setSourceDatabase',
-        'destinationDatabase' => 'setDestinationDatabase'
+        'srcDbName' => 'setSrcDbName',
+        'srcDbUuid' => 'setSrcDbUuid',
+        'dstDbName' => 'setDstDbName',
+        'dstDbUuid' => 'setDstDbUuid'
     ];
 
     /**
@@ -189,8 +199,10 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $getters = [
-        'sourceDatabase' => 'getSourceDatabase',
-        'destinationDatabase' => 'getDestinationDatabase'
+        'srcDbName' => 'getSrcDbName',
+        'srcDbUuid' => 'getSrcDbUuid',
+        'dstDbName' => 'getDstDbName',
+        'dstDbUuid' => 'getDstDbUuid'
     ];
 
     /**
@@ -250,8 +262,10 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('sourceDatabase', $data ?? [], null);
-        $this->setIfExists('destinationDatabase', $data ?? [], null);
+        $this->setIfExists('srcDbName', $data ?? [], null);
+        $this->setIfExists('srcDbUuid', $data ?? [], null);
+        $this->setIfExists('dstDbName', $data ?? [], null);
+        $this->setIfExists('dstDbUuid', $data ?? [], null);
     }
 
     /**
@@ -297,55 +311,109 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
 
 
     /**
-     * Gets sourceDatabase
+     * Gets srcDbName
      *
      * @return string|null
      */
-    public function getSourceDatabase()
+    public function getSrcDbName()
     {
-        return $this->container['sourceDatabase'];
+        return $this->container['srcDbName'];
     }
 
     /**
-     * Sets sourceDatabase
+     * Sets srcDbName
      *
-     * @param string|null $sourceDatabase Name of the source database (e.g. kronospf__bedrock).
+     * @param string|null $srcDbName Name of the source database (e.g. kronospf__bedrock).
      *
      * @return self
      */
-    public function setSourceDatabase($sourceDatabase)
+    public function setSrcDbName($srcDbName)
     {
-        if (is_null($sourceDatabase)) {
-            throw new \InvalidArgumentException('non-nullable sourceDatabase cannot be null');
+        if (is_null($srcDbName)) {
+            throw new \InvalidArgumentException('non-nullable srcDbName cannot be null');
         }
-        $this->container['sourceDatabase'] = $sourceDatabase;
+        $this->container['srcDbName'] = $srcDbName;
 
         return $this;
     }
 
     /**
-     * Gets destinationDatabase
+     * Gets srcDbUuid
      *
      * @return string|null
      */
-    public function getDestinationDatabase()
+    public function getSrcDbUuid()
     {
-        return $this->container['destinationDatabase'];
+        return $this->container['srcDbUuid'];
     }
 
     /**
-     * Sets destinationDatabase
+     * Sets srcDbUuid
      *
-     * @param string|null $destinationDatabase Name of the destination database.
+     * @param string|null $srcDbUuid UUID the source database.
      *
      * @return self
      */
-    public function setDestinationDatabase($destinationDatabase)
+    public function setSrcDbUuid($srcDbUuid)
     {
-        if (is_null($destinationDatabase)) {
-            throw new \InvalidArgumentException('non-nullable destinationDatabase cannot be null');
+        if (is_null($srcDbUuid)) {
+            throw new \InvalidArgumentException('non-nullable srcDbUuid cannot be null');
         }
-        $this->container['destinationDatabase'] = $destinationDatabase;
+        $this->container['srcDbUuid'] = $srcDbUuid;
+
+        return $this;
+    }
+
+    /**
+     * Gets dstDbName
+     *
+     * @return string|null
+     */
+    public function getDstDbName()
+    {
+        return $this->container['dstDbName'];
+    }
+
+    /**
+     * Sets dstDbName
+     *
+     * @param string|null $dstDbName Name of the destination database.
+     *
+     * @return self
+     */
+    public function setDstDbName($dstDbName)
+    {
+        if (is_null($dstDbName)) {
+            throw new \InvalidArgumentException('non-nullable dstDbName cannot be null');
+        }
+        $this->container['dstDbName'] = $dstDbName;
+
+        return $this;
+    }
+
+    /**
+     * Gets dstDbUuid
+     *
+     * @return string|null
+     */
+    public function getDstDbUuid()
+    {
+        return $this->container['dstDbUuid'];
+    }
+
+    /**
+     * Sets dstDbUuid
+     *
+     * @param string|null $dstDbUuid UUID the destination database.
+     *
+     * @return self
+     */
+    public function setDstDbUuid($dstDbUuid)
+    {
+        if (is_null($dstDbUuid)) {
+            throw new \InvalidArgumentException('non-nullable dstDbUuid cannot be null');
+        }
+        $this->container['dstDbUuid'] = $dstDbUuid;
 
         return $this;
     }
