@@ -480,15 +480,6 @@ class SystemParametersApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $databaseUuid,
-            'databaseUuid', // param base name
-            'string', // openApiType
-            'form', // style
-            true, // explode
-            true // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
             $companyId,
             'companyId', // param base name
             'integer', // openApiType
@@ -498,6 +489,14 @@ class SystemParametersApi
         ) ?? []);
 
 
+        // path params
+        if ($databaseUuid !== null) {
+            $resourcePath = str_replace(
+                '{' . 'databaseUuid' . '}',
+                ObjectSerializer::toPathValue($databaseUuid),
+                $resourcePath
+            );
+        }
 
 
         $headers = $this->headerSelector->selectHeaders(
@@ -895,15 +894,6 @@ class SystemParametersApi
 
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $databaseUuid,
-            'databaseUuid', // param base name
-            'string', // openApiType
-            'form', // style
-            true, // explode
-            true // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
             $type,
             'type', // param base name
             'string', // openApiType
@@ -922,6 +912,14 @@ class SystemParametersApi
         ) ?? []);
 
 
+        // path params
+        if ($databaseUuid !== null) {
+            $resourcePath = str_replace(
+                '{' . 'databaseUuid' . '}',
+                ObjectSerializer::toPathValue($databaseUuid),
+                $resourcePath
+            );
+        }
 
 
         $headers = $this->headerSelector->selectHeaders(
