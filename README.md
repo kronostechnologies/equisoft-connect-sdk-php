@@ -204,8 +204,8 @@ Class | Method | HTTP request | Description
 *MovementApi* | [**getMovementStatistic**](docs/Api/MovementApi.md#getmovementstatistic) | **GET** /crm/api/v1/movements/statistic | Get movement statistic
 *MovementApi* | [**listMovements**](docs/Api/MovementApi.md#listmovements) | **GET** /crm/api/v1/movements | List all movements
 *RemoteAccountApi* | [**getMailAccountAccessRights**](docs/Api/RemoteAccountApi.md#getmailaccountaccessrights) | **GET** /crm/api/v1/mailAccounts/{remoteAccountId}/accessRights | Return the mail account access rights granted to the currently connected user account.
-*SystemParametersApi* | [**getCompanyDetails**](docs/Api/SystemParametersApi.md#getcompanydetails) | **GET** /crm/api/v1/parameters/account/company | Get company information about the enterprise or an alternate company
-*SystemParametersApi* | [**getCompanyLogo**](docs/Api/SystemParametersApi.md#getcompanylogo) | **GET** /crm/api/v1/parameters/account/company/logo | Get company logo
+*SystemParametersApi* | [**getCompanyDetails**](docs/Api/SystemParametersApi.md#getcompanydetails) | **GET** /crm/api/v1/databases/{databaseUuid}/parameters/account/company | Get company information about the enterprise or an alternate company
+*SystemParametersApi* | [**getCompanyLogo**](docs/Api/SystemParametersApi.md#getcompanylogo) | **GET** /crm/api/v1/databases/{databaseUuid}/parameters/account/company/logo | Get company logo
 *TasksApi* | [**archiveTaskInternalNote**](docs/Api/TasksApi.md#archivetaskinternalnote) | **POST** /crm/api/v1/tasks/{taskId}/notes/{noteId}/archive | Archive an internal note for a task.
 *TasksApi* | [**createTask**](docs/Api/TasksApi.md#createtask) | **POST** /crm/api/v1/tasks | Create a task.
 *TasksApi* | [**createTaskInternalNote**](docs/Api/TasksApi.md#createtaskinternalnote) | **POST** /crm/api/v1/tasks/{taskId}/notes | Add an internal note to a task.
