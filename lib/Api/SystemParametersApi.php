@@ -136,7 +136,7 @@ class SystemParametersApi
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Equisoft\SDK\EquisoftConnect\Model\SystemparametersCompanyResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ParametersCompanyResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
     public function getCompanyDetails($databaseUuid, $companyId = null, string $contentType = self::contentTypes['getCompanyDetails'][0])
     {
@@ -155,7 +155,7 @@ class SystemParametersApi
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Equisoft\SDK\EquisoftConnect\Model\SystemparametersCompanyResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\ParametersCompanyResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCompanyDetailsWithHttpInfo($databaseUuid, $companyId = null, string $contentType = self::contentTypes['getCompanyDetails'][0])
     {
@@ -198,11 +198,11 @@ class SystemParametersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Equisoft\SDK\EquisoftConnect\Model\SystemparametersCompanyResponse' === '\SplFileObject') {
+                    if ('\Equisoft\SDK\EquisoftConnect\Model\ParametersCompanyResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Equisoft\SDK\EquisoftConnect\Model\SystemparametersCompanyResponse' !== 'string') {
+                        if ('\Equisoft\SDK\EquisoftConnect\Model\ParametersCompanyResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -220,7 +220,7 @@ class SystemParametersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\SystemparametersCompanyResponse', []),
+                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\ParametersCompanyResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -307,7 +307,7 @@ class SystemParametersApi
                     ];
             }
 
-            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\SystemparametersCompanyResponse';
+            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\ParametersCompanyResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -340,7 +340,7 @@ class SystemParametersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Equisoft\SDK\EquisoftConnect\Model\SystemparametersCompanyResponse',
+                        '\Equisoft\SDK\EquisoftConnect\Model\ParametersCompanyResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -410,7 +410,7 @@ class SystemParametersApi
      */
     public function getCompanyDetailsAsyncWithHttpInfo($databaseUuid, $companyId = null, string $contentType = self::contentTypes['getCompanyDetails'][0])
     {
-        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\SystemparametersCompanyResponse';
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\ParametersCompanyResponse';
         $request = $this->getCompanyDetailsRequest($databaseUuid, $companyId, $contentType);
 
         return $this->client

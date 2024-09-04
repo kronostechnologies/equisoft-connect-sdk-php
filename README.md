@@ -472,7 +472,7 @@ Class | Method | HTTP request | Description
 - [MovementUserTuplePayload](docs/Model/MovementUserTuplePayload.md)
 - [MovementValidationError](docs/Model/MovementValidationError.md)
 - [MovementValidationErrorResponse](docs/Model/MovementValidationErrorResponse.md)
-- [SystemparametersCompanyResponse](docs/Model/SystemparametersCompanyResponse.md)
+- [ParametersCompanyResponse](docs/Model/ParametersCompanyResponse.md)
 - [TasksCreateTaskPayload](docs/Model/TasksCreateTaskPayload.md)
 - [TasksCreateTaskResponse](docs/Model/TasksCreateTaskResponse.md)
 - [TasksDueDateFilter](docs/Model/TasksDueDateFilter.md)

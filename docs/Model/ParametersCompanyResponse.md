@@ -1,4 +1,4 @@
-# # SystemparametersCompanyResponse
+# # ParametersCompanyResponse
 
 ## Properties
 

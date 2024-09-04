@@ -1,6 +1,6 @@
 <?php
 /**
- * SystemparametersCompanyResponseTest
+ * ParametersCompanyResponseTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * SystemparametersCompanyResponseTest Class Doc Comment
+ * ParametersCompanyResponseTest Class Doc Comment
  *
  * @category    Class
- * @description SystemparametersCompanyResponse
+ * @description ParametersCompanyResponse
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class SystemparametersCompanyResponseTest extends TestCase
+class ParametersCompanyResponseTest extends TestCase
 {
 
     /**
@@ -71,9 +71,9 @@ class SystemparametersCompanyResponseTest extends TestCase
     }
 
     /**
-     * Test "SystemparametersCompanyResponse"
+     * Test "ParametersCompanyResponse"
      */
-    public function testSystemparametersCompanyResponse()
+    public function testParametersCompanyResponse()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

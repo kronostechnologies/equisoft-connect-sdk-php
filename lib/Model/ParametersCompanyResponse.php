@@ -1,6 +1,6 @@
 <?php
 /**
- * SystemparametersCompanyResponse
+ * ParametersCompanyResponse
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * SystemparametersCompanyResponse Class Doc Comment
+ * ParametersCompanyResponse Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
@@ -40,7 +40,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class SystemparametersCompanyResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class ParametersCompanyResponse implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class SystemparametersCompanyResponse implements ModelInterface, ArrayAccess, \J
       *
       * @var string
       */
-    protected static $openAPIModelName = 'systemparameters.CompanyResponse';
+    protected static $openAPIModelName = 'parameters.CompanyResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

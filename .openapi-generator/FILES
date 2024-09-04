@@ -267,7 +267,7 @@ docs/Model/MovementUserTuple.md
 docs/Model/MovementUserTuplePayload.md
 docs/Model/MovementValidationError.md
 docs/Model/MovementValidationErrorResponse.md
-docs/Model/SystemparametersCompanyResponse.md
+docs/Model/ParametersCompanyResponse.md
 docs/Model/TasksCreateTaskPayload.md
 docs/Model/TasksCreateTaskResponse.md
 docs/Model/TasksDueDateFilter.md
@@ -556,7 +556,7 @@ lib/Model/MovementUserTuple.php
 lib/Model/MovementUserTuplePayload.php
 lib/Model/MovementValidationError.php
 lib/Model/MovementValidationErrorResponse.php
-lib/Model/SystemparametersCompanyResponse.php
+lib/Model/ParametersCompanyResponse.php
 lib/Model/TasksCreateTaskPayload.php
 lib/Model/TasksCreateTaskResponse.php
 lib/Model/TasksDueDateFilter.php
@@ -842,7 +842,7 @@ test/Model/MovementUserTuplePayloadTest.php
 test/Model/MovementUserTupleTest.php
 test/Model/MovementValidationErrorResponseTest.php
 test/Model/MovementValidationErrorTest.php
-test/Model/SystemparametersCompanyResponseTest.php
+test/Model/ParametersCompanyResponseTest.php
 test/Model/TasksCreateTaskPayloadTest.php
 test/Model/TasksCreateTaskResponseTest.php
 test/Model/TasksDueDateFilterTest.php
