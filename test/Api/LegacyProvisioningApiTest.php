@@ -72,18 +72,6 @@ class LegacyProvisioningApiTest extends TestCase
     }
 
     /**
-     * Test case for legacyProvisioningActivateUser
-     *
-     * Activate a user..
-     *
-     */
-    public function testLegacyProvisioningActivateUser()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for legacyProvisioningAddOrganization
      *
      * Add a new organization..
@@ -126,30 +114,6 @@ class LegacyProvisioningApiTest extends TestCase
      *
      */
     public function testLegacyProvisioningClearCache()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for legacyProvisioningCloseUserSession
-     *
-     * Close all sessions open for a user..
-     *
-     */
-    public function testLegacyProvisioningCloseUserSession()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for legacyProvisioningDeactivateUser
-     *
-     * Deactivate a user..
-     *
-     */
-    public function testLegacyProvisioningDeactivateUser()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -252,54 +216,6 @@ class LegacyProvisioningApiTest extends TestCase
     }
 
     /**
-     * Test case for legacyProvisioningGetLoginLog
-     *
-     * Get the login log based on given options..
-     *
-     */
-    public function testLegacyProvisioningGetLoginLog()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for legacyProvisioningGetMoveUserToOrganizationStatus
-     *
-     * Get the progression status of a previous call to moveUserToOrganization..
-     *
-     */
-    public function testLegacyProvisioningGetMoveUserToOrganizationStatus()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for legacyProvisioningGetOrganization
-     *
-     * Get all informations about an organization..
-     *
-     */
-    public function testLegacyProvisioningGetOrganization()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for legacyProvisioningGetOrganizationList
-     *
-     * List all organizations..
-     *
-     */
-    public function testLegacyProvisioningGetOrganizationList()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for legacyProvisioningGetOrganizationStatus
      *
      * Return the state of a given database..
@@ -318,30 +234,6 @@ class LegacyProvisioningApiTest extends TestCase
      *
      */
     public function testLegacyProvisioningGetSyncControlDataForAllDatabaseStatus()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for legacyProvisioningGetUser
-     *
-     * Get all informations about a user..
-     *
-     */
-    public function testLegacyProvisioningGetUser()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for legacyProvisioningGetUserList
-     *
-     * List all users in an organization..
-     *
-     */
-    public function testLegacyProvisioningGetUserList()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -372,18 +264,6 @@ class LegacyProvisioningApiTest extends TestCase
     }
 
     /**
-     * Test case for legacyProvisioningMoveUserToOrganization
-     *
-     * Move a user to another organization..
-     *
-     */
-    public function testLegacyProvisioningMoveUserToOrganization()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for legacyProvisioningSyncControlData
      *
      * Sync one database pilotage..
@@ -402,18 +282,6 @@ class LegacyProvisioningApiTest extends TestCase
      *
      */
     public function testLegacyProvisioningSyncControlDataForAllDatabase()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for legacyProvisioningUnlockUser
-     *
-     * Unlock a user..
-     *
-     */
-    public function testLegacyProvisioningUnlockUser()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

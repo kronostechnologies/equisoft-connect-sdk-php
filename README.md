@@ -170,13 +170,10 @@ Class | Method | HTTP request | Description
 *LegacyFinanceApi* | [**legacyFinanceGetLiabilities**](docs/Api/LegacyFinanceApi.md#legacyfinancegetliabilities) | **GET** /apps/api/kronos.finance.getLiabilities | Get Liabilities information for a contact.
 *LegacyFinanceApi* | [**legacyFinanceUpdateContact**](docs/Api/LegacyFinanceApi.md#legacyfinanceupdatecontact) | **POST** /apps/api/kronos.finance.updateContact | Update a contact.
 *LegacyParametersApi* | [**legacyParametersGet**](docs/Api/LegacyParametersApi.md#legacyparametersget) | **GET** /apps/api/kronos.parameters.get | Get the system parameters.
-*LegacyProvisioningApi* | [**legacyProvisioningActivateUser**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningactivateuser) | **POST** /apps/provisioning/kronos.provisioning.activateUser | Activate a user.
 *LegacyProvisioningApi* | [**legacyProvisioningAddOrganization**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningaddorganization) | **POST** /apps/provisioning/kronos.provisioning.addOrganization | Add a new organization.
 *LegacyProvisioningApi* | [**legacyProvisioningAddUser**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningadduser) | **POST** /apps/provisioning/kronos.provisioning.addUser | Add a new user.
 *LegacyProvisioningApi* | [**legacyProvisioningChangeDatabaseProfile**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningchangedatabaseprofile) | **POST** /apps/provisioning/kronos.provisioning.changeDatabaseProfile | Change database profile.
 *LegacyProvisioningApi* | [**legacyProvisioningClearCache**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningclearcache) | **POST** /apps/provisioning/kronos.provisioning.clearCache | Clear cache.
-*LegacyProvisioningApi* | [**legacyProvisioningCloseUserSession**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningcloseusersession) | **POST** /apps/provisioning/kronos.provisioning.closeUserSession | Close all sessions open for a user.
-*LegacyProvisioningApi* | [**legacyProvisioningDeactivateUser**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningdeactivateuser) | **POST** /apps/provisioning/kronos.provisioning.deactivateUser | Deactivate a user.
 *LegacyProvisioningApi* | [**legacyProvisioningDeleteOrganization**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningdeleteorganization) | **POST** /apps/provisioning/kronos.provisioning.deleteOrganization | Delete an organization.
 *LegacyProvisioningApi* | [**legacyProvisioningDeleteUser**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningdeleteuser) | **POST** /apps/provisioning/kronos.provisioning.deleteUser | Delete a user.
 *LegacyProvisioningApi* | [**legacyProvisioningEnableContactPersonalizedFieldsModule**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningenablecontactpersonalizedfieldsmodule) | **POST** /apps/provisioning/kronos.provisioning.enableContactPersonalizedFieldsModule | Enable Contact Personalized Fields module for a database.
@@ -185,20 +182,12 @@ Class | Method | HTTP request | Description
 *LegacyProvisioningApi* | [**legacyProvisioningGetFFGatewaysAccessReport**](docs/Api/LegacyProvisioningApi.md#legacyprovisioninggetffgatewaysaccessreport) | **GET** /apps/provisioning/kronos.provisioning.getFFGatewaysAccessReport | Get a report of active accesses for all FF datagateways.
 *LegacyProvisioningApi* | [**legacyProvisioningGetGatewayArchiveByDate**](docs/Api/LegacyProvisioningApi.md#legacyprovisioninggetgatewayarchivebydate) | **GET** /apps/provisioning/kronos.provisioning.getGatewayArchiveByDate | Get the archives for a given gateway at the given date.
 *LegacyProvisioningApi* | [**legacyProvisioningGetGatewayArchiveListByDate**](docs/Api/LegacyProvisioningApi.md#legacyprovisioninggetgatewayarchivelistbydate) | **GET** /apps/provisioning/kronos.provisioning.getGatewayArchiveListByDate | Get the archives list for a given gateway at the given date.
-*LegacyProvisioningApi* | [**legacyProvisioningGetLoginLog**](docs/Api/LegacyProvisioningApi.md#legacyprovisioninggetloginlog) | **GET** /apps/provisioning/kronos.provisioning.getLoginLog | Get the login log based on given options.
-*LegacyProvisioningApi* | [**legacyProvisioningGetMoveUserToOrganizationStatus**](docs/Api/LegacyProvisioningApi.md#legacyprovisioninggetmoveusertoorganizationstatus) | **GET** /apps/provisioning/kronos.provisioning.getMoveUserToOrganizationStatus | Get the progression status of a previous call to moveUserToOrganization.
-*LegacyProvisioningApi* | [**legacyProvisioningGetOrganization**](docs/Api/LegacyProvisioningApi.md#legacyprovisioninggetorganization) | **GET** /apps/provisioning/kronos.provisioning.getOrganization | Get all informations about an organization.
-*LegacyProvisioningApi* | [**legacyProvisioningGetOrganizationList**](docs/Api/LegacyProvisioningApi.md#legacyprovisioninggetorganizationlist) | **GET** /apps/provisioning/kronos.provisioning.getOrganizationList | List all organizations.
 *LegacyProvisioningApi* | [**legacyProvisioningGetOrganizationStatus**](docs/Api/LegacyProvisioningApi.md#legacyprovisioninggetorganizationstatus) | **POST** /apps/provisioning/kronos.provisioning.getOrganizationStatus | Return the state of a given database.
 *LegacyProvisioningApi* | [**legacyProvisioningGetSyncControlDataForAllDatabaseStatus**](docs/Api/LegacyProvisioningApi.md#legacyprovisioninggetsynccontroldataforalldatabasestatus) | **GET** /apps/provisioning/kronos.provisioning.getSyncControlDataForAllDatabaseStatus | Get the progression status of a previous call to moveUserToOrganization.
-*LegacyProvisioningApi* | [**legacyProvisioningGetUser**](docs/Api/LegacyProvisioningApi.md#legacyprovisioninggetuser) | **GET** /apps/provisioning/kronos.provisioning.getUser | Get all informations about a user.
-*LegacyProvisioningApi* | [**legacyProvisioningGetUserList**](docs/Api/LegacyProvisioningApi.md#legacyprovisioninggetuserlist) | **GET** /apps/provisioning/kronos.provisioning.getUserList | List all users in an organization.
 *LegacyProvisioningApi* | [**legacyProvisioningGetWebuserDatabaseListByValue**](docs/Api/LegacyProvisioningApi.md#legacyprovisioninggetwebuserdatabaselistbyvalue) | **GET** /apps/provisioning/kronos.provisioning.getWebuserDatabaseListByValue | Get a list of webuser&#39;s databases.
 *LegacyProvisioningApi* | [**legacyProvisioningMonitorDatagateways**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningmonitordatagateways) | **GET** /apps/provisioning/kronos.provisioning.monitorDatagateways | Monitor stats of the datagateways for a given environment.
-*LegacyProvisioningApi* | [**legacyProvisioningMoveUserToOrganization**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningmoveusertoorganization) | **POST** /apps/provisioning/kronos.provisioning.moveUserToOrganization | Move a user to another organization.
 *LegacyProvisioningApi* | [**legacyProvisioningSyncControlData**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningsynccontroldata) | **POST** /apps/provisioning/kronos.provisioning.syncControlData | Sync one database pilotage.
 *LegacyProvisioningApi* | [**legacyProvisioningSyncControlDataForAllDatabase**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningsynccontroldataforalldatabase) | **POST** /apps/provisioning/kronos.provisioning.syncControlDataForAllDatabase | Use gearman to sync all database for a given profile.
-*LegacyProvisioningApi* | [**legacyProvisioningUnlockUser**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningunlockuser) | **POST** /apps/provisioning/kronos.provisioning.unlockUser | Unlock a user.
 *LegacyProvisioningApi* | [**legacyProvisioningUpdateUser**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningupdateuser) | **POST** /apps/provisioning/kronos.provisioning.updateUser | Update a user.
 *MovementApi* | [**addMovement**](docs/Api/MovementApi.md#addmovement) | **POST** /crm/api/v1/movements | Add a movement
 *MovementApi* | [**cancelMovement**](docs/Api/MovementApi.md#cancelmovement) | **POST** /crm/api/v1/movements/{movementId}/cancel | Cancel a movement.
@@ -415,30 +404,17 @@ Class | Method | HTTP request | Description
 - [LegacyProvisioningGatewayArchivePayloadRequest](docs/Model/LegacyProvisioningGatewayArchivePayloadRequest.md)
 - [LegacyProvisioningGetFileForGatewayArchiveByDateResponse](docs/Model/LegacyProvisioningGetFileForGatewayArchiveByDateResponse.md)
 - [LegacyProvisioningGetGatewayArchiveListByDateResponse](docs/Model/LegacyProvisioningGetGatewayArchiveListByDateResponse.md)
-- [LegacyProvisioningGetMoveUserToOrganizationStatus](docs/Model/LegacyProvisioningGetMoveUserToOrganizationStatus.md)
-- [LegacyProvisioningGetOrganizationListResponse](docs/Model/LegacyProvisioningGetOrganizationListResponse.md)
-- [LegacyProvisioningGetOrganizationResponse](docs/Model/LegacyProvisioningGetOrganizationResponse.md)
 - [LegacyProvisioningGetOrganizationStatusResponse](docs/Model/LegacyProvisioningGetOrganizationStatusResponse.md)
-- [LegacyProvisioningGetUserResponse](docs/Model/LegacyProvisioningGetUserResponse.md)
 - [LegacyProvisioningGetWebuserDatabaseListByValueResponse](docs/Model/LegacyProvisioningGetWebuserDatabaseListByValueResponse.md)
 - [LegacyProvisioningGroupItem](docs/Model/LegacyProvisioningGroupItem.md)
-- [LegacyProvisioningLoginLog](docs/Model/LegacyProvisioningLoginLog.md)
-- [LegacyProvisioningLoginLogOptions](docs/Model/LegacyProvisioningLoginLogOptions.md)
-- [LegacyProvisioningLoginLogOptionsRequest](docs/Model/LegacyProvisioningLoginLogOptionsRequest.md)
-- [LegacyProvisioningLoginLogResponse](docs/Model/LegacyProvisioningLoginLogResponse.md)
 - [LegacyProvisioningMonitorDatagatewayResponse](docs/Model/LegacyProvisioningMonitorDatagatewayResponse.md)
-- [LegacyProvisioningMoveUserToOrganizationResponse](docs/Model/LegacyProvisioningMoveUserToOrganizationResponse.md)
-- [LegacyProvisioningOrganizationItem](docs/Model/LegacyProvisioningOrganizationItem.md)
 - [LegacyProvisioningOrganizationPayload](docs/Model/LegacyProvisioningOrganizationPayload.md)
 - [LegacyProvisioningOrganizationPayloadRequest](docs/Model/LegacyProvisioningOrganizationPayloadRequest.md)
 - [LegacyProvisioningReportAccessesResponse](docs/Model/LegacyProvisioningReportAccessesResponse.md)
-- [LegacyProvisioningResponseGetUserListResponse](docs/Model/LegacyProvisioningResponseGetUserListResponse.md)
 - [LegacyProvisioningSyncControlDataForAllDatabaseResponse](docs/Model/LegacyProvisioningSyncControlDataForAllDatabaseResponse.md)
 - [LegacyProvisioningSyncControlDataResponse](docs/Model/LegacyProvisioningSyncControlDataResponse.md)
 - [LegacyProvisioningUserIdentifier](docs/Model/LegacyProvisioningUserIdentifier.md)
 - [LegacyProvisioningUserItem](docs/Model/LegacyProvisioningUserItem.md)
-- [LegacyProvisioningUserListOptions](docs/Model/LegacyProvisioningUserListOptions.md)
-- [LegacyProvisioningUserListOptionsRequest](docs/Model/LegacyProvisioningUserListOptionsRequest.md)
 - [LegacyProvisioningUserPayload](docs/Model/LegacyProvisioningUserPayload.md)
 - [LegacyProvisioningUserPayloadRequest](docs/Model/LegacyProvisioningUserPayloadRequest.md)
 - [LegacyProvisioningWebuserDatabasePayload](docs/Model/LegacyProvisioningWebuserDatabasePayload.md)
