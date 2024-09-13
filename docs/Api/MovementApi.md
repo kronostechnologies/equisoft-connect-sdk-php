@@ -7,6 +7,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 | [**addMovement()**](MovementApi.md#addMovement) | **POST** /crm/api/v1/movements | Add a movement |
 | [**cancelMovement()**](MovementApi.md#cancelMovement) | **POST** /crm/api/v1/movements/{movementId}/cancel | Cancel a movement. |
 | [**deleteMovement()**](MovementApi.md#deleteMovement) | **DELETE** /crm/api/v1/movements/{movementId} | Delete a movement. |
+| [**getExecutedMovementInfo()**](MovementApi.md#getExecutedMovementInfo) | **GET** /crm/api/v1/movements/executed/{executedMovementId}/info | Get basic information about an executed movement |
 | [**getMovementStatistic()**](MovementApi.md#getMovementStatistic) | **GET** /crm/api/v1/movements/statistic | Get movement statistic |
 | [**listMovements()**](MovementApi.md#listMovements) | **GET** /crm/api/v1/movements | List all movements |
 
@@ -169,6 +170,64 @@ try {
 ### Return type
 
 void (empty response body)
+
+### Authorization
+
+[OAuth2](../../README.md#OAuth2)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getExecutedMovementInfo()`
+
+```php
+getExecutedMovementInfo($executedMovementId): \Equisoft\SDK\EquisoftConnect\Model\MovementExecutedMovementInfoResponse
+```
+
+Get basic information about an executed movement
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Equisoft\SDK\EquisoftConnect\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\MovementApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$executedMovementId = 56; // int | Executed Movement identifier
+
+try {
+    $result = $apiInstance->getExecutedMovementInfo($executedMovementId);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MovementApi->getExecutedMovementInfo: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **executedMovementId** | **int**| Executed Movement identifier | |
+
+### Return type
+
+[**\Equisoft\SDK\EquisoftConnect\Model\MovementExecutedMovementInfoResponse**](../Model/MovementExecutedMovementInfoResponse.md)
 
 ### Authorization
 

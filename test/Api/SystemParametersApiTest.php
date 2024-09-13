@@ -1,6 +1,6 @@
 <?php
 /**
- * MovementApiTest
+ * SystemParametersApiTest
  * PHP version 7.4
  *
  * @category Class
@@ -33,14 +33,14 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**
- * MovementApiTest Class Doc Comment
+ * SystemParametersApiTest Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class MovementApiTest extends TestCase
+class SystemParametersApiTest extends TestCase
 {
 
     /**
@@ -72,72 +72,24 @@ class MovementApiTest extends TestCase
     }
 
     /**
-     * Test case for addMovement
+     * Test case for getCompanyDetails
      *
-     * Add a movement.
+     * Get company information about the enterprise or an alternate company.
      *
      */
-    public function testAddMovement()
+    public function testGetCompanyDetails()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for cancelMovement
+     * Test case for getCompanyLogo
      *
-     * Cancel a movement..
-     *
-     */
-    public function testCancelMovement()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for deleteMovement
-     *
-     * Delete a movement..
+     * Get company logo.
      *
      */
-    public function testDeleteMovement()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for getExecutedMovementInfo
-     *
-     * Get basic information about an executed movement.
-     *
-     */
-    public function testGetExecutedMovementInfo()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for getMovementStatistic
-     *
-     * Get movement statistic.
-     *
-     */
-    public function testGetMovementStatistic()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for listMovements
-     *
-     * List all movements.
-     *
-     */
-    public function testListMovements()
+    public function testGetCompanyLogo()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
