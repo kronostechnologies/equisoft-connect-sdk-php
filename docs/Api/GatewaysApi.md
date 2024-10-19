@@ -8,14 +8,14 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 | [**createEquisoftAnalyzeAccess()**](GatewaysApi.md#createEquisoftAnalyzeAccess) | **POST** /crm/api/v1/gateways/equisoftAnalyze/accesses |  |
 | [**deleteCapsilAccess()**](GatewaysApi.md#deleteCapsilAccess) | **DELETE** /crm/api/v1/gateways/capsil/accesses/{accessId} | Delete Capsil access |
 | [**deleteEquisoftAnalyzeAccess()**](GatewaysApi.md#deleteEquisoftAnalyzeAccess) | **DELETE** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} |  |
-| [**gatewayAdminLogin()**](GatewaysApi.md#gatewayAdminLogin) | **POST** /crm/api/v1/gateways/credentials-validation/admin-credentials/login |  |
+| [**gatewayAdminLogin()**](GatewaysApi.md#gatewayAdminLogin) | **POST** /crm/api/v1/gateways/credentials-validation/admin-credentials/login | Verify gateway admin login |
 | [**getCapsilAccess()**](GatewaysApi.md#getCapsilAccess) | **GET** /crm/api/v1/gateways/capsil/accesses/{accessId} | Get Capsil access |
 | [**listAssetBookCredentials()**](GatewaysApi.md#listAssetBookCredentials) | **GET** /crm/api/v1/gateways/assetbook/credentials |  |
 | [**listCapsilAccesses()**](GatewaysApi.md#listCapsilAccesses) | **GET** /crm/api/v1/gateways/capsil/accesses | List capsil accesses |
 | [**listCapsilCarrierAdminSystems()**](GatewaysApi.md#listCapsilCarrierAdminSystems) | **GET** /crm/api/v1/gateways/capsil/carrierAdminSystems | List carrier admin systems |
 | [**listCredentials()**](GatewaysApi.md#listCredentials) | **GET** /crm/api/v1/gateways/credentials-validation/{gatewayId}/credentials/{status} |  |
 | [**listEquisoftAnalyzeAccesses()**](GatewaysApi.md#listEquisoftAnalyzeAccesses) | **GET** /crm/api/v1/gateways/equisoftAnalyze/accesses |  |
-| [**listGatewayConfigurations()**](GatewaysApi.md#listGatewayConfigurations) | **GET** /crm/api/v1/gateways/generic/{gatewayName}/configuration |  |
+| [**listGatewayConfigurations()**](GatewaysApi.md#listGatewayConfigurations) | **GET** /crm/api/v1/gateways/generic/{gatewayType}/configuration |  |
 | [**listGateways()**](GatewaysApi.md#listGateways) | **GET** /crm/api/v1/gateways/credentials-validation |  |
 | [**listGenericCredentials()**](GatewaysApi.md#listGenericCredentials) | **GET** /crm/api/v1/gateways/generic/{gatewayName}/credentials |  |
 | [**patchEquisoftAnalyzeAccess()**](GatewaysApi.md#patchEquisoftAnalyzeAccess) | **PATCH** /crm/api/v1/gateways/equisoftAnalyze/accesses/{accessId} |  |
@@ -260,10 +260,10 @@ void (empty response body)
 ## `gatewayAdminLogin()`
 
 ```php
-gatewayAdminLogin($authorization, $adminCredentialPayload): \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesValidationAdminCredentialResponse
+gatewayAdminLogin($adminCredentialPayload): \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesValidationAdminCredentialResponse
 ```
 
-
+Verify gateway admin login
 
 ### Example
 
@@ -282,11 +282,10 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\GatewaysApi(
     new GuzzleHttp\Client(),
     $config
 );
-$authorization = 'authorization_example'; // string | Authorization header using the Bearer scheme
 $adminCredentialPayload = new \Equisoft\SDK\EquisoftConnect\Model\AdminCredentialPayload(); // \Equisoft\SDK\EquisoftConnect\Model\AdminCredentialPayload
 
 try {
-    $result = $apiInstance->gatewayAdminLogin($authorization, $adminCredentialPayload);
+    $result = $apiInstance->gatewayAdminLogin($adminCredentialPayload);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GatewaysApi->gatewayAdminLogin: ', $e->getMessage(), PHP_EOL;
@@ -297,7 +296,6 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **authorization** | **string**| Authorization header using the Bearer scheme | |
 | **adminCredentialPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\AdminCredentialPayload**](../Model/AdminCredentialPayload.md)|  | |
 
 ### Return type
@@ -552,7 +550,7 @@ This endpoint does not need any parameter.
 ## `listCredentials()`
 
 ```php
-listCredentials($gatewayId, $status, $authorization): \Equisoft\SDK\EquisoftConnect\Model\CredentialsResponse
+listCredentials($gatewayId, $status): \Equisoft\SDK\EquisoftConnect\Model\CredentialsResponse
 ```
 
 
@@ -574,12 +572,11 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\GatewaysApi(
     new GuzzleHttp\Client(),
     $config
 );
-$gatewayId = 'gatewayId_example'; // string
-$status = 'status_example'; // string
-$authorization = 'authorization_example'; // string | Authorization header using the Bearer scheme
+$gatewayId = 'gatewayId_example'; // string | Gateway Id
+$status = 'status_example'; // string | Gateway status
 
 try {
-    $result = $apiInstance->listCredentials($gatewayId, $status, $authorization);
+    $result = $apiInstance->listCredentials($gatewayId, $status);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GatewaysApi->listCredentials: ', $e->getMessage(), PHP_EOL;
@@ -590,9 +587,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **gatewayId** | **string**|  | |
-| **status** | **string**|  | |
-| **authorization** | **string**| Authorization header using the Bearer scheme | |
+| **gatewayId** | **string**| Gateway Id | |
+| **status** | **string**| Gateway status | |
 
 ### Return type
 
@@ -674,7 +670,7 @@ try {
 ## `listGatewayConfigurations()`
 
 ```php
-listGatewayConfigurations($gatewayName)
+listGatewayConfigurations($gatewayType)
 ```
 
 
@@ -696,10 +692,10 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\GatewaysApi(
     new GuzzleHttp\Client(),
     $config
 );
-$gatewayName = 'gatewayName_example'; // string
+$gatewayType = 'gatewayType_example'; // string | Gateway type
 
 try {
-    $apiInstance->listGatewayConfigurations($gatewayName);
+    $apiInstance->listGatewayConfigurations($gatewayType);
 } catch (Exception $e) {
     echo 'Exception when calling GatewaysApi->listGatewayConfigurations: ', $e->getMessage(), PHP_EOL;
 }
@@ -709,7 +705,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **gatewayName** | **string**|  | |
+| **gatewayType** | **string**| Gateway type | |
 
 ### Return type
 
@@ -731,7 +727,7 @@ void (empty response body)
 ## `listGateways()`
 
 ```php
-listGateways($authorization, $gatewaysId): \Equisoft\SDK\EquisoftConnect\Model\GatewaysGatewaysResponse
+listGateways($gatewaysId): \Equisoft\SDK\EquisoftConnect\Model\GatewaysGatewaysResponse
 ```
 
 
@@ -753,11 +749,10 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\GatewaysApi(
     new GuzzleHttp\Client(),
     $config
 );
-$authorization = 'authorization_example'; // string | Authorization header using the Bearer scheme
 $gatewaysId = 'gatewaysId_example'; // string | Many ids can be passed to this argument separated by coma. Ex: '?gatewaysId=1,2,3'.
 
 try {
-    $result = $apiInstance->listGateways($authorization, $gatewaysId);
+    $result = $apiInstance->listGateways($gatewaysId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GatewaysApi->listGateways: ', $e->getMessage(), PHP_EOL;
@@ -768,7 +763,6 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **authorization** | **string**| Authorization header using the Bearer scheme | |
 | **gatewaysId** | **string**| Many ids can be passed to this argument separated by coma. Ex: &#39;?gatewaysId&#x3D;1,2,3&#39;. | [optional] |
 
 ### Return type
@@ -813,7 +807,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\GatewaysApi(
     new GuzzleHttp\Client(),
     $config
 );
-$gatewayName = 'gatewayName_example'; // string
+$gatewayName = 'gatewayName_example'; // string | Gateway system name
 $includeSsn = True; // bool | Include the list of SSN for each credentials. Defaults to false
 
 try {
@@ -828,7 +822,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **gatewayName** | **string**|  | |
+| **gatewayName** | **string**| Gateway system name | |
 | **includeSsn** | **bool**| Include the list of SSN for each credentials. Defaults to false | [optional] |
 
 ### Return type
@@ -972,7 +966,7 @@ try {
 ## `updateCredentials()`
 
 ```php
-updateCredentials($gatewayId, $status, $authorization, $credentialIds): \Equisoft\SDK\EquisoftConnect\Model\CredentialsResponse
+updateCredentials($gatewayId, $status, $credentialIds): \Equisoft\SDK\EquisoftConnect\Model\CredentialsResponse
 ```
 
 
@@ -994,13 +988,12 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\GatewaysApi(
     new GuzzleHttp\Client(),
     $config
 );
-$gatewayId = 'gatewayId_example'; // string
-$status = 'status_example'; // string
-$authorization = 'authorization_example'; // string | Authorization header using the Bearer scheme
+$gatewayId = 'gatewayId_example'; // string | Gateway Id
+$status = 'status_example'; // string | Gateway status
 $credentialIds = array(56); // int[] | Many ids can be passed to this argument separated by coma. Ex: '?credentialIds=1,2,3'.
 
 try {
-    $result = $apiInstance->updateCredentials($gatewayId, $status, $authorization, $credentialIds);
+    $result = $apiInstance->updateCredentials($gatewayId, $status, $credentialIds);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling GatewaysApi->updateCredentials: ', $e->getMessage(), PHP_EOL;
@@ -1011,9 +1004,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **gatewayId** | **string**|  | |
-| **status** | **string**|  | |
-| **authorization** | **string**| Authorization header using the Bearer scheme | |
+| **gatewayId** | **string**| Gateway Id | |
+| **status** | **string**| Gateway status | |
 | **credentialIds** | [**int[]**](../Model/int.md)| Many ids can be passed to this argument separated by coma. Ex: &#39;?credentialIds&#x3D;1,2,3&#39;. | [optional] |
 
 ### Return type

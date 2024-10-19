@@ -305,7 +305,7 @@ class GatewaysListCredentialsResponse implements ModelInterface, ArrayAccess, \J
     /**
      * Sets credentials
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\GatewaysCredentials[] $credentials credentials
+     * @param \Equisoft\SDK\EquisoftConnect\Model\GatewaysCredentials[] $credentials List of credentials
      *
      * @return self
      */
