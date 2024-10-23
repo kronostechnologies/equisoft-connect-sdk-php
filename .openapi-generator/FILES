@@ -251,6 +251,7 @@ docs/Model/MovementReassignmentMovement.md
 docs/Model/MovementReassignmentMovementPayload.md
 docs/Model/MovementTransferOption.md
 docs/Model/MovementUser.md
+docs/Model/MovementUserMap.md
 docs/Model/MovementUserTuple.md
 docs/Model/MovementUserTuplePayload.md
 docs/Model/MovementValidationError.md
@@ -528,6 +529,7 @@ lib/Model/MovementReassignmentMovement.php
 lib/Model/MovementReassignmentMovementPayload.php
 lib/Model/MovementTransferOption.php
 lib/Model/MovementUser.php
+lib/Model/MovementUserMap.php
 lib/Model/MovementUserTuple.php
 lib/Model/MovementUserTuplePayload.php
 lib/Model/MovementValidationError.php
@@ -801,6 +803,7 @@ test/Model/MovementOptionsTest.php
 test/Model/MovementReassignmentMovementPayloadTest.php
 test/Model/MovementReassignmentMovementTest.php
 test/Model/MovementTransferOptionTest.php
+test/Model/MovementUserMapTest.php
 test/Model/MovementUserTest.php
 test/Model/MovementUserTuplePayloadTest.php
 test/Model/MovementUserTupleTest.php

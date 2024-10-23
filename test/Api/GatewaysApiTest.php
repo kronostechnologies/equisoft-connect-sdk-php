@@ -122,7 +122,7 @@ class GatewaysApiTest extends TestCase
     /**
      * Test case for gatewayAdminLogin
      *
-     * Verify gateway admin login.
+     * .
      *
      */
     public function testGatewayAdminLogin()

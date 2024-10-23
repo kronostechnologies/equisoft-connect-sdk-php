@@ -1,6 +1,6 @@
 <?php
 /**
- * MovementExecutedMovementInfoResponseTest
+ * MovementUserMapTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * MovementExecutedMovementInfoResponseTest Class Doc Comment
+ * MovementUserMapTest Class Doc Comment
  *
  * @category    Class
- * @description MovementExecutedMovementInfoResponse
+ * @description MovementUserMap
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class MovementExecutedMovementInfoResponseTest extends TestCase
+class MovementUserMapTest extends TestCase
 {
 
     /**
@@ -71,54 +71,27 @@ class MovementExecutedMovementInfoResponseTest extends TestCase
     }
 
     /**
-     * Test "MovementExecutedMovementInfoResponse"
+     * Test "MovementUserMap"
      */
-    public function testMovementExecutedMovementInfoResponse()
+    public function testMovementUserMap()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "srcDbName"
+     * Test attribute "srcEmail"
      */
-    public function testPropertySrcDbName()
+    public function testPropertySrcEmail()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "srcDbUuid"
+     * Test attribute "dstEmail"
      */
-    public function testPropertySrcDbUuid()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "dstDbName"
-     */
-    public function testPropertyDstDbName()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "dstDbUuid"
-     */
-    public function testPropertyDstDbUuid()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "webusers"
-     */
-    public function testPropertyWebusers()
+    public function testPropertyDstEmail()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

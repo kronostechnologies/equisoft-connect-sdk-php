@@ -459,7 +459,7 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets firstName
      *
-     * @param string|null $firstName First name
+     * @param string|null $firstName FirstName
      *
      * @return self
      */
@@ -493,7 +493,7 @@ class GatewaysCredentialsWithSsn implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets lastName
      *
-     * @param string|null $lastName Last name
+     * @param string|null $lastName LastName
      *
      * @return self
      */

@@ -60,7 +60,8 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
         'srcDbName' => 'string',
         'srcDbUuid' => 'string',
         'dstDbName' => 'string',
-        'dstDbUuid' => 'string'
+        'dstDbUuid' => 'string',
+        'webusers' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUserMap[]'
     ];
 
     /**
@@ -74,7 +75,8 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
         'srcDbName' => null,
         'srcDbUuid' => null,
         'dstDbName' => null,
-        'dstDbUuid' => null
+        'dstDbUuid' => null,
+        'webusers' => null
     ];
 
     /**
@@ -86,7 +88,8 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
         'srcDbName' => false,
         'srcDbUuid' => false,
         'dstDbName' => false,
-        'dstDbUuid' => false
+        'dstDbUuid' => false,
+        'webusers' => false
     ];
 
     /**
@@ -178,7 +181,8 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
         'srcDbName' => 'srcDbName',
         'srcDbUuid' => 'srcDbUuid',
         'dstDbName' => 'dstDbName',
-        'dstDbUuid' => 'dstDbUuid'
+        'dstDbUuid' => 'dstDbUuid',
+        'webusers' => 'webusers'
     ];
 
     /**
@@ -190,7 +194,8 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
         'srcDbName' => 'setSrcDbName',
         'srcDbUuid' => 'setSrcDbUuid',
         'dstDbName' => 'setDstDbName',
-        'dstDbUuid' => 'setDstDbUuid'
+        'dstDbUuid' => 'setDstDbUuid',
+        'webusers' => 'setWebusers'
     ];
 
     /**
@@ -202,7 +207,8 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
         'srcDbName' => 'getSrcDbName',
         'srcDbUuid' => 'getSrcDbUuid',
         'dstDbName' => 'getDstDbName',
-        'dstDbUuid' => 'getDstDbUuid'
+        'dstDbUuid' => 'getDstDbUuid',
+        'webusers' => 'getWebusers'
     ];
 
     /**
@@ -266,6 +272,7 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
         $this->setIfExists('srcDbUuid', $data ?? [], null);
         $this->setIfExists('dstDbName', $data ?? [], null);
         $this->setIfExists('dstDbUuid', $data ?? [], null);
+        $this->setIfExists('webusers', $data ?? [], null);
     }
 
     /**
@@ -414,6 +421,33 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
             throw new \InvalidArgumentException('non-nullable dstDbUuid cannot be null');
         }
         $this->container['dstDbUuid'] = $dstDbUuid;
+
+        return $this;
+    }
+
+    /**
+     * Gets webusers
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUserMap[]|null
+     */
+    public function getWebusers()
+    {
+        return $this->container['webusers'];
+    }
+
+    /**
+     * Sets webusers
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUserMap[]|null $webusers Moved webusers
+     *
+     * @return self
+     */
+    public function setWebusers($webusers)
+    {
+        if (is_null($webusers)) {
+            throw new \InvalidArgumentException('non-nullable webusers cannot be null');
+        }
+        $this->container['webusers'] = $webusers;
 
         return $this;
     }

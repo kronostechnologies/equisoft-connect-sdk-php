@@ -305,7 +305,7 @@ class GatewaysGatewaysResponse implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets gateways
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\GatewaysGatewayDto[] $gateways List of gateway
+     * @param \Equisoft\SDK\EquisoftConnect\Model\GatewaysGatewayDto[] $gateways gateways
      *
      * @return self
      */

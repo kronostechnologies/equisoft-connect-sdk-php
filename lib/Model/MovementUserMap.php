@@ -1,6 +1,6 @@
 <?php
 /**
- * GatewaysListCredentialsResponse
+ * MovementUserMap
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * GatewaysListCredentialsResponse Class Doc Comment
+ * MovementUserMap Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
@@ -40,7 +40,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class GatewaysListCredentialsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class MovementUserMap implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class GatewaysListCredentialsResponse implements ModelInterface, ArrayAccess, \J
       *
       * @var string
       */
-    protected static $openAPIModelName = 'gateways.ListCredentialsResponse';
+    protected static $openAPIModelName = 'movement.UserMap';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +57,8 @@ class GatewaysListCredentialsResponse implements ModelInterface, ArrayAccess, \J
       * @var string[]
       */
     protected static $openAPITypes = [
-        'credentials' => '\Equisoft\SDK\EquisoftConnect\Model\GatewaysCredentials[]'
+        'srcEmail' => 'string',
+        'dstEmail' => 'string'
     ];
 
     /**
@@ -68,7 +69,8 @@ class GatewaysListCredentialsResponse implements ModelInterface, ArrayAccess, \J
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'credentials' => null
+        'srcEmail' => null,
+        'dstEmail' => null
     ];
 
     /**
@@ -77,7 +79,8 @@ class GatewaysListCredentialsResponse implements ModelInterface, ArrayAccess, \J
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'credentials' => false
+        'srcEmail' => false,
+        'dstEmail' => false
     ];
 
     /**
@@ -166,7 +169,8 @@ class GatewaysListCredentialsResponse implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $attributeMap = [
-        'credentials' => 'credentials'
+        'srcEmail' => 'srcEmail',
+        'dstEmail' => 'dstEmail'
     ];
 
     /**
@@ -175,7 +179,8 @@ class GatewaysListCredentialsResponse implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $setters = [
-        'credentials' => 'setCredentials'
+        'srcEmail' => 'setSrcEmail',
+        'dstEmail' => 'setDstEmail'
     ];
 
     /**
@@ -184,7 +189,8 @@ class GatewaysListCredentialsResponse implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $getters = [
-        'credentials' => 'getCredentials'
+        'srcEmail' => 'getSrcEmail',
+        'dstEmail' => 'getDstEmail'
     ];
 
     /**
@@ -244,7 +250,8 @@ class GatewaysListCredentialsResponse implements ModelInterface, ArrayAccess, \J
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('credentials', $data ?? [], null);
+        $this->setIfExists('srcEmail', $data ?? [], null);
+        $this->setIfExists('dstEmail', $data ?? [], null);
     }
 
     /**
@@ -274,9 +281,6 @@ class GatewaysListCredentialsResponse implements ModelInterface, ArrayAccess, \J
     {
         $invalidProperties = [];
 
-        if ($this->container['credentials'] === null) {
-            $invalidProperties[] = "'credentials' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -293,28 +297,55 @@ class GatewaysListCredentialsResponse implements ModelInterface, ArrayAccess, \J
 
 
     /**
-     * Gets credentials
+     * Gets srcEmail
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\GatewaysCredentials[]
+     * @return string|null
      */
-    public function getCredentials()
+    public function getSrcEmail()
     {
-        return $this->container['credentials'];
+        return $this->container['srcEmail'];
     }
 
     /**
-     * Sets credentials
+     * Sets srcEmail
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\GatewaysCredentials[] $credentials credentials
+     * @param string|null $srcEmail Email of the webuser in the source database.
      *
      * @return self
      */
-    public function setCredentials($credentials)
+    public function setSrcEmail($srcEmail)
     {
-        if (is_null($credentials)) {
-            throw new \InvalidArgumentException('non-nullable credentials cannot be null');
+        if (is_null($srcEmail)) {
+            throw new \InvalidArgumentException('non-nullable srcEmail cannot be null');
         }
-        $this->container['credentials'] = $credentials;
+        $this->container['srcEmail'] = $srcEmail;
+
+        return $this;
+    }
+
+    /**
+     * Gets dstEmail
+     *
+     * @return string|null
+     */
+    public function getDstEmail()
+    {
+        return $this->container['dstEmail'];
+    }
+
+    /**
+     * Sets dstEmail
+     *
+     * @param string|null $dstEmail Email of the webuser in the destination database.
+     *
+     * @return self
+     */
+    public function setDstEmail($dstEmail)
+    {
+        if (is_null($dstEmail)) {
+            throw new \InvalidArgumentException('non-nullable dstEmail cannot be null');
+        }
+        $this->container['dstEmail'] = $dstEmail;
 
         return $this;
     }

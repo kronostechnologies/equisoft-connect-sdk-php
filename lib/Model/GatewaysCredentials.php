@@ -452,7 +452,7 @@ class GatewaysCredentials implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets firstName
      *
-     * @param string|null $firstName First name
+     * @param string|null $firstName FirstName
      *
      * @return self
      */
@@ -486,7 +486,7 @@ class GatewaysCredentials implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets lastName
      *
-     * @param string|null $lastName Last name
+     * @param string|null $lastName LastName
      *
      * @return self
      */

@@ -305,7 +305,7 @@ class GatewaysAccessesValidationAdminCredentialResponse implements ModelInterfac
     /**
      * Sets adminGateways
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesValidationGatewayAdminDto[] $adminGateways List gateway admin
+     * @param \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesValidationGatewayAdminDto[] $adminGateways adminGateways
      *
      * @return self
      */
