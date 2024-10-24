@@ -108,6 +108,18 @@ class MovementApiTest extends TestCase
     }
 
     /**
+     * Test case for getExecutedMovementIdMapping
+     *
+     * Get the mappings for id and uuid between the source and destination databases, for a given entity type.
+     *
+     */
+    public function testGetExecutedMovementIdMapping()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for getExecutedMovementInfo
      *
      * Get basic information about an executed movement.
