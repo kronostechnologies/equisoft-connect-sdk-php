@@ -1151,7 +1151,7 @@ class MovementApi
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementExecutedMovementInfoResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+     * @return mixed|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
     public function getExecutedMovementIdMapping($executedMovementId, $movementIdMappingRequest, string $contentType = self::contentTypes['getExecutedMovementIdMapping'][0])
     {
@@ -1170,7 +1170,7 @@ class MovementApi
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Equisoft\SDK\EquisoftConnect\Model\MovementExecutedMovementInfoResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of mixed|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getExecutedMovementIdMappingWithHttpInfo($executedMovementId, $movementIdMappingRequest, string $contentType = self::contentTypes['getExecutedMovementIdMapping'][0])
     {
@@ -1213,11 +1213,11 @@ class MovementApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Equisoft\SDK\EquisoftConnect\Model\MovementExecutedMovementInfoResponse' === '\SplFileObject') {
+                    if ('mixed' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Equisoft\SDK\EquisoftConnect\Model\MovementExecutedMovementInfoResponse' !== 'string') {
+                        if ('mixed' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1235,7 +1235,7 @@ class MovementApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\MovementExecutedMovementInfoResponse', []),
+                        ObjectSerializer::deserialize($content, 'mixed', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1322,7 +1322,7 @@ class MovementApi
                     ];
             }
 
-            $returnType = '\Equisoft\SDK\EquisoftConnect\Model\MovementExecutedMovementInfoResponse';
+            $returnType = 'mixed';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1355,7 +1355,7 @@ class MovementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Equisoft\SDK\EquisoftConnect\Model\MovementExecutedMovementInfoResponse',
+                        'mixed',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1425,7 +1425,7 @@ class MovementApi
      */
     public function getExecutedMovementIdMappingAsyncWithHttpInfo($executedMovementId, $movementIdMappingRequest, string $contentType = self::contentTypes['getExecutedMovementIdMapping'][0])
     {
-        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\MovementExecutedMovementInfoResponse';
+        $returnType = 'mixed';
         $request = $this->getExecutedMovementIdMappingRequest($executedMovementId, $movementIdMappingRequest, $contentType);
 
         return $this->client

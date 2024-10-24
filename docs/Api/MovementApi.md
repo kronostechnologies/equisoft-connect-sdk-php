@@ -188,7 +188,7 @@ void (empty response body)
 ## `getExecutedMovementIdMapping()`
 
 ```php
-getExecutedMovementIdMapping($executedMovementId, $movementIdMappingRequest): \Equisoft\SDK\EquisoftConnect\Model\MovementExecutedMovementInfoResponse
+getExecutedMovementIdMapping($executedMovementId, $movementIdMappingRequest): mixed
 ```
 
 Get the mappings for id and uuid between the source and destination databases, for a given entity type
@@ -230,7 +230,7 @@ try {
 
 ### Return type
 
-[**\Equisoft\SDK\EquisoftConnect\Model\MovementExecutedMovementInfoResponse**](../Model/MovementExecutedMovementInfoResponse.md)
+**mixed**
 
 ### Authorization
 
