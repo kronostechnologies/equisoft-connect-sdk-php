@@ -61,6 +61,7 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
         'srcDbUuid' => 'string',
         'dstDbName' => 'string',
         'dstDbUuid' => 'string',
+        'movementType' => 'string',
         'webusers' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUserMap[]'
     ];
 
@@ -76,6 +77,7 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
         'srcDbUuid' => null,
         'dstDbName' => null,
         'dstDbUuid' => null,
+        'movementType' => null,
         'webusers' => null
     ];
 
@@ -89,6 +91,7 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
         'srcDbUuid' => false,
         'dstDbName' => false,
         'dstDbUuid' => false,
+        'movementType' => false,
         'webusers' => false
     ];
 
@@ -182,6 +185,7 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
         'srcDbUuid' => 'srcDbUuid',
         'dstDbName' => 'dstDbName',
         'dstDbUuid' => 'dstDbUuid',
+        'movementType' => 'movementType',
         'webusers' => 'webusers'
     ];
 
@@ -195,6 +199,7 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
         'srcDbUuid' => 'setSrcDbUuid',
         'dstDbName' => 'setDstDbName',
         'dstDbUuid' => 'setDstDbUuid',
+        'movementType' => 'setMovementType',
         'webusers' => 'setWebusers'
     ];
 
@@ -208,6 +213,7 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
         'srcDbUuid' => 'getSrcDbUuid',
         'dstDbName' => 'getDstDbName',
         'dstDbUuid' => 'getDstDbUuid',
+        'movementType' => 'getMovementType',
         'webusers' => 'getWebusers'
     ];
 
@@ -252,6 +258,23 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
         return self::$openAPIModelName;
     }
 
+    public const MOVEMENT_TYPE_MOVE = 'move';
+    public const MOVEMENT_TYPE_COPY = 'copy';
+    public const MOVEMENT_TYPE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getMovementTypeAllowableValues()
+    {
+        return [
+            self::MOVEMENT_TYPE_MOVE,
+            self::MOVEMENT_TYPE_COPY,
+            self::MOVEMENT_TYPE_UNKNOWN_DEFAULT_OPEN_API,
+        ];
+    }
 
     /**
      * Associative array for storing property values
@@ -272,6 +295,7 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
         $this->setIfExists('srcDbUuid', $data ?? [], null);
         $this->setIfExists('dstDbName', $data ?? [], null);
         $this->setIfExists('dstDbUuid', $data ?? [], null);
+        $this->setIfExists('movementType', $data ?? [], null);
         $this->setIfExists('webusers', $data ?? [], null);
     }
 
@@ -301,6 +325,15 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+
+        $allowedValues = $this->getMovementTypeAllowableValues();
+        if (!is_null($this->container['movementType']) && !in_array($this->container['movementType'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'movementType', must be one of '%s'",
+                $this->container['movementType'],
+                implode("', '", $allowedValues)
+            );
+        }
 
         return $invalidProperties;
     }
@@ -421,6 +454,43 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
             throw new \InvalidArgumentException('non-nullable dstDbUuid cannot be null');
         }
         $this->container['dstDbUuid'] = $dstDbUuid;
+
+        return $this;
+    }
+
+    /**
+     * Gets movementType
+     *
+     * @return string|null
+     */
+    public function getMovementType()
+    {
+        return $this->container['movementType'];
+    }
+
+    /**
+     * Sets movementType
+     *
+     * @param string|null $movementType Type of movement (move, copy)
+     *
+     * @return self
+     */
+    public function setMovementType($movementType)
+    {
+        if (is_null($movementType)) {
+            throw new \InvalidArgumentException('non-nullable movementType cannot be null');
+        }
+        $allowedValues = $this->getMovementTypeAllowableValues();
+        if (!in_array($movementType, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'movementType', must be one of '%s'",
+                    $movementType,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['movementType'] = $movementType;
 
         return $this;
     }

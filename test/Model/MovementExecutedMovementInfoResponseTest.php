@@ -116,6 +116,15 @@ class MovementExecutedMovementInfoResponseTest extends TestCase
     }
 
     /**
+     * Test attribute "movementType"
+     */
+    public function testPropertyMovementType()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "webusers"
      */
     public function testPropertyWebusers()
