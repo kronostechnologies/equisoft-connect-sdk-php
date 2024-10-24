@@ -87,4 +87,13 @@ class MovementIdMappingRequestTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "uuids"
+     */
+    public function testPropertyUuids()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
 }

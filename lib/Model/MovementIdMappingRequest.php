@@ -57,7 +57,8 @@ class MovementIdMappingRequest implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'entity' => 'string'
+        'entity' => 'string',
+        'uuids' => 'string[]'
     ];
 
     /**
@@ -68,7 +69,8 @@ class MovementIdMappingRequest implements ModelInterface, ArrayAccess, \JsonSeri
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'entity' => null
+        'entity' => null,
+        'uuids' => null
     ];
 
     /**
@@ -77,7 +79,8 @@ class MovementIdMappingRequest implements ModelInterface, ArrayAccess, \JsonSeri
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'entity' => false
+        'entity' => false,
+        'uuids' => false
     ];
 
     /**
@@ -166,7 +169,8 @@ class MovementIdMappingRequest implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $attributeMap = [
-        'entity' => 'entity'
+        'entity' => 'entity',
+        'uuids' => 'uuids'
     ];
 
     /**
@@ -175,7 +179,8 @@ class MovementIdMappingRequest implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $setters = [
-        'entity' => 'setEntity'
+        'entity' => 'setEntity',
+        'uuids' => 'setUuids'
     ];
 
     /**
@@ -184,7 +189,8 @@ class MovementIdMappingRequest implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $getters = [
-        'entity' => 'getEntity'
+        'entity' => 'getEntity',
+        'uuids' => 'getUuids'
     ];
 
     /**
@@ -245,6 +251,7 @@ class MovementIdMappingRequest implements ModelInterface, ArrayAccess, \JsonSeri
     public function __construct(array $data = null)
     {
         $this->setIfExists('entity', $data ?? [], null);
+        $this->setIfExists('uuids', $data ?? [], null);
     }
 
     /**
@@ -312,6 +319,33 @@ class MovementIdMappingRequest implements ModelInterface, ArrayAccess, \JsonSeri
             throw new \InvalidArgumentException('non-nullable entity cannot be null');
         }
         $this->container['entity'] = $entity;
+
+        return $this;
+    }
+
+    /**
+     * Gets uuids
+     *
+     * @return string[]|null
+     */
+    public function getUuids()
+    {
+        return $this->container['uuids'];
+    }
+
+    /**
+     * Sets uuids
+     *
+     * @param string[]|null $uuids List of uuid in source database.
+     *
+     * @return self
+     */
+    public function setUuids($uuids)
+    {
+        if (is_null($uuids)) {
+            throw new \InvalidArgumentException('non-nullable uuids cannot be null');
+        }
+        $this->container['uuids'] = $uuids;
 
         return $this;
     }
