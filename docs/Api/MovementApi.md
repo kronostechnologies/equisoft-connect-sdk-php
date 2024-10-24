@@ -7,7 +7,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 | [**addMovement()**](MovementApi.md#addMovement) | **POST** /crm/api/v1/movements | Add a movement |
 | [**cancelMovement()**](MovementApi.md#cancelMovement) | **POST** /crm/api/v1/movements/{movementId}/cancel | Cancel a movement. |
 | [**deleteMovement()**](MovementApi.md#deleteMovement) | **DELETE** /crm/api/v1/movements/{movementId} | Delete a movement. |
-| [**getExecutedMovementIdMapping()**](MovementApi.md#getExecutedMovementIdMapping) | **GET** /crm/api/v1/movements/executed/{executedMovementId}/idmapping | Get the mappings for id and uuid between the source and destination databases, for a given entity type |
+| [**getExecutedMovementIdMapping()**](MovementApi.md#getExecutedMovementIdMapping) | **POST** /crm/api/v1/movements/executed/{executedMovementId}/idmapping | Get the mappings for id and uuid between the source and destination databases, for a given entity type |
 | [**getExecutedMovementInfo()**](MovementApi.md#getExecutedMovementInfo) | **GET** /crm/api/v1/movements/executed/{executedMovementId}/info | Get basic information about an executed movement |
 | [**getMovementStatistic()**](MovementApi.md#getMovementStatistic) | **GET** /crm/api/v1/movements/statistic | Get movement statistic |
 | [**listMovements()**](MovementApi.md#listMovements) | **GET** /crm/api/v1/movements | List all movements |
@@ -188,7 +188,7 @@ void (empty response body)
 ## `getExecutedMovementIdMapping()`
 
 ```php
-getExecutedMovementIdMapping($executedMovementId): \Equisoft\SDK\EquisoftConnect\Model\MovementExecutedMovementInfoResponse
+getExecutedMovementIdMapping($executedMovementId, $movementIdMappingRequest): \Equisoft\SDK\EquisoftConnect\Model\MovementExecutedMovementInfoResponse
 ```
 
 Get the mappings for id and uuid between the source and destination databases, for a given entity type
@@ -211,9 +211,10 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\MovementApi(
     $config
 );
 $executedMovementId = 56; // int | Executed Movement identifier
+$movementIdMappingRequest = new \Equisoft\SDK\EquisoftConnect\Model\MovementIdMappingRequest(); // \Equisoft\SDK\EquisoftConnect\Model\MovementIdMappingRequest
 
 try {
-    $result = $apiInstance->getExecutedMovementIdMapping($executedMovementId);
+    $result = $apiInstance->getExecutedMovementIdMapping($executedMovementId, $movementIdMappingRequest);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MovementApi->getExecutedMovementIdMapping: ', $e->getMessage(), PHP_EOL;
@@ -225,6 +226,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **executedMovementId** | **int**| Executed Movement identifier | |
+| **movementIdMappingRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementIdMappingRequest**](../Model/MovementIdMappingRequest.md)|  | |
 
 ### Return type
 
@@ -236,7 +238,7 @@ try {
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: `application/json`
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)

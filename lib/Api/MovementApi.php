@@ -1146,15 +1146,16 @@ class MovementApi
      * Get the mappings for id and uuid between the source and destination databases, for a given entity type
      *
      * @param  int $executedMovementId Executed Movement identifier (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\MovementIdMappingRequest $movementIdMappingRequest movementIdMappingRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getExecutedMovementIdMapping'] to see the possible values for this operation
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Equisoft\SDK\EquisoftConnect\Model\MovementExecutedMovementInfoResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
-    public function getExecutedMovementIdMapping($executedMovementId, string $contentType = self::contentTypes['getExecutedMovementIdMapping'][0])
+    public function getExecutedMovementIdMapping($executedMovementId, $movementIdMappingRequest, string $contentType = self::contentTypes['getExecutedMovementIdMapping'][0])
     {
-        list($response) = $this->getExecutedMovementIdMappingWithHttpInfo($executedMovementId, $contentType);
+        list($response) = $this->getExecutedMovementIdMappingWithHttpInfo($executedMovementId, $movementIdMappingRequest, $contentType);
         return $response;
     }
 
@@ -1164,15 +1165,16 @@ class MovementApi
      * Get the mappings for id and uuid between the source and destination databases, for a given entity type
      *
      * @param  int $executedMovementId Executed Movement identifier (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\MovementIdMappingRequest $movementIdMappingRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getExecutedMovementIdMapping'] to see the possible values for this operation
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Equisoft\SDK\EquisoftConnect\Model\MovementExecutedMovementInfoResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getExecutedMovementIdMappingWithHttpInfo($executedMovementId, string $contentType = self::contentTypes['getExecutedMovementIdMapping'][0])
+    public function getExecutedMovementIdMappingWithHttpInfo($executedMovementId, $movementIdMappingRequest, string $contentType = self::contentTypes['getExecutedMovementIdMapping'][0])
     {
-        $request = $this->getExecutedMovementIdMappingRequest($executedMovementId, $contentType);
+        $request = $this->getExecutedMovementIdMappingRequest($executedMovementId, $movementIdMappingRequest, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1393,14 +1395,15 @@ class MovementApi
      * Get the mappings for id and uuid between the source and destination databases, for a given entity type
      *
      * @param  int $executedMovementId Executed Movement identifier (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\MovementIdMappingRequest $movementIdMappingRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getExecutedMovementIdMapping'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getExecutedMovementIdMappingAsync($executedMovementId, string $contentType = self::contentTypes['getExecutedMovementIdMapping'][0])
+    public function getExecutedMovementIdMappingAsync($executedMovementId, $movementIdMappingRequest, string $contentType = self::contentTypes['getExecutedMovementIdMapping'][0])
     {
-        return $this->getExecutedMovementIdMappingAsyncWithHttpInfo($executedMovementId, $contentType)
+        return $this->getExecutedMovementIdMappingAsyncWithHttpInfo($executedMovementId, $movementIdMappingRequest, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1414,15 +1417,16 @@ class MovementApi
      * Get the mappings for id and uuid between the source and destination databases, for a given entity type
      *
      * @param  int $executedMovementId Executed Movement identifier (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\MovementIdMappingRequest $movementIdMappingRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getExecutedMovementIdMapping'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getExecutedMovementIdMappingAsyncWithHttpInfo($executedMovementId, string $contentType = self::contentTypes['getExecutedMovementIdMapping'][0])
+    public function getExecutedMovementIdMappingAsyncWithHttpInfo($executedMovementId, $movementIdMappingRequest, string $contentType = self::contentTypes['getExecutedMovementIdMapping'][0])
     {
         $returnType = '\Equisoft\SDK\EquisoftConnect\Model\MovementExecutedMovementInfoResponse';
-        $request = $this->getExecutedMovementIdMappingRequest($executedMovementId, $contentType);
+        $request = $this->getExecutedMovementIdMappingRequest($executedMovementId, $movementIdMappingRequest, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1464,18 +1468,26 @@ class MovementApi
      * Create request for operation 'getExecutedMovementIdMapping'
      *
      * @param  int $executedMovementId Executed Movement identifier (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\MovementIdMappingRequest $movementIdMappingRequest (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getExecutedMovementIdMapping'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getExecutedMovementIdMappingRequest($executedMovementId, string $contentType = self::contentTypes['getExecutedMovementIdMapping'][0])
+    public function getExecutedMovementIdMappingRequest($executedMovementId, $movementIdMappingRequest, string $contentType = self::contentTypes['getExecutedMovementIdMapping'][0])
     {
 
         // verify the required parameter 'executedMovementId' is set
         if ($executedMovementId === null || (is_array($executedMovementId) && count($executedMovementId) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $executedMovementId when calling getExecutedMovementIdMapping'
+            );
+        }
+
+        // verify the required parameter 'movementIdMappingRequest' is set
+        if ($movementIdMappingRequest === null || (is_array($movementIdMappingRequest) && count($movementIdMappingRequest) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $movementIdMappingRequest when calling getExecutedMovementIdMapping'
             );
         }
 
@@ -1506,7 +1518,14 @@ class MovementApi
         );
 
         // for model (json/xml)
-        if (count($formParams) > 0) {
+        if (isset($movementIdMappingRequest)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($movementIdMappingRequest));
+            } else {
+                $httpBody = $movementIdMappingRequest;
+            }
+        } elseif (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {
@@ -1561,7 +1580,7 @@ class MovementApi
         $operationHost = $this->config->getHost();
         $query = ObjectSerializer::buildQuery($queryParams);
         return new Request(
-            'GET',
+            'POST',
             $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
