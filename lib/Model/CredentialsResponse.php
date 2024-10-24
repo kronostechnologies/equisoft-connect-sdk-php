@@ -305,7 +305,7 @@ class CredentialsResponse implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets credentials
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\CredentialDto[] $credentials credentials
+     * @param \Equisoft\SDK\EquisoftConnect\Model\CredentialDto[] $credentials List of credentials
      *
      * @return self
      */

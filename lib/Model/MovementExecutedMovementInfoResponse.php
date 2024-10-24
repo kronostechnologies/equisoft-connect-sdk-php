@@ -62,7 +62,7 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
         'dstDbName' => 'string',
         'dstDbUuid' => 'string',
         'movementType' => 'string',
-        'webusers' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUserMap[]'
+        'users' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUserMap[]'
     ];
 
     /**
@@ -78,7 +78,7 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
         'dstDbName' => null,
         'dstDbUuid' => null,
         'movementType' => null,
-        'webusers' => null
+        'users' => null
     ];
 
     /**
@@ -92,7 +92,7 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
         'dstDbName' => false,
         'dstDbUuid' => false,
         'movementType' => false,
-        'webusers' => false
+        'users' => false
     ];
 
     /**
@@ -186,7 +186,7 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
         'dstDbName' => 'dstDbName',
         'dstDbUuid' => 'dstDbUuid',
         'movementType' => 'movementType',
-        'webusers' => 'webusers'
+        'users' => 'users'
     ];
 
     /**
@@ -200,7 +200,7 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
         'dstDbName' => 'setDstDbName',
         'dstDbUuid' => 'setDstDbUuid',
         'movementType' => 'setMovementType',
-        'webusers' => 'setWebusers'
+        'users' => 'setUsers'
     ];
 
     /**
@@ -214,7 +214,7 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
         'dstDbName' => 'getDstDbName',
         'dstDbUuid' => 'getDstDbUuid',
         'movementType' => 'getMovementType',
-        'webusers' => 'getWebusers'
+        'users' => 'getUsers'
     ];
 
     /**
@@ -296,7 +296,7 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
         $this->setIfExists('dstDbName', $data ?? [], null);
         $this->setIfExists('dstDbUuid', $data ?? [], null);
         $this->setIfExists('movementType', $data ?? [], null);
-        $this->setIfExists('webusers', $data ?? [], null);
+        $this->setIfExists('users', $data ?? [], null);
     }
 
     /**
@@ -496,28 +496,28 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
     }
 
     /**
-     * Gets webusers
+     * Gets users
      *
      * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUserMap[]|null
      */
-    public function getWebusers()
+    public function getUsers()
     {
-        return $this->container['webusers'];
+        return $this->container['users'];
     }
 
     /**
-     * Sets webusers
+     * Sets users
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUserMap[]|null $webusers Moved webusers
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUserMap[]|null $users Moved webusers
      *
      * @return self
      */
-    public function setWebusers($webusers)
+    public function setUsers($users)
     {
-        if (is_null($webusers)) {
-            throw new \InvalidArgumentException('non-nullable webusers cannot be null');
+        if (is_null($users)) {
+            throw new \InvalidArgumentException('non-nullable users cannot be null');
         }
-        $this->container['webusers'] = $webusers;
+        $this->container['users'] = $users;
 
         return $this;
     }

@@ -125,9 +125,9 @@ class MovementExecutedMovementInfoResponseTest extends TestCase
     }
 
     /**
-     * Test attribute "webusers"
+     * Test attribute "users"
      */
-    public function testPropertyWebusers()
+    public function testPropertyUsers()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

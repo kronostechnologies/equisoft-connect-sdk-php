@@ -1584,7 +1584,8 @@ class GatewaysApi
     /**
      * Operation gatewayAdminLogin
      *
-     * @param  string $authorization Authorization header using the Bearer scheme (required)
+     * Verify gateway admin login
+     *
      * @param  \Equisoft\SDK\EquisoftConnect\Model\AdminCredentialPayload $adminCredentialPayload adminCredentialPayload (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gatewayAdminLogin'] to see the possible values for this operation
      *
@@ -1592,16 +1593,17 @@ class GatewaysApi
      * @throws \InvalidArgumentException
      * @return \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesValidationAdminCredentialResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
-    public function gatewayAdminLogin($authorization, $adminCredentialPayload, string $contentType = self::contentTypes['gatewayAdminLogin'][0])
+    public function gatewayAdminLogin($adminCredentialPayload, string $contentType = self::contentTypes['gatewayAdminLogin'][0])
     {
-        list($response) = $this->gatewayAdminLoginWithHttpInfo($authorization, $adminCredentialPayload, $contentType);
+        list($response) = $this->gatewayAdminLoginWithHttpInfo($adminCredentialPayload, $contentType);
         return $response;
     }
 
     /**
      * Operation gatewayAdminLoginWithHttpInfo
      *
-     * @param  string $authorization Authorization header using the Bearer scheme (required)
+     * Verify gateway admin login
+     *
      * @param  \Equisoft\SDK\EquisoftConnect\Model\AdminCredentialPayload $adminCredentialPayload (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gatewayAdminLogin'] to see the possible values for this operation
      *
@@ -1609,9 +1611,9 @@ class GatewaysApi
      * @throws \InvalidArgumentException
      * @return array of \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesValidationAdminCredentialResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function gatewayAdminLoginWithHttpInfo($authorization, $adminCredentialPayload, string $contentType = self::contentTypes['gatewayAdminLogin'][0])
+    public function gatewayAdminLoginWithHttpInfo($adminCredentialPayload, string $contentType = self::contentTypes['gatewayAdminLogin'][0])
     {
-        $request = $this->gatewayAdminLoginRequest($authorization, $adminCredentialPayload, $contentType);
+        $request = $this->gatewayAdminLoginRequest($adminCredentialPayload, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1794,16 +1796,17 @@ class GatewaysApi
     /**
      * Operation gatewayAdminLoginAsync
      *
-     * @param  string $authorization Authorization header using the Bearer scheme (required)
+     * Verify gateway admin login
+     *
      * @param  \Equisoft\SDK\EquisoftConnect\Model\AdminCredentialPayload $adminCredentialPayload (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gatewayAdminLogin'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function gatewayAdminLoginAsync($authorization, $adminCredentialPayload, string $contentType = self::contentTypes['gatewayAdminLogin'][0])
+    public function gatewayAdminLoginAsync($adminCredentialPayload, string $contentType = self::contentTypes['gatewayAdminLogin'][0])
     {
-        return $this->gatewayAdminLoginAsyncWithHttpInfo($authorization, $adminCredentialPayload, $contentType)
+        return $this->gatewayAdminLoginAsyncWithHttpInfo($adminCredentialPayload, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1814,17 +1817,18 @@ class GatewaysApi
     /**
      * Operation gatewayAdminLoginAsyncWithHttpInfo
      *
-     * @param  string $authorization Authorization header using the Bearer scheme (required)
+     * Verify gateway admin login
+     *
      * @param  \Equisoft\SDK\EquisoftConnect\Model\AdminCredentialPayload $adminCredentialPayload (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gatewayAdminLogin'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function gatewayAdminLoginAsyncWithHttpInfo($authorization, $adminCredentialPayload, string $contentType = self::contentTypes['gatewayAdminLogin'][0])
+    public function gatewayAdminLoginAsyncWithHttpInfo($adminCredentialPayload, string $contentType = self::contentTypes['gatewayAdminLogin'][0])
     {
         $returnType = '\Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesValidationAdminCredentialResponse';
-        $request = $this->gatewayAdminLoginRequest($authorization, $adminCredentialPayload, $contentType);
+        $request = $this->gatewayAdminLoginRequest($adminCredentialPayload, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1865,22 +1869,14 @@ class GatewaysApi
     /**
      * Create request for operation 'gatewayAdminLogin'
      *
-     * @param  string $authorization Authorization header using the Bearer scheme (required)
      * @param  \Equisoft\SDK\EquisoftConnect\Model\AdminCredentialPayload $adminCredentialPayload (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['gatewayAdminLogin'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function gatewayAdminLoginRequest($authorization, $adminCredentialPayload, string $contentType = self::contentTypes['gatewayAdminLogin'][0])
+    public function gatewayAdminLoginRequest($adminCredentialPayload, string $contentType = self::contentTypes['gatewayAdminLogin'][0])
     {
-
-        // verify the required parameter 'authorization' is set
-        if ($authorization === null || (is_array($authorization) && count($authorization) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $authorization when calling gatewayAdminLogin'
-            );
-        }
 
         // verify the required parameter 'adminCredentialPayload' is set
         if ($adminCredentialPayload === null || (is_array($adminCredentialPayload) && count($adminCredentialPayload) === 0)) {
@@ -1898,10 +1894,6 @@ class GatewaysApi
         $multipart = false;
 
 
-        // header params
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = ObjectSerializer::toHeaderValue($authorization);
-        }
 
 
 
@@ -3583,36 +3575,34 @@ class GatewaysApi
     /**
      * Operation listCredentials
      *
-     * @param  string $gatewayId gatewayId (required)
-     * @param  string $status status (required)
-     * @param  string $authorization Authorization header using the Bearer scheme (required)
+     * @param  string $gatewayId Gateway Id (required)
+     * @param  string $status Gateway status (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listCredentials'] to see the possible values for this operation
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Equisoft\SDK\EquisoftConnect\Model\CredentialsResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
-    public function listCredentials($gatewayId, $status, $authorization, string $contentType = self::contentTypes['listCredentials'][0])
+    public function listCredentials($gatewayId, $status, string $contentType = self::contentTypes['listCredentials'][0])
     {
-        list($response) = $this->listCredentialsWithHttpInfo($gatewayId, $status, $authorization, $contentType);
+        list($response) = $this->listCredentialsWithHttpInfo($gatewayId, $status, $contentType);
         return $response;
     }
 
     /**
      * Operation listCredentialsWithHttpInfo
      *
-     * @param  string $gatewayId (required)
-     * @param  string $status (required)
-     * @param  string $authorization Authorization header using the Bearer scheme (required)
+     * @param  string $gatewayId Gateway Id (required)
+     * @param  string $status Gateway status (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listCredentials'] to see the possible values for this operation
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Equisoft\SDK\EquisoftConnect\Model\CredentialsResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listCredentialsWithHttpInfo($gatewayId, $status, $authorization, string $contentType = self::contentTypes['listCredentials'][0])
+    public function listCredentialsWithHttpInfo($gatewayId, $status, string $contentType = self::contentTypes['listCredentials'][0])
     {
-        $request = $this->listCredentialsRequest($gatewayId, $status, $authorization, $contentType);
+        $request = $this->listCredentialsRequest($gatewayId, $status, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3830,17 +3820,16 @@ class GatewaysApi
     /**
      * Operation listCredentialsAsync
      *
-     * @param  string $gatewayId (required)
-     * @param  string $status (required)
-     * @param  string $authorization Authorization header using the Bearer scheme (required)
+     * @param  string $gatewayId Gateway Id (required)
+     * @param  string $status Gateway status (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listCredentials'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listCredentialsAsync($gatewayId, $status, $authorization, string $contentType = self::contentTypes['listCredentials'][0])
+    public function listCredentialsAsync($gatewayId, $status, string $contentType = self::contentTypes['listCredentials'][0])
     {
-        return $this->listCredentialsAsyncWithHttpInfo($gatewayId, $status, $authorization, $contentType)
+        return $this->listCredentialsAsyncWithHttpInfo($gatewayId, $status, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3851,18 +3840,17 @@ class GatewaysApi
     /**
      * Operation listCredentialsAsyncWithHttpInfo
      *
-     * @param  string $gatewayId (required)
-     * @param  string $status (required)
-     * @param  string $authorization Authorization header using the Bearer scheme (required)
+     * @param  string $gatewayId Gateway Id (required)
+     * @param  string $status Gateway status (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listCredentials'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listCredentialsAsyncWithHttpInfo($gatewayId, $status, $authorization, string $contentType = self::contentTypes['listCredentials'][0])
+    public function listCredentialsAsyncWithHttpInfo($gatewayId, $status, string $contentType = self::contentTypes['listCredentials'][0])
     {
         $returnType = '\Equisoft\SDK\EquisoftConnect\Model\CredentialsResponse';
-        $request = $this->listCredentialsRequest($gatewayId, $status, $authorization, $contentType);
+        $request = $this->listCredentialsRequest($gatewayId, $status, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3903,15 +3891,14 @@ class GatewaysApi
     /**
      * Create request for operation 'listCredentials'
      *
-     * @param  string $gatewayId (required)
-     * @param  string $status (required)
-     * @param  string $authorization Authorization header using the Bearer scheme (required)
+     * @param  string $gatewayId Gateway Id (required)
+     * @param  string $status Gateway status (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listCredentials'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function listCredentialsRequest($gatewayId, $status, $authorization, string $contentType = self::contentTypes['listCredentials'][0])
+    public function listCredentialsRequest($gatewayId, $status, string $contentType = self::contentTypes['listCredentials'][0])
     {
 
         // verify the required parameter 'gatewayId' is set
@@ -3928,13 +3915,6 @@ class GatewaysApi
             );
         }
 
-        // verify the required parameter 'authorization' is set
-        if ($authorization === null || (is_array($authorization) && count($authorization) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $authorization when calling listCredentials'
-            );
-        }
-
 
         $resourcePath = '/crm/api/v1/gateways/credentials-validation/{gatewayId}/credentials/{status}';
         $formParams = [];
@@ -3944,10 +3924,6 @@ class GatewaysApi
         $multipart = false;
 
 
-        // header params
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = ObjectSerializer::toHeaderValue($authorization);
-        }
 
         // path params
         if ($gatewayId !== null) {
@@ -4489,31 +4465,31 @@ class GatewaysApi
     /**
      * Operation listGatewayConfigurations
      *
-     * @param  string $gatewayName gatewayName (required)
+     * @param  string $gatewayType Gateway type (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listGatewayConfigurations'] to see the possible values for this operation
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function listGatewayConfigurations($gatewayName, string $contentType = self::contentTypes['listGatewayConfigurations'][0])
+    public function listGatewayConfigurations($gatewayType, string $contentType = self::contentTypes['listGatewayConfigurations'][0])
     {
-        $this->listGatewayConfigurationsWithHttpInfo($gatewayName, $contentType);
+        $this->listGatewayConfigurationsWithHttpInfo($gatewayType, $contentType);
     }
 
     /**
      * Operation listGatewayConfigurationsWithHttpInfo
      *
-     * @param  string $gatewayName (required)
+     * @param  string $gatewayType Gateway type (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listGatewayConfigurations'] to see the possible values for this operation
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listGatewayConfigurationsWithHttpInfo($gatewayName, string $contentType = self::contentTypes['listGatewayConfigurations'][0])
+    public function listGatewayConfigurationsWithHttpInfo($gatewayType, string $contentType = self::contentTypes['listGatewayConfigurations'][0])
     {
-        $request = $this->listGatewayConfigurationsRequest($gatewayName, $contentType);
+        $request = $this->listGatewayConfigurationsRequest($gatewayType, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4578,15 +4554,15 @@ class GatewaysApi
     /**
      * Operation listGatewayConfigurationsAsync
      *
-     * @param  string $gatewayName (required)
+     * @param  string $gatewayType Gateway type (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listGatewayConfigurations'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listGatewayConfigurationsAsync($gatewayName, string $contentType = self::contentTypes['listGatewayConfigurations'][0])
+    public function listGatewayConfigurationsAsync($gatewayType, string $contentType = self::contentTypes['listGatewayConfigurations'][0])
     {
-        return $this->listGatewayConfigurationsAsyncWithHttpInfo($gatewayName, $contentType)
+        return $this->listGatewayConfigurationsAsyncWithHttpInfo($gatewayType, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4597,16 +4573,16 @@ class GatewaysApi
     /**
      * Operation listGatewayConfigurationsAsyncWithHttpInfo
      *
-     * @param  string $gatewayName (required)
+     * @param  string $gatewayType Gateway type (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listGatewayConfigurations'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listGatewayConfigurationsAsyncWithHttpInfo($gatewayName, string $contentType = self::contentTypes['listGatewayConfigurations'][0])
+    public function listGatewayConfigurationsAsyncWithHttpInfo($gatewayType, string $contentType = self::contentTypes['listGatewayConfigurations'][0])
     {
         $returnType = '';
-        $request = $this->listGatewayConfigurationsRequest($gatewayName, $contentType);
+        $request = $this->listGatewayConfigurationsRequest($gatewayType, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4634,24 +4610,24 @@ class GatewaysApi
     /**
      * Create request for operation 'listGatewayConfigurations'
      *
-     * @param  string $gatewayName (required)
+     * @param  string $gatewayType Gateway type (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listGatewayConfigurations'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function listGatewayConfigurationsRequest($gatewayName, string $contentType = self::contentTypes['listGatewayConfigurations'][0])
+    public function listGatewayConfigurationsRequest($gatewayType, string $contentType = self::contentTypes['listGatewayConfigurations'][0])
     {
 
-        // verify the required parameter 'gatewayName' is set
-        if ($gatewayName === null || (is_array($gatewayName) && count($gatewayName) === 0)) {
+        // verify the required parameter 'gatewayType' is set
+        if ($gatewayType === null || (is_array($gatewayType) && count($gatewayType) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $gatewayName when calling listGatewayConfigurations'
+                'Missing the required parameter $gatewayType when calling listGatewayConfigurations'
             );
         }
 
 
-        $resourcePath = '/crm/api/v1/gateways/generic/{gatewayName}/configuration';
+        $resourcePath = '/crm/api/v1/gateways/generic/{gatewayType}/configuration';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -4661,10 +4637,10 @@ class GatewaysApi
 
 
         // path params
-        if ($gatewayName !== null) {
+        if ($gatewayType !== null) {
             $resourcePath = str_replace(
-                '{' . 'gatewayName' . '}',
-                ObjectSerializer::toPathValue($gatewayName),
+                '{' . 'gatewayType' . '}',
+                ObjectSerializer::toPathValue($gatewayType),
                 $resourcePath
             );
         }
@@ -4742,34 +4718,32 @@ class GatewaysApi
     /**
      * Operation listGateways
      *
-     * @param  string $authorization Authorization header using the Bearer scheme (required)
      * @param  string $gatewaysId Many ids can be passed to this argument separated by coma. Ex: &#39;?gatewaysId&#x3D;1,2,3&#39;. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listGateways'] to see the possible values for this operation
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Equisoft\SDK\EquisoftConnect\Model\GatewaysGatewaysResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+     * @return \Equisoft\SDK\EquisoftConnect\Model\GatewaysGatewaysResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
-    public function listGateways($authorization, $gatewaysId = null, string $contentType = self::contentTypes['listGateways'][0])
+    public function listGateways($gatewaysId = null, string $contentType = self::contentTypes['listGateways'][0])
     {
-        list($response) = $this->listGatewaysWithHttpInfo($authorization, $gatewaysId, $contentType);
+        list($response) = $this->listGatewaysWithHttpInfo($gatewaysId, $contentType);
         return $response;
     }
 
     /**
      * Operation listGatewaysWithHttpInfo
      *
-     * @param  string $authorization Authorization header using the Bearer scheme (required)
      * @param  string $gatewaysId Many ids can be passed to this argument separated by coma. Ex: &#39;?gatewaysId&#x3D;1,2,3&#39;. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listGateways'] to see the possible values for this operation
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Equisoft\SDK\EquisoftConnect\Model\GatewaysGatewaysResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\GatewaysGatewaysResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listGatewaysWithHttpInfo($authorization, $gatewaysId = null, string $contentType = self::contentTypes['listGateways'][0])
+    public function listGatewaysWithHttpInfo($gatewaysId = null, string $contentType = self::contentTypes['listGateways'][0])
     {
-        $request = $this->listGatewaysRequest($authorization, $gatewaysId, $contentType);
+        $request = $this->listGatewaysRequest($gatewaysId, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4831,33 +4805,6 @@ class GatewaysApi
 
                     return [
                         ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\GatewaysGatewaysResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                case 400:
-                    if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -4955,14 +4902,6 @@ class GatewaysApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -4987,16 +4926,15 @@ class GatewaysApi
     /**
      * Operation listGatewaysAsync
      *
-     * @param  string $authorization Authorization header using the Bearer scheme (required)
      * @param  string $gatewaysId Many ids can be passed to this argument separated by coma. Ex: &#39;?gatewaysId&#x3D;1,2,3&#39;. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listGateways'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listGatewaysAsync($authorization, $gatewaysId = null, string $contentType = self::contentTypes['listGateways'][0])
+    public function listGatewaysAsync($gatewaysId = null, string $contentType = self::contentTypes['listGateways'][0])
     {
-        return $this->listGatewaysAsyncWithHttpInfo($authorization, $gatewaysId, $contentType)
+        return $this->listGatewaysAsyncWithHttpInfo($gatewaysId, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5007,17 +4945,16 @@ class GatewaysApi
     /**
      * Operation listGatewaysAsyncWithHttpInfo
      *
-     * @param  string $authorization Authorization header using the Bearer scheme (required)
      * @param  string $gatewaysId Many ids can be passed to this argument separated by coma. Ex: &#39;?gatewaysId&#x3D;1,2,3&#39;. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listGateways'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listGatewaysAsyncWithHttpInfo($authorization, $gatewaysId = null, string $contentType = self::contentTypes['listGateways'][0])
+    public function listGatewaysAsyncWithHttpInfo($gatewaysId = null, string $contentType = self::contentTypes['listGateways'][0])
     {
         $returnType = '\Equisoft\SDK\EquisoftConnect\Model\GatewaysGatewaysResponse';
-        $request = $this->listGatewaysRequest($authorization, $gatewaysId, $contentType);
+        $request = $this->listGatewaysRequest($gatewaysId, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5058,22 +4995,14 @@ class GatewaysApi
     /**
      * Create request for operation 'listGateways'
      *
-     * @param  string $authorization Authorization header using the Bearer scheme (required)
      * @param  string $gatewaysId Many ids can be passed to this argument separated by coma. Ex: &#39;?gatewaysId&#x3D;1,2,3&#39;. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listGateways'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function listGatewaysRequest($authorization, $gatewaysId = null, string $contentType = self::contentTypes['listGateways'][0])
+    public function listGatewaysRequest($gatewaysId = null, string $contentType = self::contentTypes['listGateways'][0])
     {
-
-        // verify the required parameter 'authorization' is set
-        if ($authorization === null || (is_array($authorization) && count($authorization) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $authorization when calling listGateways'
-            );
-        }
 
 
 
@@ -5094,10 +5023,6 @@ class GatewaysApi
             false // required
         ) ?? []);
 
-        // header params
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = ObjectSerializer::toHeaderValue($authorization);
-        }
 
 
 
@@ -5173,7 +5098,7 @@ class GatewaysApi
     /**
      * Operation listGenericCredentials
      *
-     * @param  string $gatewayName gatewayName (required)
+     * @param  string $gatewayName Gateway system name (required)
      * @param  bool $includeSsn Include the list of SSN for each credentials. Defaults to false (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listGenericCredentials'] to see the possible values for this operation
      *
@@ -5190,7 +5115,7 @@ class GatewaysApi
     /**
      * Operation listGenericCredentialsWithHttpInfo
      *
-     * @param  string $gatewayName (required)
+     * @param  string $gatewayName Gateway system name (required)
      * @param  bool $includeSsn Include the list of SSN for each credentials. Defaults to false (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listGenericCredentials'] to see the possible values for this operation
      *
@@ -5383,7 +5308,7 @@ class GatewaysApi
     /**
      * Operation listGenericCredentialsAsync
      *
-     * @param  string $gatewayName (required)
+     * @param  string $gatewayName Gateway system name (required)
      * @param  bool $includeSsn Include the list of SSN for each credentials. Defaults to false (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listGenericCredentials'] to see the possible values for this operation
      *
@@ -5403,7 +5328,7 @@ class GatewaysApi
     /**
      * Operation listGenericCredentialsAsyncWithHttpInfo
      *
-     * @param  string $gatewayName (required)
+     * @param  string $gatewayName Gateway system name (required)
      * @param  bool $includeSsn Include the list of SSN for each credentials. Defaults to false (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listGenericCredentials'] to see the possible values for this operation
      *
@@ -5454,7 +5379,7 @@ class GatewaysApi
     /**
      * Create request for operation 'listGenericCredentials'
      *
-     * @param  string $gatewayName (required)
+     * @param  string $gatewayName Gateway system name (required)
      * @param  bool $includeSsn Include the list of SSN for each credentials. Defaults to false (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listGenericCredentials'] to see the possible values for this operation
      *
@@ -6308,9 +6233,8 @@ class GatewaysApi
     /**
      * Operation updateCredentials
      *
-     * @param  string $gatewayId gatewayId (required)
-     * @param  string $status status (required)
-     * @param  string $authorization Authorization header using the Bearer scheme (required)
+     * @param  string $gatewayId Gateway Id (required)
+     * @param  string $status Gateway status (required)
      * @param  int[] $credentialIds Many ids can be passed to this argument separated by coma. Ex: &#39;?credentialIds&#x3D;1,2,3&#39;. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCredentials'] to see the possible values for this operation
      *
@@ -6318,18 +6242,17 @@ class GatewaysApi
      * @throws \InvalidArgumentException
      * @return \Equisoft\SDK\EquisoftConnect\Model\CredentialsResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
-    public function updateCredentials($gatewayId, $status, $authorization, $credentialIds = null, string $contentType = self::contentTypes['updateCredentials'][0])
+    public function updateCredentials($gatewayId, $status, $credentialIds = null, string $contentType = self::contentTypes['updateCredentials'][0])
     {
-        list($response) = $this->updateCredentialsWithHttpInfo($gatewayId, $status, $authorization, $credentialIds, $contentType);
+        list($response) = $this->updateCredentialsWithHttpInfo($gatewayId, $status, $credentialIds, $contentType);
         return $response;
     }
 
     /**
      * Operation updateCredentialsWithHttpInfo
      *
-     * @param  string $gatewayId (required)
-     * @param  string $status (required)
-     * @param  string $authorization Authorization header using the Bearer scheme (required)
+     * @param  string $gatewayId Gateway Id (required)
+     * @param  string $status Gateway status (required)
      * @param  int[] $credentialIds Many ids can be passed to this argument separated by coma. Ex: &#39;?credentialIds&#x3D;1,2,3&#39;. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCredentials'] to see the possible values for this operation
      *
@@ -6337,9 +6260,9 @@ class GatewaysApi
      * @throws \InvalidArgumentException
      * @return array of \Equisoft\SDK\EquisoftConnect\Model\CredentialsResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateCredentialsWithHttpInfo($gatewayId, $status, $authorization, $credentialIds = null, string $contentType = self::contentTypes['updateCredentials'][0])
+    public function updateCredentialsWithHttpInfo($gatewayId, $status, $credentialIds = null, string $contentType = self::contentTypes['updateCredentials'][0])
     {
-        $request = $this->updateCredentialsRequest($gatewayId, $status, $authorization, $credentialIds, $contentType);
+        $request = $this->updateCredentialsRequest($gatewayId, $status, $credentialIds, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -6557,18 +6480,17 @@ class GatewaysApi
     /**
      * Operation updateCredentialsAsync
      *
-     * @param  string $gatewayId (required)
-     * @param  string $status (required)
-     * @param  string $authorization Authorization header using the Bearer scheme (required)
+     * @param  string $gatewayId Gateway Id (required)
+     * @param  string $status Gateway status (required)
      * @param  int[] $credentialIds Many ids can be passed to this argument separated by coma. Ex: &#39;?credentialIds&#x3D;1,2,3&#39;. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCredentials'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateCredentialsAsync($gatewayId, $status, $authorization, $credentialIds = null, string $contentType = self::contentTypes['updateCredentials'][0])
+    public function updateCredentialsAsync($gatewayId, $status, $credentialIds = null, string $contentType = self::contentTypes['updateCredentials'][0])
     {
-        return $this->updateCredentialsAsyncWithHttpInfo($gatewayId, $status, $authorization, $credentialIds, $contentType)
+        return $this->updateCredentialsAsyncWithHttpInfo($gatewayId, $status, $credentialIds, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -6579,19 +6501,18 @@ class GatewaysApi
     /**
      * Operation updateCredentialsAsyncWithHttpInfo
      *
-     * @param  string $gatewayId (required)
-     * @param  string $status (required)
-     * @param  string $authorization Authorization header using the Bearer scheme (required)
+     * @param  string $gatewayId Gateway Id (required)
+     * @param  string $status Gateway status (required)
      * @param  int[] $credentialIds Many ids can be passed to this argument separated by coma. Ex: &#39;?credentialIds&#x3D;1,2,3&#39;. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCredentials'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function updateCredentialsAsyncWithHttpInfo($gatewayId, $status, $authorization, $credentialIds = null, string $contentType = self::contentTypes['updateCredentials'][0])
+    public function updateCredentialsAsyncWithHttpInfo($gatewayId, $status, $credentialIds = null, string $contentType = self::contentTypes['updateCredentials'][0])
     {
         $returnType = '\Equisoft\SDK\EquisoftConnect\Model\CredentialsResponse';
-        $request = $this->updateCredentialsRequest($gatewayId, $status, $authorization, $credentialIds, $contentType);
+        $request = $this->updateCredentialsRequest($gatewayId, $status, $credentialIds, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -6632,16 +6553,15 @@ class GatewaysApi
     /**
      * Create request for operation 'updateCredentials'
      *
-     * @param  string $gatewayId (required)
-     * @param  string $status (required)
-     * @param  string $authorization Authorization header using the Bearer scheme (required)
+     * @param  string $gatewayId Gateway Id (required)
+     * @param  string $status Gateway status (required)
      * @param  int[] $credentialIds Many ids can be passed to this argument separated by coma. Ex: &#39;?credentialIds&#x3D;1,2,3&#39;. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateCredentials'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function updateCredentialsRequest($gatewayId, $status, $authorization, $credentialIds = null, string $contentType = self::contentTypes['updateCredentials'][0])
+    public function updateCredentialsRequest($gatewayId, $status, $credentialIds = null, string $contentType = self::contentTypes['updateCredentials'][0])
     {
 
         // verify the required parameter 'gatewayId' is set
@@ -6655,13 +6575,6 @@ class GatewaysApi
         if ($status === null || (is_array($status) && count($status) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $status when calling updateCredentials'
-            );
-        }
-
-        // verify the required parameter 'authorization' is set
-        if ($authorization === null || (is_array($authorization) && count($authorization) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $authorization when calling updateCredentials'
             );
         }
 
@@ -6684,10 +6597,6 @@ class GatewaysApi
             false // required
         ) ?? []);
 
-        // header params
-        if ($authorization !== null) {
-            $headerParams['Authorization'] = ObjectSerializer::toHeaderValue($authorization);
-        }
 
         // path params
         if ($gatewayId !== null) {
