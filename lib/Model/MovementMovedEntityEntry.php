@@ -1,6 +1,6 @@
 <?php
 /**
- * MovementIdMappingRequest
+ * MovementMovedEntityEntry
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * MovementIdMappingRequest Class Doc Comment
+ * MovementMovedEntityEntry Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
@@ -40,7 +40,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class MovementIdMappingRequest implements ModelInterface, ArrayAccess, \JsonSerializable
+class MovementMovedEntityEntry implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class MovementIdMappingRequest implements ModelInterface, ArrayAccess, \JsonSeri
       *
       * @var string
       */
-    protected static $openAPIModelName = 'movement.IdMappingRequest';
+    protected static $openAPIModelName = 'movement.MovedEntityEntry';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +57,7 @@ class MovementIdMappingRequest implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'movementId' => 'int',
-        'entity' => 'string',
-        'uuids' => 'string[]'
+        'children' => 'array<string,\Equisoft\SDK\EquisoftConnect\Model\MovementMovedEntityEntry[]>'
     ];
 
     /**
@@ -70,9 +68,7 @@ class MovementIdMappingRequest implements ModelInterface, ArrayAccess, \JsonSeri
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'movementId' => null,
-        'entity' => null,
-        'uuids' => null
+        'children' => null
     ];
 
     /**
@@ -81,9 +77,7 @@ class MovementIdMappingRequest implements ModelInterface, ArrayAccess, \JsonSeri
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'movementId' => false,
-        'entity' => false,
-        'uuids' => false
+        'children' => false
     ];
 
     /**
@@ -172,9 +166,7 @@ class MovementIdMappingRequest implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $attributeMap = [
-        'movementId' => 'movementId',
-        'entity' => 'entity',
-        'uuids' => 'uuids'
+        'children' => 'children'
     ];
 
     /**
@@ -183,9 +175,7 @@ class MovementIdMappingRequest implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $setters = [
-        'movementId' => 'setMovementId',
-        'entity' => 'setEntity',
-        'uuids' => 'setUuids'
+        'children' => 'setChildren'
     ];
 
     /**
@@ -194,9 +184,7 @@ class MovementIdMappingRequest implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $getters = [
-        'movementId' => 'getMovementId',
-        'entity' => 'getEntity',
-        'uuids' => 'getUuids'
+        'children' => 'getChildren'
     ];
 
     /**
@@ -256,9 +244,7 @@ class MovementIdMappingRequest implements ModelInterface, ArrayAccess, \JsonSeri
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('movementId', $data ?? [], null);
-        $this->setIfExists('entity', $data ?? [], null);
-        $this->setIfExists('uuids', $data ?? [], null);
+        $this->setIfExists('children', $data ?? [], null);
     }
 
     /**
@@ -304,82 +290,28 @@ class MovementIdMappingRequest implements ModelInterface, ArrayAccess, \JsonSeri
 
 
     /**
-     * Gets movementId
+     * Gets children
      *
-     * @return int|null
+     * @return array<string,\Equisoft\SDK\EquisoftConnect\Model\MovementMovedEntityEntry[]>|null
      */
-    public function getMovementId()
+    public function getChildren()
     {
-        return $this->container['movementId'];
+        return $this->container['children'];
     }
 
     /**
-     * Sets movementId
+     * Sets children
      *
-     * @param int|null $movementId Id of the executed movement
+     * @param array<string,\Equisoft\SDK\EquisoftConnect\Model\MovementMovedEntityEntry[]>|null $children List of entity, indexed by entity type
      *
      * @return self
      */
-    public function setMovementId($movementId)
+    public function setChildren($children)
     {
-        if (is_null($movementId)) {
-            throw new \InvalidArgumentException('non-nullable movementId cannot be null');
+        if (is_null($children)) {
+            throw new \InvalidArgumentException('non-nullable children cannot be null');
         }
-        $this->container['movementId'] = $movementId;
-
-        return $this;
-    }
-
-    /**
-     * Gets entity
-     *
-     * @return string|null
-     */
-    public function getEntity()
-    {
-        return $this->container['entity'];
-    }
-
-    /**
-     * Sets entity
-     *
-     * @param string|null $entity Type of entity.
-     *
-     * @return self
-     */
-    public function setEntity($entity)
-    {
-        if (is_null($entity)) {
-            throw new \InvalidArgumentException('non-nullable entity cannot be null');
-        }
-        $this->container['entity'] = $entity;
-
-        return $this;
-    }
-
-    /**
-     * Gets uuids
-     *
-     * @return string[]|null
-     */
-    public function getUuids()
-    {
-        return $this->container['uuids'];
-    }
-
-    /**
-     * Sets uuids
-     *
-     * @param string[]|null $uuids List of uuid in source database.
-     *
-     * @return self
-     */
-    public function setUuids($uuids)
-    {
-        if (is_null($uuids)) {
-            throw new \InvalidArgumentException('non-nullable uuids cannot be null');
-        }
-        $this->container['uuids'] = $uuids;
+        $this->container['children'] = $children;
 
         return $this;
     }

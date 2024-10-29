@@ -1,6 +1,6 @@
 <?php
 /**
- * MovementIdMappingRequestTest
+ * MovementMovedEntityEntryTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * MovementIdMappingRequestTest Class Doc Comment
+ * MovementMovedEntityEntryTest Class Doc Comment
  *
  * @category    Class
- * @description MovementIdMappingRequest
+ * @description MovementMovedEntityEntry
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class MovementIdMappingRequestTest extends TestCase
+class MovementMovedEntityEntryTest extends TestCase
 {
 
     /**
@@ -71,36 +71,18 @@ class MovementIdMappingRequestTest extends TestCase
     }
 
     /**
-     * Test "MovementIdMappingRequest"
+     * Test "MovementMovedEntityEntry"
      */
-    public function testMovementIdMappingRequest()
+    public function testMovementMovedEntityEntry()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "movementId"
+     * Test attribute "children"
      */
-    public function testPropertyMovementId()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "entity"
-     */
-    public function testPropertyEntity()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "uuids"
-     */
-    public function testPropertyUuids()
+    public function testPropertyChildren()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

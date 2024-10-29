@@ -240,9 +240,11 @@ docs/Model/MovementDistributionList.md
 docs/Model/MovementExecutedMovementInfoResponse.md
 docs/Model/MovementGatewayAccessCode.md
 docs/Model/MovementIdMappingRequest.md
+docs/Model/MovementIdMappingResponse.md
 docs/Model/MovementListMovementResponse.md
 docs/Model/MovementMoveMovement.md
 docs/Model/MovementMoveMovementPayload.md
+docs/Model/MovementMovedEntityEntry.md
 docs/Model/MovementMovement.md
 docs/Model/MovementMovementPayload.md
 docs/Model/MovementMovementStatisticResponse.md
@@ -519,9 +521,11 @@ lib/Model/MovementDistributionList.php
 lib/Model/MovementExecutedMovementInfoResponse.php
 lib/Model/MovementGatewayAccessCode.php
 lib/Model/MovementIdMappingRequest.php
+lib/Model/MovementIdMappingResponse.php
 lib/Model/MovementListMovementResponse.php
 lib/Model/MovementMoveMovement.php
 lib/Model/MovementMoveMovementPayload.php
+lib/Model/MovementMovedEntityEntry.php
 lib/Model/MovementMovement.php
 lib/Model/MovementMovementPayload.php
 lib/Model/MovementMovementStatisticResponse.php
@@ -795,9 +799,11 @@ test/Model/MovementDistributionListTest.php
 test/Model/MovementExecutedMovementInfoResponseTest.php
 test/Model/MovementGatewayAccessCodeTest.php
 test/Model/MovementIdMappingRequestTest.php
+test/Model/MovementIdMappingResponseTest.php
 test/Model/MovementListMovementResponseTest.php
 test/Model/MovementMoveMovementPayloadTest.php
 test/Model/MovementMoveMovementTest.php
+test/Model/MovementMovedEntityEntryTest.php
 test/Model/MovementMovementPayloadTest.php
 test/Model/MovementMovementStatisticResponseTest.php
 test/Model/MovementMovementTest.php
