@@ -80,6 +80,42 @@ class MovementMovedEntityEntryTest extends TestCase
     }
 
     /**
+     * Test attribute "srcUuid"
+     */
+    public function testPropertySrcUuid()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "srcId"
+     */
+    public function testPropertySrcId()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "dstUuid"
+     */
+    public function testPropertyDstUuid()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "dstId"
+     */
+    public function testPropertyDstId()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "children"
      */
     public function testPropertyChildren()

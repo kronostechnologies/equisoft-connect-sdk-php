@@ -57,6 +57,10 @@ class MovementMovedEntityEntry implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
+        'srcUuid' => 'string',
+        'srcId' => 'string',
+        'dstUuid' => 'string',
+        'dstId' => 'string',
         'children' => 'array<string,\Equisoft\SDK\EquisoftConnect\Model\MovementMovedEntityEntry[]>'
     ];
 
@@ -68,6 +72,10 @@ class MovementMovedEntityEntry implements ModelInterface, ArrayAccess, \JsonSeri
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'srcUuid' => null,
+        'srcId' => null,
+        'dstUuid' => null,
+        'dstId' => null,
         'children' => null
     ];
 
@@ -77,6 +85,10 @@ class MovementMovedEntityEntry implements ModelInterface, ArrayAccess, \JsonSeri
       * @var boolean[]
       */
     protected static array $openAPINullables = [
+        'srcUuid' => true,
+        'srcId' => false,
+        'dstUuid' => true,
+        'dstId' => false,
         'children' => false
     ];
 
@@ -166,6 +178,10 @@ class MovementMovedEntityEntry implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $attributeMap = [
+        'srcUuid' => 'srcUuid',
+        'srcId' => 'srcId',
+        'dstUuid' => 'dstUuid',
+        'dstId' => 'dstId',
         'children' => 'children'
     ];
 
@@ -175,6 +191,10 @@ class MovementMovedEntityEntry implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $setters = [
+        'srcUuid' => 'setSrcUuid',
+        'srcId' => 'setSrcId',
+        'dstUuid' => 'setDstUuid',
+        'dstId' => 'setDstId',
         'children' => 'setChildren'
     ];
 
@@ -184,6 +204,10 @@ class MovementMovedEntityEntry implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $getters = [
+        'srcUuid' => 'getSrcUuid',
+        'srcId' => 'getSrcId',
+        'dstUuid' => 'getDstUuid',
+        'dstId' => 'getDstId',
         'children' => 'getChildren'
     ];
 
@@ -244,6 +268,10 @@ class MovementMovedEntityEntry implements ModelInterface, ArrayAccess, \JsonSeri
      */
     public function __construct(array $data = null)
     {
+        $this->setIfExists('srcUuid', $data ?? [], null);
+        $this->setIfExists('srcId', $data ?? [], null);
+        $this->setIfExists('dstUuid', $data ?? [], null);
+        $this->setIfExists('dstId', $data ?? [], null);
         $this->setIfExists('children', $data ?? [], null);
     }
 
@@ -288,6 +316,128 @@ class MovementMovedEntityEntry implements ModelInterface, ArrayAccess, \JsonSeri
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets srcUuid
+     *
+     * @return string|null
+     */
+    public function getSrcUuid()
+    {
+        return $this->container['srcUuid'];
+    }
+
+    /**
+     * Sets srcUuid
+     *
+     * @param string|null $srcUuid Source DB Id
+     *
+     * @return self
+     */
+    public function setSrcUuid($srcUuid)
+    {
+        if (is_null($srcUuid)) {
+            array_push($this->openAPINullablesSetToNull, 'srcUuid');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('srcUuid', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['srcUuid'] = $srcUuid;
+
+        return $this;
+    }
+
+    /**
+     * Gets srcId
+     *
+     * @return string|null
+     */
+    public function getSrcId()
+    {
+        return $this->container['srcId'];
+    }
+
+    /**
+     * Sets srcId
+     *
+     * @param string|null $srcId Source DB UUID
+     *
+     * @return self
+     */
+    public function setSrcId($srcId)
+    {
+        if (is_null($srcId)) {
+            throw new \InvalidArgumentException('non-nullable srcId cannot be null');
+        }
+        $this->container['srcId'] = $srcId;
+
+        return $this;
+    }
+
+    /**
+     * Gets dstUuid
+     *
+     * @return string|null
+     */
+    public function getDstUuid()
+    {
+        return $this->container['dstUuid'];
+    }
+
+    /**
+     * Sets dstUuid
+     *
+     * @param string|null $dstUuid Destination DB UUID
+     *
+     * @return self
+     */
+    public function setDstUuid($dstUuid)
+    {
+        if (is_null($dstUuid)) {
+            array_push($this->openAPINullablesSetToNull, 'dstUuid');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('dstUuid', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['dstUuid'] = $dstUuid;
+
+        return $this;
+    }
+
+    /**
+     * Gets dstId
+     *
+     * @return string|null
+     */
+    public function getDstId()
+    {
+        return $this->container['dstId'];
+    }
+
+    /**
+     * Sets dstId
+     *
+     * @param string|null $dstId Destination DB Id
+     *
+     * @return self
+     */
+    public function setDstId($dstId)
+    {
+        if (is_null($dstId)) {
+            throw new \InvalidArgumentException('non-nullable dstId cannot be null');
+        }
+        $this->container['dstId'] = $dstId;
+
+        return $this;
+    }
 
     /**
      * Gets children
