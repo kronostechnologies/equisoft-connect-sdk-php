@@ -288,6 +288,10 @@ class MovementIdMappingRequest implements ModelInterface, ArrayAccess, \JsonSeri
     {
         $invalidProperties = [];
 
+        if (!is_null($this->container['uuids']) && (count($this->container['uuids']) > 1000)) {
+            $invalidProperties[] = "invalid value for 'uuids', number of items must be less than or equal to 1000.";
+        }
+
         return $invalidProperties;
     }
 
@@ -378,6 +382,10 @@ class MovementIdMappingRequest implements ModelInterface, ArrayAccess, \JsonSeri
     {
         if (is_null($uuids)) {
             throw new \InvalidArgumentException('non-nullable uuids cannot be null');
+        }
+
+        if ((count($uuids) > 1000)) {
+            throw new \InvalidArgumentException('invalid value for $uuids when calling MovementIdMappingRequest., number of items must be less than or equal to 1000.');
         }
         $this->container['uuids'] = $uuids;
 
