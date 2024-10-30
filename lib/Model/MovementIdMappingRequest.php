@@ -57,7 +57,6 @@ class MovementIdMappingRequest implements ModelInterface, ArrayAccess, \JsonSeri
       * @var string[]
       */
     protected static $openAPITypes = [
-        'movementId' => 'int',
         'entity' => 'string',
         'uuids' => 'string[]'
     ];
@@ -70,7 +69,6 @@ class MovementIdMappingRequest implements ModelInterface, ArrayAccess, \JsonSeri
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'movementId' => null,
         'entity' => null,
         'uuids' => null
     ];
@@ -81,7 +79,6 @@ class MovementIdMappingRequest implements ModelInterface, ArrayAccess, \JsonSeri
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'movementId' => false,
         'entity' => false,
         'uuids' => false
     ];
@@ -172,7 +169,6 @@ class MovementIdMappingRequest implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $attributeMap = [
-        'movementId' => 'movementId',
         'entity' => 'entity',
         'uuids' => 'uuids'
     ];
@@ -183,7 +179,6 @@ class MovementIdMappingRequest implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $setters = [
-        'movementId' => 'setMovementId',
         'entity' => 'setEntity',
         'uuids' => 'setUuids'
     ];
@@ -194,7 +189,6 @@ class MovementIdMappingRequest implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $getters = [
-        'movementId' => 'getMovementId',
         'entity' => 'getEntity',
         'uuids' => 'getUuids'
     ];
@@ -256,7 +250,6 @@ class MovementIdMappingRequest implements ModelInterface, ArrayAccess, \JsonSeri
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('movementId', $data ?? [], null);
         $this->setIfExists('entity', $data ?? [], null);
         $this->setIfExists('uuids', $data ?? [], null);
     }
@@ -306,33 +299,6 @@ class MovementIdMappingRequest implements ModelInterface, ArrayAccess, \JsonSeri
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets movementId
-     *
-     * @return int|null
-     */
-    public function getMovementId()
-    {
-        return $this->container['movementId'];
-    }
-
-    /**
-     * Sets movementId
-     *
-     * @param int|null $movementId Id of the executed movement
-     *
-     * @return self
-     */
-    public function setMovementId($movementId)
-    {
-        if (is_null($movementId)) {
-            throw new \InvalidArgumentException('non-nullable movementId cannot be null');
-        }
-        $this->container['movementId'] = $movementId;
-
-        return $this;
-    }
 
     /**
      * Gets entity

@@ -80,15 +80,6 @@ class MovementIdMappingRequestTest extends TestCase
     }
 
     /**
-     * Test attribute "movementId"
-     */
-    public function testPropertyMovementId()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "entity"
      */
     public function testPropertyEntity()

@@ -4,7 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**movementId** | **int** | Id of the executed movement | [optional]
 **entity** | **string** | Type of entity. | [optional]
 **uuids** | **string[]** | List of uuid in source database. | [optional]
 
