@@ -58,9 +58,9 @@ class MovementMovedEntityEntry implements ModelInterface, ArrayAccess, \JsonSeri
       */
     protected static $openAPITypes = [
         'srcUuid' => 'string',
-        'srcId' => 'string',
+        'srcId' => 'int',
         'dstUuid' => 'string',
-        'dstId' => 'string',
+        'dstId' => 'int',
         'children' => 'array<string,\Equisoft\SDK\EquisoftConnect\Model\MovementMovedEntityEntry[]>'
     ];
 
@@ -354,7 +354,7 @@ class MovementMovedEntityEntry implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets srcId
      *
-     * @return string|null
+     * @return int|null
      */
     public function getSrcId()
     {
@@ -364,7 +364,7 @@ class MovementMovedEntityEntry implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets srcId
      *
-     * @param string|null $srcId Source DB UUID
+     * @param int|null $srcId Source DB UUID
      *
      * @return self
      */
@@ -415,7 +415,7 @@ class MovementMovedEntityEntry implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets dstId
      *
-     * @return string|null
+     * @return int|null
      */
     public function getDstId()
     {
@@ -425,7 +425,7 @@ class MovementMovedEntityEntry implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets dstId
      *
-     * @param string|null $dstId Destination DB Id
+     * @param int|null $dstId Destination DB Id
      *
      * @return self
      */
