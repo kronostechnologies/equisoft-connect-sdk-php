@@ -61,6 +61,7 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess, \Js
         'type' => 'string',
         'subType' => 'string',
         'name' => 'string',
+        'externalKey' => 'string',
         'files' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentFile[]',
         'createdBy' => 'string',
         'createdOn' => 'string',
@@ -80,6 +81,7 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess, \Js
         'type' => null,
         'subType' => null,
         'name' => null,
+        'externalKey' => null,
         'files' => null,
         'createdBy' => null,
         'createdOn' => null,
@@ -97,6 +99,7 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess, \Js
         'type' => false,
         'subType' => false,
         'name' => false,
+        'externalKey' => false,
         'files' => false,
         'createdBy' => false,
         'createdOn' => false,
@@ -194,6 +197,7 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess, \Js
         'type' => 'type',
         'subType' => 'subType',
         'name' => 'name',
+        'externalKey' => 'externalKey',
         'files' => 'files',
         'createdBy' => 'createdBy',
         'createdOn' => 'createdOn',
@@ -211,6 +215,7 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess, \Js
         'type' => 'setType',
         'subType' => 'setSubType',
         'name' => 'setName',
+        'externalKey' => 'setExternalKey',
         'files' => 'setFiles',
         'createdBy' => 'setCreatedBy',
         'createdOn' => 'setCreatedOn',
@@ -228,6 +233,7 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess, \Js
         'type' => 'getType',
         'subType' => 'getSubType',
         'name' => 'getName',
+        'externalKey' => 'getExternalKey',
         'files' => 'getFiles',
         'createdBy' => 'getCreatedBy',
         'createdOn' => 'getCreatedOn',
@@ -296,6 +302,7 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess, \Js
         $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('subType', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
+        $this->setIfExists('externalKey', $data ?? [], null);
         $this->setIfExists('files', $data ?? [], null);
         $this->setIfExists('createdBy', $data ?? [], null);
         $this->setIfExists('createdOn', $data ?? [], null);
@@ -449,6 +456,33 @@ class LegacyDocumentDocumentListItem implements ModelInterface, ArrayAccess, \Js
             throw new \InvalidArgumentException('non-nullable name cannot be null');
         }
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets externalKey
+     *
+     * @return string|null
+     */
+    public function getExternalKey()
+    {
+        return $this->container['externalKey'];
+    }
+
+    /**
+     * Sets externalKey
+     *
+     * @param string|null $externalKey External key of the document.
+     *
+     * @return self
+     */
+    public function setExternalKey($externalKey)
+    {
+        if (is_null($externalKey)) {
+            throw new \InvalidArgumentException('non-nullable externalKey cannot be null');
+        }
+        $this->container['externalKey'] = $externalKey;
 
         return $this;
     }

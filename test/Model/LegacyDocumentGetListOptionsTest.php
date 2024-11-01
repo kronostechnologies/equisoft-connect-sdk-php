@@ -98,6 +98,15 @@ class LegacyDocumentGetListOptionsTest extends TestCase
     }
 
     /**
+     * Test attribute "externalKey"
+     */
+    public function testPropertyExternalKey()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "systemType"
      */
     public function testPropertySystemType()

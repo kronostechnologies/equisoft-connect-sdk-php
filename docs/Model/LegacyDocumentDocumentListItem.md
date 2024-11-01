@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **type** | **string** | Type of the document. | [optional]
 **subType** | **string** | Subtype of the document. | [optional]
 **name** | **string** | Name of the document. | [optional]
+**externalKey** | **string** | External key of the document. | [optional]
 **files** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyDocumentFile[]**](LegacyDocumentFile.md) | Files contained inside the document. | [optional]
 **createdBy** | **string** | Email of user who created the document. | [optional]
 **createdOn** | **string** | Date of creation of the document. | [optional]

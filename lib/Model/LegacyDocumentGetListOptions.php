@@ -59,6 +59,7 @@ class LegacyDocumentGetListOptions implements ModelInterface, ArrayAccess, \Json
     protected static $openAPITypes = [
         'contactId' => 'int',
         'limit' => 'int',
+        'externalKey' => 'string',
         'systemType' => 'string'
     ];
 
@@ -72,6 +73,7 @@ class LegacyDocumentGetListOptions implements ModelInterface, ArrayAccess, \Json
     protected static $openAPIFormats = [
         'contactId' => null,
         'limit' => null,
+        'externalKey' => null,
         'systemType' => null
     ];
 
@@ -83,6 +85,7 @@ class LegacyDocumentGetListOptions implements ModelInterface, ArrayAccess, \Json
     protected static array $openAPINullables = [
         'contactId' => false,
         'limit' => false,
+        'externalKey' => false,
         'systemType' => false
     ];
 
@@ -174,6 +177,7 @@ class LegacyDocumentGetListOptions implements ModelInterface, ArrayAccess, \Json
     protected static $attributeMap = [
         'contactId' => 'contact_id',
         'limit' => 'limit',
+        'externalKey' => 'external_key',
         'systemType' => 'system_type'
     ];
 
@@ -185,6 +189,7 @@ class LegacyDocumentGetListOptions implements ModelInterface, ArrayAccess, \Json
     protected static $setters = [
         'contactId' => 'setContactId',
         'limit' => 'setLimit',
+        'externalKey' => 'setExternalKey',
         'systemType' => 'setSystemType'
     ];
 
@@ -196,6 +201,7 @@ class LegacyDocumentGetListOptions implements ModelInterface, ArrayAccess, \Json
     protected static $getters = [
         'contactId' => 'getContactId',
         'limit' => 'getLimit',
+        'externalKey' => 'getExternalKey',
         'systemType' => 'getSystemType'
     ];
 
@@ -258,6 +264,7 @@ class LegacyDocumentGetListOptions implements ModelInterface, ArrayAccess, \Json
     {
         $this->setIfExists('contactId', $data ?? [], null);
         $this->setIfExists('limit', $data ?? [], null);
+        $this->setIfExists('externalKey', $data ?? [], null);
         $this->setIfExists('systemType', $data ?? [], null);
     }
 
@@ -353,6 +360,33 @@ class LegacyDocumentGetListOptions implements ModelInterface, ArrayAccess, \Json
             throw new \InvalidArgumentException('non-nullable limit cannot be null');
         }
         $this->container['limit'] = $limit;
+
+        return $this;
+    }
+
+    /**
+     * Gets externalKey
+     *
+     * @return string|null
+     */
+    public function getExternalKey()
+    {
+        return $this->container['externalKey'];
+    }
+
+    /**
+     * Sets externalKey
+     *
+     * @param string|null $externalKey Filter by external key.
+     *
+     * @return self
+     */
+    public function setExternalKey($externalKey)
+    {
+        if (is_null($externalKey)) {
+            throw new \InvalidArgumentException('non-nullable externalKey cannot be null');
+        }
+        $this->container['externalKey'] = $externalKey;
 
         return $this;
     }

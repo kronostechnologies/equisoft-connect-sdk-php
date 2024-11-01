@@ -116,6 +116,15 @@ class LegacyDocumentDocumentListItemTest extends TestCase
     }
 
     /**
+     * Test attribute "externalKey"
+     */
+    public function testPropertyExternalKey()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "files"
      */
     public function testPropertyFiles()
