@@ -308,7 +308,7 @@ try {
 ## `legacyContactGetContactList()`
 
 ```php
-legacyContactGetContactList($legacyContactContactGetListPayloadRequest, $lastModifiedTime): \Equisoft\SDK\EquisoftConnect\Model\LegacyContactGetListResponse
+legacyContactGetContactList($lastModifiedTime, $optionPayload): \Equisoft\SDK\EquisoftConnect\Model\LegacyContactGetListResponse
 ```
 
 Get a list of all contacts.
@@ -332,11 +332,11 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\LegacyContactApi(
     new GuzzleHttp\Client(),
     $config
 );
-$legacyContactContactGetListPayloadRequest = new \Equisoft\SDK\EquisoftConnect\Model\LegacyContactContactGetListPayloadRequest(); // \Equisoft\SDK\EquisoftConnect\Model\LegacyContactContactGetListPayloadRequest
 $lastModifiedTime = 'lastModifiedTime_example'; // string | To Fetch all documents, which got modified / created after specified date. If the value \"auto\" is used, the last access date to this method will be used. Set the value to \"reset\" to reset the last access date.
+$optionPayload = new \Equisoft\SDK\EquisoftConnect\Model\LegacyContactGetListOptions(); // LegacyContactGetListOptions | Object containing the options to filter the list of contacts.
 
 try {
-    $result = $apiInstance->legacyContactGetContactList($legacyContactContactGetListPayloadRequest, $lastModifiedTime);
+    $result = $apiInstance->legacyContactGetContactList($lastModifiedTime, $optionPayload);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling LegacyContactApi->legacyContactGetContactList: ', $e->getMessage(), PHP_EOL;
@@ -347,8 +347,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **legacyContactContactGetListPayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyContactContactGetListPayloadRequest**](../Model/LegacyContactContactGetListPayloadRequest.md)|  | |
 | **lastModifiedTime** | **string**| To Fetch all documents, which got modified / created after specified date. If the value \&quot;auto\&quot; is used, the last access date to this method will be used. Set the value to \&quot;reset\&quot; to reset the last access date. | [optional] |
+| **optionPayload** | [**LegacyContactGetListOptions**](../Model/.md)| Object containing the options to filter the list of contacts. | [optional] |
 
 ### Return type
 
@@ -360,7 +360,7 @@ try {
 
 ### HTTP request headers
 
-- **Content-Type**: `application/json`
+- **Content-Type**: Not defined
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)

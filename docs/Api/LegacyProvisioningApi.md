@@ -614,7 +614,7 @@ This endpoint does not need any parameter.
 ## `legacyProvisioningGetGatewayArchiveByDate()`
 
 ```php
-legacyProvisioningGetGatewayArchiveByDate($legacyProvisioningGatewayArchivePayloadRequest): \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetFileForGatewayArchiveByDateResponse
+legacyProvisioningGetGatewayArchiveByDate($payload): \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetFileForGatewayArchiveByDateResponse
 ```
 
 Get the archives for a given gateway at the given date.
@@ -636,10 +636,10 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\LegacyProvisioningApi(
     new GuzzleHttp\Client(),
     $config
 );
-$legacyProvisioningGatewayArchivePayloadRequest = new \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGatewayArchivePayloadRequest(); // \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGatewayArchivePayloadRequest
+$payload = new \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGatewayArchivePayload(); // LegacyProvisioningGatewayArchivePayload | Legacy payload argument.
 
 try {
-    $result = $apiInstance->legacyProvisioningGetGatewayArchiveByDate($legacyProvisioningGatewayArchivePayloadRequest);
+    $result = $apiInstance->legacyProvisioningGetGatewayArchiveByDate($payload);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling LegacyProvisioningApi->legacyProvisioningGetGatewayArchiveByDate: ', $e->getMessage(), PHP_EOL;
@@ -650,7 +650,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **legacyProvisioningGatewayArchivePayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGatewayArchivePayloadRequest**](../Model/LegacyProvisioningGatewayArchivePayloadRequest.md)|  | |
+| **payload** | [**LegacyProvisioningGatewayArchivePayload**](../Model/.md)| Legacy payload argument. | |
 
 ### Return type
 
@@ -662,7 +662,7 @@ try {
 
 ### HTTP request headers
 
-- **Content-Type**: `application/json`
+- **Content-Type**: Not defined
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
@@ -672,7 +672,7 @@ try {
 ## `legacyProvisioningGetGatewayArchiveListByDate()`
 
 ```php
-legacyProvisioningGetGatewayArchiveListByDate($legacyProvisioningGatewayArchivePayloadRequest): \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetGatewayArchiveListByDateResponse
+legacyProvisioningGetGatewayArchiveListByDate($payload): \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetGatewayArchiveListByDateResponse
 ```
 
 Get the archives list for a given gateway at the given date.
@@ -694,10 +694,10 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\LegacyProvisioningApi(
     new GuzzleHttp\Client(),
     $config
 );
-$legacyProvisioningGatewayArchivePayloadRequest = new \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGatewayArchivePayloadRequest(); // \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGatewayArchivePayloadRequest
+$payload = new \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGatewayArchivePayload(); // LegacyProvisioningGatewayArchivePayload | Legacy payload argument.
 
 try {
-    $result = $apiInstance->legacyProvisioningGetGatewayArchiveListByDate($legacyProvisioningGatewayArchivePayloadRequest);
+    $result = $apiInstance->legacyProvisioningGetGatewayArchiveListByDate($payload);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling LegacyProvisioningApi->legacyProvisioningGetGatewayArchiveListByDate: ', $e->getMessage(), PHP_EOL;
@@ -708,7 +708,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **legacyProvisioningGatewayArchivePayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGatewayArchivePayloadRequest**](../Model/LegacyProvisioningGatewayArchivePayloadRequest.md)|  | |
+| **payload** | [**LegacyProvisioningGatewayArchivePayload**](../Model/.md)| Legacy payload argument. | |
 
 ### Return type
 
@@ -720,7 +720,7 @@ try {
 
 ### HTTP request headers
 
-- **Content-Type**: `application/json`
+- **Content-Type**: Not defined
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
@@ -848,7 +848,7 @@ try {
 ## `legacyProvisioningGetWebuserDatabaseListByValue()`
 
 ```php
-legacyProvisioningGetWebuserDatabaseListByValue($legacyProvisioningWebuserDatabasePayloadRequest): \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetWebuserDatabaseListByValueResponse
+legacyProvisioningGetWebuserDatabaseListByValue($payload): \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetWebuserDatabaseListByValueResponse
 ```
 
 Get a list of webuser's databases.
@@ -870,10 +870,10 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\LegacyProvisioningApi(
     new GuzzleHttp\Client(),
     $config
 );
-$legacyProvisioningWebuserDatabasePayloadRequest = new \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningWebuserDatabasePayloadRequest(); // \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningWebuserDatabasePayloadRequest
+$payload = new \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningWebuserDatabasePayload(); // LegacyProvisioningWebuserDatabasePayload | Legacy payload argument.
 
 try {
-    $result = $apiInstance->legacyProvisioningGetWebuserDatabaseListByValue($legacyProvisioningWebuserDatabasePayloadRequest);
+    $result = $apiInstance->legacyProvisioningGetWebuserDatabaseListByValue($payload);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling LegacyProvisioningApi->legacyProvisioningGetWebuserDatabaseListByValue: ', $e->getMessage(), PHP_EOL;
@@ -884,7 +884,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **legacyProvisioningWebuserDatabasePayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningWebuserDatabasePayloadRequest**](../Model/LegacyProvisioningWebuserDatabasePayloadRequest.md)|  | |
+| **payload** | [**LegacyProvisioningWebuserDatabasePayload**](../Model/.md)| Legacy payload argument. | |
 
 ### Return type
 
@@ -896,7 +896,7 @@ try {
 
 ### HTTP request headers
 
-- **Content-Type**: `application/json`
+- **Content-Type**: Not defined
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)

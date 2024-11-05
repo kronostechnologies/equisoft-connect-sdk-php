@@ -136,7 +136,6 @@ docs/Model/LegacyAddUpdateResponse.md
 docs/Model/LegacyContactAddress.md
 docs/Model/LegacyContactContact.md
 docs/Model/LegacyContactContactGetItem.md
-docs/Model/LegacyContactContactGetListPayloadRequest.md
 docs/Model/LegacyContactContactLink.md
 docs/Model/LegacyContactContactLinkParticipant.md
 docs/Model/LegacyContactContactListItem.md
@@ -163,7 +162,6 @@ docs/Model/LegacyDateRange.md
 docs/Model/LegacyDocumentBase64FilePayload.md
 docs/Model/LegacyDocumentBase64FilePayloadItem.md
 docs/Model/LegacyDocumentDocumentGetItem.md
-docs/Model/LegacyDocumentDocumentGetListPayloadRequest.md
 docs/Model/LegacyDocumentDocumentListItem.md
 docs/Model/LegacyDocumentDocumentPayload.md
 docs/Model/LegacyDocumentDocumentPayloadItem.md
@@ -207,7 +205,6 @@ docs/Model/LegacyProvisioningDeleteOrganizationResponse.md
 docs/Model/LegacyProvisioningDeleteUserOption.md
 docs/Model/LegacyProvisioningDeleteUserOptionRequest.md
 docs/Model/LegacyProvisioningGatewayArchivePayload.md
-docs/Model/LegacyProvisioningGatewayArchivePayloadRequest.md
 docs/Model/LegacyProvisioningGetFileForGatewayArchiveByDateResponse.md
 docs/Model/LegacyProvisioningGetGatewayArchiveListByDateResponse.md
 docs/Model/LegacyProvisioningGetOrganizationStatusResponse.md
@@ -224,7 +221,6 @@ docs/Model/LegacyProvisioningUserItem.md
 docs/Model/LegacyProvisioningUserPayload.md
 docs/Model/LegacyProvisioningUserPayloadRequest.md
 docs/Model/LegacyProvisioningWebuserDatabasePayload.md
-docs/Model/LegacyProvisioningWebuserDatabasePayloadRequest.md
 docs/Model/LegacyResponse.md
 docs/Model/LegacySystemLinkedValue.md
 docs/Model/LegacyUser.md
@@ -412,7 +408,6 @@ lib/Model/LegacyAddUpdateResponse.php
 lib/Model/LegacyContactAddress.php
 lib/Model/LegacyContactContact.php
 lib/Model/LegacyContactContactGetItem.php
-lib/Model/LegacyContactContactGetListPayloadRequest.php
 lib/Model/LegacyContactContactLink.php
 lib/Model/LegacyContactContactLinkParticipant.php
 lib/Model/LegacyContactContactListItem.php
@@ -439,7 +434,6 @@ lib/Model/LegacyDateRange.php
 lib/Model/LegacyDocumentBase64FilePayload.php
 lib/Model/LegacyDocumentBase64FilePayloadItem.php
 lib/Model/LegacyDocumentDocumentGetItem.php
-lib/Model/LegacyDocumentDocumentGetListPayloadRequest.php
 lib/Model/LegacyDocumentDocumentListItem.php
 lib/Model/LegacyDocumentDocumentPayload.php
 lib/Model/LegacyDocumentDocumentPayloadItem.php
@@ -483,7 +477,6 @@ lib/Model/LegacyProvisioningDeleteOrganizationResponse.php
 lib/Model/LegacyProvisioningDeleteUserOption.php
 lib/Model/LegacyProvisioningDeleteUserOptionRequest.php
 lib/Model/LegacyProvisioningGatewayArchivePayload.php
-lib/Model/LegacyProvisioningGatewayArchivePayloadRequest.php
 lib/Model/LegacyProvisioningGetFileForGatewayArchiveByDateResponse.php
 lib/Model/LegacyProvisioningGetGatewayArchiveListByDateResponse.php
 lib/Model/LegacyProvisioningGetOrganizationStatusResponse.php
@@ -500,7 +493,6 @@ lib/Model/LegacyProvisioningUserItem.php
 lib/Model/LegacyProvisioningUserPayload.php
 lib/Model/LegacyProvisioningUserPayloadRequest.php
 lib/Model/LegacyProvisioningWebuserDatabasePayload.php
-lib/Model/LegacyProvisioningWebuserDatabasePayloadRequest.php
 lib/Model/LegacyResponse.php
 lib/Model/LegacySystemLinkedValue.php
 lib/Model/LegacyUser.php
@@ -686,7 +678,6 @@ test/Model/LegacyAddUpdateItemTest.php
 test/Model/LegacyAddUpdateResponseTest.php
 test/Model/LegacyContactAddressTest.php
 test/Model/LegacyContactContactGetItemTest.php
-test/Model/LegacyContactContactGetListPayloadRequestTest.php
 test/Model/LegacyContactContactLinkParticipantTest.php
 test/Model/LegacyContactContactLinkTest.php
 test/Model/LegacyContactContactListItemTest.php
@@ -714,7 +705,6 @@ test/Model/LegacyDateRangeTest.php
 test/Model/LegacyDocumentBase64FilePayloadItemTest.php
 test/Model/LegacyDocumentBase64FilePayloadTest.php
 test/Model/LegacyDocumentDocumentGetItemTest.php
-test/Model/LegacyDocumentDocumentGetListPayloadRequestTest.php
 test/Model/LegacyDocumentDocumentListItemTest.php
 test/Model/LegacyDocumentDocumentPayloadItemTest.php
 test/Model/LegacyDocumentDocumentPayloadRequestTest.php
@@ -757,7 +747,6 @@ test/Model/LegacyProvisioningDeleteOrganizationOptionTest.php
 test/Model/LegacyProvisioningDeleteOrganizationResponseTest.php
 test/Model/LegacyProvisioningDeleteUserOptionRequestTest.php
 test/Model/LegacyProvisioningDeleteUserOptionTest.php
-test/Model/LegacyProvisioningGatewayArchivePayloadRequestTest.php
 test/Model/LegacyProvisioningGatewayArchivePayloadTest.php
 test/Model/LegacyProvisioningGetFileForGatewayArchiveByDateResponseTest.php
 test/Model/LegacyProvisioningGetGatewayArchiveListByDateResponseTest.php
@@ -774,7 +763,6 @@ test/Model/LegacyProvisioningUserIdentifierTest.php
 test/Model/LegacyProvisioningUserItemTest.php
 test/Model/LegacyProvisioningUserPayloadRequestTest.php
 test/Model/LegacyProvisioningUserPayloadTest.php
-test/Model/LegacyProvisioningWebuserDatabasePayloadRequestTest.php
 test/Model/LegacyProvisioningWebuserDatabasePayloadTest.php
 test/Model/LegacyResponseTest.php
 test/Model/LegacySystemLinkedValueTest.php
