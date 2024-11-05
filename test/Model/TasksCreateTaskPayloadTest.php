@@ -125,15 +125,6 @@ class TasksCreateTaskPayloadTest extends TestCase
     }
 
     /**
-     * Test attribute "internalNotes"
-     */
-    public function testPropertyInternalNotes()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "categoryId"
      */
     public function testPropertyCategoryId()

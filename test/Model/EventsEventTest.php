@@ -152,15 +152,6 @@ class EventsEventTest extends TestCase
     }
 
     /**
-     * Test attribute "internalNotes"
-     */
-    public function testPropertyInternalNotes()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "location"
      */
     public function testPropertyLocation()

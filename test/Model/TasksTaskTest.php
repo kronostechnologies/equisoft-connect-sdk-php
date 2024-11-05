@@ -143,15 +143,6 @@ class TasksTaskTest extends TestCase
     }
 
     /**
-     * Test attribute "internalNotes"
-     */
-    public function testPropertyInternalNotes()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "category"
      */
     public function testPropertyCategory()

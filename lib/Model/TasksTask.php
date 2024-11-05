@@ -64,7 +64,6 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
         'initialDate' => '\DateTime',
         'completedDate' => '\DateTime',
         'description' => 'string',
-        'internalNotes' => 'string',
         'category' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue',
         'subCategory' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue',
         'priority' => 'int',
@@ -92,7 +91,6 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
         'initialDate' => 'date',
         'completedDate' => 'date',
         'description' => null,
-        'internalNotes' => null,
         'category' => null,
         'subCategory' => null,
         'priority' => null,
@@ -118,7 +116,6 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
         'initialDate' => true,
         'completedDate' => true,
         'description' => false,
-        'internalNotes' => false,
         'category' => true,
         'subCategory' => true,
         'priority' => false,
@@ -224,7 +221,6 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
         'initialDate' => 'initialDate',
         'completedDate' => 'completedDate',
         'description' => 'description',
-        'internalNotes' => 'internalNotes',
         'category' => 'category',
         'subCategory' => 'subCategory',
         'priority' => 'priority',
@@ -250,7 +246,6 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
         'initialDate' => 'setInitialDate',
         'completedDate' => 'setCompletedDate',
         'description' => 'setDescription',
-        'internalNotes' => 'setInternalNotes',
         'category' => 'setCategory',
         'subCategory' => 'setSubCategory',
         'priority' => 'setPriority',
@@ -276,7 +271,6 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
         'initialDate' => 'getInitialDate',
         'completedDate' => 'getCompletedDate',
         'description' => 'getDescription',
-        'internalNotes' => 'getInternalNotes',
         'category' => 'getCategory',
         'subCategory' => 'getSubCategory',
         'priority' => 'getPriority',
@@ -353,7 +347,6 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('initialDate', $data ?? [], null);
         $this->setIfExists('completedDate', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
-        $this->setIfExists('internalNotes', $data ?? [], null);
         $this->setIfExists('category', $data ?? [], null);
         $this->setIfExists('subCategory', $data ?? [], null);
         $this->setIfExists('priority', $data ?? [], null);
@@ -632,33 +625,6 @@ class TasksTask implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable description cannot be null');
         }
         $this->container['description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * Gets internalNotes
-     *
-     * @return string|null
-     */
-    public function getInternalNotes()
-    {
-        return $this->container['internalNotes'];
-    }
-
-    /**
-     * Sets internalNotes
-     *
-     * @param string|null $internalNotes Internal notes on the Event. Not synced on remote sources.
-     *
-     * @return self
-     */
-    public function setInternalNotes($internalNotes)
-    {
-        if (is_null($internalNotes)) {
-            throw new \InvalidArgumentException('non-nullable internalNotes cannot be null');
-        }
-        $this->container['internalNotes'] = $internalNotes;
 
         return $this;
     }

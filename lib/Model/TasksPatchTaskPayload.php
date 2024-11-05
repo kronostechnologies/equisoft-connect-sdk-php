@@ -62,7 +62,6 @@ class TasksPatchTaskPayload implements ModelInterface, ArrayAccess, \JsonSeriali
         'initialDate' => 'string',
         'completedDate' => 'string',
         'description' => 'string',
-        'internalNotes' => 'string',
         'categoryId' => 'int',
         'subCategoryId' => 'int',
         'priority' => 'int',
@@ -83,7 +82,6 @@ class TasksPatchTaskPayload implements ModelInterface, ArrayAccess, \JsonSeriali
         'initialDate' => null,
         'completedDate' => null,
         'description' => null,
-        'internalNotes' => null,
         'categoryId' => null,
         'subCategoryId' => null,
         'priority' => null,
@@ -102,7 +100,6 @@ class TasksPatchTaskPayload implements ModelInterface, ArrayAccess, \JsonSeriali
         'initialDate' => false,
         'completedDate' => false,
         'description' => false,
-        'internalNotes' => false,
         'categoryId' => false,
         'subCategoryId' => false,
         'priority' => false,
@@ -201,7 +198,6 @@ class TasksPatchTaskPayload implements ModelInterface, ArrayAccess, \JsonSeriali
         'initialDate' => 'initialDate',
         'completedDate' => 'completedDate',
         'description' => 'description',
-        'internalNotes' => 'internalNotes',
         'categoryId' => 'categoryId',
         'subCategoryId' => 'subCategoryId',
         'priority' => 'priority',
@@ -220,7 +216,6 @@ class TasksPatchTaskPayload implements ModelInterface, ArrayAccess, \JsonSeriali
         'initialDate' => 'setInitialDate',
         'completedDate' => 'setCompletedDate',
         'description' => 'setDescription',
-        'internalNotes' => 'setInternalNotes',
         'categoryId' => 'setCategoryId',
         'subCategoryId' => 'setSubCategoryId',
         'priority' => 'setPriority',
@@ -239,7 +234,6 @@ class TasksPatchTaskPayload implements ModelInterface, ArrayAccess, \JsonSeriali
         'initialDate' => 'getInitialDate',
         'completedDate' => 'getCompletedDate',
         'description' => 'getDescription',
-        'internalNotes' => 'getInternalNotes',
         'categoryId' => 'getCategoryId',
         'subCategoryId' => 'getSubCategoryId',
         'priority' => 'getPriority',
@@ -309,7 +303,6 @@ class TasksPatchTaskPayload implements ModelInterface, ArrayAccess, \JsonSeriali
         $this->setIfExists('initialDate', $data ?? [], null);
         $this->setIfExists('completedDate', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
-        $this->setIfExists('internalNotes', $data ?? [], null);
         $this->setIfExists('categoryId', $data ?? [], null);
         $this->setIfExists('subCategoryId', $data ?? [], null);
         $this->setIfExists('priority', $data ?? [], null);
@@ -490,33 +483,6 @@ class TasksPatchTaskPayload implements ModelInterface, ArrayAccess, \JsonSeriali
             throw new \InvalidArgumentException('non-nullable description cannot be null');
         }
         $this->container['description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * Gets internalNotes
-     *
-     * @return string|null
-     */
-    public function getInternalNotes()
-    {
-        return $this->container['internalNotes'];
-    }
-
-    /**
-     * Sets internalNotes
-     *
-     * @param string|null $internalNotes Internal notes on the Event. Not synced on remote sources.
-     *
-     * @return self
-     */
-    public function setInternalNotes($internalNotes)
-    {
-        if (is_null($internalNotes)) {
-            throw new \InvalidArgumentException('non-nullable internalNotes cannot be null');
-        }
-        $this->container['internalNotes'] = $internalNotes;
 
         return $this;
     }

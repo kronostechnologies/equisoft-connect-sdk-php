@@ -63,7 +63,6 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess, \JsonSeria
         'allDay' => 'bool',
         'initialDate' => 'string',
         'description' => 'string',
-        'internalNotes' => 'string',
         'location' => 'string',
         'type' => 'string',
         'categoryId' => 'int',
@@ -87,7 +86,6 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess, \JsonSeria
         'allDay' => null,
         'initialDate' => null,
         'description' => null,
-        'internalNotes' => null,
         'location' => null,
         'type' => null,
         'categoryId' => null,
@@ -109,7 +107,6 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess, \JsonSeria
         'allDay' => false,
         'initialDate' => false,
         'description' => false,
-        'internalNotes' => false,
         'location' => false,
         'type' => false,
         'categoryId' => false,
@@ -211,7 +208,6 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess, \JsonSeria
         'allDay' => 'allDay',
         'initialDate' => 'initialDate',
         'description' => 'description',
-        'internalNotes' => 'internalNotes',
         'location' => 'location',
         'type' => 'type',
         'categoryId' => 'categoryId',
@@ -233,7 +229,6 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess, \JsonSeria
         'allDay' => 'setAllDay',
         'initialDate' => 'setInitialDate',
         'description' => 'setDescription',
-        'internalNotes' => 'setInternalNotes',
         'location' => 'setLocation',
         'type' => 'setType',
         'categoryId' => 'setCategoryId',
@@ -255,7 +250,6 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess, \JsonSeria
         'allDay' => 'getAllDay',
         'initialDate' => 'getInitialDate',
         'description' => 'getDescription',
-        'internalNotes' => 'getInternalNotes',
         'location' => 'getLocation',
         'type' => 'getType',
         'categoryId' => 'getCategoryId',
@@ -353,7 +347,6 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess, \JsonSeria
         $this->setIfExists('allDay', $data ?? [], null);
         $this->setIfExists('initialDate', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
-        $this->setIfExists('internalNotes', $data ?? [], null);
         $this->setIfExists('location', $data ?? [], null);
         $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('categoryId', $data ?? [], null);
@@ -572,33 +565,6 @@ class EventsPatchEventPayload implements ModelInterface, ArrayAccess, \JsonSeria
             throw new \InvalidArgumentException('non-nullable description cannot be null');
         }
         $this->container['description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * Gets internalNotes
-     *
-     * @return string|null
-     */
-    public function getInternalNotes()
-    {
-        return $this->container['internalNotes'];
-    }
-
-    /**
-     * Sets internalNotes
-     *
-     * @param string|null $internalNotes Internal notes on the Event. Not synced on remote sources.
-     *
-     * @return self
-     */
-    public function setInternalNotes($internalNotes)
-    {
-        if (is_null($internalNotes)) {
-            throw new \InvalidArgumentException('non-nullable internalNotes cannot be null');
-        }
-        $this->container['internalNotes'] = $internalNotes;
 
         return $this;
     }

@@ -12,7 +12,6 @@ Name | Type | Description | Notes
 **isCompleted** | **bool** | Is the event part of a completed/done calendar. |
 **initialDate** | **string** | Date the Event was initially scheduled. As defined by full-date - RFC3339. | [optional]
 **description** | **string** | Public description of the Event. | [optional]
-**internalNotes** | **string** | Internal notes on the Event. Not synced on remote sources. | [optional]
 **location** | **string** | Location of the event in free-text form. | [optional]
 **type** | [**\Equisoft\SDK\EquisoftConnect\Model\EventsEventType**](EventsEventType.md) |  |
 **category** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValue**](FieldValue.md) |  | [optional]

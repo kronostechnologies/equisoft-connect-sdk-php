@@ -9,7 +9,6 @@ Name | Type | Description | Notes
 **initialDate** | **string** | Date the task was initially started. As defined by full-date - RFC3339. | [optional]
 **completedDate** | **string** | Date the task was completed / done. As defined by full-date - RFC3339. | [optional]
 **description** | **string** | Public description of the Event. | [optional]
-**internalNotes** | **string** | Internal notes on the Event. Not synced on remote sources. | [optional]
 **categoryId** | **int** | ID of the field value to use as category. | [optional]
 **subCategoryId** | **int** | ID of the field value to use as sub-category. | [optional]
 **priority** | **int** | Importance/Priority of an event or task. 5 is the most important. | [optional]

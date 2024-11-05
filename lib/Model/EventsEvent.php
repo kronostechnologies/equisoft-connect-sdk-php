@@ -65,7 +65,6 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
         'isCompleted' => 'bool',
         'initialDate' => 'string',
         'description' => 'string',
-        'internalNotes' => 'string',
         'location' => 'string',
         'type' => '\Equisoft\SDK\EquisoftConnect\Model\EventsEventType',
         'category' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValue',
@@ -101,7 +100,6 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
         'isCompleted' => null,
         'initialDate' => null,
         'description' => null,
-        'internalNotes' => null,
         'location' => null,
         'type' => null,
         'category' => null,
@@ -135,7 +133,6 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
         'isCompleted' => false,
         'initialDate' => true,
         'description' => false,
-        'internalNotes' => false,
         'location' => false,
         'type' => false,
         'category' => true,
@@ -249,7 +246,6 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
         'isCompleted' => 'isCompleted',
         'initialDate' => 'initialDate',
         'description' => 'description',
-        'internalNotes' => 'internalNotes',
         'location' => 'location',
         'type' => 'type',
         'category' => 'category',
@@ -283,7 +279,6 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
         'isCompleted' => 'setIsCompleted',
         'initialDate' => 'setInitialDate',
         'description' => 'setDescription',
-        'internalNotes' => 'setInternalNotes',
         'location' => 'setLocation',
         'type' => 'setType',
         'category' => 'setCategory',
@@ -317,7 +312,6 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
         'isCompleted' => 'getIsCompleted',
         'initialDate' => 'getInitialDate',
         'description' => 'getDescription',
-        'internalNotes' => 'getInternalNotes',
         'location' => 'getLocation',
         'type' => 'getType',
         'category' => 'getCategory',
@@ -402,7 +396,6 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('isCompleted', $data ?? [], null);
         $this->setIfExists('initialDate', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
-        $this->setIfExists('internalNotes', $data ?? [], null);
         $this->setIfExists('location', $data ?? [], null);
         $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('category', $data ?? [], null);
@@ -716,33 +709,6 @@ class EventsEvent implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable description cannot be null');
         }
         $this->container['description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * Gets internalNotes
-     *
-     * @return string|null
-     */
-    public function getInternalNotes()
-    {
-        return $this->container['internalNotes'];
-    }
-
-    /**
-     * Sets internalNotes
-     *
-     * @param string|null $internalNotes Internal notes on the Event. Not synced on remote sources.
-     *
-     * @return self
-     */
-    public function setInternalNotes($internalNotes)
-    {
-        if (is_null($internalNotes)) {
-            throw new \InvalidArgumentException('non-nullable internalNotes cannot be null');
-        }
-        $this->container['internalNotes'] = $internalNotes;
 
         return $this;
     }
