@@ -192,7 +192,7 @@ Class | Method | HTTP request | Description
 *MovementApi* | [**addMovement**](docs/Api/MovementApi.md#addmovement) | **POST** /crm/api/v1/movements | Add a movement
 *MovementApi* | [**cancelMovement**](docs/Api/MovementApi.md#cancelmovement) | **POST** /crm/api/v1/movements/{movementId}/cancel | Cancel a movement.
 *MovementApi* | [**deleteMovement**](docs/Api/MovementApi.md#deletemovement) | **DELETE** /crm/api/v1/movements/{movementId} | Delete a movement.
-*MovementApi* | [**getExecutedMovementIdMapping**](docs/Api/MovementApi.md#getexecutedmovementidmapping) | **POST** /crm/api/v1/movements/executed/{executedMovementId}/idmapping | Get the mappings for id and uuid between the source and destination databases, for a given entity type
+*MovementApi* | [**getExecutedMovementIdMapping**](docs/Api/MovementApi.md#getexecutedmovementidmapping) | **POST** /crm/api/v1/movements/executed/{executedMovementId}/idMapping | Get the mappings for id and uuid between the source and destination databases, for a given entity type
 *MovementApi* | [**getExecutedMovementInfo**](docs/Api/MovementApi.md#getexecutedmovementinfo) | **GET** /crm/api/v1/movements/executed/{executedMovementId}/info | Get basic information about an executed movement
 *MovementApi* | [**getMovementStatistic**](docs/Api/MovementApi.md#getmovementstatistic) | **GET** /crm/api/v1/movements/statistic | Get movement statistic
 *MovementApi* | [**listMovements**](docs/Api/MovementApi.md#listmovements) | **GET** /crm/api/v1/movements | List all movements
