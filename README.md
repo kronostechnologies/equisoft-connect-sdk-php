@@ -184,7 +184,6 @@ Class | Method | HTTP request | Description
 *LegacyProvisioningApi* | [**legacyProvisioningGetGatewayArchiveListByDate**](docs/Api/LegacyProvisioningApi.md#legacyprovisioninggetgatewayarchivelistbydate) | **GET** /apps/provisioning/kronos.provisioning.getGatewayArchiveListByDate | Get the archives list for a given gateway at the given date.
 *LegacyProvisioningApi* | [**legacyProvisioningGetOrganizationStatus**](docs/Api/LegacyProvisioningApi.md#legacyprovisioninggetorganizationstatus) | **POST** /apps/provisioning/kronos.provisioning.getOrganizationStatus | Return the state of a given database.
 *LegacyProvisioningApi* | [**legacyProvisioningGetSyncControlDataForAllDatabaseStatus**](docs/Api/LegacyProvisioningApi.md#legacyprovisioninggetsynccontroldataforalldatabasestatus) | **GET** /apps/provisioning/kronos.provisioning.getSyncControlDataForAllDatabaseStatus | Get the progression status of a previous call to moveUserToOrganization.
-*LegacyProvisioningApi* | [**legacyProvisioningGetWebuserDatabaseListByValue**](docs/Api/LegacyProvisioningApi.md#legacyprovisioninggetwebuserdatabaselistbyvalue) | **GET** /apps/provisioning/kronos.provisioning.getWebuserDatabaseListByValue | Get a list of webuser&#39;s databases.
 *LegacyProvisioningApi* | [**legacyProvisioningMonitorDatagateways**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningmonitordatagateways) | **GET** /apps/provisioning/kronos.provisioning.monitorDatagateways | Monitor stats of the datagateways for a given environment.
 *LegacyProvisioningApi* | [**legacyProvisioningSyncControlData**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningsynccontroldata) | **POST** /apps/provisioning/kronos.provisioning.syncControlData | Sync one database pilotage.
 *LegacyProvisioningApi* | [**legacyProvisioningSyncControlDataForAllDatabase**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningsynccontroldataforalldatabase) | **POST** /apps/provisioning/kronos.provisioning.syncControlDataForAllDatabase | Use gearman to sync all database for a given profile.
@@ -405,7 +404,6 @@ Class | Method | HTTP request | Description
 - [LegacyProvisioningGetFileForGatewayArchiveByDateResponse](docs/Model/LegacyProvisioningGetFileForGatewayArchiveByDateResponse.md)
 - [LegacyProvisioningGetGatewayArchiveListByDateResponse](docs/Model/LegacyProvisioningGetGatewayArchiveListByDateResponse.md)
 - [LegacyProvisioningGetOrganizationStatusResponse](docs/Model/LegacyProvisioningGetOrganizationStatusResponse.md)
-- [LegacyProvisioningGetWebuserDatabaseListByValueResponse](docs/Model/LegacyProvisioningGetWebuserDatabaseListByValueResponse.md)
 - [LegacyProvisioningGroupItem](docs/Model/LegacyProvisioningGroupItem.md)
 - [LegacyProvisioningMonitorDatagatewayResponse](docs/Model/LegacyProvisioningMonitorDatagatewayResponse.md)
 - [LegacyProvisioningOrganizationPayload](docs/Model/LegacyProvisioningOrganizationPayload.md)
@@ -417,7 +415,6 @@ Class | Method | HTTP request | Description
 - [LegacyProvisioningUserItem](docs/Model/LegacyProvisioningUserItem.md)
 - [LegacyProvisioningUserPayload](docs/Model/LegacyProvisioningUserPayload.md)
 - [LegacyProvisioningUserPayloadRequest](docs/Model/LegacyProvisioningUserPayloadRequest.md)
-- [LegacyProvisioningWebuserDatabasePayload](docs/Model/LegacyProvisioningWebuserDatabasePayload.md)
 - [LegacyResponse](docs/Model/LegacyResponse.md)
 - [LegacySystemLinkedValue](docs/Model/LegacySystemLinkedValue.md)
 - [LegacyUser](docs/Model/LegacyUser.md)

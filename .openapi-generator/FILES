@@ -208,7 +208,6 @@ docs/Model/LegacyProvisioningGatewayArchivePayload.md
 docs/Model/LegacyProvisioningGetFileForGatewayArchiveByDateResponse.md
 docs/Model/LegacyProvisioningGetGatewayArchiveListByDateResponse.md
 docs/Model/LegacyProvisioningGetOrganizationStatusResponse.md
-docs/Model/LegacyProvisioningGetWebuserDatabaseListByValueResponse.md
 docs/Model/LegacyProvisioningGroupItem.md
 docs/Model/LegacyProvisioningMonitorDatagatewayResponse.md
 docs/Model/LegacyProvisioningOrganizationPayload.md
@@ -220,7 +219,6 @@ docs/Model/LegacyProvisioningUserIdentifier.md
 docs/Model/LegacyProvisioningUserItem.md
 docs/Model/LegacyProvisioningUserPayload.md
 docs/Model/LegacyProvisioningUserPayloadRequest.md
-docs/Model/LegacyProvisioningWebuserDatabasePayload.md
 docs/Model/LegacyResponse.md
 docs/Model/LegacySystemLinkedValue.md
 docs/Model/LegacyUser.md
@@ -480,7 +478,6 @@ lib/Model/LegacyProvisioningGatewayArchivePayload.php
 lib/Model/LegacyProvisioningGetFileForGatewayArchiveByDateResponse.php
 lib/Model/LegacyProvisioningGetGatewayArchiveListByDateResponse.php
 lib/Model/LegacyProvisioningGetOrganizationStatusResponse.php
-lib/Model/LegacyProvisioningGetWebuserDatabaseListByValueResponse.php
 lib/Model/LegacyProvisioningGroupItem.php
 lib/Model/LegacyProvisioningMonitorDatagatewayResponse.php
 lib/Model/LegacyProvisioningOrganizationPayload.php
@@ -492,7 +489,6 @@ lib/Model/LegacyProvisioningUserIdentifier.php
 lib/Model/LegacyProvisioningUserItem.php
 lib/Model/LegacyProvisioningUserPayload.php
 lib/Model/LegacyProvisioningUserPayloadRequest.php
-lib/Model/LegacyProvisioningWebuserDatabasePayload.php
 lib/Model/LegacyResponse.php
 lib/Model/LegacySystemLinkedValue.php
 lib/Model/LegacyUser.php
@@ -751,7 +747,6 @@ test/Model/LegacyProvisioningGatewayArchivePayloadTest.php
 test/Model/LegacyProvisioningGetFileForGatewayArchiveByDateResponseTest.php
 test/Model/LegacyProvisioningGetGatewayArchiveListByDateResponseTest.php
 test/Model/LegacyProvisioningGetOrganizationStatusResponseTest.php
-test/Model/LegacyProvisioningGetWebuserDatabaseListByValueResponseTest.php
 test/Model/LegacyProvisioningGroupItemTest.php
 test/Model/LegacyProvisioningMonitorDatagatewayResponseTest.php
 test/Model/LegacyProvisioningOrganizationPayloadRequestTest.php
@@ -763,7 +758,6 @@ test/Model/LegacyProvisioningUserIdentifierTest.php
 test/Model/LegacyProvisioningUserItemTest.php
 test/Model/LegacyProvisioningUserPayloadRequestTest.php
 test/Model/LegacyProvisioningUserPayloadTest.php
-test/Model/LegacyProvisioningWebuserDatabasePayloadTest.php
 test/Model/LegacyResponseTest.php
 test/Model/LegacySystemLinkedValueTest.php
 test/Model/LegacyUserTest.php

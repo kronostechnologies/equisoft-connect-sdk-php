@@ -240,18 +240,6 @@ class LegacyProvisioningApiTest extends TestCase
     }
 
     /**
-     * Test case for legacyProvisioningGetWebuserDatabaseListByValue
-     *
-     * Get a list of webuser's databases..
-     *
-     */
-    public function testLegacyProvisioningGetWebuserDatabaseListByValue()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for legacyProvisioningMonitorDatagateways
      *
      * Monitor stats of the datagateways for a given environment..

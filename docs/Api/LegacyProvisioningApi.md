@@ -18,7 +18,6 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 | [**legacyProvisioningGetGatewayArchiveListByDate()**](LegacyProvisioningApi.md#legacyProvisioningGetGatewayArchiveListByDate) | **GET** /apps/provisioning/kronos.provisioning.getGatewayArchiveListByDate | Get the archives list for a given gateway at the given date. |
 | [**legacyProvisioningGetOrganizationStatus()**](LegacyProvisioningApi.md#legacyProvisioningGetOrganizationStatus) | **POST** /apps/provisioning/kronos.provisioning.getOrganizationStatus | Return the state of a given database. |
 | [**legacyProvisioningGetSyncControlDataForAllDatabaseStatus()**](LegacyProvisioningApi.md#legacyProvisioningGetSyncControlDataForAllDatabaseStatus) | **GET** /apps/provisioning/kronos.provisioning.getSyncControlDataForAllDatabaseStatus | Get the progression status of a previous call to moveUserToOrganization. |
-| [**legacyProvisioningGetWebuserDatabaseListByValue()**](LegacyProvisioningApi.md#legacyProvisioningGetWebuserDatabaseListByValue) | **GET** /apps/provisioning/kronos.provisioning.getWebuserDatabaseListByValue | Get a list of webuser&#39;s databases. |
 | [**legacyProvisioningMonitorDatagateways()**](LegacyProvisioningApi.md#legacyProvisioningMonitorDatagateways) | **GET** /apps/provisioning/kronos.provisioning.monitorDatagateways | Monitor stats of the datagateways for a given environment. |
 | [**legacyProvisioningSyncControlData()**](LegacyProvisioningApi.md#legacyProvisioningSyncControlData) | **POST** /apps/provisioning/kronos.provisioning.syncControlData | Sync one database pilotage. |
 | [**legacyProvisioningSyncControlDataForAllDatabase()**](LegacyProvisioningApi.md#legacyProvisioningSyncControlDataForAllDatabase) | **POST** /apps/provisioning/kronos.provisioning.syncControlDataForAllDatabase | Use gearman to sync all database for a given profile. |
@@ -831,64 +830,6 @@ try {
 ### Return type
 
 [**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningSyncControlDataForAllDatabaseResponse**](../Model/LegacyProvisioningSyncControlDataForAllDatabaseResponse.md)
-
-### Authorization
-
-[OAuth2](../../README.md#OAuth2)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `legacyProvisioningGetWebuserDatabaseListByValue()`
-
-```php
-legacyProvisioningGetWebuserDatabaseListByValue($payload): \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetWebuserDatabaseListByValueResponse
-```
-
-Get a list of webuser's databases.
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure OAuth2 access token for authorization: OAuth2
-$config = Equisoft\SDK\EquisoftConnect\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\LegacyProvisioningApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$payload = new \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningWebuserDatabasePayload(); // LegacyProvisioningWebuserDatabasePayload | Legacy payload argument.
-
-try {
-    $result = $apiInstance->legacyProvisioningGetWebuserDatabaseListByValue($payload);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling LegacyProvisioningApi->legacyProvisioningGetWebuserDatabaseListByValue: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **payload** | [**LegacyProvisioningWebuserDatabasePayload**](../Model/.md)| Legacy payload argument. | |
-
-### Return type
-
-[**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGetWebuserDatabaseListByValueResponse**](../Model/LegacyProvisioningGetWebuserDatabaseListByValueResponse.md)
 
 ### Authorization
 
