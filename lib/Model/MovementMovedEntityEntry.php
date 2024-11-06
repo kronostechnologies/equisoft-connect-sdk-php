@@ -1,6 +1,6 @@
 <?php
 /**
- * MovementExecutedMovementInfoResponse
+ * MovementMovedEntityEntry
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * MovementExecutedMovementInfoResponse Class Doc Comment
+ * MovementMovedEntityEntry Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
@@ -40,7 +40,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAccess, \JsonSerializable
+class MovementMovedEntityEntry implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
       *
       * @var string
       */
-    protected static $openAPIModelName = 'movement.ExecutedMovementInfoResponse';
+    protected static $openAPIModelName = 'movement.MovedEntityEntry';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,12 +57,11 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $openAPITypes = [
-        'srcDbName' => 'string',
-        'srcDbUuid' => 'string',
-        'dstDbName' => 'string',
-        'dstDbUuid' => 'string',
-        'movementType' => 'string',
-        'users' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUserMap[]'
+        'srcUuid' => 'string',
+        'srcId' => 'int',
+        'dstUuid' => 'string',
+        'dstId' => 'int',
+        'children' => 'array<string,\Equisoft\SDK\EquisoftConnect\Model\MovementMovedEntityEntry[]>'
     ];
 
     /**
@@ -73,12 +72,11 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'srcDbName' => null,
-        'srcDbUuid' => null,
-        'dstDbName' => null,
-        'dstDbUuid' => null,
-        'movementType' => null,
-        'users' => null
+        'srcUuid' => null,
+        'srcId' => null,
+        'dstUuid' => null,
+        'dstId' => null,
+        'children' => null
     ];
 
     /**
@@ -87,12 +85,11 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'srcDbName' => false,
-        'srcDbUuid' => false,
-        'dstDbName' => false,
-        'dstDbUuid' => false,
-        'movementType' => false,
-        'users' => false
+        'srcUuid' => true,
+        'srcId' => false,
+        'dstUuid' => true,
+        'dstId' => false,
+        'children' => false
     ];
 
     /**
@@ -181,12 +178,11 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $attributeMap = [
-        'srcDbName' => 'srcDbName',
-        'srcDbUuid' => 'srcDbUuid',
-        'dstDbName' => 'dstDbName',
-        'dstDbUuid' => 'dstDbUuid',
-        'movementType' => 'movementType',
-        'users' => 'users'
+        'srcUuid' => 'srcUuid',
+        'srcId' => 'srcId',
+        'dstUuid' => 'dstUuid',
+        'dstId' => 'dstId',
+        'children' => 'children'
     ];
 
     /**
@@ -195,12 +191,11 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $setters = [
-        'srcDbName' => 'setSrcDbName',
-        'srcDbUuid' => 'setSrcDbUuid',
-        'dstDbName' => 'setDstDbName',
-        'dstDbUuid' => 'setDstDbUuid',
-        'movementType' => 'setMovementType',
-        'users' => 'setUsers'
+        'srcUuid' => 'setSrcUuid',
+        'srcId' => 'setSrcId',
+        'dstUuid' => 'setDstUuid',
+        'dstId' => 'setDstId',
+        'children' => 'setChildren'
     ];
 
     /**
@@ -209,12 +204,11 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $getters = [
-        'srcDbName' => 'getSrcDbName',
-        'srcDbUuid' => 'getSrcDbUuid',
-        'dstDbName' => 'getDstDbName',
-        'dstDbUuid' => 'getDstDbUuid',
-        'movementType' => 'getMovementType',
-        'users' => 'getUsers'
+        'srcUuid' => 'getSrcUuid',
+        'srcId' => 'getSrcId',
+        'dstUuid' => 'getDstUuid',
+        'dstId' => 'getDstId',
+        'children' => 'getChildren'
     ];
 
     /**
@@ -258,23 +252,6 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
         return self::$openAPIModelName;
     }
 
-    public const MOVEMENT_TYPE_MOVE = 'move';
-    public const MOVEMENT_TYPE_COPY = 'copy';
-    public const MOVEMENT_TYPE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getMovementTypeAllowableValues()
-    {
-        return [
-            self::MOVEMENT_TYPE_MOVE,
-            self::MOVEMENT_TYPE_COPY,
-            self::MOVEMENT_TYPE_UNKNOWN_DEFAULT_OPEN_API,
-        ];
-    }
 
     /**
      * Associative array for storing property values
@@ -291,12 +268,11 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('srcDbName', $data ?? [], null);
-        $this->setIfExists('srcDbUuid', $data ?? [], null);
-        $this->setIfExists('dstDbName', $data ?? [], null);
-        $this->setIfExists('dstDbUuid', $data ?? [], null);
-        $this->setIfExists('movementType', $data ?? [], null);
-        $this->setIfExists('users', $data ?? [], null);
+        $this->setIfExists('srcUuid', $data ?? [], null);
+        $this->setIfExists('srcId', $data ?? [], null);
+        $this->setIfExists('dstUuid', $data ?? [], null);
+        $this->setIfExists('dstId', $data ?? [], null);
+        $this->setIfExists('children', $data ?? [], null);
     }
 
     /**
@@ -326,15 +302,6 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
     {
         $invalidProperties = [];
 
-        $allowedValues = $this->getMovementTypeAllowableValues();
-        if (!is_null($this->container['movementType']) && !in_array($this->container['movementType'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'movementType', must be one of '%s'",
-                $this->container['movementType'],
-                implode("', '", $allowedValues)
-            );
-        }
-
         return $invalidProperties;
     }
 
@@ -351,173 +318,150 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
 
 
     /**
-     * Gets srcDbName
+     * Gets srcUuid
      *
      * @return string|null
      */
-    public function getSrcDbName()
+    public function getSrcUuid()
     {
-        return $this->container['srcDbName'];
+        return $this->container['srcUuid'];
     }
 
     /**
-     * Sets srcDbName
+     * Sets srcUuid
      *
-     * @param string|null $srcDbName Name of the source database (e.g. kronospf__bedrock).
+     * @param string|null $srcUuid Source DB Id
      *
      * @return self
      */
-    public function setSrcDbName($srcDbName)
+    public function setSrcUuid($srcUuid)
     {
-        if (is_null($srcDbName)) {
-            throw new \InvalidArgumentException('non-nullable srcDbName cannot be null');
+        if (is_null($srcUuid)) {
+            array_push($this->openAPINullablesSetToNull, 'srcUuid');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('srcUuid', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
-        $this->container['srcDbName'] = $srcDbName;
+        $this->container['srcUuid'] = $srcUuid;
 
         return $this;
     }
 
     /**
-     * Gets srcDbUuid
+     * Gets srcId
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getSrcDbUuid()
+    public function getSrcId()
     {
-        return $this->container['srcDbUuid'];
+        return $this->container['srcId'];
     }
 
     /**
-     * Sets srcDbUuid
+     * Sets srcId
      *
-     * @param string|null $srcDbUuid UUID the source database.
+     * @param int|null $srcId Source DB UUID
      *
      * @return self
      */
-    public function setSrcDbUuid($srcDbUuid)
+    public function setSrcId($srcId)
     {
-        if (is_null($srcDbUuid)) {
-            throw new \InvalidArgumentException('non-nullable srcDbUuid cannot be null');
+        if (is_null($srcId)) {
+            throw new \InvalidArgumentException('non-nullable srcId cannot be null');
         }
-        $this->container['srcDbUuid'] = $srcDbUuid;
+        $this->container['srcId'] = $srcId;
 
         return $this;
     }
 
     /**
-     * Gets dstDbName
+     * Gets dstUuid
      *
      * @return string|null
      */
-    public function getDstDbName()
+    public function getDstUuid()
     {
-        return $this->container['dstDbName'];
+        return $this->container['dstUuid'];
     }
 
     /**
-     * Sets dstDbName
+     * Sets dstUuid
      *
-     * @param string|null $dstDbName Name of the destination database.
+     * @param string|null $dstUuid Destination DB UUID
      *
      * @return self
      */
-    public function setDstDbName($dstDbName)
+    public function setDstUuid($dstUuid)
     {
-        if (is_null($dstDbName)) {
-            throw new \InvalidArgumentException('non-nullable dstDbName cannot be null');
+        if (is_null($dstUuid)) {
+            array_push($this->openAPINullablesSetToNull, 'dstUuid');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('dstUuid', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
-        $this->container['dstDbName'] = $dstDbName;
+        $this->container['dstUuid'] = $dstUuid;
 
         return $this;
     }
 
     /**
-     * Gets dstDbUuid
+     * Gets dstId
      *
-     * @return string|null
+     * @return int|null
      */
-    public function getDstDbUuid()
+    public function getDstId()
     {
-        return $this->container['dstDbUuid'];
+        return $this->container['dstId'];
     }
 
     /**
-     * Sets dstDbUuid
+     * Sets dstId
      *
-     * @param string|null $dstDbUuid UUID the destination database.
+     * @param int|null $dstId Destination DB Id
      *
      * @return self
      */
-    public function setDstDbUuid($dstDbUuid)
+    public function setDstId($dstId)
     {
-        if (is_null($dstDbUuid)) {
-            throw new \InvalidArgumentException('non-nullable dstDbUuid cannot be null');
+        if (is_null($dstId)) {
+            throw new \InvalidArgumentException('non-nullable dstId cannot be null');
         }
-        $this->container['dstDbUuid'] = $dstDbUuid;
+        $this->container['dstId'] = $dstId;
 
         return $this;
     }
 
     /**
-     * Gets movementType
+     * Gets children
      *
-     * @return string|null
+     * @return array<string,\Equisoft\SDK\EquisoftConnect\Model\MovementMovedEntityEntry[]>|null
      */
-    public function getMovementType()
+    public function getChildren()
     {
-        return $this->container['movementType'];
+        return $this->container['children'];
     }
 
     /**
-     * Sets movementType
+     * Sets children
      *
-     * @param string|null $movementType Type of movement (move, copy)
+     * @param array<string,\Equisoft\SDK\EquisoftConnect\Model\MovementMovedEntityEntry[]>|null $children List of entity, indexed by entity type
      *
      * @return self
      */
-    public function setMovementType($movementType)
+    public function setChildren($children)
     {
-        if (is_null($movementType)) {
-            throw new \InvalidArgumentException('non-nullable movementType cannot be null');
+        if (is_null($children)) {
+            throw new \InvalidArgumentException('non-nullable children cannot be null');
         }
-        $allowedValues = $this->getMovementTypeAllowableValues();
-        if (!in_array($movementType, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'movementType', must be one of '%s'",
-                    $movementType,
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
-        $this->container['movementType'] = $movementType;
-
-        return $this;
-    }
-
-    /**
-     * Gets users
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUserMap[]|null
-     */
-    public function getUsers()
-    {
-        return $this->container['users'];
-    }
-
-    /**
-     * Sets users
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUserMap[]|null $users Moved webusers
-     *
-     * @return self
-     */
-    public function setUsers($users)
-    {
-        if (is_null($users)) {
-            throw new \InvalidArgumentException('non-nullable users cannot be null');
-        }
-        $this->container['users'] = $users;
+        $this->container['children'] = $children;
 
         return $this;
     }

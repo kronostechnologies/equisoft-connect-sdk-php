@@ -1,6 +1,6 @@
 <?php
 /**
- * MovementExecutedMovementInfoResponseTest
+ * MovementIdMappingRequestTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * MovementExecutedMovementInfoResponseTest Class Doc Comment
+ * MovementIdMappingRequestTest Class Doc Comment
  *
  * @category    Class
- * @description MovementExecutedMovementInfoResponse
+ * @description MovementIdMappingRequest
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class MovementExecutedMovementInfoResponseTest extends TestCase
+class MovementIdMappingRequestTest extends TestCase
 {
 
     /**
@@ -71,63 +71,27 @@ class MovementExecutedMovementInfoResponseTest extends TestCase
     }
 
     /**
-     * Test "MovementExecutedMovementInfoResponse"
+     * Test "MovementIdMappingRequest"
      */
-    public function testMovementExecutedMovementInfoResponse()
+    public function testMovementIdMappingRequest()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "srcDbName"
+     * Test attribute "entity"
      */
-    public function testPropertySrcDbName()
+    public function testPropertyEntity()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "srcDbUuid"
+     * Test attribute "uuids"
      */
-    public function testPropertySrcDbUuid()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "dstDbName"
-     */
-    public function testPropertyDstDbName()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "dstDbUuid"
-     */
-    public function testPropertyDstDbUuid()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "movementType"
-     */
-    public function testPropertyMovementType()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "users"
-     */
-    public function testPropertyUsers()
+    public function testPropertyUuids()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

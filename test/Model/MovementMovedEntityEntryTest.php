@@ -1,6 +1,6 @@
 <?php
 /**
- * MovementExecutedMovementInfoResponseTest
+ * MovementMovedEntityEntryTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * MovementExecutedMovementInfoResponseTest Class Doc Comment
+ * MovementMovedEntityEntryTest Class Doc Comment
  *
  * @category    Class
- * @description MovementExecutedMovementInfoResponse
+ * @description MovementMovedEntityEntry
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class MovementExecutedMovementInfoResponseTest extends TestCase
+class MovementMovedEntityEntryTest extends TestCase
 {
 
     /**
@@ -71,63 +71,54 @@ class MovementExecutedMovementInfoResponseTest extends TestCase
     }
 
     /**
-     * Test "MovementExecutedMovementInfoResponse"
+     * Test "MovementMovedEntityEntry"
      */
-    public function testMovementExecutedMovementInfoResponse()
+    public function testMovementMovedEntityEntry()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "srcDbName"
+     * Test attribute "srcUuid"
      */
-    public function testPropertySrcDbName()
+    public function testPropertySrcUuid()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "srcDbUuid"
+     * Test attribute "srcId"
      */
-    public function testPropertySrcDbUuid()
+    public function testPropertySrcId()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "dstDbName"
+     * Test attribute "dstUuid"
      */
-    public function testPropertyDstDbName()
+    public function testPropertyDstUuid()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "dstDbUuid"
+     * Test attribute "dstId"
      */
-    public function testPropertyDstDbUuid()
+    public function testPropertyDstId()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "movementType"
+     * Test attribute "children"
      */
-    public function testPropertyMovementType()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "users"
-     */
-    public function testPropertyUsers()
+    public function testPropertyChildren()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
