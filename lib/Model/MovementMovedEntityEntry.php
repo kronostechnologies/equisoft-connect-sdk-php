@@ -61,6 +61,7 @@ class MovementMovedEntityEntry implements ModelInterface, ArrayAccess, \JsonSeri
         'srcId' => 'int',
         'dstUuid' => 'string',
         'dstId' => 'int',
+        'movementType' => 'string',
         'children' => 'array<string,\Equisoft\SDK\EquisoftConnect\Model\MovementMovedEntityEntry[]>'
     ];
 
@@ -76,6 +77,7 @@ class MovementMovedEntityEntry implements ModelInterface, ArrayAccess, \JsonSeri
         'srcId' => null,
         'dstUuid' => null,
         'dstId' => null,
+        'movementType' => null,
         'children' => null
     ];
 
@@ -89,6 +91,7 @@ class MovementMovedEntityEntry implements ModelInterface, ArrayAccess, \JsonSeri
         'srcId' => false,
         'dstUuid' => true,
         'dstId' => false,
+        'movementType' => true,
         'children' => false
     ];
 
@@ -182,6 +185,7 @@ class MovementMovedEntityEntry implements ModelInterface, ArrayAccess, \JsonSeri
         'srcId' => 'srcId',
         'dstUuid' => 'dstUuid',
         'dstId' => 'dstId',
+        'movementType' => 'movementType',
         'children' => 'children'
     ];
 
@@ -195,6 +199,7 @@ class MovementMovedEntityEntry implements ModelInterface, ArrayAccess, \JsonSeri
         'srcId' => 'setSrcId',
         'dstUuid' => 'setDstUuid',
         'dstId' => 'setDstId',
+        'movementType' => 'setMovementType',
         'children' => 'setChildren'
     ];
 
@@ -208,6 +213,7 @@ class MovementMovedEntityEntry implements ModelInterface, ArrayAccess, \JsonSeri
         'srcId' => 'getSrcId',
         'dstUuid' => 'getDstUuid',
         'dstId' => 'getDstId',
+        'movementType' => 'getMovementType',
         'children' => 'getChildren'
     ];
 
@@ -252,6 +258,23 @@ class MovementMovedEntityEntry implements ModelInterface, ArrayAccess, \JsonSeri
         return self::$openAPIModelName;
     }
 
+    public const MOVEMENT_TYPE_MOVE = 'move';
+    public const MOVEMENT_TYPE_COPY = 'copy';
+    public const MOVEMENT_TYPE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public function getMovementTypeAllowableValues()
+    {
+        return [
+            self::MOVEMENT_TYPE_MOVE,
+            self::MOVEMENT_TYPE_COPY,
+            self::MOVEMENT_TYPE_UNKNOWN_DEFAULT_OPEN_API,
+        ];
+    }
 
     /**
      * Associative array for storing property values
@@ -272,6 +295,7 @@ class MovementMovedEntityEntry implements ModelInterface, ArrayAccess, \JsonSeri
         $this->setIfExists('srcId', $data ?? [], null);
         $this->setIfExists('dstUuid', $data ?? [], null);
         $this->setIfExists('dstId', $data ?? [], null);
+        $this->setIfExists('movementType', $data ?? [], null);
         $this->setIfExists('children', $data ?? [], null);
     }
 
@@ -301,6 +325,15 @@ class MovementMovedEntityEntry implements ModelInterface, ArrayAccess, \JsonSeri
     public function listInvalidProperties()
     {
         $invalidProperties = [];
+
+        $allowedValues = $this->getMovementTypeAllowableValues();
+        if (!is_null($this->container['movementType']) && !in_array($this->container['movementType'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'movementType', must be one of '%s'",
+                $this->container['movementType'],
+                implode("', '", $allowedValues)
+            );
+        }
 
         return $invalidProperties;
     }
@@ -435,6 +468,50 @@ class MovementMovedEntityEntry implements ModelInterface, ArrayAccess, \JsonSeri
             throw new \InvalidArgumentException('non-nullable dstId cannot be null');
         }
         $this->container['dstId'] = $dstId;
+
+        return $this;
+    }
+
+    /**
+     * Gets movementType
+     *
+     * @return string|null
+     */
+    public function getMovementType()
+    {
+        return $this->container['movementType'];
+    }
+
+    /**
+     * Sets movementType
+     *
+     * @param string|null $movementType Type of movement (move, copy)
+     *
+     * @return self
+     */
+    public function setMovementType($movementType)
+    {
+        if (is_null($movementType)) {
+            array_push($this->openAPINullablesSetToNull, 'movementType');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('movementType', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $allowedValues = $this->getMovementTypeAllowableValues();
+        if (!is_null($movementType) && !in_array($movementType, $allowedValues, true)) {
+            throw new \InvalidArgumentException(
+                sprintf(
+                    "Invalid value '%s' for 'movementType', must be one of '%s'",
+                    $movementType,
+                    implode("', '", $allowedValues)
+                )
+            );
+        }
+        $this->container['movementType'] = $movementType;
 
         return $this;
     }
