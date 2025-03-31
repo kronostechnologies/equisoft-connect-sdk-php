@@ -150,4 +150,13 @@ class KronosFinanceJobTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "years"
+     */
+    public function testPropertyYears()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
 }

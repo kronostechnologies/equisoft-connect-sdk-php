@@ -64,7 +64,8 @@ class KronosFinanceJob implements ModelInterface, ArrayAccess, \JsonSerializable
         'activityDomain' => 'string',
         'employer' => 'string',
         'annualIncome' => 'string',
-        'address' => 'string'
+        'address' => 'string',
+        'years' => 'string'
     ];
 
     /**
@@ -82,7 +83,8 @@ class KronosFinanceJob implements ModelInterface, ArrayAccess, \JsonSerializable
         'activityDomain' => null,
         'employer' => null,
         'annualIncome' => null,
-        'address' => null
+        'address' => null,
+        'years' => null
     ];
 
     /**
@@ -98,7 +100,8 @@ class KronosFinanceJob implements ModelInterface, ArrayAccess, \JsonSerializable
         'activityDomain' => false,
         'employer' => false,
         'annualIncome' => false,
-        'address' => false
+        'address' => false,
+        'years' => false
     ];
 
     /**
@@ -194,7 +197,8 @@ class KronosFinanceJob implements ModelInterface, ArrayAccess, \JsonSerializable
         'activityDomain' => 'activityDomain',
         'employer' => 'employer',
         'annualIncome' => 'annualIncome',
-        'address' => 'address'
+        'address' => 'address',
+        'years' => 'years'
     ];
 
     /**
@@ -210,7 +214,8 @@ class KronosFinanceJob implements ModelInterface, ArrayAccess, \JsonSerializable
         'activityDomain' => 'setActivityDomain',
         'employer' => 'setEmployer',
         'annualIncome' => 'setAnnualIncome',
-        'address' => 'setAddress'
+        'address' => 'setAddress',
+        'years' => 'setYears'
     ];
 
     /**
@@ -226,7 +231,8 @@ class KronosFinanceJob implements ModelInterface, ArrayAccess, \JsonSerializable
         'activityDomain' => 'getActivityDomain',
         'employer' => 'getEmployer',
         'annualIncome' => 'getAnnualIncome',
-        'address' => 'getAddress'
+        'address' => 'getAddress',
+        'years' => 'getYears'
     ];
 
     /**
@@ -294,6 +300,7 @@ class KronosFinanceJob implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('employer', $data ?? [], null);
         $this->setIfExists('annualIncome', $data ?? [], null);
         $this->setIfExists('address', $data ?? [], null);
+        $this->setIfExists('years', $data ?? [], null);
     }
 
     /**
@@ -550,6 +557,33 @@ class KronosFinanceJob implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable address cannot be null');
         }
         $this->container['address'] = $address;
+
+        return $this;
+    }
+
+    /**
+     * Gets years
+     *
+     * @return string|null
+     */
+    public function getYears()
+    {
+        return $this->container['years'];
+    }
+
+    /**
+     * Sets years
+     *
+     * @param string|null $years Year
+     *
+     * @return self
+     */
+    public function setYears($years)
+    {
+        if (is_null($years)) {
+            throw new \InvalidArgumentException('non-nullable years cannot be null');
+        }
+        $this->container['years'] = $years;
 
         return $this;
     }

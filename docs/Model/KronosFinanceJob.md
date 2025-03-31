@@ -12,5 +12,6 @@ Name | Type | Description | Notes
 **employer** | **string** | Employer name. | [optional]
 **annualIncome** | **string** | Annual income. | [optional]
 **address** | **string** | Employer address. | [optional]
+**years** | **string** | Year | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
