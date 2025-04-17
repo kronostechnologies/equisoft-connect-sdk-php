@@ -244,8 +244,6 @@ docs/Model/MovementMovementPayload.md
 docs/Model/MovementMovementStatisticResponse.md
 docs/Model/MovementMovementType.md
 docs/Model/MovementOptions.md
-docs/Model/MovementReassignmentMovement.md
-docs/Model/MovementReassignmentMovementPayload.md
 docs/Model/MovementTransferOption.md
 docs/Model/MovementUser.md
 docs/Model/MovementUserMap.md
@@ -519,8 +517,6 @@ lib/Model/MovementMovementPayload.php
 lib/Model/MovementMovementStatisticResponse.php
 lib/Model/MovementMovementType.php
 lib/Model/MovementOptions.php
-lib/Model/MovementReassignmentMovement.php
-lib/Model/MovementReassignmentMovementPayload.php
 lib/Model/MovementTransferOption.php
 lib/Model/MovementUser.php
 lib/Model/MovementUserMap.php
@@ -791,8 +787,6 @@ test/Model/MovementMovementStatisticResponseTest.php
 test/Model/MovementMovementTest.php
 test/Model/MovementMovementTypeTest.php
 test/Model/MovementOptionsTest.php
-test/Model/MovementReassignmentMovementPayloadTest.php
-test/Model/MovementReassignmentMovementTest.php
 test/Model/MovementTransferOptionTest.php
 test/Model/MovementUserMapTest.php
 test/Model/MovementUserTest.php

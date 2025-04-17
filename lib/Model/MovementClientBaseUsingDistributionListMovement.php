@@ -72,7 +72,6 @@ class MovementClientBaseUsingDistributionListMovement implements ModelInterface,
         'sourceDistributionList' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDistributionList',
         'destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
         'destinationUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
-        'datagatewayAccessMappings' => 'array<string,string>',
         'transferOption' => '\Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption'
     ];
 
@@ -99,7 +98,6 @@ class MovementClientBaseUsingDistributionListMovement implements ModelInterface,
         'sourceDistributionList' => null,
         'destinationDatabase' => null,
         'destinationUser' => null,
-        'datagatewayAccessMappings' => null,
         'transferOption' => null
     ];
 
@@ -124,7 +122,6 @@ class MovementClientBaseUsingDistributionListMovement implements ModelInterface,
         'sourceDistributionList' => false,
         'destinationDatabase' => false,
         'destinationUser' => false,
-        'datagatewayAccessMappings' => false,
         'transferOption' => false
     ];
 
@@ -229,7 +226,6 @@ class MovementClientBaseUsingDistributionListMovement implements ModelInterface,
         'sourceDistributionList' => 'sourceDistributionList',
         'destinationDatabase' => 'destinationDatabase',
         'destinationUser' => 'destinationUser',
-        'datagatewayAccessMappings' => 'datagatewayAccessMappings',
         'transferOption' => 'transferOption'
     ];
 
@@ -254,7 +250,6 @@ class MovementClientBaseUsingDistributionListMovement implements ModelInterface,
         'sourceDistributionList' => 'setSourceDistributionList',
         'destinationDatabase' => 'setDestinationDatabase',
         'destinationUser' => 'setDestinationUser',
-        'datagatewayAccessMappings' => 'setDatagatewayAccessMappings',
         'transferOption' => 'setTransferOption'
     ];
 
@@ -279,7 +274,6 @@ class MovementClientBaseUsingDistributionListMovement implements ModelInterface,
         'sourceDistributionList' => 'getSourceDistributionList',
         'destinationDatabase' => 'getDestinationDatabase',
         'destinationUser' => 'getDestinationUser',
-        'datagatewayAccessMappings' => 'getDatagatewayAccessMappings',
         'transferOption' => 'getTransferOption'
     ];
 
@@ -355,7 +349,6 @@ class MovementClientBaseUsingDistributionListMovement implements ModelInterface,
         $this->setIfExists('sourceDistributionList', $data ?? [], null);
         $this->setIfExists('destinationDatabase', $data ?? [], null);
         $this->setIfExists('destinationUser', $data ?? [], null);
-        $this->setIfExists('datagatewayAccessMappings', $data ?? [], null);
         $this->setIfExists('transferOption', $data ?? [], null);
     }
 
@@ -862,33 +855,6 @@ class MovementClientBaseUsingDistributionListMovement implements ModelInterface,
             throw new \InvalidArgumentException('non-nullable destinationUser cannot be null');
         }
         $this->container['destinationUser'] = $destinationUser;
-
-        return $this;
-    }
-
-    /**
-     * Gets datagatewayAccessMappings
-     *
-     * @return array<string,string>|null
-     */
-    public function getDatagatewayAccessMappings()
-    {
-        return $this->container['datagatewayAccessMappings'];
-    }
-
-    /**
-     * Sets datagatewayAccessMappings
-     *
-     * @param array<string,string>|null $datagatewayAccessMappings Data gateway access mapping.
-     *
-     * @return self
-     */
-    public function setDatagatewayAccessMappings($datagatewayAccessMappings)
-    {
-        if (is_null($datagatewayAccessMappings)) {
-            throw new \InvalidArgumentException('non-nullable datagatewayAccessMappings cannot be null');
-        }
-        $this->container['datagatewayAccessMappings'] = $datagatewayAccessMappings;
 
         return $this;
     }

@@ -215,24 +215,6 @@ class MovementMovementTest extends TestCase
     }
 
     /**
-     * Test attribute "destinationUser"
-     */
-    public function testPropertyDestinationUser()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "accessCode"
-     */
-    public function testPropertyAccessCode()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "sourceDistributionList"
      */
     public function testPropertySourceDistributionList()
@@ -242,9 +224,9 @@ class MovementMovementTest extends TestCase
     }
 
     /**
-     * Test attribute "datagatewayAccessMappings"
+     * Test attribute "destinationUser"
      */
-    public function testPropertyDatagatewayAccessMappings()
+    public function testPropertyDestinationUser()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

@@ -215,15 +215,6 @@ class MovementClientBaseUsingDistributionListMovementTest extends TestCase
     }
 
     /**
-     * Test attribute "datagatewayAccessMappings"
-     */
-    public function testPropertyDatagatewayAccessMappings()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "transferOption"
      */
     public function testPropertyTransferOption()

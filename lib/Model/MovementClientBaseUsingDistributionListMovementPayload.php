@@ -64,7 +64,6 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
         'sourceDistributionList' => 'string',
         'destinationDatabase' => 'string',
         'destinationUser' => 'string',
-        'datagatewayAccessMappings' => 'array<string,string>',
         'transferOption' => 'string'
     ];
 
@@ -83,7 +82,6 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
         'sourceDistributionList' => null,
         'destinationDatabase' => null,
         'destinationUser' => null,
-        'datagatewayAccessMappings' => null,
         'transferOption' => null
     ];
 
@@ -100,7 +98,6 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
         'sourceDistributionList' => false,
         'destinationDatabase' => false,
         'destinationUser' => false,
-        'datagatewayAccessMappings' => false,
         'transferOption' => true
     ];
 
@@ -197,7 +194,6 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
         'sourceDistributionList' => 'sourceDistributionList',
         'destinationDatabase' => 'destinationDatabase',
         'destinationUser' => 'destinationUser',
-        'datagatewayAccessMappings' => 'datagatewayAccessMappings',
         'transferOption' => 'transferOption'
     ];
 
@@ -214,7 +210,6 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
         'sourceDistributionList' => 'setSourceDistributionList',
         'destinationDatabase' => 'setDestinationDatabase',
         'destinationUser' => 'setDestinationUser',
-        'datagatewayAccessMappings' => 'setDatagatewayAccessMappings',
         'transferOption' => 'setTransferOption'
     ];
 
@@ -231,7 +226,6 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
         'sourceDistributionList' => 'getSourceDistributionList',
         'destinationDatabase' => 'getDestinationDatabase',
         'destinationUser' => 'getDestinationUser',
-        'datagatewayAccessMappings' => 'getDatagatewayAccessMappings',
         'transferOption' => 'getTransferOption'
     ];
 
@@ -316,7 +310,6 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
         $this->setIfExists('sourceDistributionList', $data ?? [], null);
         $this->setIfExists('destinationDatabase', $data ?? [], null);
         $this->setIfExists('destinationUser', $data ?? [], null);
-        $this->setIfExists('datagatewayAccessMappings', $data ?? [], null);
         $this->setIfExists('transferOption', $data ?? [], null);
     }
 
@@ -574,33 +567,6 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
             throw new \InvalidArgumentException('non-nullable destinationUser cannot be null');
         }
         $this->container['destinationUser'] = $destinationUser;
-
-        return $this;
-    }
-
-    /**
-     * Gets datagatewayAccessMappings
-     *
-     * @return array<string,string>|null
-     */
-    public function getDatagatewayAccessMappings()
-    {
-        return $this->container['datagatewayAccessMappings'];
-    }
-
-    /**
-     * Sets datagatewayAccessMappings
-     *
-     * @param array<string,string>|null $datagatewayAccessMappings Data gateway access mapping.
-     *
-     * @return self
-     */
-    public function setDatagatewayAccessMappings($datagatewayAccessMappings)
-    {
-        if (is_null($datagatewayAccessMappings)) {
-            throw new \InvalidArgumentException('non-nullable datagatewayAccessMappings cannot be null');
-        }
-        $this->container['datagatewayAccessMappings'] = $datagatewayAccessMappings;
 
         return $this;
     }
