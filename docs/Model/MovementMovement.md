@@ -19,10 +19,8 @@ Name | Type | Description | Notes
 **users** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementUser[]**](MovementUser.md) | List of users. |
 **userTuples** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementUserTuple[]**](MovementUserTuple.md) | List of user tuples. |
 **sourceUser** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementUser**](MovementUser.md) |  |
-**destinationUser** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementUser**](MovementUser.md) |  |
-**accessCode** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementGatewayAccessCode**](MovementGatewayAccessCode.md) |  |
 **sourceDistributionList** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementDistributionList**](MovementDistributionList.md) |  | [optional]
-**datagatewayAccessMappings** | **array<string,string>** | Data gateway access mapping. | [optional]
+**destinationUser** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementUser**](MovementUser.md) |  |
 **transferOption** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption**](MovementTransferOption.md) |  |
 **capsil** | **bool** | Is Capsil. | [optional]
 **univeris** | **bool** | Is Univeris. Deprecated: Univeris is not supported anymore and will be removed from future versions). | [optional]

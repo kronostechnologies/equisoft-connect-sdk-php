@@ -47,8 +47,6 @@ class MovementMovementType
 
     public const COPY = 'COPY';
 
-    public const REASSIGNMENT = 'REASSIGNMENT';
-
     public const CLIENTBASE_USING_FILE = 'CLIENTBASE_USING_FILE';
 
     public const CLIENTBASE_USING_DISTLIST = 'CLIENTBASE_USING_DISTLIST';
@@ -64,7 +62,6 @@ class MovementMovementType
         return [
             self::MOVE,
             self::COPY,
-            self::REASSIGNMENT,
             self::CLIENTBASE_USING_FILE,
             self::CLIENTBASE_USING_DISTLIST,
             self::UNKNOWN_DEFAULT_OPEN_API

@@ -48,7 +48,6 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
         "CLIENTBASE_USING_FILE" => "MovementClientBaseUsingFileMovement",
         "COPY" => "MovementCopyMovement",
         "MOVE" => "MovementMoveMovement",
-        "REASSIGNMENT" => "MovementReassignmentMovement",
     ];
 
     /**
@@ -79,10 +78,8 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
         'users' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser[]',
         'userTuples' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUserTuple[]',
         'sourceUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
-        'destinationUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
-        'accessCode' => '\Equisoft\SDK\EquisoftConnect\Model\MovementGatewayAccessCode',
         'sourceDistributionList' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDistributionList',
-        'datagatewayAccessMappings' => 'array<string,string>',
+        'destinationUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
         'transferOption' => '\Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption',
         'capsil' => 'bool',
         'univeris' => 'bool',
@@ -112,10 +109,8 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
         'users' => null,
         'userTuples' => null,
         'sourceUser' => null,
-        'destinationUser' => null,
-        'accessCode' => null,
         'sourceDistributionList' => null,
-        'datagatewayAccessMappings' => null,
+        'destinationUser' => null,
         'transferOption' => null,
         'capsil' => null,
         'univeris' => null,
@@ -143,10 +138,8 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
         'users' => false,
         'userTuples' => false,
         'sourceUser' => false,
-        'destinationUser' => false,
-        'accessCode' => false,
         'sourceDistributionList' => false,
-        'datagatewayAccessMappings' => false,
+        'destinationUser' => false,
         'transferOption' => false,
         'capsil' => false,
         'univeris' => false,
@@ -254,10 +247,8 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
         'users' => 'users',
         'userTuples' => 'userTuples',
         'sourceUser' => 'sourceUser',
-        'destinationUser' => 'destinationUser',
-        'accessCode' => 'accessCode',
         'sourceDistributionList' => 'sourceDistributionList',
-        'datagatewayAccessMappings' => 'datagatewayAccessMappings',
+        'destinationUser' => 'destinationUser',
         'transferOption' => 'transferOption',
         'capsil' => 'capsil',
         'univeris' => 'univeris',
@@ -285,10 +276,8 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
         'users' => 'setUsers',
         'userTuples' => 'setUserTuples',
         'sourceUser' => 'setSourceUser',
-        'destinationUser' => 'setDestinationUser',
-        'accessCode' => 'setAccessCode',
         'sourceDistributionList' => 'setSourceDistributionList',
-        'datagatewayAccessMappings' => 'setDatagatewayAccessMappings',
+        'destinationUser' => 'setDestinationUser',
         'transferOption' => 'setTransferOption',
         'capsil' => 'setCapsil',
         'univeris' => 'setUniveris',
@@ -316,10 +305,8 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
         'users' => 'getUsers',
         'userTuples' => 'getUserTuples',
         'sourceUser' => 'getSourceUser',
-        'destinationUser' => 'getDestinationUser',
-        'accessCode' => 'getAccessCode',
         'sourceDistributionList' => 'getSourceDistributionList',
-        'datagatewayAccessMappings' => 'getDatagatewayAccessMappings',
+        'destinationUser' => 'getDestinationUser',
         'transferOption' => 'getTransferOption',
         'capsil' => 'getCapsil',
         'univeris' => 'getUniveris',
@@ -398,10 +385,8 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('users', $data ?? [], null);
         $this->setIfExists('userTuples', $data ?? [], null);
         $this->setIfExists('sourceUser', $data ?? [], null);
-        $this->setIfExists('destinationUser', $data ?? [], null);
-        $this->setIfExists('accessCode', $data ?? [], null);
         $this->setIfExists('sourceDistributionList', $data ?? [], null);
-        $this->setIfExists('datagatewayAccessMappings', $data ?? [], null);
+        $this->setIfExists('destinationUser', $data ?? [], null);
         $this->setIfExists('transferOption', $data ?? [], null);
         $this->setIfExists('capsil', $data ?? [], null);
         $this->setIfExists('univeris', $data ?? [], null);
@@ -455,9 +440,6 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
         }
         if ($this->container['destinationUser'] === null) {
             $invalidProperties[] = "'destinationUser' can't be null";
-        }
-        if ($this->container['accessCode'] === null) {
-            $invalidProperties[] = "'accessCode' can't be null";
         }
         if ($this->container['transferOption'] === null) {
             $invalidProperties[] = "'transferOption' can't be null";
@@ -925,60 +907,6 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets destinationUser
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser
-     */
-    public function getDestinationUser()
-    {
-        return $this->container['destinationUser'];
-    }
-
-    /**
-     * Sets destinationUser
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser $destinationUser destinationUser
-     *
-     * @return self
-     */
-    public function setDestinationUser($destinationUser)
-    {
-        if (is_null($destinationUser)) {
-            throw new \InvalidArgumentException('non-nullable destinationUser cannot be null');
-        }
-        $this->container['destinationUser'] = $destinationUser;
-
-        return $this;
-    }
-
-    /**
-     * Gets accessCode
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementGatewayAccessCode
-     */
-    public function getAccessCode()
-    {
-        return $this->container['accessCode'];
-    }
-
-    /**
-     * Sets accessCode
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementGatewayAccessCode $accessCode accessCode
-     *
-     * @return self
-     */
-    public function setAccessCode($accessCode)
-    {
-        if (is_null($accessCode)) {
-            throw new \InvalidArgumentException('non-nullable accessCode cannot be null');
-        }
-        $this->container['accessCode'] = $accessCode;
-
-        return $this;
-    }
-
-    /**
      * Gets sourceDistributionList
      *
      * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDistributionList|null
@@ -1006,28 +934,28 @@ class MovementMovement implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets datagatewayAccessMappings
+     * Gets destinationUser
      *
-     * @return array<string,string>|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser
      */
-    public function getDatagatewayAccessMappings()
+    public function getDestinationUser()
     {
-        return $this->container['datagatewayAccessMappings'];
+        return $this->container['destinationUser'];
     }
 
     /**
-     * Sets datagatewayAccessMappings
+     * Sets destinationUser
      *
-     * @param array<string,string>|null $datagatewayAccessMappings Data gateway access mapping.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser $destinationUser destinationUser
      *
      * @return self
      */
-    public function setDatagatewayAccessMappings($datagatewayAccessMappings)
+    public function setDestinationUser($destinationUser)
     {
-        if (is_null($datagatewayAccessMappings)) {
-            throw new \InvalidArgumentException('non-nullable datagatewayAccessMappings cannot be null');
+        if (is_null($destinationUser)) {
+            throw new \InvalidArgumentException('non-nullable destinationUser cannot be null');
         }
-        $this->container['datagatewayAccessMappings'] = $datagatewayAccessMappings;
+        $this->container['destinationUser'] = $destinationUser;
 
         return $this;
     }

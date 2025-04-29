@@ -441,8 +441,6 @@ Class | Method | HTTP request | Description
 - [MovementMovementStatisticResponse](docs/Model/MovementMovementStatisticResponse.md)
 - [MovementMovementType](docs/Model/MovementMovementType.md)
 - [MovementOptions](docs/Model/MovementOptions.md)
-- [MovementReassignmentMovement](docs/Model/MovementReassignmentMovement.md)
-- [MovementReassignmentMovementPayload](docs/Model/MovementReassignmentMovementPayload.md)
 - [MovementTransferOption](docs/Model/MovementTransferOption.md)
 - [MovementUser](docs/Model/MovementUser.md)
 - [MovementUserMap](docs/Model/MovementUserMap.md)

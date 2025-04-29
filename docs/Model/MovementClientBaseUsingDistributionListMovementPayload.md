@@ -11,7 +11,6 @@ Name | Type | Description | Notes
 **sourceDistributionList** | **string** | Source distribution list. | [optional]
 **destinationDatabase** | **string** | Destination database full name. |
 **destinationUser** | **string** | Destination user id. |
-**datagatewayAccessMappings** | **array<string,string>** | Data gateway access mapping. | [optional]
 **transferOption** | **string** | Transfer option. |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

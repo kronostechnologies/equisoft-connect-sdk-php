@@ -48,7 +48,6 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
         "CLIENTBASE_USING_FILE" => "MovementClientBaseUsingFileMovementPayload",
         "COPY" => "MovementCopyMovementPayload",
         "MOVE" => "MovementMoveMovementPayload",
-        "REASSIGNMENT" => "MovementReassignmentMovementPayload",
     ];
 
     /**
@@ -72,10 +71,8 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
         'options' => '\Equisoft\SDK\EquisoftConnect\Model\MovementOptions',
         'userTuples' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUserTuplePayload[]',
         'sourceUser' => 'string',
-        'destinationUser' => 'string',
-        'accessCode' => 'string',
         'sourceDistributionList' => 'string',
-        'datagatewayAccessMappings' => 'array<string,string>',
+        'destinationUser' => 'string',
         'transferOption' => 'string',
         'capsilFile' => 'string',
         'univerisFile' => 'string',
@@ -98,10 +95,8 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
         'options' => null,
         'userTuples' => null,
         'sourceUser' => null,
-        'destinationUser' => null,
-        'accessCode' => null,
         'sourceDistributionList' => null,
-        'datagatewayAccessMappings' => null,
+        'destinationUser' => null,
         'transferOption' => null,
         'capsilFile' => null,
         'univerisFile' => null,
@@ -122,10 +117,8 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
         'options' => false,
         'userTuples' => false,
         'sourceUser' => false,
-        'destinationUser' => false,
-        'accessCode' => false,
         'sourceDistributionList' => false,
-        'datagatewayAccessMappings' => false,
+        'destinationUser' => false,
         'transferOption' => true,
         'capsilFile' => true,
         'univerisFile' => true,
@@ -226,10 +219,8 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
         'options' => 'options',
         'userTuples' => 'userTuples',
         'sourceUser' => 'sourceUser',
-        'destinationUser' => 'destinationUser',
-        'accessCode' => 'accessCode',
         'sourceDistributionList' => 'sourceDistributionList',
-        'datagatewayAccessMappings' => 'datagatewayAccessMappings',
+        'destinationUser' => 'destinationUser',
         'transferOption' => 'transferOption',
         'capsilFile' => 'capsilFile',
         'univerisFile' => 'univerisFile',
@@ -250,10 +241,8 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
         'options' => 'setOptions',
         'userTuples' => 'setUserTuples',
         'sourceUser' => 'setSourceUser',
-        'destinationUser' => 'setDestinationUser',
-        'accessCode' => 'setAccessCode',
         'sourceDistributionList' => 'setSourceDistributionList',
-        'datagatewayAccessMappings' => 'setDatagatewayAccessMappings',
+        'destinationUser' => 'setDestinationUser',
         'transferOption' => 'setTransferOption',
         'capsilFile' => 'setCapsilFile',
         'univerisFile' => 'setUniverisFile',
@@ -274,10 +263,8 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
         'options' => 'getOptions',
         'userTuples' => 'getUserTuples',
         'sourceUser' => 'getSourceUser',
-        'destinationUser' => 'getDestinationUser',
-        'accessCode' => 'getAccessCode',
         'sourceDistributionList' => 'getSourceDistributionList',
-        'datagatewayAccessMappings' => 'getDatagatewayAccessMappings',
+        'destinationUser' => 'getDestinationUser',
         'transferOption' => 'getTransferOption',
         'capsilFile' => 'getCapsilFile',
         'univerisFile' => 'getUniverisFile',
@@ -366,10 +353,8 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
         $this->setIfExists('options', $data ?? [], null);
         $this->setIfExists('userTuples', $data ?? [], null);
         $this->setIfExists('sourceUser', $data ?? [], null);
-        $this->setIfExists('destinationUser', $data ?? [], null);
-        $this->setIfExists('accessCode', $data ?? [], null);
         $this->setIfExists('sourceDistributionList', $data ?? [], null);
-        $this->setIfExists('datagatewayAccessMappings', $data ?? [], null);
+        $this->setIfExists('destinationUser', $data ?? [], null);
         $this->setIfExists('transferOption', $data ?? [], null);
         $this->setIfExists('capsilFile', $data ?? [], null);
         $this->setIfExists('univerisFile', $data ?? [], null);
@@ -423,9 +408,6 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
         }
         if ($this->container['destinationUser'] === null) {
             $invalidProperties[] = "'destinationUser' can't be null";
-        }
-        if ($this->container['accessCode'] === null) {
-            $invalidProperties[] = "'accessCode' can't be null";
         }
         if ($this->container['transferOption'] === null) {
             $invalidProperties[] = "'transferOption' can't be null";
@@ -671,60 +653,6 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
     }
 
     /**
-     * Gets destinationUser
-     *
-     * @return string
-     */
-    public function getDestinationUser()
-    {
-        return $this->container['destinationUser'];
-    }
-
-    /**
-     * Sets destinationUser
-     *
-     * @param string $destinationUser Destination user id.
-     *
-     * @return self
-     */
-    public function setDestinationUser($destinationUser)
-    {
-        if (is_null($destinationUser)) {
-            throw new \InvalidArgumentException('non-nullable destinationUser cannot be null');
-        }
-        $this->container['destinationUser'] = $destinationUser;
-
-        return $this;
-    }
-
-    /**
-     * Gets accessCode
-     *
-     * @return string
-     */
-    public function getAccessCode()
-    {
-        return $this->container['accessCode'];
-    }
-
-    /**
-     * Sets accessCode
-     *
-     * @param string $accessCode Access code. Format: dataGatewayType~~system~dealerCode-repCode.
-     *
-     * @return self
-     */
-    public function setAccessCode($accessCode)
-    {
-        if (is_null($accessCode)) {
-            throw new \InvalidArgumentException('non-nullable accessCode cannot be null');
-        }
-        $this->container['accessCode'] = $accessCode;
-
-        return $this;
-    }
-
-    /**
      * Gets sourceDistributionList
      *
      * @return string|null
@@ -752,28 +680,28 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, \JsonSeria
     }
 
     /**
-     * Gets datagatewayAccessMappings
+     * Gets destinationUser
      *
-     * @return array<string,string>|null
+     * @return string
      */
-    public function getDatagatewayAccessMappings()
+    public function getDestinationUser()
     {
-        return $this->container['datagatewayAccessMappings'];
+        return $this->container['destinationUser'];
     }
 
     /**
-     * Sets datagatewayAccessMappings
+     * Sets destinationUser
      *
-     * @param array<string,string>|null $datagatewayAccessMappings Data gateway access mapping.
+     * @param string $destinationUser Destination user id.
      *
      * @return self
      */
-    public function setDatagatewayAccessMappings($datagatewayAccessMappings)
+    public function setDestinationUser($destinationUser)
     {
-        if (is_null($datagatewayAccessMappings)) {
-            throw new \InvalidArgumentException('non-nullable datagatewayAccessMappings cannot be null');
+        if (is_null($destinationUser)) {
+            throw new \InvalidArgumentException('non-nullable destinationUser cannot be null');
         }
-        $this->container['datagatewayAccessMappings'] = $datagatewayAccessMappings;
+        $this->container['destinationUser'] = $destinationUser;
 
         return $this;
     }
