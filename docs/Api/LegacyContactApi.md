@@ -333,7 +333,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\LegacyContactApi(
     $config
 );
 $lastModifiedTime = 'lastModifiedTime_example'; // string | To Fetch all documents, which got modified / created after specified date. If the value \"auto\" is used, the last access date to this method will be used. Set the value to \"reset\" to reset the last access date.
-$optionPayload = new \Equisoft\SDK\EquisoftConnect\Model\LegacyContactGetListOptions(); // LegacyContactGetListOptions | Object containing the options to filter the list of contacts.
+$optionPayload = new \Equisoft\SDK\EquisoftConnect\Model\\Equisoft\SDK\EquisoftConnect\Model\LegacyContactGetListOptions(); // \Equisoft\SDK\EquisoftConnect\Model\LegacyContactGetListOptions | Object containing the options to filter the list of contacts.
 
 try {
     $result = $apiInstance->legacyContactGetContactList($lastModifiedTime, $optionPayload);
@@ -348,7 +348,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **lastModifiedTime** | **string**| To Fetch all documents, which got modified / created after specified date. If the value \&quot;auto\&quot; is used, the last access date to this method will be used. Set the value to \&quot;reset\&quot; to reset the last access date. | [optional] |
-| **optionPayload** | [**LegacyContactGetListOptions**](../Model/.md)| Object containing the options to filter the list of contacts. | [optional] |
+| **optionPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyContactGetListOptions**](../Model/.md)| Object containing the options to filter the list of contacts. | [optional] |
 
 ### Return type
 

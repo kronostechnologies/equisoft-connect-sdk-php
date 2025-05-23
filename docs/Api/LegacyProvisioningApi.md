@@ -635,7 +635,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\LegacyProvisioningApi(
     new GuzzleHttp\Client(),
     $config
 );
-$payload = new \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGatewayArchivePayload(); // LegacyProvisioningGatewayArchivePayload | Legacy payload argument.
+$payload = new \Equisoft\SDK\EquisoftConnect\Model\\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGatewayArchivePayload(); // \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGatewayArchivePayload | Legacy payload argument.
 
 try {
     $result = $apiInstance->legacyProvisioningGetGatewayArchiveByDate($payload);
@@ -649,7 +649,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **payload** | [**LegacyProvisioningGatewayArchivePayload**](../Model/.md)| Legacy payload argument. | |
+| **payload** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGatewayArchivePayload**](../Model/.md)| Legacy payload argument. | |
 
 ### Return type
 
@@ -693,7 +693,7 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\LegacyProvisioningApi(
     new GuzzleHttp\Client(),
     $config
 );
-$payload = new \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGatewayArchivePayload(); // LegacyProvisioningGatewayArchivePayload | Legacy payload argument.
+$payload = new \Equisoft\SDK\EquisoftConnect\Model\\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGatewayArchivePayload(); // \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGatewayArchivePayload | Legacy payload argument.
 
 try {
     $result = $apiInstance->legacyProvisioningGetGatewayArchiveListByDate($payload);
@@ -707,7 +707,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **payload** | [**LegacyProvisioningGatewayArchivePayload**](../Model/.md)| Legacy payload argument. | |
+| **payload** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningGatewayArchivePayload**](../Model/.md)| Legacy payload argument. | |
 
 ### Return type
 
