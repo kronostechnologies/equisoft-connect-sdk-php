@@ -5,6 +5,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**getByUuid()**](ContactsApi.md#getByUuid) | **GET** /crm/api/v1/contacts/{contactUuid} | Return the detail of a contact. |
+| [**listContact()**](ContactsApi.md#listContact) | **GET** /crm/api/v1/contacts | List contact |
 | [**patchContact()**](ContactsApi.md#patchContact) | **PATCH** /crm/api/v1/contacts/{contactUuid} | Update a contact |
 
 
@@ -54,6 +55,64 @@ try {
 ### Return type
 
 [**\Equisoft\SDK\EquisoftConnect\Model\ContactsContact**](../Model/ContactsContact.md)
+
+### Authorization
+
+[OAuth2](../../README.md#OAuth2)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `listContact()`
+
+```php
+listContact($search): \Equisoft\SDK\EquisoftConnect\Model\ContactsListContactResponse
+```
+
+List contact
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Equisoft\SDK\EquisoftConnect\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\ContactsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$search = 'search_example'; // string | Search value for the contact.
+
+try {
+    $result = $apiInstance->listContact($search);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ContactsApi->listContact: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **search** | **string**| Search value for the contact. | [optional] |
+
+### Return type
+
+[**\Equisoft\SDK\EquisoftConnect\Model\ContactsListContactResponse**](../Model/ContactsListContactResponse.md)
 
 ### Authorization
 

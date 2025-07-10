@@ -77,6 +77,7 @@ All URIs are relative to *http://localhost*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *ContactsApi* | [**getByUuid**](docs/Api/ContactsApi.md#getbyuuid) | **GET** /crm/api/v1/contacts/{contactUuid} | Return the detail of a contact.
+*ContactsApi* | [**listContact**](docs/Api/ContactsApi.md#listcontact) | **GET** /crm/api/v1/contacts | List contact
 *ContactsApi* | [**patchContact**](docs/Api/ContactsApi.md#patchcontact) | **PATCH** /crm/api/v1/contacts/{contactUuid} | Update a contact
 *DSFApi* | [**createDsfFinancialCenter**](docs/Api/DSFApi.md#createdsffinancialcenter) | **POST** /crm/api/v1/dsf/financialCenters | Create a financial center
 *DSFApi* | [**deleteDsfFinancialCenter**](docs/Api/DSFApi.md#deletedsffinancialcenter) | **DELETE** /crm/api/v1/dsf/financialCenters/{financialCenterId} | Delete a financial center
@@ -232,7 +233,12 @@ Class | Method | HTTP request | Description
 - [ContactLinkParticipant](docs/Model/ContactLinkParticipant.md)
 - [ContactPatchContactPayload](docs/Model/ContactPatchContactPayload.md)
 - [ContactPatchDto](docs/Model/ContactPatchDto.md)
+- [ContactsAddress](docs/Model/ContactsAddress.md)
 - [ContactsContact](docs/Model/ContactsContact.md)
+- [ContactsEmail](docs/Model/ContactsEmail.md)
+- [ContactsListContactResponse](docs/Model/ContactsListContactResponse.md)
+- [ContactsPhone](docs/Model/ContactsPhone.md)
+- [ContactsTemporaryContact](docs/Model/ContactsTemporaryContact.md)
 - [ContextActor](docs/Model/ContextActor.md)
 - [ContextEquisoftConnect](docs/Model/ContextEquisoftConnect.md)
 - [ContextEquisoftConnectUser](docs/Model/ContextEquisoftConnectUser.md)
