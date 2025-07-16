@@ -472,15 +472,37 @@ class ContactsApi
      * List contact
      *
      * @param  string|null $search Search value for the contact. (optional)
+     * @param  int[]|null $ids Filter by id. (optional)
+     * @param  string|null $name Filter by last name or first name. (optional)
+     * @param  int[]|null $classIds Filter by the class unique id. (optional)
+     * @param  string[]|null $classNames Filter by the class unique system name. (optional)
+     * @param  string|null $lastName Filter by last name. (optional)
+     * @param  string|null $firstName Filter by first name. (optional)
+     * @param  string|null $nickname Filter by nickname. (optional)
+     * @param  string|null $middleName Filter by middle name. (optional)
+     * @param  string|null $userEmail Filter by exact user email. (optional)
+     * @param  bool|null $individual Filter by individual only. Default: false. (optional)
+     * @param  bool|null $organization Filter by organization only. Default: false. (optional)
+     * @param  string|null $sort Sort by (NO_SORT|NAME). Default: NO_SORT. (optional, default to 'NO_SORT')
+     * @param  bool|null $sortDesc Sort in descending order (\&quot;sort\&quot; must be specified). Default: false. (optional)
+     * @param  bool|null $active Return only the active contacts. Default: false. (optional)
+     * @param  bool|null $excludeDeceased Set to true to exclude contact that are deceased. (optional)
+     * @param  string[]|null $mailGroupNames Return only contacts in the specified mail group system names. (optional)
+     * @param  int[]|null $mailGroupIds Return only contacts in the specified mail group ids. (optional)
+     * @param  bool|null $anniversary Returns only contacts that their anniversary is today. (optional)
+     * @param  \DateTime|null $anniversaryStartDate Returns only contacts whose anniversary occurs on this date or after. (optional)
+     * @param  \DateTime|null $anniversaryEndDate Returns only contacts whose anniversary occurs on this date or before. (optional)
+     * @param  string|null $pageToken Token to specify which page to fetch. (optional)
+     * @param  string|null $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listContact'] to see the possible values for this operation
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsListContactResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsListContactResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
-    public function listContact($search = null, string $contentType = self::contentTypes['listContact'][0])
+    public function listContact($search = null, $ids = null, $name = null, $classIds = null, $classNames = null, $lastName = null, $firstName = null, $nickname = null, $middleName = null, $userEmail = null, $individual = null, $organization = null, $sort = 'NO_SORT', $sortDesc = null, $active = null, $excludeDeceased = null, $mailGroupNames = null, $mailGroupIds = null, $anniversary = null, $anniversaryStartDate = null, $anniversaryEndDate = null, $pageToken = null, $maxResults = null, string $contentType = self::contentTypes['listContact'][0])
     {
-        list($response) = $this->listContactWithHttpInfo($search, $contentType);
+        list($response) = $this->listContactWithHttpInfo($search, $ids, $name, $classIds, $classNames, $lastName, $firstName, $nickname, $middleName, $userEmail, $individual, $organization, $sort, $sortDesc, $active, $excludeDeceased, $mailGroupNames, $mailGroupIds, $anniversary, $anniversaryStartDate, $anniversaryEndDate, $pageToken, $maxResults, $contentType);
         return $response;
     }
 
@@ -490,15 +512,37 @@ class ContactsApi
      * List contact
      *
      * @param  string|null $search Search value for the contact. (optional)
+     * @param  int[]|null $ids Filter by id. (optional)
+     * @param  string|null $name Filter by last name or first name. (optional)
+     * @param  int[]|null $classIds Filter by the class unique id. (optional)
+     * @param  string[]|null $classNames Filter by the class unique system name. (optional)
+     * @param  string|null $lastName Filter by last name. (optional)
+     * @param  string|null $firstName Filter by first name. (optional)
+     * @param  string|null $nickname Filter by nickname. (optional)
+     * @param  string|null $middleName Filter by middle name. (optional)
+     * @param  string|null $userEmail Filter by exact user email. (optional)
+     * @param  bool|null $individual Filter by individual only. Default: false. (optional)
+     * @param  bool|null $organization Filter by organization only. Default: false. (optional)
+     * @param  string|null $sort Sort by (NO_SORT|NAME). Default: NO_SORT. (optional, default to 'NO_SORT')
+     * @param  bool|null $sortDesc Sort in descending order (\&quot;sort\&quot; must be specified). Default: false. (optional)
+     * @param  bool|null $active Return only the active contacts. Default: false. (optional)
+     * @param  bool|null $excludeDeceased Set to true to exclude contact that are deceased. (optional)
+     * @param  string[]|null $mailGroupNames Return only contacts in the specified mail group system names. (optional)
+     * @param  int[]|null $mailGroupIds Return only contacts in the specified mail group ids. (optional)
+     * @param  bool|null $anniversary Returns only contacts that their anniversary is today. (optional)
+     * @param  \DateTime|null $anniversaryStartDate Returns only contacts whose anniversary occurs on this date or after. (optional)
+     * @param  \DateTime|null $anniversaryEndDate Returns only contacts whose anniversary occurs on this date or before. (optional)
+     * @param  string|null $pageToken Token to specify which page to fetch. (optional)
+     * @param  string|null $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listContact'] to see the possible values for this operation
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Equisoft\SDK\EquisoftConnect\Model\ContactsListContactResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\ContactsListContactResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listContactWithHttpInfo($search = null, string $contentType = self::contentTypes['listContact'][0])
+    public function listContactWithHttpInfo($search = null, $ids = null, $name = null, $classIds = null, $classNames = null, $lastName = null, $firstName = null, $nickname = null, $middleName = null, $userEmail = null, $individual = null, $organization = null, $sort = 'NO_SORT', $sortDesc = null, $active = null, $excludeDeceased = null, $mailGroupNames = null, $mailGroupIds = null, $anniversary = null, $anniversaryStartDate = null, $anniversaryEndDate = null, $pageToken = null, $maxResults = null, string $contentType = self::contentTypes['listContact'][0])
     {
-        $request = $this->listContactRequest($search, $contentType);
+        $request = $this->listContactRequest($search, $ids, $name, $classIds, $classNames, $lastName, $firstName, $nickname, $middleName, $userEmail, $individual, $organization, $sort, $sortDesc, $active, $excludeDeceased, $mailGroupNames, $mailGroupIds, $anniversary, $anniversaryStartDate, $anniversaryEndDate, $pageToken, $maxResults, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -537,12 +581,6 @@ class ContactsApi
                         $response,
                     );
                 case 500:
-                    return $this->handleResponseWithDataType(
-                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
-                        $request,
-                        $response,
-                    );
-                case 404:
                     return $this->handleResponseWithDataType(
                         '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
                         $request,
@@ -596,14 +634,6 @@ class ContactsApi
                     );
                     $e->setResponseObject($data);
                     throw $e;
-                case 404:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    throw $e;
             }
         
 
@@ -617,14 +647,36 @@ class ContactsApi
      * List contact
      *
      * @param  string|null $search Search value for the contact. (optional)
+     * @param  int[]|null $ids Filter by id. (optional)
+     * @param  string|null $name Filter by last name or first name. (optional)
+     * @param  int[]|null $classIds Filter by the class unique id. (optional)
+     * @param  string[]|null $classNames Filter by the class unique system name. (optional)
+     * @param  string|null $lastName Filter by last name. (optional)
+     * @param  string|null $firstName Filter by first name. (optional)
+     * @param  string|null $nickname Filter by nickname. (optional)
+     * @param  string|null $middleName Filter by middle name. (optional)
+     * @param  string|null $userEmail Filter by exact user email. (optional)
+     * @param  bool|null $individual Filter by individual only. Default: false. (optional)
+     * @param  bool|null $organization Filter by organization only. Default: false. (optional)
+     * @param  string|null $sort Sort by (NO_SORT|NAME). Default: NO_SORT. (optional, default to 'NO_SORT')
+     * @param  bool|null $sortDesc Sort in descending order (\&quot;sort\&quot; must be specified). Default: false. (optional)
+     * @param  bool|null $active Return only the active contacts. Default: false. (optional)
+     * @param  bool|null $excludeDeceased Set to true to exclude contact that are deceased. (optional)
+     * @param  string[]|null $mailGroupNames Return only contacts in the specified mail group system names. (optional)
+     * @param  int[]|null $mailGroupIds Return only contacts in the specified mail group ids. (optional)
+     * @param  bool|null $anniversary Returns only contacts that their anniversary is today. (optional)
+     * @param  \DateTime|null $anniversaryStartDate Returns only contacts whose anniversary occurs on this date or after. (optional)
+     * @param  \DateTime|null $anniversaryEndDate Returns only contacts whose anniversary occurs on this date or before. (optional)
+     * @param  string|null $pageToken Token to specify which page to fetch. (optional)
+     * @param  string|null $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listContact'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listContactAsync($search = null, string $contentType = self::contentTypes['listContact'][0])
+    public function listContactAsync($search = null, $ids = null, $name = null, $classIds = null, $classNames = null, $lastName = null, $firstName = null, $nickname = null, $middleName = null, $userEmail = null, $individual = null, $organization = null, $sort = 'NO_SORT', $sortDesc = null, $active = null, $excludeDeceased = null, $mailGroupNames = null, $mailGroupIds = null, $anniversary = null, $anniversaryStartDate = null, $anniversaryEndDate = null, $pageToken = null, $maxResults = null, string $contentType = self::contentTypes['listContact'][0])
     {
-        return $this->listContactAsyncWithHttpInfo($search, $contentType)
+        return $this->listContactAsyncWithHttpInfo($search, $ids, $name, $classIds, $classNames, $lastName, $firstName, $nickname, $middleName, $userEmail, $individual, $organization, $sort, $sortDesc, $active, $excludeDeceased, $mailGroupNames, $mailGroupIds, $anniversary, $anniversaryStartDate, $anniversaryEndDate, $pageToken, $maxResults, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -638,15 +690,37 @@ class ContactsApi
      * List contact
      *
      * @param  string|null $search Search value for the contact. (optional)
+     * @param  int[]|null $ids Filter by id. (optional)
+     * @param  string|null $name Filter by last name or first name. (optional)
+     * @param  int[]|null $classIds Filter by the class unique id. (optional)
+     * @param  string[]|null $classNames Filter by the class unique system name. (optional)
+     * @param  string|null $lastName Filter by last name. (optional)
+     * @param  string|null $firstName Filter by first name. (optional)
+     * @param  string|null $nickname Filter by nickname. (optional)
+     * @param  string|null $middleName Filter by middle name. (optional)
+     * @param  string|null $userEmail Filter by exact user email. (optional)
+     * @param  bool|null $individual Filter by individual only. Default: false. (optional)
+     * @param  bool|null $organization Filter by organization only. Default: false. (optional)
+     * @param  string|null $sort Sort by (NO_SORT|NAME). Default: NO_SORT. (optional, default to 'NO_SORT')
+     * @param  bool|null $sortDesc Sort in descending order (\&quot;sort\&quot; must be specified). Default: false. (optional)
+     * @param  bool|null $active Return only the active contacts. Default: false. (optional)
+     * @param  bool|null $excludeDeceased Set to true to exclude contact that are deceased. (optional)
+     * @param  string[]|null $mailGroupNames Return only contacts in the specified mail group system names. (optional)
+     * @param  int[]|null $mailGroupIds Return only contacts in the specified mail group ids. (optional)
+     * @param  bool|null $anniversary Returns only contacts that their anniversary is today. (optional)
+     * @param  \DateTime|null $anniversaryStartDate Returns only contacts whose anniversary occurs on this date or after. (optional)
+     * @param  \DateTime|null $anniversaryEndDate Returns only contacts whose anniversary occurs on this date or before. (optional)
+     * @param  string|null $pageToken Token to specify which page to fetch. (optional)
+     * @param  string|null $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listContact'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listContactAsyncWithHttpInfo($search = null, string $contentType = self::contentTypes['listContact'][0])
+    public function listContactAsyncWithHttpInfo($search = null, $ids = null, $name = null, $classIds = null, $classNames = null, $lastName = null, $firstName = null, $nickname = null, $middleName = null, $userEmail = null, $individual = null, $organization = null, $sort = 'NO_SORT', $sortDesc = null, $active = null, $excludeDeceased = null, $mailGroupNames = null, $mailGroupIds = null, $anniversary = null, $anniversaryStartDate = null, $anniversaryEndDate = null, $pageToken = null, $maxResults = null, string $contentType = self::contentTypes['listContact'][0])
     {
         $returnType = '\Equisoft\SDK\EquisoftConnect\Model\ContactsListContactResponse';
-        $request = $this->listContactRequest($search, $contentType);
+        $request = $this->listContactRequest($search, $ids, $name, $classIds, $classNames, $lastName, $firstName, $nickname, $middleName, $userEmail, $individual, $organization, $sort, $sortDesc, $active, $excludeDeceased, $mailGroupNames, $mailGroupIds, $anniversary, $anniversaryStartDate, $anniversaryEndDate, $pageToken, $maxResults, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -688,13 +762,57 @@ class ContactsApi
      * Create request for operation 'listContact'
      *
      * @param  string|null $search Search value for the contact. (optional)
+     * @param  int[]|null $ids Filter by id. (optional)
+     * @param  string|null $name Filter by last name or first name. (optional)
+     * @param  int[]|null $classIds Filter by the class unique id. (optional)
+     * @param  string[]|null $classNames Filter by the class unique system name. (optional)
+     * @param  string|null $lastName Filter by last name. (optional)
+     * @param  string|null $firstName Filter by first name. (optional)
+     * @param  string|null $nickname Filter by nickname. (optional)
+     * @param  string|null $middleName Filter by middle name. (optional)
+     * @param  string|null $userEmail Filter by exact user email. (optional)
+     * @param  bool|null $individual Filter by individual only. Default: false. (optional)
+     * @param  bool|null $organization Filter by organization only. Default: false. (optional)
+     * @param  string|null $sort Sort by (NO_SORT|NAME). Default: NO_SORT. (optional, default to 'NO_SORT')
+     * @param  bool|null $sortDesc Sort in descending order (\&quot;sort\&quot; must be specified). Default: false. (optional)
+     * @param  bool|null $active Return only the active contacts. Default: false. (optional)
+     * @param  bool|null $excludeDeceased Set to true to exclude contact that are deceased. (optional)
+     * @param  string[]|null $mailGroupNames Return only contacts in the specified mail group system names. (optional)
+     * @param  int[]|null $mailGroupIds Return only contacts in the specified mail group ids. (optional)
+     * @param  bool|null $anniversary Returns only contacts that their anniversary is today. (optional)
+     * @param  \DateTime|null $anniversaryStartDate Returns only contacts whose anniversary occurs on this date or after. (optional)
+     * @param  \DateTime|null $anniversaryEndDate Returns only contacts whose anniversary occurs on this date or before. (optional)
+     * @param  string|null $pageToken Token to specify which page to fetch. (optional)
+     * @param  string|null $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listContact'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function listContactRequest($search = null, string $contentType = self::contentTypes['listContact'][0])
+    public function listContactRequest($search = null, $ids = null, $name = null, $classIds = null, $classNames = null, $lastName = null, $firstName = null, $nickname = null, $middleName = null, $userEmail = null, $individual = null, $organization = null, $sort = 'NO_SORT', $sortDesc = null, $active = null, $excludeDeceased = null, $mailGroupNames = null, $mailGroupIds = null, $anniversary = null, $anniversaryStartDate = null, $anniversaryEndDate = null, $pageToken = null, $maxResults = null, string $contentType = self::contentTypes['listContact'][0])
     {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -709,6 +827,204 @@ class ContactsApi
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
             $search,
             'search', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $ids,
+            'ids', // param base name
+            'array', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $name,
+            'name', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $classIds,
+            'classIds', // param base name
+            'array', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $classNames,
+            'classNames', // param base name
+            'array', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $lastName,
+            'lastName', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $firstName,
+            'firstName', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $nickname,
+            'nickname', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $middleName,
+            'middleName', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $userEmail,
+            'userEmail', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $individual,
+            'individual', // param base name
+            'boolean', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $organization,
+            'organization', // param base name
+            'boolean', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $sort,
+            'sort', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $sortDesc,
+            'sortDesc', // param base name
+            'boolean', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $active,
+            'active', // param base name
+            'boolean', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $excludeDeceased,
+            'excludeDeceased', // param base name
+            'boolean', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $mailGroupNames,
+            'mailGroupNames', // param base name
+            'array', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $mailGroupIds,
+            'mailGroupIds', // param base name
+            'array', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $anniversary,
+            'anniversary', // param base name
+            'boolean', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $anniversaryStartDate,
+            'anniversaryStartDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $anniversaryEndDate,
+            'anniversaryEndDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pageToken,
+            'pageToken', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $maxResults,
+            'maxResults', // param base name
             'string', // openApiType
             'form', // style
             true, // explode

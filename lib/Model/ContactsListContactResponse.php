@@ -57,6 +57,7 @@ class ContactsListContactResponse implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
+        'nextPageToken' => 'string',
         'items' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsTemporaryContact[]'
     ];
 
@@ -68,6 +69,7 @@ class ContactsListContactResponse implements ModelInterface, ArrayAccess, \JsonS
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'nextPageToken' => null,
         'items' => null
     ];
 
@@ -77,6 +79,7 @@ class ContactsListContactResponse implements ModelInterface, ArrayAccess, \JsonS
       * @var boolean[]
       */
     protected static array $openAPINullables = [
+        'nextPageToken' => false,
         'items' => false
     ];
 
@@ -166,6 +169,7 @@ class ContactsListContactResponse implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $attributeMap = [
+        'nextPageToken' => 'nextPageToken',
         'items' => 'items'
     ];
 
@@ -175,6 +179,7 @@ class ContactsListContactResponse implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $setters = [
+        'nextPageToken' => 'setNextPageToken',
         'items' => 'setItems'
     ];
 
@@ -184,6 +189,7 @@ class ContactsListContactResponse implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $getters = [
+        'nextPageToken' => 'getNextPageToken',
         'items' => 'getItems'
     ];
 
@@ -244,6 +250,7 @@ class ContactsListContactResponse implements ModelInterface, ArrayAccess, \JsonS
      */
     public function __construct(?array $data = null)
     {
+        $this->setIfExists('nextPageToken', $data ?? [], null);
         $this->setIfExists('items', $data ?? [], null);
     }
 
@@ -291,6 +298,33 @@ class ContactsListContactResponse implements ModelInterface, ArrayAccess, \JsonS
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets nextPageToken
+     *
+     * @return string|null
+     */
+    public function getNextPageToken()
+    {
+        return $this->container['nextPageToken'];
+    }
+
+    /**
+     * Sets nextPageToken
+     *
+     * @param string|null $nextPageToken Opaque token used to get the next page of the result. Omitted if no more results.
+     *
+     * @return self
+     */
+    public function setNextPageToken($nextPageToken)
+    {
+        if (is_null($nextPageToken)) {
+            throw new \InvalidArgumentException('non-nullable nextPageToken cannot be null');
+        }
+        $this->container['nextPageToken'] = $nextPageToken;
+
+        return $this;
+    }
 
     /**
      * Gets items

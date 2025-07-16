@@ -80,6 +80,15 @@ class ContactsListContactResponseTest extends TestCase
     }
 
     /**
+     * Test attribute "nextPageToken"
+     */
+    public function testPropertyNextPageToken()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "items"
      */
     public function testPropertyItems()

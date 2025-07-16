@@ -72,7 +72,7 @@ try {
 ## `listContact()`
 
 ```php
-listContact($search): \Equisoft\SDK\EquisoftConnect\Model\ContactsListContactResponse
+listContact($search, $ids, $name, $classIds, $classNames, $lastName, $firstName, $nickname, $middleName, $userEmail, $individual, $organization, $sort, $sortDesc, $active, $excludeDeceased, $mailGroupNames, $mailGroupIds, $anniversary, $anniversaryStartDate, $anniversaryEndDate, $pageToken, $maxResults): \Equisoft\SDK\EquisoftConnect\Model\ContactsListContactResponse
 ```
 
 List contact
@@ -95,9 +95,31 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\ContactsApi(
     $config
 );
 $search = 'search_example'; // string | Search value for the contact.
+$ids = array(56); // int[] | Filter by id.
+$name = 'name_example'; // string | Filter by last name or first name.
+$classIds = array(56); // int[] | Filter by the class unique id.
+$classNames = array('classNames_example'); // string[] | Filter by the class unique system name.
+$lastName = 'lastName_example'; // string | Filter by last name.
+$firstName = 'firstName_example'; // string | Filter by first name.
+$nickname = 'nickname_example'; // string | Filter by nickname.
+$middleName = 'middleName_example'; // string | Filter by middle name.
+$userEmail = 'userEmail_example'; // string | Filter by exact user email.
+$individual = True; // bool | Filter by individual only. Default: false.
+$organization = True; // bool | Filter by organization only. Default: false.
+$sort = 'NO_SORT'; // string | Sort by (NO_SORT|NAME). Default: NO_SORT.
+$sortDesc = True; // bool | Sort in descending order (\"sort\" must be specified). Default: false.
+$active = True; // bool | Return only the active contacts. Default: false.
+$excludeDeceased = True; // bool | Set to true to exclude contact that are deceased.
+$mailGroupNames = array('mailGroupNames_example'); // string[] | Return only contacts in the specified mail group system names.
+$mailGroupIds = array(56); // int[] | Return only contacts in the specified mail group ids.
+$anniversary = True; // bool | Returns only contacts that their anniversary is today.
+$anniversaryStartDate = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Returns only contacts whose anniversary occurs on this date or after.
+$anniversaryEndDate = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Returns only contacts whose anniversary occurs on this date or before.
+$pageToken = MjUwMDszMDAK; // string | Token to specify which page to fetch.
+$maxResults = 'maxResults_example'; // string | Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records.
 
 try {
-    $result = $apiInstance->listContact($search);
+    $result = $apiInstance->listContact($search, $ids, $name, $classIds, $classNames, $lastName, $firstName, $nickname, $middleName, $userEmail, $individual, $organization, $sort, $sortDesc, $active, $excludeDeceased, $mailGroupNames, $mailGroupIds, $anniversary, $anniversaryStartDate, $anniversaryEndDate, $pageToken, $maxResults);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContactsApi->listContact: ', $e->getMessage(), PHP_EOL;
@@ -109,6 +131,28 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **search** | **string**| Search value for the contact. | [optional] |
+| **ids** | [**int[]**](../Model/int.md)| Filter by id. | [optional] |
+| **name** | **string**| Filter by last name or first name. | [optional] |
+| **classIds** | [**int[]**](../Model/int.md)| Filter by the class unique id. | [optional] |
+| **classNames** | [**string[]**](../Model/string.md)| Filter by the class unique system name. | [optional] |
+| **lastName** | **string**| Filter by last name. | [optional] |
+| **firstName** | **string**| Filter by first name. | [optional] |
+| **nickname** | **string**| Filter by nickname. | [optional] |
+| **middleName** | **string**| Filter by middle name. | [optional] |
+| **userEmail** | **string**| Filter by exact user email. | [optional] |
+| **individual** | **bool**| Filter by individual only. Default: false. | [optional] |
+| **organization** | **bool**| Filter by organization only. Default: false. | [optional] |
+| **sort** | **string**| Sort by (NO_SORT|NAME). Default: NO_SORT. | [optional] [default to &#39;NO_SORT&#39;] |
+| **sortDesc** | **bool**| Sort in descending order (\&quot;sort\&quot; must be specified). Default: false. | [optional] |
+| **active** | **bool**| Return only the active contacts. Default: false. | [optional] |
+| **excludeDeceased** | **bool**| Set to true to exclude contact that are deceased. | [optional] |
+| **mailGroupNames** | [**string[]**](../Model/string.md)| Return only contacts in the specified mail group system names. | [optional] |
+| **mailGroupIds** | [**int[]**](../Model/int.md)| Return only contacts in the specified mail group ids. | [optional] |
+| **anniversary** | **bool**| Returns only contacts that their anniversary is today. | [optional] |
+| **anniversaryStartDate** | **\DateTime**| Returns only contacts whose anniversary occurs on this date or after. | [optional] |
+| **anniversaryEndDate** | **\DateTime**| Returns only contacts whose anniversary occurs on this date or before. | [optional] |
+| **pageToken** | **string**| Token to specify which page to fetch. | [optional] |
+| **maxResults** | **string**| Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. | [optional] |
 
 ### Return type
 
