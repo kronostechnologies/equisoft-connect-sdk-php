@@ -76,7 +76,7 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ContactsApi* | [**getByUuid**](docs/Api/ContactsApi.md#getbyuuid) | **GET** /crm/api/v1/contacts/{contactUuid} | Return the detail of a contact.
+*ContactsApi* | [**getByUuid**](docs/Api/ContactsApi.md#getbyuuid) | **GET** /crm/api/v1/contacts/{contactUuid} | Get contact by Uuid
 *ContactsApi* | [**listContact**](docs/Api/ContactsApi.md#listcontact) | **GET** /crm/api/v1/contacts | List contact
 *ContactsApi* | [**patchContact**](docs/Api/ContactsApi.md#patchcontact) | **PATCH** /crm/api/v1/contacts/{contactUuid} | Update a contact
 *DSFApi* | [**createDsfFinancialCenter**](docs/Api/DSFApi.md#createdsffinancialcenter) | **POST** /crm/api/v1/dsf/financialCenters | Create a financial center
@@ -229,16 +229,29 @@ Class | Method | HTTP request | Description
 - [ContactContactPhone](docs/Model/ContactContactPhone.md)
 - [ContactContactSegmentation](docs/Model/ContactContactSegmentation.md)
 - [ContactContactWebsite](docs/Model/ContactContactWebsite.md)
+- [ContactIdentificationType](docs/Model/ContactIdentificationType.md)
 - [ContactLink](docs/Model/ContactLink.md)
 - [ContactLinkParticipant](docs/Model/ContactLinkParticipant.md)
 - [ContactPatchContactPayload](docs/Model/ContactPatchContactPayload.md)
 - [ContactPatchDto](docs/Model/ContactPatchDto.md)
+- [ContactsAdditionalInformation](docs/Model/ContactsAdditionalInformation.md)
 - [ContactsAddress](docs/Model/ContactsAddress.md)
+- [ContactsCivilStatus](docs/Model/ContactsCivilStatus.md)
 - [ContactsContact](docs/Model/ContactsContact.md)
+- [ContactsContactFieldValue](docs/Model/ContactsContactFieldValue.md)
 - [ContactsEmail](docs/Model/ContactsEmail.md)
+- [ContactsIdentification](docs/Model/ContactsIdentification.md)
+- [ContactsIndividualIdentification](docs/Model/ContactsIndividualIdentification.md)
+- [ContactsLegacyContact](docs/Model/ContactsLegacyContact.md)
+- [ContactsLegacyContactRelation](docs/Model/ContactsLegacyContactRelation.md)
+- [ContactsLegacyContactRelationParticipant](docs/Model/ContactsLegacyContactRelationParticipant.md)
 - [ContactsListContactResponse](docs/Model/ContactsListContactResponse.md)
+- [ContactsOccupation](docs/Model/ContactsOccupation.md)
+- [ContactsOrganizationIdentification](docs/Model/ContactsOrganizationIdentification.md)
 - [ContactsPhone](docs/Model/ContactsPhone.md)
+- [ContactsSegmentation](docs/Model/ContactsSegmentation.md)
 - [ContactsTemporaryContact](docs/Model/ContactsTemporaryContact.md)
+- [ContactsWebSite](docs/Model/ContactsWebSite.md)
 - [ContextActor](docs/Model/ContextActor.md)
 - [ContextEquisoftConnect](docs/Model/ContextEquisoftConnect.md)
 - [ContextEquisoftConnectUser](docs/Model/ContextEquisoftConnectUser.md)

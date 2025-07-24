@@ -1,6 +1,6 @@
 <?php
 /**
- * ContactsTemporaryContactTest
+ * ContactsIdentificationTest
  *
  * PHP version 8.1
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ContactsTemporaryContactTest Class Doc Comment
+ * ContactsIdentificationTest Class Doc Comment
  *
  * @category    Class
- * @description ContactsTemporaryContact
+ * @description ContactsIdentification
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ContactsTemporaryContactTest extends TestCase
+class ContactsIdentificationTest extends TestCase
 {
 
     /**
@@ -71,189 +71,126 @@ class ContactsTemporaryContactTest extends TestCase
     }
 
     /**
-     * Test "ContactsTemporaryContact"
+     * Test "ContactsIdentification"
      */
-    public function testContactsTemporaryContact()
+    public function testContactsIdentification()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "type"
      */
-    public function testPropertyId()
+    public function testPropertyType()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "uuid"
+     * Test attribute "title"
      */
-    public function testPropertyUuid()
+    public function testPropertyTitle()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "contactType"
+     * Test attribute "gender"
      */
-    public function testPropertyContactType()
+    public function testPropertyGender()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "indOrg"
+     * Test attribute "firstName"
      */
-    public function testPropertyIndOrg()
+    public function testPropertyFirstName()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "displayName"
+     * Test attribute "middleName"
      */
-    public function testPropertyDisplayName()
+    public function testPropertyMiddleName()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "sortName"
+     * Test attribute "lastName"
      */
-    public function testPropertySortName()
+    public function testPropertyLastName()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "notes"
+     * Test attribute "maidenName"
      */
-    public function testPropertyNotes()
+    public function testPropertyMaidenName()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "notesAdditionalInformation"
+     * Test attribute "suffix"
      */
-    public function testPropertyNotesAdditionalInformation()
+    public function testPropertySuffix()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "creationDate"
+     * Test attribute "greeting"
      */
-    public function testPropertyCreationDate()
+    public function testPropertyGreeting()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "lastUpdateDate"
+     * Test attribute "clientNb"
      */
-    public function testPropertyLastUpdateDate()
+    public function testPropertyClientNb()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "identification"
+     * Test attribute "line1"
      */
-    public function testPropertyIdentification()
+    public function testPropertyLine1()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "additionalInformation"
+     * Test attribute "line2"
      */
-    public function testPropertyAdditionalInformation()
+    public function testPropertyLine2()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "currentMaritalStatus"
+     * Test attribute "abbreviation"
      */
-    public function testPropertyCurrentMaritalStatus()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "currentCivilStatus"
-     */
-    public function testPropertyCurrentCivilStatus()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "currentOccupation"
-     */
-    public function testPropertyCurrentOccupation()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "segmentation"
-     */
-    public function testPropertySegmentation()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "addresses"
-     */
-    public function testPropertyAddresses()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "phones"
-     */
-    public function testPropertyPhones()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "emails"
-     */
-    public function testPropertyEmails()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "websites"
-     */
-    public function testPropertyWebsites()
+    public function testPropertyAbbreviation()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

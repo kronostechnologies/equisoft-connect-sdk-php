@@ -1,6 +1,6 @@
 <?php
 /**
- * ContactsAddress
+ * ContactsCivilStatus
  *
  * PHP version 8.1
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * ContactsAddress Class Doc Comment
+ * ContactsCivilStatus Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
@@ -40,7 +40,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ContactsAddress implements ModelInterface, ArrayAccess, \JsonSerializable
+class ContactsCivilStatus implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ContactsAddress implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'contacts.Address';
+    protected static $openAPIModelName = 'contacts.CivilStatus';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,17 +58,10 @@ class ContactsAddress implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'type' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
-        'isMain' => 'bool',
-        'isPostal' => 'bool',
-        'line1' => 'string',
-        'line2' => 'string',
-        'stateProvince' => 'string',
-        'country' => 'string',
-        'postalCode' => 'string',
-        'dateSince' => '\DateTime',
-        'city' => 'string',
-        'locked' => 'bool'
+        'startDate' => '\DateTime',
+        'endDate' => '\DateTime',
+        'status' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
+        'marriageContract' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue'
     ];
 
     /**
@@ -80,17 +73,10 @@ class ContactsAddress implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => null,
-        'type' => null,
-        'isMain' => null,
-        'isPostal' => null,
-        'line1' => null,
-        'line2' => null,
-        'stateProvince' => null,
-        'country' => null,
-        'postalCode' => null,
-        'dateSince' => 'date',
-        'city' => null,
-        'locked' => null
+        'startDate' => 'date',
+        'endDate' => 'date',
+        'status' => null,
+        'marriageContract' => null
     ];
 
     /**
@@ -100,17 +86,10 @@ class ContactsAddress implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'type' => false,
-        'isMain' => false,
-        'isPostal' => false,
-        'line1' => false,
-        'line2' => false,
-        'stateProvince' => false,
-        'country' => false,
-        'postalCode' => false,
-        'dateSince' => true,
-        'city' => false,
-        'locked' => false
+        'startDate' => true,
+        'endDate' => true,
+        'status' => true,
+        'marriageContract' => true
     ];
 
     /**
@@ -200,17 +179,10 @@ class ContactsAddress implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'type' => 'type',
-        'isMain' => 'isMain',
-        'isPostal' => 'isPostal',
-        'line1' => 'line1',
-        'line2' => 'line2',
-        'stateProvince' => 'stateProvince',
-        'country' => 'country',
-        'postalCode' => 'postalCode',
-        'dateSince' => 'dateSince',
-        'city' => 'city',
-        'locked' => 'locked'
+        'startDate' => 'startDate',
+        'endDate' => 'endDate',
+        'status' => 'status',
+        'marriageContract' => 'marriageContract'
     ];
 
     /**
@@ -220,17 +192,10 @@ class ContactsAddress implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'type' => 'setType',
-        'isMain' => 'setIsMain',
-        'isPostal' => 'setIsPostal',
-        'line1' => 'setLine1',
-        'line2' => 'setLine2',
-        'stateProvince' => 'setStateProvince',
-        'country' => 'setCountry',
-        'postalCode' => 'setPostalCode',
-        'dateSince' => 'setDateSince',
-        'city' => 'setCity',
-        'locked' => 'setLocked'
+        'startDate' => 'setStartDate',
+        'endDate' => 'setEndDate',
+        'status' => 'setStatus',
+        'marriageContract' => 'setMarriageContract'
     ];
 
     /**
@@ -240,17 +205,10 @@ class ContactsAddress implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'type' => 'getType',
-        'isMain' => 'getIsMain',
-        'isPostal' => 'getIsPostal',
-        'line1' => 'getLine1',
-        'line2' => 'getLine2',
-        'stateProvince' => 'getStateProvince',
-        'country' => 'getCountry',
-        'postalCode' => 'getPostalCode',
-        'dateSince' => 'getDateSince',
-        'city' => 'getCity',
-        'locked' => 'getLocked'
+        'startDate' => 'getStartDate',
+        'endDate' => 'getEndDate',
+        'status' => 'getStatus',
+        'marriageContract' => 'getMarriageContract'
     ];
 
     /**
@@ -311,17 +269,10 @@ class ContactsAddress implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(?array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('type', $data ?? [], null);
-        $this->setIfExists('isMain', $data ?? [], null);
-        $this->setIfExists('isPostal', $data ?? [], null);
-        $this->setIfExists('line1', $data ?? [], null);
-        $this->setIfExists('line2', $data ?? [], null);
-        $this->setIfExists('stateProvince', $data ?? [], null);
-        $this->setIfExists('country', $data ?? [], null);
-        $this->setIfExists('postalCode', $data ?? [], null);
-        $this->setIfExists('dateSince', $data ?? [], null);
-        $this->setIfExists('city', $data ?? [], null);
-        $this->setIfExists('locked', $data ?? [], null);
+        $this->setIfExists('startDate', $data ?? [], null);
+        $this->setIfExists('endDate', $data ?? [], null);
+        $this->setIfExists('status', $data ?? [], null);
+        $this->setIfExists('marriageContract', $data ?? [], null);
     }
 
     /**
@@ -394,305 +345,137 @@ class ContactsAddress implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets type
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $type type
-     *
-     * @return self
-     */
-    public function setType($type)
-    {
-        if (is_null($type)) {
-            throw new \InvalidArgumentException('non-nullable type cannot be null');
-        }
-        $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets isMain
-     *
-     * @return bool|null
-     */
-    public function getIsMain()
-    {
-        return $this->container['isMain'];
-    }
-
-    /**
-     * Sets isMain
-     *
-     * @param bool|null $isMain isMain
-     *
-     * @return self
-     */
-    public function setIsMain($isMain)
-    {
-        if (is_null($isMain)) {
-            throw new \InvalidArgumentException('non-nullable isMain cannot be null');
-        }
-        $this->container['isMain'] = $isMain;
-
-        return $this;
-    }
-
-    /**
-     * Gets isPostal
-     *
-     * @return bool|null
-     */
-    public function getIsPostal()
-    {
-        return $this->container['isPostal'];
-    }
-
-    /**
-     * Sets isPostal
-     *
-     * @param bool|null $isPostal isPostal
-     *
-     * @return self
-     */
-    public function setIsPostal($isPostal)
-    {
-        if (is_null($isPostal)) {
-            throw new \InvalidArgumentException('non-nullable isPostal cannot be null');
-        }
-        $this->container['isPostal'] = $isPostal;
-
-        return $this;
-    }
-
-    /**
-     * Gets line1
-     *
-     * @return string|null
-     */
-    public function getLine1()
-    {
-        return $this->container['line1'];
-    }
-
-    /**
-     * Sets line1
-     *
-     * @param string|null $line1 line1
-     *
-     * @return self
-     */
-    public function setLine1($line1)
-    {
-        if (is_null($line1)) {
-            throw new \InvalidArgumentException('non-nullable line1 cannot be null');
-        }
-        $this->container['line1'] = $line1;
-
-        return $this;
-    }
-
-    /**
-     * Gets line2
-     *
-     * @return string|null
-     */
-    public function getLine2()
-    {
-        return $this->container['line2'];
-    }
-
-    /**
-     * Sets line2
-     *
-     * @param string|null $line2 line2
-     *
-     * @return self
-     */
-    public function setLine2($line2)
-    {
-        if (is_null($line2)) {
-            throw new \InvalidArgumentException('non-nullable line2 cannot be null');
-        }
-        $this->container['line2'] = $line2;
-
-        return $this;
-    }
-
-    /**
-     * Gets stateProvince
-     *
-     * @return string|null
-     */
-    public function getStateProvince()
-    {
-        return $this->container['stateProvince'];
-    }
-
-    /**
-     * Sets stateProvince
-     *
-     * @param string|null $stateProvince stateProvince
-     *
-     * @return self
-     */
-    public function setStateProvince($stateProvince)
-    {
-        if (is_null($stateProvince)) {
-            throw new \InvalidArgumentException('non-nullable stateProvince cannot be null');
-        }
-        $this->container['stateProvince'] = $stateProvince;
-
-        return $this;
-    }
-
-    /**
-     * Gets country
-     *
-     * @return string|null
-     */
-    public function getCountry()
-    {
-        return $this->container['country'];
-    }
-
-    /**
-     * Sets country
-     *
-     * @param string|null $country country
-     *
-     * @return self
-     */
-    public function setCountry($country)
-    {
-        if (is_null($country)) {
-            throw new \InvalidArgumentException('non-nullable country cannot be null');
-        }
-        $this->container['country'] = $country;
-
-        return $this;
-    }
-
-    /**
-     * Gets postalCode
-     *
-     * @return string|null
-     */
-    public function getPostalCode()
-    {
-        return $this->container['postalCode'];
-    }
-
-    /**
-     * Sets postalCode
-     *
-     * @param string|null $postalCode postalCode
-     *
-     * @return self
-     */
-    public function setPostalCode($postalCode)
-    {
-        if (is_null($postalCode)) {
-            throw new \InvalidArgumentException('non-nullable postalCode cannot be null');
-        }
-        $this->container['postalCode'] = $postalCode;
-
-        return $this;
-    }
-
-    /**
-     * Gets dateSince
+     * Gets startDate
      *
      * @return \DateTime|null
      */
-    public function getDateSince()
+    public function getStartDate()
     {
-        return $this->container['dateSince'];
+        return $this->container['startDate'];
     }
 
     /**
-     * Sets dateSince
+     * Sets startDate
      *
-     * @param \DateTime|null $dateSince dateSince
+     * @param \DateTime|null $startDate startDate
      *
      * @return self
      */
-    public function setDateSince($dateSince)
+    public function setStartDate($startDate)
     {
-        if (is_null($dateSince)) {
-            array_push($this->openAPINullablesSetToNull, 'dateSince');
+        if (is_null($startDate)) {
+            array_push($this->openAPINullablesSetToNull, 'startDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('dateSince', $nullablesSetToNull);
+            $index = array_search('startDate', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['dateSince'] = $dateSince;
+        $this->container['startDate'] = $startDate;
 
         return $this;
     }
 
     /**
-     * Gets city
+     * Gets endDate
      *
-     * @return string|null
+     * @return \DateTime|null
      */
-    public function getCity()
+    public function getEndDate()
     {
-        return $this->container['city'];
+        return $this->container['endDate'];
     }
 
     /**
-     * Sets city
+     * Sets endDate
      *
-     * @param string|null $city city
+     * @param \DateTime|null $endDate endDate
      *
      * @return self
      */
-    public function setCity($city)
+    public function setEndDate($endDate)
     {
-        if (is_null($city)) {
-            throw new \InvalidArgumentException('non-nullable city cannot be null');
+        if (is_null($endDate)) {
+            array_push($this->openAPINullablesSetToNull, 'endDate');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('endDate', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
-        $this->container['city'] = $city;
+        $this->container['endDate'] = $endDate;
 
         return $this;
     }
 
     /**
-     * Gets locked
+     * Gets status
      *
-     * @return bool|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
      */
-    public function getLocked()
+    public function getStatus()
     {
-        return $this->container['locked'];
+        return $this->container['status'];
     }
 
     /**
-     * Sets locked
+     * Sets status
      *
-     * @param bool|null $locked locked
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $status status
      *
      * @return self
      */
-    public function setLocked($locked)
+    public function setStatus($status)
     {
-        if (is_null($locked)) {
-            throw new \InvalidArgumentException('non-nullable locked cannot be null');
+        if (is_null($status)) {
+            array_push($this->openAPINullablesSetToNull, 'status');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('status', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
-        $this->container['locked'] = $locked;
+        $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets marriageContract
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
+     */
+    public function getMarriageContract()
+    {
+        return $this->container['marriageContract'];
+    }
+
+    /**
+     * Sets marriageContract
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $marriageContract marriageContract
+     *
+     * @return self
+     */
+    public function setMarriageContract($marriageContract)
+    {
+        if (is_null($marriageContract)) {
+            array_push($this->openAPINullablesSetToNull, 'marriageContract');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('marriageContract', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['marriageContract'] = $marriageContract;
 
         return $this;
     }

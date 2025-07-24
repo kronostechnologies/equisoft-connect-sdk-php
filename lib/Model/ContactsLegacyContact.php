@@ -1,6 +1,6 @@
 <?php
 /**
- * ContactsTemporaryContact
+ * ContactsLegacyContact
  *
  * PHP version 8.1
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * ContactsTemporaryContact Class Doc Comment
+ * ContactsLegacyContact Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
@@ -40,7 +40,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ContactsTemporaryContact implements ModelInterface, ArrayAccess, \JsonSerializable
+class ContactsLegacyContact implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ContactsTemporaryContact implements ModelInterface, ArrayAccess, \JsonSeri
       *
       * @var string
       */
-    protected static $openAPIModelName = 'contacts.TemporaryContact';
+    protected static $openAPIModelName = 'contacts.LegacyContact';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -76,7 +76,8 @@ class ContactsTemporaryContact implements ModelInterface, ArrayAccess, \JsonSeri
         'addresses' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsAddress[]',
         'phones' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsPhone[]',
         'emails' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsEmail[]',
-        'websites' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsWebSite[]'
+        'websites' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsWebSite[]',
+        'links' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsLegacyContactRelation[]'
     ];
 
     /**
@@ -106,7 +107,8 @@ class ContactsTemporaryContact implements ModelInterface, ArrayAccess, \JsonSeri
         'addresses' => null,
         'phones' => null,
         'emails' => null,
-        'websites' => null
+        'websites' => null,
+        'links' => null
     ];
 
     /**
@@ -134,7 +136,8 @@ class ContactsTemporaryContact implements ModelInterface, ArrayAccess, \JsonSeri
         'addresses' => false,
         'phones' => false,
         'emails' => false,
-        'websites' => false
+        'websites' => false,
+        'links' => false
     ];
 
     /**
@@ -242,7 +245,8 @@ class ContactsTemporaryContact implements ModelInterface, ArrayAccess, \JsonSeri
         'addresses' => 'addresses',
         'phones' => 'phones',
         'emails' => 'emails',
-        'websites' => 'websites'
+        'websites' => 'websites',
+        'links' => 'links'
     ];
 
     /**
@@ -270,7 +274,8 @@ class ContactsTemporaryContact implements ModelInterface, ArrayAccess, \JsonSeri
         'addresses' => 'setAddresses',
         'phones' => 'setPhones',
         'emails' => 'setEmails',
-        'websites' => 'setWebsites'
+        'websites' => 'setWebsites',
+        'links' => 'setLinks'
     ];
 
     /**
@@ -298,7 +303,8 @@ class ContactsTemporaryContact implements ModelInterface, ArrayAccess, \JsonSeri
         'addresses' => 'getAddresses',
         'phones' => 'getPhones',
         'emails' => 'getEmails',
-        'websites' => 'getWebsites'
+        'websites' => 'getWebsites',
+        'links' => 'getLinks'
     ];
 
     /**
@@ -378,6 +384,7 @@ class ContactsTemporaryContact implements ModelInterface, ArrayAccess, \JsonSeri
         $this->setIfExists('phones', $data ?? [], null);
         $this->setIfExists('emails', $data ?? [], null);
         $this->setIfExists('websites', $data ?? [], null);
+        $this->setIfExists('links', $data ?? [], null);
     }
 
     /**
@@ -1002,6 +1009,35 @@ class ContactsTemporaryContact implements ModelInterface, ArrayAccess, \JsonSeri
             throw new \InvalidArgumentException('non-nullable websites cannot be null');
         }
         $this->container['websites'] = $websites;
+
+        return $this;
+    }
+
+    /**
+     * Gets links
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsLegacyContactRelation[]|null
+     * @deprecated
+     */
+    public function getLinks()
+    {
+        return $this->container['links'];
+    }
+
+    /**
+     * Sets links
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsLegacyContactRelation[]|null $links links
+     *
+     * @return self
+     * @deprecated
+     */
+    public function setLinks($links)
+    {
+        if (is_null($links)) {
+            throw new \InvalidArgumentException('non-nullable links cannot be null');
+        }
+        $this->container['links'] = $links;
 
         return $this;
     }

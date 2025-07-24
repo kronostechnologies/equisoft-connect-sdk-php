@@ -1,6 +1,6 @@
 <?php
 /**
- * ContactsAddressTest
+ * ContactsContactFieldValueTest
  *
  * PHP version 8.1
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ContactsAddressTest Class Doc Comment
+ * ContactsContactFieldValueTest Class Doc Comment
  *
  * @category    Class
- * @description ContactsAddress
+ * @description ContactsContactFieldValue
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ContactsAddressTest extends TestCase
+class ContactsContactFieldValueTest extends TestCase
 {
 
     /**
@@ -71,9 +71,9 @@ class ContactsAddressTest extends TestCase
     }
 
     /**
-     * Test "ContactsAddress"
+     * Test "ContactsContactFieldValue"
      */
-    public function testContactsAddress()
+    public function testContactsContactFieldValue()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -89,99 +89,27 @@ class ContactsAddressTest extends TestCase
     }
 
     /**
-     * Test attribute "type"
+     * Test attribute "label"
      */
-    public function testPropertyType()
+    public function testPropertyLabel()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "isMain"
+     * Test attribute "systemName"
      */
-    public function testPropertyIsMain()
+    public function testPropertySystemName()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "isPostal"
+     * Test attribute "translations"
      */
-    public function testPropertyIsPostal()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "line1"
-     */
-    public function testPropertyLine1()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "line2"
-     */
-    public function testPropertyLine2()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "stateProvince"
-     */
-    public function testPropertyStateProvince()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "country"
-     */
-    public function testPropertyCountry()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "postalCode"
-     */
-    public function testPropertyPostalCode()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "dateSince"
-     */
-    public function testPropertyDateSince()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "city"
-     */
-    public function testPropertyCity()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "locked"
-     */
-    public function testPropertyLocked()
+    public function testPropertyTranslations()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

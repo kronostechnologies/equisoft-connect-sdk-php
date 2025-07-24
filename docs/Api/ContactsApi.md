@@ -4,7 +4,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**getByUuid()**](ContactsApi.md#getByUuid) | **GET** /crm/api/v1/contacts/{contactUuid} | Return the detail of a contact. |
+| [**getByUuid()**](ContactsApi.md#getByUuid) | **GET** /crm/api/v1/contacts/{contactUuid} | Get contact by Uuid |
 | [**listContact()**](ContactsApi.md#listContact) | **GET** /crm/api/v1/contacts | List contact |
 | [**patchContact()**](ContactsApi.md#patchContact) | **PATCH** /crm/api/v1/contacts/{contactUuid} | Update a contact |
 
@@ -12,10 +12,10 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `getByUuid()`
 
 ```php
-getByUuid($contactUuid, $acceptLanguage): \Equisoft\SDK\EquisoftConnect\Model\ContactsContact
+getByUuid($contactUuid, $acceptLanguage): \Equisoft\SDK\EquisoftConnect\Model\ContactsLegacyContact
 ```
 
-Return the detail of a contact.
+Get contact by Uuid
 
 ### Example
 
@@ -54,7 +54,7 @@ try {
 
 ### Return type
 
-[**\Equisoft\SDK\EquisoftConnect\Model\ContactsContact**](../Model/ContactsContact.md)
+[**\Equisoft\SDK\EquisoftConnect\Model\ContactsLegacyContact**](../Model/ContactsLegacyContact.md)
 
 ### Authorization
 

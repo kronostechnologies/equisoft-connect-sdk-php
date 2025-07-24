@@ -89,27 +89,27 @@ class ContactsEmailTest extends TestCase
     }
 
     /**
-     * Test attribute "main"
+     * Test attribute "type"
      */
-    public function testPropertyMain()
+    public function testPropertyType()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "emailType"
+     * Test attribute "isMain"
      */
-    public function testPropertyEmailType()
+    public function testPropertyIsMain()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "emailAddress"
+     * Test attribute "email"
      */
-    public function testPropertyEmailAddress()
+    public function testPropertyEmail()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -119,6 +119,15 @@ class ContactsEmailTest extends TestCase
      * Test attribute "notes"
      */
     public function testPropertyNotes()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "locked"
+     */
+    public function testPropertyLocked()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

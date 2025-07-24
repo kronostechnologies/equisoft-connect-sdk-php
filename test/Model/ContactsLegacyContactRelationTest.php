@@ -1,6 +1,6 @@
 <?php
 /**
- * ContactsPhoneTest
+ * ContactsLegacyContactRelationTest
  *
  * PHP version 8.1
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ContactsPhoneTest Class Doc Comment
+ * ContactsLegacyContactRelationTest Class Doc Comment
  *
  * @category    Class
- * @description ContactsPhone
+ * @description ContactsLegacyContactRelation
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ContactsPhoneTest extends TestCase
+class ContactsLegacyContactRelationTest extends TestCase
 {
 
     /**
@@ -71,9 +71,9 @@ class ContactsPhoneTest extends TestCase
     }
 
     /**
-     * Test "ContactsPhone"
+     * Test "ContactsLegacyContactRelation"
      */
-    public function testContactsPhone()
+    public function testContactsLegacyContactRelation()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -89,63 +89,18 @@ class ContactsPhoneTest extends TestCase
     }
 
     /**
-     * Test attribute "isMain"
+     * Test attribute "linkType"
      */
-    public function testPropertyIsMain()
+    public function testPropertyLinkType()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "type"
+     * Test attribute "participants"
      */
-    public function testPropertyType()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "number"
-     */
-    public function testPropertyNumber()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "extension"
-     */
-    public function testPropertyExtension()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "longDistance"
-     */
-    public function testPropertyLongDistance()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "notes"
-     */
-    public function testPropertyNotes()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "locked"
-     */
-    public function testPropertyLocked()
+    public function testPropertyParticipants()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

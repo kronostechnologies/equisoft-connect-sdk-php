@@ -133,7 +133,7 @@ class ContactsApi
     /**
      * Operation getByUuid
      *
-     * Return the detail of a contact.
+     * Get contact by Uuid
      *
      * @param  string $contactUuid Contact unique identifier. (required)
      * @param  string|null $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
@@ -141,7 +141,7 @@ class ContactsApi
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContact|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsLegacyContact|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
     public function getByUuid($contactUuid, $acceptLanguage = null, string $contentType = self::contentTypes['getByUuid'][0])
     {
@@ -152,7 +152,7 @@ class ContactsApi
     /**
      * Operation getByUuidWithHttpInfo
      *
-     * Return the detail of a contact.
+     * Get contact by Uuid
      *
      * @param  string $contactUuid Contact unique identifier. (required)
      * @param  string|null $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
@@ -160,7 +160,7 @@ class ContactsApi
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Equisoft\SDK\EquisoftConnect\Model\ContactsContact|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\ContactsLegacyContact|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getByUuidWithHttpInfo($contactUuid, $acceptLanguage = null, string $contentType = self::contentTypes['getByUuid'][0])
     {
@@ -192,7 +192,7 @@ class ContactsApi
             switch($statusCode) {
                 case 200:
                     return $this->handleResponseWithDataType(
-                        '\Equisoft\SDK\EquisoftConnect\Model\ContactsContact',
+                        '\Equisoft\SDK\EquisoftConnect\Model\ContactsLegacyContact',
                         $request,
                         $response,
                     );
@@ -202,13 +202,13 @@ class ContactsApi
                         $request,
                         $response,
                     );
-                case 404:
+                case 500:
                     return $this->handleResponseWithDataType(
                         '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
                         $request,
                         $response,
                     );
-                case 500:
+                case 404:
                     return $this->handleResponseWithDataType(
                         '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
                         $request,
@@ -232,7 +232,7 @@ class ContactsApi
             }
 
             return $this->handleResponseWithDataType(
-                '\Equisoft\SDK\EquisoftConnect\Model\ContactsContact',
+                '\Equisoft\SDK\EquisoftConnect\Model\ContactsLegacyContact',
                 $request,
                 $response,
             );
@@ -241,7 +241,7 @@ class ContactsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Equisoft\SDK\EquisoftConnect\Model\ContactsContact',
+                        '\Equisoft\SDK\EquisoftConnect\Model\ContactsLegacyContact',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -254,7 +254,7 @@ class ContactsApi
                     );
                     $e->setResponseObject($data);
                     throw $e;
-                case 404:
+                case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
@@ -262,7 +262,7 @@ class ContactsApi
                     );
                     $e->setResponseObject($data);
                     throw $e;
-                case 500:
+                case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
@@ -280,7 +280,7 @@ class ContactsApi
     /**
      * Operation getByUuidAsync
      *
-     * Return the detail of a contact.
+     * Get contact by Uuid
      *
      * @param  string $contactUuid Contact unique identifier. (required)
      * @param  string|null $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
@@ -302,7 +302,7 @@ class ContactsApi
     /**
      * Operation getByUuidAsyncWithHttpInfo
      *
-     * Return the detail of a contact.
+     * Get contact by Uuid
      *
      * @param  string $contactUuid Contact unique identifier. (required)
      * @param  string|null $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
@@ -313,7 +313,7 @@ class ContactsApi
      */
     public function getByUuidAsyncWithHttpInfo($contactUuid, $acceptLanguage = null, string $contentType = self::contentTypes['getByUuid'][0])
     {
-        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\ContactsContact';
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\ContactsLegacyContact';
         $request = $this->getByUuidRequest($contactUuid, $acceptLanguage, $contentType);
 
         return $this->client

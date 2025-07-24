@@ -58,12 +58,13 @@ class ContactsPhone implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'main' => 'bool',
-        'phoneType' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValueLocalizedString',
-        'phoneNumber' => 'string',
+        'isMain' => 'bool',
+        'type' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
+        'number' => 'string',
         'extension' => 'string',
         'longDistance' => 'bool',
-        'notes' => 'string'
+        'notes' => 'string',
+        'locked' => 'bool'
     ];
 
     /**
@@ -75,12 +76,13 @@ class ContactsPhone implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => null,
-        'main' => null,
-        'phoneType' => null,
-        'phoneNumber' => null,
+        'isMain' => null,
+        'type' => null,
+        'number' => null,
         'extension' => null,
         'longDistance' => null,
-        'notes' => null
+        'notes' => null,
+        'locked' => null
     ];
 
     /**
@@ -90,12 +92,13 @@ class ContactsPhone implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'main' => false,
-        'phoneType' => false,
-        'phoneNumber' => false,
-        'extension' => true,
+        'isMain' => false,
+        'type' => false,
+        'number' => false,
+        'extension' => false,
         'longDistance' => false,
-        'notes' => true
+        'notes' => false,
+        'locked' => false
     ];
 
     /**
@@ -185,12 +188,13 @@ class ContactsPhone implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'main' => 'main',
-        'phoneType' => 'phoneType',
-        'phoneNumber' => 'phoneNumber',
+        'isMain' => 'isMain',
+        'type' => 'type',
+        'number' => 'number',
         'extension' => 'extension',
         'longDistance' => 'longDistance',
-        'notes' => 'notes'
+        'notes' => 'notes',
+        'locked' => 'locked'
     ];
 
     /**
@@ -200,12 +204,13 @@ class ContactsPhone implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'main' => 'setMain',
-        'phoneType' => 'setPhoneType',
-        'phoneNumber' => 'setPhoneNumber',
+        'isMain' => 'setIsMain',
+        'type' => 'setType',
+        'number' => 'setNumber',
         'extension' => 'setExtension',
         'longDistance' => 'setLongDistance',
-        'notes' => 'setNotes'
+        'notes' => 'setNotes',
+        'locked' => 'setLocked'
     ];
 
     /**
@@ -215,12 +220,13 @@ class ContactsPhone implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'main' => 'getMain',
-        'phoneType' => 'getPhoneType',
-        'phoneNumber' => 'getPhoneNumber',
+        'isMain' => 'getIsMain',
+        'type' => 'getType',
+        'number' => 'getNumber',
         'extension' => 'getExtension',
         'longDistance' => 'getLongDistance',
-        'notes' => 'getNotes'
+        'notes' => 'getNotes',
+        'locked' => 'getLocked'
     ];
 
     /**
@@ -281,12 +287,13 @@ class ContactsPhone implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(?array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('main', $data ?? [], null);
-        $this->setIfExists('phoneType', $data ?? [], null);
-        $this->setIfExists('phoneNumber', $data ?? [], null);
+        $this->setIfExists('isMain', $data ?? [], null);
+        $this->setIfExists('type', $data ?? [], null);
+        $this->setIfExists('number', $data ?? [], null);
         $this->setIfExists('extension', $data ?? [], null);
         $this->setIfExists('longDistance', $data ?? [], null);
         $this->setIfExists('notes', $data ?? [], null);
+        $this->setIfExists('locked', $data ?? [], null);
     }
 
     /**
@@ -316,18 +323,6 @@ class ContactsPhone implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
-        }
-        if ($this->container['main'] === null) {
-            $invalidProperties[] = "'main' can't be null";
-        }
-        if ($this->container['phoneType'] === null) {
-            $invalidProperties[] = "'phoneType' can't be null";
-        }
-        if ($this->container['phoneNumber'] === null) {
-            $invalidProperties[] = "'phoneNumber' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -346,7 +341,7 @@ class ContactsPhone implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets id
      *
-     * @return int
+     * @return int|null
      */
     public function getId()
     {
@@ -356,7 +351,7 @@ class ContactsPhone implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param int $id id
+     * @param int|null $id id
      *
      * @return self
      */
@@ -371,82 +366,82 @@ class ContactsPhone implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets main
+     * Gets isMain
      *
-     * @return bool
+     * @return bool|null
      */
-    public function getMain()
+    public function getIsMain()
     {
-        return $this->container['main'];
+        return $this->container['isMain'];
     }
 
     /**
-     * Sets main
+     * Sets isMain
      *
-     * @param bool $main main
+     * @param bool|null $isMain isMain
      *
      * @return self
      */
-    public function setMain($main)
+    public function setIsMain($isMain)
     {
-        if (is_null($main)) {
-            throw new \InvalidArgumentException('non-nullable main cannot be null');
+        if (is_null($isMain)) {
+            throw new \InvalidArgumentException('non-nullable isMain cannot be null');
         }
-        $this->container['main'] = $main;
+        $this->container['isMain'] = $isMain;
 
         return $this;
     }
 
     /**
-     * Gets phoneType
+     * Gets type
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValueLocalizedString
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
      */
-    public function getPhoneType()
+    public function getType()
     {
-        return $this->container['phoneType'];
+        return $this->container['type'];
     }
 
     /**
-     * Sets phoneType
+     * Sets type
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValueLocalizedString $phoneType phoneType
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $type type
      *
      * @return self
      */
-    public function setPhoneType($phoneType)
+    public function setType($type)
     {
-        if (is_null($phoneType)) {
-            throw new \InvalidArgumentException('non-nullable phoneType cannot be null');
+        if (is_null($type)) {
+            throw new \InvalidArgumentException('non-nullable type cannot be null');
         }
-        $this->container['phoneType'] = $phoneType;
+        $this->container['type'] = $type;
 
         return $this;
     }
 
     /**
-     * Gets phoneNumber
+     * Gets number
      *
-     * @return string
+     * @return string|null
      */
-    public function getPhoneNumber()
+    public function getNumber()
     {
-        return $this->container['phoneNumber'];
+        return $this->container['number'];
     }
 
     /**
-     * Sets phoneNumber
+     * Sets number
      *
-     * @param string $phoneNumber phoneNumber
+     * @param string|null $number number
      *
      * @return self
      */
-    public function setPhoneNumber($phoneNumber)
+    public function setNumber($number)
     {
-        if (is_null($phoneNumber)) {
-            throw new \InvalidArgumentException('non-nullable phoneNumber cannot be null');
+        if (is_null($number)) {
+            throw new \InvalidArgumentException('non-nullable number cannot be null');
         }
-        $this->container['phoneNumber'] = $phoneNumber;
+        $this->container['number'] = $number;
 
         return $this;
     }
@@ -471,14 +466,7 @@ class ContactsPhone implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setExtension($extension)
     {
         if (is_null($extension)) {
-            array_push($this->openAPINullablesSetToNull, 'extension');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('extension', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+            throw new \InvalidArgumentException('non-nullable extension cannot be null');
         }
         $this->container['extension'] = $extension;
 
@@ -532,16 +520,36 @@ class ContactsPhone implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setNotes($notes)
     {
         if (is_null($notes)) {
-            array_push($this->openAPINullablesSetToNull, 'notes');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('notes', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+            throw new \InvalidArgumentException('non-nullable notes cannot be null');
         }
         $this->container['notes'] = $notes;
+
+        return $this;
+    }
+
+    /**
+     * Gets locked
+     *
+     * @return bool|null
+     */
+    public function getLocked()
+    {
+        return $this->container['locked'];
+    }
+
+    /**
+     * Sets locked
+     *
+     * @param bool|null $locked locked
+     *
+     * @return self
+     */
+    public function setLocked($locked)
+    {
+        if (is_null($locked)) {
+            throw new \InvalidArgumentException('non-nullable locked cannot be null');
+        }
+        $this->container['locked'] = $locked;
 
         return $this;
     }

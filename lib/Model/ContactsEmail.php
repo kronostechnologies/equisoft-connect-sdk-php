@@ -58,10 +58,11 @@ class ContactsEmail implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'main' => 'bool',
-        'emailType' => '\Equisoft\SDK\EquisoftConnect\Model\FieldValueLocalizedString',
-        'emailAddress' => 'string',
-        'notes' => 'string'
+        'type' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
+        'isMain' => 'bool',
+        'email' => 'string',
+        'notes' => 'string',
+        'locked' => 'bool'
     ];
 
     /**
@@ -73,10 +74,11 @@ class ContactsEmail implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => null,
-        'main' => null,
-        'emailType' => null,
-        'emailAddress' => null,
-        'notes' => null
+        'type' => null,
+        'isMain' => null,
+        'email' => null,
+        'notes' => null,
+        'locked' => null
     ];
 
     /**
@@ -86,10 +88,11 @@ class ContactsEmail implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'main' => false,
-        'emailType' => false,
-        'emailAddress' => false,
-        'notes' => true
+        'type' => false,
+        'isMain' => false,
+        'email' => false,
+        'notes' => false,
+        'locked' => false
     ];
 
     /**
@@ -179,10 +182,11 @@ class ContactsEmail implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'main' => 'main',
-        'emailType' => 'emailType',
-        'emailAddress' => 'emailAddress',
-        'notes' => 'notes'
+        'type' => 'type',
+        'isMain' => 'isMain',
+        'email' => 'email',
+        'notes' => 'notes',
+        'locked' => 'locked'
     ];
 
     /**
@@ -192,10 +196,11 @@ class ContactsEmail implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'main' => 'setMain',
-        'emailType' => 'setEmailType',
-        'emailAddress' => 'setEmailAddress',
-        'notes' => 'setNotes'
+        'type' => 'setType',
+        'isMain' => 'setIsMain',
+        'email' => 'setEmail',
+        'notes' => 'setNotes',
+        'locked' => 'setLocked'
     ];
 
     /**
@@ -205,10 +210,11 @@ class ContactsEmail implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'main' => 'getMain',
-        'emailType' => 'getEmailType',
-        'emailAddress' => 'getEmailAddress',
-        'notes' => 'getNotes'
+        'type' => 'getType',
+        'isMain' => 'getIsMain',
+        'email' => 'getEmail',
+        'notes' => 'getNotes',
+        'locked' => 'getLocked'
     ];
 
     /**
@@ -269,10 +275,11 @@ class ContactsEmail implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(?array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('main', $data ?? [], null);
-        $this->setIfExists('emailType', $data ?? [], null);
-        $this->setIfExists('emailAddress', $data ?? [], null);
+        $this->setIfExists('type', $data ?? [], null);
+        $this->setIfExists('isMain', $data ?? [], null);
+        $this->setIfExists('email', $data ?? [], null);
         $this->setIfExists('notes', $data ?? [], null);
+        $this->setIfExists('locked', $data ?? [], null);
     }
 
     /**
@@ -302,18 +309,6 @@ class ContactsEmail implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
-        }
-        if ($this->container['main'] === null) {
-            $invalidProperties[] = "'main' can't be null";
-        }
-        if ($this->container['emailType'] === null) {
-            $invalidProperties[] = "'emailType' can't be null";
-        }
-        if ($this->container['emailAddress'] === null) {
-            $invalidProperties[] = "'emailAddress' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -332,7 +327,7 @@ class ContactsEmail implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets id
      *
-     * @return int
+     * @return int|null
      */
     public function getId()
     {
@@ -342,7 +337,7 @@ class ContactsEmail implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param int $id id
+     * @param int|null $id id
      *
      * @return self
      */
@@ -357,82 +352,82 @@ class ContactsEmail implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets main
+     * Gets type
      *
-     * @return bool
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
      */
-    public function getMain()
+    public function getType()
     {
-        return $this->container['main'];
+        return $this->container['type'];
     }
 
     /**
-     * Sets main
+     * Sets type
      *
-     * @param bool $main main
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $type type
      *
      * @return self
      */
-    public function setMain($main)
+    public function setType($type)
     {
-        if (is_null($main)) {
-            throw new \InvalidArgumentException('non-nullable main cannot be null');
+        if (is_null($type)) {
+            throw new \InvalidArgumentException('non-nullable type cannot be null');
         }
-        $this->container['main'] = $main;
+        $this->container['type'] = $type;
 
         return $this;
     }
 
     /**
-     * Gets emailType
+     * Gets isMain
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValueLocalizedString
+     * @return bool|null
      */
-    public function getEmailType()
+    public function getIsMain()
     {
-        return $this->container['emailType'];
+        return $this->container['isMain'];
     }
 
     /**
-     * Sets emailType
+     * Sets isMain
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\FieldValueLocalizedString $emailType emailType
+     * @param bool|null $isMain isMain
      *
      * @return self
      */
-    public function setEmailType($emailType)
+    public function setIsMain($isMain)
     {
-        if (is_null($emailType)) {
-            throw new \InvalidArgumentException('non-nullable emailType cannot be null');
+        if (is_null($isMain)) {
+            throw new \InvalidArgumentException('non-nullable isMain cannot be null');
         }
-        $this->container['emailType'] = $emailType;
+        $this->container['isMain'] = $isMain;
 
         return $this;
     }
 
     /**
-     * Gets emailAddress
+     * Gets email
      *
-     * @return string
+     * @return string|null
      */
-    public function getEmailAddress()
+    public function getEmail()
     {
-        return $this->container['emailAddress'];
+        return $this->container['email'];
     }
 
     /**
-     * Sets emailAddress
+     * Sets email
      *
-     * @param string $emailAddress emailAddress
+     * @param string|null $email email
      *
      * @return self
      */
-    public function setEmailAddress($emailAddress)
+    public function setEmail($email)
     {
-        if (is_null($emailAddress)) {
-            throw new \InvalidArgumentException('non-nullable emailAddress cannot be null');
+        if (is_null($email)) {
+            throw new \InvalidArgumentException('non-nullable email cannot be null');
         }
-        $this->container['emailAddress'] = $emailAddress;
+        $this->container['email'] = $email;
 
         return $this;
     }
@@ -457,16 +452,36 @@ class ContactsEmail implements ModelInterface, ArrayAccess, \JsonSerializable
     public function setNotes($notes)
     {
         if (is_null($notes)) {
-            array_push($this->openAPINullablesSetToNull, 'notes');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('notes', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+            throw new \InvalidArgumentException('non-nullable notes cannot be null');
         }
         $this->container['notes'] = $notes;
+
+        return $this;
+    }
+
+    /**
+     * Gets locked
+     *
+     * @return bool|null
+     */
+    public function getLocked()
+    {
+        return $this->container['locked'];
+    }
+
+    /**
+     * Sets locked
+     *
+     * @param bool|null $locked locked
+     *
+     * @return self
+     */
+    public function setLocked($locked)
+    {
+        if (is_null($locked)) {
+            throw new \InvalidArgumentException('non-nullable locked cannot be null');
+        }
+        $this->container['locked'] = $locked;
 
         return $this;
     }

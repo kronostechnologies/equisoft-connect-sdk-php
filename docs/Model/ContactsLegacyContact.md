@@ -1,4 +1,4 @@
-# # ContactsTemporaryContact
+# # ContactsLegacyContact
 
 ## Properties
 
@@ -24,5 +24,6 @@ Name | Type | Description | Notes
 **phones** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsPhone[]**](ContactsPhone.md) |  | [optional]
 **emails** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsEmail[]**](ContactsEmail.md) |  | [optional]
 **websites** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsWebSite[]**](ContactsWebSite.md) |  | [optional]
+**links** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsLegacyContactRelation[]**](ContactsLegacyContactRelation.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

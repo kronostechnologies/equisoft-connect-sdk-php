@@ -1,6 +1,6 @@
 <?php
 /**
- * ContactsAddress
+ * ContactsAdditionalInformation
  *
  * PHP version 8.1
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * ContactsAddress Class Doc Comment
+ * ContactsAdditionalInformation Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
@@ -40,7 +40,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ContactsAddress implements ModelInterface, ArrayAccess, \JsonSerializable
+class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ContactsAddress implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'contacts.Address';
+    protected static $openAPIModelName = 'contacts.AdditionalInformation';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,18 +57,16 @@ class ContactsAddress implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'int',
-        'type' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
-        'isMain' => 'bool',
-        'isPostal' => 'bool',
-        'line1' => 'string',
-        'line2' => 'string',
-        'stateProvince' => 'string',
-        'country' => 'string',
-        'postalCode' => 'string',
-        'dateSince' => '\DateTime',
-        'city' => 'string',
-        'locked' => 'bool'
+        'isDeceased' => 'bool',
+        'deceasedDate' => '\DateTime',
+        'isSmoker' => 'bool',
+        'smokerEndDate' => '\DateTime',
+        'birthDate' => '\DateTime',
+        'facebookLink' => 'string',
+        'twitterLink' => 'string',
+        'linkedInLink' => 'string',
+        'language' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
+        'pictureId' => 'int'
     ];
 
     /**
@@ -79,18 +77,16 @@ class ContactsAddress implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null,
-        'type' => null,
-        'isMain' => null,
-        'isPostal' => null,
-        'line1' => null,
-        'line2' => null,
-        'stateProvince' => null,
-        'country' => null,
-        'postalCode' => null,
-        'dateSince' => 'date',
-        'city' => null,
-        'locked' => null
+        'isDeceased' => null,
+        'deceasedDate' => 'date',
+        'isSmoker' => null,
+        'smokerEndDate' => 'date',
+        'birthDate' => 'date',
+        'facebookLink' => null,
+        'twitterLink' => null,
+        'linkedInLink' => null,
+        'language' => null,
+        'pictureId' => null
     ];
 
     /**
@@ -99,18 +95,16 @@ class ContactsAddress implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'id' => false,
-        'type' => false,
-        'isMain' => false,
-        'isPostal' => false,
-        'line1' => false,
-        'line2' => false,
-        'stateProvince' => false,
-        'country' => false,
-        'postalCode' => false,
-        'dateSince' => true,
-        'city' => false,
-        'locked' => false
+        'isDeceased' => false,
+        'deceasedDate' => true,
+        'isSmoker' => true,
+        'smokerEndDate' => true,
+        'birthDate' => true,
+        'facebookLink' => false,
+        'twitterLink' => false,
+        'linkedInLink' => false,
+        'language' => true,
+        'pictureId' => true
     ];
 
     /**
@@ -199,18 +193,16 @@ class ContactsAddress implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'type' => 'type',
-        'isMain' => 'isMain',
-        'isPostal' => 'isPostal',
-        'line1' => 'line1',
-        'line2' => 'line2',
-        'stateProvince' => 'stateProvince',
-        'country' => 'country',
-        'postalCode' => 'postalCode',
-        'dateSince' => 'dateSince',
-        'city' => 'city',
-        'locked' => 'locked'
+        'isDeceased' => 'isDeceased',
+        'deceasedDate' => 'deceasedDate',
+        'isSmoker' => 'isSmoker',
+        'smokerEndDate' => 'smokerEndDate',
+        'birthDate' => 'birthDate',
+        'facebookLink' => 'facebookLink',
+        'twitterLink' => 'twitterLink',
+        'linkedInLink' => 'linkedInLink',
+        'language' => 'language',
+        'pictureId' => 'pictureId'
     ];
 
     /**
@@ -219,18 +211,16 @@ class ContactsAddress implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'type' => 'setType',
-        'isMain' => 'setIsMain',
-        'isPostal' => 'setIsPostal',
-        'line1' => 'setLine1',
-        'line2' => 'setLine2',
-        'stateProvince' => 'setStateProvince',
-        'country' => 'setCountry',
-        'postalCode' => 'setPostalCode',
-        'dateSince' => 'setDateSince',
-        'city' => 'setCity',
-        'locked' => 'setLocked'
+        'isDeceased' => 'setIsDeceased',
+        'deceasedDate' => 'setDeceasedDate',
+        'isSmoker' => 'setIsSmoker',
+        'smokerEndDate' => 'setSmokerEndDate',
+        'birthDate' => 'setBirthDate',
+        'facebookLink' => 'setFacebookLink',
+        'twitterLink' => 'setTwitterLink',
+        'linkedInLink' => 'setLinkedInLink',
+        'language' => 'setLanguage',
+        'pictureId' => 'setPictureId'
     ];
 
     /**
@@ -239,18 +229,16 @@ class ContactsAddress implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'type' => 'getType',
-        'isMain' => 'getIsMain',
-        'isPostal' => 'getIsPostal',
-        'line1' => 'getLine1',
-        'line2' => 'getLine2',
-        'stateProvince' => 'getStateProvince',
-        'country' => 'getCountry',
-        'postalCode' => 'getPostalCode',
-        'dateSince' => 'getDateSince',
-        'city' => 'getCity',
-        'locked' => 'getLocked'
+        'isDeceased' => 'getIsDeceased',
+        'deceasedDate' => 'getDeceasedDate',
+        'isSmoker' => 'getIsSmoker',
+        'smokerEndDate' => 'getSmokerEndDate',
+        'birthDate' => 'getBirthDate',
+        'facebookLink' => 'getFacebookLink',
+        'twitterLink' => 'getTwitterLink',
+        'linkedInLink' => 'getLinkedInLink',
+        'language' => 'getLanguage',
+        'pictureId' => 'getPictureId'
     ];
 
     /**
@@ -310,18 +298,16 @@ class ContactsAddress implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('type', $data ?? [], null);
-        $this->setIfExists('isMain', $data ?? [], null);
-        $this->setIfExists('isPostal', $data ?? [], null);
-        $this->setIfExists('line1', $data ?? [], null);
-        $this->setIfExists('line2', $data ?? [], null);
-        $this->setIfExists('stateProvince', $data ?? [], null);
-        $this->setIfExists('country', $data ?? [], null);
-        $this->setIfExists('postalCode', $data ?? [], null);
-        $this->setIfExists('dateSince', $data ?? [], null);
-        $this->setIfExists('city', $data ?? [], null);
-        $this->setIfExists('locked', $data ?? [], null);
+        $this->setIfExists('isDeceased', $data ?? [], null);
+        $this->setIfExists('deceasedDate', $data ?? [], null);
+        $this->setIfExists('isSmoker', $data ?? [], null);
+        $this->setIfExists('smokerEndDate', $data ?? [], null);
+        $this->setIfExists('birthDate', $data ?? [], null);
+        $this->setIfExists('facebookLink', $data ?? [], null);
+        $this->setIfExists('twitterLink', $data ?? [], null);
+        $this->setIfExists('linkedInLink', $data ?? [], null);
+        $this->setIfExists('language', $data ?? [], null);
+        $this->setIfExists('pictureId', $data ?? [], null);
     }
 
     /**
@@ -367,332 +353,313 @@ class ContactsAddress implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets id
-     *
-     * @return int|null
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param int|null $id id
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
-        }
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $type type
-     *
-     * @return self
-     */
-    public function setType($type)
-    {
-        if (is_null($type)) {
-            throw new \InvalidArgumentException('non-nullable type cannot be null');
-        }
-        $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets isMain
+     * Gets isDeceased
      *
      * @return bool|null
      */
-    public function getIsMain()
+    public function getIsDeceased()
     {
-        return $this->container['isMain'];
+        return $this->container['isDeceased'];
     }
 
     /**
-     * Sets isMain
+     * Sets isDeceased
      *
-     * @param bool|null $isMain isMain
+     * @param bool|null $isDeceased isDeceased
      *
      * @return self
      */
-    public function setIsMain($isMain)
+    public function setIsDeceased($isDeceased)
     {
-        if (is_null($isMain)) {
-            throw new \InvalidArgumentException('non-nullable isMain cannot be null');
+        if (is_null($isDeceased)) {
+            throw new \InvalidArgumentException('non-nullable isDeceased cannot be null');
         }
-        $this->container['isMain'] = $isMain;
+        $this->container['isDeceased'] = $isDeceased;
 
         return $this;
     }
 
     /**
-     * Gets isPostal
-     *
-     * @return bool|null
-     */
-    public function getIsPostal()
-    {
-        return $this->container['isPostal'];
-    }
-
-    /**
-     * Sets isPostal
-     *
-     * @param bool|null $isPostal isPostal
-     *
-     * @return self
-     */
-    public function setIsPostal($isPostal)
-    {
-        if (is_null($isPostal)) {
-            throw new \InvalidArgumentException('non-nullable isPostal cannot be null');
-        }
-        $this->container['isPostal'] = $isPostal;
-
-        return $this;
-    }
-
-    /**
-     * Gets line1
-     *
-     * @return string|null
-     */
-    public function getLine1()
-    {
-        return $this->container['line1'];
-    }
-
-    /**
-     * Sets line1
-     *
-     * @param string|null $line1 line1
-     *
-     * @return self
-     */
-    public function setLine1($line1)
-    {
-        if (is_null($line1)) {
-            throw new \InvalidArgumentException('non-nullable line1 cannot be null');
-        }
-        $this->container['line1'] = $line1;
-
-        return $this;
-    }
-
-    /**
-     * Gets line2
-     *
-     * @return string|null
-     */
-    public function getLine2()
-    {
-        return $this->container['line2'];
-    }
-
-    /**
-     * Sets line2
-     *
-     * @param string|null $line2 line2
-     *
-     * @return self
-     */
-    public function setLine2($line2)
-    {
-        if (is_null($line2)) {
-            throw new \InvalidArgumentException('non-nullable line2 cannot be null');
-        }
-        $this->container['line2'] = $line2;
-
-        return $this;
-    }
-
-    /**
-     * Gets stateProvince
-     *
-     * @return string|null
-     */
-    public function getStateProvince()
-    {
-        return $this->container['stateProvince'];
-    }
-
-    /**
-     * Sets stateProvince
-     *
-     * @param string|null $stateProvince stateProvince
-     *
-     * @return self
-     */
-    public function setStateProvince($stateProvince)
-    {
-        if (is_null($stateProvince)) {
-            throw new \InvalidArgumentException('non-nullable stateProvince cannot be null');
-        }
-        $this->container['stateProvince'] = $stateProvince;
-
-        return $this;
-    }
-
-    /**
-     * Gets country
-     *
-     * @return string|null
-     */
-    public function getCountry()
-    {
-        return $this->container['country'];
-    }
-
-    /**
-     * Sets country
-     *
-     * @param string|null $country country
-     *
-     * @return self
-     */
-    public function setCountry($country)
-    {
-        if (is_null($country)) {
-            throw new \InvalidArgumentException('non-nullable country cannot be null');
-        }
-        $this->container['country'] = $country;
-
-        return $this;
-    }
-
-    /**
-     * Gets postalCode
-     *
-     * @return string|null
-     */
-    public function getPostalCode()
-    {
-        return $this->container['postalCode'];
-    }
-
-    /**
-     * Sets postalCode
-     *
-     * @param string|null $postalCode postalCode
-     *
-     * @return self
-     */
-    public function setPostalCode($postalCode)
-    {
-        if (is_null($postalCode)) {
-            throw new \InvalidArgumentException('non-nullable postalCode cannot be null');
-        }
-        $this->container['postalCode'] = $postalCode;
-
-        return $this;
-    }
-
-    /**
-     * Gets dateSince
+     * Gets deceasedDate
      *
      * @return \DateTime|null
      */
-    public function getDateSince()
+    public function getDeceasedDate()
     {
-        return $this->container['dateSince'];
+        return $this->container['deceasedDate'];
     }
 
     /**
-     * Sets dateSince
+     * Sets deceasedDate
      *
-     * @param \DateTime|null $dateSince dateSince
+     * @param \DateTime|null $deceasedDate deceasedDate
      *
      * @return self
      */
-    public function setDateSince($dateSince)
+    public function setDeceasedDate($deceasedDate)
     {
-        if (is_null($dateSince)) {
-            array_push($this->openAPINullablesSetToNull, 'dateSince');
+        if (is_null($deceasedDate)) {
+            array_push($this->openAPINullablesSetToNull, 'deceasedDate');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('dateSince', $nullablesSetToNull);
+            $index = array_search('deceasedDate', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['dateSince'] = $dateSince;
+        $this->container['deceasedDate'] = $deceasedDate;
 
         return $this;
     }
 
     /**
-     * Gets city
-     *
-     * @return string|null
-     */
-    public function getCity()
-    {
-        return $this->container['city'];
-    }
-
-    /**
-     * Sets city
-     *
-     * @param string|null $city city
-     *
-     * @return self
-     */
-    public function setCity($city)
-    {
-        if (is_null($city)) {
-            throw new \InvalidArgumentException('non-nullable city cannot be null');
-        }
-        $this->container['city'] = $city;
-
-        return $this;
-    }
-
-    /**
-     * Gets locked
+     * Gets isSmoker
      *
      * @return bool|null
      */
-    public function getLocked()
+    public function getIsSmoker()
     {
-        return $this->container['locked'];
+        return $this->container['isSmoker'];
     }
 
     /**
-     * Sets locked
+     * Sets isSmoker
      *
-     * @param bool|null $locked locked
+     * @param bool|null $isSmoker isSmoker
      *
      * @return self
      */
-    public function setLocked($locked)
+    public function setIsSmoker($isSmoker)
     {
-        if (is_null($locked)) {
-            throw new \InvalidArgumentException('non-nullable locked cannot be null');
+        if (is_null($isSmoker)) {
+            array_push($this->openAPINullablesSetToNull, 'isSmoker');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('isSmoker', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
-        $this->container['locked'] = $locked;
+        $this->container['isSmoker'] = $isSmoker;
+
+        return $this;
+    }
+
+    /**
+     * Gets smokerEndDate
+     *
+     * @return \DateTime|null
+     */
+    public function getSmokerEndDate()
+    {
+        return $this->container['smokerEndDate'];
+    }
+
+    /**
+     * Sets smokerEndDate
+     *
+     * @param \DateTime|null $smokerEndDate smokerEndDate
+     *
+     * @return self
+     */
+    public function setSmokerEndDate($smokerEndDate)
+    {
+        if (is_null($smokerEndDate)) {
+            array_push($this->openAPINullablesSetToNull, 'smokerEndDate');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('smokerEndDate', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['smokerEndDate'] = $smokerEndDate;
+
+        return $this;
+    }
+
+    /**
+     * Gets birthDate
+     *
+     * @return \DateTime|null
+     */
+    public function getBirthDate()
+    {
+        return $this->container['birthDate'];
+    }
+
+    /**
+     * Sets birthDate
+     *
+     * @param \DateTime|null $birthDate birthDate
+     *
+     * @return self
+     */
+    public function setBirthDate($birthDate)
+    {
+        if (is_null($birthDate)) {
+            array_push($this->openAPINullablesSetToNull, 'birthDate');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('birthDate', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['birthDate'] = $birthDate;
+
+        return $this;
+    }
+
+    /**
+     * Gets facebookLink
+     *
+     * @return string|null
+     */
+    public function getFacebookLink()
+    {
+        return $this->container['facebookLink'];
+    }
+
+    /**
+     * Sets facebookLink
+     *
+     * @param string|null $facebookLink facebookLink
+     *
+     * @return self
+     */
+    public function setFacebookLink($facebookLink)
+    {
+        if (is_null($facebookLink)) {
+            throw new \InvalidArgumentException('non-nullable facebookLink cannot be null');
+        }
+        $this->container['facebookLink'] = $facebookLink;
+
+        return $this;
+    }
+
+    /**
+     * Gets twitterLink
+     *
+     * @return string|null
+     */
+    public function getTwitterLink()
+    {
+        return $this->container['twitterLink'];
+    }
+
+    /**
+     * Sets twitterLink
+     *
+     * @param string|null $twitterLink twitterLink
+     *
+     * @return self
+     */
+    public function setTwitterLink($twitterLink)
+    {
+        if (is_null($twitterLink)) {
+            throw new \InvalidArgumentException('non-nullable twitterLink cannot be null');
+        }
+        $this->container['twitterLink'] = $twitterLink;
+
+        return $this;
+    }
+
+    /**
+     * Gets linkedInLink
+     *
+     * @return string|null
+     */
+    public function getLinkedInLink()
+    {
+        return $this->container['linkedInLink'];
+    }
+
+    /**
+     * Sets linkedInLink
+     *
+     * @param string|null $linkedInLink linkedInLink
+     *
+     * @return self
+     */
+    public function setLinkedInLink($linkedInLink)
+    {
+        if (is_null($linkedInLink)) {
+            throw new \InvalidArgumentException('non-nullable linkedInLink cannot be null');
+        }
+        $this->container['linkedInLink'] = $linkedInLink;
+
+        return $this;
+    }
+
+    /**
+     * Gets language
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
+     */
+    public function getLanguage()
+    {
+        return $this->container['language'];
+    }
+
+    /**
+     * Sets language
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $language language
+     *
+     * @return self
+     */
+    public function setLanguage($language)
+    {
+        if (is_null($language)) {
+            array_push($this->openAPINullablesSetToNull, 'language');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('language', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['language'] = $language;
+
+        return $this;
+    }
+
+    /**
+     * Gets pictureId
+     *
+     * @return int|null
+     */
+    public function getPictureId()
+    {
+        return $this->container['pictureId'];
+    }
+
+    /**
+     * Sets pictureId
+     *
+     * @param int|null $pictureId pictureId
+     *
+     * @return self
+     */
+    public function setPictureId($pictureId)
+    {
+        if (is_null($pictureId)) {
+            array_push($this->openAPINullablesSetToNull, 'pictureId');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('pictureId', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['pictureId'] = $pictureId;
 
         return $this;
     }

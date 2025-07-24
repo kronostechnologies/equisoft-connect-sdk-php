@@ -1,6 +1,6 @@
 <?php
 /**
- * ContactsAddressTest
+ * ContactsAdditionalInformationTest
  *
  * PHP version 8.1
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ContactsAddressTest Class Doc Comment
+ * ContactsAdditionalInformationTest Class Doc Comment
  *
  * @category    Class
- * @description ContactsAddress
+ * @description ContactsAdditionalInformation
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ContactsAddressTest extends TestCase
+class ContactsAdditionalInformationTest extends TestCase
 {
 
     /**
@@ -71,117 +71,99 @@ class ContactsAddressTest extends TestCase
     }
 
     /**
-     * Test "ContactsAddress"
+     * Test "ContactsAdditionalInformation"
      */
-    public function testContactsAddress()
+    public function testContactsAdditionalInformation()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "isDeceased"
      */
-    public function testPropertyId()
+    public function testPropertyIsDeceased()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "type"
+     * Test attribute "deceasedDate"
      */
-    public function testPropertyType()
+    public function testPropertyDeceasedDate()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "isMain"
+     * Test attribute "isSmoker"
      */
-    public function testPropertyIsMain()
+    public function testPropertyIsSmoker()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "isPostal"
+     * Test attribute "smokerEndDate"
      */
-    public function testPropertyIsPostal()
+    public function testPropertySmokerEndDate()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "line1"
+     * Test attribute "birthDate"
      */
-    public function testPropertyLine1()
+    public function testPropertyBirthDate()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "line2"
+     * Test attribute "facebookLink"
      */
-    public function testPropertyLine2()
+    public function testPropertyFacebookLink()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "stateProvince"
+     * Test attribute "twitterLink"
      */
-    public function testPropertyStateProvince()
+    public function testPropertyTwitterLink()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "country"
+     * Test attribute "linkedInLink"
      */
-    public function testPropertyCountry()
+    public function testPropertyLinkedInLink()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "postalCode"
+     * Test attribute "language"
      */
-    public function testPropertyPostalCode()
+    public function testPropertyLanguage()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "dateSince"
+     * Test attribute "pictureId"
      */
-    public function testPropertyDateSince()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "city"
-     */
-    public function testPropertyCity()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "locked"
-     */
-    public function testPropertyLocked()
+    public function testPropertyPictureId()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

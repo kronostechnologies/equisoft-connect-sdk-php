@@ -1,6 +1,6 @@
 <?php
 /**
- * ContactsAddressTest
+ * ContactsIndividualIdentificationTest
  *
  * PHP version 8.1
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ContactsAddressTest Class Doc Comment
+ * ContactsIndividualIdentificationTest Class Doc Comment
  *
  * @category    Class
- * @description ContactsAddress
+ * @description ContactsIndividualIdentification
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ContactsAddressTest extends TestCase
+class ContactsIndividualIdentificationTest extends TestCase
 {
 
     /**
@@ -71,18 +71,9 @@ class ContactsAddressTest extends TestCase
     }
 
     /**
-     * Test "ContactsAddress"
+     * Test "ContactsIndividualIdentification"
      */
-    public function testContactsAddress()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "id"
-     */
-    public function testPropertyId()
+    public function testContactsIndividualIdentification()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -98,90 +89,81 @@ class ContactsAddressTest extends TestCase
     }
 
     /**
-     * Test attribute "isMain"
+     * Test attribute "title"
      */
-    public function testPropertyIsMain()
+    public function testPropertyTitle()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "isPostal"
+     * Test attribute "gender"
      */
-    public function testPropertyIsPostal()
+    public function testPropertyGender()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "line1"
+     * Test attribute "firstName"
      */
-    public function testPropertyLine1()
+    public function testPropertyFirstName()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "line2"
+     * Test attribute "middleName"
      */
-    public function testPropertyLine2()
+    public function testPropertyMiddleName()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "stateProvince"
+     * Test attribute "lastName"
      */
-    public function testPropertyStateProvince()
+    public function testPropertyLastName()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "country"
+     * Test attribute "maidenName"
      */
-    public function testPropertyCountry()
+    public function testPropertyMaidenName()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "postalCode"
+     * Test attribute "suffix"
      */
-    public function testPropertyPostalCode()
+    public function testPropertySuffix()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "dateSince"
+     * Test attribute "greeting"
      */
-    public function testPropertyDateSince()
+    public function testPropertyGreeting()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "city"
+     * Test attribute "clientNb"
      */
-    public function testPropertyCity()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "locked"
-     */
-    public function testPropertyLocked()
+    public function testPropertyClientNb()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

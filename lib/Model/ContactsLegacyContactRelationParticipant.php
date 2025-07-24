@@ -1,6 +1,6 @@
 <?php
 /**
- * ContactsAddress
+ * ContactsLegacyContactRelationParticipant
  *
  * PHP version 8.1
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * ContactsAddress Class Doc Comment
+ * ContactsLegacyContactRelationParticipant Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
@@ -40,7 +40,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ContactsAddress implements ModelInterface, ArrayAccess, \JsonSerializable
+class ContactsLegacyContactRelationParticipant implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ContactsAddress implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'contacts.Address';
+    protected static $openAPIModelName = 'contacts.LegacyContactRelationParticipant';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,18 +57,13 @@ class ContactsAddress implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'int',
-        'type' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
-        'isMain' => 'bool',
-        'isPostal' => 'bool',
-        'line1' => 'string',
-        'line2' => 'string',
-        'stateProvince' => 'string',
-        'country' => 'string',
-        'postalCode' => 'string',
-        'dateSince' => '\DateTime',
-        'city' => 'string',
-        'locked' => 'bool'
+        'linkRole' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
+        'uuid' => 'string',
+        'displayName' => 'string',
+        'firstName' => 'string',
+        'lastName' => 'string',
+        'gender' => 'string',
+        'birthDate' => '\DateTime'
     ];
 
     /**
@@ -79,18 +74,13 @@ class ContactsAddress implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null,
-        'type' => null,
-        'isMain' => null,
-        'isPostal' => null,
-        'line1' => null,
-        'line2' => null,
-        'stateProvince' => null,
-        'country' => null,
-        'postalCode' => null,
-        'dateSince' => 'date',
-        'city' => null,
-        'locked' => null
+        'linkRole' => null,
+        'uuid' => null,
+        'displayName' => null,
+        'firstName' => null,
+        'lastName' => null,
+        'gender' => null,
+        'birthDate' => 'date'
     ];
 
     /**
@@ -99,18 +89,13 @@ class ContactsAddress implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'id' => false,
-        'type' => false,
-        'isMain' => false,
-        'isPostal' => false,
-        'line1' => false,
-        'line2' => false,
-        'stateProvince' => false,
-        'country' => false,
-        'postalCode' => false,
-        'dateSince' => true,
-        'city' => false,
-        'locked' => false
+        'linkRole' => true,
+        'uuid' => false,
+        'displayName' => false,
+        'firstName' => false,
+        'lastName' => false,
+        'gender' => false,
+        'birthDate' => true
     ];
 
     /**
@@ -199,18 +184,13 @@ class ContactsAddress implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'type' => 'type',
-        'isMain' => 'isMain',
-        'isPostal' => 'isPostal',
-        'line1' => 'line1',
-        'line2' => 'line2',
-        'stateProvince' => 'stateProvince',
-        'country' => 'country',
-        'postalCode' => 'postalCode',
-        'dateSince' => 'dateSince',
-        'city' => 'city',
-        'locked' => 'locked'
+        'linkRole' => 'linkRole',
+        'uuid' => 'uuid',
+        'displayName' => 'displayName',
+        'firstName' => 'firstName',
+        'lastName' => 'lastName',
+        'gender' => 'gender',
+        'birthDate' => 'birthDate'
     ];
 
     /**
@@ -219,18 +199,13 @@ class ContactsAddress implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'type' => 'setType',
-        'isMain' => 'setIsMain',
-        'isPostal' => 'setIsPostal',
-        'line1' => 'setLine1',
-        'line2' => 'setLine2',
-        'stateProvince' => 'setStateProvince',
-        'country' => 'setCountry',
-        'postalCode' => 'setPostalCode',
-        'dateSince' => 'setDateSince',
-        'city' => 'setCity',
-        'locked' => 'setLocked'
+        'linkRole' => 'setLinkRole',
+        'uuid' => 'setUuid',
+        'displayName' => 'setDisplayName',
+        'firstName' => 'setFirstName',
+        'lastName' => 'setLastName',
+        'gender' => 'setGender',
+        'birthDate' => 'setBirthDate'
     ];
 
     /**
@@ -239,18 +214,13 @@ class ContactsAddress implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'type' => 'getType',
-        'isMain' => 'getIsMain',
-        'isPostal' => 'getIsPostal',
-        'line1' => 'getLine1',
-        'line2' => 'getLine2',
-        'stateProvince' => 'getStateProvince',
-        'country' => 'getCountry',
-        'postalCode' => 'getPostalCode',
-        'dateSince' => 'getDateSince',
-        'city' => 'getCity',
-        'locked' => 'getLocked'
+        'linkRole' => 'getLinkRole',
+        'uuid' => 'getUuid',
+        'displayName' => 'getDisplayName',
+        'firstName' => 'getFirstName',
+        'lastName' => 'getLastName',
+        'gender' => 'getGender',
+        'birthDate' => 'getBirthDate'
     ];
 
     /**
@@ -310,18 +280,13 @@ class ContactsAddress implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('type', $data ?? [], null);
-        $this->setIfExists('isMain', $data ?? [], null);
-        $this->setIfExists('isPostal', $data ?? [], null);
-        $this->setIfExists('line1', $data ?? [], null);
-        $this->setIfExists('line2', $data ?? [], null);
-        $this->setIfExists('stateProvince', $data ?? [], null);
-        $this->setIfExists('country', $data ?? [], null);
-        $this->setIfExists('postalCode', $data ?? [], null);
-        $this->setIfExists('dateSince', $data ?? [], null);
-        $this->setIfExists('city', $data ?? [], null);
-        $this->setIfExists('locked', $data ?? [], null);
+        $this->setIfExists('linkRole', $data ?? [], null);
+        $this->setIfExists('uuid', $data ?? [], null);
+        $this->setIfExists('displayName', $data ?? [], null);
+        $this->setIfExists('firstName', $data ?? [], null);
+        $this->setIfExists('lastName', $data ?? [], null);
+        $this->setIfExists('gender', $data ?? [], null);
+        $this->setIfExists('birthDate', $data ?? [], null);
     }
 
     /**
@@ -367,332 +332,204 @@ class ContactsAddress implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets id
-     *
-     * @return int|null
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param int|null $id id
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
-        }
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
+     * Gets linkRole
      *
      * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
      */
-    public function getType()
+    public function getLinkRole()
     {
-        return $this->container['type'];
+        return $this->container['linkRole'];
     }
 
     /**
-     * Sets type
+     * Sets linkRole
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $type type
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $linkRole linkRole
      *
      * @return self
      */
-    public function setType($type)
+    public function setLinkRole($linkRole)
     {
-        if (is_null($type)) {
-            throw new \InvalidArgumentException('non-nullable type cannot be null');
-        }
-        $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets isMain
-     *
-     * @return bool|null
-     */
-    public function getIsMain()
-    {
-        return $this->container['isMain'];
-    }
-
-    /**
-     * Sets isMain
-     *
-     * @param bool|null $isMain isMain
-     *
-     * @return self
-     */
-    public function setIsMain($isMain)
-    {
-        if (is_null($isMain)) {
-            throw new \InvalidArgumentException('non-nullable isMain cannot be null');
-        }
-        $this->container['isMain'] = $isMain;
-
-        return $this;
-    }
-
-    /**
-     * Gets isPostal
-     *
-     * @return bool|null
-     */
-    public function getIsPostal()
-    {
-        return $this->container['isPostal'];
-    }
-
-    /**
-     * Sets isPostal
-     *
-     * @param bool|null $isPostal isPostal
-     *
-     * @return self
-     */
-    public function setIsPostal($isPostal)
-    {
-        if (is_null($isPostal)) {
-            throw new \InvalidArgumentException('non-nullable isPostal cannot be null');
-        }
-        $this->container['isPostal'] = $isPostal;
-
-        return $this;
-    }
-
-    /**
-     * Gets line1
-     *
-     * @return string|null
-     */
-    public function getLine1()
-    {
-        return $this->container['line1'];
-    }
-
-    /**
-     * Sets line1
-     *
-     * @param string|null $line1 line1
-     *
-     * @return self
-     */
-    public function setLine1($line1)
-    {
-        if (is_null($line1)) {
-            throw new \InvalidArgumentException('non-nullable line1 cannot be null');
-        }
-        $this->container['line1'] = $line1;
-
-        return $this;
-    }
-
-    /**
-     * Gets line2
-     *
-     * @return string|null
-     */
-    public function getLine2()
-    {
-        return $this->container['line2'];
-    }
-
-    /**
-     * Sets line2
-     *
-     * @param string|null $line2 line2
-     *
-     * @return self
-     */
-    public function setLine2($line2)
-    {
-        if (is_null($line2)) {
-            throw new \InvalidArgumentException('non-nullable line2 cannot be null');
-        }
-        $this->container['line2'] = $line2;
-
-        return $this;
-    }
-
-    /**
-     * Gets stateProvince
-     *
-     * @return string|null
-     */
-    public function getStateProvince()
-    {
-        return $this->container['stateProvince'];
-    }
-
-    /**
-     * Sets stateProvince
-     *
-     * @param string|null $stateProvince stateProvince
-     *
-     * @return self
-     */
-    public function setStateProvince($stateProvince)
-    {
-        if (is_null($stateProvince)) {
-            throw new \InvalidArgumentException('non-nullable stateProvince cannot be null');
-        }
-        $this->container['stateProvince'] = $stateProvince;
-
-        return $this;
-    }
-
-    /**
-     * Gets country
-     *
-     * @return string|null
-     */
-    public function getCountry()
-    {
-        return $this->container['country'];
-    }
-
-    /**
-     * Sets country
-     *
-     * @param string|null $country country
-     *
-     * @return self
-     */
-    public function setCountry($country)
-    {
-        if (is_null($country)) {
-            throw new \InvalidArgumentException('non-nullable country cannot be null');
-        }
-        $this->container['country'] = $country;
-
-        return $this;
-    }
-
-    /**
-     * Gets postalCode
-     *
-     * @return string|null
-     */
-    public function getPostalCode()
-    {
-        return $this->container['postalCode'];
-    }
-
-    /**
-     * Sets postalCode
-     *
-     * @param string|null $postalCode postalCode
-     *
-     * @return self
-     */
-    public function setPostalCode($postalCode)
-    {
-        if (is_null($postalCode)) {
-            throw new \InvalidArgumentException('non-nullable postalCode cannot be null');
-        }
-        $this->container['postalCode'] = $postalCode;
-
-        return $this;
-    }
-
-    /**
-     * Gets dateSince
-     *
-     * @return \DateTime|null
-     */
-    public function getDateSince()
-    {
-        return $this->container['dateSince'];
-    }
-
-    /**
-     * Sets dateSince
-     *
-     * @param \DateTime|null $dateSince dateSince
-     *
-     * @return self
-     */
-    public function setDateSince($dateSince)
-    {
-        if (is_null($dateSince)) {
-            array_push($this->openAPINullablesSetToNull, 'dateSince');
+        if (is_null($linkRole)) {
+            array_push($this->openAPINullablesSetToNull, 'linkRole');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('dateSince', $nullablesSetToNull);
+            $index = array_search('linkRole', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['dateSince'] = $dateSince;
+        $this->container['linkRole'] = $linkRole;
 
         return $this;
     }
 
     /**
-     * Gets city
+     * Gets uuid
      *
      * @return string|null
      */
-    public function getCity()
+    public function getUuid()
     {
-        return $this->container['city'];
+        return $this->container['uuid'];
     }
 
     /**
-     * Sets city
+     * Sets uuid
      *
-     * @param string|null $city city
+     * @param string|null $uuid uuid
      *
      * @return self
      */
-    public function setCity($city)
+    public function setUuid($uuid)
     {
-        if (is_null($city)) {
-            throw new \InvalidArgumentException('non-nullable city cannot be null');
+        if (is_null($uuid)) {
+            throw new \InvalidArgumentException('non-nullable uuid cannot be null');
         }
-        $this->container['city'] = $city;
+        $this->container['uuid'] = $uuid;
 
         return $this;
     }
 
     /**
-     * Gets locked
+     * Gets displayName
      *
-     * @return bool|null
+     * @return string|null
      */
-    public function getLocked()
+    public function getDisplayName()
     {
-        return $this->container['locked'];
+        return $this->container['displayName'];
     }
 
     /**
-     * Sets locked
+     * Sets displayName
      *
-     * @param bool|null $locked locked
+     * @param string|null $displayName displayName
      *
      * @return self
      */
-    public function setLocked($locked)
+    public function setDisplayName($displayName)
     {
-        if (is_null($locked)) {
-            throw new \InvalidArgumentException('non-nullable locked cannot be null');
+        if (is_null($displayName)) {
+            throw new \InvalidArgumentException('non-nullable displayName cannot be null');
         }
-        $this->container['locked'] = $locked;
+        $this->container['displayName'] = $displayName;
+
+        return $this;
+    }
+
+    /**
+     * Gets firstName
+     *
+     * @return string|null
+     */
+    public function getFirstName()
+    {
+        return $this->container['firstName'];
+    }
+
+    /**
+     * Sets firstName
+     *
+     * @param string|null $firstName firstName
+     *
+     * @return self
+     */
+    public function setFirstName($firstName)
+    {
+        if (is_null($firstName)) {
+            throw new \InvalidArgumentException('non-nullable firstName cannot be null');
+        }
+        $this->container['firstName'] = $firstName;
+
+        return $this;
+    }
+
+    /**
+     * Gets lastName
+     *
+     * @return string|null
+     */
+    public function getLastName()
+    {
+        return $this->container['lastName'];
+    }
+
+    /**
+     * Sets lastName
+     *
+     * @param string|null $lastName lastName
+     *
+     * @return self
+     */
+    public function setLastName($lastName)
+    {
+        if (is_null($lastName)) {
+            throw new \InvalidArgumentException('non-nullable lastName cannot be null');
+        }
+        $this->container['lastName'] = $lastName;
+
+        return $this;
+    }
+
+    /**
+     * Gets gender
+     *
+     * @return string|null
+     */
+    public function getGender()
+    {
+        return $this->container['gender'];
+    }
+
+    /**
+     * Sets gender
+     *
+     * @param string|null $gender gender
+     *
+     * @return self
+     */
+    public function setGender($gender)
+    {
+        if (is_null($gender)) {
+            throw new \InvalidArgumentException('non-nullable gender cannot be null');
+        }
+        $this->container['gender'] = $gender;
+
+        return $this;
+    }
+
+    /**
+     * Gets birthDate
+     *
+     * @return \DateTime|null
+     */
+    public function getBirthDate()
+    {
+        return $this->container['birthDate'];
+    }
+
+    /**
+     * Sets birthDate
+     *
+     * @param \DateTime|null $birthDate birthDate
+     *
+     * @return self
+     */
+    public function setBirthDate($birthDate)
+    {
+        if (is_null($birthDate)) {
+            array_push($this->openAPINullablesSetToNull, 'birthDate');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('birthDate', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['birthDate'] = $birthDate;
 
         return $this;
     }

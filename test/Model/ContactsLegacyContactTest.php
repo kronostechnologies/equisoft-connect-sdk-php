@@ -1,6 +1,6 @@
 <?php
 /**
- * ContactsTemporaryContactTest
+ * ContactsLegacyContactTest
  *
  * PHP version 8.1
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ContactsTemporaryContactTest Class Doc Comment
+ * ContactsLegacyContactTest Class Doc Comment
  *
  * @category    Class
- * @description ContactsTemporaryContact
+ * @description ContactsLegacyContact
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ContactsTemporaryContactTest extends TestCase
+class ContactsLegacyContactTest extends TestCase
 {
 
     /**
@@ -71,9 +71,9 @@ class ContactsTemporaryContactTest extends TestCase
     }
 
     /**
-     * Test "ContactsTemporaryContact"
+     * Test "ContactsLegacyContact"
      */
-    public function testContactsTemporaryContact()
+    public function testContactsLegacyContact()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -254,6 +254,15 @@ class ContactsTemporaryContactTest extends TestCase
      * Test attribute "websites"
      */
     public function testPropertyWebsites()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "links"
+     */
+    public function testPropertyLinks()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
