@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  |
+**systemName** | **string** |  | [optional]
 **name** | **string** |  |
 **dealerName** | **string** |  | [optional]
 

@@ -89,6 +89,15 @@ class GatewaysGatewayDtoTest extends TestCase
     }
 
     /**
+     * Test attribute "systemName"
+     */
+    public function testPropertySystemName()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "name"
      */
     public function testPropertyName()

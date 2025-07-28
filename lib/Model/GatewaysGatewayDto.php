@@ -58,6 +58,7 @@ class GatewaysGatewayDto implements ModelInterface, ArrayAccess, \JsonSerializab
       */
     protected static $openAPITypes = [
         'id' => 'int',
+        'systemName' => 'string',
         'name' => 'string',
         'dealerName' => 'string'
     ];
@@ -71,6 +72,7 @@ class GatewaysGatewayDto implements ModelInterface, ArrayAccess, \JsonSerializab
       */
     protected static $openAPIFormats = [
         'id' => null,
+        'systemName' => null,
         'name' => null,
         'dealerName' => null
     ];
@@ -82,6 +84,7 @@ class GatewaysGatewayDto implements ModelInterface, ArrayAccess, \JsonSerializab
       */
     protected static array $openAPINullables = [
         'id' => false,
+        'systemName' => false,
         'name' => false,
         'dealerName' => true
     ];
@@ -173,6 +176,7 @@ class GatewaysGatewayDto implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'systemName' => 'systemName',
         'name' => 'name',
         'dealerName' => 'dealerName'
     ];
@@ -184,6 +188,7 @@ class GatewaysGatewayDto implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     protected static $setters = [
         'id' => 'setId',
+        'systemName' => 'setSystemName',
         'name' => 'setName',
         'dealerName' => 'setDealerName'
     ];
@@ -195,6 +200,7 @@ class GatewaysGatewayDto implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     protected static $getters = [
         'id' => 'getId',
+        'systemName' => 'getSystemName',
         'name' => 'getName',
         'dealerName' => 'getDealerName'
     ];
@@ -257,6 +263,7 @@ class GatewaysGatewayDto implements ModelInterface, ArrayAccess, \JsonSerializab
     public function __construct(?array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
+        $this->setIfExists('systemName', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('dealerName', $data ?? [], null);
     }
@@ -332,6 +339,33 @@ class GatewaysGatewayDto implements ModelInterface, ArrayAccess, \JsonSerializab
             throw new \InvalidArgumentException('non-nullable id cannot be null');
         }
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets systemName
+     *
+     * @return string|null
+     */
+    public function getSystemName()
+    {
+        return $this->container['systemName'];
+    }
+
+    /**
+     * Sets systemName
+     *
+     * @param string|null $systemName systemName
+     *
+     * @return self
+     */
+    public function setSystemName($systemName)
+    {
+        if (is_null($systemName)) {
+            throw new \InvalidArgumentException('non-nullable systemName cannot be null');
+        }
+        $this->container['systemName'] = $systemName;
 
         return $this;
     }
