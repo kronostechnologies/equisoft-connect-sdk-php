@@ -429,7 +429,7 @@ class ContactsIndividualIdentification implements ModelInterface, ArrayAccess, \
     /**
      * Sets gender
      *
-     * @param string|null $gender gender
+     * @param string|null $gender Individual's gender
      *
      * @return self
      */
@@ -456,7 +456,7 @@ class ContactsIndividualIdentification implements ModelInterface, ArrayAccess, \
     /**
      * Sets firstName
      *
-     * @param string|null $firstName firstName
+     * @param string|null $firstName Individual's first name
      *
      * @return self
      */
@@ -483,7 +483,7 @@ class ContactsIndividualIdentification implements ModelInterface, ArrayAccess, \
     /**
      * Sets middleName
      *
-     * @param string|null $middleName middleName
+     * @param string|null $middleName Individual's middle name
      *
      * @return self
      */
@@ -510,7 +510,7 @@ class ContactsIndividualIdentification implements ModelInterface, ArrayAccess, \
     /**
      * Sets lastName
      *
-     * @param string|null $lastName lastName
+     * @param string|null $lastName Individual's last name
      *
      * @return self
      */
@@ -537,7 +537,7 @@ class ContactsIndividualIdentification implements ModelInterface, ArrayAccess, \
     /**
      * Sets maidenName
      *
-     * @param string|null $maidenName maidenName
+     * @param string|null $maidenName Individual's maiden name
      *
      * @return self
      */
@@ -564,7 +564,7 @@ class ContactsIndividualIdentification implements ModelInterface, ArrayAccess, \
     /**
      * Sets suffix
      *
-     * @param string|null $suffix suffix
+     * @param string|null $suffix Individual's suffix
      *
      * @return self
      */
@@ -591,7 +591,7 @@ class ContactsIndividualIdentification implements ModelInterface, ArrayAccess, \
     /**
      * Sets greeting
      *
-     * @param string|null $greeting greeting
+     * @param string|null $greeting Individual's greeting
      *
      * @return self
      */
@@ -618,7 +618,7 @@ class ContactsIndividualIdentification implements ModelInterface, ArrayAccess, \
     /**
      * Sets clientNb
      *
-     * @param string|null $clientNb clientNb
+     * @param string|null $clientNb Individual's client number
      *
      * @return self
      */

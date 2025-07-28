@@ -170,18 +170,18 @@ class ContactsIdentificationTest extends TestCase
     }
 
     /**
-     * Test attribute "line1"
+     * Test attribute "nameLine1"
      */
-    public function testPropertyLine1()
+    public function testPropertyNameLine1()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "line2"
+     * Test attribute "nameLine2"
      */
-    public function testPropertyLine2()
+    public function testPropertyNameLine2()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

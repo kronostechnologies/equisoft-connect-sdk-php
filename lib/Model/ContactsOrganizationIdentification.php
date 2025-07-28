@@ -58,8 +58,8 @@ class ContactsOrganizationIdentification implements ModelInterface, ArrayAccess,
       */
     protected static $openAPITypes = [
         'type' => '\Equisoft\SDK\EquisoftConnect\Model\ContactIdentificationType',
-        'line1' => 'string',
-        'line2' => 'string',
+        'nameLine1' => 'string',
+        'nameLine2' => 'string',
         'abbreviation' => 'string'
     ];
 
@@ -72,8 +72,8 @@ class ContactsOrganizationIdentification implements ModelInterface, ArrayAccess,
       */
     protected static $openAPIFormats = [
         'type' => null,
-        'line1' => null,
-        'line2' => null,
+        'nameLine1' => null,
+        'nameLine2' => null,
         'abbreviation' => null
     ];
 
@@ -84,8 +84,8 @@ class ContactsOrganizationIdentification implements ModelInterface, ArrayAccess,
       */
     protected static array $openAPINullables = [
         'type' => false,
-        'line1' => false,
-        'line2' => false,
+        'nameLine1' => false,
+        'nameLine2' => false,
         'abbreviation' => false
     ];
 
@@ -176,8 +176,8 @@ class ContactsOrganizationIdentification implements ModelInterface, ArrayAccess,
      */
     protected static $attributeMap = [
         'type' => 'type',
-        'line1' => 'line1',
-        'line2' => 'line2',
+        'nameLine1' => 'nameLine1',
+        'nameLine2' => 'nameLine2',
         'abbreviation' => 'abbreviation'
     ];
 
@@ -188,8 +188,8 @@ class ContactsOrganizationIdentification implements ModelInterface, ArrayAccess,
      */
     protected static $setters = [
         'type' => 'setType',
-        'line1' => 'setLine1',
-        'line2' => 'setLine2',
+        'nameLine1' => 'setNameLine1',
+        'nameLine2' => 'setNameLine2',
         'abbreviation' => 'setAbbreviation'
     ];
 
@@ -200,8 +200,8 @@ class ContactsOrganizationIdentification implements ModelInterface, ArrayAccess,
      */
     protected static $getters = [
         'type' => 'getType',
-        'line1' => 'getLine1',
-        'line2' => 'getLine2',
+        'nameLine1' => 'getNameLine1',
+        'nameLine2' => 'getNameLine2',
         'abbreviation' => 'getAbbreviation'
     ];
 
@@ -263,8 +263,8 @@ class ContactsOrganizationIdentification implements ModelInterface, ArrayAccess,
     public function __construct(?array $data = null)
     {
         $this->setIfExists('type', $data ?? [], null);
-        $this->setIfExists('line1', $data ?? [], null);
-        $this->setIfExists('line2', $data ?? [], null);
+        $this->setIfExists('nameLine1', $data ?? [], null);
+        $this->setIfExists('nameLine2', $data ?? [], null);
         $this->setIfExists('abbreviation', $data ?? [], null);
     }
 
@@ -341,55 +341,55 @@ class ContactsOrganizationIdentification implements ModelInterface, ArrayAccess,
     }
 
     /**
-     * Gets line1
+     * Gets nameLine1
      *
      * @return string|null
      */
-    public function getLine1()
+    public function getNameLine1()
     {
-        return $this->container['line1'];
+        return $this->container['nameLine1'];
     }
 
     /**
-     * Sets line1
+     * Sets nameLine1
      *
-     * @param string|null $line1 line1
+     * @param string|null $nameLine1 Organization's name line one
      *
      * @return self
      */
-    public function setLine1($line1)
+    public function setNameLine1($nameLine1)
     {
-        if (is_null($line1)) {
-            throw new \InvalidArgumentException('non-nullable line1 cannot be null');
+        if (is_null($nameLine1)) {
+            throw new \InvalidArgumentException('non-nullable nameLine1 cannot be null');
         }
-        $this->container['line1'] = $line1;
+        $this->container['nameLine1'] = $nameLine1;
 
         return $this;
     }
 
     /**
-     * Gets line2
+     * Gets nameLine2
      *
      * @return string|null
      */
-    public function getLine2()
+    public function getNameLine2()
     {
-        return $this->container['line2'];
+        return $this->container['nameLine2'];
     }
 
     /**
-     * Sets line2
+     * Sets nameLine2
      *
-     * @param string|null $line2 line2
+     * @param string|null $nameLine2 Organization's name line two
      *
      * @return self
      */
-    public function setLine2($line2)
+    public function setNameLine2($nameLine2)
     {
-        if (is_null($line2)) {
-            throw new \InvalidArgumentException('non-nullable line2 cannot be null');
+        if (is_null($nameLine2)) {
+            throw new \InvalidArgumentException('non-nullable nameLine2 cannot be null');
         }
-        $this->container['line2'] = $line2;
+        $this->container['nameLine2'] = $nameLine2;
 
         return $this;
     }
@@ -407,7 +407,7 @@ class ContactsOrganizationIdentification implements ModelInterface, ArrayAccess,
     /**
      * Sets abbreviation
      *
-     * @param string|null $abbreviation abbreviation
+     * @param string|null $abbreviation Organization's name abbreviated
      *
      * @return self
      */
