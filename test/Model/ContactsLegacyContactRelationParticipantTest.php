@@ -80,18 +80,18 @@ class ContactsLegacyContactRelationParticipantTest extends TestCase
     }
 
     /**
-     * Test attribute "linkRole"
+     * Test attribute "uuid"
      */
-    public function testPropertyLinkRole()
+    public function testPropertyUuid()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "uuid"
+     * Test attribute "linkRole"
      */
-    public function testPropertyUuid()
+    public function testPropertyLinkRole()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

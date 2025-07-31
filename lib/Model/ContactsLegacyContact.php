@@ -63,20 +63,20 @@ class ContactsLegacyContact implements ModelInterface, ArrayAccess, \JsonSeriali
         'indOrg' => 'string',
         'displayName' => 'string',
         'sortName' => 'string',
-        'notes' => 'string',
-        'notesAdditionalInformation' => 'string',
-        'creationDate' => '\DateTime',
-        'lastUpdateDate' => '\DateTime',
         'identification' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsIdentification',
         'additionalInformation' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsAdditionalInformation',
-        'currentMaritalStatus' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsCivilStatus',
-        'currentCivilStatus' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsCivilStatus',
-        'currentOccupation' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsOccupation',
         'segmentation' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsSegmentation',
         'addresses' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsAddress[]',
         'phones' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsPhone[]',
         'emails' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsEmail[]',
         'websites' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsWebSite[]',
+        'notes' => 'string',
+        'notesAdditionalInformation' => 'string',
+        'creationDate' => '\DateTime',
+        'lastUpdateDate' => '\DateTime',
+        'currentMaritalStatus' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsCivilStatus',
+        'currentCivilStatus' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsCivilStatus',
+        'currentOccupation' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsOccupation',
         'links' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsLegacyContactRelation[]'
     ];
 
@@ -94,20 +94,20 @@ class ContactsLegacyContact implements ModelInterface, ArrayAccess, \JsonSeriali
         'indOrg' => null,
         'displayName' => null,
         'sortName' => null,
-        'notes' => null,
-        'notesAdditionalInformation' => null,
-        'creationDate' => 'date-time',
-        'lastUpdateDate' => 'date-time',
         'identification' => null,
         'additionalInformation' => null,
-        'currentMaritalStatus' => null,
-        'currentCivilStatus' => null,
-        'currentOccupation' => null,
         'segmentation' => null,
         'addresses' => null,
         'phones' => null,
         'emails' => null,
         'websites' => null,
+        'notes' => null,
+        'notesAdditionalInformation' => null,
+        'creationDate' => 'date-time',
+        'lastUpdateDate' => 'date-time',
+        'currentMaritalStatus' => null,
+        'currentCivilStatus' => null,
+        'currentOccupation' => null,
         'links' => null
     ];
 
@@ -123,20 +123,20 @@ class ContactsLegacyContact implements ModelInterface, ArrayAccess, \JsonSeriali
         'indOrg' => false,
         'displayName' => false,
         'sortName' => false,
-        'notes' => false,
-        'notesAdditionalInformation' => false,
-        'creationDate' => true,
-        'lastUpdateDate' => true,
         'identification' => false,
         'additionalInformation' => false,
-        'currentMaritalStatus' => true,
-        'currentCivilStatus' => true,
-        'currentOccupation' => true,
         'segmentation' => false,
         'addresses' => false,
         'phones' => false,
         'emails' => false,
         'websites' => false,
+        'notes' => false,
+        'notesAdditionalInformation' => false,
+        'creationDate' => true,
+        'lastUpdateDate' => true,
+        'currentMaritalStatus' => true,
+        'currentCivilStatus' => true,
+        'currentOccupation' => true,
         'links' => false
     ];
 
@@ -232,20 +232,20 @@ class ContactsLegacyContact implements ModelInterface, ArrayAccess, \JsonSeriali
         'indOrg' => 'indOrg',
         'displayName' => 'displayName',
         'sortName' => 'sortName',
-        'notes' => 'notes',
-        'notesAdditionalInformation' => 'notesAdditionalInformation',
-        'creationDate' => 'creationDate',
-        'lastUpdateDate' => 'lastUpdateDate',
         'identification' => 'identification',
         'additionalInformation' => 'additionalInformation',
-        'currentMaritalStatus' => 'currentMaritalStatus',
-        'currentCivilStatus' => 'currentCivilStatus',
-        'currentOccupation' => 'currentOccupation',
         'segmentation' => 'segmentation',
         'addresses' => 'addresses',
         'phones' => 'phones',
         'emails' => 'emails',
         'websites' => 'websites',
+        'notes' => 'notes',
+        'notesAdditionalInformation' => 'notesAdditionalInformation',
+        'creationDate' => 'creationDate',
+        'lastUpdateDate' => 'lastUpdateDate',
+        'currentMaritalStatus' => 'currentMaritalStatus',
+        'currentCivilStatus' => 'currentCivilStatus',
+        'currentOccupation' => 'currentOccupation',
         'links' => 'links'
     ];
 
@@ -261,20 +261,20 @@ class ContactsLegacyContact implements ModelInterface, ArrayAccess, \JsonSeriali
         'indOrg' => 'setIndOrg',
         'displayName' => 'setDisplayName',
         'sortName' => 'setSortName',
-        'notes' => 'setNotes',
-        'notesAdditionalInformation' => 'setNotesAdditionalInformation',
-        'creationDate' => 'setCreationDate',
-        'lastUpdateDate' => 'setLastUpdateDate',
         'identification' => 'setIdentification',
         'additionalInformation' => 'setAdditionalInformation',
-        'currentMaritalStatus' => 'setCurrentMaritalStatus',
-        'currentCivilStatus' => 'setCurrentCivilStatus',
-        'currentOccupation' => 'setCurrentOccupation',
         'segmentation' => 'setSegmentation',
         'addresses' => 'setAddresses',
         'phones' => 'setPhones',
         'emails' => 'setEmails',
         'websites' => 'setWebsites',
+        'notes' => 'setNotes',
+        'notesAdditionalInformation' => 'setNotesAdditionalInformation',
+        'creationDate' => 'setCreationDate',
+        'lastUpdateDate' => 'setLastUpdateDate',
+        'currentMaritalStatus' => 'setCurrentMaritalStatus',
+        'currentCivilStatus' => 'setCurrentCivilStatus',
+        'currentOccupation' => 'setCurrentOccupation',
         'links' => 'setLinks'
     ];
 
@@ -290,20 +290,20 @@ class ContactsLegacyContact implements ModelInterface, ArrayAccess, \JsonSeriali
         'indOrg' => 'getIndOrg',
         'displayName' => 'getDisplayName',
         'sortName' => 'getSortName',
-        'notes' => 'getNotes',
-        'notesAdditionalInformation' => 'getNotesAdditionalInformation',
-        'creationDate' => 'getCreationDate',
-        'lastUpdateDate' => 'getLastUpdateDate',
         'identification' => 'getIdentification',
         'additionalInformation' => 'getAdditionalInformation',
-        'currentMaritalStatus' => 'getCurrentMaritalStatus',
-        'currentCivilStatus' => 'getCurrentCivilStatus',
-        'currentOccupation' => 'getCurrentOccupation',
         'segmentation' => 'getSegmentation',
         'addresses' => 'getAddresses',
         'phones' => 'getPhones',
         'emails' => 'getEmails',
         'websites' => 'getWebsites',
+        'notes' => 'getNotes',
+        'notesAdditionalInformation' => 'getNotesAdditionalInformation',
+        'creationDate' => 'getCreationDate',
+        'lastUpdateDate' => 'getLastUpdateDate',
+        'currentMaritalStatus' => 'getCurrentMaritalStatus',
+        'currentCivilStatus' => 'getCurrentCivilStatus',
+        'currentOccupation' => 'getCurrentOccupation',
         'links' => 'getLinks'
     ];
 
@@ -370,20 +370,20 @@ class ContactsLegacyContact implements ModelInterface, ArrayAccess, \JsonSeriali
         $this->setIfExists('indOrg', $data ?? [], null);
         $this->setIfExists('displayName', $data ?? [], null);
         $this->setIfExists('sortName', $data ?? [], null);
-        $this->setIfExists('notes', $data ?? [], null);
-        $this->setIfExists('notesAdditionalInformation', $data ?? [], null);
-        $this->setIfExists('creationDate', $data ?? [], null);
-        $this->setIfExists('lastUpdateDate', $data ?? [], null);
         $this->setIfExists('identification', $data ?? [], null);
         $this->setIfExists('additionalInformation', $data ?? [], null);
-        $this->setIfExists('currentMaritalStatus', $data ?? [], null);
-        $this->setIfExists('currentCivilStatus', $data ?? [], null);
-        $this->setIfExists('currentOccupation', $data ?? [], null);
         $this->setIfExists('segmentation', $data ?? [], null);
         $this->setIfExists('addresses', $data ?? [], null);
         $this->setIfExists('phones', $data ?? [], null);
         $this->setIfExists('emails', $data ?? [], null);
         $this->setIfExists('websites', $data ?? [], null);
+        $this->setIfExists('notes', $data ?? [], null);
+        $this->setIfExists('notesAdditionalInformation', $data ?? [], null);
+        $this->setIfExists('creationDate', $data ?? [], null);
+        $this->setIfExists('lastUpdateDate', $data ?? [], null);
+        $this->setIfExists('currentMaritalStatus', $data ?? [], null);
+        $this->setIfExists('currentCivilStatus', $data ?? [], null);
+        $this->setIfExists('currentOccupation', $data ?? [], null);
         $this->setIfExists('links', $data ?? [], null);
     }
 
@@ -601,128 +601,6 @@ class ContactsLegacyContact implements ModelInterface, ArrayAccess, \JsonSeriali
     }
 
     /**
-     * Gets notes
-     *
-     * @return string|null
-     */
-    public function getNotes()
-    {
-        return $this->container['notes'];
-    }
-
-    /**
-     * Sets notes
-     *
-     * @param string|null $notes notes
-     *
-     * @return self
-     */
-    public function setNotes($notes)
-    {
-        if (is_null($notes)) {
-            throw new \InvalidArgumentException('non-nullable notes cannot be null');
-        }
-        $this->container['notes'] = $notes;
-
-        return $this;
-    }
-
-    /**
-     * Gets notesAdditionalInformation
-     *
-     * @return string|null
-     */
-    public function getNotesAdditionalInformation()
-    {
-        return $this->container['notesAdditionalInformation'];
-    }
-
-    /**
-     * Sets notesAdditionalInformation
-     *
-     * @param string|null $notesAdditionalInformation notesAdditionalInformation
-     *
-     * @return self
-     */
-    public function setNotesAdditionalInformation($notesAdditionalInformation)
-    {
-        if (is_null($notesAdditionalInformation)) {
-            throw new \InvalidArgumentException('non-nullable notesAdditionalInformation cannot be null');
-        }
-        $this->container['notesAdditionalInformation'] = $notesAdditionalInformation;
-
-        return $this;
-    }
-
-    /**
-     * Gets creationDate
-     *
-     * @return \DateTime|null
-     */
-    public function getCreationDate()
-    {
-        return $this->container['creationDate'];
-    }
-
-    /**
-     * Sets creationDate
-     *
-     * @param \DateTime|null $creationDate creationDate
-     *
-     * @return self
-     */
-    public function setCreationDate($creationDate)
-    {
-        if (is_null($creationDate)) {
-            array_push($this->openAPINullablesSetToNull, 'creationDate');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('creationDate', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['creationDate'] = $creationDate;
-
-        return $this;
-    }
-
-    /**
-     * Gets lastUpdateDate
-     *
-     * @return \DateTime|null
-     */
-    public function getLastUpdateDate()
-    {
-        return $this->container['lastUpdateDate'];
-    }
-
-    /**
-     * Sets lastUpdateDate
-     *
-     * @param \DateTime|null $lastUpdateDate lastUpdateDate
-     *
-     * @return self
-     */
-    public function setLastUpdateDate($lastUpdateDate)
-    {
-        if (is_null($lastUpdateDate)) {
-            array_push($this->openAPINullablesSetToNull, 'lastUpdateDate');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('lastUpdateDate', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['lastUpdateDate'] = $lastUpdateDate;
-
-        return $this;
-    }
-
-    /**
      * Gets identification
      *
      * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsIdentification|null
@@ -772,108 +650,6 @@ class ContactsLegacyContact implements ModelInterface, ArrayAccess, \JsonSeriali
             throw new \InvalidArgumentException('non-nullable additionalInformation cannot be null');
         }
         $this->container['additionalInformation'] = $additionalInformation;
-
-        return $this;
-    }
-
-    /**
-     * Gets currentMaritalStatus
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsCivilStatus|null
-     */
-    public function getCurrentMaritalStatus()
-    {
-        return $this->container['currentMaritalStatus'];
-    }
-
-    /**
-     * Sets currentMaritalStatus
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsCivilStatus|null $currentMaritalStatus currentMaritalStatus
-     *
-     * @return self
-     */
-    public function setCurrentMaritalStatus($currentMaritalStatus)
-    {
-        if (is_null($currentMaritalStatus)) {
-            array_push($this->openAPINullablesSetToNull, 'currentMaritalStatus');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('currentMaritalStatus', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['currentMaritalStatus'] = $currentMaritalStatus;
-
-        return $this;
-    }
-
-    /**
-     * Gets currentCivilStatus
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsCivilStatus|null
-     */
-    public function getCurrentCivilStatus()
-    {
-        return $this->container['currentCivilStatus'];
-    }
-
-    /**
-     * Sets currentCivilStatus
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsCivilStatus|null $currentCivilStatus currentCivilStatus
-     *
-     * @return self
-     */
-    public function setCurrentCivilStatus($currentCivilStatus)
-    {
-        if (is_null($currentCivilStatus)) {
-            array_push($this->openAPINullablesSetToNull, 'currentCivilStatus');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('currentCivilStatus', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['currentCivilStatus'] = $currentCivilStatus;
-
-        return $this;
-    }
-
-    /**
-     * Gets currentOccupation
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsOccupation|null
-     */
-    public function getCurrentOccupation()
-    {
-        return $this->container['currentOccupation'];
-    }
-
-    /**
-     * Sets currentOccupation
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsOccupation|null $currentOccupation currentOccupation
-     *
-     * @return self
-     */
-    public function setCurrentOccupation($currentOccupation)
-    {
-        if (is_null($currentOccupation)) {
-            array_push($this->openAPINullablesSetToNull, 'currentOccupation');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('currentOccupation', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['currentOccupation'] = $currentOccupation;
 
         return $this;
     }
@@ -1009,6 +785,230 @@ class ContactsLegacyContact implements ModelInterface, ArrayAccess, \JsonSeriali
             throw new \InvalidArgumentException('non-nullable websites cannot be null');
         }
         $this->container['websites'] = $websites;
+
+        return $this;
+    }
+
+    /**
+     * Gets notes
+     *
+     * @return string|null
+     */
+    public function getNotes()
+    {
+        return $this->container['notes'];
+    }
+
+    /**
+     * Sets notes
+     *
+     * @param string|null $notes notes
+     *
+     * @return self
+     */
+    public function setNotes($notes)
+    {
+        if (is_null($notes)) {
+            throw new \InvalidArgumentException('non-nullable notes cannot be null');
+        }
+        $this->container['notes'] = $notes;
+
+        return $this;
+    }
+
+    /**
+     * Gets notesAdditionalInformation
+     *
+     * @return string|null
+     */
+    public function getNotesAdditionalInformation()
+    {
+        return $this->container['notesAdditionalInformation'];
+    }
+
+    /**
+     * Sets notesAdditionalInformation
+     *
+     * @param string|null $notesAdditionalInformation notesAdditionalInformation
+     *
+     * @return self
+     */
+    public function setNotesAdditionalInformation($notesAdditionalInformation)
+    {
+        if (is_null($notesAdditionalInformation)) {
+            throw new \InvalidArgumentException('non-nullable notesAdditionalInformation cannot be null');
+        }
+        $this->container['notesAdditionalInformation'] = $notesAdditionalInformation;
+
+        return $this;
+    }
+
+    /**
+     * Gets creationDate
+     *
+     * @return \DateTime|null
+     */
+    public function getCreationDate()
+    {
+        return $this->container['creationDate'];
+    }
+
+    /**
+     * Sets creationDate
+     *
+     * @param \DateTime|null $creationDate creationDate
+     *
+     * @return self
+     */
+    public function setCreationDate($creationDate)
+    {
+        if (is_null($creationDate)) {
+            array_push($this->openAPINullablesSetToNull, 'creationDate');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('creationDate', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['creationDate'] = $creationDate;
+
+        return $this;
+    }
+
+    /**
+     * Gets lastUpdateDate
+     *
+     * @return \DateTime|null
+     */
+    public function getLastUpdateDate()
+    {
+        return $this->container['lastUpdateDate'];
+    }
+
+    /**
+     * Sets lastUpdateDate
+     *
+     * @param \DateTime|null $lastUpdateDate lastUpdateDate
+     *
+     * @return self
+     */
+    public function setLastUpdateDate($lastUpdateDate)
+    {
+        if (is_null($lastUpdateDate)) {
+            array_push($this->openAPINullablesSetToNull, 'lastUpdateDate');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('lastUpdateDate', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['lastUpdateDate'] = $lastUpdateDate;
+
+        return $this;
+    }
+
+    /**
+     * Gets currentMaritalStatus
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsCivilStatus|null
+     */
+    public function getCurrentMaritalStatus()
+    {
+        return $this->container['currentMaritalStatus'];
+    }
+
+    /**
+     * Sets currentMaritalStatus
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsCivilStatus|null $currentMaritalStatus currentMaritalStatus
+     *
+     * @return self
+     */
+    public function setCurrentMaritalStatus($currentMaritalStatus)
+    {
+        if (is_null($currentMaritalStatus)) {
+            array_push($this->openAPINullablesSetToNull, 'currentMaritalStatus');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('currentMaritalStatus', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['currentMaritalStatus'] = $currentMaritalStatus;
+
+        return $this;
+    }
+
+    /**
+     * Gets currentCivilStatus
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsCivilStatus|null
+     */
+    public function getCurrentCivilStatus()
+    {
+        return $this->container['currentCivilStatus'];
+    }
+
+    /**
+     * Sets currentCivilStatus
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsCivilStatus|null $currentCivilStatus currentCivilStatus
+     *
+     * @return self
+     */
+    public function setCurrentCivilStatus($currentCivilStatus)
+    {
+        if (is_null($currentCivilStatus)) {
+            array_push($this->openAPINullablesSetToNull, 'currentCivilStatus');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('currentCivilStatus', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['currentCivilStatus'] = $currentCivilStatus;
+
+        return $this;
+    }
+
+    /**
+     * Gets currentOccupation
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsOccupation|null
+     */
+    public function getCurrentOccupation()
+    {
+        return $this->container['currentOccupation'];
+    }
+
+    /**
+     * Sets currentOccupation
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsOccupation|null $currentOccupation currentOccupation
+     *
+     * @return self
+     */
+    public function setCurrentOccupation($currentOccupation)
+    {
+        if (is_null($currentOccupation)) {
+            array_push($this->openAPINullablesSetToNull, 'currentOccupation');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('currentOccupation', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['currentOccupation'] = $currentOccupation;
 
         return $this;
     }

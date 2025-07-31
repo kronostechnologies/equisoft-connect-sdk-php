@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**linkRole** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue**](ContactsContactFieldValue.md) |  | [optional]
 **uuid** | **string** |  | [optional]
+**linkRole** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue**](ContactsContactFieldValue.md) |  | [optional]
 **displayName** | **string** |  | [optional]
 **firstName** | **string** |  | [optional]
 **lastName** | **string** |  | [optional]

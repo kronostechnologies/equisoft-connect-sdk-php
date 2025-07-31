@@ -134,42 +134,6 @@ class ContactsTemporaryContactTest extends TestCase
     }
 
     /**
-     * Test attribute "notes"
-     */
-    public function testPropertyNotes()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "notesAdditionalInformation"
-     */
-    public function testPropertyNotesAdditionalInformation()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "creationDate"
-     */
-    public function testPropertyCreationDate()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "lastUpdateDate"
-     */
-    public function testPropertyLastUpdateDate()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "identification"
      */
     public function testPropertyIdentification()
@@ -182,33 +146,6 @@ class ContactsTemporaryContactTest extends TestCase
      * Test attribute "additionalInformation"
      */
     public function testPropertyAdditionalInformation()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "currentMaritalStatus"
-     */
-    public function testPropertyCurrentMaritalStatus()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "currentCivilStatus"
-     */
-    public function testPropertyCurrentCivilStatus()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "currentOccupation"
-     */
-    public function testPropertyCurrentOccupation()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -254,6 +191,69 @@ class ContactsTemporaryContactTest extends TestCase
      * Test attribute "websites"
      */
     public function testPropertyWebsites()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "notes"
+     */
+    public function testPropertyNotes()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "notesAdditionalInformation"
+     */
+    public function testPropertyNotesAdditionalInformation()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "creationDate"
+     */
+    public function testPropertyCreationDate()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "lastUpdateDate"
+     */
+    public function testPropertyLastUpdateDate()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "currentMaritalStatus"
+     */
+    public function testPropertyCurrentMaritalStatus()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "currentCivilStatus"
+     */
+    public function testPropertyCurrentCivilStatus()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "currentOccupation"
+     */
+    public function testPropertyCurrentOccupation()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

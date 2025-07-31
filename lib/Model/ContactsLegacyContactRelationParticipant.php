@@ -57,8 +57,8 @@ class ContactsLegacyContactRelationParticipant implements ModelInterface, ArrayA
       * @var string[]
       */
     protected static $openAPITypes = [
-        'linkRole' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
         'uuid' => 'string',
+        'linkRole' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
         'displayName' => 'string',
         'firstName' => 'string',
         'lastName' => 'string',
@@ -74,8 +74,8 @@ class ContactsLegacyContactRelationParticipant implements ModelInterface, ArrayA
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'linkRole' => null,
         'uuid' => null,
+        'linkRole' => null,
         'displayName' => null,
         'firstName' => null,
         'lastName' => null,
@@ -89,8 +89,8 @@ class ContactsLegacyContactRelationParticipant implements ModelInterface, ArrayA
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'linkRole' => true,
         'uuid' => false,
+        'linkRole' => true,
         'displayName' => false,
         'firstName' => false,
         'lastName' => false,
@@ -184,8 +184,8 @@ class ContactsLegacyContactRelationParticipant implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $attributeMap = [
-        'linkRole' => 'linkRole',
         'uuid' => 'uuid',
+        'linkRole' => 'linkRole',
         'displayName' => 'displayName',
         'firstName' => 'firstName',
         'lastName' => 'lastName',
@@ -199,8 +199,8 @@ class ContactsLegacyContactRelationParticipant implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $setters = [
-        'linkRole' => 'setLinkRole',
         'uuid' => 'setUuid',
+        'linkRole' => 'setLinkRole',
         'displayName' => 'setDisplayName',
         'firstName' => 'setFirstName',
         'lastName' => 'setLastName',
@@ -214,8 +214,8 @@ class ContactsLegacyContactRelationParticipant implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $getters = [
-        'linkRole' => 'getLinkRole',
         'uuid' => 'getUuid',
+        'linkRole' => 'getLinkRole',
         'displayName' => 'getDisplayName',
         'firstName' => 'getFirstName',
         'lastName' => 'getLastName',
@@ -280,8 +280,8 @@ class ContactsLegacyContactRelationParticipant implements ModelInterface, ArrayA
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('linkRole', $data ?? [], null);
         $this->setIfExists('uuid', $data ?? [], null);
+        $this->setIfExists('linkRole', $data ?? [], null);
         $this->setIfExists('displayName', $data ?? [], null);
         $this->setIfExists('firstName', $data ?? [], null);
         $this->setIfExists('lastName', $data ?? [], null);
@@ -332,6 +332,33 @@ class ContactsLegacyContactRelationParticipant implements ModelInterface, ArrayA
 
 
     /**
+     * Gets uuid
+     *
+     * @return string|null
+     */
+    public function getUuid()
+    {
+        return $this->container['uuid'];
+    }
+
+    /**
+     * Sets uuid
+     *
+     * @param string|null $uuid uuid
+     *
+     * @return self
+     */
+    public function setUuid($uuid)
+    {
+        if (is_null($uuid)) {
+            throw new \InvalidArgumentException('non-nullable uuid cannot be null');
+        }
+        $this->container['uuid'] = $uuid;
+
+        return $this;
+    }
+
+    /**
      * Gets linkRole
      *
      * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
@@ -361,33 +388,6 @@ class ContactsLegacyContactRelationParticipant implements ModelInterface, ArrayA
             }
         }
         $this->container['linkRole'] = $linkRole;
-
-        return $this;
-    }
-
-    /**
-     * Gets uuid
-     *
-     * @return string|null
-     */
-    public function getUuid()
-    {
-        return $this->container['uuid'];
-    }
-
-    /**
-     * Sets uuid
-     *
-     * @param string|null $uuid uuid
-     *
-     * @return self
-     */
-    public function setUuid($uuid)
-    {
-        if (is_null($uuid)) {
-            throw new \InvalidArgumentException('non-nullable uuid cannot be null');
-        }
-        $this->container['uuid'] = $uuid;
 
         return $this;
     }
