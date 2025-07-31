@@ -6,6 +6,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 | ------------- | ------------- | ------------- |
 | [**getByUuid()**](ContactsApi.md#getByUuid) | **GET** /crm/api/v1/contacts/{contactUuid} | Get contact by Uuid |
 | [**listContact()**](ContactsApi.md#listContact) | **GET** /crm/api/v1/contacts | List contact |
+| [**listContactInvestment()**](ContactsApi.md#listContactInvestment) | **GET** /crm/api/v1/contacts/{contactUuid}/investmentAccounts | List contact investments |
 | [**patchContact()**](ContactsApi.md#patchContact) | **PATCH** /crm/api/v1/contacts/{contactUuid} | Update a contact |
 
 
@@ -157,6 +158,68 @@ try {
 ### Return type
 
 [**\Equisoft\SDK\EquisoftConnect\Model\ContactsListContactResponse**](../Model/ContactsListContactResponse.md)
+
+### Authorization
+
+[OAuth2](../../README.md#OAuth2)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `listContactInvestment()`
+
+```php
+listContactInvestment($contactUuid, $pageToken, $maxResults): \Equisoft\SDK\EquisoftConnect\Model\InvestmentsListAccountResponse
+```
+
+List contact investments
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Equisoft\SDK\EquisoftConnect\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\ContactsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$contactUuid = 'contactUuid_example'; // string | Contact unique identifier.
+$pageToken = MjUwMDszMDAK; // string | Token to specify which page to fetch.
+$maxResults = 'maxResults_example'; // string | Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records.
+
+try {
+    $result = $apiInstance->listContactInvestment($contactUuid, $pageToken, $maxResults);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ContactsApi->listContactInvestment: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **contactUuid** | **string**| Contact unique identifier. | |
+| **pageToken** | **string**| Token to specify which page to fetch. | [optional] |
+| **maxResults** | **string**| Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. | [optional] |
+
+### Return type
+
+[**\Equisoft\SDK\EquisoftConnect\Model\InvestmentsListAccountResponse**](../Model/InvestmentsListAccountResponse.md)
 
 ### Authorization
 

@@ -78,6 +78,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *ContactsApi* | [**getByUuid**](docs/Api/ContactsApi.md#getbyuuid) | **GET** /crm/api/v1/contacts/{contactUuid} | Get contact by Uuid
 *ContactsApi* | [**listContact**](docs/Api/ContactsApi.md#listcontact) | **GET** /crm/api/v1/contacts | List contact
+*ContactsApi* | [**listContactInvestment**](docs/Api/ContactsApi.md#listcontactinvestment) | **GET** /crm/api/v1/contacts/{contactUuid}/investmentAccounts | List contact investments
 *ContactsApi* | [**patchContact**](docs/Api/ContactsApi.md#patchcontact) | **PATCH** /crm/api/v1/contacts/{contactUuid} | Update a contact
 *DSFApi* | [**createDsfFinancialCenter**](docs/Api/DSFApi.md#createdsffinancialcenter) | **POST** /crm/api/v1/dsf/financialCenters | Create a financial center
 *DSFApi* | [**deleteDsfFinancialCenter**](docs/Api/DSFApi.md#deletedsffinancialcenter) | **DELETE** /crm/api/v1/dsf/financialCenters/{financialCenterId} | Delete a financial center
@@ -334,6 +335,10 @@ Class | Method | HTTP request | Description
 - [InternalNotesNoteRevisionType](docs/Model/InternalNotesNoteRevisionType.md)
 - [InternalNotesPatchNotePayload](docs/Model/InternalNotesPatchNotePayload.md)
 - [InternalNotesPatchNoteResponse](docs/Model/InternalNotesPatchNoteResponse.md)
+- [InvestmentsAccount](docs/Model/InvestmentsAccount.md)
+- [InvestmentsAccountUser](docs/Model/InvestmentsAccountUser.md)
+- [InvestmentsAsset](docs/Model/InvestmentsAsset.md)
+- [InvestmentsListAccountResponse](docs/Model/InvestmentsListAccountResponse.md)
 - [KronosFieldValuesFieldValuesGet](docs/Model/KronosFieldValuesFieldValuesGet.md)
 - [KronosFieldValuesValue](docs/Model/KronosFieldValuesValue.md)
 - [KronosFinanceAssetDetail](docs/Model/KronosFinanceAssetDetail.md)

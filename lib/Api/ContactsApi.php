@@ -79,6 +79,9 @@ class ContactsApi
         'listContact' => [
             'application/json',
         ],
+        'listContactInvestment' => [
+            'application/json',
+        ],
         'patchContact' => [
             'application/json',
         ],
@@ -1032,6 +1035,362 @@ class ContactsApi
         ) ?? []);
 
 
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        if (is_string($formParamValueItem)) {
+                            // JSON part
+                            $multipartContents[] = [
+                                'name' => $formParamName,
+                                'contents' => $formParamValueItem,
+                                'headers' => [
+                                    'Content-Disposition' => "form-data; name=\"$formParamName\"; filename=\"$formParamName.json\"",
+                                    'Content-Type' => 'application/json; charset=UTF-8'
+                                ]
+                            ];
+                        } else {
+                            $multipartContents[] = [
+                                'name' => $formParamName,
+                                'contents' => $formParamValueItem
+                            ];
+                        }
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation listContactInvestment
+     *
+     * List contact investments
+     *
+     * @param  string $contactUuid Contact unique identifier. (required)
+     * @param  string|null $pageToken Token to specify which page to fetch. (optional)
+     * @param  string|null $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listContactInvestment'] to see the possible values for this operation
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\InvestmentsListAccountResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+     */
+    public function listContactInvestment($contactUuid, $pageToken = null, $maxResults = null, string $contentType = self::contentTypes['listContactInvestment'][0])
+    {
+        list($response) = $this->listContactInvestmentWithHttpInfo($contactUuid, $pageToken, $maxResults, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation listContactInvestmentWithHttpInfo
+     *
+     * List contact investments
+     *
+     * @param  string $contactUuid Contact unique identifier. (required)
+     * @param  string|null $pageToken Token to specify which page to fetch. (optional)
+     * @param  string|null $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listContactInvestment'] to see the possible values for this operation
+     *
+     * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\InvestmentsListAccountResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function listContactInvestmentWithHttpInfo($contactUuid, $pageToken = null, $maxResults = null, string $contentType = self::contentTypes['listContactInvestment'][0])
+    {
+        $request = $this->listContactInvestmentRequest($contactUuid, $pageToken, $maxResults, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+
+            switch($statusCode) {
+                case 200:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\InvestmentsListAccountResponse',
+                        $request,
+                        $response,
+                    );
+                case 401:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
+                case 500:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
+                case 404:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
+            }
+
+            
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return $this->handleResponseWithDataType(
+                '\Equisoft\SDK\EquisoftConnect\Model\InvestmentsListAccountResponse',
+                $request,
+                $response,
+            );
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\InvestmentsListAccountResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+            }
+        
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation listContactInvestmentAsync
+     *
+     * List contact investments
+     *
+     * @param  string $contactUuid Contact unique identifier. (required)
+     * @param  string|null $pageToken Token to specify which page to fetch. (optional)
+     * @param  string|null $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listContactInvestment'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function listContactInvestmentAsync($contactUuid, $pageToken = null, $maxResults = null, string $contentType = self::contentTypes['listContactInvestment'][0])
+    {
+        return $this->listContactInvestmentAsyncWithHttpInfo($contactUuid, $pageToken, $maxResults, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation listContactInvestmentAsyncWithHttpInfo
+     *
+     * List contact investments
+     *
+     * @param  string $contactUuid Contact unique identifier. (required)
+     * @param  string|null $pageToken Token to specify which page to fetch. (optional)
+     * @param  string|null $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listContactInvestment'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function listContactInvestmentAsyncWithHttpInfo($contactUuid, $pageToken = null, $maxResults = null, string $contentType = self::contentTypes['listContactInvestment'][0])
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\InvestmentsListAccountResponse';
+        $request = $this->listContactInvestmentRequest($contactUuid, $pageToken, $maxResults, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'listContactInvestment'
+     *
+     * @param  string $contactUuid Contact unique identifier. (required)
+     * @param  string|null $pageToken Token to specify which page to fetch. (optional)
+     * @param  string|null $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listContactInvestment'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function listContactInvestmentRequest($contactUuid, $pageToken = null, $maxResults = null, string $contentType = self::contentTypes['listContactInvestment'][0])
+    {
+
+        // verify the required parameter 'contactUuid' is set
+        if ($contactUuid === null || (is_array($contactUuid) && count($contactUuid) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $contactUuid when calling listContactInvestment'
+            );
+        }
+
+
+
+
+        $resourcePath = '/crm/api/v1/contacts/{contactUuid}/investmentAccounts';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pageToken,
+            'pageToken', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $maxResults,
+            'maxResults', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+        // path params
+        if ($contactUuid !== null) {
+            $resourcePath = str_replace(
+                '{' . 'contactUuid' . '}',
+                ObjectSerializer::toPathValue($contactUuid),
+                $resourcePath
+            );
+        }
 
 
         $headers = $this->headerSelector->selectHeaders(
