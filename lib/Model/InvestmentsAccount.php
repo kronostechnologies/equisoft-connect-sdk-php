@@ -165,7 +165,7 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, \JsonSerializab
         'currency' => false,
         'taxCode' => false,
         'taxStatus' => false,
-        'marketValue' => true,
+        'marketValue' => false,
         'marketValueUpdateDate' => false,
         'designation' => false,
         'designationIntermediary' => false,
@@ -1040,14 +1040,7 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, \JsonSerializab
     public function setMarketValue($marketValue)
     {
         if (is_null($marketValue)) {
-            array_push($this->openAPINullablesSetToNull, 'marketValue');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('marketValue', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+            throw new \InvalidArgumentException('non-nullable marketValue cannot be null');
         }
         $this->container['marketValue'] = $marketValue;
 

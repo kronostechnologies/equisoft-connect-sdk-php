@@ -294,4 +294,13 @@ class InvestmentsAssetTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "product"
+     */
+    public function testPropertyProduct()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
 }

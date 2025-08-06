@@ -28,5 +28,6 @@ Name | Type | Description | Notes
 **interestRateFixed** | **float** |  | [optional]
 **interestFrequency** | **string** |  | [optional]
 **redeemable** | **string** |  | [optional]
+**product** | [**\Equisoft\SDK\EquisoftConnect\Model\InvestmentsProduct**](InvestmentsProduct.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

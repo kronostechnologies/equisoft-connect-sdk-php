@@ -8,6 +8,7 @@ docs/Api/DocumentsApi.md
 docs/Api/EventsApi.md
 docs/Api/FieldValuesApi.md
 docs/Api/GatewaysApi.md
+docs/Api/InvestmentApi.md
 docs/Api/LegacyContactApi.md
 docs/Api/LegacyDocumentApi.md
 docs/Api/LegacyFieldValuesApi.md
@@ -141,6 +142,8 @@ docs/Model/InvestmentsAccount.md
 docs/Model/InvestmentsAccountUser.md
 docs/Model/InvestmentsAsset.md
 docs/Model/InvestmentsListAccountResponse.md
+docs/Model/InvestmentsListAssetResponse.md
+docs/Model/InvestmentsProduct.md
 docs/Model/KronosFieldValuesFieldValuesGet.md
 docs/Model/KronosFieldValuesValue.md
 docs/Model/KronosFinanceAssetDetail.md
@@ -299,6 +302,7 @@ lib/Api/DocumentsApi.php
 lib/Api/EventsApi.php
 lib/Api/FieldValuesApi.php
 lib/Api/GatewaysApi.php
+lib/Api/InvestmentApi.php
 lib/Api/LegacyContactApi.php
 lib/Api/LegacyDocumentApi.php
 lib/Api/LegacyFieldValuesApi.php
@@ -435,6 +439,8 @@ lib/Model/InvestmentsAccount.php
 lib/Model/InvestmentsAccountUser.php
 lib/Model/InvestmentsAsset.php
 lib/Model/InvestmentsListAccountResponse.php
+lib/Model/InvestmentsListAssetResponse.php
+lib/Model/InvestmentsProduct.php
 lib/Model/KronosFieldValuesFieldValuesGet.php
 lib/Model/KronosFieldValuesValue.php
 lib/Model/KronosFinanceAssetDetail.php
@@ -595,6 +601,7 @@ test/Api/DocumentsApiTest.php
 test/Api/EventsApiTest.php
 test/Api/FieldValuesApiTest.php
 test/Api/GatewaysApiTest.php
+test/Api/InvestmentApiTest.php
 test/Api/LegacyContactApiTest.php
 test/Api/LegacyDocumentApiTest.php
 test/Api/LegacyFieldValuesApiTest.php
@@ -728,6 +735,8 @@ test/Model/InvestmentsAccountTest.php
 test/Model/InvestmentsAccountUserTest.php
 test/Model/InvestmentsAssetTest.php
 test/Model/InvestmentsListAccountResponseTest.php
+test/Model/InvestmentsListAssetResponseTest.php
+test/Model/InvestmentsProductTest.php
 test/Model/KronosFieldValuesFieldValuesGetTest.php
 test/Model/KronosFieldValuesValueTest.php
 test/Model/KronosFinanceAssetDetailTest.php

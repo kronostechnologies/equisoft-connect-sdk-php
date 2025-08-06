@@ -80,7 +80,8 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
         'maturityDate' => '\DateTime',
         'interestRateFixed' => 'float',
         'interestFrequency' => 'string',
-        'redeemable' => 'string'
+        'redeemable' => 'string',
+        'product' => '\Equisoft\SDK\EquisoftConnect\Model\InvestmentsProduct'
     ];
 
     /**
@@ -114,7 +115,8 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
         'maturityDate' => 'date',
         'interestRateFixed' => 'float',
         'interestFrequency' => null,
-        'redeemable' => null
+        'redeemable' => null,
+        'product' => null
     ];
 
     /**
@@ -146,7 +148,8 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
         'maturityDate' => true,
         'interestRateFixed' => true,
         'interestFrequency' => true,
-        'redeemable' => true
+        'redeemable' => true,
+        'product' => true
     ];
 
     /**
@@ -258,7 +261,8 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
         'maturityDate' => 'maturityDate',
         'interestRateFixed' => 'interestRateFixed',
         'interestFrequency' => 'interestFrequency',
-        'redeemable' => 'redeemable'
+        'redeemable' => 'redeemable',
+        'product' => 'product'
     ];
 
     /**
@@ -290,7 +294,8 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
         'maturityDate' => 'setMaturityDate',
         'interestRateFixed' => 'setInterestRateFixed',
         'interestFrequency' => 'setInterestFrequency',
-        'redeemable' => 'setRedeemable'
+        'redeemable' => 'setRedeemable',
+        'product' => 'setProduct'
     ];
 
     /**
@@ -322,7 +327,8 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
         'maturityDate' => 'getMaturityDate',
         'interestRateFixed' => 'getInterestRateFixed',
         'interestFrequency' => 'getInterestFrequency',
-        'redeemable' => 'getRedeemable'
+        'redeemable' => 'getRedeemable',
+        'product' => 'getProduct'
     ];
 
     /**
@@ -406,6 +412,7 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('interestRateFixed', $data ?? [], null);
         $this->setIfExists('interestFrequency', $data ?? [], null);
         $this->setIfExists('redeemable', $data ?? [], null);
+        $this->setIfExists('product', $data ?? [], null);
     }
 
     /**
@@ -1171,6 +1178,40 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
             }
         }
         $this->container['redeemable'] = $redeemable;
+
+        return $this;
+    }
+
+    /**
+     * Gets product
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\InvestmentsProduct|null
+     */
+    public function getProduct()
+    {
+        return $this->container['product'];
+    }
+
+    /**
+     * Sets product
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\InvestmentsProduct|null $product product
+     *
+     * @return self
+     */
+    public function setProduct($product)
+    {
+        if (is_null($product)) {
+            array_push($this->openAPINullablesSetToNull, 'product');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('product', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['product'] = $product;
 
         return $this;
     }
