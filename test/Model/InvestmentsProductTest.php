@@ -150,4 +150,13 @@ class InvestmentsProductTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "cusip"
+     */
+    public function testPropertyCusip()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
 }

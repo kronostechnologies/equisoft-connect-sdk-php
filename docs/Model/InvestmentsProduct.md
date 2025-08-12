@@ -12,5 +12,6 @@ Name | Type | Description | Notes
 **fundIdentifier** | **string** |  | [optional]
 **geographicRegion** | **string** |  | [optional]
 **marketSector** | **string** |  | [optional]
+**cusip** | **string** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
