@@ -61,6 +61,7 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'string',
         'assetType' => 'string',
         'cusip' => 'string',
+        'isin' => 'string',
         'tickerSymbolCode' => 'string',
         'marketValue' => 'float',
         'marketValueUpdateDate' => '\DateTime',
@@ -96,6 +97,7 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => null,
         'assetType' => null,
         'cusip' => null,
+        'isin' => null,
         'tickerSymbolCode' => null,
         'marketValue' => 'float',
         'marketValueUpdateDate' => 'date',
@@ -129,6 +131,7 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => false,
         'assetType' => false,
         'cusip' => false,
+        'isin' => false,
         'tickerSymbolCode' => false,
         'marketValue' => false,
         'marketValueUpdateDate' => false,
@@ -242,6 +245,7 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'name',
         'assetType' => 'assetType',
         'cusip' => 'cusip',
+        'isin' => 'isin',
         'tickerSymbolCode' => 'tickerSymbolCode',
         'marketValue' => 'marketValue',
         'marketValueUpdateDate' => 'marketValueUpdateDate',
@@ -275,6 +279,7 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'setName',
         'assetType' => 'setAssetType',
         'cusip' => 'setCusip',
+        'isin' => 'setIsin',
         'tickerSymbolCode' => 'setTickerSymbolCode',
         'marketValue' => 'setMarketValue',
         'marketValueUpdateDate' => 'setMarketValueUpdateDate',
@@ -308,6 +313,7 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
         'name' => 'getName',
         'assetType' => 'getAssetType',
         'cusip' => 'getCusip',
+        'isin' => 'getIsin',
         'tickerSymbolCode' => 'getTickerSymbolCode',
         'marketValue' => 'getMarketValue',
         'marketValueUpdateDate' => 'getMarketValueUpdateDate',
@@ -392,6 +398,7 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('assetType', $data ?? [], null);
         $this->setIfExists('cusip', $data ?? [], null);
+        $this->setIfExists('isin', $data ?? [], null);
         $this->setIfExists('tickerSymbolCode', $data ?? [], null);
         $this->setIfExists('marketValue', $data ?? [], null);
         $this->setIfExists('marketValueUpdateDate', $data ?? [], null);
@@ -561,6 +568,33 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable cusip cannot be null');
         }
         $this->container['cusip'] = $cusip;
+
+        return $this;
+    }
+
+    /**
+     * Gets isin
+     *
+     * @return string|null
+     */
+    public function getIsin()
+    {
+        return $this->container['isin'];
+    }
+
+    /**
+     * Sets isin
+     *
+     * @param string|null $isin isin
+     *
+     * @return self
+     */
+    public function setIsin($isin)
+    {
+        if (is_null($isin)) {
+            throw new \InvalidArgumentException('non-nullable isin cannot be null');
+        }
+        $this->container['isin'] = $isin;
 
         return $this;
     }

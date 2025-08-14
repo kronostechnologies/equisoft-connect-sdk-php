@@ -116,6 +116,15 @@ class InvestmentsAssetTest extends TestCase
     }
 
     /**
+     * Test attribute "isin"
+     */
+    public function testPropertyIsin()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "tickerSymbolCode"
      */
     public function testPropertyTickerSymbolCode()

@@ -65,7 +65,8 @@ class InvestmentsProduct implements ModelInterface, ArrayAccess, \JsonSerializab
         'fundIdentifier' => 'string',
         'geographicRegion' => 'string',
         'marketSector' => 'string',
-        'cusip' => 'string'
+        'cusip' => 'string',
+        'isin' => 'string'
     ];
 
     /**
@@ -84,7 +85,8 @@ class InvestmentsProduct implements ModelInterface, ArrayAccess, \JsonSerializab
         'fundIdentifier' => null,
         'geographicRegion' => null,
         'marketSector' => null,
-        'cusip' => null
+        'cusip' => null,
+        'isin' => null
     ];
 
     /**
@@ -101,7 +103,8 @@ class InvestmentsProduct implements ModelInterface, ArrayAccess, \JsonSerializab
         'fundIdentifier' => false,
         'geographicRegion' => false,
         'marketSector' => false,
-        'cusip' => false
+        'cusip' => false,
+        'isin' => false
     ];
 
     /**
@@ -198,7 +201,8 @@ class InvestmentsProduct implements ModelInterface, ArrayAccess, \JsonSerializab
         'fundIdentifier' => 'fundIdentifier',
         'geographicRegion' => 'geographicRegion',
         'marketSector' => 'marketSector',
-        'cusip' => 'cusip'
+        'cusip' => 'cusip',
+        'isin' => 'isin'
     ];
 
     /**
@@ -215,7 +219,8 @@ class InvestmentsProduct implements ModelInterface, ArrayAccess, \JsonSerializab
         'fundIdentifier' => 'setFundIdentifier',
         'geographicRegion' => 'setGeographicRegion',
         'marketSector' => 'setMarketSector',
-        'cusip' => 'setCusip'
+        'cusip' => 'setCusip',
+        'isin' => 'setIsin'
     ];
 
     /**
@@ -232,7 +237,8 @@ class InvestmentsProduct implements ModelInterface, ArrayAccess, \JsonSerializab
         'fundIdentifier' => 'getFundIdentifier',
         'geographicRegion' => 'getGeographicRegion',
         'marketSector' => 'getMarketSector',
-        'cusip' => 'getCusip'
+        'cusip' => 'getCusip',
+        'isin' => 'getIsin'
     ];
 
     /**
@@ -301,6 +307,7 @@ class InvestmentsProduct implements ModelInterface, ArrayAccess, \JsonSerializab
         $this->setIfExists('geographicRegion', $data ?? [], null);
         $this->setIfExists('marketSector', $data ?? [], null);
         $this->setIfExists('cusip', $data ?? [], null);
+        $this->setIfExists('isin', $data ?? [], null);
     }
 
     /**
@@ -584,6 +591,33 @@ class InvestmentsProduct implements ModelInterface, ArrayAccess, \JsonSerializab
             throw new \InvalidArgumentException('non-nullable cusip cannot be null');
         }
         $this->container['cusip'] = $cusip;
+
+        return $this;
+    }
+
+    /**
+     * Gets isin
+     *
+     * @return string|null
+     */
+    public function getIsin()
+    {
+        return $this->container['isin'];
+    }
+
+    /**
+     * Sets isin
+     *
+     * @param string|null $isin isin
+     *
+     * @return self
+     */
+    public function setIsin($isin)
+    {
+        if (is_null($isin)) {
+            throw new \InvalidArgumentException('non-nullable isin cannot be null');
+        }
+        $this->container['isin'] = $isin;
 
         return $this;
     }

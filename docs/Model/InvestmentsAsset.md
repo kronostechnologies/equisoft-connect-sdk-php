@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **name** | **string** |  | [optional]
 **assetType** | **string** |  | [optional]
 **cusip** | **string** |  | [optional]
+**isin** | **string** |  | [optional]
 **tickerSymbolCode** | **string** |  | [optional]
 **marketValue** | **float** |  | [optional]
 **marketValueUpdateDate** | **\DateTime** |  | [optional]
