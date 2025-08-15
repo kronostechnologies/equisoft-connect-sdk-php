@@ -168,4 +168,112 @@ class ContactsAdditionalInformationTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "organizationDateCreated"
+     */
+    public function testPropertyOrganizationDateCreated()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "organizationDateClosed"
+     */
+    public function testPropertyOrganizationDateClosed()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "numberOfEmployees"
+     */
+    public function testPropertyNumberOfEmployees()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "companyValue"
+     */
+    public function testPropertyCompanyValue()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "annualGrowth"
+     */
+    public function testPropertyAnnualGrowth()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "companyStage"
+     */
+    public function testPropertyCompanyStage()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "revenue"
+     */
+    public function testPropertyRevenue()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "incorporationLocation"
+     */
+    public function testPropertyIncorporationLocation()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "payroll"
+     */
+    public function testPropertyPayroll()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "endOfFinancialYear"
+     */
+    public function testPropertyEndOfFinancialYear()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "numberOfShareholders"
+     */
+    public function testPropertyNumberOfShareholders()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "registrationNumbers"
+     */
+    public function testPropertyRegistrationNumbers()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
 }

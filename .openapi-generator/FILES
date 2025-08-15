@@ -53,6 +53,8 @@ docs/Model/ContactsListContactResponse.md
 docs/Model/ContactsOccupation.md
 docs/Model/ContactsOrganizationIdentification.md
 docs/Model/ContactsPhone.md
+docs/Model/ContactsRegistrationNumbers.md
+docs/Model/ContactsRevenue.md
 docs/Model/ContactsSegmentation.md
 docs/Model/ContactsTemporaryContact.md
 docs/Model/ContactsWebSite.md
@@ -350,6 +352,8 @@ lib/Model/ContactsListContactResponse.php
 lib/Model/ContactsOccupation.php
 lib/Model/ContactsOrganizationIdentification.php
 lib/Model/ContactsPhone.php
+lib/Model/ContactsRegistrationNumbers.php
+lib/Model/ContactsRevenue.php
 lib/Model/ContactsSegmentation.php
 lib/Model/ContactsTemporaryContact.php
 lib/Model/ContactsWebSite.php
@@ -646,6 +650,8 @@ test/Model/ContactsListContactResponseTest.php
 test/Model/ContactsOccupationTest.php
 test/Model/ContactsOrganizationIdentificationTest.php
 test/Model/ContactsPhoneTest.php
+test/Model/ContactsRegistrationNumbersTest.php
+test/Model/ContactsRevenueTest.php
 test/Model/ContactsSegmentationTest.php
 test/Model/ContactsTemporaryContactTest.php
 test/Model/ContactsWebSiteTest.php

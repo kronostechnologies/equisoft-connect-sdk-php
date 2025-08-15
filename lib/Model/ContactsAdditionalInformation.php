@@ -66,7 +66,19 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         'twitterLink' => 'string',
         'linkedInLink' => 'string',
         'language' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
-        'pictureId' => 'int'
+        'pictureId' => 'int',
+        'organizationDateCreated' => '\DateTime',
+        'organizationDateClosed' => '\DateTime',
+        'numberOfEmployees' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
+        'companyValue' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
+        'annualGrowth' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
+        'companyStage' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
+        'revenue' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsRevenue',
+        'incorporationLocation' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
+        'payroll' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
+        'endOfFinancialYear' => 'string',
+        'numberOfShareholders' => 'int',
+        'registrationNumbers' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsRegistrationNumbers'
     ];
 
     /**
@@ -86,7 +98,19 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         'twitterLink' => null,
         'linkedInLink' => null,
         'language' => null,
-        'pictureId' => null
+        'pictureId' => null,
+        'organizationDateCreated' => 'date',
+        'organizationDateClosed' => 'date',
+        'numberOfEmployees' => null,
+        'companyValue' => null,
+        'annualGrowth' => null,
+        'companyStage' => null,
+        'revenue' => null,
+        'incorporationLocation' => null,
+        'payroll' => null,
+        'endOfFinancialYear' => null,
+        'numberOfShareholders' => null,
+        'registrationNumbers' => null
     ];
 
     /**
@@ -104,7 +128,19 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         'twitterLink' => false,
         'linkedInLink' => false,
         'language' => true,
-        'pictureId' => true
+        'pictureId' => true,
+        'organizationDateCreated' => true,
+        'organizationDateClosed' => true,
+        'numberOfEmployees' => true,
+        'companyValue' => true,
+        'annualGrowth' => true,
+        'companyStage' => true,
+        'revenue' => true,
+        'incorporationLocation' => true,
+        'payroll' => true,
+        'endOfFinancialYear' => true,
+        'numberOfShareholders' => true,
+        'registrationNumbers' => true
     ];
 
     /**
@@ -202,7 +238,19 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         'twitterLink' => 'twitterLink',
         'linkedInLink' => 'linkedInLink',
         'language' => 'language',
-        'pictureId' => 'pictureId'
+        'pictureId' => 'pictureId',
+        'organizationDateCreated' => 'organizationDateCreated',
+        'organizationDateClosed' => 'organizationDateClosed',
+        'numberOfEmployees' => 'numberOfEmployees',
+        'companyValue' => 'companyValue',
+        'annualGrowth' => 'annualGrowth',
+        'companyStage' => 'companyStage',
+        'revenue' => 'revenue',
+        'incorporationLocation' => 'incorporationLocation',
+        'payroll' => 'payroll',
+        'endOfFinancialYear' => 'endOfFinancialYear',
+        'numberOfShareholders' => 'numberOfShareholders',
+        'registrationNumbers' => 'registrationNumbers'
     ];
 
     /**
@@ -220,7 +268,19 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         'twitterLink' => 'setTwitterLink',
         'linkedInLink' => 'setLinkedInLink',
         'language' => 'setLanguage',
-        'pictureId' => 'setPictureId'
+        'pictureId' => 'setPictureId',
+        'organizationDateCreated' => 'setOrganizationDateCreated',
+        'organizationDateClosed' => 'setOrganizationDateClosed',
+        'numberOfEmployees' => 'setNumberOfEmployees',
+        'companyValue' => 'setCompanyValue',
+        'annualGrowth' => 'setAnnualGrowth',
+        'companyStage' => 'setCompanyStage',
+        'revenue' => 'setRevenue',
+        'incorporationLocation' => 'setIncorporationLocation',
+        'payroll' => 'setPayroll',
+        'endOfFinancialYear' => 'setEndOfFinancialYear',
+        'numberOfShareholders' => 'setNumberOfShareholders',
+        'registrationNumbers' => 'setRegistrationNumbers'
     ];
 
     /**
@@ -238,7 +298,19 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         'twitterLink' => 'getTwitterLink',
         'linkedInLink' => 'getLinkedInLink',
         'language' => 'getLanguage',
-        'pictureId' => 'getPictureId'
+        'pictureId' => 'getPictureId',
+        'organizationDateCreated' => 'getOrganizationDateCreated',
+        'organizationDateClosed' => 'getOrganizationDateClosed',
+        'numberOfEmployees' => 'getNumberOfEmployees',
+        'companyValue' => 'getCompanyValue',
+        'annualGrowth' => 'getAnnualGrowth',
+        'companyStage' => 'getCompanyStage',
+        'revenue' => 'getRevenue',
+        'incorporationLocation' => 'getIncorporationLocation',
+        'payroll' => 'getPayroll',
+        'endOfFinancialYear' => 'getEndOfFinancialYear',
+        'numberOfShareholders' => 'getNumberOfShareholders',
+        'registrationNumbers' => 'getRegistrationNumbers'
     ];
 
     /**
@@ -308,6 +380,18 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         $this->setIfExists('linkedInLink', $data ?? [], null);
         $this->setIfExists('language', $data ?? [], null);
         $this->setIfExists('pictureId', $data ?? [], null);
+        $this->setIfExists('organizationDateCreated', $data ?? [], null);
+        $this->setIfExists('organizationDateClosed', $data ?? [], null);
+        $this->setIfExists('numberOfEmployees', $data ?? [], null);
+        $this->setIfExists('companyValue', $data ?? [], null);
+        $this->setIfExists('annualGrowth', $data ?? [], null);
+        $this->setIfExists('companyStage', $data ?? [], null);
+        $this->setIfExists('revenue', $data ?? [], null);
+        $this->setIfExists('incorporationLocation', $data ?? [], null);
+        $this->setIfExists('payroll', $data ?? [], null);
+        $this->setIfExists('endOfFinancialYear', $data ?? [], null);
+        $this->setIfExists('numberOfShareholders', $data ?? [], null);
+        $this->setIfExists('registrationNumbers', $data ?? [], null);
     }
 
     /**
@@ -660,6 +744,414 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
             }
         }
         $this->container['pictureId'] = $pictureId;
+
+        return $this;
+    }
+
+    /**
+     * Gets organizationDateCreated
+     *
+     * @return \DateTime|null
+     */
+    public function getOrganizationDateCreated()
+    {
+        return $this->container['organizationDateCreated'];
+    }
+
+    /**
+     * Sets organizationDateCreated
+     *
+     * @param \DateTime|null $organizationDateCreated organizationDateCreated
+     *
+     * @return self
+     */
+    public function setOrganizationDateCreated($organizationDateCreated)
+    {
+        if (is_null($organizationDateCreated)) {
+            array_push($this->openAPINullablesSetToNull, 'organizationDateCreated');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('organizationDateCreated', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['organizationDateCreated'] = $organizationDateCreated;
+
+        return $this;
+    }
+
+    /**
+     * Gets organizationDateClosed
+     *
+     * @return \DateTime|null
+     */
+    public function getOrganizationDateClosed()
+    {
+        return $this->container['organizationDateClosed'];
+    }
+
+    /**
+     * Sets organizationDateClosed
+     *
+     * @param \DateTime|null $organizationDateClosed organizationDateClosed
+     *
+     * @return self
+     */
+    public function setOrganizationDateClosed($organizationDateClosed)
+    {
+        if (is_null($organizationDateClosed)) {
+            array_push($this->openAPINullablesSetToNull, 'organizationDateClosed');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('organizationDateClosed', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['organizationDateClosed'] = $organizationDateClosed;
+
+        return $this;
+    }
+
+    /**
+     * Gets numberOfEmployees
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
+     */
+    public function getNumberOfEmployees()
+    {
+        return $this->container['numberOfEmployees'];
+    }
+
+    /**
+     * Sets numberOfEmployees
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $numberOfEmployees numberOfEmployees
+     *
+     * @return self
+     */
+    public function setNumberOfEmployees($numberOfEmployees)
+    {
+        if (is_null($numberOfEmployees)) {
+            array_push($this->openAPINullablesSetToNull, 'numberOfEmployees');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('numberOfEmployees', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['numberOfEmployees'] = $numberOfEmployees;
+
+        return $this;
+    }
+
+    /**
+     * Gets companyValue
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
+     */
+    public function getCompanyValue()
+    {
+        return $this->container['companyValue'];
+    }
+
+    /**
+     * Sets companyValue
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $companyValue companyValue
+     *
+     * @return self
+     */
+    public function setCompanyValue($companyValue)
+    {
+        if (is_null($companyValue)) {
+            array_push($this->openAPINullablesSetToNull, 'companyValue');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('companyValue', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['companyValue'] = $companyValue;
+
+        return $this;
+    }
+
+    /**
+     * Gets annualGrowth
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
+     */
+    public function getAnnualGrowth()
+    {
+        return $this->container['annualGrowth'];
+    }
+
+    /**
+     * Sets annualGrowth
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $annualGrowth annualGrowth
+     *
+     * @return self
+     */
+    public function setAnnualGrowth($annualGrowth)
+    {
+        if (is_null($annualGrowth)) {
+            array_push($this->openAPINullablesSetToNull, 'annualGrowth');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('annualGrowth', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['annualGrowth'] = $annualGrowth;
+
+        return $this;
+    }
+
+    /**
+     * Gets companyStage
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
+     */
+    public function getCompanyStage()
+    {
+        return $this->container['companyStage'];
+    }
+
+    /**
+     * Sets companyStage
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $companyStage companyStage
+     *
+     * @return self
+     */
+    public function setCompanyStage($companyStage)
+    {
+        if (is_null($companyStage)) {
+            array_push($this->openAPINullablesSetToNull, 'companyStage');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('companyStage', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['companyStage'] = $companyStage;
+
+        return $this;
+    }
+
+    /**
+     * Gets revenue
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsRevenue|null
+     */
+    public function getRevenue()
+    {
+        return $this->container['revenue'];
+    }
+
+    /**
+     * Sets revenue
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsRevenue|null $revenue revenue
+     *
+     * @return self
+     */
+    public function setRevenue($revenue)
+    {
+        if (is_null($revenue)) {
+            array_push($this->openAPINullablesSetToNull, 'revenue');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('revenue', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['revenue'] = $revenue;
+
+        return $this;
+    }
+
+    /**
+     * Gets incorporationLocation
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
+     */
+    public function getIncorporationLocation()
+    {
+        return $this->container['incorporationLocation'];
+    }
+
+    /**
+     * Sets incorporationLocation
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $incorporationLocation incorporationLocation
+     *
+     * @return self
+     */
+    public function setIncorporationLocation($incorporationLocation)
+    {
+        if (is_null($incorporationLocation)) {
+            array_push($this->openAPINullablesSetToNull, 'incorporationLocation');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('incorporationLocation', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['incorporationLocation'] = $incorporationLocation;
+
+        return $this;
+    }
+
+    /**
+     * Gets payroll
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
+     */
+    public function getPayroll()
+    {
+        return $this->container['payroll'];
+    }
+
+    /**
+     * Sets payroll
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $payroll payroll
+     *
+     * @return self
+     */
+    public function setPayroll($payroll)
+    {
+        if (is_null($payroll)) {
+            array_push($this->openAPINullablesSetToNull, 'payroll');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('payroll', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['payroll'] = $payroll;
+
+        return $this;
+    }
+
+    /**
+     * Gets endOfFinancialYear
+     *
+     * @return string|null
+     */
+    public function getEndOfFinancialYear()
+    {
+        return $this->container['endOfFinancialYear'];
+    }
+
+    /**
+     * Sets endOfFinancialYear
+     *
+     * @param string|null $endOfFinancialYear endOfFinancialYear
+     *
+     * @return self
+     */
+    public function setEndOfFinancialYear($endOfFinancialYear)
+    {
+        if (is_null($endOfFinancialYear)) {
+            array_push($this->openAPINullablesSetToNull, 'endOfFinancialYear');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('endOfFinancialYear', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['endOfFinancialYear'] = $endOfFinancialYear;
+
+        return $this;
+    }
+
+    /**
+     * Gets numberOfShareholders
+     *
+     * @return int|null
+     */
+    public function getNumberOfShareholders()
+    {
+        return $this->container['numberOfShareholders'];
+    }
+
+    /**
+     * Sets numberOfShareholders
+     *
+     * @param int|null $numberOfShareholders numberOfShareholders
+     *
+     * @return self
+     */
+    public function setNumberOfShareholders($numberOfShareholders)
+    {
+        if (is_null($numberOfShareholders)) {
+            array_push($this->openAPINullablesSetToNull, 'numberOfShareholders');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('numberOfShareholders', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['numberOfShareholders'] = $numberOfShareholders;
+
+        return $this;
+    }
+
+    /**
+     * Gets registrationNumbers
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsRegistrationNumbers|null
+     */
+    public function getRegistrationNumbers()
+    {
+        return $this->container['registrationNumbers'];
+    }
+
+    /**
+     * Sets registrationNumbers
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsRegistrationNumbers|null $registrationNumbers registrationNumbers
+     *
+     * @return self
+     */
+    public function setRegistrationNumbers($registrationNumbers)
+    {
+        if (is_null($registrationNumbers)) {
+            array_push($this->openAPINullablesSetToNull, 'registrationNumbers');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('registrationNumbers', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['registrationNumbers'] = $registrationNumbers;
 
         return $this;
     }

@@ -253,6 +253,8 @@ Class | Method | HTTP request | Description
 - [ContactsOccupation](docs/Model/ContactsOccupation.md)
 - [ContactsOrganizationIdentification](docs/Model/ContactsOrganizationIdentification.md)
 - [ContactsPhone](docs/Model/ContactsPhone.md)
+- [ContactsRegistrationNumbers](docs/Model/ContactsRegistrationNumbers.md)
+- [ContactsRevenue](docs/Model/ContactsRevenue.md)
 - [ContactsSegmentation](docs/Model/ContactsSegmentation.md)
 - [ContactsTemporaryContact](docs/Model/ContactsTemporaryContact.md)
 - [ContactsWebSite](docs/Model/ContactsWebSite.md)
