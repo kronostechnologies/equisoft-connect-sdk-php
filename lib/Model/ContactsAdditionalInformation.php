@@ -78,7 +78,9 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         'payroll' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
         'endOfFinancialYear' => 'string',
         'numberOfShareholders' => 'int',
-        'registrationNumbers' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsRegistrationNumbers'
+        'registrationNumbers' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsRegistrationNumbers',
+        'knownSince' => '\DateTime',
+        'endDate' => '\DateTime'
     ];
 
     /**
@@ -110,7 +112,9 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         'payroll' => null,
         'endOfFinancialYear' => null,
         'numberOfShareholders' => null,
-        'registrationNumbers' => null
+        'registrationNumbers' => null,
+        'knownSince' => 'date',
+        'endDate' => 'date'
     ];
 
     /**
@@ -140,7 +144,9 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         'payroll' => true,
         'endOfFinancialYear' => true,
         'numberOfShareholders' => true,
-        'registrationNumbers' => true
+        'registrationNumbers' => true,
+        'knownSince' => true,
+        'endDate' => true
     ];
 
     /**
@@ -250,7 +256,9 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         'payroll' => 'payroll',
         'endOfFinancialYear' => 'endOfFinancialYear',
         'numberOfShareholders' => 'numberOfShareholders',
-        'registrationNumbers' => 'registrationNumbers'
+        'registrationNumbers' => 'registrationNumbers',
+        'knownSince' => 'knownSince',
+        'endDate' => 'endDate'
     ];
 
     /**
@@ -280,7 +288,9 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         'payroll' => 'setPayroll',
         'endOfFinancialYear' => 'setEndOfFinancialYear',
         'numberOfShareholders' => 'setNumberOfShareholders',
-        'registrationNumbers' => 'setRegistrationNumbers'
+        'registrationNumbers' => 'setRegistrationNumbers',
+        'knownSince' => 'setKnownSince',
+        'endDate' => 'setEndDate'
     ];
 
     /**
@@ -310,7 +320,9 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         'payroll' => 'getPayroll',
         'endOfFinancialYear' => 'getEndOfFinancialYear',
         'numberOfShareholders' => 'getNumberOfShareholders',
-        'registrationNumbers' => 'getRegistrationNumbers'
+        'registrationNumbers' => 'getRegistrationNumbers',
+        'knownSince' => 'getKnownSince',
+        'endDate' => 'getEndDate'
     ];
 
     /**
@@ -392,6 +404,8 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         $this->setIfExists('endOfFinancialYear', $data ?? [], null);
         $this->setIfExists('numberOfShareholders', $data ?? [], null);
         $this->setIfExists('registrationNumbers', $data ?? [], null);
+        $this->setIfExists('knownSince', $data ?? [], null);
+        $this->setIfExists('endDate', $data ?? [], null);
     }
 
     /**
@@ -1152,6 +1166,74 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
             }
         }
         $this->container['registrationNumbers'] = $registrationNumbers;
+
+        return $this;
+    }
+
+    /**
+     * Gets knownSince
+     *
+     * @return \DateTime|null
+     */
+    public function getKnownSince()
+    {
+        return $this->container['knownSince'];
+    }
+
+    /**
+     * Sets knownSince
+     *
+     * @param \DateTime|null $knownSince knownSince
+     *
+     * @return self
+     */
+    public function setKnownSince($knownSince)
+    {
+        if (is_null($knownSince)) {
+            array_push($this->openAPINullablesSetToNull, 'knownSince');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('knownSince', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['knownSince'] = $knownSince;
+
+        return $this;
+    }
+
+    /**
+     * Gets endDate
+     *
+     * @return \DateTime|null
+     */
+    public function getEndDate()
+    {
+        return $this->container['endDate'];
+    }
+
+    /**
+     * Sets endDate
+     *
+     * @param \DateTime|null $endDate endDate
+     *
+     * @return self
+     */
+    public function setEndDate($endDate)
+    {
+        if (is_null($endDate)) {
+            array_push($this->openAPINullablesSetToNull, 'endDate');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('endDate', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['endDate'] = $endDate;
 
         return $this;
     }

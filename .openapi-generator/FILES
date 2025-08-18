@@ -46,6 +46,8 @@ docs/Model/ContactsContactFieldValue.md
 docs/Model/ContactsEmail.md
 docs/Model/ContactsIdentification.md
 docs/Model/ContactsIndividualIdentification.md
+docs/Model/ContactsInvestmentObjective.md
+docs/Model/ContactsInvestorProfile.md
 docs/Model/ContactsLegacyContact.md
 docs/Model/ContactsLegacyContactRelation.md
 docs/Model/ContactsLegacyContactRelationParticipant.md
@@ -55,6 +57,7 @@ docs/Model/ContactsOrganizationIdentification.md
 docs/Model/ContactsPhone.md
 docs/Model/ContactsRegistrationNumbers.md
 docs/Model/ContactsRevenue.md
+docs/Model/ContactsRiskTolerance.md
 docs/Model/ContactsSegmentation.md
 docs/Model/ContactsTemporaryContact.md
 docs/Model/ContactsWebSite.md
@@ -345,6 +348,8 @@ lib/Model/ContactsContactFieldValue.php
 lib/Model/ContactsEmail.php
 lib/Model/ContactsIdentification.php
 lib/Model/ContactsIndividualIdentification.php
+lib/Model/ContactsInvestmentObjective.php
+lib/Model/ContactsInvestorProfile.php
 lib/Model/ContactsLegacyContact.php
 lib/Model/ContactsLegacyContactRelation.php
 lib/Model/ContactsLegacyContactRelationParticipant.php
@@ -354,6 +359,7 @@ lib/Model/ContactsOrganizationIdentification.php
 lib/Model/ContactsPhone.php
 lib/Model/ContactsRegistrationNumbers.php
 lib/Model/ContactsRevenue.php
+lib/Model/ContactsRiskTolerance.php
 lib/Model/ContactsSegmentation.php
 lib/Model/ContactsTemporaryContact.php
 lib/Model/ContactsWebSite.php
@@ -643,6 +649,8 @@ test/Model/ContactsContactTest.php
 test/Model/ContactsEmailTest.php
 test/Model/ContactsIdentificationTest.php
 test/Model/ContactsIndividualIdentificationTest.php
+test/Model/ContactsInvestmentObjectiveTest.php
+test/Model/ContactsInvestorProfileTest.php
 test/Model/ContactsLegacyContactRelationParticipantTest.php
 test/Model/ContactsLegacyContactRelationTest.php
 test/Model/ContactsLegacyContactTest.php
@@ -652,6 +660,7 @@ test/Model/ContactsOrganizationIdentificationTest.php
 test/Model/ContactsPhoneTest.php
 test/Model/ContactsRegistrationNumbersTest.php
 test/Model/ContactsRevenueTest.php
+test/Model/ContactsRiskToleranceTest.php
 test/Model/ContactsSegmentationTest.php
 test/Model/ContactsTemporaryContactTest.php
 test/Model/ContactsWebSiteTest.php

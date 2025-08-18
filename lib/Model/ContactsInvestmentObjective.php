@@ -1,6 +1,6 @@
 <?php
 /**
- * ContactsRegistrationNumbers
+ * ContactsInvestmentObjective
  *
  * PHP version 8.1
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * ContactsRegistrationNumbers Class Doc Comment
+ * ContactsInvestmentObjective Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
@@ -40,7 +40,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ContactsRegistrationNumbers implements ModelInterface, ArrayAccess, \JsonSerializable
+class ContactsInvestmentObjective implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ContactsRegistrationNumbers implements ModelInterface, ArrayAccess, \JsonS
       *
       * @var string
       */
-    protected static $openAPIModelName = 'contacts.RegistrationNumbers';
+    protected static $openAPIModelName = 'contacts.InvestmentObjective';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +57,11 @@ class ContactsRegistrationNumbers implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'identificationNumber' => 'string',
-        'federalNumber' => 'string',
-        'provincialNumber' => 'string'
+        'capitalPreservationPercentage' => 'float',
+        'incomeProducingPercentage' => 'float',
+        'longTermGrowthPercentage' => 'float',
+        'longTermGrowthYears' => 'float',
+        'speculationPercentage' => 'float'
     ];
 
     /**
@@ -70,9 +72,11 @@ class ContactsRegistrationNumbers implements ModelInterface, ArrayAccess, \JsonS
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'identificationNumber' => null,
-        'federalNumber' => null,
-        'provincialNumber' => null
+        'capitalPreservationPercentage' => 'float',
+        'incomeProducingPercentage' => 'float',
+        'longTermGrowthPercentage' => 'float',
+        'longTermGrowthYears' => 'float',
+        'speculationPercentage' => 'float'
     ];
 
     /**
@@ -81,9 +85,11 @@ class ContactsRegistrationNumbers implements ModelInterface, ArrayAccess, \JsonS
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'identificationNumber' => false,
-        'federalNumber' => false,
-        'provincialNumber' => false
+        'capitalPreservationPercentage' => false,
+        'incomeProducingPercentage' => false,
+        'longTermGrowthPercentage' => false,
+        'longTermGrowthYears' => false,
+        'speculationPercentage' => false
     ];
 
     /**
@@ -172,9 +178,11 @@ class ContactsRegistrationNumbers implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $attributeMap = [
-        'identificationNumber' => 'identificationNumber',
-        'federalNumber' => 'federalNumber',
-        'provincialNumber' => 'provincialNumber'
+        'capitalPreservationPercentage' => 'capitalPreservationPercentage',
+        'incomeProducingPercentage' => 'incomeProducingPercentage',
+        'longTermGrowthPercentage' => 'longTermGrowthPercentage',
+        'longTermGrowthYears' => 'longTermGrowthYears',
+        'speculationPercentage' => 'speculationPercentage'
     ];
 
     /**
@@ -183,9 +191,11 @@ class ContactsRegistrationNumbers implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $setters = [
-        'identificationNumber' => 'setIdentificationNumber',
-        'federalNumber' => 'setFederalNumber',
-        'provincialNumber' => 'setProvincialNumber'
+        'capitalPreservationPercentage' => 'setCapitalPreservationPercentage',
+        'incomeProducingPercentage' => 'setIncomeProducingPercentage',
+        'longTermGrowthPercentage' => 'setLongTermGrowthPercentage',
+        'longTermGrowthYears' => 'setLongTermGrowthYears',
+        'speculationPercentage' => 'setSpeculationPercentage'
     ];
 
     /**
@@ -194,9 +204,11 @@ class ContactsRegistrationNumbers implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $getters = [
-        'identificationNumber' => 'getIdentificationNumber',
-        'federalNumber' => 'getFederalNumber',
-        'provincialNumber' => 'getProvincialNumber'
+        'capitalPreservationPercentage' => 'getCapitalPreservationPercentage',
+        'incomeProducingPercentage' => 'getIncomeProducingPercentage',
+        'longTermGrowthPercentage' => 'getLongTermGrowthPercentage',
+        'longTermGrowthYears' => 'getLongTermGrowthYears',
+        'speculationPercentage' => 'getSpeculationPercentage'
     ];
 
     /**
@@ -256,9 +268,11 @@ class ContactsRegistrationNumbers implements ModelInterface, ArrayAccess, \JsonS
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('identificationNumber', $data ?? [], null);
-        $this->setIfExists('federalNumber', $data ?? [], null);
-        $this->setIfExists('provincialNumber', $data ?? [], null);
+        $this->setIfExists('capitalPreservationPercentage', $data ?? [], null);
+        $this->setIfExists('incomeProducingPercentage', $data ?? [], null);
+        $this->setIfExists('longTermGrowthPercentage', $data ?? [], null);
+        $this->setIfExists('longTermGrowthYears', $data ?? [], null);
+        $this->setIfExists('speculationPercentage', $data ?? [], null);
     }
 
     /**
@@ -304,82 +318,136 @@ class ContactsRegistrationNumbers implements ModelInterface, ArrayAccess, \JsonS
 
 
     /**
-     * Gets identificationNumber
+     * Gets capitalPreservationPercentage
      *
-     * @return string|null
+     * @return float|null
      */
-    public function getIdentificationNumber()
+    public function getCapitalPreservationPercentage()
     {
-        return $this->container['identificationNumber'];
+        return $this->container['capitalPreservationPercentage'];
     }
 
     /**
-     * Sets identificationNumber
+     * Sets capitalPreservationPercentage
      *
-     * @param string|null $identificationNumber identificationNumber
+     * @param float|null $capitalPreservationPercentage capitalPreservationPercentage
      *
      * @return self
      */
-    public function setIdentificationNumber($identificationNumber)
+    public function setCapitalPreservationPercentage($capitalPreservationPercentage)
     {
-        if (is_null($identificationNumber)) {
-            throw new \InvalidArgumentException('non-nullable identificationNumber cannot be null');
+        if (is_null($capitalPreservationPercentage)) {
+            throw new \InvalidArgumentException('non-nullable capitalPreservationPercentage cannot be null');
         }
-        $this->container['identificationNumber'] = $identificationNumber;
+        $this->container['capitalPreservationPercentage'] = $capitalPreservationPercentage;
 
         return $this;
     }
 
     /**
-     * Gets federalNumber
+     * Gets incomeProducingPercentage
      *
-     * @return string|null
+     * @return float|null
      */
-    public function getFederalNumber()
+    public function getIncomeProducingPercentage()
     {
-        return $this->container['federalNumber'];
+        return $this->container['incomeProducingPercentage'];
     }
 
     /**
-     * Sets federalNumber
+     * Sets incomeProducingPercentage
      *
-     * @param string|null $federalNumber federalNumber
+     * @param float|null $incomeProducingPercentage incomeProducingPercentage
      *
      * @return self
      */
-    public function setFederalNumber($federalNumber)
+    public function setIncomeProducingPercentage($incomeProducingPercentage)
     {
-        if (is_null($federalNumber)) {
-            throw new \InvalidArgumentException('non-nullable federalNumber cannot be null');
+        if (is_null($incomeProducingPercentage)) {
+            throw new \InvalidArgumentException('non-nullable incomeProducingPercentage cannot be null');
         }
-        $this->container['federalNumber'] = $federalNumber;
+        $this->container['incomeProducingPercentage'] = $incomeProducingPercentage;
 
         return $this;
     }
 
     /**
-     * Gets provincialNumber
+     * Gets longTermGrowthPercentage
      *
-     * @return string|null
+     * @return float|null
      */
-    public function getProvincialNumber()
+    public function getLongTermGrowthPercentage()
     {
-        return $this->container['provincialNumber'];
+        return $this->container['longTermGrowthPercentage'];
     }
 
     /**
-     * Sets provincialNumber
+     * Sets longTermGrowthPercentage
      *
-     * @param string|null $provincialNumber provincialNumber
+     * @param float|null $longTermGrowthPercentage longTermGrowthPercentage
      *
      * @return self
      */
-    public function setProvincialNumber($provincialNumber)
+    public function setLongTermGrowthPercentage($longTermGrowthPercentage)
     {
-        if (is_null($provincialNumber)) {
-            throw new \InvalidArgumentException('non-nullable provincialNumber cannot be null');
+        if (is_null($longTermGrowthPercentage)) {
+            throw new \InvalidArgumentException('non-nullable longTermGrowthPercentage cannot be null');
         }
-        $this->container['provincialNumber'] = $provincialNumber;
+        $this->container['longTermGrowthPercentage'] = $longTermGrowthPercentage;
+
+        return $this;
+    }
+
+    /**
+     * Gets longTermGrowthYears
+     *
+     * @return float|null
+     */
+    public function getLongTermGrowthYears()
+    {
+        return $this->container['longTermGrowthYears'];
+    }
+
+    /**
+     * Sets longTermGrowthYears
+     *
+     * @param float|null $longTermGrowthYears longTermGrowthYears
+     *
+     * @return self
+     */
+    public function setLongTermGrowthYears($longTermGrowthYears)
+    {
+        if (is_null($longTermGrowthYears)) {
+            throw new \InvalidArgumentException('non-nullable longTermGrowthYears cannot be null');
+        }
+        $this->container['longTermGrowthYears'] = $longTermGrowthYears;
+
+        return $this;
+    }
+
+    /**
+     * Gets speculationPercentage
+     *
+     * @return float|null
+     */
+    public function getSpeculationPercentage()
+    {
+        return $this->container['speculationPercentage'];
+    }
+
+    /**
+     * Sets speculationPercentage
+     *
+     * @param float|null $speculationPercentage speculationPercentage
+     *
+     * @return self
+     */
+    public function setSpeculationPercentage($speculationPercentage)
+    {
+        if (is_null($speculationPercentage)) {
+            throw new \InvalidArgumentException('non-nullable speculationPercentage cannot be null');
+        }
+        $this->container['speculationPercentage'] = $speculationPercentage;
 
         return $this;
     }

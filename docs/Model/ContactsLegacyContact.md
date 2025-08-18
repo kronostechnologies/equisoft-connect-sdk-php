@@ -25,5 +25,6 @@ Name | Type | Description | Notes
 **currentCivilStatus** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsCivilStatus**](ContactsCivilStatus.md) |  | [optional]
 **currentOccupation** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsOccupation**](ContactsOccupation.md) |  | [optional]
 **links** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsLegacyContactRelation[]**](ContactsLegacyContactRelation.md) |  | [optional]
+**investorProfile** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsInvestorProfile**](ContactsInvestorProfile.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -26,5 +26,7 @@ Name | Type | Description | Notes
 **endOfFinancialYear** | **string** |  | [optional]
 **numberOfShareholders** | **int** |  | [optional]
 **registrationNumbers** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsRegistrationNumbers**](ContactsRegistrationNumbers.md) |  | [optional]
+**knownSince** | **\DateTime** |  | [optional]
+**endDate** | **\DateTime** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

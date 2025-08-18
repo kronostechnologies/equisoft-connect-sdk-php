@@ -1,6 +1,6 @@
 <?php
 /**
- * ContactsRegistrationNumbers
+ * ContactsRiskTolerance
  *
  * PHP version 8.1
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * ContactsRegistrationNumbers Class Doc Comment
+ * ContactsRiskTolerance Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
@@ -40,7 +40,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ContactsRegistrationNumbers implements ModelInterface, ArrayAccess, \JsonSerializable
+class ContactsRiskTolerance implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ContactsRegistrationNumbers implements ModelInterface, ArrayAccess, \JsonS
       *
       * @var string
       */
-    protected static $openAPIModelName = 'contacts.RegistrationNumbers';
+    protected static $openAPIModelName = 'contacts.RiskTolerance';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +57,9 @@ class ContactsRegistrationNumbers implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'identificationNumber' => 'string',
-        'federalNumber' => 'string',
-        'provincialNumber' => 'string'
+        'low' => 'float',
+        'medium' => 'float',
+        'high' => 'float'
     ];
 
     /**
@@ -70,9 +70,9 @@ class ContactsRegistrationNumbers implements ModelInterface, ArrayAccess, \JsonS
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'identificationNumber' => null,
-        'federalNumber' => null,
-        'provincialNumber' => null
+        'low' => 'float',
+        'medium' => 'float',
+        'high' => 'float'
     ];
 
     /**
@@ -81,9 +81,9 @@ class ContactsRegistrationNumbers implements ModelInterface, ArrayAccess, \JsonS
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'identificationNumber' => false,
-        'federalNumber' => false,
-        'provincialNumber' => false
+        'low' => false,
+        'medium' => false,
+        'high' => false
     ];
 
     /**
@@ -172,9 +172,9 @@ class ContactsRegistrationNumbers implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $attributeMap = [
-        'identificationNumber' => 'identificationNumber',
-        'federalNumber' => 'federalNumber',
-        'provincialNumber' => 'provincialNumber'
+        'low' => 'low',
+        'medium' => 'medium',
+        'high' => 'high'
     ];
 
     /**
@@ -183,9 +183,9 @@ class ContactsRegistrationNumbers implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $setters = [
-        'identificationNumber' => 'setIdentificationNumber',
-        'federalNumber' => 'setFederalNumber',
-        'provincialNumber' => 'setProvincialNumber'
+        'low' => 'setLow',
+        'medium' => 'setMedium',
+        'high' => 'setHigh'
     ];
 
     /**
@@ -194,9 +194,9 @@ class ContactsRegistrationNumbers implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $getters = [
-        'identificationNumber' => 'getIdentificationNumber',
-        'federalNumber' => 'getFederalNumber',
-        'provincialNumber' => 'getProvincialNumber'
+        'low' => 'getLow',
+        'medium' => 'getMedium',
+        'high' => 'getHigh'
     ];
 
     /**
@@ -256,9 +256,9 @@ class ContactsRegistrationNumbers implements ModelInterface, ArrayAccess, \JsonS
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('identificationNumber', $data ?? [], null);
-        $this->setIfExists('federalNumber', $data ?? [], null);
-        $this->setIfExists('provincialNumber', $data ?? [], null);
+        $this->setIfExists('low', $data ?? [], null);
+        $this->setIfExists('medium', $data ?? [], null);
+        $this->setIfExists('high', $data ?? [], null);
     }
 
     /**
@@ -304,82 +304,82 @@ class ContactsRegistrationNumbers implements ModelInterface, ArrayAccess, \JsonS
 
 
     /**
-     * Gets identificationNumber
+     * Gets low
      *
-     * @return string|null
+     * @return float|null
      */
-    public function getIdentificationNumber()
+    public function getLow()
     {
-        return $this->container['identificationNumber'];
+        return $this->container['low'];
     }
 
     /**
-     * Sets identificationNumber
+     * Sets low
      *
-     * @param string|null $identificationNumber identificationNumber
+     * @param float|null $low low
      *
      * @return self
      */
-    public function setIdentificationNumber($identificationNumber)
+    public function setLow($low)
     {
-        if (is_null($identificationNumber)) {
-            throw new \InvalidArgumentException('non-nullable identificationNumber cannot be null');
+        if (is_null($low)) {
+            throw new \InvalidArgumentException('non-nullable low cannot be null');
         }
-        $this->container['identificationNumber'] = $identificationNumber;
+        $this->container['low'] = $low;
 
         return $this;
     }
 
     /**
-     * Gets federalNumber
+     * Gets medium
      *
-     * @return string|null
+     * @return float|null
      */
-    public function getFederalNumber()
+    public function getMedium()
     {
-        return $this->container['federalNumber'];
+        return $this->container['medium'];
     }
 
     /**
-     * Sets federalNumber
+     * Sets medium
      *
-     * @param string|null $federalNumber federalNumber
+     * @param float|null $medium medium
      *
      * @return self
      */
-    public function setFederalNumber($federalNumber)
+    public function setMedium($medium)
     {
-        if (is_null($federalNumber)) {
-            throw new \InvalidArgumentException('non-nullable federalNumber cannot be null');
+        if (is_null($medium)) {
+            throw new \InvalidArgumentException('non-nullable medium cannot be null');
         }
-        $this->container['federalNumber'] = $federalNumber;
+        $this->container['medium'] = $medium;
 
         return $this;
     }
 
     /**
-     * Gets provincialNumber
+     * Gets high
      *
-     * @return string|null
+     * @return float|null
      */
-    public function getProvincialNumber()
+    public function getHigh()
     {
-        return $this->container['provincialNumber'];
+        return $this->container['high'];
     }
 
     /**
-     * Sets provincialNumber
+     * Sets high
      *
-     * @param string|null $provincialNumber provincialNumber
+     * @param float|null $high high
      *
      * @return self
      */
-    public function setProvincialNumber($provincialNumber)
+    public function setHigh($high)
     {
-        if (is_null($provincialNumber)) {
-            throw new \InvalidArgumentException('non-nullable provincialNumber cannot be null');
+        if (is_null($high)) {
+            throw new \InvalidArgumentException('non-nullable high cannot be null');
         }
-        $this->container['provincialNumber'] = $provincialNumber;
+        $this->container['high'] = $high;
 
         return $this;
     }

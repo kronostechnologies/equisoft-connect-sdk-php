@@ -267,4 +267,13 @@ class ContactsLegacyContactTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "investorProfile"
+     */
+    public function testPropertyInvestorProfile()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
 }

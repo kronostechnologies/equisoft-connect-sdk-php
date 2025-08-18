@@ -77,7 +77,8 @@ class ContactsLegacyContact implements ModelInterface, ArrayAccess, \JsonSeriali
         'currentMaritalStatus' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsCivilStatus',
         'currentCivilStatus' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsCivilStatus',
         'currentOccupation' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsOccupation',
-        'links' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsLegacyContactRelation[]'
+        'links' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsLegacyContactRelation[]',
+        'investorProfile' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsInvestorProfile'
     ];
 
     /**
@@ -108,7 +109,8 @@ class ContactsLegacyContact implements ModelInterface, ArrayAccess, \JsonSeriali
         'currentMaritalStatus' => null,
         'currentCivilStatus' => null,
         'currentOccupation' => null,
-        'links' => null
+        'links' => null,
+        'investorProfile' => null
     ];
 
     /**
@@ -137,7 +139,8 @@ class ContactsLegacyContact implements ModelInterface, ArrayAccess, \JsonSeriali
         'currentMaritalStatus' => true,
         'currentCivilStatus' => true,
         'currentOccupation' => true,
-        'links' => false
+        'links' => false,
+        'investorProfile' => true
     ];
 
     /**
@@ -246,7 +249,8 @@ class ContactsLegacyContact implements ModelInterface, ArrayAccess, \JsonSeriali
         'currentMaritalStatus' => 'currentMaritalStatus',
         'currentCivilStatus' => 'currentCivilStatus',
         'currentOccupation' => 'currentOccupation',
-        'links' => 'links'
+        'links' => 'links',
+        'investorProfile' => 'investorProfile'
     ];
 
     /**
@@ -275,7 +279,8 @@ class ContactsLegacyContact implements ModelInterface, ArrayAccess, \JsonSeriali
         'currentMaritalStatus' => 'setCurrentMaritalStatus',
         'currentCivilStatus' => 'setCurrentCivilStatus',
         'currentOccupation' => 'setCurrentOccupation',
-        'links' => 'setLinks'
+        'links' => 'setLinks',
+        'investorProfile' => 'setInvestorProfile'
     ];
 
     /**
@@ -304,7 +309,8 @@ class ContactsLegacyContact implements ModelInterface, ArrayAccess, \JsonSeriali
         'currentMaritalStatus' => 'getCurrentMaritalStatus',
         'currentCivilStatus' => 'getCurrentCivilStatus',
         'currentOccupation' => 'getCurrentOccupation',
-        'links' => 'getLinks'
+        'links' => 'getLinks',
+        'investorProfile' => 'getInvestorProfile'
     ];
 
     /**
@@ -385,6 +391,7 @@ class ContactsLegacyContact implements ModelInterface, ArrayAccess, \JsonSeriali
         $this->setIfExists('currentCivilStatus', $data ?? [], null);
         $this->setIfExists('currentOccupation', $data ?? [], null);
         $this->setIfExists('links', $data ?? [], null);
+        $this->setIfExists('investorProfile', $data ?? [], null);
     }
 
     /**
@@ -1038,6 +1045,40 @@ class ContactsLegacyContact implements ModelInterface, ArrayAccess, \JsonSeriali
             throw new \InvalidArgumentException('non-nullable links cannot be null');
         }
         $this->container['links'] = $links;
+
+        return $this;
+    }
+
+    /**
+     * Gets investorProfile
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsInvestorProfile|null
+     */
+    public function getInvestorProfile()
+    {
+        return $this->container['investorProfile'];
+    }
+
+    /**
+     * Sets investorProfile
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsInvestorProfile|null $investorProfile investorProfile
+     *
+     * @return self
+     */
+    public function setInvestorProfile($investorProfile)
+    {
+        if (is_null($investorProfile)) {
+            array_push($this->openAPINullablesSetToNull, 'investorProfile');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('investorProfile', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['investorProfile'] = $investorProfile;
 
         return $this;
     }
