@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **annualGrowth** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue**](ContactsContactFieldValue.md) |  | [optional]
 **companyStage** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue**](ContactsContactFieldValue.md) |  | [optional]
 **revenue** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsRevenue**](ContactsRevenue.md) |  | [optional]
+**netProfits** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue**](ContactsContactFieldValue.md) |  | [optional]
 **incorporationLocation** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue**](ContactsContactFieldValue.md) |  | [optional]
 **payroll** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue**](ContactsContactFieldValue.md) |  | [optional]
 **endOfFinancialYear** | **string** |  | [optional]

@@ -74,6 +74,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         'annualGrowth' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
         'companyStage' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
         'revenue' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsRevenue',
+        'netProfits' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
         'incorporationLocation' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
         'payroll' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
         'endOfFinancialYear' => 'string',
@@ -108,6 +109,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         'annualGrowth' => null,
         'companyStage' => null,
         'revenue' => null,
+        'netProfits' => null,
         'incorporationLocation' => null,
         'payroll' => null,
         'endOfFinancialYear' => null,
@@ -140,6 +142,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         'annualGrowth' => true,
         'companyStage' => true,
         'revenue' => true,
+        'netProfits' => true,
         'incorporationLocation' => true,
         'payroll' => true,
         'endOfFinancialYear' => true,
@@ -252,6 +255,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         'annualGrowth' => 'annualGrowth',
         'companyStage' => 'companyStage',
         'revenue' => 'revenue',
+        'netProfits' => 'netProfits',
         'incorporationLocation' => 'incorporationLocation',
         'payroll' => 'payroll',
         'endOfFinancialYear' => 'endOfFinancialYear',
@@ -284,6 +288,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         'annualGrowth' => 'setAnnualGrowth',
         'companyStage' => 'setCompanyStage',
         'revenue' => 'setRevenue',
+        'netProfits' => 'setNetProfits',
         'incorporationLocation' => 'setIncorporationLocation',
         'payroll' => 'setPayroll',
         'endOfFinancialYear' => 'setEndOfFinancialYear',
@@ -316,6 +321,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         'annualGrowth' => 'getAnnualGrowth',
         'companyStage' => 'getCompanyStage',
         'revenue' => 'getRevenue',
+        'netProfits' => 'getNetProfits',
         'incorporationLocation' => 'getIncorporationLocation',
         'payroll' => 'getPayroll',
         'endOfFinancialYear' => 'getEndOfFinancialYear',
@@ -399,6 +405,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         $this->setIfExists('annualGrowth', $data ?? [], null);
         $this->setIfExists('companyStage', $data ?? [], null);
         $this->setIfExists('revenue', $data ?? [], null);
+        $this->setIfExists('netProfits', $data ?? [], null);
         $this->setIfExists('incorporationLocation', $data ?? [], null);
         $this->setIfExists('payroll', $data ?? [], null);
         $this->setIfExists('endOfFinancialYear', $data ?? [], null);
@@ -996,6 +1003,40 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
             }
         }
         $this->container['revenue'] = $revenue;
+
+        return $this;
+    }
+
+    /**
+     * Gets netProfits
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
+     */
+    public function getNetProfits()
+    {
+        return $this->container['netProfits'];
+    }
+
+    /**
+     * Sets netProfits
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $netProfits netProfits
+     *
+     * @return self
+     */
+    public function setNetProfits($netProfits)
+    {
+        if (is_null($netProfits)) {
+            array_push($this->openAPINullablesSetToNull, 'netProfits');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('netProfits', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['netProfits'] = $netProfits;
 
         return $this;
     }

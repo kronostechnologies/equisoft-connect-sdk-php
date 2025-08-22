@@ -233,6 +233,15 @@ class ContactsAdditionalInformationTest extends TestCase
     }
 
     /**
+     * Test attribute "netProfits"
+     */
+    public function testPropertyNetProfits()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "incorporationLocation"
      */
     public function testPropertyIncorporationLocation()
