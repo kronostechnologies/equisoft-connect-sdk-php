@@ -1,6 +1,6 @@
 <?php
 /**
- * InvestmentsProduct
+ * InvestmentsCannexDistribution
  *
  * PHP version 8.1
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * InvestmentsProduct Class Doc Comment
+ * InvestmentsCannexDistribution Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
@@ -40,7 +40,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class InvestmentsProduct implements ModelInterface, ArrayAccess, \JsonSerializable
+class InvestmentsCannexDistribution implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class InvestmentsProduct implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'investments.Product';
+    protected static $openAPIModelName = 'investments.CannexDistribution';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,16 +57,9 @@ class InvestmentsProduct implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'int',
-        'code' => 'string',
-        'secondaryCode' => 'string',
         'type' => 'string',
-        'description' => '\Equisoft\SDK\EquisoftConnect\Model\Translation[]',
-        'fundIdentifier' => 'string',
-        'geographicRegion' => '\Equisoft\SDK\EquisoftConnect\Model\Translation[]',
-        'marketSector' => '\Equisoft\SDK\EquisoftConnect\Model\Translation[]',
-        'cusip' => 'string',
-        'isin' => 'string'
+        'frequency' => 'string',
+        'paymentPeriod' => 'string'
     ];
 
     /**
@@ -77,16 +70,9 @@ class InvestmentsProduct implements ModelInterface, ArrayAccess, \JsonSerializab
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null,
-        'code' => null,
-        'secondaryCode' => null,
         'type' => null,
-        'description' => null,
-        'fundIdentifier' => null,
-        'geographicRegion' => null,
-        'marketSector' => null,
-        'cusip' => null,
-        'isin' => null
+        'frequency' => null,
+        'paymentPeriod' => null
     ];
 
     /**
@@ -95,16 +81,9 @@ class InvestmentsProduct implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'id' => false,
-        'code' => false,
-        'secondaryCode' => false,
         'type' => false,
-        'description' => false,
-        'fundIdentifier' => false,
-        'geographicRegion' => false,
-        'marketSector' => false,
-        'cusip' => false,
-        'isin' => false
+        'frequency' => false,
+        'paymentPeriod' => false
     ];
 
     /**
@@ -193,16 +172,9 @@ class InvestmentsProduct implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'code' => 'code',
-        'secondaryCode' => 'secondaryCode',
         'type' => 'type',
-        'description' => 'description',
-        'fundIdentifier' => 'fundIdentifier',
-        'geographicRegion' => 'geographicRegion',
-        'marketSector' => 'marketSector',
-        'cusip' => 'cusip',
-        'isin' => 'isin'
+        'frequency' => 'frequency',
+        'paymentPeriod' => 'paymentPeriod'
     ];
 
     /**
@@ -211,16 +183,9 @@ class InvestmentsProduct implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'code' => 'setCode',
-        'secondaryCode' => 'setSecondaryCode',
         'type' => 'setType',
-        'description' => 'setDescription',
-        'fundIdentifier' => 'setFundIdentifier',
-        'geographicRegion' => 'setGeographicRegion',
-        'marketSector' => 'setMarketSector',
-        'cusip' => 'setCusip',
-        'isin' => 'setIsin'
+        'frequency' => 'setFrequency',
+        'paymentPeriod' => 'setPaymentPeriod'
     ];
 
     /**
@@ -229,16 +194,9 @@ class InvestmentsProduct implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'code' => 'getCode',
-        'secondaryCode' => 'getSecondaryCode',
         'type' => 'getType',
-        'description' => 'getDescription',
-        'fundIdentifier' => 'getFundIdentifier',
-        'geographicRegion' => 'getGeographicRegion',
-        'marketSector' => 'getMarketSector',
-        'cusip' => 'getCusip',
-        'isin' => 'getIsin'
+        'frequency' => 'getFrequency',
+        'paymentPeriod' => 'getPaymentPeriod'
     ];
 
     /**
@@ -298,16 +256,9 @@ class InvestmentsProduct implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('code', $data ?? [], null);
-        $this->setIfExists('secondaryCode', $data ?? [], null);
         $this->setIfExists('type', $data ?? [], null);
-        $this->setIfExists('description', $data ?? [], null);
-        $this->setIfExists('fundIdentifier', $data ?? [], null);
-        $this->setIfExists('geographicRegion', $data ?? [], null);
-        $this->setIfExists('marketSector', $data ?? [], null);
-        $this->setIfExists('cusip', $data ?? [], null);
-        $this->setIfExists('isin', $data ?? [], null);
+        $this->setIfExists('frequency', $data ?? [], null);
+        $this->setIfExists('paymentPeriod', $data ?? [], null);
     }
 
     /**
@@ -353,87 +304,6 @@ class InvestmentsProduct implements ModelInterface, ArrayAccess, \JsonSerializab
 
 
     /**
-     * Gets id
-     *
-     * @return int|null
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param int|null $id id
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
-        }
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets code
-     *
-     * @return string|null
-     */
-    public function getCode()
-    {
-        return $this->container['code'];
-    }
-
-    /**
-     * Sets code
-     *
-     * @param string|null $code code
-     *
-     * @return self
-     */
-    public function setCode($code)
-    {
-        if (is_null($code)) {
-            throw new \InvalidArgumentException('non-nullable code cannot be null');
-        }
-        $this->container['code'] = $code;
-
-        return $this;
-    }
-
-    /**
-     * Gets secondaryCode
-     *
-     * @return string|null
-     */
-    public function getSecondaryCode()
-    {
-        return $this->container['secondaryCode'];
-    }
-
-    /**
-     * Sets secondaryCode
-     *
-     * @param string|null $secondaryCode secondaryCode
-     *
-     * @return self
-     */
-    public function setSecondaryCode($secondaryCode)
-    {
-        if (is_null($secondaryCode)) {
-            throw new \InvalidArgumentException('non-nullable secondaryCode cannot be null');
-        }
-        $this->container['secondaryCode'] = $secondaryCode;
-
-        return $this;
-    }
-
-    /**
      * Gets type
      *
      * @return string|null
@@ -461,163 +331,55 @@ class InvestmentsProduct implements ModelInterface, ArrayAccess, \JsonSerializab
     }
 
     /**
-     * Gets description
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\Translation[]|null
-     */
-    public function getDescription()
-    {
-        return $this->container['description'];
-    }
-
-    /**
-     * Sets description
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\Translation[]|null $description description
-     *
-     * @return self
-     */
-    public function setDescription($description)
-    {
-        if (is_null($description)) {
-            throw new \InvalidArgumentException('non-nullable description cannot be null');
-        }
-        $this->container['description'] = $description;
-
-        return $this;
-    }
-
-    /**
-     * Gets fundIdentifier
+     * Gets frequency
      *
      * @return string|null
      */
-    public function getFundIdentifier()
+    public function getFrequency()
     {
-        return $this->container['fundIdentifier'];
+        return $this->container['frequency'];
     }
 
     /**
-     * Sets fundIdentifier
+     * Sets frequency
      *
-     * @param string|null $fundIdentifier fundIdentifier
+     * @param string|null $frequency frequency
      *
      * @return self
      */
-    public function setFundIdentifier($fundIdentifier)
+    public function setFrequency($frequency)
     {
-        if (is_null($fundIdentifier)) {
-            throw new \InvalidArgumentException('non-nullable fundIdentifier cannot be null');
+        if (is_null($frequency)) {
+            throw new \InvalidArgumentException('non-nullable frequency cannot be null');
         }
-        $this->container['fundIdentifier'] = $fundIdentifier;
+        $this->container['frequency'] = $frequency;
 
         return $this;
     }
 
     /**
-     * Gets geographicRegion
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\Translation[]|null
-     */
-    public function getGeographicRegion()
-    {
-        return $this->container['geographicRegion'];
-    }
-
-    /**
-     * Sets geographicRegion
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\Translation[]|null $geographicRegion geographicRegion
-     *
-     * @return self
-     */
-    public function setGeographicRegion($geographicRegion)
-    {
-        if (is_null($geographicRegion)) {
-            throw new \InvalidArgumentException('non-nullable geographicRegion cannot be null');
-        }
-        $this->container['geographicRegion'] = $geographicRegion;
-
-        return $this;
-    }
-
-    /**
-     * Gets marketSector
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\Translation[]|null
-     */
-    public function getMarketSector()
-    {
-        return $this->container['marketSector'];
-    }
-
-    /**
-     * Sets marketSector
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\Translation[]|null $marketSector marketSector
-     *
-     * @return self
-     */
-    public function setMarketSector($marketSector)
-    {
-        if (is_null($marketSector)) {
-            throw new \InvalidArgumentException('non-nullable marketSector cannot be null');
-        }
-        $this->container['marketSector'] = $marketSector;
-
-        return $this;
-    }
-
-    /**
-     * Gets cusip
+     * Gets paymentPeriod
      *
      * @return string|null
      */
-    public function getCusip()
+    public function getPaymentPeriod()
     {
-        return $this->container['cusip'];
+        return $this->container['paymentPeriod'];
     }
 
     /**
-     * Sets cusip
+     * Sets paymentPeriod
      *
-     * @param string|null $cusip cusip
+     * @param string|null $paymentPeriod paymentPeriod
      *
      * @return self
      */
-    public function setCusip($cusip)
+    public function setPaymentPeriod($paymentPeriod)
     {
-        if (is_null($cusip)) {
-            throw new \InvalidArgumentException('non-nullable cusip cannot be null');
+        if (is_null($paymentPeriod)) {
+            throw new \InvalidArgumentException('non-nullable paymentPeriod cannot be null');
         }
-        $this->container['cusip'] = $cusip;
-
-        return $this;
-    }
-
-    /**
-     * Gets isin
-     *
-     * @return string|null
-     */
-    public function getIsin()
-    {
-        return $this->container['isin'];
-    }
-
-    /**
-     * Sets isin
-     *
-     * @param string|null $isin isin
-     *
-     * @return self
-     */
-    public function setIsin($isin)
-    {
-        if (is_null($isin)) {
-            throw new \InvalidArgumentException('non-nullable isin cannot be null');
-        }
-        $this->container['isin'] = $isin;
+        $this->container['paymentPeriod'] = $paymentPeriod;
 
         return $this;
     }

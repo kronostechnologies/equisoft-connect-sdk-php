@@ -61,24 +61,24 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, \JsonSerializab
         'accountNumber' => 'string',
         'owner1' => 'string',
         'owner2' => 'string',
-        'type' => 'string',
-        'description' => 'string',
+        'type' => '\Equisoft\SDK\EquisoftConnect\Model\Translation[]',
+        'description' => '\Equisoft\SDK\EquisoftConnect\Model\Translation[]',
         'jointSignature' => 'string',
         'jointSurvivor' => 'string',
         'inTrust' => 'bool',
         'groupPlan' => 'string',
-        'recipient' => 'string',
+        'recipient' => '\Equisoft\SDK\EquisoftConnect\Model\Translation[]',
         'spousal' => 'bool',
         'selfDirectedAccount' => 'bool',
         'selfDirectedAccountNumber' => 'string',
         'lockedIn' => 'bool',
         'currency' => 'string',
-        'taxCode' => 'string',
+        'taxCode' => '\Equisoft\SDK\EquisoftConnect\Model\Translation[]',
         'taxStatus' => 'string',
         'marketValue' => 'float',
         'marketValueUpdateDate' => '\DateTime',
         'designation' => 'string',
-        'designationIntermediary' => 'string',
+        'designationIntermediary' => '\Equisoft\SDK\EquisoftConnect\Model\Translation[]',
         'designationIntermediaryAccountNumber' => 'string',
         'notes' => 'string',
         'managed' => 'bool',
@@ -645,7 +645,7 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets type
      *
-     * @return string|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\Translation[]|null
      */
     public function getType()
     {
@@ -655,7 +655,7 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets type
      *
-     * @param string|null $type type
+     * @param \Equisoft\SDK\EquisoftConnect\Model\Translation[]|null $type type
      *
      * @return self
      */
@@ -672,7 +672,7 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets description
      *
-     * @return string|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\Translation[]|null
      */
     public function getDescription()
     {
@@ -682,7 +682,7 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets description
      *
-     * @param string|null $description description
+     * @param \Equisoft\SDK\EquisoftConnect\Model\Translation[]|null $description description
      *
      * @return self
      */
@@ -807,7 +807,7 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets recipient
      *
-     * @return string|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\Translation[]|null
      */
     public function getRecipient()
     {
@@ -817,7 +817,7 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets recipient
      *
-     * @param string|null $recipient recipient
+     * @param \Equisoft\SDK\EquisoftConnect\Model\Translation[]|null $recipient recipient
      *
      * @return self
      */
@@ -969,7 +969,7 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets taxCode
      *
-     * @return string|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\Translation[]|null
      */
     public function getTaxCode()
     {
@@ -979,7 +979,7 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets taxCode
      *
-     * @param string|null $taxCode taxCode
+     * @param \Equisoft\SDK\EquisoftConnect\Model\Translation[]|null $taxCode taxCode
      *
      * @return self
      */
@@ -1104,7 +1104,7 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets designationIntermediary
      *
-     * @return string|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\Translation[]|null
      */
     public function getDesignationIntermediary()
     {
@@ -1114,7 +1114,7 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets designationIntermediary
      *
-     * @param string|null $designationIntermediary designationIntermediary
+     * @param \Equisoft\SDK\EquisoftConnect\Model\Translation[]|null $designationIntermediary designationIntermediary
      *
      * @return self
      */

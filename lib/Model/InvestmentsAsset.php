@@ -59,7 +59,7 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'int',
         'name' => 'string',
-        'assetType' => 'string',
+        'assetType' => '\Equisoft\SDK\EquisoftConnect\Model\Translation[]',
         'cusip' => 'string',
         'isin' => 'string',
         'tickerSymbolCode' => 'string',
@@ -82,7 +82,8 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
         'interestRateFixed' => 'float',
         'interestFrequency' => 'string',
         'redeemable' => 'string',
-        'product' => '\Equisoft\SDK\EquisoftConnect\Model\InvestmentsProduct'
+        'product' => '\Equisoft\SDK\EquisoftConnect\Model\InvestmentsProduct',
+        'cannexFund' => '\Equisoft\SDK\EquisoftConnect\Model\InvestmentsCannexFund'
     ];
 
     /**
@@ -118,7 +119,8 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
         'interestRateFixed' => 'float',
         'interestFrequency' => null,
         'redeemable' => null,
-        'product' => null
+        'product' => null,
+        'cannexFund' => null
     ];
 
     /**
@@ -152,7 +154,8 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
         'interestRateFixed' => true,
         'interestFrequency' => true,
         'redeemable' => true,
-        'product' => true
+        'product' => true,
+        'cannexFund' => true
     ];
 
     /**
@@ -266,7 +269,8 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
         'interestRateFixed' => 'interestRateFixed',
         'interestFrequency' => 'interestFrequency',
         'redeemable' => 'redeemable',
-        'product' => 'product'
+        'product' => 'product',
+        'cannexFund' => 'cannexFund'
     ];
 
     /**
@@ -300,7 +304,8 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
         'interestRateFixed' => 'setInterestRateFixed',
         'interestFrequency' => 'setInterestFrequency',
         'redeemable' => 'setRedeemable',
-        'product' => 'setProduct'
+        'product' => 'setProduct',
+        'cannexFund' => 'setCannexFund'
     ];
 
     /**
@@ -334,7 +339,8 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
         'interestRateFixed' => 'getInterestRateFixed',
         'interestFrequency' => 'getInterestFrequency',
         'redeemable' => 'getRedeemable',
-        'product' => 'getProduct'
+        'product' => 'getProduct',
+        'cannexFund' => 'getCannexFund'
     ];
 
     /**
@@ -420,6 +426,7 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('interestFrequency', $data ?? [], null);
         $this->setIfExists('redeemable', $data ?? [], null);
         $this->setIfExists('product', $data ?? [], null);
+        $this->setIfExists('cannexFund', $data ?? [], null);
     }
 
     /**
@@ -521,7 +528,7 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets assetType
      *
-     * @return string|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\Translation[]|null
      */
     public function getAssetType()
     {
@@ -531,7 +538,7 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets assetType
      *
-     * @param string|null $assetType assetType
+     * @param \Equisoft\SDK\EquisoftConnect\Model\Translation[]|null $assetType assetType
      *
      * @return self
      */
@@ -1246,6 +1253,40 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
             }
         }
         $this->container['product'] = $product;
+
+        return $this;
+    }
+
+    /**
+     * Gets cannexFund
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\InvestmentsCannexFund|null
+     */
+    public function getCannexFund()
+    {
+        return $this->container['cannexFund'];
+    }
+
+    /**
+     * Sets cannexFund
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\InvestmentsCannexFund|null $cannexFund cannexFund
+     *
+     * @return self
+     */
+    public function setCannexFund($cannexFund)
+    {
+        if (is_null($cannexFund)) {
+            array_push($this->openAPINullablesSetToNull, 'cannexFund');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('cannexFund', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['cannexFund'] = $cannexFund;
 
         return $this;
     }

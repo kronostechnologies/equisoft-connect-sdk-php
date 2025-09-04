@@ -1,6 +1,6 @@
 <?php
 /**
- * InvestmentsAssetTest
+ * InvestmentsCannexProductTest
  *
  * PHP version 8.1
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * InvestmentsAssetTest Class Doc Comment
+ * InvestmentsCannexProductTest Class Doc Comment
  *
  * @category    Class
- * @description InvestmentsAsset
+ * @description InvestmentsCannexProduct
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class InvestmentsAssetTest extends TestCase
+class InvestmentsCannexProductTest extends TestCase
 {
 
     /**
@@ -71,9 +71,9 @@ class InvestmentsAssetTest extends TestCase
     }
 
     /**
-     * Test "InvestmentsAsset"
+     * Test "InvestmentsCannexProduct"
      */
-    public function testInvestmentsAsset()
+    public function testInvestmentsCannexProduct()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -89,18 +89,36 @@ class InvestmentsAssetTest extends TestCase
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "uniqueCode"
      */
-    public function testPropertyName()
+    public function testPropertyUniqueCode()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "assetType"
+     * Test attribute "fundCode"
      */
-    public function testPropertyAssetType()
+    public function testPropertyFundCode()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "fundName"
+     */
+    public function testPropertyFundName()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "fundCategoryName"
+     */
+    public function testPropertyFundCategoryName()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -116,54 +134,36 @@ class InvestmentsAssetTest extends TestCase
     }
 
     /**
-     * Test attribute "isin"
+     * Test attribute "masterFund"
      */
-    public function testPropertyIsin()
+    public function testPropertyMasterFund()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "tickerSymbolCode"
+     * Test attribute "masterUniqueCode"
      */
-    public function testPropertyTickerSymbolCode()
+    public function testPropertyMasterUniqueCode()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "marketValue"
+     * Test attribute "masterFundCode"
      */
-    public function testPropertyMarketValue()
+    public function testPropertyMasterFundCode()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "marketValueUpdateDate"
+     * Test attribute "issueDate"
      */
-    public function testPropertyMarketValueUpdateDate()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "bookValue"
-     */
-    public function testPropertyBookValue()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "notes"
-     */
-    public function testPropertyNotes()
+    public function testPropertyIssueDate()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -179,51 +179,6 @@ class InvestmentsAssetTest extends TestCase
     }
 
     /**
-     * Test attribute "reviewDate"
-     */
-    public function testPropertyReviewDate()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "openedDate"
-     */
-    public function testPropertyOpenedDate()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "closedDate"
-     */
-    public function testPropertyClosedDate()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "quantity"
-     */
-    public function testPropertyQuantity()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "quantityUpdateDate"
-     */
-    public function testPropertyQuantityUpdateDate()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "price"
      */
     public function testPropertyPrice()
@@ -233,90 +188,36 @@ class InvestmentsAssetTest extends TestCase
     }
 
     /**
-     * Test attribute "priceUpdateDate"
+     * Test attribute "priceDate"
      */
-    public function testPropertyPriceUpdateDate()
+    public function testPropertyPriceDate()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "faceValue"
+     * Test attribute "exchange"
      */
-    public function testPropertyFaceValue()
+    public function testPropertyExchange()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "faceValueDate"
+     * Test attribute "symbol"
      */
-    public function testPropertyFaceValueDate()
+    public function testPropertySymbol()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "maturityValue"
+     * Test attribute "changeDate"
      */
-    public function testPropertyMaturityValue()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "maturityDate"
-     */
-    public function testPropertyMaturityDate()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "interestRateFixed"
-     */
-    public function testPropertyInterestRateFixed()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "interestFrequency"
-     */
-    public function testPropertyInterestFrequency()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "redeemable"
-     */
-    public function testPropertyRedeemable()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "product"
-     */
-    public function testPropertyProduct()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "cannexFund"
-     */
-    public function testPropertyCannexFund()
+    public function testPropertyChangeDate()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

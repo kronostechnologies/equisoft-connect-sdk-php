@@ -8,10 +8,10 @@ Name | Type | Description | Notes
 **code** | **string** |  | [optional]
 **secondaryCode** | **string** |  | [optional]
 **type** | **string** |  | [optional]
-**description** | **string** |  | [optional]
+**description** | [**\Equisoft\SDK\EquisoftConnect\Model\Translation[]**](Translation.md) |  | [optional]
 **fundIdentifier** | **string** |  | [optional]
-**geographicRegion** | **string** |  | [optional]
-**marketSector** | **string** |  | [optional]
+**geographicRegion** | [**\Equisoft\SDK\EquisoftConnect\Model\Translation[]**](Translation.md) |  | [optional]
+**marketSector** | [**\Equisoft\SDK\EquisoftConnect\Model\Translation[]**](Translation.md) |  | [optional]
 **cusip** | **string** |  | [optional]
 **isin** | **string** |  | [optional]
 

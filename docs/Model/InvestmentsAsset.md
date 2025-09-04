@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional]
 **name** | **string** |  | [optional]
-**assetType** | **string** |  | [optional]
+**assetType** | [**\Equisoft\SDK\EquisoftConnect\Model\Translation[]**](Translation.md) |  | [optional]
 **cusip** | **string** |  | [optional]
 **isin** | **string** |  | [optional]
 **tickerSymbolCode** | **string** |  | [optional]
@@ -30,5 +30,6 @@ Name | Type | Description | Notes
 **interestFrequency** | **string** |  | [optional]
 **redeemable** | **string** |  | [optional]
 **product** | [**\Equisoft\SDK\EquisoftConnect\Model\InvestmentsProduct**](InvestmentsProduct.md) |  | [optional]
+**cannexFund** | [**\Equisoft\SDK\EquisoftConnect\Model\InvestmentsCannexFund**](InvestmentsCannexFund.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
