@@ -63,9 +63,13 @@ class ContactContactIdentification implements ModelInterface, ArrayAccess, \Json
         'middleName' => 'string',
         'lastName' => 'string',
         'maidenName' => 'string',
+        'nickName' => 'string',
         'suffix' => 'string',
         'greeting' => 'string',
-        'clientNb' => 'string'
+        'clientNb' => 'string',
+        'nameLine1' => 'string',
+        'nameLine2' => 'string',
+        'abbreviation' => 'string'
     ];
 
     /**
@@ -82,9 +86,13 @@ class ContactContactIdentification implements ModelInterface, ArrayAccess, \Json
         'middleName' => null,
         'lastName' => null,
         'maidenName' => null,
+        'nickName' => null,
         'suffix' => null,
         'greeting' => null,
-        'clientNb' => null
+        'clientNb' => null,
+        'nameLine1' => null,
+        'nameLine2' => null,
+        'abbreviation' => null
     ];
 
     /**
@@ -99,9 +107,13 @@ class ContactContactIdentification implements ModelInterface, ArrayAccess, \Json
         'middleName' => false,
         'lastName' => false,
         'maidenName' => false,
+        'nickName' => false,
         'suffix' => false,
         'greeting' => false,
-        'clientNb' => false
+        'clientNb' => false,
+        'nameLine1' => false,
+        'nameLine2' => false,
+        'abbreviation' => false
     ];
 
     /**
@@ -196,9 +208,13 @@ class ContactContactIdentification implements ModelInterface, ArrayAccess, \Json
         'middleName' => 'middleName',
         'lastName' => 'lastName',
         'maidenName' => 'maidenName',
+        'nickName' => 'nickName',
         'suffix' => 'suffix',
         'greeting' => 'greeting',
-        'clientNb' => 'clientNb'
+        'clientNb' => 'clientNb',
+        'nameLine1' => 'nameLine1',
+        'nameLine2' => 'nameLine2',
+        'abbreviation' => 'abbreviation'
     ];
 
     /**
@@ -213,9 +229,13 @@ class ContactContactIdentification implements ModelInterface, ArrayAccess, \Json
         'middleName' => 'setMiddleName',
         'lastName' => 'setLastName',
         'maidenName' => 'setMaidenName',
+        'nickName' => 'setNickName',
         'suffix' => 'setSuffix',
         'greeting' => 'setGreeting',
-        'clientNb' => 'setClientNb'
+        'clientNb' => 'setClientNb',
+        'nameLine1' => 'setNameLine1',
+        'nameLine2' => 'setNameLine2',
+        'abbreviation' => 'setAbbreviation'
     ];
 
     /**
@@ -230,9 +250,13 @@ class ContactContactIdentification implements ModelInterface, ArrayAccess, \Json
         'middleName' => 'getMiddleName',
         'lastName' => 'getLastName',
         'maidenName' => 'getMaidenName',
+        'nickName' => 'getNickName',
         'suffix' => 'getSuffix',
         'greeting' => 'getGreeting',
-        'clientNb' => 'getClientNb'
+        'clientNb' => 'getClientNb',
+        'nameLine1' => 'getNameLine1',
+        'nameLine2' => 'getNameLine2',
+        'abbreviation' => 'getAbbreviation'
     ];
 
     /**
@@ -298,9 +322,13 @@ class ContactContactIdentification implements ModelInterface, ArrayAccess, \Json
         $this->setIfExists('middleName', $data ?? [], null);
         $this->setIfExists('lastName', $data ?? [], null);
         $this->setIfExists('maidenName', $data ?? [], null);
+        $this->setIfExists('nickName', $data ?? [], null);
         $this->setIfExists('suffix', $data ?? [], null);
         $this->setIfExists('greeting', $data ?? [], null);
         $this->setIfExists('clientNb', $data ?? [], null);
+        $this->setIfExists('nameLine1', $data ?? [], null);
+        $this->setIfExists('nameLine2', $data ?? [], null);
+        $this->setIfExists('abbreviation', $data ?? [], null);
     }
 
     /**
@@ -392,7 +420,7 @@ class ContactContactIdentification implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets gender
      *
-     * @param string|null $gender Contact's gender
+     * @param string|null $gender Individual Contact's gender
      *
      * @return self
      */
@@ -419,7 +447,7 @@ class ContactContactIdentification implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets firstName
      *
-     * @param string|null $firstName Contact's first name
+     * @param string|null $firstName Individual Contact's first name
      *
      * @return self
      */
@@ -446,7 +474,7 @@ class ContactContactIdentification implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets middleName
      *
-     * @param string|null $middleName Contact's middle name
+     * @param string|null $middleName Individual Contact's middle name
      *
      * @return self
      */
@@ -473,7 +501,7 @@ class ContactContactIdentification implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets lastName
      *
-     * @param string|null $lastName Contact's last name
+     * @param string|null $lastName Individual Contact's last name
      *
      * @return self
      */
@@ -500,7 +528,7 @@ class ContactContactIdentification implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets maidenName
      *
-     * @param string|null $maidenName Contact's maiden name
+     * @param string|null $maidenName Individual Contact's maiden name
      *
      * @return self
      */
@@ -510,6 +538,33 @@ class ContactContactIdentification implements ModelInterface, ArrayAccess, \Json
             throw new \InvalidArgumentException('non-nullable maidenName cannot be null');
         }
         $this->container['maidenName'] = $maidenName;
+
+        return $this;
+    }
+
+    /**
+     * Gets nickName
+     *
+     * @return string|null
+     */
+    public function getNickName()
+    {
+        return $this->container['nickName'];
+    }
+
+    /**
+     * Sets nickName
+     *
+     * @param string|null $nickName Individual Contact's nick name
+     *
+     * @return self
+     */
+    public function setNickName($nickName)
+    {
+        if (is_null($nickName)) {
+            throw new \InvalidArgumentException('non-nullable nickName cannot be null');
+        }
+        $this->container['nickName'] = $nickName;
 
         return $this;
     }
@@ -527,7 +582,7 @@ class ContactContactIdentification implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets suffix
      *
-     * @param string|null $suffix Contact's suffix
+     * @param string|null $suffix Individual Contact's suffix
      *
      * @return self
      */
@@ -554,7 +609,7 @@ class ContactContactIdentification implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets greeting
      *
-     * @param string|null $greeting Contact's greeting
+     * @param string|null $greeting Individual Contact's greeting
      *
      * @return self
      */
@@ -581,7 +636,7 @@ class ContactContactIdentification implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets clientNb
      *
-     * @param string|null $clientNb Contact's client number
+     * @param string|null $clientNb Individual Contact's client number
      *
      * @return self
      */
@@ -591,6 +646,87 @@ class ContactContactIdentification implements ModelInterface, ArrayAccess, \Json
             throw new \InvalidArgumentException('non-nullable clientNb cannot be null');
         }
         $this->container['clientNb'] = $clientNb;
+
+        return $this;
+    }
+
+    /**
+     * Gets nameLine1
+     *
+     * @return string|null
+     */
+    public function getNameLine1()
+    {
+        return $this->container['nameLine1'];
+    }
+
+    /**
+     * Sets nameLine1
+     *
+     * @param string|null $nameLine1 Organization Contact's name line one
+     *
+     * @return self
+     */
+    public function setNameLine1($nameLine1)
+    {
+        if (is_null($nameLine1)) {
+            throw new \InvalidArgumentException('non-nullable nameLine1 cannot be null');
+        }
+        $this->container['nameLine1'] = $nameLine1;
+
+        return $this;
+    }
+
+    /**
+     * Gets nameLine2
+     *
+     * @return string|null
+     */
+    public function getNameLine2()
+    {
+        return $this->container['nameLine2'];
+    }
+
+    /**
+     * Sets nameLine2
+     *
+     * @param string|null $nameLine2 Organization Contact's name line two
+     *
+     * @return self
+     */
+    public function setNameLine2($nameLine2)
+    {
+        if (is_null($nameLine2)) {
+            throw new \InvalidArgumentException('non-nullable nameLine2 cannot be null');
+        }
+        $this->container['nameLine2'] = $nameLine2;
+
+        return $this;
+    }
+
+    /**
+     * Gets abbreviation
+     *
+     * @return string|null
+     */
+    public function getAbbreviation()
+    {
+        return $this->container['abbreviation'];
+    }
+
+    /**
+     * Sets abbreviation
+     *
+     * @param string|null $abbreviation Organization Contact's abbreviation
+     *
+     * @return self
+     */
+    public function setAbbreviation($abbreviation)
+    {
+        if (is_null($abbreviation)) {
+            throw new \InvalidArgumentException('non-nullable abbreviation cannot be null');
+        }
+        $this->container['abbreviation'] = $abbreviation;
 
         return $this;
     }

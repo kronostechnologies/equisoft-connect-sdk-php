@@ -134,6 +134,15 @@ class ContactContactIdentificationTest extends TestCase
     }
 
     /**
+     * Test attribute "nickName"
+     */
+    public function testPropertyNickName()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "suffix"
      */
     public function testPropertySuffix()
@@ -155,6 +164,33 @@ class ContactContactIdentificationTest extends TestCase
      * Test attribute "clientNb"
      */
     public function testPropertyClientNb()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "nameLine1"
+     */
+    public function testPropertyNameLine1()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "nameLine2"
+     */
+    public function testPropertyNameLine2()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "abbreviation"
+     */
+    public function testPropertyAbbreviation()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
