@@ -107,6 +107,15 @@ class InvestmentsAssetTest extends TestCase
     }
 
     /**
+     * Test attribute "assetTypeDescription"
+     */
+    public function testPropertyAssetTypeDescription()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "cusip"
      */
     public function testPropertyCusip()

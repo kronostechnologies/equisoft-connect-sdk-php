@@ -59,7 +59,8 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'id' => 'int',
         'name' => 'string',
-        'assetType' => '\Equisoft\SDK\EquisoftConnect\Model\Translation[]',
+        'assetType' => 'string',
+        'assetTypeDescription' => '\Equisoft\SDK\EquisoftConnect\Model\Translation[]',
         'cusip' => 'string',
         'isin' => 'string',
         'tickerSymbolCode' => 'string',
@@ -97,6 +98,7 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => null,
         'name' => null,
         'assetType' => null,
+        'assetTypeDescription' => null,
         'cusip' => null,
         'isin' => null,
         'tickerSymbolCode' => null,
@@ -132,6 +134,7 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => false,
         'name' => false,
         'assetType' => false,
+        'assetTypeDescription' => false,
         'cusip' => false,
         'isin' => false,
         'tickerSymbolCode' => false,
@@ -247,6 +250,7 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'id',
         'name' => 'name',
         'assetType' => 'assetType',
+        'assetTypeDescription' => 'assetTypeDescription',
         'cusip' => 'cusip',
         'isin' => 'isin',
         'tickerSymbolCode' => 'tickerSymbolCode',
@@ -282,6 +286,7 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'setId',
         'name' => 'setName',
         'assetType' => 'setAssetType',
+        'assetTypeDescription' => 'setAssetTypeDescription',
         'cusip' => 'setCusip',
         'isin' => 'setIsin',
         'tickerSymbolCode' => 'setTickerSymbolCode',
@@ -317,6 +322,7 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'getId',
         'name' => 'getName',
         'assetType' => 'getAssetType',
+        'assetTypeDescription' => 'getAssetTypeDescription',
         'cusip' => 'getCusip',
         'isin' => 'getIsin',
         'tickerSymbolCode' => 'getTickerSymbolCode',
@@ -403,6 +409,7 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('assetType', $data ?? [], null);
+        $this->setIfExists('assetTypeDescription', $data ?? [], null);
         $this->setIfExists('cusip', $data ?? [], null);
         $this->setIfExists('isin', $data ?? [], null);
         $this->setIfExists('tickerSymbolCode', $data ?? [], null);
@@ -528,7 +535,7 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets assetType
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\Translation[]|null
+     * @return string|null
      */
     public function getAssetType()
     {
@@ -538,7 +545,7 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets assetType
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\Translation[]|null $assetType assetType
+     * @param string|null $assetType assetType
      *
      * @return self
      */
@@ -548,6 +555,33 @@ class InvestmentsAsset implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable assetType cannot be null');
         }
         $this->container['assetType'] = $assetType;
+
+        return $this;
+    }
+
+    /**
+     * Gets assetTypeDescription
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\Translation[]|null
+     */
+    public function getAssetTypeDescription()
+    {
+        return $this->container['assetTypeDescription'];
+    }
+
+    /**
+     * Sets assetTypeDescription
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\Translation[]|null $assetTypeDescription assetTypeDescription
+     *
+     * @return self
+     */
+    public function setAssetTypeDescription($assetTypeDescription)
+    {
+        if (is_null($assetTypeDescription)) {
+            throw new \InvalidArgumentException('non-nullable assetTypeDescription cannot be null');
+        }
+        $this->container['assetTypeDescription'] = $assetTypeDescription;
 
         return $this;
     }

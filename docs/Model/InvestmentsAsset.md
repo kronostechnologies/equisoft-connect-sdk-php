@@ -6,7 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional]
 **name** | **string** |  | [optional]
-**assetType** | [**\Equisoft\SDK\EquisoftConnect\Model\Translation[]**](Translation.md) |  | [optional]
+**assetType** | **string** |  | [optional]
+**assetTypeDescription** | [**\Equisoft\SDK\EquisoftConnect\Model\Translation[]**](Translation.md) |  | [optional]
 **cusip** | **string** |  | [optional]
 **isin** | **string** |  | [optional]
 **tickerSymbolCode** | **string** |  | [optional]
