@@ -78,6 +78,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *ContactsApi* | [**getByUuid**](docs/Api/ContactsApi.md#getbyuuid) | **GET** /crm/api/v1/contacts/{contactUuid} | Get contact by Uuid
 *ContactsApi* | [**listContact**](docs/Api/ContactsApi.md#listcontact) | **GET** /crm/api/v1/contacts | List contact
+*ContactsApi* | [**listContactDocument**](docs/Api/ContactsApi.md#listcontactdocument) | **GET** /crm/api/v1/contacts/{contactUuid}/documents | List contact documents
 *ContactsApi* | [**listContactInvestment**](docs/Api/ContactsApi.md#listcontactinvestment) | **GET** /crm/api/v1/contacts/{contactUuid}/investmentAccounts | List contact investments
 *ContactsApi* | [**patchContact**](docs/Api/ContactsApi.md#patchcontact) | **PATCH** /crm/api/v1/contacts/{contactUuid} | Update a contact
 *DSFApi* | [**createDsfFinancialCenter**](docs/Api/DSFApi.md#createdsffinancialcenter) | **POST** /crm/api/v1/dsf/financialCenters | Create a financial center
@@ -96,6 +97,8 @@ Class | Method | HTTP request | Description
 *DatabasesApi* | [**updateUser**](docs/Api/DatabasesApi.md#updateuser) | **PATCH** /crm/api/v1/databases/{databaseUuid}/users/{userId} | Update a database&#39;s user
 *DocumentsApi* | [**deleteDocument**](docs/Api/DocumentsApi.md#deletedocument) | **DELETE** /crm/api/v1/documents/{documentId} | Delete a document.
 *DocumentsApi* | [**deleteDocuments**](docs/Api/DocumentsApi.md#deletedocuments) | **DELETE** /crm/api/v1/documents | Delete specified documents.
+*DocumentsApi* | [**getById**](docs/Api/DocumentsApi.md#getbyid) | **GET** /crm/api/v1/documents/{documentId} | Get document by id
+*DocumentsApi* | [**listDocument**](docs/Api/DocumentsApi.md#listdocument) | **GET** /crm/api/v1/documents | List document
 *EventsApi* | [**archiveEventInternalNote**](docs/Api/EventsApi.md#archiveeventinternalnote) | **POST** /crm/api/v1/events/{eventId}/notes/{noteId}/archive | Archive an internal note for an event.
 *EventsApi* | [**createEvent**](docs/Api/EventsApi.md#createevent) | **POST** /crm/api/v1/events | Create an event.
 *EventsApi* | [**createEventInternalNote**](docs/Api/EventsApi.md#createeventinternalnote) | **POST** /crm/api/v1/events/{eventId}/notes | Add an internal note to an event.
@@ -277,6 +280,13 @@ Class | Method | HTTP request | Description
 - [DatabasesDatabase](docs/Model/DatabasesDatabase.md)
 - [DatabasesListDatabasesResponse](docs/Model/DatabasesListDatabasesResponse.md)
 - [DateOrDateTime](docs/Model/DateOrDateTime.md)
+- [DocumentDocumentGroup](docs/Model/DocumentDocumentGroup.md)
+- [DocumentDocumentValue](docs/Model/DocumentDocumentValue.md)
+- [DocumentSystemType](docs/Model/DocumentSystemType.md)
+- [DocumentsDocument](docs/Model/DocumentsDocument.md)
+- [DocumentsDocumentContact](docs/Model/DocumentsDocumentContact.md)
+- [DocumentsDocumentFile](docs/Model/DocumentsDocumentFile.md)
+- [DocumentsListDocumentResponse](docs/Model/DocumentsListDocumentResponse.md)
 - [DsfCreateOrUpdateFinancialCenterResponse](docs/Model/DsfCreateOrUpdateFinancialCenterResponse.md)
 - [DsfFinancialCenter](docs/Model/DsfFinancialCenter.md)
 - [DsfFinancialCenterPayload](docs/Model/DsfFinancialCenterPayload.md)
