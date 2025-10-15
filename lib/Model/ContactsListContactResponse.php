@@ -58,6 +58,7 @@ class ContactsListContactResponse implements ModelInterface, ArrayAccess, \JsonS
       */
     protected static $openAPITypes = [
         'nextPageToken' => 'string',
+        'count' => 'int',
         'items' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsTemporaryContact[]'
     ];
 
@@ -70,6 +71,7 @@ class ContactsListContactResponse implements ModelInterface, ArrayAccess, \JsonS
       */
     protected static $openAPIFormats = [
         'nextPageToken' => null,
+        'count' => null,
         'items' => null
     ];
 
@@ -80,6 +82,7 @@ class ContactsListContactResponse implements ModelInterface, ArrayAccess, \JsonS
       */
     protected static array $openAPINullables = [
         'nextPageToken' => false,
+        'count' => true,
         'items' => false
     ];
 
@@ -170,6 +173,7 @@ class ContactsListContactResponse implements ModelInterface, ArrayAccess, \JsonS
      */
     protected static $attributeMap = [
         'nextPageToken' => 'nextPageToken',
+        'count' => 'count',
         'items' => 'items'
     ];
 
@@ -180,6 +184,7 @@ class ContactsListContactResponse implements ModelInterface, ArrayAccess, \JsonS
      */
     protected static $setters = [
         'nextPageToken' => 'setNextPageToken',
+        'count' => 'setCount',
         'items' => 'setItems'
     ];
 
@@ -190,6 +195,7 @@ class ContactsListContactResponse implements ModelInterface, ArrayAccess, \JsonS
      */
     protected static $getters = [
         'nextPageToken' => 'getNextPageToken',
+        'count' => 'getCount',
         'items' => 'getItems'
     ];
 
@@ -251,6 +257,7 @@ class ContactsListContactResponse implements ModelInterface, ArrayAccess, \JsonS
     public function __construct(?array $data = null)
     {
         $this->setIfExists('nextPageToken', $data ?? [], null);
+        $this->setIfExists('count', $data ?? [], null);
         $this->setIfExists('items', $data ?? [], null);
     }
 
@@ -322,6 +329,40 @@ class ContactsListContactResponse implements ModelInterface, ArrayAccess, \JsonS
             throw new \InvalidArgumentException('non-nullable nextPageToken cannot be null');
         }
         $this->container['nextPageToken'] = $nextPageToken;
+
+        return $this;
+    }
+
+    /**
+     * Gets count
+     *
+     * @return int|null
+     */
+    public function getCount()
+    {
+        return $this->container['count'];
+    }
+
+    /**
+     * Sets count
+     *
+     * @param int|null $count The total number of results.
+     *
+     * @return self
+     */
+    public function setCount($count)
+    {
+        if (is_null($count)) {
+            array_push($this->openAPINullablesSetToNull, 'count');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('count', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['count'] = $count;
 
         return $this;
     }

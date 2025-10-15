@@ -89,6 +89,15 @@ class ContactsListContactResponseTest extends TestCase
     }
 
     /**
+     * Test attribute "count"
+     */
+    public function testPropertyCount()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "items"
      */
     public function testPropertyItems()

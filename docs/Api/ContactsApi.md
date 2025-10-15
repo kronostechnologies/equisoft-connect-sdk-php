@@ -74,7 +74,7 @@ try {
 ## `listContact()`
 
 ```php
-listContact($search, $ids, $name, $classIds, $classNames, $lastName, $firstName, $nickname, $middleName, $userEmail, $individual, $organization, $sort, $sortDesc, $active, $excludeDeceased, $mailGroupNames, $mailGroupIds, $anniversary, $anniversaryStartDate, $anniversaryEndDate, $pageToken, $maxResults): \Equisoft\SDK\EquisoftConnect\Model\ContactsListContactResponse
+listContact($search, $ids, $name, $classIds, $classNames, $lastName, $firstName, $nickname, $middleName, $userEmail, $individual, $organization, $sort, $sortDesc, $active, $excludeDeceased, $mailGroupNames, $mailGroupIds, $anniversary, $anniversaryStartDate, $anniversaryEndDate, $pageToken, $maxResults, $withCount): \Equisoft\SDK\EquisoftConnect\Model\ContactsListContactResponse
 ```
 
 List contact
@@ -119,9 +119,10 @@ $anniversaryStartDate = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime
 $anniversaryEndDate = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Returns only contacts whose anniversary occurs on this date or before.
 $pageToken = MjUwMDszMDAK; // string | Token to specify which page to fetch.
 $maxResults = 'maxResults_example'; // string | Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records.
+$withCount = True; // bool | If true, will also return the count of all possible results (without pagination).
 
 try {
-    $result = $apiInstance->listContact($search, $ids, $name, $classIds, $classNames, $lastName, $firstName, $nickname, $middleName, $userEmail, $individual, $organization, $sort, $sortDesc, $active, $excludeDeceased, $mailGroupNames, $mailGroupIds, $anniversary, $anniversaryStartDate, $anniversaryEndDate, $pageToken, $maxResults);
+    $result = $apiInstance->listContact($search, $ids, $name, $classIds, $classNames, $lastName, $firstName, $nickname, $middleName, $userEmail, $individual, $organization, $sort, $sortDesc, $active, $excludeDeceased, $mailGroupNames, $mailGroupIds, $anniversary, $anniversaryStartDate, $anniversaryEndDate, $pageToken, $maxResults, $withCount);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContactsApi->listContact: ', $e->getMessage(), PHP_EOL;
@@ -155,6 +156,7 @@ try {
 | **anniversaryEndDate** | **\DateTime**| Returns only contacts whose anniversary occurs on this date or before. | [optional] |
 | **pageToken** | **string**| Token to specify which page to fetch. | [optional] |
 | **maxResults** | **string**| Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. | [optional] |
+| **withCount** | **bool**| If true, will also return the count of all possible results (without pagination). | [optional] |
 
 ### Return type
 

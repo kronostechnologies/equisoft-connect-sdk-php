@@ -500,15 +500,16 @@ class ContactsApi
      * @param  \DateTime|null $anniversaryEndDate Returns only contacts whose anniversary occurs on this date or before. (optional)
      * @param  string|null $pageToken Token to specify which page to fetch. (optional)
      * @param  string|null $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
+     * @param  bool|null $withCount If true, will also return the count of all possible results (without pagination). (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listContact'] to see the possible values for this operation
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsListContactResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
-    public function listContact($search = null, $ids = null, $name = null, $classIds = null, $classNames = null, $lastName = null, $firstName = null, $nickname = null, $middleName = null, $userEmail = null, $individual = null, $organization = null, $sort = 'NO_SORT', $sortDesc = null, $active = null, $excludeDeceased = null, $mailGroupNames = null, $mailGroupIds = null, $anniversary = null, $anniversaryStartDate = null, $anniversaryEndDate = null, $pageToken = null, $maxResults = null, string $contentType = self::contentTypes['listContact'][0])
+    public function listContact($search = null, $ids = null, $name = null, $classIds = null, $classNames = null, $lastName = null, $firstName = null, $nickname = null, $middleName = null, $userEmail = null, $individual = null, $organization = null, $sort = 'NO_SORT', $sortDesc = null, $active = null, $excludeDeceased = null, $mailGroupNames = null, $mailGroupIds = null, $anniversary = null, $anniversaryStartDate = null, $anniversaryEndDate = null, $pageToken = null, $maxResults = null, $withCount = null, string $contentType = self::contentTypes['listContact'][0])
     {
-        list($response) = $this->listContactWithHttpInfo($search, $ids, $name, $classIds, $classNames, $lastName, $firstName, $nickname, $middleName, $userEmail, $individual, $organization, $sort, $sortDesc, $active, $excludeDeceased, $mailGroupNames, $mailGroupIds, $anniversary, $anniversaryStartDate, $anniversaryEndDate, $pageToken, $maxResults, $contentType);
+        list($response) = $this->listContactWithHttpInfo($search, $ids, $name, $classIds, $classNames, $lastName, $firstName, $nickname, $middleName, $userEmail, $individual, $organization, $sort, $sortDesc, $active, $excludeDeceased, $mailGroupNames, $mailGroupIds, $anniversary, $anniversaryStartDate, $anniversaryEndDate, $pageToken, $maxResults, $withCount, $contentType);
         return $response;
     }
 
@@ -540,15 +541,16 @@ class ContactsApi
      * @param  \DateTime|null $anniversaryEndDate Returns only contacts whose anniversary occurs on this date or before. (optional)
      * @param  string|null $pageToken Token to specify which page to fetch. (optional)
      * @param  string|null $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
+     * @param  bool|null $withCount If true, will also return the count of all possible results (without pagination). (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listContact'] to see the possible values for this operation
      *
      * @throws \Equisoft\SDK\EquisoftConnect\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \Equisoft\SDK\EquisoftConnect\Model\ContactsListContactResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function listContactWithHttpInfo($search = null, $ids = null, $name = null, $classIds = null, $classNames = null, $lastName = null, $firstName = null, $nickname = null, $middleName = null, $userEmail = null, $individual = null, $organization = null, $sort = 'NO_SORT', $sortDesc = null, $active = null, $excludeDeceased = null, $mailGroupNames = null, $mailGroupIds = null, $anniversary = null, $anniversaryStartDate = null, $anniversaryEndDate = null, $pageToken = null, $maxResults = null, string $contentType = self::contentTypes['listContact'][0])
+    public function listContactWithHttpInfo($search = null, $ids = null, $name = null, $classIds = null, $classNames = null, $lastName = null, $firstName = null, $nickname = null, $middleName = null, $userEmail = null, $individual = null, $organization = null, $sort = 'NO_SORT', $sortDesc = null, $active = null, $excludeDeceased = null, $mailGroupNames = null, $mailGroupIds = null, $anniversary = null, $anniversaryStartDate = null, $anniversaryEndDate = null, $pageToken = null, $maxResults = null, $withCount = null, string $contentType = self::contentTypes['listContact'][0])
     {
-        $request = $this->listContactRequest($search, $ids, $name, $classIds, $classNames, $lastName, $firstName, $nickname, $middleName, $userEmail, $individual, $organization, $sort, $sortDesc, $active, $excludeDeceased, $mailGroupNames, $mailGroupIds, $anniversary, $anniversaryStartDate, $anniversaryEndDate, $pageToken, $maxResults, $contentType);
+        $request = $this->listContactRequest($search, $ids, $name, $classIds, $classNames, $lastName, $firstName, $nickname, $middleName, $userEmail, $individual, $organization, $sort, $sortDesc, $active, $excludeDeceased, $mailGroupNames, $mailGroupIds, $anniversary, $anniversaryStartDate, $anniversaryEndDate, $pageToken, $maxResults, $withCount, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -675,14 +677,15 @@ class ContactsApi
      * @param  \DateTime|null $anniversaryEndDate Returns only contacts whose anniversary occurs on this date or before. (optional)
      * @param  string|null $pageToken Token to specify which page to fetch. (optional)
      * @param  string|null $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
+     * @param  bool|null $withCount If true, will also return the count of all possible results (without pagination). (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listContact'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listContactAsync($search = null, $ids = null, $name = null, $classIds = null, $classNames = null, $lastName = null, $firstName = null, $nickname = null, $middleName = null, $userEmail = null, $individual = null, $organization = null, $sort = 'NO_SORT', $sortDesc = null, $active = null, $excludeDeceased = null, $mailGroupNames = null, $mailGroupIds = null, $anniversary = null, $anniversaryStartDate = null, $anniversaryEndDate = null, $pageToken = null, $maxResults = null, string $contentType = self::contentTypes['listContact'][0])
+    public function listContactAsync($search = null, $ids = null, $name = null, $classIds = null, $classNames = null, $lastName = null, $firstName = null, $nickname = null, $middleName = null, $userEmail = null, $individual = null, $organization = null, $sort = 'NO_SORT', $sortDesc = null, $active = null, $excludeDeceased = null, $mailGroupNames = null, $mailGroupIds = null, $anniversary = null, $anniversaryStartDate = null, $anniversaryEndDate = null, $pageToken = null, $maxResults = null, $withCount = null, string $contentType = self::contentTypes['listContact'][0])
     {
-        return $this->listContactAsyncWithHttpInfo($search, $ids, $name, $classIds, $classNames, $lastName, $firstName, $nickname, $middleName, $userEmail, $individual, $organization, $sort, $sortDesc, $active, $excludeDeceased, $mailGroupNames, $mailGroupIds, $anniversary, $anniversaryStartDate, $anniversaryEndDate, $pageToken, $maxResults, $contentType)
+        return $this->listContactAsyncWithHttpInfo($search, $ids, $name, $classIds, $classNames, $lastName, $firstName, $nickname, $middleName, $userEmail, $individual, $organization, $sort, $sortDesc, $active, $excludeDeceased, $mailGroupNames, $mailGroupIds, $anniversary, $anniversaryStartDate, $anniversaryEndDate, $pageToken, $maxResults, $withCount, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -718,15 +721,16 @@ class ContactsApi
      * @param  \DateTime|null $anniversaryEndDate Returns only contacts whose anniversary occurs on this date or before. (optional)
      * @param  string|null $pageToken Token to specify which page to fetch. (optional)
      * @param  string|null $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
+     * @param  bool|null $withCount If true, will also return the count of all possible results (without pagination). (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listContact'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function listContactAsyncWithHttpInfo($search = null, $ids = null, $name = null, $classIds = null, $classNames = null, $lastName = null, $firstName = null, $nickname = null, $middleName = null, $userEmail = null, $individual = null, $organization = null, $sort = 'NO_SORT', $sortDesc = null, $active = null, $excludeDeceased = null, $mailGroupNames = null, $mailGroupIds = null, $anniversary = null, $anniversaryStartDate = null, $anniversaryEndDate = null, $pageToken = null, $maxResults = null, string $contentType = self::contentTypes['listContact'][0])
+    public function listContactAsyncWithHttpInfo($search = null, $ids = null, $name = null, $classIds = null, $classNames = null, $lastName = null, $firstName = null, $nickname = null, $middleName = null, $userEmail = null, $individual = null, $organization = null, $sort = 'NO_SORT', $sortDesc = null, $active = null, $excludeDeceased = null, $mailGroupNames = null, $mailGroupIds = null, $anniversary = null, $anniversaryStartDate = null, $anniversaryEndDate = null, $pageToken = null, $maxResults = null, $withCount = null, string $contentType = self::contentTypes['listContact'][0])
     {
         $returnType = '\Equisoft\SDK\EquisoftConnect\Model\ContactsListContactResponse';
-        $request = $this->listContactRequest($search, $ids, $name, $classIds, $classNames, $lastName, $firstName, $nickname, $middleName, $userEmail, $individual, $organization, $sort, $sortDesc, $active, $excludeDeceased, $mailGroupNames, $mailGroupIds, $anniversary, $anniversaryStartDate, $anniversaryEndDate, $pageToken, $maxResults, $contentType);
+        $request = $this->listContactRequest($search, $ids, $name, $classIds, $classNames, $lastName, $firstName, $nickname, $middleName, $userEmail, $individual, $organization, $sort, $sortDesc, $active, $excludeDeceased, $mailGroupNames, $mailGroupIds, $anniversary, $anniversaryStartDate, $anniversaryEndDate, $pageToken, $maxResults, $withCount, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -790,13 +794,15 @@ class ContactsApi
      * @param  \DateTime|null $anniversaryEndDate Returns only contacts whose anniversary occurs on this date or before. (optional)
      * @param  string|null $pageToken Token to specify which page to fetch. (optional)
      * @param  string|null $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
+     * @param  bool|null $withCount If true, will also return the count of all possible results (without pagination). (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listContact'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function listContactRequest($search = null, $ids = null, $name = null, $classIds = null, $classNames = null, $lastName = null, $firstName = null, $nickname = null, $middleName = null, $userEmail = null, $individual = null, $organization = null, $sort = 'NO_SORT', $sortDesc = null, $active = null, $excludeDeceased = null, $mailGroupNames = null, $mailGroupIds = null, $anniversary = null, $anniversaryStartDate = null, $anniversaryEndDate = null, $pageToken = null, $maxResults = null, string $contentType = self::contentTypes['listContact'][0])
+    public function listContactRequest($search = null, $ids = null, $name = null, $classIds = null, $classNames = null, $lastName = null, $firstName = null, $nickname = null, $middleName = null, $userEmail = null, $individual = null, $organization = null, $sort = 'NO_SORT', $sortDesc = null, $active = null, $excludeDeceased = null, $mailGroupNames = null, $mailGroupIds = null, $anniversary = null, $anniversaryStartDate = null, $anniversaryEndDate = null, $pageToken = null, $maxResults = null, $withCount = null, string $contentType = self::contentTypes['listContact'][0])
     {
+
 
 
 
@@ -1032,6 +1038,15 @@ class ContactsApi
             $maxResults,
             'maxResults', // param base name
             'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $withCount,
+            'withCount', // param base name
+            'boolean', // openApiType
             'form', // style
             true, // explode
             false // required
