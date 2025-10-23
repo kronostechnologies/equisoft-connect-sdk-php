@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **priority** | **int** | Importance/Priority of an event or task. 5 is the most important. | [optional]
 **visibility** | **string** | Confidentiality level of the Event (private or not). [NORMAL, PRIVATE]. | [optional]
 **contactIds** | **int[]** | Allow to link the task to one or many contacts. | [optional]
-**ownerIds** | **int[]** | Ids of the owner users of the task. | [optional]
+**ownerIds** | [**Int[]**](Int.md) | Ids of the owner users of the task. | [optional]
 **isCompleted** | **bool** | Is the task completed. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

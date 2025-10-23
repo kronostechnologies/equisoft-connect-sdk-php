@@ -57,7 +57,7 @@ class TasksPutTaskLinkDocumentsPayload implements ModelInterface, ArrayAccess, \
       * @var string[]
       */
     protected static $openAPITypes = [
-        'documentIds' => 'int[]'
+        'documentIds' => 'Int[]'
     ];
 
     /**
@@ -295,7 +295,7 @@ class TasksPutTaskLinkDocumentsPayload implements ModelInterface, ArrayAccess, \
     /**
      * Gets documentIds
      *
-     * @return int[]
+     * @return Int[]
      */
     public function getDocumentIds()
     {
@@ -305,7 +305,7 @@ class TasksPutTaskLinkDocumentsPayload implements ModelInterface, ArrayAccess, \
     /**
      * Sets documentIds
      *
-     * @param int[] $documentIds Ids of the documents to link to the task.
+     * @param Int[] $documentIds Ids of the documents to link to the task.
      *
      * @return self
      */

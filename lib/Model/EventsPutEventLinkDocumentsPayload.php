@@ -57,7 +57,7 @@ class EventsPutEventLinkDocumentsPayload implements ModelInterface, ArrayAccess,
       * @var string[]
       */
     protected static $openAPITypes = [
-        'documentIds' => 'int[]'
+        'documentIds' => 'Int[]'
     ];
 
     /**
@@ -295,7 +295,7 @@ class EventsPutEventLinkDocumentsPayload implements ModelInterface, ArrayAccess,
     /**
      * Gets documentIds
      *
-     * @return int[]
+     * @return Int[]
      */
     public function getDocumentIds()
     {
@@ -305,7 +305,7 @@ class EventsPutEventLinkDocumentsPayload implements ModelInterface, ArrayAccess,
     /**
      * Sets documentIds
      *
-     * @param int[] $documentIds Ids of the documents to link to the event.
+     * @param Int[] $documentIds Ids of the documents to link to the event.
      *
      * @return self
      */

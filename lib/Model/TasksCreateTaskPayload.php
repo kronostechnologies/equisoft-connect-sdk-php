@@ -67,7 +67,7 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess, \JsonSerial
         'priority' => 'int',
         'visibility' => 'string',
         'contactIds' => 'int[]',
-        'ownerIds' => 'int[]',
+        'ownerIds' => 'Int[]',
         'isCompleted' => 'bool'
     ];
 
@@ -642,7 +642,7 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Gets ownerIds
      *
-     * @return int[]|null
+     * @return Int[]|null
      */
     public function getOwnerIds()
     {
@@ -652,7 +652,7 @@ class TasksCreateTaskPayload implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets ownerIds
      *
-     * @param int[]|null $ownerIds Ids of the owner users of the task.
+     * @param Int[]|null $ownerIds Ids of the owner users of the task.
      *
      * @return self
      */
