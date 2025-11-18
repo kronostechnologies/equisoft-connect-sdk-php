@@ -1,6 +1,6 @@
 <?php
 /**
- * ContactsSegmentation
+ * ContactsCreateSegmentationPayload
  *
  * PHP version 8.1
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * ContactsSegmentation Class Doc Comment
+ * ContactsCreateSegmentationPayload Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
@@ -40,7 +40,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializable
+class ContactsCreateSegmentationPayload implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
       *
       * @var string
       */
-    protected static $openAPIModelName = 'contacts.Segmentation';
+    protected static $openAPIModelName = 'contacts.CreateSegmentationPayload';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,20 +57,20 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'classes' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue[]',
-        'distributionLists' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue[]',
-        'hobbies' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue[]',
-        'referredBy' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue[]',
-        'industries' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue[]',
-        'segmentation1' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
-        'segmentation2' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
-        'segmentation3' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
-        'segmentation4' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
-        'segmentation5' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
-        'segmentation6' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
-        'territory' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
-        'category' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
-        'property' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue'
+        'classes' => 'int[]',
+        'distributionLists' => 'int[]',
+        'hobbies' => 'int[]',
+        'referredBy' => 'int[]',
+        'industries' => 'int[]',
+        'segmentation1' => 'int',
+        'segmentation2' => 'int',
+        'segmentation3' => 'int',
+        'segmentation4' => 'int',
+        'segmentation5' => 'int',
+        'segmentation6' => 'int',
+        'territory' => 'int',
+        'category' => 'int',
+        'property' => 'int'
     ];
 
     /**
@@ -365,21 +365,6 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
     {
         $invalidProperties = [];
 
-        if ($this->container['classes'] === null) {
-            $invalidProperties[] = "'classes' can't be null";
-        }
-        if ($this->container['distributionLists'] === null) {
-            $invalidProperties[] = "'distributionLists' can't be null";
-        }
-        if ($this->container['hobbies'] === null) {
-            $invalidProperties[] = "'hobbies' can't be null";
-        }
-        if ($this->container['referredBy'] === null) {
-            $invalidProperties[] = "'referredBy' can't be null";
-        }
-        if ($this->container['industries'] === null) {
-            $invalidProperties[] = "'industries' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -398,7 +383,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets classes
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue[]
+     * @return int[]|null
      */
     public function getClasses()
     {
@@ -408,7 +393,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets classes
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue[] $classes classes
+     * @param int[]|null $classes Refer to the values provided by the FieldValue endpoint with fieldName CONTACT_CLASS.              Will default to contact_class_prospective.
      *
      * @return self
      */
@@ -425,7 +410,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets distributionLists
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue[]
+     * @return int[]|null
      */
     public function getDistributionLists()
     {
@@ -435,7 +420,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets distributionLists
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue[] $distributionLists distributionLists
+     * @param int[]|null $distributionLists Refer to the values provided by the FieldValue endpoint with fieldName SEND_GROUP.
      *
      * @return self
      */
@@ -452,7 +437,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets hobbies
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue[]
+     * @return int[]|null
      */
     public function getHobbies()
     {
@@ -462,7 +447,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets hobbies
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue[] $hobbies hobbies
+     * @param int[]|null $hobbies Refer to the values provided by the FieldValue endpoint with fieldName HOBBY.
      *
      * @return self
      */
@@ -479,7 +464,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets referredBy
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue[]
+     * @return int[]|null
      */
     public function getReferredBy()
     {
@@ -489,7 +474,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets referredBy
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue[] $referredBy referredBy
+     * @param int[]|null $referredBy Refer to the values provided by the FieldValue endpoint with fieldName CONTACT_ORIGIN.
      *
      * @return self
      */
@@ -506,7 +491,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets industries
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue[]
+     * @return int[]|null
      */
     public function getIndustries()
     {
@@ -516,7 +501,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets industries
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue[] $industries industries
+     * @param int[]|null $industries Refer to the values provided by the FieldValue endpoint with fieldName CONTACT_ACTIVITY.
      *
      * @return self
      */
@@ -533,7 +518,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets segmentation1
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
+     * @return int|null
      */
     public function getSegmentation1()
     {
@@ -543,7 +528,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets segmentation1
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $segmentation1 segmentation1
+     * @param int|null $segmentation1 Refer to the values provided by the FieldValue endpoint with fieldName SEGMENTATION_1.
      *
      * @return self
      */
@@ -567,7 +552,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets segmentation2
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
+     * @return int|null
      */
     public function getSegmentation2()
     {
@@ -577,7 +562,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets segmentation2
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $segmentation2 segmentation2
+     * @param int|null $segmentation2 Refer to the values provided by the FieldValue endpoint with fieldName SEGMENTATION_2.
      *
      * @return self
      */
@@ -601,7 +586,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets segmentation3
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
+     * @return int|null
      */
     public function getSegmentation3()
     {
@@ -611,7 +596,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets segmentation3
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $segmentation3 segmentation3
+     * @param int|null $segmentation3 Refer to the values provided by the FieldValue endpoint with fieldName SEGMENTATION_3.
      *
      * @return self
      */
@@ -635,7 +620,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets segmentation4
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
+     * @return int|null
      */
     public function getSegmentation4()
     {
@@ -645,7 +630,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets segmentation4
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $segmentation4 segmentation4
+     * @param int|null $segmentation4 Refer to the values provided by the FieldValue endpoint with fieldName SEGMENTATION_4.
      *
      * @return self
      */
@@ -669,7 +654,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets segmentation5
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
+     * @return int|null
      */
     public function getSegmentation5()
     {
@@ -679,7 +664,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets segmentation5
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $segmentation5 segmentation5
+     * @param int|null $segmentation5 Refer to the values provided by the FieldValue endpoint with fieldName SEGMENTATION_5.
      *
      * @return self
      */
@@ -703,7 +688,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets segmentation6
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
+     * @return int|null
      */
     public function getSegmentation6()
     {
@@ -713,7 +698,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets segmentation6
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $segmentation6 segmentation6
+     * @param int|null $segmentation6 Refer to the values provided by the FieldValue endpoint with fieldName SEGMENTATION_6.
      *
      * @return self
      */
@@ -737,7 +722,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets territory
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
+     * @return int|null
      */
     public function getTerritory()
     {
@@ -747,7 +732,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets territory
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $territory territory
+     * @param int|null $territory Refer to the values provided by the FieldValue endpoint with fieldName CONTACT_TERRITORY.
      *
      * @return self
      */
@@ -771,7 +756,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets category
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
+     * @return int|null
      */
     public function getCategory()
     {
@@ -781,7 +766,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets category
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $category category
+     * @param int|null $category Refer to the values provided by the FieldValue endpoint with fieldName CONTACT_CATEGORY.
      *
      * @return self
      */
@@ -805,7 +790,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Gets property
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
+     * @return int|null
      */
     public function getProperty()
     {
@@ -815,7 +800,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
     /**
      * Sets property
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $property property
+     * @param int|null $property Refer to the values provided by the FieldValue endpoint with fieldName CONTACT_PROPERTY.
      *
      * @return self
      */

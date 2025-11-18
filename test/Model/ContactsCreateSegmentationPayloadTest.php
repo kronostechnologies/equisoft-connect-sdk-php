@@ -1,6 +1,6 @@
 <?php
 /**
- * ContactsSegmentationTest
+ * ContactsCreateSegmentationPayloadTest
  *
  * PHP version 8.1
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ContactsSegmentationTest Class Doc Comment
+ * ContactsCreateSegmentationPayloadTest Class Doc Comment
  *
  * @category    Class
- * @description ContactsSegmentation
+ * @description ContactsCreateSegmentationPayload
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ContactsSegmentationTest extends TestCase
+class ContactsCreateSegmentationPayloadTest extends TestCase
 {
 
     /**
@@ -71,9 +71,9 @@ class ContactsSegmentationTest extends TestCase
     }
 
     /**
-     * Test "ContactsSegmentation"
+     * Test "ContactsCreateSegmentationPayload"
      */
-    public function testContactsSegmentation()
+    public function testContactsCreateSegmentationPayload()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

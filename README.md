@@ -58,14 +58,13 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\ContactsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$contactUuid = 'contactUuid_example'; // string | Contact unique identifier.
-$acceptLanguage = 'acceptLanguage_example'; // string | Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282.
+$contactsCreateContactPayload = new \Equisoft\SDK\EquisoftConnect\Model\ContactsCreateContactPayload(); // \Equisoft\SDK\EquisoftConnect\Model\ContactsCreateContactPayload
 
 try {
-    $result = $apiInstance->getByUuid($contactUuid, $acceptLanguage);
+    $result = $apiInstance->createContact($contactsCreateContactPayload);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ContactsApi->getByUuid: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ContactsApi->createContact: ', $e->getMessage(), PHP_EOL;
 }
 
 ```
@@ -76,6 +75,7 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*ContactsApi* | [**createContact**](docs/Api/ContactsApi.md#createcontact) | **POST** /crm/api/v1/contacts | Create a contact
 *ContactsApi* | [**getByUuid**](docs/Api/ContactsApi.md#getbyuuid) | **GET** /crm/api/v1/contacts/{contactUuid} | Get contact by Uuid
 *ContactsApi* | [**listContact**](docs/Api/ContactsApi.md#listcontact) | **GET** /crm/api/v1/contacts | List contact
 *ContactsApi* | [**listContactDocument**](docs/Api/ContactsApi.md#listcontactdocument) | **GET** /crm/api/v1/contacts/{contactUuid}/documents | List contact documents
@@ -246,6 +246,19 @@ Class | Method | HTTP request | Description
 - [ContactsCivilStatus](docs/Model/ContactsCivilStatus.md)
 - [ContactsContact](docs/Model/ContactsContact.md)
 - [ContactsContactFieldValue](docs/Model/ContactsContactFieldValue.md)
+- [ContactsCreateAdditionalInformationPayload](docs/Model/ContactsCreateAdditionalInformationPayload.md)
+- [ContactsCreateAddressPayload](docs/Model/ContactsCreateAddressPayload.md)
+- [ContactsCreateContactPayload](docs/Model/ContactsCreateContactPayload.md)
+- [ContactsCreateEmailPayload](docs/Model/ContactsCreateEmailPayload.md)
+- [ContactsCreateIdentificationPayload](docs/Model/ContactsCreateIdentificationPayload.md)
+- [ContactsCreateIndividualIdentificationPayload](docs/Model/ContactsCreateIndividualIdentificationPayload.md)
+- [ContactsCreateOccupationPayload](docs/Model/ContactsCreateOccupationPayload.md)
+- [ContactsCreateOrganizationIdentificationPayload](docs/Model/ContactsCreateOrganizationIdentificationPayload.md)
+- [ContactsCreatePhonePayload](docs/Model/ContactsCreatePhonePayload.md)
+- [ContactsCreateRegistrationNumbersPayload](docs/Model/ContactsCreateRegistrationNumbersPayload.md)
+- [ContactsCreateRevenuePayload](docs/Model/ContactsCreateRevenuePayload.md)
+- [ContactsCreateSegmentationPayload](docs/Model/ContactsCreateSegmentationPayload.md)
+- [ContactsCreateWebsitePayload](docs/Model/ContactsCreateWebsitePayload.md)
 - [ContactsEmail](docs/Model/ContactsEmail.md)
 - [ContactsIdentification](docs/Model/ContactsIdentification.md)
 - [ContactsIndividualIdentification](docs/Model/ContactsIndividualIdentification.md)

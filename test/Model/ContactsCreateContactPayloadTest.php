@@ -1,6 +1,6 @@
 <?php
 /**
- * ContactsSegmentationTest
+ * ContactsCreateContactPayloadTest
  *
  * PHP version 8.1
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ContactsSegmentationTest Class Doc Comment
+ * ContactsCreateContactPayloadTest Class Doc Comment
  *
  * @category    Class
- * @description ContactsSegmentation
+ * @description ContactsCreateContactPayload
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ContactsSegmentationTest extends TestCase
+class ContactsCreateContactPayloadTest extends TestCase
 {
 
     /**
@@ -71,135 +71,99 @@ class ContactsSegmentationTest extends TestCase
     }
 
     /**
-     * Test "ContactsSegmentation"
+     * Test "ContactsCreateContactPayload"
      */
-    public function testContactsSegmentation()
+    public function testContactsCreateContactPayload()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "classes"
+     * Test attribute "identification"
      */
-    public function testPropertyClasses()
+    public function testPropertyIdentification()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "distributionLists"
+     * Test attribute "additionalInformation"
      */
-    public function testPropertyDistributionLists()
+    public function testPropertyAdditionalInformation()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "hobbies"
+     * Test attribute "segmentation"
      */
-    public function testPropertyHobbies()
+    public function testPropertySegmentation()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "referredBy"
+     * Test attribute "addresses"
      */
-    public function testPropertyReferredBy()
+    public function testPropertyAddresses()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "industries"
+     * Test attribute "phones"
      */
-    public function testPropertyIndustries()
+    public function testPropertyPhones()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "segmentation1"
+     * Test attribute "emails"
      */
-    public function testPropertySegmentation1()
+    public function testPropertyEmails()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "segmentation2"
+     * Test attribute "websites"
      */
-    public function testPropertySegmentation2()
+    public function testPropertyWebsites()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "segmentation3"
+     * Test attribute "notes"
      */
-    public function testPropertySegmentation3()
+    public function testPropertyNotes()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "segmentation4"
+     * Test attribute "notesAdditionalInformation"
      */
-    public function testPropertySegmentation4()
+    public function testPropertyNotesAdditionalInformation()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "segmentation5"
+     * Test attribute "currentOccupation"
      */
-    public function testPropertySegmentation5()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "segmentation6"
-     */
-    public function testPropertySegmentation6()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "territory"
-     */
-    public function testPropertyTerritory()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "category"
-     */
-    public function testPropertyCategory()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "property"
-     */
-    public function testPropertyProperty()
+    public function testPropertyCurrentOccupation()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

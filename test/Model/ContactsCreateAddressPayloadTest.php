@@ -1,6 +1,6 @@
 <?php
 /**
- * ContactsSegmentationTest
+ * ContactsCreateAddressPayloadTest
  *
  * PHP version 8.1
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ContactsSegmentationTest Class Doc Comment
+ * ContactsCreateAddressPayloadTest Class Doc Comment
  *
  * @category    Class
- * @description ContactsSegmentation
+ * @description ContactsCreateAddressPayload
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ContactsSegmentationTest extends TestCase
+class ContactsCreateAddressPayloadTest extends TestCase
 {
 
     /**
@@ -71,135 +71,99 @@ class ContactsSegmentationTest extends TestCase
     }
 
     /**
-     * Test "ContactsSegmentation"
+     * Test "ContactsCreateAddressPayload"
      */
-    public function testContactsSegmentation()
+    public function testContactsCreateAddressPayload()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "classes"
+     * Test attribute "type"
      */
-    public function testPropertyClasses()
+    public function testPropertyType()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "distributionLists"
+     * Test attribute "isMain"
      */
-    public function testPropertyDistributionLists()
+    public function testPropertyIsMain()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "hobbies"
+     * Test attribute "isPostal"
      */
-    public function testPropertyHobbies()
+    public function testPropertyIsPostal()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "referredBy"
+     * Test attribute "line1"
      */
-    public function testPropertyReferredBy()
+    public function testPropertyLine1()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "industries"
+     * Test attribute "line2"
      */
-    public function testPropertyIndustries()
+    public function testPropertyLine2()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "segmentation1"
+     * Test attribute "city"
      */
-    public function testPropertySegmentation1()
+    public function testPropertyCity()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "segmentation2"
+     * Test attribute "stateProvince"
      */
-    public function testPropertySegmentation2()
+    public function testPropertyStateProvince()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "segmentation3"
+     * Test attribute "country"
      */
-    public function testPropertySegmentation3()
+    public function testPropertyCountry()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "segmentation4"
+     * Test attribute "postalCode"
      */
-    public function testPropertySegmentation4()
+    public function testPropertyPostalCode()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "segmentation5"
+     * Test attribute "dateSince"
      */
-    public function testPropertySegmentation5()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "segmentation6"
-     */
-    public function testPropertySegmentation6()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "territory"
-     */
-    public function testPropertyTerritory()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "category"
-     */
-    public function testPropertyCategory()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "property"
-     */
-    public function testPropertyProperty()
+    public function testPropertyDateSince()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

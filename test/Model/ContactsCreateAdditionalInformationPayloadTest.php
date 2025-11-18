@@ -1,6 +1,6 @@
 <?php
 /**
- * ContactsSegmentationTest
+ * ContactsCreateAdditionalInformationPayloadTest
  *
  * PHP version 8.1
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ContactsSegmentationTest Class Doc Comment
+ * ContactsCreateAdditionalInformationPayloadTest Class Doc Comment
  *
  * @category    Class
- * @description ContactsSegmentation
+ * @description ContactsCreateAdditionalInformationPayload
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ContactsSegmentationTest extends TestCase
+class ContactsCreateAdditionalInformationPayloadTest extends TestCase
 {
 
     /**
@@ -71,135 +71,189 @@ class ContactsSegmentationTest extends TestCase
     }
 
     /**
-     * Test "ContactsSegmentation"
+     * Test "ContactsCreateAdditionalInformationPayload"
      */
-    public function testContactsSegmentation()
+    public function testContactsCreateAdditionalInformationPayload()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "classes"
+     * Test attribute "isDeceased"
      */
-    public function testPropertyClasses()
+    public function testPropertyIsDeceased()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "distributionLists"
+     * Test attribute "deceasedDate"
      */
-    public function testPropertyDistributionLists()
+    public function testPropertyDeceasedDate()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "hobbies"
+     * Test attribute "isSmoker"
      */
-    public function testPropertyHobbies()
+    public function testPropertyIsSmoker()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "referredBy"
+     * Test attribute "smokerEndDate"
      */
-    public function testPropertyReferredBy()
+    public function testPropertySmokerEndDate()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "industries"
+     * Test attribute "birthDate"
      */
-    public function testPropertyIndustries()
+    public function testPropertyBirthDate()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "segmentation1"
+     * Test attribute "language"
      */
-    public function testPropertySegmentation1()
+    public function testPropertyLanguage()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "segmentation2"
+     * Test attribute "organizationDateCreated"
      */
-    public function testPropertySegmentation2()
+    public function testPropertyOrganizationDateCreated()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "segmentation3"
+     * Test attribute "organizationDateClosed"
      */
-    public function testPropertySegmentation3()
+    public function testPropertyOrganizationDateClosed()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "segmentation4"
+     * Test attribute "numberOfEmployees"
      */
-    public function testPropertySegmentation4()
+    public function testPropertyNumberOfEmployees()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "segmentation5"
+     * Test attribute "companyValue"
      */
-    public function testPropertySegmentation5()
+    public function testPropertyCompanyValue()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "segmentation6"
+     * Test attribute "annualGrowth"
      */
-    public function testPropertySegmentation6()
+    public function testPropertyAnnualGrowth()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "territory"
+     * Test attribute "companyStage"
      */
-    public function testPropertyTerritory()
+    public function testPropertyCompanyStage()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "category"
+     * Test attribute "revenue"
      */
-    public function testPropertyCategory()
+    public function testPropertyRevenue()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "property"
+     * Test attribute "netProfits"
      */
-    public function testPropertyProperty()
+    public function testPropertyNetProfits()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "incorporationLocation"
+     */
+    public function testPropertyIncorporationLocation()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "payroll"
+     */
+    public function testPropertyPayroll()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "endOfFinancialYear"
+     */
+    public function testPropertyEndOfFinancialYear()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "registrationNumbers"
+     */
+    public function testPropertyRegistrationNumbers()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "knownSince"
+     */
+    public function testPropertyKnownSince()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "endDate"
+     */
+    public function testPropertyEndDate()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

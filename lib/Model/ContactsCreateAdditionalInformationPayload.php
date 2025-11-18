@@ -1,6 +1,6 @@
 <?php
 /**
- * ContactsAdditionalInformation
+ * ContactsCreateAdditionalInformationPayload
  *
  * PHP version 8.1
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * ContactsAdditionalInformation Class Doc Comment
+ * ContactsCreateAdditionalInformationPayload Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
@@ -40,7 +40,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \JsonSerializable
+class ContactsCreateAdditionalInformationPayload implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
       *
       * @var string
       */
-    protected static $openAPIModelName = 'contacts.AdditionalInformation';
+    protected static $openAPIModelName = 'contacts.CreateAdditionalInformationPayload';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -62,24 +62,19 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         'isSmoker' => 'bool',
         'smokerEndDate' => '\DateTime',
         'birthDate' => '\DateTime',
-        'facebookLink' => 'string',
-        'twitterLink' => 'string',
-        'linkedInLink' => 'string',
-        'language' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
-        'pictureId' => 'int',
+        'language' => 'int',
         'organizationDateCreated' => '\DateTime',
         'organizationDateClosed' => '\DateTime',
-        'numberOfEmployees' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
-        'companyValue' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
-        'annualGrowth' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
-        'companyStage' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
-        'revenue' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsRevenue',
-        'netProfits' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
-        'incorporationLocation' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
-        'payroll' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
+        'numberOfEmployees' => 'int',
+        'companyValue' => 'int',
+        'annualGrowth' => 'int',
+        'companyStage' => 'int',
+        'revenue' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsCreateRevenuePayload',
+        'netProfits' => 'int',
+        'incorporationLocation' => 'int',
+        'payroll' => 'int',
         'endOfFinancialYear' => 'string',
-        'numberOfShareholders' => 'int',
-        'registrationNumbers' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsRegistrationNumbers',
+        'registrationNumbers' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsCreateRegistrationNumbersPayload',
         'knownSince' => '\DateTime',
         'endDate' => '\DateTime'
     ];
@@ -97,11 +92,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         'isSmoker' => null,
         'smokerEndDate' => 'date',
         'birthDate' => 'date',
-        'facebookLink' => null,
-        'twitterLink' => null,
-        'linkedInLink' => null,
         'language' => null,
-        'pictureId' => null,
         'organizationDateCreated' => 'date',
         'organizationDateClosed' => 'date',
         'numberOfEmployees' => null,
@@ -113,7 +104,6 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         'incorporationLocation' => null,
         'payroll' => null,
         'endOfFinancialYear' => null,
-        'numberOfShareholders' => null,
         'registrationNumbers' => null,
         'knownSince' => 'date',
         'endDate' => 'date'
@@ -125,16 +115,12 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'isDeceased' => true,
+        'isDeceased' => false,
         'deceasedDate' => true,
-        'isSmoker' => true,
+        'isSmoker' => false,
         'smokerEndDate' => true,
         'birthDate' => true,
-        'facebookLink' => false,
-        'twitterLink' => false,
-        'linkedInLink' => false,
         'language' => true,
-        'pictureId' => true,
         'organizationDateCreated' => true,
         'organizationDateClosed' => true,
         'numberOfEmployees' => true,
@@ -146,7 +132,6 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         'incorporationLocation' => true,
         'payroll' => true,
         'endOfFinancialYear' => true,
-        'numberOfShareholders' => true,
         'registrationNumbers' => true,
         'knownSince' => true,
         'endDate' => true
@@ -243,11 +228,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         'isSmoker' => 'isSmoker',
         'smokerEndDate' => 'smokerEndDate',
         'birthDate' => 'birthDate',
-        'facebookLink' => 'facebookLink',
-        'twitterLink' => 'twitterLink',
-        'linkedInLink' => 'linkedInLink',
         'language' => 'language',
-        'pictureId' => 'pictureId',
         'organizationDateCreated' => 'organizationDateCreated',
         'organizationDateClosed' => 'organizationDateClosed',
         'numberOfEmployees' => 'numberOfEmployees',
@@ -259,7 +240,6 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         'incorporationLocation' => 'incorporationLocation',
         'payroll' => 'payroll',
         'endOfFinancialYear' => 'endOfFinancialYear',
-        'numberOfShareholders' => 'numberOfShareholders',
         'registrationNumbers' => 'registrationNumbers',
         'knownSince' => 'knownSince',
         'endDate' => 'endDate'
@@ -276,11 +256,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         'isSmoker' => 'setIsSmoker',
         'smokerEndDate' => 'setSmokerEndDate',
         'birthDate' => 'setBirthDate',
-        'facebookLink' => 'setFacebookLink',
-        'twitterLink' => 'setTwitterLink',
-        'linkedInLink' => 'setLinkedInLink',
         'language' => 'setLanguage',
-        'pictureId' => 'setPictureId',
         'organizationDateCreated' => 'setOrganizationDateCreated',
         'organizationDateClosed' => 'setOrganizationDateClosed',
         'numberOfEmployees' => 'setNumberOfEmployees',
@@ -292,7 +268,6 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         'incorporationLocation' => 'setIncorporationLocation',
         'payroll' => 'setPayroll',
         'endOfFinancialYear' => 'setEndOfFinancialYear',
-        'numberOfShareholders' => 'setNumberOfShareholders',
         'registrationNumbers' => 'setRegistrationNumbers',
         'knownSince' => 'setKnownSince',
         'endDate' => 'setEndDate'
@@ -309,11 +284,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         'isSmoker' => 'getIsSmoker',
         'smokerEndDate' => 'getSmokerEndDate',
         'birthDate' => 'getBirthDate',
-        'facebookLink' => 'getFacebookLink',
-        'twitterLink' => 'getTwitterLink',
-        'linkedInLink' => 'getLinkedInLink',
         'language' => 'getLanguage',
-        'pictureId' => 'getPictureId',
         'organizationDateCreated' => 'getOrganizationDateCreated',
         'organizationDateClosed' => 'getOrganizationDateClosed',
         'numberOfEmployees' => 'getNumberOfEmployees',
@@ -325,7 +296,6 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         'incorporationLocation' => 'getIncorporationLocation',
         'payroll' => 'getPayroll',
         'endOfFinancialYear' => 'getEndOfFinancialYear',
-        'numberOfShareholders' => 'getNumberOfShareholders',
         'registrationNumbers' => 'getRegistrationNumbers',
         'knownSince' => 'getKnownSince',
         'endDate' => 'getEndDate'
@@ -393,11 +363,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         $this->setIfExists('isSmoker', $data ?? [], null);
         $this->setIfExists('smokerEndDate', $data ?? [], null);
         $this->setIfExists('birthDate', $data ?? [], null);
-        $this->setIfExists('facebookLink', $data ?? [], null);
-        $this->setIfExists('twitterLink', $data ?? [], null);
-        $this->setIfExists('linkedInLink', $data ?? [], null);
         $this->setIfExists('language', $data ?? [], null);
-        $this->setIfExists('pictureId', $data ?? [], null);
         $this->setIfExists('organizationDateCreated', $data ?? [], null);
         $this->setIfExists('organizationDateClosed', $data ?? [], null);
         $this->setIfExists('numberOfEmployees', $data ?? [], null);
@@ -409,7 +375,6 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
         $this->setIfExists('incorporationLocation', $data ?? [], null);
         $this->setIfExists('payroll', $data ?? [], null);
         $this->setIfExists('endOfFinancialYear', $data ?? [], null);
-        $this->setIfExists('numberOfShareholders', $data ?? [], null);
         $this->setIfExists('registrationNumbers', $data ?? [], null);
         $this->setIfExists('knownSince', $data ?? [], null);
         $this->setIfExists('endDate', $data ?? [], null);
@@ -477,14 +442,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
     public function setIsDeceased($isDeceased)
     {
         if (is_null($isDeceased)) {
-            array_push($this->openAPINullablesSetToNull, 'isDeceased');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('isDeceased', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+            throw new \InvalidArgumentException('non-nullable isDeceased cannot be null');
         }
         $this->container['isDeceased'] = $isDeceased;
 
@@ -545,14 +503,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
     public function setIsSmoker($isSmoker)
     {
         if (is_null($isSmoker)) {
-            array_push($this->openAPINullablesSetToNull, 'isSmoker');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('isSmoker', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
+            throw new \InvalidArgumentException('non-nullable isSmoker cannot be null');
         }
         $this->container['isSmoker'] = $isSmoker;
 
@@ -628,90 +579,9 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
     }
 
     /**
-     * Gets facebookLink
-     *
-     * @return string|null
-     */
-    public function getFacebookLink()
-    {
-        return $this->container['facebookLink'];
-    }
-
-    /**
-     * Sets facebookLink
-     *
-     * @param string|null $facebookLink facebookLink
-     *
-     * @return self
-     */
-    public function setFacebookLink($facebookLink)
-    {
-        if (is_null($facebookLink)) {
-            throw new \InvalidArgumentException('non-nullable facebookLink cannot be null');
-        }
-        $this->container['facebookLink'] = $facebookLink;
-
-        return $this;
-    }
-
-    /**
-     * Gets twitterLink
-     *
-     * @return string|null
-     */
-    public function getTwitterLink()
-    {
-        return $this->container['twitterLink'];
-    }
-
-    /**
-     * Sets twitterLink
-     *
-     * @param string|null $twitterLink twitterLink
-     *
-     * @return self
-     */
-    public function setTwitterLink($twitterLink)
-    {
-        if (is_null($twitterLink)) {
-            throw new \InvalidArgumentException('non-nullable twitterLink cannot be null');
-        }
-        $this->container['twitterLink'] = $twitterLink;
-
-        return $this;
-    }
-
-    /**
-     * Gets linkedInLink
-     *
-     * @return string|null
-     */
-    public function getLinkedInLink()
-    {
-        return $this->container['linkedInLink'];
-    }
-
-    /**
-     * Sets linkedInLink
-     *
-     * @param string|null $linkedInLink linkedInLink
-     *
-     * @return self
-     */
-    public function setLinkedInLink($linkedInLink)
-    {
-        if (is_null($linkedInLink)) {
-            throw new \InvalidArgumentException('non-nullable linkedInLink cannot be null');
-        }
-        $this->container['linkedInLink'] = $linkedInLink;
-
-        return $this;
-    }
-
-    /**
      * Gets language
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
+     * @return int|null
      */
     public function getLanguage()
     {
@@ -721,7 +591,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets language
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $language language
+     * @param int|null $language Refer to the values provided by the FieldValue endpoint with fieldName CONTACT_LANG.
      *
      * @return self
      */
@@ -738,40 +608,6 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
             }
         }
         $this->container['language'] = $language;
-
-        return $this;
-    }
-
-    /**
-     * Gets pictureId
-     *
-     * @return int|null
-     */
-    public function getPictureId()
-    {
-        return $this->container['pictureId'];
-    }
-
-    /**
-     * Sets pictureId
-     *
-     * @param int|null $pictureId pictureId
-     *
-     * @return self
-     */
-    public function setPictureId($pictureId)
-    {
-        if (is_null($pictureId)) {
-            array_push($this->openAPINullablesSetToNull, 'pictureId');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('pictureId', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['pictureId'] = $pictureId;
 
         return $this;
     }
@@ -847,7 +683,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets numberOfEmployees
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
+     * @return int|null
      */
     public function getNumberOfEmployees()
     {
@@ -857,7 +693,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets numberOfEmployees
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $numberOfEmployees numberOfEmployees
+     * @param int|null $numberOfEmployees Refer to the values provided by the FieldValue endpoint with fieldName ORG_NB_EMPLOYEE.
      *
      * @return self
      */
@@ -881,7 +717,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets companyValue
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
+     * @return int|null
      */
     public function getCompanyValue()
     {
@@ -891,7 +727,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets companyValue
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $companyValue companyValue
+     * @param int|null $companyValue Refer to the values provided by the FieldValue endpoint with fieldName ORG_COMPANY_VALUE.
      *
      * @return self
      */
@@ -915,7 +751,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets annualGrowth
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
+     * @return int|null
      */
     public function getAnnualGrowth()
     {
@@ -925,7 +761,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets annualGrowth
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $annualGrowth annualGrowth
+     * @param int|null $annualGrowth Refer to the values provided by the FieldValue endpoint with fieldName ORG_ANNUAL_GROWTH.
      *
      * @return self
      */
@@ -949,7 +785,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets companyStage
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
+     * @return int|null
      */
     public function getCompanyStage()
     {
@@ -959,7 +795,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets companyStage
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $companyStage companyStage
+     * @param int|null $companyStage Refer to the values provided by the FieldValue endpoint with fieldName ORG_COMPANY_STAGE.
      *
      * @return self
      */
@@ -983,7 +819,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets revenue
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsRevenue|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsCreateRevenuePayload|null
      */
     public function getRevenue()
     {
@@ -993,7 +829,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets revenue
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsRevenue|null $revenue revenue
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsCreateRevenuePayload|null $revenue revenue
      *
      * @return self
      */
@@ -1017,7 +853,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets netProfits
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
+     * @return int|null
      */
     public function getNetProfits()
     {
@@ -1027,7 +863,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets netProfits
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $netProfits netProfits
+     * @param int|null $netProfits Refer to the values provided by the FieldValue endpoint with fieldName ORG_NET_PROFIT.
      *
      * @return self
      */
@@ -1051,7 +887,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets incorporationLocation
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
+     * @return int|null
      */
     public function getIncorporationLocation()
     {
@@ -1061,7 +897,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets incorporationLocation
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $incorporationLocation incorporationLocation
+     * @param int|null $incorporationLocation Refer to the values provided by the FieldValue endpoint with fieldName ORG_INCORPORATION_LOCATION.
      *
      * @return self
      */
@@ -1085,7 +921,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets payroll
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null
+     * @return int|null
      */
     public function getPayroll()
     {
@@ -1095,7 +931,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets payroll
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue|null $payroll payroll
+     * @param int|null $payroll Refer to the values provided by the FieldValue endpoint with fieldName ORG_PAYROLL.
      *
      * @return self
      */
@@ -1129,7 +965,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets endOfFinancialYear
      *
-     * @param string|null $endOfFinancialYear endOfFinancialYear
+     * @param string|null $endOfFinancialYear Only support full month name in English in uppercase (JANUARY, FEBRUARY, etc.)
      *
      * @return self
      */
@@ -1151,43 +987,9 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
     }
 
     /**
-     * Gets numberOfShareholders
-     *
-     * @return int|null
-     */
-    public function getNumberOfShareholders()
-    {
-        return $this->container['numberOfShareholders'];
-    }
-
-    /**
-     * Sets numberOfShareholders
-     *
-     * @param int|null $numberOfShareholders numberOfShareholders
-     *
-     * @return self
-     */
-    public function setNumberOfShareholders($numberOfShareholders)
-    {
-        if (is_null($numberOfShareholders)) {
-            array_push($this->openAPINullablesSetToNull, 'numberOfShareholders');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('numberOfShareholders', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['numberOfShareholders'] = $numberOfShareholders;
-
-        return $this;
-    }
-
-    /**
      * Gets registrationNumbers
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsRegistrationNumbers|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsCreateRegistrationNumbersPayload|null
      */
     public function getRegistrationNumbers()
     {
@@ -1197,7 +999,7 @@ class ContactsAdditionalInformation implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets registrationNumbers
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsRegistrationNumbers|null $registrationNumbers registrationNumbers
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsCreateRegistrationNumbersPayload|null $registrationNumbers registrationNumbers
      *
      * @return self
      */
