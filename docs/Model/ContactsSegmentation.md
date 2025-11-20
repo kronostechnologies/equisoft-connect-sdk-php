@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **classes** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue[]**](ContactsContactFieldValue.md) |  |
+**categories** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue[]**](ContactsContactFieldValue.md) |  | [optional]
 **distributionLists** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue[]**](ContactsContactFieldValue.md) |  |
 **hobbies** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue[]**](ContactsContactFieldValue.md) |  |
 **referredBy** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue[]**](ContactsContactFieldValue.md) |  |

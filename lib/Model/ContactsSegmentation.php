@@ -58,6 +58,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
       */
     protected static $openAPITypes = [
         'classes' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue[]',
+        'categories' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue[]',
         'distributionLists' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue[]',
         'hobbies' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue[]',
         'referredBy' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue[]',
@@ -82,6 +83,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
       */
     protected static $openAPIFormats = [
         'classes' => null,
+        'categories' => null,
         'distributionLists' => null,
         'hobbies' => null,
         'referredBy' => null,
@@ -104,6 +106,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
       */
     protected static array $openAPINullables = [
         'classes' => false,
+        'categories' => false,
         'distributionLists' => false,
         'hobbies' => false,
         'referredBy' => false,
@@ -206,6 +209,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     protected static $attributeMap = [
         'classes' => 'classes',
+        'categories' => 'categories',
         'distributionLists' => 'distributionLists',
         'hobbies' => 'hobbies',
         'referredBy' => 'referredBy',
@@ -228,6 +232,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     protected static $setters = [
         'classes' => 'setClasses',
+        'categories' => 'setCategories',
         'distributionLists' => 'setDistributionLists',
         'hobbies' => 'setHobbies',
         'referredBy' => 'setReferredBy',
@@ -250,6 +255,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     protected static $getters = [
         'classes' => 'getClasses',
+        'categories' => 'getCategories',
         'distributionLists' => 'getDistributionLists',
         'hobbies' => 'getHobbies',
         'referredBy' => 'getReferredBy',
@@ -323,6 +329,7 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
     public function __construct(?array $data = null)
     {
         $this->setIfExists('classes', $data ?? [], null);
+        $this->setIfExists('categories', $data ?? [], null);
         $this->setIfExists('distributionLists', $data ?? [], null);
         $this->setIfExists('hobbies', $data ?? [], null);
         $this->setIfExists('referredBy', $data ?? [], null);
@@ -418,6 +425,35 @@ class ContactsSegmentation implements ModelInterface, ArrayAccess, \JsonSerializ
             throw new \InvalidArgumentException('non-nullable classes cannot be null');
         }
         $this->container['classes'] = $classes;
+
+        return $this;
+    }
+
+    /**
+     * Gets categories
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue[]|null
+     * @deprecated
+     */
+    public function getCategories()
+    {
+        return $this->container['categories'];
+    }
+
+    /**
+     * Sets categories
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue[]|null $categories categories
+     *
+     * @return self
+     * @deprecated
+     */
+    public function setCategories($categories)
+    {
+        if (is_null($categories)) {
+            throw new \InvalidArgumentException('non-nullable categories cannot be null');
+        }
+        $this->container['categories'] = $categories;
 
         return $this;
     }

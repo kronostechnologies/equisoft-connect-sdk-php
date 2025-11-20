@@ -89,6 +89,15 @@ class ContactsSegmentationTest extends TestCase
     }
 
     /**
+     * Test attribute "categories"
+     */
+    public function testPropertyCategories()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "distributionLists"
      */
     public function testPropertyDistributionLists()
