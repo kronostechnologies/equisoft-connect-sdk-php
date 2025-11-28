@@ -61,6 +61,7 @@ class MovementOptions implements ModelInterface, ArrayAccess, \JsonSerializable
         'copyAllProduct' => 'bool',
         'copyAllReport' => 'bool',
         'copyAllVD' => 'bool',
+        'copyContactPersonalizedFields' => 'bool',
         'propagate' => 'bool',
         'ignoreAction' => 'bool',
         'ignoreCommission' => 'bool',
@@ -81,6 +82,7 @@ class MovementOptions implements ModelInterface, ArrayAccess, \JsonSerializable
         'copyAllProduct' => null,
         'copyAllReport' => null,
         'copyAllVD' => null,
+        'copyContactPersonalizedFields' => null,
         'propagate' => null,
         'ignoreAction' => null,
         'ignoreCommission' => null,
@@ -99,6 +101,7 @@ class MovementOptions implements ModelInterface, ArrayAccess, \JsonSerializable
         'copyAllProduct' => false,
         'copyAllReport' => false,
         'copyAllVD' => false,
+        'copyContactPersonalizedFields' => false,
         'propagate' => false,
         'ignoreAction' => false,
         'ignoreCommission' => false,
@@ -197,6 +200,7 @@ class MovementOptions implements ModelInterface, ArrayAccess, \JsonSerializable
         'copyAllProduct' => 'copyAllProduct',
         'copyAllReport' => 'copyAllReport',
         'copyAllVD' => 'copyAllVD',
+        'copyContactPersonalizedFields' => 'copyContactPersonalizedFields',
         'propagate' => 'propagate',
         'ignoreAction' => 'ignoreAction',
         'ignoreCommission' => 'ignoreCommission',
@@ -215,6 +219,7 @@ class MovementOptions implements ModelInterface, ArrayAccess, \JsonSerializable
         'copyAllProduct' => 'setCopyAllProduct',
         'copyAllReport' => 'setCopyAllReport',
         'copyAllVD' => 'setCopyAllVD',
+        'copyContactPersonalizedFields' => 'setCopyContactPersonalizedFields',
         'propagate' => 'setPropagate',
         'ignoreAction' => 'setIgnoreAction',
         'ignoreCommission' => 'setIgnoreCommission',
@@ -233,6 +238,7 @@ class MovementOptions implements ModelInterface, ArrayAccess, \JsonSerializable
         'copyAllProduct' => 'getCopyAllProduct',
         'copyAllReport' => 'getCopyAllReport',
         'copyAllVD' => 'getCopyAllVD',
+        'copyContactPersonalizedFields' => 'getCopyContactPersonalizedFields',
         'propagate' => 'getPropagate',
         'ignoreAction' => 'getIgnoreAction',
         'ignoreCommission' => 'getIgnoreCommission',
@@ -302,6 +308,7 @@ class MovementOptions implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('copyAllProduct', $data ?? [], null);
         $this->setIfExists('copyAllReport', $data ?? [], null);
         $this->setIfExists('copyAllVD', $data ?? [], null);
+        $this->setIfExists('copyContactPersonalizedFields', $data ?? [], null);
         $this->setIfExists('propagate', $data ?? [], null);
         $this->setIfExists('ignoreAction', $data ?? [], null);
         $this->setIfExists('ignoreCommission', $data ?? [], null);
@@ -456,6 +463,33 @@ class MovementOptions implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable copyAllVD cannot be null');
         }
         $this->container['copyAllVD'] = $copyAllVD;
+
+        return $this;
+    }
+
+    /**
+     * Gets copyContactPersonalizedFields
+     *
+     * @return bool|null
+     */
+    public function getCopyContactPersonalizedFields()
+    {
+        return $this->container['copyContactPersonalizedFields'];
+    }
+
+    /**
+     * Sets copyContactPersonalizedFields
+     *
+     * @param bool|null $copyContactPersonalizedFields Copy data from ContactPersonalizedFields module. The module must be installed in both databases.
+     *
+     * @return self
+     */
+    public function setCopyContactPersonalizedFields($copyContactPersonalizedFields)
+    {
+        if (is_null($copyContactPersonalizedFields)) {
+            throw new \InvalidArgumentException('non-nullable copyContactPersonalizedFields cannot be null');
+        }
+        $this->container['copyContactPersonalizedFields'] = $copyContactPersonalizedFields;
 
         return $this;
     }

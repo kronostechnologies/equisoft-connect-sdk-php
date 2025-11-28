@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **copyAllProduct** | **bool** | Move all Products. | [optional]
 **copyAllReport** | **bool** | Move all reports. | [optional]
 **copyAllVD** | **bool** | Move all Field Value. | [optional]
+**copyContactPersonalizedFields** | **bool** | Copy data from ContactPersonalizedFields module. The module must be installed in both databases. | [optional]
 **propagate** | **bool** | Propagate data before movement. | [optional]
 **ignoreAction** | **bool** | Ignore all Actions. | [optional]
 **ignoreCommission** | **bool** | Ignore all Commissions. | [optional]

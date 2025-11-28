@@ -116,6 +116,15 @@ class MovementOptionsTest extends TestCase
     }
 
     /**
+     * Test attribute "copyContactPersonalizedFields"
+     */
+    public function testPropertyCopyContactPersonalizedFields()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "propagate"
      */
     public function testPropertyPropagate()
