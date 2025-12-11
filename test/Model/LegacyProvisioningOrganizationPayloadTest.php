@@ -267,13 +267,4 @@ class LegacyProvisioningOrganizationPayloadTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
-
-    /**
-     * Test attribute "dsfFinancialCenterId"
-     */
-    public function testPropertyDsfFinancialCenterId()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
 }

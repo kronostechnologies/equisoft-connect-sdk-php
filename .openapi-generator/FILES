@@ -2,7 +2,6 @@
 .travis.yml
 README.md
 docs/Api/ContactsApi.md
-docs/Api/DSFApi.md
 docs/Api/DatabasesApi.md
 docs/Api/DocumentsApi.md
 docs/Api/EventsApi.md
@@ -97,10 +96,6 @@ docs/Model/DocumentsDocument.md
 docs/Model/DocumentsDocumentContact.md
 docs/Model/DocumentsDocumentFile.md
 docs/Model/DocumentsListDocumentResponse.md
-docs/Model/DsfCreateOrUpdateFinancialCenterResponse.md
-docs/Model/DsfFinancialCenter.md
-docs/Model/DsfFinancialCenterPayload.md
-docs/Model/DsfListFinancialCenterResponse.md
 docs/Model/ErrorResponse.md
 docs/Model/EventsCreateEventPayload.md
 docs/Model/EventsCreateEventResponse.md
@@ -327,7 +322,6 @@ docs/Model/UsersUser.md
 docs/Model/UsersUserGroup.md
 git_push.sh
 lib/Api/ContactsApi.php
-lib/Api/DSFApi.php
 lib/Api/DatabasesApi.php
 lib/Api/DocumentsApi.php
 lib/Api/EventsApi.php
@@ -425,10 +419,6 @@ lib/Model/DocumentsDocument.php
 lib/Model/DocumentsDocumentContact.php
 lib/Model/DocumentsDocumentFile.php
 lib/Model/DocumentsListDocumentResponse.php
-lib/Model/DsfCreateOrUpdateFinancialCenterResponse.php
-lib/Model/DsfFinancialCenter.php
-lib/Model/DsfFinancialCenterPayload.php
-lib/Model/DsfListFinancialCenterResponse.php
 lib/Model/ErrorResponse.php
 lib/Model/EventsCreateEventPayload.php
 lib/Model/EventsCreateEventResponse.php
@@ -657,7 +647,6 @@ lib/Model/UsersUserGroup.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
 test/Api/ContactsApiTest.php
-test/Api/DSFApiTest.php
 test/Api/DatabasesApiTest.php
 test/Api/DocumentsApiTest.php
 test/Api/EventsApiTest.php
@@ -752,10 +741,6 @@ test/Model/DocumentsDocumentContactTest.php
 test/Model/DocumentsDocumentFileTest.php
 test/Model/DocumentsDocumentTest.php
 test/Model/DocumentsListDocumentResponseTest.php
-test/Model/DsfCreateOrUpdateFinancialCenterResponseTest.php
-test/Model/DsfFinancialCenterPayloadTest.php
-test/Model/DsfFinancialCenterTest.php
-test/Model/DsfListFinancialCenterResponseTest.php
 test/Model/ErrorResponseTest.php
 test/Model/EventsCreateEventPayloadTest.php
 test/Model/EventsCreateEventResponseTest.php

@@ -25,6 +25,5 @@ Name | Type | Description | Notes
 **distributor** | **string** | Distributor. | [optional]
 **installPersonalizedFieldsModule** | **bool** | Install personalized fields module. | [optional]
 **installFnaModule** | **bool** | Install FNA module. | [optional]
-**dsfFinancialCenterId** | **string** | DSF financial center id. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

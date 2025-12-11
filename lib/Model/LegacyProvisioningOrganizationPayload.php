@@ -77,8 +77,7 @@ class LegacyProvisioningOrganizationPayload implements ModelInterface, ArrayAcce
         'organizationEmail' => 'string',
         'distributor' => 'string',
         'installPersonalizedFieldsModule' => 'bool',
-        'installFnaModule' => 'bool',
-        'dsfFinancialCenterId' => 'string'
+        'installFnaModule' => 'bool'
     ];
 
     /**
@@ -109,8 +108,7 @@ class LegacyProvisioningOrganizationPayload implements ModelInterface, ArrayAcce
         'organizationEmail' => null,
         'distributor' => null,
         'installPersonalizedFieldsModule' => null,
-        'installFnaModule' => null,
-        'dsfFinancialCenterId' => null
+        'installFnaModule' => null
     ];
 
     /**
@@ -139,8 +137,7 @@ class LegacyProvisioningOrganizationPayload implements ModelInterface, ArrayAcce
         'organizationEmail' => false,
         'distributor' => false,
         'installPersonalizedFieldsModule' => false,
-        'installFnaModule' => false,
-        'dsfFinancialCenterId' => false
+        'installFnaModule' => false
     ];
 
     /**
@@ -249,8 +246,7 @@ class LegacyProvisioningOrganizationPayload implements ModelInterface, ArrayAcce
         'organizationEmail' => 'organizationEmail',
         'distributor' => 'distributor',
         'installPersonalizedFieldsModule' => 'installPersonalizedFieldsModule',
-        'installFnaModule' => 'installFnaModule',
-        'dsfFinancialCenterId' => 'dsfFinancialCenterId'
+        'installFnaModule' => 'installFnaModule'
     ];
 
     /**
@@ -279,8 +275,7 @@ class LegacyProvisioningOrganizationPayload implements ModelInterface, ArrayAcce
         'organizationEmail' => 'setOrganizationEmail',
         'distributor' => 'setDistributor',
         'installPersonalizedFieldsModule' => 'setInstallPersonalizedFieldsModule',
-        'installFnaModule' => 'setInstallFnaModule',
-        'dsfFinancialCenterId' => 'setDsfFinancialCenterId'
+        'installFnaModule' => 'setInstallFnaModule'
     ];
 
     /**
@@ -309,8 +304,7 @@ class LegacyProvisioningOrganizationPayload implements ModelInterface, ArrayAcce
         'organizationEmail' => 'getOrganizationEmail',
         'distributor' => 'getDistributor',
         'installPersonalizedFieldsModule' => 'getInstallPersonalizedFieldsModule',
-        'installFnaModule' => 'getInstallFnaModule',
-        'dsfFinancialCenterId' => 'getDsfFinancialCenterId'
+        'installFnaModule' => 'getInstallFnaModule'
     ];
 
     /**
@@ -391,7 +385,6 @@ class LegacyProvisioningOrganizationPayload implements ModelInterface, ArrayAcce
         $this->setIfExists('distributor', $data ?? [], null);
         $this->setIfExists('installPersonalizedFieldsModule', $data ?? [], null);
         $this->setIfExists('installFnaModule', $data ?? [], null);
-        $this->setIfExists('dsfFinancialCenterId', $data ?? [], null);
     }
 
     /**
@@ -999,33 +992,6 @@ class LegacyProvisioningOrganizationPayload implements ModelInterface, ArrayAcce
             throw new \InvalidArgumentException('non-nullable installFnaModule cannot be null');
         }
         $this->container['installFnaModule'] = $installFnaModule;
-
-        return $this;
-    }
-
-    /**
-     * Gets dsfFinancialCenterId
-     *
-     * @return string|null
-     */
-    public function getDsfFinancialCenterId()
-    {
-        return $this->container['dsfFinancialCenterId'];
-    }
-
-    /**
-     * Sets dsfFinancialCenterId
-     *
-     * @param string|null $dsfFinancialCenterId DSF financial center id.
-     *
-     * @return self
-     */
-    public function setDsfFinancialCenterId($dsfFinancialCenterId)
-    {
-        if (is_null($dsfFinancialCenterId)) {
-            throw new \InvalidArgumentException('non-nullable dsfFinancialCenterId cannot be null');
-        }
-        $this->container['dsfFinancialCenterId'] = $dsfFinancialCenterId;
 
         return $this;
     }
