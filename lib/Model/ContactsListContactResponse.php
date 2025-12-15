@@ -59,7 +59,7 @@ class ContactsListContactResponse implements ModelInterface, ArrayAccess, \JsonS
     protected static $openAPITypes = [
         'nextPageToken' => 'string',
         'count' => 'int',
-        'items' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsTemporaryContact[]'
+        'items' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContact[]'
     ];
 
     /**
@@ -370,7 +370,7 @@ class ContactsListContactResponse implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets items
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsTemporaryContact[]
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContact[]
      */
     public function getItems()
     {
@@ -380,7 +380,7 @@ class ContactsListContactResponse implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets items
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsTemporaryContact[] $items items
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContact[] $items items
      *
      * @return self
      */

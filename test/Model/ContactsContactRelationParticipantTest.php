@@ -1,6 +1,6 @@
 <?php
 /**
- * ContactContactAdditionalInformationTest
+ * ContactsContactRelationParticipantTest
  *
  * PHP version 8.1
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ContactContactAdditionalInformationTest Class Doc Comment
+ * ContactsContactRelationParticipantTest Class Doc Comment
  *
  * @category    Class
- * @description ContactContactAdditionalInformation
+ * @description ContactsContactRelationParticipant
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ContactContactAdditionalInformationTest extends TestCase
+class ContactsContactRelationParticipantTest extends TestCase
 {
 
     /**
@@ -71,45 +71,63 @@ class ContactContactAdditionalInformationTest extends TestCase
     }
 
     /**
-     * Test "ContactContactAdditionalInformation"
+     * Test "ContactsContactRelationParticipant"
      */
-    public function testContactContactAdditionalInformation()
+    public function testContactsContactRelationParticipant()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "isDeceased"
+     * Test attribute "uuid"
      */
-    public function testPropertyIsDeceased()
+    public function testPropertyUuid()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "deceasedDate"
+     * Test attribute "linkRole"
      */
-    public function testPropertyDeceasedDate()
+    public function testPropertyLinkRole()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "isSmoker"
+     * Test attribute "displayName"
      */
-    public function testPropertyIsSmoker()
+    public function testPropertyDisplayName()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "smokerEndDate"
+     * Test attribute "firstName"
      */
-    public function testPropertySmokerEndDate()
+    public function testPropertyFirstName()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "lastName"
+     */
+    public function testPropertyLastName()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "gender"
+     */
+    public function testPropertyGender()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -119,51 +137,6 @@ class ContactContactAdditionalInformationTest extends TestCase
      * Test attribute "birthDate"
      */
     public function testPropertyBirthDate()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "facebookLink"
-     */
-    public function testPropertyFacebookLink()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "twitterLink"
-     */
-    public function testPropertyTwitterLink()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "linkedInLink"
-     */
-    public function testPropertyLinkedInLink()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "language"
-     */
-    public function testPropertyLanguage()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "pictureId"
-     */
-    public function testPropertyPictureId()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

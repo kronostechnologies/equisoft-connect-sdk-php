@@ -1,6 +1,6 @@
 <?php
 /**
- * ContactLinkTest
+ * ContactsContactRelationTest
  *
  * PHP version 8.1
  *
@@ -31,15 +31,15 @@ namespace Equisoft\SDK\EquisoftConnect\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ContactLinkTest Class Doc Comment
+ * ContactsContactRelationTest Class Doc Comment
  *
  * @category    Class
- * @description ContactLink
+ * @description ContactsContactRelation
  * @package     Equisoft\SDK\EquisoftConnect
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ContactLinkTest extends TestCase
+class ContactsContactRelationTest extends TestCase
 {
 
     /**
@@ -71,9 +71,9 @@ class ContactLinkTest extends TestCase
     }
 
     /**
-     * Test "ContactLink"
+     * Test "ContactsContactRelation"
      */
-    public function testContactLink()
+    public function testContactsContactRelation()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

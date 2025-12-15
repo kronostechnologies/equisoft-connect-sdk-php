@@ -1,6 +1,6 @@
 <?php
 /**
- * ContactsLegacyContactRelation
+ * ContactsContactRelation
  *
  * PHP version 8.1
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * ContactsLegacyContactRelation Class Doc Comment
+ * ContactsContactRelation Class Doc Comment
  *
  * @category Class
  * @package  Equisoft\SDK\EquisoftConnect
@@ -40,7 +40,7 @@ use \Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ContactsLegacyContactRelation implements ModelInterface, ArrayAccess, \JsonSerializable
+class ContactsContactRelation implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ContactsLegacyContactRelation implements ModelInterface, ArrayAccess, \Jso
       *
       * @var string
       */
-    protected static $openAPIModelName = 'contacts.LegacyContactRelation';
+    protected static $openAPIModelName = 'contacts.ContactRelation';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,7 +59,7 @@ class ContactsLegacyContactRelation implements ModelInterface, ArrayAccess, \Jso
     protected static $openAPITypes = [
         'id' => 'int',
         'linkType' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue',
-        'participants' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsLegacyContactRelationParticipant[]'
+        'participants' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactRelationParticipant[]'
     ];
 
     /**
@@ -367,7 +367,7 @@ class ContactsLegacyContactRelation implements ModelInterface, ArrayAccess, \Jso
     /**
      * Gets participants
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsLegacyContactRelationParticipant[]|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactRelationParticipant[]|null
      */
     public function getParticipants()
     {
@@ -377,7 +377,7 @@ class ContactsLegacyContactRelation implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets participants
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsLegacyContactRelationParticipant[]|null $participants participants
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactRelationParticipant[]|null $participants participants
      *
      * @return self
      */

@@ -15,7 +15,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `createContact()`
 
 ```php
-createContact($contactsCreateContactPayload): \Equisoft\SDK\EquisoftConnect\Model\ContactsTemporaryContact
+createContact($contactsCreateContactPayload): \Equisoft\SDK\EquisoftConnect\Model\ContactsContact
 ```
 
 Create a contact
@@ -55,7 +55,7 @@ try {
 
 ### Return type
 
-[**\Equisoft\SDK\EquisoftConnect\Model\ContactsTemporaryContact**](../Model/ContactsTemporaryContact.md)
+[**\Equisoft\SDK\EquisoftConnect\Model\ContactsContact**](../Model/ContactsContact.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ try {
 ## `getByUuid()`
 
 ```php
-getByUuid($contactUuid, $acceptLanguage): \Equisoft\SDK\EquisoftConnect\Model\ContactsLegacyContact
+getByUuid($contactUuid, $acceptLanguage): \Equisoft\SDK\EquisoftConnect\Model\ContactsContact
 ```
 
 Get contact by Uuid
@@ -115,7 +115,7 @@ try {
 
 ### Return type
 
-[**\Equisoft\SDK\EquisoftConnect\Model\ContactsLegacyContact**](../Model/ContactsLegacyContact.md)
+[**\Equisoft\SDK\EquisoftConnect\Model\ContactsContact**](../Model/ContactsContact.md)
 
 ### Authorization
 

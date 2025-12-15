@@ -60,23 +60,25 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'int',
         'uuid' => 'string',
         'contactType' => 'string',
+        'indOrg' => 'string',
         'displayName' => 'string',
         'sortName' => 'string',
+        'identification' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsIdentification',
+        'additionalInformation' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsAdditionalInformation',
+        'segmentation' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsSegmentation',
+        'addresses' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsAddress[]',
+        'phones' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsPhone[]',
+        'emails' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsEmail[]',
+        'websites' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsWebSite[]',
+        'links' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactRelation[]',
         'notes' => 'string',
         'notesAdditionalInformation' => 'string',
         'creationDate' => '\DateTime',
         'lastUpdateDate' => '\DateTime',
-        'identification' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactIdentification',
-        'additionalInformation' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactAdditionalInformation',
-        'currentMaritalStatus' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactMaritalStatus',
-        'currentCivilStatus' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactMaritalStatus',
-        'currentOccupation' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactOccupation',
-        'segmentation' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactSegmentation',
-        'addresses' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactAddress[]',
-        'phones' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactPhone[]',
-        'emails' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactEmail[]',
-        'websites' => '\Equisoft\SDK\EquisoftConnect\Model\ContactContactWebsite[]',
-        'links' => '\Equisoft\SDK\EquisoftConnect\Model\ContactLink[]'
+        'currentMaritalStatus' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsCivilStatus',
+        'currentCivilStatus' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsCivilStatus',
+        'currentOccupation' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsOccupation',
+        'investorProfile' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsInvestorProfile'
     ];
 
     /**
@@ -90,23 +92,25 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => null,
         'uuid' => null,
         'contactType' => null,
+        'indOrg' => null,
         'displayName' => null,
         'sortName' => null,
-        'notes' => null,
-        'notesAdditionalInformation' => null,
-        'creationDate' => 'date-time',
-        'lastUpdateDate' => 'date-time',
         'identification' => null,
         'additionalInformation' => null,
-        'currentMaritalStatus' => null,
-        'currentCivilStatus' => null,
-        'currentOccupation' => null,
         'segmentation' => null,
         'addresses' => null,
         'phones' => null,
         'emails' => null,
         'websites' => null,
-        'links' => null
+        'links' => null,
+        'notes' => null,
+        'notesAdditionalInformation' => null,
+        'creationDate' => 'date-time',
+        'lastUpdateDate' => 'date-time',
+        'currentMaritalStatus' => null,
+        'currentCivilStatus' => null,
+        'currentOccupation' => null,
+        'investorProfile' => null
     ];
 
     /**
@@ -118,23 +122,25 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => false,
         'uuid' => false,
         'contactType' => false,
+        'indOrg' => false,
         'displayName' => false,
         'sortName' => false,
-        'notes' => false,
-        'notesAdditionalInformation' => false,
-        'creationDate' => true,
-        'lastUpdateDate' => true,
         'identification' => false,
         'additionalInformation' => false,
-        'currentMaritalStatus' => true,
-        'currentCivilStatus' => true,
-        'currentOccupation' => true,
         'segmentation' => false,
         'addresses' => false,
         'phones' => false,
         'emails' => false,
         'websites' => false,
-        'links' => false
+        'links' => false,
+        'notes' => false,
+        'notesAdditionalInformation' => false,
+        'creationDate' => true,
+        'lastUpdateDate' => true,
+        'currentMaritalStatus' => true,
+        'currentCivilStatus' => true,
+        'currentOccupation' => true,
+        'investorProfile' => true
     ];
 
     /**
@@ -226,23 +232,25 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'id',
         'uuid' => 'uuid',
         'contactType' => 'contactType',
+        'indOrg' => 'indOrg',
         'displayName' => 'displayName',
         'sortName' => 'sortName',
-        'notes' => 'notes',
-        'notesAdditionalInformation' => 'notesAdditionalInformation',
-        'creationDate' => 'creationDate',
-        'lastUpdateDate' => 'lastUpdateDate',
         'identification' => 'identification',
         'additionalInformation' => 'additionalInformation',
-        'currentMaritalStatus' => 'currentMaritalStatus',
-        'currentCivilStatus' => 'currentCivilStatus',
-        'currentOccupation' => 'currentOccupation',
         'segmentation' => 'segmentation',
         'addresses' => 'addresses',
         'phones' => 'phones',
         'emails' => 'emails',
         'websites' => 'websites',
-        'links' => 'links'
+        'links' => 'links',
+        'notes' => 'notes',
+        'notesAdditionalInformation' => 'notesAdditionalInformation',
+        'creationDate' => 'creationDate',
+        'lastUpdateDate' => 'lastUpdateDate',
+        'currentMaritalStatus' => 'currentMaritalStatus',
+        'currentCivilStatus' => 'currentCivilStatus',
+        'currentOccupation' => 'currentOccupation',
+        'investorProfile' => 'investorProfile'
     ];
 
     /**
@@ -254,23 +262,25 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'setId',
         'uuid' => 'setUuid',
         'contactType' => 'setContactType',
+        'indOrg' => 'setIndOrg',
         'displayName' => 'setDisplayName',
         'sortName' => 'setSortName',
-        'notes' => 'setNotes',
-        'notesAdditionalInformation' => 'setNotesAdditionalInformation',
-        'creationDate' => 'setCreationDate',
-        'lastUpdateDate' => 'setLastUpdateDate',
         'identification' => 'setIdentification',
         'additionalInformation' => 'setAdditionalInformation',
-        'currentMaritalStatus' => 'setCurrentMaritalStatus',
-        'currentCivilStatus' => 'setCurrentCivilStatus',
-        'currentOccupation' => 'setCurrentOccupation',
         'segmentation' => 'setSegmentation',
         'addresses' => 'setAddresses',
         'phones' => 'setPhones',
         'emails' => 'setEmails',
         'websites' => 'setWebsites',
-        'links' => 'setLinks'
+        'links' => 'setLinks',
+        'notes' => 'setNotes',
+        'notesAdditionalInformation' => 'setNotesAdditionalInformation',
+        'creationDate' => 'setCreationDate',
+        'lastUpdateDate' => 'setLastUpdateDate',
+        'currentMaritalStatus' => 'setCurrentMaritalStatus',
+        'currentCivilStatus' => 'setCurrentCivilStatus',
+        'currentOccupation' => 'setCurrentOccupation',
+        'investorProfile' => 'setInvestorProfile'
     ];
 
     /**
@@ -282,23 +292,25 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
         'id' => 'getId',
         'uuid' => 'getUuid',
         'contactType' => 'getContactType',
+        'indOrg' => 'getIndOrg',
         'displayName' => 'getDisplayName',
         'sortName' => 'getSortName',
-        'notes' => 'getNotes',
-        'notesAdditionalInformation' => 'getNotesAdditionalInformation',
-        'creationDate' => 'getCreationDate',
-        'lastUpdateDate' => 'getLastUpdateDate',
         'identification' => 'getIdentification',
         'additionalInformation' => 'getAdditionalInformation',
-        'currentMaritalStatus' => 'getCurrentMaritalStatus',
-        'currentCivilStatus' => 'getCurrentCivilStatus',
-        'currentOccupation' => 'getCurrentOccupation',
         'segmentation' => 'getSegmentation',
         'addresses' => 'getAddresses',
         'phones' => 'getPhones',
         'emails' => 'getEmails',
         'websites' => 'getWebsites',
-        'links' => 'getLinks'
+        'links' => 'getLinks',
+        'notes' => 'getNotes',
+        'notesAdditionalInformation' => 'getNotesAdditionalInformation',
+        'creationDate' => 'getCreationDate',
+        'lastUpdateDate' => 'getLastUpdateDate',
+        'currentMaritalStatus' => 'getCurrentMaritalStatus',
+        'currentCivilStatus' => 'getCurrentCivilStatus',
+        'currentOccupation' => 'getCurrentOccupation',
+        'investorProfile' => 'getInvestorProfile'
     ];
 
     /**
@@ -361,23 +373,25 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('uuid', $data ?? [], null);
         $this->setIfExists('contactType', $data ?? [], null);
+        $this->setIfExists('indOrg', $data ?? [], null);
         $this->setIfExists('displayName', $data ?? [], null);
         $this->setIfExists('sortName', $data ?? [], null);
-        $this->setIfExists('notes', $data ?? [], null);
-        $this->setIfExists('notesAdditionalInformation', $data ?? [], null);
-        $this->setIfExists('creationDate', $data ?? [], null);
-        $this->setIfExists('lastUpdateDate', $data ?? [], null);
         $this->setIfExists('identification', $data ?? [], null);
         $this->setIfExists('additionalInformation', $data ?? [], null);
-        $this->setIfExists('currentMaritalStatus', $data ?? [], null);
-        $this->setIfExists('currentCivilStatus', $data ?? [], null);
-        $this->setIfExists('currentOccupation', $data ?? [], null);
         $this->setIfExists('segmentation', $data ?? [], null);
         $this->setIfExists('addresses', $data ?? [], null);
         $this->setIfExists('phones', $data ?? [], null);
         $this->setIfExists('emails', $data ?? [], null);
         $this->setIfExists('websites', $data ?? [], null);
         $this->setIfExists('links', $data ?? [], null);
+        $this->setIfExists('notes', $data ?? [], null);
+        $this->setIfExists('notesAdditionalInformation', $data ?? [], null);
+        $this->setIfExists('creationDate', $data ?? [], null);
+        $this->setIfExists('lastUpdateDate', $data ?? [], null);
+        $this->setIfExists('currentMaritalStatus', $data ?? [], null);
+        $this->setIfExists('currentCivilStatus', $data ?? [], null);
+        $this->setIfExists('currentOccupation', $data ?? [], null);
+        $this->setIfExists('investorProfile', $data ?? [], null);
     }
 
     /**
@@ -444,7 +458,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets id
      *
-     * @param int $id Contact unique numeric identifier
+     * @param int $id id
      *
      * @return self
      */
@@ -471,7 +485,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets uuid
      *
-     * @param string $uuid Contact unique string identifier
+     * @param string $uuid uuid
      *
      * @return self
      */
@@ -498,7 +512,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets contactType
      *
-     * @param string $contactType Contact type ('CUS','OTHER')
+     * @param string $contactType contactType
      *
      * @return self
      */
@@ -508,6 +522,33 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable contactType cannot be null');
         }
         $this->container['contactType'] = $contactType;
+
+        return $this;
+    }
+
+    /**
+     * Gets indOrg
+     *
+     * @return string|null
+     */
+    public function getIndOrg()
+    {
+        return $this->container['indOrg'];
+    }
+
+    /**
+     * Sets indOrg
+     *
+     * @param string|null $indOrg indOrg
+     *
+     * @return self
+     */
+    public function setIndOrg($indOrg)
+    {
+        if (is_null($indOrg)) {
+            throw new \InvalidArgumentException('non-nullable indOrg cannot be null');
+        }
+        $this->container['indOrg'] = $indOrg;
 
         return $this;
     }
@@ -525,7 +566,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets displayName
      *
-     * @param string|null $displayName Contact complete name (\"[Last name] [First Name]\") or company Name for 'Organization' contact
+     * @param string|null $displayName displayName
      *
      * @return self
      */
@@ -552,7 +593,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets sortName
      *
-     * @param string|null $sortName Contact sort name
+     * @param string|null $sortName sortName
      *
      * @return self
      */
@@ -562,6 +603,224 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable sortName cannot be null');
         }
         $this->container['sortName'] = $sortName;
+
+        return $this;
+    }
+
+    /**
+     * Gets identification
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsIdentification|null
+     */
+    public function getIdentification()
+    {
+        return $this->container['identification'];
+    }
+
+    /**
+     * Sets identification
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsIdentification|null $identification identification
+     *
+     * @return self
+     */
+    public function setIdentification($identification)
+    {
+        if (is_null($identification)) {
+            throw new \InvalidArgumentException('non-nullable identification cannot be null');
+        }
+        $this->container['identification'] = $identification;
+
+        return $this;
+    }
+
+    /**
+     * Gets additionalInformation
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsAdditionalInformation|null
+     */
+    public function getAdditionalInformation()
+    {
+        return $this->container['additionalInformation'];
+    }
+
+    /**
+     * Sets additionalInformation
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsAdditionalInformation|null $additionalInformation additionalInformation
+     *
+     * @return self
+     */
+    public function setAdditionalInformation($additionalInformation)
+    {
+        if (is_null($additionalInformation)) {
+            throw new \InvalidArgumentException('non-nullable additionalInformation cannot be null');
+        }
+        $this->container['additionalInformation'] = $additionalInformation;
+
+        return $this;
+    }
+
+    /**
+     * Gets segmentation
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsSegmentation|null
+     */
+    public function getSegmentation()
+    {
+        return $this->container['segmentation'];
+    }
+
+    /**
+     * Sets segmentation
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsSegmentation|null $segmentation segmentation
+     *
+     * @return self
+     */
+    public function setSegmentation($segmentation)
+    {
+        if (is_null($segmentation)) {
+            throw new \InvalidArgumentException('non-nullable segmentation cannot be null');
+        }
+        $this->container['segmentation'] = $segmentation;
+
+        return $this;
+    }
+
+    /**
+     * Gets addresses
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsAddress[]|null
+     */
+    public function getAddresses()
+    {
+        return $this->container['addresses'];
+    }
+
+    /**
+     * Sets addresses
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsAddress[]|null $addresses addresses
+     *
+     * @return self
+     */
+    public function setAddresses($addresses)
+    {
+        if (is_null($addresses)) {
+            throw new \InvalidArgumentException('non-nullable addresses cannot be null');
+        }
+        $this->container['addresses'] = $addresses;
+
+        return $this;
+    }
+
+    /**
+     * Gets phones
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsPhone[]|null
+     */
+    public function getPhones()
+    {
+        return $this->container['phones'];
+    }
+
+    /**
+     * Sets phones
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsPhone[]|null $phones phones
+     *
+     * @return self
+     */
+    public function setPhones($phones)
+    {
+        if (is_null($phones)) {
+            throw new \InvalidArgumentException('non-nullable phones cannot be null');
+        }
+        $this->container['phones'] = $phones;
+
+        return $this;
+    }
+
+    /**
+     * Gets emails
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsEmail[]|null
+     */
+    public function getEmails()
+    {
+        return $this->container['emails'];
+    }
+
+    /**
+     * Sets emails
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsEmail[]|null $emails emails
+     *
+     * @return self
+     */
+    public function setEmails($emails)
+    {
+        if (is_null($emails)) {
+            throw new \InvalidArgumentException('non-nullable emails cannot be null');
+        }
+        $this->container['emails'] = $emails;
+
+        return $this;
+    }
+
+    /**
+     * Gets websites
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsWebSite[]|null
+     */
+    public function getWebsites()
+    {
+        return $this->container['websites'];
+    }
+
+    /**
+     * Sets websites
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsWebSite[]|null $websites websites
+     *
+     * @return self
+     */
+    public function setWebsites($websites)
+    {
+        if (is_null($websites)) {
+            throw new \InvalidArgumentException('non-nullable websites cannot be null');
+        }
+        $this->container['websites'] = $websites;
+
+        return $this;
+    }
+
+    /**
+     * Gets links
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContactRelation[]|null
+     * @deprecated
+     */
+    public function getLinks()
+    {
+        return $this->container['links'];
+    }
+
+    /**
+     * Sets links
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsContactRelation[]|null $links Only available for getContact. Will always be empty for listContact
+     *
+     * @return self
+     * @deprecated
+     */
+    public function setLinks($links)
+    {
+        if (is_null($links)) {
+            throw new \InvalidArgumentException('non-nullable links cannot be null');
+        }
+        $this->container['links'] = $links;
 
         return $this;
     }
@@ -579,7 +838,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets notes
      *
-     * @param string|null $notes Contact notes
+     * @param string|null $notes notes
      *
      * @return self
      */
@@ -606,7 +865,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets notesAdditionalInformation
      *
-     * @param string|null $notesAdditionalInformation Contact additional information related to the notes
+     * @param string|null $notesAdditionalInformation notesAdditionalInformation
      *
      * @return self
      */
@@ -633,7 +892,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets creationDate
      *
-     * @param \DateTime|null $creationDate Creation time. As defined by date-time - RFC3339
+     * @param \DateTime|null $creationDate creationDate
      *
      * @return self
      */
@@ -667,7 +926,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets lastUpdateDate
      *
-     * @param \DateTime|null $lastUpdateDate Last update time. As defined by date-time - RFC3339
+     * @param \DateTime|null $lastUpdateDate lastUpdateDate
      *
      * @return self
      */
@@ -689,63 +948,9 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets identification
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactContactIdentification|null
-     */
-    public function getIdentification()
-    {
-        return $this->container['identification'];
-    }
-
-    /**
-     * Sets identification
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactContactIdentification|null $identification identification
-     *
-     * @return self
-     */
-    public function setIdentification($identification)
-    {
-        if (is_null($identification)) {
-            throw new \InvalidArgumentException('non-nullable identification cannot be null');
-        }
-        $this->container['identification'] = $identification;
-
-        return $this;
-    }
-
-    /**
-     * Gets additionalInformation
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactContactAdditionalInformation|null
-     */
-    public function getAdditionalInformation()
-    {
-        return $this->container['additionalInformation'];
-    }
-
-    /**
-     * Sets additionalInformation
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactContactAdditionalInformation|null $additionalInformation additionalInformation
-     *
-     * @return self
-     */
-    public function setAdditionalInformation($additionalInformation)
-    {
-        if (is_null($additionalInformation)) {
-            throw new \InvalidArgumentException('non-nullable additionalInformation cannot be null');
-        }
-        $this->container['additionalInformation'] = $additionalInformation;
-
-        return $this;
-    }
-
-    /**
      * Gets currentMaritalStatus
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactContactMaritalStatus|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsCivilStatus|null
      */
     public function getCurrentMaritalStatus()
     {
@@ -755,7 +960,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets currentMaritalStatus
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactContactMaritalStatus|null $currentMaritalStatus currentMaritalStatus
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsCivilStatus|null $currentMaritalStatus currentMaritalStatus
      *
      * @return self
      */
@@ -779,7 +984,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets currentCivilStatus
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactContactMaritalStatus|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsCivilStatus|null
      */
     public function getCurrentCivilStatus()
     {
@@ -789,7 +994,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets currentCivilStatus
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactContactMaritalStatus|null $currentCivilStatus currentCivilStatus
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsCivilStatus|null $currentCivilStatus currentCivilStatus
      *
      * @return self
      */
@@ -813,7 +1018,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets currentOccupation
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactContactOccupation|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsOccupation|null
      */
     public function getCurrentOccupation()
     {
@@ -823,7 +1028,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets currentOccupation
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactContactOccupation|null $currentOccupation currentOccupation
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsOccupation|null $currentOccupation currentOccupation
      *
      * @return self
      */
@@ -845,163 +1050,35 @@ class ContactsContact implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets segmentation
+     * Gets investorProfile
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactContactSegmentation|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsInvestorProfile|null
      */
-    public function getSegmentation()
+    public function getInvestorProfile()
     {
-        return $this->container['segmentation'];
+        return $this->container['investorProfile'];
     }
 
     /**
-     * Sets segmentation
+     * Sets investorProfile
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactContactSegmentation|null $segmentation segmentation
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsInvestorProfile|null $investorProfile investorProfile
      *
      * @return self
      */
-    public function setSegmentation($segmentation)
+    public function setInvestorProfile($investorProfile)
     {
-        if (is_null($segmentation)) {
-            throw new \InvalidArgumentException('non-nullable segmentation cannot be null');
+        if (is_null($investorProfile)) {
+            array_push($this->openAPINullablesSetToNull, 'investorProfile');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('investorProfile', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
-        $this->container['segmentation'] = $segmentation;
-
-        return $this;
-    }
-
-    /**
-     * Gets addresses
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactContactAddress[]|null
-     */
-    public function getAddresses()
-    {
-        return $this->container['addresses'];
-    }
-
-    /**
-     * Sets addresses
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactContactAddress[]|null $addresses List of contact's addresses
-     *
-     * @return self
-     */
-    public function setAddresses($addresses)
-    {
-        if (is_null($addresses)) {
-            throw new \InvalidArgumentException('non-nullable addresses cannot be null');
-        }
-        $this->container['addresses'] = $addresses;
-
-        return $this;
-    }
-
-    /**
-     * Gets phones
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactContactPhone[]|null
-     */
-    public function getPhones()
-    {
-        return $this->container['phones'];
-    }
-
-    /**
-     * Sets phones
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactContactPhone[]|null $phones List of contact's phones
-     *
-     * @return self
-     */
-    public function setPhones($phones)
-    {
-        if (is_null($phones)) {
-            throw new \InvalidArgumentException('non-nullable phones cannot be null');
-        }
-        $this->container['phones'] = $phones;
-
-        return $this;
-    }
-
-    /**
-     * Gets emails
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactContactEmail[]|null
-     */
-    public function getEmails()
-    {
-        return $this->container['emails'];
-    }
-
-    /**
-     * Sets emails
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactContactEmail[]|null $emails List of contact's emails
-     *
-     * @return self
-     */
-    public function setEmails($emails)
-    {
-        if (is_null($emails)) {
-            throw new \InvalidArgumentException('non-nullable emails cannot be null');
-        }
-        $this->container['emails'] = $emails;
-
-        return $this;
-    }
-
-    /**
-     * Gets websites
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactContactWebsite[]|null
-     */
-    public function getWebsites()
-    {
-        return $this->container['websites'];
-    }
-
-    /**
-     * Sets websites
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactContactWebsite[]|null $websites List of contact's websites
-     *
-     * @return self
-     */
-    public function setWebsites($websites)
-    {
-        if (is_null($websites)) {
-            throw new \InvalidArgumentException('non-nullable websites cannot be null');
-        }
-        $this->container['websites'] = $websites;
-
-        return $this;
-    }
-
-    /**
-     * Gets links
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactLink[]|null
-     */
-    public function getLinks()
-    {
-        return $this->container['links'];
-    }
-
-    /**
-     * Sets links
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactLink[]|null $links List of contact's links
-     *
-     * @return self
-     */
-    public function setLinks($links)
-    {
-        if (is_null($links)) {
-            throw new \InvalidArgumentException('non-nullable links cannot be null');
-        }
-        $this->container['links'] = $links;
+        $this->container['investorProfile'] = $investorProfile;
 
         return $this;
     }
