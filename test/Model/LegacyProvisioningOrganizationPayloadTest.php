@@ -242,15 +242,6 @@ class LegacyProvisioningOrganizationPayloadTest extends TestCase
     }
 
     /**
-     * Test attribute "distributor"
-     */
-    public function testPropertyDistributor()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "installPersonalizedFieldsModule"
      */
     public function testPropertyInstallPersonalizedFieldsModule()

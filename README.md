@@ -81,7 +81,6 @@ Class | Method | HTTP request | Description
 *ContactsApi* | [**listContactDocument**](docs/Api/ContactsApi.md#listcontactdocument) | **GET** /crm/api/v1/contacts/{contactUuid}/documents | List contact documents
 *ContactsApi* | [**listContactInvestment**](docs/Api/ContactsApi.md#listcontactinvestment) | **GET** /crm/api/v1/contacts/{contactUuid}/investmentAccounts | List contact investments
 *ContactsApi* | [**patchContact**](docs/Api/ContactsApi.md#patchcontact) | **PATCH** /crm/api/v1/contacts/{contactUuid} | Update a contact
-*DatabasesApi* | [**createChargebeeCustomer**](docs/Api/DatabasesApi.md#createchargebeecustomer) | **POST** /crm/api/v1/databases/{databaseUuid}/chargebeeCustomer | Create a ChargeBee customer for the database
 *DatabasesApi* | [**getDatabase**](docs/Api/DatabasesApi.md#getdatabase) | **GET** /crm/api/v1/databases/{databaseUuid} | Get a database
 *DatabasesApi* | [**getUser**](docs/Api/DatabasesApi.md#getuser) | **GET** /crm/api/v1/databases/{databaseUuid}/users/{userId} | Get a database&#39;s user
 *DatabasesApi* | [**listDatabases**](docs/Api/DatabasesApi.md#listdatabases) | **GET** /crm/api/v1/databases | List all databases

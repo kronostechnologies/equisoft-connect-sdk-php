@@ -22,7 +22,6 @@ Name | Type | Description | Notes
 **addressCountry** | **string** | Organization address country. | [optional]
 **webSite** | **string** | Organization website url. | [optional]
 **organizationEmail** | **string** | Organization email. | [optional]
-**distributor** | **string** | Distributor. | [optional]
 **installPersonalizedFieldsModule** | **bool** | Install personalized fields module. | [optional]
 **installFnaModule** | **bool** | Install FNA module. | [optional]
 

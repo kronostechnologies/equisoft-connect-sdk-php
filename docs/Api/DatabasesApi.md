@@ -4,7 +4,6 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**createChargebeeCustomer()**](DatabasesApi.md#createChargebeeCustomer) | **POST** /crm/api/v1/databases/{databaseUuid}/chargebeeCustomer | Create a ChargeBee customer for the database |
 | [**getDatabase()**](DatabasesApi.md#getDatabase) | **GET** /crm/api/v1/databases/{databaseUuid} | Get a database |
 | [**getUser()**](DatabasesApi.md#getUser) | **GET** /crm/api/v1/databases/{databaseUuid}/users/{userId} | Get a database&#39;s user |
 | [**listDatabases()**](DatabasesApi.md#listDatabases) | **GET** /crm/api/v1/databases | List all databases |
@@ -14,64 +13,6 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 | [**updateState()**](DatabasesApi.md#updateState) | **PUT** /crm/api/v1/databases/{databaseUuid}/state | Update a database&#39;s state |
 | [**updateUser()**](DatabasesApi.md#updateUser) | **PATCH** /crm/api/v1/databases/{databaseUuid}/users/{userId} | Update a database&#39;s user |
 
-
-## `createChargebeeCustomer()`
-
-```php
-createChargebeeCustomer($databaseUuid): \Equisoft\SDK\EquisoftConnect\Model\DatabaseDatabaseChargebeeCustomerCreatedResponse
-```
-
-Create a ChargeBee customer for the database
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure OAuth2 access token for authorization: OAuth2
-$config = Equisoft\SDK\EquisoftConnect\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\DatabasesApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$databaseUuid = 'databaseUuid_example'; // string | Database unique identifier.
-
-try {
-    $result = $apiInstance->createChargebeeCustomer($databaseUuid);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DatabasesApi->createChargebeeCustomer: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **databaseUuid** | **string**| Database unique identifier. | |
-
-### Return type
-
-[**\Equisoft\SDK\EquisoftConnect\Model\DatabaseDatabaseChargebeeCustomerCreatedResponse**](../Model/DatabaseDatabaseChargebeeCustomerCreatedResponse.md)
-
-### Authorization
-
-[OAuth2](../../README.md#OAuth2)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
 
 ## `getDatabase()`
 

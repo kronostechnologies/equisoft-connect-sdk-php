@@ -75,7 +75,6 @@ class LegacyProvisioningOrganizationPayload implements ModelInterface, ArrayAcce
         'addressCountry' => 'string',
         'webSite' => 'string',
         'organizationEmail' => 'string',
-        'distributor' => 'string',
         'installPersonalizedFieldsModule' => 'bool',
         'installFnaModule' => 'bool'
     ];
@@ -106,7 +105,6 @@ class LegacyProvisioningOrganizationPayload implements ModelInterface, ArrayAcce
         'addressCountry' => null,
         'webSite' => null,
         'organizationEmail' => null,
-        'distributor' => null,
         'installPersonalizedFieldsModule' => null,
         'installFnaModule' => null
     ];
@@ -135,7 +133,6 @@ class LegacyProvisioningOrganizationPayload implements ModelInterface, ArrayAcce
         'addressCountry' => false,
         'webSite' => false,
         'organizationEmail' => false,
-        'distributor' => false,
         'installPersonalizedFieldsModule' => false,
         'installFnaModule' => false
     ];
@@ -244,7 +241,6 @@ class LegacyProvisioningOrganizationPayload implements ModelInterface, ArrayAcce
         'addressCountry' => 'addressCountry',
         'webSite' => 'webSite',
         'organizationEmail' => 'organizationEmail',
-        'distributor' => 'distributor',
         'installPersonalizedFieldsModule' => 'installPersonalizedFieldsModule',
         'installFnaModule' => 'installFnaModule'
     ];
@@ -273,7 +269,6 @@ class LegacyProvisioningOrganizationPayload implements ModelInterface, ArrayAcce
         'addressCountry' => 'setAddressCountry',
         'webSite' => 'setWebSite',
         'organizationEmail' => 'setOrganizationEmail',
-        'distributor' => 'setDistributor',
         'installPersonalizedFieldsModule' => 'setInstallPersonalizedFieldsModule',
         'installFnaModule' => 'setInstallFnaModule'
     ];
@@ -302,7 +297,6 @@ class LegacyProvisioningOrganizationPayload implements ModelInterface, ArrayAcce
         'addressCountry' => 'getAddressCountry',
         'webSite' => 'getWebSite',
         'organizationEmail' => 'getOrganizationEmail',
-        'distributor' => 'getDistributor',
         'installPersonalizedFieldsModule' => 'getInstallPersonalizedFieldsModule',
         'installFnaModule' => 'getInstallFnaModule'
     ];
@@ -382,7 +376,6 @@ class LegacyProvisioningOrganizationPayload implements ModelInterface, ArrayAcce
         $this->setIfExists('addressCountry', $data ?? [], null);
         $this->setIfExists('webSite', $data ?? [], null);
         $this->setIfExists('organizationEmail', $data ?? [], null);
-        $this->setIfExists('distributor', $data ?? [], null);
         $this->setIfExists('installPersonalizedFieldsModule', $data ?? [], null);
         $this->setIfExists('installFnaModule', $data ?? [], null);
     }
@@ -911,33 +904,6 @@ class LegacyProvisioningOrganizationPayload implements ModelInterface, ArrayAcce
             throw new \InvalidArgumentException('non-nullable organizationEmail cannot be null');
         }
         $this->container['organizationEmail'] = $organizationEmail;
-
-        return $this;
-    }
-
-    /**
-     * Gets distributor
-     *
-     * @return string|null
-     */
-    public function getDistributor()
-    {
-        return $this->container['distributor'];
-    }
-
-    /**
-     * Sets distributor
-     *
-     * @param string|null $distributor Distributor.
-     *
-     * @return self
-     */
-    public function setDistributor($distributor)
-    {
-        if (is_null($distributor)) {
-            throw new \InvalidArgumentException('non-nullable distributor cannot be null');
-        }
-        $this->container['distributor'] = $distributor;
 
         return $this;
     }
