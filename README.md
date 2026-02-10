@@ -85,8 +85,6 @@ Class | Method | HTTP request | Description
 *DatabasesApi* | [**getUser**](docs/Api/DatabasesApi.md#getuser) | **GET** /crm/api/v1/databases/{databaseUuid}/users/{userId} | Get a database&#39;s user
 *DatabasesApi* | [**listDatabases**](docs/Api/DatabasesApi.md#listdatabases) | **GET** /crm/api/v1/databases | List all databases
 *DatabasesApi* | [**listUsers**](docs/Api/DatabasesApi.md#listusers) | **GET** /crm/api/v1/databases/{databaseUuid}/users | List database&#39;s users
-*DatabasesApi* | [**setDatabaseDistributor**](docs/Api/DatabasesApi.md#setdatabasedistributor) | **PUT** /crm/api/v1/databases/{databaseUuid}/distributor | Set the database&#39;s distributor
-*DatabasesApi* | [**unsetDatabaseDistributor**](docs/Api/DatabasesApi.md#unsetdatabasedistributor) | **DELETE** /crm/api/v1/databases/{databaseUuid}/distributor | Unset the database&#39;s distributor
 *DatabasesApi* | [**updateState**](docs/Api/DatabasesApi.md#updatestate) | **PUT** /crm/api/v1/databases/{databaseUuid}/state | Update a database&#39;s state
 *DatabasesApi* | [**updateUser**](docs/Api/DatabasesApi.md#updateuser) | **PATCH** /crm/api/v1/databases/{databaseUuid}/users/{userId} | Update a database&#39;s user
 *DocumentsApi* | [**deleteDocument**](docs/Api/DocumentsApi.md#deletedocument) | **DELETE** /crm/api/v1/documents/{documentId} | Delete a document.

@@ -13,8 +13,6 @@ Name | Type | Description | Notes
 **datagatewayEnabled** | **bool** | Is Datagateway Enabled |
 **isMultiUser** | **bool** | Is Multi User |
 **equisoftPlanEnabled** | **bool** | Is Equisoft Plan Enabled | [optional]
-**distributorCode** | **string** | Distributor Code | [optional]
-**chargebeeCustomerId** | **string** | Chargebee Customer Id | [optional]
 **organizationUuid** | **string** | Organization uuid | [optional]
 **billable** | **bool** | Is Database Billable |
 

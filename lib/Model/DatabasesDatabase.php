@@ -66,8 +66,6 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
         'datagatewayEnabled' => 'bool',
         'isMultiUser' => 'bool',
         'equisoftPlanEnabled' => 'bool',
-        'distributorCode' => 'string',
-        'chargebeeCustomerId' => 'string',
         'organizationUuid' => 'string',
         'billable' => 'bool'
     ];
@@ -89,8 +87,6 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
         'datagatewayEnabled' => null,
         'isMultiUser' => null,
         'equisoftPlanEnabled' => null,
-        'distributorCode' => null,
-        'chargebeeCustomerId' => null,
         'organizationUuid' => null,
         'billable' => null
     ];
@@ -110,8 +106,6 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
         'datagatewayEnabled' => false,
         'isMultiUser' => false,
         'equisoftPlanEnabled' => false,
-        'distributorCode' => true,
-        'chargebeeCustomerId' => true,
         'organizationUuid' => true,
         'billable' => false
     ];
@@ -211,8 +205,6 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
         'datagatewayEnabled' => 'datagatewayEnabled',
         'isMultiUser' => 'isMultiUser',
         'equisoftPlanEnabled' => 'equisoftPlanEnabled',
-        'distributorCode' => 'distributorCode',
-        'chargebeeCustomerId' => 'chargebeeCustomerId',
         'organizationUuid' => 'organizationUuid',
         'billable' => 'billable'
     ];
@@ -232,8 +224,6 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
         'datagatewayEnabled' => 'setDatagatewayEnabled',
         'isMultiUser' => 'setIsMultiUser',
         'equisoftPlanEnabled' => 'setEquisoftPlanEnabled',
-        'distributorCode' => 'setDistributorCode',
-        'chargebeeCustomerId' => 'setChargebeeCustomerId',
         'organizationUuid' => 'setOrganizationUuid',
         'billable' => 'setBillable'
     ];
@@ -253,8 +243,6 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
         'datagatewayEnabled' => 'getDatagatewayEnabled',
         'isMultiUser' => 'getIsMultiUser',
         'equisoftPlanEnabled' => 'getEquisoftPlanEnabled',
-        'distributorCode' => 'getDistributorCode',
-        'chargebeeCustomerId' => 'getChargebeeCustomerId',
         'organizationUuid' => 'getOrganizationUuid',
         'billable' => 'getBillable'
     ];
@@ -325,8 +313,6 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
         $this->setIfExists('datagatewayEnabled', $data ?? [], null);
         $this->setIfExists('isMultiUser', $data ?? [], null);
         $this->setIfExists('equisoftPlanEnabled', $data ?? [], null);
-        $this->setIfExists('distributorCode', $data ?? [], null);
-        $this->setIfExists('chargebeeCustomerId', $data ?? [], null);
         $this->setIfExists('organizationUuid', $data ?? [], null);
         $this->setIfExists('billable', $data ?? [], null);
     }
@@ -639,74 +625,6 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, \JsonSerializabl
             throw new \InvalidArgumentException('non-nullable equisoftPlanEnabled cannot be null');
         }
         $this->container['equisoftPlanEnabled'] = $equisoftPlanEnabled;
-
-        return $this;
-    }
-
-    /**
-     * Gets distributorCode
-     *
-     * @return string|null
-     */
-    public function getDistributorCode()
-    {
-        return $this->container['distributorCode'];
-    }
-
-    /**
-     * Sets distributorCode
-     *
-     * @param string|null $distributorCode Distributor Code
-     *
-     * @return self
-     */
-    public function setDistributorCode($distributorCode)
-    {
-        if (is_null($distributorCode)) {
-            array_push($this->openAPINullablesSetToNull, 'distributorCode');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('distributorCode', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['distributorCode'] = $distributorCode;
-
-        return $this;
-    }
-
-    /**
-     * Gets chargebeeCustomerId
-     *
-     * @return string|null
-     */
-    public function getChargebeeCustomerId()
-    {
-        return $this->container['chargebeeCustomerId'];
-    }
-
-    /**
-     * Sets chargebeeCustomerId
-     *
-     * @param string|null $chargebeeCustomerId Chargebee Customer Id
-     *
-     * @return self
-     */
-    public function setChargebeeCustomerId($chargebeeCustomerId)
-    {
-        if (is_null($chargebeeCustomerId)) {
-            array_push($this->openAPINullablesSetToNull, 'chargebeeCustomerId');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('chargebeeCustomerId', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['chargebeeCustomerId'] = $chargebeeCustomerId;
 
         return $this;
     }

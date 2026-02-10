@@ -161,24 +161,6 @@ class DatabasesDatabaseTest extends TestCase
     }
 
     /**
-     * Test attribute "distributorCode"
-     */
-    public function testPropertyDistributorCode()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "chargebeeCustomerId"
-     */
-    public function testPropertyChargebeeCustomerId()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "organizationUuid"
      */
     public function testPropertyOrganizationUuid()
