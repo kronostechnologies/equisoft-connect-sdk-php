@@ -2,6 +2,7 @@
 .phplint.yml
 .travis.yml
 README.md
+composer.json
 docs/Api/ContactsApi.md
 docs/Api/DatabasesApi.md
 docs/Api/DocumentsApi.md

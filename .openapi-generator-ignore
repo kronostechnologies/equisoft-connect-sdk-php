@@ -8,5 +8,4 @@
 .tool-versions
 .github
 
-composer.json
 composer.lock
