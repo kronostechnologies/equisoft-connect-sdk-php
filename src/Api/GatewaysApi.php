@@ -182,12 +182,12 @@ class GatewaysApi
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateOrUpdateCapsilAccessResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateOrUpdateCapsilAccessResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
     public function createCapsilAccess(
         \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateCapsilAccessPayload $gatewaysAccessesCreateCapsilAccessPayload,
         string $contentType = self::contentTypes['createCapsilAccess'][0]
-    ): \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateOrUpdateCapsilAccessResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|null
+    ): \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateOrUpdateCapsilAccessResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
     {
         list($response) = $this->createCapsilAccessWithHttpInfo($gatewaysAccessesCreateCapsilAccessPayload, $contentType);
         return $response;
@@ -203,7 +203,7 @@ class GatewaysApi
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateOrUpdateCapsilAccessResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateOrUpdateCapsilAccessResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createCapsilAccessWithHttpInfo(
         \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateCapsilAccessPayload $gatewaysAccessesCreateCapsilAccessPayload,
@@ -259,6 +259,12 @@ class GatewaysApi
                         $request,
                         $response,
                     );
+                case 409:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
             }
             
 
@@ -307,6 +313,14 @@ class GatewaysApi
                     $e->setResponseObject($data);
                     throw $e;
                 case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
@@ -4926,13 +4940,13 @@ class GatewaysApi
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateOrUpdateCapsilAccessResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateOrUpdateCapsilAccessResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
     public function updateCapsilAccess(
         int $accessId,
         \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesUpdateCapsilAccessPayload $gatewaysAccessesUpdateCapsilAccessPayload,
         string $contentType = self::contentTypes['updateCapsilAccess'][0]
-    ): \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateOrUpdateCapsilAccessResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|null
+    ): \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateOrUpdateCapsilAccessResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
     {
         list($response) = $this->updateCapsilAccessWithHttpInfo($accessId, $gatewaysAccessesUpdateCapsilAccessPayload, $contentType);
         return $response;
@@ -4949,7 +4963,7 @@ class GatewaysApi
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateOrUpdateCapsilAccessResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\GatewaysAccessesCreateOrUpdateCapsilAccessResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateCapsilAccessWithHttpInfo(
         int $accessId,
@@ -5006,6 +5020,12 @@ class GatewaysApi
                         $request,
                         $response,
                     );
+                case 409:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
             }
             
 
@@ -5054,6 +5074,14 @@ class GatewaysApi
                     $e->setResponseObject($data);
                     throw $e;
                 case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',

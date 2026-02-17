@@ -174,13 +174,13 @@ class FieldValuesApi
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateGroupResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateGroupResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
     public function createGroup(
         string $fieldName,
         \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateGroupPayload $fieldValueCreateGroupPayload,
         string $contentType = self::contentTypes['createGroup'][0]
-    ): \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateGroupResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|null
+    ): \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateGroupResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
     {
         list($response) = $this->createGroupWithHttpInfo($fieldName, $fieldValueCreateGroupPayload, $contentType);
         return $response;
@@ -197,7 +197,7 @@ class FieldValuesApi
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateGroupResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateGroupResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createGroupWithHttpInfo(
         string $fieldName,
@@ -254,6 +254,12 @@ class FieldValuesApi
                         $request,
                         $response,
                     );
+                case 409:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
             }
             
 
@@ -302,6 +308,14 @@ class FieldValuesApi
                     $e->setResponseObject($data);
                     throw $e;
                 case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
@@ -537,14 +551,14 @@ class FieldValuesApi
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateValueResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateValueResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
     public function createGroupValue(
         string $fieldName,
         int $id,
         \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateValuePayload $fieldValueCreateValuePayload,
         string $contentType = self::contentTypes['createGroupValue'][0]
-    ): \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateValueResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|null
+    ): \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateValueResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
     {
         list($response) = $this->createGroupValueWithHttpInfo($fieldName, $id, $fieldValueCreateValuePayload, $contentType);
         return $response;
@@ -562,7 +576,7 @@ class FieldValuesApi
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateValueResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateValueResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createGroupValueWithHttpInfo(
         string $fieldName,
@@ -620,6 +634,12 @@ class FieldValuesApi
                         $request,
                         $response,
                     );
+                case 409:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
             }
             
 
@@ -668,6 +688,14 @@ class FieldValuesApi
                     $e->setResponseObject($data);
                     throw $e;
                 case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
@@ -923,13 +951,13 @@ class FieldValuesApi
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateValueResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateValueResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
     public function createValue(
         string $fieldName,
         \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateValuePayload $fieldValueCreateValuePayload,
         string $contentType = self::contentTypes['createValue'][0]
-    ): \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateValueResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|null
+    ): \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateValueResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
     {
         list($response) = $this->createValueWithHttpInfo($fieldName, $fieldValueCreateValuePayload, $contentType);
         return $response;
@@ -946,7 +974,7 @@ class FieldValuesApi
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateValueResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateValueResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createValueWithHttpInfo(
         string $fieldName,
@@ -1003,6 +1031,12 @@ class FieldValuesApi
                         $request,
                         $response,
                     );
+                case 409:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
             }
             
 
@@ -1051,6 +1085,14 @@ class FieldValuesApi
                     $e->setResponseObject($data);
                     throw $e;
                 case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
@@ -2694,6 +2736,14 @@ class FieldValuesApi
                     );
                     $e->setResponseObject($data);
                     throw $e;
+                case 409:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
             }
         
             throw $e;
@@ -4328,14 +4378,14 @@ class FieldValuesApi
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateGroupResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateGroupResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
     public function updateGroup(
         string $fieldName,
         int $id,
         \Equisoft\SDK\EquisoftConnect\Model\FieldValueUpdateGroupPayload $fieldValueUpdateGroupPayload,
         string $contentType = self::contentTypes['updateGroup'][0]
-    ): \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateGroupResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|null
+    ): \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateGroupResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
     {
         list($response) = $this->updateGroupWithHttpInfo($fieldName, $id, $fieldValueUpdateGroupPayload, $contentType);
         return $response;
@@ -4353,7 +4403,7 @@ class FieldValuesApi
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateGroupResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateGroupResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateGroupWithHttpInfo(
         string $fieldName,
@@ -4411,6 +4461,12 @@ class FieldValuesApi
                         $request,
                         $response,
                     );
+                case 409:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
             }
             
 
@@ -4459,6 +4515,14 @@ class FieldValuesApi
                     $e->setResponseObject($data);
                     throw $e;
                 case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
@@ -4715,14 +4779,14 @@ class FieldValuesApi
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateValueResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateValueResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
     public function updateValue(
         string $fieldName,
         int $id,
         \Equisoft\SDK\EquisoftConnect\Model\FieldValueUpdateValuePayload $fieldValueUpdateValuePayload,
         string $contentType = self::contentTypes['updateValue'][0]
-    ): \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateValueResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|null
+    ): \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateValueResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
     {
         list($response) = $this->updateValueWithHttpInfo($fieldName, $id, $fieldValueUpdateValuePayload, $contentType);
         return $response;
@@ -4740,7 +4804,7 @@ class FieldValuesApi
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateValueResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\FieldValueCreateOrUpdateValueResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateValueWithHttpInfo(
         string $fieldName,
@@ -4798,6 +4862,12 @@ class FieldValuesApi
                         $request,
                         $response,
                     );
+                case 409:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
             }
             
 
@@ -4846,6 +4916,14 @@ class FieldValuesApi
                     $e->setResponseObject($data);
                     throw $e;
                 case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
                         '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
