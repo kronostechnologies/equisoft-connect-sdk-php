@@ -33,6 +33,7 @@ use DateTimeInterface;
 use DateTime;
 use GuzzleHttp\Psr7\Utils;
 use Equisoft\SDK\EquisoftConnect\Model\ModelInterface;
+use JsonSerializable;
 
 /**
  * ObjectSerializer Class Doc Comment
@@ -247,7 +248,11 @@ class ObjectSerializer
         }
 
         $query = [];
-        $value = (in_array($openApiType, ['object', 'array'], true)) ? (array)$value : $value;
+        // Models are cast to arrays using json encode/decode to properly sanitize
+        // values and recursively handle nested objects
+        if (in_array($openApiType, ['object', 'array'], true)) {
+            $value = ($value instanceof JsonSerializable) ? json_decode(json_encode($value), true) : (array)$value;
+        }
 
         // since \GuzzleHttp\Psr7\Query::build fails with nested arrays
         // need to flatten array first
@@ -524,7 +529,11 @@ class ObjectSerializer
             // If a discriminator is defined and points to a valid subclass, use it.
             $discriminator = $class::DISCRIMINATOR;
             if (!empty($discriminator) && isset($data->{$discriminator}) && is_string($data->{$discriminator})) {
-                $subclass = '\Equisoft\SDK\EquisoftConnect\Model\\' . $data->{$discriminator};
+                if (isset($class::DISCRIMINATOR_MAP[$data->{$discriminator}])) {
+                    $subclass = '\Equisoft\SDK\EquisoftConnect\Model\\' . $class::DISCRIMINATOR_MAP[$data->{$discriminator}];
+                } else {
+                    $subclass = '\Equisoft\SDK\EquisoftConnect\Model\\' . $data->{$discriminator};
+                }
                 if (is_subclass_of($subclass, $class)) {
                     $class = $subclass;
                 }

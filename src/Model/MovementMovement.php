@@ -44,6 +44,12 @@ use Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 class MovementMovement implements ModelInterface, ArrayAccess, JsonSerializable
 {
     public const DISCRIMINATOR = 'type';
+    public const DISCRIMINATOR_MAP = [
+        "CLIENTBASE_USING_DISTLIST" => "MovementClientBaseUsingDistributionListMovement",
+        "CLIENTBASE_USING_FILE" => "MovementClientBaseUsingFileMovement",
+        "COPY" => "MovementCopyMovement",
+        "MOVE" => "MovementMoveMovement",
+    ];
 
     /**
       * The original name of the model.

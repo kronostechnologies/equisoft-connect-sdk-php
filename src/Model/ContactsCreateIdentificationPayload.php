@@ -44,6 +44,10 @@ use Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 class ContactsCreateIdentificationPayload implements ModelInterface, ArrayAccess, JsonSerializable
 {
     public const DISCRIMINATOR = 'type';
+    public const DISCRIMINATOR_MAP = [
+        "INDIVIDUAL" => "ContactsCreateIndividualIdentificationPayload",
+        "ORGANIZATION" => "ContactsCreateOrganizationIdentificationPayload",
+    ];
 
     /**
       * The original name of the model.
