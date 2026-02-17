@@ -62,6 +62,7 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, \JsonSerializab
         'owner1' => 'string',
         'owner2' => 'string',
         'type' => '\Equisoft\SDK\EquisoftConnect\Model\Translation[]',
+        'typeCode' => 'string',
         'description' => '\Equisoft\SDK\EquisoftConnect\Model\Translation[]',
         'jointSignature' => 'string',
         'jointSurvivor' => 'string',
@@ -108,6 +109,7 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, \JsonSerializab
         'owner1' => null,
         'owner2' => null,
         'type' => null,
+        'typeCode' => null,
         'description' => null,
         'jointSignature' => null,
         'jointSurvivor' => null,
@@ -152,6 +154,7 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, \JsonSerializab
         'owner1' => false,
         'owner2' => false,
         'type' => false,
+        'typeCode' => false,
         'description' => false,
         'jointSignature' => false,
         'jointSurvivor' => false,
@@ -276,6 +279,7 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, \JsonSerializab
         'owner1' => 'owner1',
         'owner2' => 'owner2',
         'type' => 'type',
+        'typeCode' => 'typeCode',
         'description' => 'description',
         'jointSignature' => 'jointSignature',
         'jointSurvivor' => 'jointSurvivor',
@@ -320,6 +324,7 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, \JsonSerializab
         'owner1' => 'setOwner1',
         'owner2' => 'setOwner2',
         'type' => 'setType',
+        'typeCode' => 'setTypeCode',
         'description' => 'setDescription',
         'jointSignature' => 'setJointSignature',
         'jointSurvivor' => 'setJointSurvivor',
@@ -364,6 +369,7 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, \JsonSerializab
         'owner1' => 'getOwner1',
         'owner2' => 'getOwner2',
         'type' => 'getType',
+        'typeCode' => 'getTypeCode',
         'description' => 'getDescription',
         'jointSignature' => 'getJointSignature',
         'jointSurvivor' => 'getJointSurvivor',
@@ -459,6 +465,7 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, \JsonSerializab
         $this->setIfExists('owner1', $data ?? [], null);
         $this->setIfExists('owner2', $data ?? [], null);
         $this->setIfExists('type', $data ?? [], null);
+        $this->setIfExists('typeCode', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
         $this->setIfExists('jointSignature', $data ?? [], null);
         $this->setIfExists('jointSurvivor', $data ?? [], null);
@@ -665,6 +672,33 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, \JsonSerializab
             throw new \InvalidArgumentException('non-nullable type cannot be null');
         }
         $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets typeCode
+     *
+     * @return string|null
+     */
+    public function getTypeCode()
+    {
+        return $this->container['typeCode'];
+    }
+
+    /**
+     * Sets typeCode
+     *
+     * @param string|null $typeCode typeCode
+     *
+     * @return self
+     */
+    public function setTypeCode($typeCode)
+    {
+        if (is_null($typeCode)) {
+            throw new \InvalidArgumentException('non-nullable typeCode cannot be null');
+        }
+        $this->container['typeCode'] = $typeCode;
 
         return $this;
     }

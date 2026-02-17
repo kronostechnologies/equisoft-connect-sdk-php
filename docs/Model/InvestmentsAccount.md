@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **owner1** | **string** |  | [optional]
 **owner2** | **string** |  | [optional]
 **type** | [**\Equisoft\SDK\EquisoftConnect\Model\Translation[]**](Translation.md) |  | [optional]
+**typeCode** | **string** |  | [optional]
 **description** | [**\Equisoft\SDK\EquisoftConnect\Model\Translation[]**](Translation.md) |  | [optional]
 **jointSignature** | **string** |  | [optional]
 **jointSurvivor** | **string** |  | [optional]

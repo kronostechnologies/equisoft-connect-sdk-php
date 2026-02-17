@@ -125,6 +125,15 @@ class InvestmentsAccountTest extends TestCase
     }
 
     /**
+     * Test attribute "typeCode"
+     */
+    public function testPropertyTypeCode()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "description"
      */
     public function testPropertyDescription()
