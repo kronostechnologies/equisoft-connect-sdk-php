@@ -79,7 +79,7 @@ class KronosFinanceContactListItem implements ModelInterface, ArrayAccess, \Json
         'addressLine2' => 'string',
         'city' => 'string',
         'stateProvince' => 'string',
-        'country' => 'string',
+        'country' => 'mixed',
         'postalCode' => 'string',
         'civicNumber' => 'string',
         'road' => 'string',
@@ -187,7 +187,7 @@ class KronosFinanceContactListItem implements ModelInterface, ArrayAccess, \Json
         'addressLine2' => false,
         'city' => false,
         'stateProvince' => false,
-        'country' => false,
+        'country' => true,
         'postalCode' => false,
         'civicNumber' => false,
         'road' => false,
@@ -1194,7 +1194,7 @@ class KronosFinanceContactListItem implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets country
      *
-     * @return string|null
+     * @return mixed|null
      */
     public function getCountry()
     {
@@ -1204,14 +1204,21 @@ class KronosFinanceContactListItem implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets country
      *
-     * @param string|null $country Country of the contact.
+     * @param mixed|null $country Country of the contact.
      *
      * @return self
      */
     public function setCountry($country)
     {
         if (is_null($country)) {
-            throw new \InvalidArgumentException('non-nullable country cannot be null');
+            array_push($this->openAPINullablesSetToNull, 'country');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('country', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
         $this->container['country'] = $country;
 

@@ -26,7 +26,7 @@ Name | Type | Description | Notes
 **addressLine2** | **string** | Second line of address of the contact. | [optional]
 **city** | **string** | City of the contact. | [optional]
 **stateProvince** | **string** | State or province of the contact. | [optional]
-**country** | **string** | Country of the contact. | [optional]
+**country** | **mixed** | Country of the contact. | [optional]
 **postalCode** | **string** | PostalCode of the contact. | [optional]
 **civicNumber** | **string** | Industrielle Alliance Only. | [optional]
 **road** | **string** | Industrielle Alliance Only. | [optional]
