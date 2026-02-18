@@ -271,7 +271,6 @@ Class | Method | HTTP request | Description
 - [ContextUserContext](docs/Model/ContextUserContext.md)
 - [CredentialDto](docs/Model/CredentialDto.md)
 - [CredentialsResponse](docs/Model/CredentialsResponse.md)
-- [DatabaseDatabaseChargebeeCustomerCreatedResponse](docs/Model/DatabaseDatabaseChargebeeCustomerCreatedResponse.md)
 - [DatabaseSetDistributorPayload](docs/Model/DatabaseSetDistributorPayload.md)
 - [DatabaseState](docs/Model/DatabaseState.md)
 - [DatabaseUpdateStatePayload](docs/Model/DatabaseUpdateStatePayload.md)
