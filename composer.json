@@ -15,8 +15,8 @@
     "license": "unlicense",
     "authors": [
         {
-            "name": "OpenAPI-Generator contributors",
-            "homepage": "https://openapi-generator.tech"
+            "name": "Equisoft Inc.",
+            "homepage": "https://equisoft.com"
         }
     ],
     "require": {
@@ -24,24 +24,17 @@
         "ext-curl": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
-        "guzzlehttp/guzzle": "^7.4.5",
-        "guzzlehttp/psr7": "^2.0"
+        "guzzlehttp/guzzle": "^7.3",
+        "guzzlehttp/psr7": "^1.7 || ^2.0"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^3.5",
-        "overtrue/phplint": "^9.0",
-        "phpunit/phpunit": "^9.0"
+        "phpunit/phpunit": "^8.0 || ^9.0",
+        "friendsofphp/php-cs-fixer": "^3.5"
     },
     "autoload": {
-        "psr-4": { "Equisoft\\SDK\\EquisoftConnect\\" : "src/" }
+        "psr-4": { "Equisoft\\SDK\\EquisoftConnect\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "Equisoft\\SDK\\EquisoftConnect\\Test\\" : "tests/" }
-    },
-    "scripts": {
-        "test": [
-            "@phplint"
-        ],
-        "phplint": "phplint"
+        "psr-4": { "Equisoft\\SDK\\EquisoftConnect\\Test\\" : "test/" }
     }
 }
