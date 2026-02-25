@@ -63,7 +63,7 @@ class LegacyFinancePolicy implements ModelInterface, ArrayAccess, JsonSerializab
         'lineOfBusiness' => 'string',
         'lineOfBusinessLabel' => 'string',
         'type' => 'string',
-        'owner' => 'string',
+        'ownerName' => 'string',
         'carrier' => 'string',
         'issueDate' => 'string',
         'endDate' => 'string',
@@ -89,7 +89,7 @@ class LegacyFinancePolicy implements ModelInterface, ArrayAccess, JsonSerializab
         'lineOfBusiness' => null,
         'lineOfBusinessLabel' => null,
         'type' => null,
-        'owner' => null,
+        'ownerName' => null,
         'carrier' => null,
         'issueDate' => null,
         'endDate' => null,
@@ -115,7 +115,7 @@ class LegacyFinancePolicy implements ModelInterface, ArrayAccess, JsonSerializab
         'lineOfBusiness' => false,
         'lineOfBusinessLabel' => false,
         'type' => false,
-        'owner' => false,
+        'ownerName' => false,
         'carrier' => false,
         'issueDate' => false,
         'endDate' => false,
@@ -221,7 +221,7 @@ class LegacyFinancePolicy implements ModelInterface, ArrayAccess, JsonSerializab
         'lineOfBusiness' => 'lineOfBusiness',
         'lineOfBusinessLabel' => 'lineOfBusinessLabel',
         'type' => 'type',
-        'owner' => 'owner',
+        'ownerName' => 'ownerName',
         'carrier' => 'carrier',
         'issueDate' => 'issueDate',
         'endDate' => 'endDate',
@@ -247,7 +247,7 @@ class LegacyFinancePolicy implements ModelInterface, ArrayAccess, JsonSerializab
         'lineOfBusiness' => 'setLineOfBusiness',
         'lineOfBusinessLabel' => 'setLineOfBusinessLabel',
         'type' => 'setType',
-        'owner' => 'setOwner',
+        'ownerName' => 'setOwnerName',
         'carrier' => 'setCarrier',
         'issueDate' => 'setIssueDate',
         'endDate' => 'setEndDate',
@@ -273,7 +273,7 @@ class LegacyFinancePolicy implements ModelInterface, ArrayAccess, JsonSerializab
         'lineOfBusiness' => 'getLineOfBusiness',
         'lineOfBusinessLabel' => 'getLineOfBusinessLabel',
         'type' => 'getType',
-        'owner' => 'getOwner',
+        'ownerName' => 'getOwnerName',
         'carrier' => 'getCarrier',
         'issueDate' => 'getIssueDate',
         'endDate' => 'getEndDate',
@@ -349,7 +349,7 @@ class LegacyFinancePolicy implements ModelInterface, ArrayAccess, JsonSerializab
         $this->setIfExists('lineOfBusiness', $data ?? [], null);
         $this->setIfExists('lineOfBusinessLabel', $data ?? [], null);
         $this->setIfExists('type', $data ?? [], null);
-        $this->setIfExists('owner', $data ?? [], null);
+        $this->setIfExists('ownerName', $data ?? [], null);
         $this->setIfExists('carrier', $data ?? [], null);
         $this->setIfExists('issueDate', $data ?? [], null);
         $this->setIfExists('endDate', $data ?? [], null);
@@ -542,28 +542,28 @@ class LegacyFinancePolicy implements ModelInterface, ArrayAccess, JsonSerializab
     }
 
     /**
-     * Gets owner
+     * Gets ownerName
      *
      * @return string|null
      */
-    public function getOwner(): ?string
+    public function getOwnerName(): ?string
     {
-        return $this->container['owner'];
+        return $this->container['ownerName'];
     }
 
     /**
-     * Sets owner
+     * Sets ownerName
      *
-     * @param string|null $owner Owner.
+     * @param string|null $ownerName Owner.
      *
      * @return $this
      */
-    public function setOwner(?string $owner): static
+    public function setOwnerName(?string $ownerName): static
     {
-        if (is_null($owner)) {
-            throw new InvalidArgumentException('non-nullable owner cannot be null');
+        if (is_null($ownerName)) {
+            throw new InvalidArgumentException('non-nullable ownerName cannot be null');
         }
-        $this->container['owner'] = $owner;
+        $this->container['ownerName'] = $ownerName;
 
         return $this;
     }

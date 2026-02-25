@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **lineOfBusiness** | **string** | Line of business. | [optional]
 **lineOfBusinessLabel** | **string** | Line of business label. | [optional]
 **type** | **string** | Type. | [optional]
-**owner** | **string** | Owner. | [optional]
+**ownerName** | **string** | Owner. | [optional]
 **carrier** | **string** | Carrier. | [optional]
 **issueDate** | **string** | Issue date. | [optional]
 **endDate** | **string** | End date. | [optional]
