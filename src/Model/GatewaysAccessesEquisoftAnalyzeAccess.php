@@ -245,23 +245,6 @@ class GatewaysAccessesEquisoftAnalyzeAccess implements ModelInterface, ArrayAcce
         return self::$openAPIModelName;
     }
 
-    public const VERSION_NATIVE = 'NATIVE';
-    public const VERSION_LEGACY = 'LEGACY';
-    public const VERSION_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public static function getVersionAllowableValues()
-    {
-        return [
-            self::VERSION_NATIVE,
-            self::VERSION_LEGACY,
-            self::VERSION_UNKNOWN_DEFAULT_OPEN_API,
-        ];
-    }
 
     /**
      * Associative array for storing property values
@@ -322,15 +305,6 @@ class GatewaysAccessesEquisoftAnalyzeAccess implements ModelInterface, ArrayAcce
         if ($this->container['version'] === null) {
             $invalidProperties[] = "'version' can't be null";
         }
-        $allowedValues = self::getVersionAllowableValues();
-        if (!is_null($this->container['version']) && !in_array($this->container['version'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'version', must be one of '%s'",
-                $this->container['version'],
-                implode("', '", $allowedValues)
-            );
-        }
-
         return $invalidProperties;
     }
 
@@ -448,10 +422,6 @@ class GatewaysAccessesEquisoftAnalyzeAccess implements ModelInterface, ArrayAcce
     {
         if (is_null($version)) {
             throw new InvalidArgumentException('non-nullable version cannot be null');
-        }
-        $allowedValues = self::getVersionAllowableValues();
-        if (!in_array($version, $allowedValues, true)) {
-            $version = self::VERSION_UNKNOWN_DEFAULT_OPEN_API;
         }
         $this->container['version'] = $version;
 
