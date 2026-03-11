@@ -48,7 +48,6 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, JsonSerial
         "CLIENTBASE_USING_DISTLIST" => "MovementClientBaseUsingDistributionListMovementPayload",
         "CLIENTBASE_USING_FILE" => "MovementClientBaseUsingFileMovementPayload",
         "COPY" => "MovementCopyMovementPayload",
-        "MOVE" => "MovementMoveMovementPayload",
     ];
 
     /**
@@ -65,19 +64,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, JsonSerial
       */
     protected static array $openAPITypes = [
         'type' => '\Equisoft\SDK\EquisoftConnect\Model\MovementMovementType',
-        'date' => 'string',
-        'sourceDatabase' => 'string',
-        'destinationDatabase' => 'string',
-        'users' => 'string[]',
-        'options' => '\Equisoft\SDK\EquisoftConnect\Model\MovementOptions',
-        'userTuples' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUserTuplePayload[]',
-        'sourceUser' => 'string',
-        'sourceDistributionList' => 'string',
-        'destinationUser' => 'string',
-        'transferOption' => 'string',
-        'capsilFile' => 'string',
-        'univerisFile' => 'string',
-        'dataphileFile' => 'string'
+        'date' => 'string'
     ];
 
     /**
@@ -87,19 +74,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, JsonSerial
       */
     protected static array $openAPIFormats = [
         'type' => null,
-        'date' => null,
-        'sourceDatabase' => null,
-        'destinationDatabase' => null,
-        'users' => null,
-        'options' => null,
-        'userTuples' => null,
-        'sourceUser' => null,
-        'sourceDistributionList' => null,
-        'destinationUser' => null,
-        'transferOption' => null,
-        'capsilFile' => null,
-        'univerisFile' => null,
-        'dataphileFile' => null
+        'date' => null
     ];
 
     /**
@@ -109,19 +84,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, JsonSerial
       */
     protected static array $openAPINullables = [
         'type' => false,
-        'date' => false,
-        'sourceDatabase' => false,
-        'destinationDatabase' => false,
-        'users' => false,
-        'options' => true,
-        'userTuples' => false,
-        'sourceUser' => false,
-        'sourceDistributionList' => false,
-        'destinationUser' => false,
-        'transferOption' => true,
-        'capsilFile' => true,
-        'univerisFile' => true,
-        'dataphileFile' => true
+        'date' => false
     ];
 
     /**
@@ -211,19 +174,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, JsonSerial
      */
     protected static array $attributeMap = [
         'type' => 'type',
-        'date' => 'date',
-        'sourceDatabase' => 'sourceDatabase',
-        'destinationDatabase' => 'destinationDatabase',
-        'users' => 'users',
-        'options' => 'options',
-        'userTuples' => 'userTuples',
-        'sourceUser' => 'sourceUser',
-        'sourceDistributionList' => 'sourceDistributionList',
-        'destinationUser' => 'destinationUser',
-        'transferOption' => 'transferOption',
-        'capsilFile' => 'capsilFile',
-        'univerisFile' => 'univerisFile',
-        'dataphileFile' => 'dataphileFile'
+        'date' => 'date'
     ];
 
     /**
@@ -233,19 +184,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, JsonSerial
      */
     protected static array $setters = [
         'type' => 'setType',
-        'date' => 'setDate',
-        'sourceDatabase' => 'setSourceDatabase',
-        'destinationDatabase' => 'setDestinationDatabase',
-        'users' => 'setUsers',
-        'options' => 'setOptions',
-        'userTuples' => 'setUserTuples',
-        'sourceUser' => 'setSourceUser',
-        'sourceDistributionList' => 'setSourceDistributionList',
-        'destinationUser' => 'setDestinationUser',
-        'transferOption' => 'setTransferOption',
-        'capsilFile' => 'setCapsilFile',
-        'univerisFile' => 'setUniverisFile',
-        'dataphileFile' => 'setDataphileFile'
+        'date' => 'setDate'
     ];
 
     /**
@@ -255,19 +194,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, JsonSerial
      */
     protected static array $getters = [
         'type' => 'getType',
-        'date' => 'getDate',
-        'sourceDatabase' => 'getSourceDatabase',
-        'destinationDatabase' => 'getDestinationDatabase',
-        'users' => 'getUsers',
-        'options' => 'getOptions',
-        'userTuples' => 'getUserTuples',
-        'sourceUser' => 'getSourceUser',
-        'sourceDistributionList' => 'getSourceDistributionList',
-        'destinationUser' => 'getDestinationUser',
-        'transferOption' => 'getTransferOption',
-        'capsilFile' => 'getCapsilFile',
-        'univerisFile' => 'getUniverisFile',
-        'dataphileFile' => 'getDataphileFile'
+        'date' => 'getDate'
     ];
 
     /**
@@ -314,22 +241,6 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, JsonSerial
     public const TYPE_CLIENTBASE_USING_DISTLIST = 'CLIENTBASE_USING_DISTLIST';
     public const TYPE_CLIENTBASE_USING_FILE = 'CLIENTBASE_USING_FILE';
     public const TYPE_COPY = 'COPY';
-    public const TYPE_MOVE = 'MOVE';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public static function getTransferOptionAllowableValues()
-    {
-        return [
-            self::TYPE_CLIENTBASE_USING_DISTLIST,
-            self::TYPE_CLIENTBASE_USING_FILE,
-            self::TYPE_COPY,
-            self::TYPE_MOVE,
-        ];
-    }
 
     /**
      * Associative array for storing property values
@@ -350,18 +261,6 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, JsonSerial
 
         $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('date', $data ?? [], null);
-        $this->setIfExists('sourceDatabase', $data ?? [], null);
-        $this->setIfExists('destinationDatabase', $data ?? [], null);
-        $this->setIfExists('users', $data ?? [], null);
-        $this->setIfExists('options', $data ?? [], null);
-        $this->setIfExists('userTuples', $data ?? [], null);
-        $this->setIfExists('sourceUser', $data ?? [], null);
-        $this->setIfExists('sourceDistributionList', $data ?? [], null);
-        $this->setIfExists('destinationUser', $data ?? [], null);
-        $this->setIfExists('transferOption', $data ?? [], null);
-        $this->setIfExists('capsilFile', $data ?? [], null);
-        $this->setIfExists('univerisFile', $data ?? [], null);
-        $this->setIfExists('dataphileFile', $data ?? [], null);
     }
 
     /**
@@ -391,36 +290,9 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, JsonSerial
     {
         $invalidProperties = [];
 
-        if ($this->container['sourceDatabase'] === null) {
-            $invalidProperties[] = "'sourceDatabase' can't be null";
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
         }
-        if ($this->container['destinationDatabase'] === null) {
-            $invalidProperties[] = "'destinationDatabase' can't be null";
-        }
-        if ($this->container['users'] === null) {
-            $invalidProperties[] = "'users' can't be null";
-        }
-        if ($this->container['userTuples'] === null) {
-            $invalidProperties[] = "'userTuples' can't be null";
-        }
-        if ($this->container['sourceUser'] === null) {
-            $invalidProperties[] = "'sourceUser' can't be null";
-        }
-        if ($this->container['destinationUser'] === null) {
-            $invalidProperties[] = "'destinationUser' can't be null";
-        }
-        if ($this->container['transferOption'] === null) {
-            $invalidProperties[] = "'transferOption' can't be null";
-        }
-        $allowedValues = self::getTransferOptionAllowableValues();
-        if (!is_null($this->container['transferOption']) && !in_array($this->container['transferOption'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'transferOption', must be one of '%s'",
-                $this->container['transferOption'],
-                implode("', '", $allowedValues)
-            );
-        }
-
         return $invalidProperties;
     }
 
@@ -439,9 +311,9 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, JsonSerial
     /**
      * Gets type
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementMovementType|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementMovementType
      */
-    public function getType(): ?\Equisoft\SDK\EquisoftConnect\Model\MovementMovementType
+    public function getType(): \Equisoft\SDK\EquisoftConnect\Model\MovementMovementType
     {
         return $this->container['type'];
     }
@@ -449,11 +321,11 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, JsonSerial
     /**
      * Sets type
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementMovementType|null $type type
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementMovementType $type type
      *
      * @return $this
      */
-    public function setType(?\Equisoft\SDK\EquisoftConnect\Model\MovementMovementType $type): static
+    public function setType(\Equisoft\SDK\EquisoftConnect\Model\MovementMovementType $type): static
     {
         if (is_null($type)) {
             throw new InvalidArgumentException('non-nullable type cannot be null');
@@ -486,371 +358,6 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, JsonSerial
             throw new InvalidArgumentException('non-nullable date cannot be null');
         }
         $this->container['date'] = $date;
-
-        return $this;
-    }
-
-    /**
-     * Gets sourceDatabase
-     *
-     * @return string
-     */
-    public function getSourceDatabase(): string
-    {
-        return $this->container['sourceDatabase'];
-    }
-
-    /**
-     * Sets sourceDatabase
-     *
-     * @param string $sourceDatabase Source database full name.
-     *
-     * @return $this
-     */
-    public function setSourceDatabase(string $sourceDatabase): static
-    {
-        if (is_null($sourceDatabase)) {
-            throw new InvalidArgumentException('non-nullable sourceDatabase cannot be null');
-        }
-        $this->container['sourceDatabase'] = $sourceDatabase;
-
-        return $this;
-    }
-
-    /**
-     * Gets destinationDatabase
-     *
-     * @return string
-     */
-    public function getDestinationDatabase(): string
-    {
-        return $this->container['destinationDatabase'];
-    }
-
-    /**
-     * Sets destinationDatabase
-     *
-     * @param string $destinationDatabase Destination database full name.
-     *
-     * @return $this
-     */
-    public function setDestinationDatabase(string $destinationDatabase): static
-    {
-        if (is_null($destinationDatabase)) {
-            throw new InvalidArgumentException('non-nullable destinationDatabase cannot be null');
-        }
-        $this->container['destinationDatabase'] = $destinationDatabase;
-
-        return $this;
-    }
-
-    /**
-     * Gets users
-     *
-     * @return string[]
-     */
-    public function getUsers(): array
-    {
-        return $this->container['users'];
-    }
-
-    /**
-     * Sets users
-     *
-     * @param string[] $users List of users id.
-     *
-     * @return $this
-     */
-    public function setUsers(array $users): static
-    {
-        if (is_null($users)) {
-            throw new InvalidArgumentException('non-nullable users cannot be null');
-        }
-        $this->container['users'] = $users;
-
-        return $this;
-    }
-
-    /**
-     * Gets options
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementOptions|null
-     */
-    public function getOptions(): ?\Equisoft\SDK\EquisoftConnect\Model\MovementOptions
-    {
-        return $this->container['options'];
-    }
-
-    /**
-     * Sets options
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementOptions|null $options options
-     *
-     * @return $this
-     */
-    public function setOptions(?\Equisoft\SDK\EquisoftConnect\Model\MovementOptions $options): static
-    {
-        if (is_null($options)) {
-            array_push($this->openAPINullablesSetToNull, 'options');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('options', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['options'] = $options;
-
-        return $this;
-    }
-
-    /**
-     * Gets userTuples
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUserTuplePayload[]
-     */
-    public function getUserTuples(): array
-    {
-        return $this->container['userTuples'];
-    }
-
-    /**
-     * Sets userTuples
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUserTuplePayload[] $userTuples User tuples.
-     *
-     * @return $this
-     */
-    public function setUserTuples(array $userTuples): static
-    {
-        if (is_null($userTuples)) {
-            throw new InvalidArgumentException('non-nullable userTuples cannot be null');
-        }
-        $this->container['userTuples'] = $userTuples;
-
-        return $this;
-    }
-
-    /**
-     * Gets sourceUser
-     *
-     * @return string
-     */
-    public function getSourceUser(): string
-    {
-        return $this->container['sourceUser'];
-    }
-
-    /**
-     * Sets sourceUser
-     *
-     * @param string $sourceUser Source user id.
-     *
-     * @return $this
-     */
-    public function setSourceUser(string $sourceUser): static
-    {
-        if (is_null($sourceUser)) {
-            throw new InvalidArgumentException('non-nullable sourceUser cannot be null');
-        }
-        $this->container['sourceUser'] = $sourceUser;
-
-        return $this;
-    }
-
-    /**
-     * Gets sourceDistributionList
-     *
-     * @return string|null
-     */
-    public function getSourceDistributionList(): ?string
-    {
-        return $this->container['sourceDistributionList'];
-    }
-
-    /**
-     * Sets sourceDistributionList
-     *
-     * @param string|null $sourceDistributionList Source distribution list.
-     *
-     * @return $this
-     */
-    public function setSourceDistributionList(?string $sourceDistributionList): static
-    {
-        if (is_null($sourceDistributionList)) {
-            throw new InvalidArgumentException('non-nullable sourceDistributionList cannot be null');
-        }
-        $this->container['sourceDistributionList'] = $sourceDistributionList;
-
-        return $this;
-    }
-
-    /**
-     * Gets destinationUser
-     *
-     * @return string
-     */
-    public function getDestinationUser(): string
-    {
-        return $this->container['destinationUser'];
-    }
-
-    /**
-     * Sets destinationUser
-     *
-     * @param string $destinationUser Destination user id.
-     *
-     * @return $this
-     */
-    public function setDestinationUser(string $destinationUser): static
-    {
-        if (is_null($destinationUser)) {
-            throw new InvalidArgumentException('non-nullable destinationUser cannot be null');
-        }
-        $this->container['destinationUser'] = $destinationUser;
-
-        return $this;
-    }
-
-    /**
-     * Gets transferOption
-     *
-     * @return string|null
-     */
-    public function getTransferOption(): ?string
-    {
-        return $this->container['transferOption'];
-    }
-
-    /**
-     * Sets transferOption
-     *
-     * @param string|null $transferOption Transfer option.
-     *
-     * @return $this
-     */
-    public function setTransferOption(?string $transferOption): static
-    {
-        if (is_null($transferOption)) {
-            array_push($this->openAPINullablesSetToNull, 'transferOption');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('transferOption', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $allowedValues = self::getTransferOptionAllowableValues();
-        if (!is_null($transferOption) && !in_array($transferOption, $allowedValues, true)) {
-            $transferOption = self::TRANSFER_OPTION_UNKNOWN_DEFAULT_OPEN_API;
-        }
-        $this->container['transferOption'] = $transferOption;
-
-        return $this;
-    }
-
-    /**
-     * Gets capsilFile
-     *
-     * @return string|null
-     */
-    public function getCapsilFile(): ?string
-    {
-        return $this->container['capsilFile'];
-    }
-
-    /**
-     * Sets capsilFile
-     *
-     * @param string|null $capsilFile Path to the Capsil file.
-     *
-     * @return $this
-     */
-    public function setCapsilFile(?string $capsilFile): static
-    {
-        if (is_null($capsilFile)) {
-            array_push($this->openAPINullablesSetToNull, 'capsilFile');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('capsilFile', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['capsilFile'] = $capsilFile;
-
-        return $this;
-    }
-
-    /**
-     * Gets univerisFile
-     *
-     * @return string|null
-     * @deprecated
-     */
-    public function getUniverisFile(): ?string
-    {
-        return $this->container['univerisFile'];
-    }
-
-    /**
-     * Sets univerisFile
-     *
-     * @param string|null $univerisFile Path to the Univeris file. Deprecated: Univeris file is not supported anymore and will be removed in a future version.
-     *
-     * @return $this
-     * @deprecated
-     */
-    public function setUniverisFile(?string $univerisFile): static
-    {
-        if (is_null($univerisFile)) {
-            array_push($this->openAPINullablesSetToNull, 'univerisFile');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('univerisFile', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['univerisFile'] = $univerisFile;
-
-        return $this;
-    }
-
-    /**
-     * Gets dataphileFile
-     *
-     * @return string|null
-     */
-    public function getDataphileFile(): ?string
-    {
-        return $this->container['dataphileFile'];
-    }
-
-    /**
-     * Sets dataphileFile
-     *
-     * @param string|null $dataphileFile Path to the Dataphile.
-     *
-     * @return $this
-     */
-    public function setDataphileFile(?string $dataphileFile): static
-    {
-        if (is_null($dataphileFile)) {
-            array_push($this->openAPINullablesSetToNull, 'dataphileFile');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('dataphileFile', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['dataphileFile'] = $dataphileFile;
 
         return $this;
     }

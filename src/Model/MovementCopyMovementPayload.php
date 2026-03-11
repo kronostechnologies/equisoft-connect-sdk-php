@@ -27,12 +27,6 @@
 
 namespace Equisoft\SDK\EquisoftConnect\Model;
 
-use ArrayAccess;
-use JsonSerializable;
-use InvalidArgumentException;
-use ReturnTypeWillChange;
-use Equisoft\SDK\EquisoftConnect\ObjectSerializer;
-
 /**
  * MovementCopyMovementPayload Class Doc Comment
  *
@@ -41,7 +35,7 @@ use Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
  */
-class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, JsonSerializable
+class MovementCopyMovementPayload extends MovementMovementPayload
 {
     public const DISCRIMINATOR = null;
 
@@ -108,7 +102,7 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, JsonSe
      */
     public static function openAPITypes(): array
     {
-        return self::$openAPITypes;
+        return self::$openAPITypes + parent::openAPITypes();
     }
 
     /**
@@ -118,7 +112,7 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, JsonSe
      */
     public static function openAPIFormats(): array
     {
-        return self::$openAPIFormats;
+        return self::$openAPIFormats + parent::openAPIFormats();
     }
 
     /**
@@ -128,7 +122,7 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, JsonSe
      */
     protected static function openAPINullables(): array
     {
-        return self::$openAPINullables;
+        return self::$openAPINullables + parent::openAPINullables();
     }
 
     /**
@@ -224,7 +218,7 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, JsonSe
      */
     public static function attributeMap(): array
     {
-        return self::$attributeMap;
+        return parent::attributeMap() + self::$attributeMap;
     }
 
     /**
@@ -234,7 +228,7 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, JsonSe
      */
     public static function setters(): array
     {
-        return self::$setters;
+        return parent::setters() + self::$setters;
     }
 
     /**
@@ -244,7 +238,7 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, JsonSe
      */
     public static function getters(): array
     {
-        return self::$getters;
+        return parent::getters() + self::$getters;
     }
 
     /**
@@ -258,12 +252,6 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, JsonSe
     }
 
 
-    /**
-     * Associative array for storing property values
-     *
-     * @var array
-     */
-    protected array $container = [];
 
     /**
      * Constructor
@@ -272,6 +260,8 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, JsonSe
      */
     public function __construct(?array $data = null)
     {
+        parent::__construct($data);
+
         $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('date', $data ?? [], null);
         $this->setIfExists('sourceDatabase', $data ?? [], null);
@@ -305,7 +295,7 @@ class MovementCopyMovementPayload implements ModelInterface, ArrayAccess, JsonSe
      */
     public function listInvalidProperties(): array
     {
-        $invalidProperties = [];
+        $invalidProperties = parent::listInvalidProperties();
 
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";

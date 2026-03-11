@@ -27,12 +27,6 @@
 
 namespace Equisoft\SDK\EquisoftConnect\Model;
 
-use ArrayAccess;
-use JsonSerializable;
-use InvalidArgumentException;
-use ReturnTypeWillChange;
-use Equisoft\SDK\EquisoftConnect\ObjectSerializer;
-
 /**
  * MovementClientBaseUsingFileMovementPayload Class Doc Comment
  *
@@ -41,7 +35,7 @@ use Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
  */
-class MovementClientBaseUsingFileMovementPayload implements ModelInterface, ArrayAccess, JsonSerializable
+class MovementClientBaseUsingFileMovementPayload extends MovementMovementPayload
 {
     public const DISCRIMINATOR = null;
 
@@ -117,7 +111,7 @@ class MovementClientBaseUsingFileMovementPayload implements ModelInterface, Arra
      */
     public static function openAPITypes(): array
     {
-        return self::$openAPITypes;
+        return self::$openAPITypes + parent::openAPITypes();
     }
 
     /**
@@ -127,7 +121,7 @@ class MovementClientBaseUsingFileMovementPayload implements ModelInterface, Arra
      */
     public static function openAPIFormats(): array
     {
-        return self::$openAPIFormats;
+        return self::$openAPIFormats + parent::openAPIFormats();
     }
 
     /**
@@ -137,7 +131,7 @@ class MovementClientBaseUsingFileMovementPayload implements ModelInterface, Arra
      */
     protected static function openAPINullables(): array
     {
-        return self::$openAPINullables;
+        return self::$openAPINullables + parent::openAPINullables();
     }
 
     /**
@@ -242,7 +236,7 @@ class MovementClientBaseUsingFileMovementPayload implements ModelInterface, Arra
      */
     public static function attributeMap(): array
     {
-        return self::$attributeMap;
+        return parent::attributeMap() + self::$attributeMap;
     }
 
     /**
@@ -252,7 +246,7 @@ class MovementClientBaseUsingFileMovementPayload implements ModelInterface, Arra
      */
     public static function setters(): array
     {
-        return self::$setters;
+        return parent::setters() + self::$setters;
     }
 
     /**
@@ -262,7 +256,7 @@ class MovementClientBaseUsingFileMovementPayload implements ModelInterface, Arra
      */
     public static function getters(): array
     {
-        return self::$getters;
+        return parent::getters() + self::$getters;
     }
 
     /**
@@ -276,12 +270,6 @@ class MovementClientBaseUsingFileMovementPayload implements ModelInterface, Arra
     }
 
 
-    /**
-     * Associative array for storing property values
-     *
-     * @var array
-     */
-    protected array $container = [];
 
     /**
      * Constructor
@@ -290,6 +278,8 @@ class MovementClientBaseUsingFileMovementPayload implements ModelInterface, Arra
      */
     public function __construct(?array $data = null)
     {
+        parent::__construct($data);
+
         $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('date', $data ?? [], null);
         $this->setIfExists('sourceDatabase', $data ?? [], null);
@@ -326,7 +316,7 @@ class MovementClientBaseUsingFileMovementPayload implements ModelInterface, Arra
      */
     public function listInvalidProperties(): array
     {
-        $invalidProperties = [];
+        $invalidProperties = parent::listInvalidProperties();
 
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
