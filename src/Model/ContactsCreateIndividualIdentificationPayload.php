@@ -27,12 +27,6 @@
 
 namespace Equisoft\SDK\EquisoftConnect\Model;
 
-use ArrayAccess;
-use JsonSerializable;
-use InvalidArgumentException;
-use ReturnTypeWillChange;
-use Equisoft\SDK\EquisoftConnect\ObjectSerializer;
-
 /**
  * ContactsCreateIndividualIdentificationPayload Class Doc Comment
  *
@@ -41,7 +35,7 @@ use Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
  */
-class ContactsCreateIndividualIdentificationPayload implements ModelInterface, ArrayAccess, JsonSerializable
+class ContactsCreateIndividualIdentificationPayload extends ContactsCreateIdentificationPayload
 {
     public const DISCRIMINATOR = null;
 
@@ -58,7 +52,6 @@ class ContactsCreateIndividualIdentificationPayload implements ModelInterface, A
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'type' => '\Equisoft\SDK\EquisoftConnect\Model\ContactIdentificationType',
         'firstName' => 'string',
         'lastName' => 'string',
         'gender' => 'mixed',
@@ -77,7 +70,6 @@ class ContactsCreateIndividualIdentificationPayload implements ModelInterface, A
       * @var array<string, string|null>
       */
     protected static array $openAPIFormats = [
-        'type' => null,
         'firstName' => null,
         'lastName' => null,
         'gender' => null,
@@ -96,7 +88,6 @@ class ContactsCreateIndividualIdentificationPayload implements ModelInterface, A
       * @var array<string, bool>
       */
     protected static array $openAPINullables = [
-        'type' => false,
         'firstName' => false,
         'lastName' => false,
         'gender' => true,
@@ -123,7 +114,7 @@ class ContactsCreateIndividualIdentificationPayload implements ModelInterface, A
      */
     public static function openAPITypes(): array
     {
-        return self::$openAPITypes;
+        return self::$openAPITypes + parent::openAPITypes();
     }
 
     /**
@@ -133,7 +124,7 @@ class ContactsCreateIndividualIdentificationPayload implements ModelInterface, A
      */
     public static function openAPIFormats(): array
     {
-        return self::$openAPIFormats;
+        return self::$openAPIFormats + parent::openAPIFormats();
     }
 
     /**
@@ -143,7 +134,7 @@ class ContactsCreateIndividualIdentificationPayload implements ModelInterface, A
      */
     protected static function openAPINullables(): array
     {
-        return self::$openAPINullables;
+        return self::$openAPINullables + parent::openAPINullables();
     }
 
     /**
@@ -195,7 +186,6 @@ class ContactsCreateIndividualIdentificationPayload implements ModelInterface, A
      * @var array<string, string>
      */
     protected static array $attributeMap = [
-        'type' => 'type',
         'firstName' => 'firstName',
         'lastName' => 'lastName',
         'gender' => 'gender',
@@ -214,7 +204,6 @@ class ContactsCreateIndividualIdentificationPayload implements ModelInterface, A
      * @var array<string, string>
      */
     protected static array $setters = [
-        'type' => 'setType',
         'firstName' => 'setFirstName',
         'lastName' => 'setLastName',
         'gender' => 'setGender',
@@ -233,7 +222,6 @@ class ContactsCreateIndividualIdentificationPayload implements ModelInterface, A
      * @var array<string, string>
      */
     protected static array $getters = [
-        'type' => 'getType',
         'firstName' => 'getFirstName',
         'lastName' => 'getLastName',
         'gender' => 'getGender',
@@ -254,7 +242,7 @@ class ContactsCreateIndividualIdentificationPayload implements ModelInterface, A
      */
     public static function attributeMap(): array
     {
-        return self::$attributeMap;
+        return parent::attributeMap() + self::$attributeMap;
     }
 
     /**
@@ -264,7 +252,7 @@ class ContactsCreateIndividualIdentificationPayload implements ModelInterface, A
      */
     public static function setters(): array
     {
-        return self::$setters;
+        return parent::setters() + self::$setters;
     }
 
     /**
@@ -274,7 +262,7 @@ class ContactsCreateIndividualIdentificationPayload implements ModelInterface, A
      */
     public static function getters(): array
     {
-        return self::$getters;
+        return parent::getters() + self::$getters;
     }
 
     /**
@@ -288,12 +276,6 @@ class ContactsCreateIndividualIdentificationPayload implements ModelInterface, A
     }
 
 
-    /**
-     * Associative array for storing property values
-     *
-     * @var array
-     */
-    protected array $container = [];
 
     /**
      * Constructor
@@ -302,7 +284,8 @@ class ContactsCreateIndividualIdentificationPayload implements ModelInterface, A
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('type', $data ?? [], null);
+        parent::__construct($data);
+
         $this->setIfExists('firstName', $data ?? [], null);
         $this->setIfExists('lastName', $data ?? [], null);
         $this->setIfExists('gender', $data ?? [], null);
@@ -340,11 +323,8 @@ class ContactsCreateIndividualIdentificationPayload implements ModelInterface, A
      */
     public function listInvalidProperties(): array
     {
-        $invalidProperties = [];
+        $invalidProperties = parent::listInvalidProperties();
 
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
         if ($this->container['firstName'] === null) {
             $invalidProperties[] = "'firstName' can't be null";
         }
@@ -368,33 +348,6 @@ class ContactsCreateIndividualIdentificationPayload implements ModelInterface, A
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets type
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactIdentificationType
-     */
-    public function getType(): \Equisoft\SDK\EquisoftConnect\Model\ContactIdentificationType
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactIdentificationType $type type
-     *
-     * @return $this
-     */
-    public function setType(\Equisoft\SDK\EquisoftConnect\Model\ContactIdentificationType $type): static
-    {
-        if (is_null($type)) {
-            throw new InvalidArgumentException('non-nullable type cannot be null');
-        }
-        $this->container['type'] = $type;
-
-        return $this;
-    }
 
     /**
      * Gets firstName

@@ -27,12 +27,6 @@
 
 namespace Equisoft\SDK\EquisoftConnect\Model;
 
-use ArrayAccess;
-use JsonSerializable;
-use InvalidArgumentException;
-use ReturnTypeWillChange;
-use Equisoft\SDK\EquisoftConnect\ObjectSerializer;
-
 /**
  * ContactsCreateOrganizationIdentificationPayload Class Doc Comment
  *
@@ -41,7 +35,7 @@ use Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
  */
-class ContactsCreateOrganizationIdentificationPayload implements ModelInterface, ArrayAccess, JsonSerializable
+class ContactsCreateOrganizationIdentificationPayload extends ContactsCreateIdentificationPayload
 {
     public const DISCRIMINATOR = null;
 
@@ -58,7 +52,6 @@ class ContactsCreateOrganizationIdentificationPayload implements ModelInterface,
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'type' => '\Equisoft\SDK\EquisoftConnect\Model\ContactIdentificationType',
         'nameLine1' => 'string',
         'nameLine2' => 'string',
         'abbreviation' => 'string'
@@ -70,7 +63,6 @@ class ContactsCreateOrganizationIdentificationPayload implements ModelInterface,
       * @var array<string, string|null>
       */
     protected static array $openAPIFormats = [
-        'type' => null,
         'nameLine1' => null,
         'nameLine2' => null,
         'abbreviation' => null
@@ -82,7 +74,6 @@ class ContactsCreateOrganizationIdentificationPayload implements ModelInterface,
       * @var array<string, bool>
       */
     protected static array $openAPINullables = [
-        'type' => false,
         'nameLine1' => false,
         'nameLine2' => true,
         'abbreviation' => false
@@ -102,7 +93,7 @@ class ContactsCreateOrganizationIdentificationPayload implements ModelInterface,
      */
     public static function openAPITypes(): array
     {
-        return self::$openAPITypes;
+        return self::$openAPITypes + parent::openAPITypes();
     }
 
     /**
@@ -112,7 +103,7 @@ class ContactsCreateOrganizationIdentificationPayload implements ModelInterface,
      */
     public static function openAPIFormats(): array
     {
-        return self::$openAPIFormats;
+        return self::$openAPIFormats + parent::openAPIFormats();
     }
 
     /**
@@ -122,7 +113,7 @@ class ContactsCreateOrganizationIdentificationPayload implements ModelInterface,
      */
     protected static function openAPINullables(): array
     {
-        return self::$openAPINullables;
+        return self::$openAPINullables + parent::openAPINullables();
     }
 
     /**
@@ -174,7 +165,6 @@ class ContactsCreateOrganizationIdentificationPayload implements ModelInterface,
      * @var array<string, string>
      */
     protected static array $attributeMap = [
-        'type' => 'type',
         'nameLine1' => 'nameLine1',
         'nameLine2' => 'nameLine2',
         'abbreviation' => 'abbreviation'
@@ -186,7 +176,6 @@ class ContactsCreateOrganizationIdentificationPayload implements ModelInterface,
      * @var array<string, string>
      */
     protected static array $setters = [
-        'type' => 'setType',
         'nameLine1' => 'setNameLine1',
         'nameLine2' => 'setNameLine2',
         'abbreviation' => 'setAbbreviation'
@@ -198,7 +187,6 @@ class ContactsCreateOrganizationIdentificationPayload implements ModelInterface,
      * @var array<string, string>
      */
     protected static array $getters = [
-        'type' => 'getType',
         'nameLine1' => 'getNameLine1',
         'nameLine2' => 'getNameLine2',
         'abbreviation' => 'getAbbreviation'
@@ -212,7 +200,7 @@ class ContactsCreateOrganizationIdentificationPayload implements ModelInterface,
      */
     public static function attributeMap(): array
     {
-        return self::$attributeMap;
+        return parent::attributeMap() + self::$attributeMap;
     }
 
     /**
@@ -222,7 +210,7 @@ class ContactsCreateOrganizationIdentificationPayload implements ModelInterface,
      */
     public static function setters(): array
     {
-        return self::$setters;
+        return parent::setters() + self::$setters;
     }
 
     /**
@@ -232,7 +220,7 @@ class ContactsCreateOrganizationIdentificationPayload implements ModelInterface,
      */
     public static function getters(): array
     {
-        return self::$getters;
+        return parent::getters() + self::$getters;
     }
 
     /**
@@ -246,12 +234,6 @@ class ContactsCreateOrganizationIdentificationPayload implements ModelInterface,
     }
 
 
-    /**
-     * Associative array for storing property values
-     *
-     * @var array
-     */
-    protected array $container = [];
 
     /**
      * Constructor
@@ -260,7 +242,8 @@ class ContactsCreateOrganizationIdentificationPayload implements ModelInterface,
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('type', $data ?? [], null);
+        parent::__construct($data);
+
         $this->setIfExists('nameLine1', $data ?? [], null);
         $this->setIfExists('nameLine2', $data ?? [], null);
         $this->setIfExists('abbreviation', $data ?? [], null);
@@ -291,11 +274,8 @@ class ContactsCreateOrganizationIdentificationPayload implements ModelInterface,
      */
     public function listInvalidProperties(): array
     {
-        $invalidProperties = [];
+        $invalidProperties = parent::listInvalidProperties();
 
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
         if ($this->container['nameLine1'] === null) {
             $invalidProperties[] = "'nameLine1' can't be null";
         }
@@ -316,33 +296,6 @@ class ContactsCreateOrganizationIdentificationPayload implements ModelInterface,
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets type
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactIdentificationType
-     */
-    public function getType(): \Equisoft\SDK\EquisoftConnect\Model\ContactIdentificationType
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactIdentificationType $type type
-     *
-     * @return $this
-     */
-    public function setType(\Equisoft\SDK\EquisoftConnect\Model\ContactIdentificationType $type): static
-    {
-        if (is_null($type)) {
-            throw new InvalidArgumentException('non-nullable type cannot be null');
-        }
-        $this->container['type'] = $type;
-
-        return $this;
-    }
 
     /**
      * Gets nameLine1
