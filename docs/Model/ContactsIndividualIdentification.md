@@ -4,7 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactIdentificationType**](ContactIdentificationType.md) |  |
 **title** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsContactFieldValue**](ContactsContactFieldValue.md) |  | [optional]
 **gender** | **string** | Individual&#39;s gender | [optional]
 **firstName** | **string** | Individual&#39;s first name | [optional]
