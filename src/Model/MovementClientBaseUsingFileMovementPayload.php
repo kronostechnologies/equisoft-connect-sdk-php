@@ -52,7 +52,6 @@ class MovementClientBaseUsingFileMovementPayload extends MovementMovementPayload
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'type' => '\Equisoft\SDK\EquisoftConnect\Model\MovementMovementType',
         'date' => 'string',
         'sourceDatabase' => 'string',
         'sourceUser' => 'string',
@@ -69,7 +68,6 @@ class MovementClientBaseUsingFileMovementPayload extends MovementMovementPayload
       * @var array<string, string|null>
       */
     protected static array $openAPIFormats = [
-        'type' => null,
         'date' => null,
         'sourceDatabase' => null,
         'sourceUser' => null,
@@ -86,7 +84,6 @@ class MovementClientBaseUsingFileMovementPayload extends MovementMovementPayload
       * @var array<string, bool>
       */
     protected static array $openAPINullables = [
-        'type' => false,
         'date' => false,
         'sourceDatabase' => false,
         'sourceUser' => false,
@@ -183,7 +180,6 @@ class MovementClientBaseUsingFileMovementPayload extends MovementMovementPayload
      * @var array<string, string>
      */
     protected static array $attributeMap = [
-        'type' => 'type',
         'date' => 'date',
         'sourceDatabase' => 'sourceDatabase',
         'sourceUser' => 'sourceUser',
@@ -200,7 +196,6 @@ class MovementClientBaseUsingFileMovementPayload extends MovementMovementPayload
      * @var array<string, string>
      */
     protected static array $setters = [
-        'type' => 'setType',
         'date' => 'setDate',
         'sourceDatabase' => 'setSourceDatabase',
         'sourceUser' => 'setSourceUser',
@@ -217,7 +212,6 @@ class MovementClientBaseUsingFileMovementPayload extends MovementMovementPayload
      * @var array<string, string>
      */
     protected static array $getters = [
-        'type' => 'getType',
         'date' => 'getDate',
         'sourceDatabase' => 'getSourceDatabase',
         'sourceUser' => 'getSourceUser',
@@ -280,7 +274,6 @@ class MovementClientBaseUsingFileMovementPayload extends MovementMovementPayload
     {
         parent::__construct($data);
 
-        $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('date', $data ?? [], null);
         $this->setIfExists('sourceDatabase', $data ?? [], null);
         $this->setIfExists('sourceUser', $data ?? [], null);
@@ -318,9 +311,6 @@ class MovementClientBaseUsingFileMovementPayload extends MovementMovementPayload
     {
         $invalidProperties = parent::listInvalidProperties();
 
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
         if ($this->container['sourceDatabase'] === null) {
             $invalidProperties[] = "'sourceDatabase' can't be null";
         }
@@ -347,33 +337,6 @@ class MovementClientBaseUsingFileMovementPayload extends MovementMovementPayload
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets type
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementMovementType
-     */
-    public function getType(): \Equisoft\SDK\EquisoftConnect\Model\MovementMovementType
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementMovementType $type type
-     *
-     * @return $this
-     */
-    public function setType(\Equisoft\SDK\EquisoftConnect\Model\MovementMovementType $type): static
-    {
-        if (is_null($type)) {
-            throw new InvalidArgumentException('non-nullable type cannot be null');
-        }
-        $this->container['type'] = $type;
-
-        return $this;
-    }
 
     /**
      * Gets date
