@@ -48,6 +48,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, JsonSerial
         "CLIENTBASE_USING_DISTLIST" => "MovementClientBaseUsingDistributionListMovementPayload",
         "CLIENTBASE_USING_FILE" => "MovementClientBaseUsingFileMovementPayload",
         "COPY" => "MovementCopyMovementPayload",
+        "MOVE" => "MovementMoveMovementPayload",
     ];
 
     /**
@@ -241,6 +242,7 @@ class MovementMovementPayload implements ModelInterface, ArrayAccess, JsonSerial
     public const TYPE_CLIENTBASE_USING_DISTLIST = 'CLIENTBASE_USING_DISTLIST';
     public const TYPE_CLIENTBASE_USING_FILE = 'CLIENTBASE_USING_FILE';
     public const TYPE_COPY = 'COPY';
+    public const TYPE_MOVE = 'MOVE';
 
     /**
      * Associative array for storing property values
