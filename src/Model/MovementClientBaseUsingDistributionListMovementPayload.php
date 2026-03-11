@@ -27,12 +27,6 @@
 
 namespace Equisoft\SDK\EquisoftConnect\Model;
 
-use ArrayAccess;
-use JsonSerializable;
-use InvalidArgumentException;
-use ReturnTypeWillChange;
-use Equisoft\SDK\EquisoftConnect\ObjectSerializer;
-
 /**
  * MovementClientBaseUsingDistributionListMovementPayload Class Doc Comment
  *
@@ -41,7 +35,7 @@ use Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
  */
-class MovementClientBaseUsingDistributionListMovementPayload implements ModelInterface, ArrayAccess, JsonSerializable
+class MovementClientBaseUsingDistributionListMovementPayload extends MovementMovementPayload
 {
     public const DISCRIMINATOR = null;
 
@@ -58,7 +52,6 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'type' => '\Equisoft\SDK\EquisoftConnect\Model\MovementMovementType',
         'date' => 'string',
         'sourceDatabase' => 'string',
         'sourceUser' => 'string',
@@ -74,7 +67,6 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
       * @var array<string, string|null>
       */
     protected static array $openAPIFormats = [
-        'type' => null,
         'date' => null,
         'sourceDatabase' => null,
         'sourceUser' => null,
@@ -90,7 +82,6 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
       * @var array<string, bool>
       */
     protected static array $openAPINullables = [
-        'type' => false,
         'date' => false,
         'sourceDatabase' => false,
         'sourceUser' => false,
@@ -114,7 +105,7 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
      */
     public static function openAPITypes(): array
     {
-        return self::$openAPITypes;
+        return self::$openAPITypes + parent::openAPITypes();
     }
 
     /**
@@ -124,7 +115,7 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
      */
     public static function openAPIFormats(): array
     {
-        return self::$openAPIFormats;
+        return self::$openAPIFormats + parent::openAPIFormats();
     }
 
     /**
@@ -134,7 +125,7 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
      */
     protected static function openAPINullables(): array
     {
-        return self::$openAPINullables;
+        return self::$openAPINullables + parent::openAPINullables();
     }
 
     /**
@@ -186,7 +177,6 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
      * @var array<string, string>
      */
     protected static array $attributeMap = [
-        'type' => 'type',
         'date' => 'date',
         'sourceDatabase' => 'sourceDatabase',
         'sourceUser' => 'sourceUser',
@@ -202,7 +192,6 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
      * @var array<string, string>
      */
     protected static array $setters = [
-        'type' => 'setType',
         'date' => 'setDate',
         'sourceDatabase' => 'setSourceDatabase',
         'sourceUser' => 'setSourceUser',
@@ -218,7 +207,6 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
      * @var array<string, string>
      */
     protected static array $getters = [
-        'type' => 'getType',
         'date' => 'getDate',
         'sourceDatabase' => 'getSourceDatabase',
         'sourceUser' => 'getSourceUser',
@@ -236,7 +224,7 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
      */
     public static function attributeMap(): array
     {
-        return self::$attributeMap;
+        return parent::attributeMap() + self::$attributeMap;
     }
 
     /**
@@ -246,7 +234,7 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
      */
     public static function setters(): array
     {
-        return self::$setters;
+        return parent::setters() + self::$setters;
     }
 
     /**
@@ -256,7 +244,7 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
      */
     public static function getters(): array
     {
-        return self::$getters;
+        return parent::getters() + self::$getters;
     }
 
     /**
@@ -287,12 +275,6 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
         ];
     }
 
-    /**
-     * Associative array for storing property values
-     *
-     * @var array
-     */
-    protected array $container = [];
 
     /**
      * Constructor
@@ -301,7 +283,8 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('type', $data ?? [], null);
+        parent::__construct($data);
+
         $this->setIfExists('date', $data ?? [], null);
         $this->setIfExists('sourceDatabase', $data ?? [], null);
         $this->setIfExists('sourceUser', $data ?? [], null);
@@ -336,11 +319,8 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
      */
     public function listInvalidProperties(): array
     {
-        $invalidProperties = [];
+        $invalidProperties = parent::listInvalidProperties();
 
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
         if ($this->container['sourceDatabase'] === null) {
             $invalidProperties[] = "'sourceDatabase' can't be null";
         }
@@ -379,33 +359,6 @@ class MovementClientBaseUsingDistributionListMovementPayload implements ModelInt
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets type
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementMovementType
-     */
-    public function getType(): \Equisoft\SDK\EquisoftConnect\Model\MovementMovementType
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementMovementType $type type
-     *
-     * @return $this
-     */
-    public function setType(\Equisoft\SDK\EquisoftConnect\Model\MovementMovementType $type): static
-    {
-        if (is_null($type)) {
-            throw new InvalidArgumentException('non-nullable type cannot be null');
-        }
-        $this->container['type'] = $type;
-
-        return $this;
-    }
 
     /**
      * Gets date

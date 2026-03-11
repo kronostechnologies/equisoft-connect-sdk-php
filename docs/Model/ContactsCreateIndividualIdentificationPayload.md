@@ -4,7 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactIdentificationType**](ContactIdentificationType.md) |  |
 **firstName** | **string** | Individual&#39;s first name |
 **lastName** | **string** | Individual&#39;s middle name |
 **gender** | **mixed** | Individual&#39;s gender. Either MALE, FEMALE or UNKNOWN. |
