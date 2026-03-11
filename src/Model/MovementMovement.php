@@ -73,18 +73,7 @@ class MovementMovement implements ModelInterface, ArrayAccess, JsonSerializable
         'addedDate' => 'string',
         'addedBy' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
         'cancelledDate' => 'string',
-        'cancelledBy' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
-        'sourceDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
-        'destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
-        'users' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser[]',
-        'userTuples' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUserTuple[]',
-        'sourceUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
-        'sourceDistributionList' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDistributionList',
-        'destinationUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
-        'transferOption' => '\Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption',
-        'capsil' => 'bool',
-        'univeris' => 'bool',
-        'dataphile' => 'bool'
+        'cancelledBy' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser'
     ];
 
     /**
@@ -102,18 +91,7 @@ class MovementMovement implements ModelInterface, ArrayAccess, JsonSerializable
         'addedDate' => null,
         'addedBy' => null,
         'cancelledDate' => null,
-        'cancelledBy' => null,
-        'sourceDatabase' => null,
-        'destinationDatabase' => null,
-        'users' => null,
-        'userTuples' => null,
-        'sourceUser' => null,
-        'sourceDistributionList' => null,
-        'destinationUser' => null,
-        'transferOption' => null,
-        'capsil' => null,
-        'univeris' => null,
-        'dataphile' => null
+        'cancelledBy' => null
     ];
 
     /**
@@ -131,18 +109,7 @@ class MovementMovement implements ModelInterface, ArrayAccess, JsonSerializable
         'addedDate' => true,
         'addedBy' => true,
         'cancelledDate' => true,
-        'cancelledBy' => true,
-        'sourceDatabase' => false,
-        'destinationDatabase' => false,
-        'users' => false,
-        'userTuples' => false,
-        'sourceUser' => false,
-        'sourceDistributionList' => false,
-        'destinationUser' => false,
-        'transferOption' => false,
-        'capsil' => false,
-        'univeris' => false,
-        'dataphile' => false
+        'cancelledBy' => true
     ];
 
     /**
@@ -240,18 +207,7 @@ class MovementMovement implements ModelInterface, ArrayAccess, JsonSerializable
         'addedDate' => 'addedDate',
         'addedBy' => 'addedBy',
         'cancelledDate' => 'cancelledDate',
-        'cancelledBy' => 'cancelledBy',
-        'sourceDatabase' => 'sourceDatabase',
-        'destinationDatabase' => 'destinationDatabase',
-        'users' => 'users',
-        'userTuples' => 'userTuples',
-        'sourceUser' => 'sourceUser',
-        'sourceDistributionList' => 'sourceDistributionList',
-        'destinationUser' => 'destinationUser',
-        'transferOption' => 'transferOption',
-        'capsil' => 'capsil',
-        'univeris' => 'univeris',
-        'dataphile' => 'dataphile'
+        'cancelledBy' => 'cancelledBy'
     ];
 
     /**
@@ -269,18 +225,7 @@ class MovementMovement implements ModelInterface, ArrayAccess, JsonSerializable
         'addedDate' => 'setAddedDate',
         'addedBy' => 'setAddedBy',
         'cancelledDate' => 'setCancelledDate',
-        'cancelledBy' => 'setCancelledBy',
-        'sourceDatabase' => 'setSourceDatabase',
-        'destinationDatabase' => 'setDestinationDatabase',
-        'users' => 'setUsers',
-        'userTuples' => 'setUserTuples',
-        'sourceUser' => 'setSourceUser',
-        'sourceDistributionList' => 'setSourceDistributionList',
-        'destinationUser' => 'setDestinationUser',
-        'transferOption' => 'setTransferOption',
-        'capsil' => 'setCapsil',
-        'univeris' => 'setUniveris',
-        'dataphile' => 'setDataphile'
+        'cancelledBy' => 'setCancelledBy'
     ];
 
     /**
@@ -298,18 +243,7 @@ class MovementMovement implements ModelInterface, ArrayAccess, JsonSerializable
         'addedDate' => 'getAddedDate',
         'addedBy' => 'getAddedBy',
         'cancelledDate' => 'getCancelledDate',
-        'cancelledBy' => 'getCancelledBy',
-        'sourceDatabase' => 'getSourceDatabase',
-        'destinationDatabase' => 'getDestinationDatabase',
-        'users' => 'getUsers',
-        'userTuples' => 'getUserTuples',
-        'sourceUser' => 'getSourceUser',
-        'sourceDistributionList' => 'getSourceDistributionList',
-        'destinationUser' => 'getDestinationUser',
-        'transferOption' => 'getTransferOption',
-        'capsil' => 'getCapsil',
-        'univeris' => 'getUniveris',
-        'dataphile' => 'getDataphile'
+        'cancelledBy' => 'getCancelledBy'
     ];
 
     /**
@@ -385,17 +319,6 @@ class MovementMovement implements ModelInterface, ArrayAccess, JsonSerializable
         $this->setIfExists('addedBy', $data ?? [], null);
         $this->setIfExists('cancelledDate', $data ?? [], null);
         $this->setIfExists('cancelledBy', $data ?? [], null);
-        $this->setIfExists('sourceDatabase', $data ?? [], null);
-        $this->setIfExists('destinationDatabase', $data ?? [], null);
-        $this->setIfExists('users', $data ?? [], null);
-        $this->setIfExists('userTuples', $data ?? [], null);
-        $this->setIfExists('sourceUser', $data ?? [], null);
-        $this->setIfExists('sourceDistributionList', $data ?? [], null);
-        $this->setIfExists('destinationUser', $data ?? [], null);
-        $this->setIfExists('transferOption', $data ?? [], null);
-        $this->setIfExists('capsil', $data ?? [], null);
-        $this->setIfExists('univeris', $data ?? [], null);
-        $this->setIfExists('dataphile', $data ?? [], null);
     }
 
     /**
@@ -425,26 +348,8 @@ class MovementMovement implements ModelInterface, ArrayAccess, JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['sourceDatabase'] === null) {
-            $invalidProperties[] = "'sourceDatabase' can't be null";
-        }
-        if ($this->container['destinationDatabase'] === null) {
-            $invalidProperties[] = "'destinationDatabase' can't be null";
-        }
-        if ($this->container['users'] === null) {
-            $invalidProperties[] = "'users' can't be null";
-        }
-        if ($this->container['userTuples'] === null) {
-            $invalidProperties[] = "'userTuples' can't be null";
-        }
-        if ($this->container['sourceUser'] === null) {
-            $invalidProperties[] = "'sourceUser' can't be null";
-        }
-        if ($this->container['destinationUser'] === null) {
-            $invalidProperties[] = "'destinationUser' can't be null";
-        }
-        if ($this->container['transferOption'] === null) {
-            $invalidProperties[] = "'transferOption' can't be null";
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
         }
         return $invalidProperties;
     }
@@ -464,9 +369,9 @@ class MovementMovement implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Gets type
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementMovementType|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementMovementType
      */
-    public function getType(): ?\Equisoft\SDK\EquisoftConnect\Model\MovementMovementType
+    public function getType(): \Equisoft\SDK\EquisoftConnect\Model\MovementMovementType
     {
         return $this->container['type'];
     }
@@ -474,11 +379,11 @@ class MovementMovement implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Sets type
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementMovementType|null $type type
+     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementMovementType $type type
      *
      * @return $this
      */
-    public function setType(?\Equisoft\SDK\EquisoftConnect\Model\MovementMovementType $type): static
+    public function setType(\Equisoft\SDK\EquisoftConnect\Model\MovementMovementType $type): static
     {
         if (is_null($type)) {
             throw new InvalidArgumentException('non-nullable type cannot be null');
@@ -769,305 +674,6 @@ class MovementMovement implements ModelInterface, ArrayAccess, JsonSerializable
             }
         }
         $this->container['cancelledBy'] = $cancelledBy;
-
-        return $this;
-    }
-
-    /**
-     * Gets sourceDatabase
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase
-     */
-    public function getSourceDatabase(): \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase
-    {
-        return $this->container['sourceDatabase'];
-    }
-
-    /**
-     * Sets sourceDatabase
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase $sourceDatabase sourceDatabase
-     *
-     * @return $this
-     */
-    public function setSourceDatabase(\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase $sourceDatabase): static
-    {
-        if (is_null($sourceDatabase)) {
-            throw new InvalidArgumentException('non-nullable sourceDatabase cannot be null');
-        }
-        $this->container['sourceDatabase'] = $sourceDatabase;
-
-        return $this;
-    }
-
-    /**
-     * Gets destinationDatabase
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase
-     */
-    public function getDestinationDatabase(): \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase
-    {
-        return $this->container['destinationDatabase'];
-    }
-
-    /**
-     * Sets destinationDatabase
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDatabase $destinationDatabase destinationDatabase
-     *
-     * @return $this
-     */
-    public function setDestinationDatabase(\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase $destinationDatabase): static
-    {
-        if (is_null($destinationDatabase)) {
-            throw new InvalidArgumentException('non-nullable destinationDatabase cannot be null');
-        }
-        $this->container['destinationDatabase'] = $destinationDatabase;
-
-        return $this;
-    }
-
-    /**
-     * Gets users
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser[]
-     */
-    public function getUsers(): array
-    {
-        return $this->container['users'];
-    }
-
-    /**
-     * Sets users
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser[] $users List of users.
-     *
-     * @return $this
-     */
-    public function setUsers(array $users): static
-    {
-        if (is_null($users)) {
-            throw new InvalidArgumentException('non-nullable users cannot be null');
-        }
-        $this->container['users'] = $users;
-
-        return $this;
-    }
-
-    /**
-     * Gets userTuples
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUserTuple[]
-     */
-    public function getUserTuples(): array
-    {
-        return $this->container['userTuples'];
-    }
-
-    /**
-     * Sets userTuples
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUserTuple[] $userTuples List of user tuples.
-     *
-     * @return $this
-     */
-    public function setUserTuples(array $userTuples): static
-    {
-        if (is_null($userTuples)) {
-            throw new InvalidArgumentException('non-nullable userTuples cannot be null');
-        }
-        $this->container['userTuples'] = $userTuples;
-
-        return $this;
-    }
-
-    /**
-     * Gets sourceUser
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser
-     */
-    public function getSourceUser(): \Equisoft\SDK\EquisoftConnect\Model\MovementUser
-    {
-        return $this->container['sourceUser'];
-    }
-
-    /**
-     * Sets sourceUser
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser $sourceUser sourceUser
-     *
-     * @return $this
-     */
-    public function setSourceUser(\Equisoft\SDK\EquisoftConnect\Model\MovementUser $sourceUser): static
-    {
-        if (is_null($sourceUser)) {
-            throw new InvalidArgumentException('non-nullable sourceUser cannot be null');
-        }
-        $this->container['sourceUser'] = $sourceUser;
-
-        return $this;
-    }
-
-    /**
-     * Gets sourceDistributionList
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementDistributionList|null
-     */
-    public function getSourceDistributionList(): ?\Equisoft\SDK\EquisoftConnect\Model\MovementDistributionList
-    {
-        return $this->container['sourceDistributionList'];
-    }
-
-    /**
-     * Sets sourceDistributionList
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementDistributionList|null $sourceDistributionList sourceDistributionList
-     *
-     * @return $this
-     */
-    public function setSourceDistributionList(?\Equisoft\SDK\EquisoftConnect\Model\MovementDistributionList $sourceDistributionList): static
-    {
-        if (is_null($sourceDistributionList)) {
-            throw new InvalidArgumentException('non-nullable sourceDistributionList cannot be null');
-        }
-        $this->container['sourceDistributionList'] = $sourceDistributionList;
-
-        return $this;
-    }
-
-    /**
-     * Gets destinationUser
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementUser
-     */
-    public function getDestinationUser(): \Equisoft\SDK\EquisoftConnect\Model\MovementUser
-    {
-        return $this->container['destinationUser'];
-    }
-
-    /**
-     * Sets destinationUser
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementUser $destinationUser destinationUser
-     *
-     * @return $this
-     */
-    public function setDestinationUser(\Equisoft\SDK\EquisoftConnect\Model\MovementUser $destinationUser): static
-    {
-        if (is_null($destinationUser)) {
-            throw new InvalidArgumentException('non-nullable destinationUser cannot be null');
-        }
-        $this->container['destinationUser'] = $destinationUser;
-
-        return $this;
-    }
-
-    /**
-     * Gets transferOption
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption
-     */
-    public function getTransferOption(): \Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption
-    {
-        return $this->container['transferOption'];
-    }
-
-    /**
-     * Sets transferOption
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption $transferOption transferOption
-     *
-     * @return $this
-     */
-    public function setTransferOption(\Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption $transferOption): static
-    {
-        if (is_null($transferOption)) {
-            throw new InvalidArgumentException('non-nullable transferOption cannot be null');
-        }
-        $this->container['transferOption'] = $transferOption;
-
-        return $this;
-    }
-
-    /**
-     * Gets capsil
-     *
-     * @return bool|null
-     */
-    public function getCapsil(): ?bool
-    {
-        return $this->container['capsil'];
-    }
-
-    /**
-     * Sets capsil
-     *
-     * @param bool|null $capsil Is Capsil.
-     *
-     * @return $this
-     */
-    public function setCapsil(?bool $capsil): static
-    {
-        if (is_null($capsil)) {
-            throw new InvalidArgumentException('non-nullable capsil cannot be null');
-        }
-        $this->container['capsil'] = $capsil;
-
-        return $this;
-    }
-
-    /**
-     * Gets univeris
-     *
-     * @return bool|null
-     * @deprecated
-     */
-    public function getUniveris(): ?bool
-    {
-        return $this->container['univeris'];
-    }
-
-    /**
-     * Sets univeris
-     *
-     * @param bool|null $univeris Is Univeris. Deprecated: Univeris is not supported anymore and will be removed from future versions).
-     *
-     * @return $this
-     * @deprecated
-     */
-    public function setUniveris(?bool $univeris): static
-    {
-        if (is_null($univeris)) {
-            throw new InvalidArgumentException('non-nullable univeris cannot be null');
-        }
-        $this->container['univeris'] = $univeris;
-
-        return $this;
-    }
-
-    /**
-     * Gets dataphile
-     *
-     * @return bool|null
-     */
-    public function getDataphile(): ?bool
-    {
-        return $this->container['dataphile'];
-    }
-
-    /**
-     * Sets dataphile
-     *
-     * @param bool|null $dataphile Is Dataphile.
-     *
-     * @return $this
-     */
-    public function setDataphile(?bool $dataphile): static
-    {
-        if (is_null($dataphile)) {
-            throw new InvalidArgumentException('non-nullable dataphile cannot be null');
-        }
-        $this->container['dataphile'] = $dataphile;
 
         return $this;
     }

@@ -4,7 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | [**\Equisoft\SDK\EquisoftConnect\Model\MovementMovementType**](MovementMovementType.md) |  |
 **id** | **int** | Unique numerical identifier. | [optional]
 **status** | **string** | Movement status. | [optional]
 **availableAction** | **string** | Available action. | [optional]
