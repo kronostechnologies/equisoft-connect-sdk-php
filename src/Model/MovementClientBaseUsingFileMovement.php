@@ -27,12 +27,6 @@
 
 namespace Equisoft\SDK\EquisoftConnect\Model;
 
-use ArrayAccess;
-use JsonSerializable;
-use InvalidArgumentException;
-use ReturnTypeWillChange;
-use Equisoft\SDK\EquisoftConnect\ObjectSerializer;
-
 /**
  * MovementClientBaseUsingFileMovement Class Doc Comment
  *
@@ -41,7 +35,7 @@ use Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
  */
-class MovementClientBaseUsingFileMovement implements ModelInterface, ArrayAccess, JsonSerializable
+class MovementClientBaseUsingFileMovement extends MovementMovement
 {
     public const DISCRIMINATOR = null;
 
@@ -58,7 +52,6 @@ class MovementClientBaseUsingFileMovement implements ModelInterface, ArrayAccess
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'type' => '\Equisoft\SDK\EquisoftConnect\Model\MovementMovementType',
         'id' => 'int',
         'status' => 'string',
         'availableAction' => 'string',
@@ -83,7 +76,6 @@ class MovementClientBaseUsingFileMovement implements ModelInterface, ArrayAccess
       * @var array<string, string|null>
       */
     protected static array $openAPIFormats = [
-        'type' => null,
         'id' => null,
         'status' => null,
         'availableAction' => null,
@@ -108,7 +100,6 @@ class MovementClientBaseUsingFileMovement implements ModelInterface, ArrayAccess
       * @var array<string, bool>
       */
     protected static array $openAPINullables = [
-        'type' => false,
         'id' => false,
         'status' => false,
         'availableAction' => false,
@@ -141,7 +132,7 @@ class MovementClientBaseUsingFileMovement implements ModelInterface, ArrayAccess
      */
     public static function openAPITypes(): array
     {
-        return self::$openAPITypes;
+        return self::$openAPITypes + parent::openAPITypes();
     }
 
     /**
@@ -151,7 +142,7 @@ class MovementClientBaseUsingFileMovement implements ModelInterface, ArrayAccess
      */
     public static function openAPIFormats(): array
     {
-        return self::$openAPIFormats;
+        return self::$openAPIFormats + parent::openAPIFormats();
     }
 
     /**
@@ -161,7 +152,7 @@ class MovementClientBaseUsingFileMovement implements ModelInterface, ArrayAccess
      */
     protected static function openAPINullables(): array
     {
-        return self::$openAPINullables;
+        return self::$openAPINullables + parent::openAPINullables();
     }
 
     /**
@@ -213,7 +204,6 @@ class MovementClientBaseUsingFileMovement implements ModelInterface, ArrayAccess
      * @var array<string, string>
      */
     protected static array $attributeMap = [
-        'type' => 'type',
         'id' => 'id',
         'status' => 'status',
         'availableAction' => 'availableAction',
@@ -238,7 +228,6 @@ class MovementClientBaseUsingFileMovement implements ModelInterface, ArrayAccess
      * @var array<string, string>
      */
     protected static array $setters = [
-        'type' => 'setType',
         'id' => 'setId',
         'status' => 'setStatus',
         'availableAction' => 'setAvailableAction',
@@ -263,7 +252,6 @@ class MovementClientBaseUsingFileMovement implements ModelInterface, ArrayAccess
      * @var array<string, string>
      */
     protected static array $getters = [
-        'type' => 'getType',
         'id' => 'getId',
         'status' => 'getStatus',
         'availableAction' => 'getAvailableAction',
@@ -290,7 +278,7 @@ class MovementClientBaseUsingFileMovement implements ModelInterface, ArrayAccess
      */
     public static function attributeMap(): array
     {
-        return self::$attributeMap;
+        return parent::attributeMap() + self::$attributeMap;
     }
 
     /**
@@ -300,7 +288,7 @@ class MovementClientBaseUsingFileMovement implements ModelInterface, ArrayAccess
      */
     public static function setters(): array
     {
-        return self::$setters;
+        return parent::setters() + self::$setters;
     }
 
     /**
@@ -310,7 +298,7 @@ class MovementClientBaseUsingFileMovement implements ModelInterface, ArrayAccess
      */
     public static function getters(): array
     {
-        return self::$getters;
+        return parent::getters() + self::$getters;
     }
 
     /**
@@ -324,12 +312,6 @@ class MovementClientBaseUsingFileMovement implements ModelInterface, ArrayAccess
     }
 
 
-    /**
-     * Associative array for storing property values
-     *
-     * @var array
-     */
-    protected array $container = [];
 
     /**
      * Constructor
@@ -338,7 +320,8 @@ class MovementClientBaseUsingFileMovement implements ModelInterface, ArrayAccess
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('type', $data ?? [], null);
+        parent::__construct($data);
+
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('status', $data ?? [], null);
         $this->setIfExists('availableAction', $data ?? [], null);
@@ -382,11 +365,8 @@ class MovementClientBaseUsingFileMovement implements ModelInterface, ArrayAccess
      */
     public function listInvalidProperties(): array
     {
-        $invalidProperties = [];
+        $invalidProperties = parent::listInvalidProperties();
 
-        if ($this->container['type'] === null) {
-            $invalidProperties[] = "'type' can't be null";
-        }
         if ($this->container['sourceDatabase'] === null) {
             $invalidProperties[] = "'sourceDatabase' can't be null";
         }
@@ -413,33 +393,6 @@ class MovementClientBaseUsingFileMovement implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets type
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementMovementType
-     */
-    public function getType(): \Equisoft\SDK\EquisoftConnect\Model\MovementMovementType
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementMovementType $type type
-     *
-     * @return $this
-     */
-    public function setType(\Equisoft\SDK\EquisoftConnect\Model\MovementMovementType $type): static
-    {
-        if (is_null($type)) {
-            throw new InvalidArgumentException('non-nullable type cannot be null');
-        }
-        $this->container['type'] = $type;
-
-        return $this;
-    }
 
     /**
      * Gets id

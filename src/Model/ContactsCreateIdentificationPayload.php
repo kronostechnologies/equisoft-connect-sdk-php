@@ -62,20 +62,7 @@ class ContactsCreateIdentificationPayload implements ModelInterface, ArrayAccess
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'type' => '\Equisoft\SDK\EquisoftConnect\Model\ContactIdentificationType',
-        'firstName' => 'string',
-        'lastName' => 'string',
-        'gender' => 'mixed',
-        'title' => 'int',
-        'middleName' => 'string',
-        'maidenName' => 'string',
-        'nickname' => 'string',
-        'suffix' => 'string',
-        'greeting' => 'string',
-        'clientNumber' => 'string',
-        'nameLine1' => 'string',
-        'nameLine2' => 'string',
-        'abbreviation' => 'string'
+        'type' => '\Equisoft\SDK\EquisoftConnect\Model\ContactIdentificationType'
     ];
 
     /**
@@ -84,20 +71,7 @@ class ContactsCreateIdentificationPayload implements ModelInterface, ArrayAccess
       * @var array<string, string|null>
       */
     protected static array $openAPIFormats = [
-        'type' => null,
-        'firstName' => null,
-        'lastName' => null,
-        'gender' => null,
-        'title' => null,
-        'middleName' => null,
-        'maidenName' => null,
-        'nickname' => null,
-        'suffix' => null,
-        'greeting' => null,
-        'clientNumber' => null,
-        'nameLine1' => null,
-        'nameLine2' => null,
-        'abbreviation' => null
+        'type' => null
     ];
 
     /**
@@ -106,20 +80,7 @@ class ContactsCreateIdentificationPayload implements ModelInterface, ArrayAccess
       * @var array<string, bool>
       */
     protected static array $openAPINullables = [
-        'type' => false,
-        'firstName' => false,
-        'lastName' => false,
-        'gender' => true,
-        'title' => true,
-        'middleName' => true,
-        'maidenName' => true,
-        'nickname' => true,
-        'suffix' => true,
-        'greeting' => true,
-        'clientNumber' => true,
-        'nameLine1' => false,
-        'nameLine2' => true,
-        'abbreviation' => false
+        'type' => false
     ];
 
     /**
@@ -208,20 +169,7 @@ class ContactsCreateIdentificationPayload implements ModelInterface, ArrayAccess
      * @var array<string, string>
      */
     protected static array $attributeMap = [
-        'type' => 'type',
-        'firstName' => 'firstName',
-        'lastName' => 'lastName',
-        'gender' => 'gender',
-        'title' => 'title',
-        'middleName' => 'middleName',
-        'maidenName' => 'maidenName',
-        'nickname' => 'nickname',
-        'suffix' => 'suffix',
-        'greeting' => 'greeting',
-        'clientNumber' => 'clientNumber',
-        'nameLine1' => 'nameLine1',
-        'nameLine2' => 'nameLine2',
-        'abbreviation' => 'abbreviation'
+        'type' => 'type'
     ];
 
     /**
@@ -230,20 +178,7 @@ class ContactsCreateIdentificationPayload implements ModelInterface, ArrayAccess
      * @var array<string, string>
      */
     protected static array $setters = [
-        'type' => 'setType',
-        'firstName' => 'setFirstName',
-        'lastName' => 'setLastName',
-        'gender' => 'setGender',
-        'title' => 'setTitle',
-        'middleName' => 'setMiddleName',
-        'maidenName' => 'setMaidenName',
-        'nickname' => 'setNickname',
-        'suffix' => 'setSuffix',
-        'greeting' => 'setGreeting',
-        'clientNumber' => 'setClientNumber',
-        'nameLine1' => 'setNameLine1',
-        'nameLine2' => 'setNameLine2',
-        'abbreviation' => 'setAbbreviation'
+        'type' => 'setType'
     ];
 
     /**
@@ -252,20 +187,7 @@ class ContactsCreateIdentificationPayload implements ModelInterface, ArrayAccess
      * @var array<string, string>
      */
     protected static array $getters = [
-        'type' => 'getType',
-        'firstName' => 'getFirstName',
-        'lastName' => 'getLastName',
-        'gender' => 'getGender',
-        'title' => 'getTitle',
-        'middleName' => 'getMiddleName',
-        'maidenName' => 'getMaidenName',
-        'nickname' => 'getNickname',
-        'suffix' => 'getSuffix',
-        'greeting' => 'getGreeting',
-        'clientNumber' => 'getClientNumber',
-        'nameLine1' => 'getNameLine1',
-        'nameLine2' => 'getNameLine2',
-        'abbreviation' => 'getAbbreviation'
+        'type' => 'getType'
     ];
 
     /**
@@ -330,19 +252,6 @@ class ContactsCreateIdentificationPayload implements ModelInterface, ArrayAccess
         $this->container['type'] = static::$openAPIModelName;
 
         $this->setIfExists('type', $data ?? [], null);
-        $this->setIfExists('firstName', $data ?? [], null);
-        $this->setIfExists('lastName', $data ?? [], null);
-        $this->setIfExists('gender', $data ?? [], null);
-        $this->setIfExists('title', $data ?? [], null);
-        $this->setIfExists('middleName', $data ?? [], null);
-        $this->setIfExists('maidenName', $data ?? [], null);
-        $this->setIfExists('nickname', $data ?? [], null);
-        $this->setIfExists('suffix', $data ?? [], null);
-        $this->setIfExists('greeting', $data ?? [], null);
-        $this->setIfExists('clientNumber', $data ?? [], null);
-        $this->setIfExists('nameLine1', $data ?? [], null);
-        $this->setIfExists('nameLine2', $data ?? [], null);
-        $this->setIfExists('abbreviation', $data ?? [], null);
     }
 
     /**
@@ -372,20 +281,8 @@ class ContactsCreateIdentificationPayload implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['firstName'] === null) {
-            $invalidProperties[] = "'firstName' can't be null";
-        }
-        if ($this->container['lastName'] === null) {
-            $invalidProperties[] = "'lastName' can't be null";
-        }
-        if ($this->container['gender'] === null) {
-            $invalidProperties[] = "'gender' can't be null";
-        }
-        if ($this->container['nameLine1'] === null) {
-            $invalidProperties[] = "'nameLine1' can't be null";
-        }
-        if ($this->container['abbreviation'] === null) {
-            $invalidProperties[] = "'abbreviation' can't be null";
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
         }
         return $invalidProperties;
     }
@@ -405,9 +302,9 @@ class ContactsCreateIdentificationPayload implements ModelInterface, ArrayAccess
     /**
      * Gets type
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactIdentificationType|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactIdentificationType
      */
-    public function getType(): ?\Equisoft\SDK\EquisoftConnect\Model\ContactIdentificationType
+    public function getType(): \Equisoft\SDK\EquisoftConnect\Model\ContactIdentificationType
     {
         return $this->container['type'];
     }
@@ -415,430 +312,16 @@ class ContactsCreateIdentificationPayload implements ModelInterface, ArrayAccess
     /**
      * Sets type
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactIdentificationType|null $type type
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactIdentificationType $type type
      *
      * @return $this
      */
-    public function setType(?\Equisoft\SDK\EquisoftConnect\Model\ContactIdentificationType $type): static
+    public function setType(\Equisoft\SDK\EquisoftConnect\Model\ContactIdentificationType $type): static
     {
         if (is_null($type)) {
             throw new InvalidArgumentException('non-nullable type cannot be null');
         }
         $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets firstName
-     *
-     * @return string
-     */
-    public function getFirstName(): string
-    {
-        return $this->container['firstName'];
-    }
-
-    /**
-     * Sets firstName
-     *
-     * @param string $firstName Individual's first name
-     *
-     * @return $this
-     */
-    public function setFirstName(string $firstName): static
-    {
-        if (is_null($firstName)) {
-            throw new InvalidArgumentException('non-nullable firstName cannot be null');
-        }
-        $this->container['firstName'] = $firstName;
-
-        return $this;
-    }
-
-    /**
-     * Gets lastName
-     *
-     * @return string
-     */
-    public function getLastName(): string
-    {
-        return $this->container['lastName'];
-    }
-
-    /**
-     * Sets lastName
-     *
-     * @param string $lastName Individual's middle name
-     *
-     * @return $this
-     */
-    public function setLastName(string $lastName): static
-    {
-        if (is_null($lastName)) {
-            throw new InvalidArgumentException('non-nullable lastName cannot be null');
-        }
-        $this->container['lastName'] = $lastName;
-
-        return $this;
-    }
-
-    /**
-     * Gets gender
-     *
-     * @return mixed|null
-     */
-    public function getGender(): mixed
-    {
-        return $this->container['gender'];
-    }
-
-    /**
-     * Sets gender
-     *
-     * @param mixed|null $gender Individual's gender. Either MALE, FEMALE or UNKNOWN.
-     *
-     * @return $this
-     */
-    public function setGender(mixed $gender): static
-    {
-        if (is_null($gender)) {
-            array_push($this->openAPINullablesSetToNull, 'gender');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('gender', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['gender'] = $gender;
-
-        return $this;
-    }
-
-    /**
-     * Gets title
-     *
-     * @return int|null
-     */
-    public function getTitle(): ?int
-    {
-        return $this->container['title'];
-    }
-
-    /**
-     * Sets title
-     *
-     * @param int|null $title Individual's title.              Refer to the values provided by the FieldValue endpoint with fieldName CIVILITY_TITLE.
-     *
-     * @return $this
-     */
-    public function setTitle(?int $title): static
-    {
-        if (is_null($title)) {
-            array_push($this->openAPINullablesSetToNull, 'title');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('title', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['title'] = $title;
-
-        return $this;
-    }
-
-    /**
-     * Gets middleName
-     *
-     * @return string|null
-     */
-    public function getMiddleName(): ?string
-    {
-        return $this->container['middleName'];
-    }
-
-    /**
-     * Sets middleName
-     *
-     * @param string|null $middleName Individual's maiden name
-     *
-     * @return $this
-     */
-    public function setMiddleName(?string $middleName): static
-    {
-        if (is_null($middleName)) {
-            array_push($this->openAPINullablesSetToNull, 'middleName');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('middleName', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['middleName'] = $middleName;
-
-        return $this;
-    }
-
-    /**
-     * Gets maidenName
-     *
-     * @return string|null
-     */
-    public function getMaidenName(): ?string
-    {
-        return $this->container['maidenName'];
-    }
-
-    /**
-     * Sets maidenName
-     *
-     * @param string|null $maidenName Individual's last name
-     *
-     * @return $this
-     */
-    public function setMaidenName(?string $maidenName): static
-    {
-        if (is_null($maidenName)) {
-            array_push($this->openAPINullablesSetToNull, 'maidenName');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('maidenName', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['maidenName'] = $maidenName;
-
-        return $this;
-    }
-
-    /**
-     * Gets nickname
-     *
-     * @return string|null
-     */
-    public function getNickname(): ?string
-    {
-        return $this->container['nickname'];
-    }
-
-    /**
-     * Sets nickname
-     *
-     * @param string|null $nickname Individual's suffix
-     *
-     * @return $this
-     */
-    public function setNickname(?string $nickname): static
-    {
-        if (is_null($nickname)) {
-            array_push($this->openAPINullablesSetToNull, 'nickname');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('nickname', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['nickname'] = $nickname;
-
-        return $this;
-    }
-
-    /**
-     * Gets suffix
-     *
-     * @return string|null
-     */
-    public function getSuffix(): ?string
-    {
-        return $this->container['suffix'];
-    }
-
-    /**
-     * Sets suffix
-     *
-     * @param string|null $suffix Individual's nickname
-     *
-     * @return $this
-     */
-    public function setSuffix(?string $suffix): static
-    {
-        if (is_null($suffix)) {
-            array_push($this->openAPINullablesSetToNull, 'suffix');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('suffix', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['suffix'] = $suffix;
-
-        return $this;
-    }
-
-    /**
-     * Gets greeting
-     *
-     * @return string|null
-     */
-    public function getGreeting(): ?string
-    {
-        return $this->container['greeting'];
-    }
-
-    /**
-     * Sets greeting
-     *
-     * @param string|null $greeting Individual's greeting
-     *
-     * @return $this
-     */
-    public function setGreeting(?string $greeting): static
-    {
-        if (is_null($greeting)) {
-            array_push($this->openAPINullablesSetToNull, 'greeting');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('greeting', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['greeting'] = $greeting;
-
-        return $this;
-    }
-
-    /**
-     * Gets clientNumber
-     *
-     * @return string|null
-     */
-    public function getClientNumber(): ?string
-    {
-        return $this->container['clientNumber'];
-    }
-
-    /**
-     * Sets clientNumber
-     *
-     * @param string|null $clientNumber Individual's client number
-     *
-     * @return $this
-     */
-    public function setClientNumber(?string $clientNumber): static
-    {
-        if (is_null($clientNumber)) {
-            array_push($this->openAPINullablesSetToNull, 'clientNumber');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('clientNumber', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['clientNumber'] = $clientNumber;
-
-        return $this;
-    }
-
-    /**
-     * Gets nameLine1
-     *
-     * @return string
-     */
-    public function getNameLine1(): string
-    {
-        return $this->container['nameLine1'];
-    }
-
-    /**
-     * Sets nameLine1
-     *
-     * @param string $nameLine1 Organization's name line one
-     *
-     * @return $this
-     */
-    public function setNameLine1(string $nameLine1): static
-    {
-        if (is_null($nameLine1)) {
-            throw new InvalidArgumentException('non-nullable nameLine1 cannot be null');
-        }
-        $this->container['nameLine1'] = $nameLine1;
-
-        return $this;
-    }
-
-    /**
-     * Gets nameLine2
-     *
-     * @return string|null
-     */
-    public function getNameLine2(): ?string
-    {
-        return $this->container['nameLine2'];
-    }
-
-    /**
-     * Sets nameLine2
-     *
-     * @param string|null $nameLine2 Organization's name line two
-     *
-     * @return $this
-     */
-    public function setNameLine2(?string $nameLine2): static
-    {
-        if (is_null($nameLine2)) {
-            array_push($this->openAPINullablesSetToNull, 'nameLine2');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('nameLine2', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['nameLine2'] = $nameLine2;
-
-        return $this;
-    }
-
-    /**
-     * Gets abbreviation
-     *
-     * @return string
-     */
-    public function getAbbreviation(): string
-    {
-        return $this->container['abbreviation'];
-    }
-
-    /**
-     * Sets abbreviation
-     *
-     * @param string $abbreviation Organization's name abbreviated
-     *
-     * @return $this
-     */
-    public function setAbbreviation(string $abbreviation): static
-    {
-        if (is_null($abbreviation)) {
-            throw new InvalidArgumentException('non-nullable abbreviation cannot be null');
-        }
-        $this->container['abbreviation'] = $abbreviation;
 
         return $this;
     }
