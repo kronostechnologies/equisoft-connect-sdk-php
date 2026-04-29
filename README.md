@@ -76,6 +76,7 @@ All URIs are relative to *http://localhost*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *ContactsApi* | [**createContact**](docs/Api/ContactsApi.md#createcontact) | **POST** /crm/api/v1/contacts | Create a contact
+*ContactsApi* | [**createHousehold**](docs/Api/ContactsApi.md#createhousehold) | **POST** /crm/api/v1/contacts/household | Create a household (EXPERIMENTAL)
 *ContactsApi* | [**getByUuid**](docs/Api/ContactsApi.md#getbyuuid) | **GET** /crm/api/v1/contacts/{contactUuid} | Get contact by Uuid
 *ContactsApi* | [**listContact**](docs/Api/ContactsApi.md#listcontact) | **GET** /crm/api/v1/contacts | List contact
 *ContactsApi* | [**listContactDocument**](docs/Api/ContactsApi.md#listcontactdocument) | **GET** /crm/api/v1/contacts/{contactUuid}/documents | List contact documents
@@ -249,6 +250,7 @@ Class | Method | HTTP request | Description
 - [ContactsCreateSegmentationPayload](docs/Model/ContactsCreateSegmentationPayload.md)
 - [ContactsCreateWebsitePayload](docs/Model/ContactsCreateWebsitePayload.md)
 - [ContactsEmail](docs/Model/ContactsEmail.md)
+- [ContactsHouseholdCreateHouseholdPayload](docs/Model/ContactsHouseholdCreateHouseholdPayload.md)
 - [ContactsIdentification](docs/Model/ContactsIdentification.md)
 - [ContactsIndividualIdentification](docs/Model/ContactsIndividualIdentification.md)
 - [ContactsInvestmentObjective](docs/Model/ContactsInvestmentObjective.md)

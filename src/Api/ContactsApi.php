@@ -76,6 +76,9 @@ class ContactsApi
         'createContact' => [
             'application/json',
         ],
+        'createHousehold' => [
+            'application/json',
+        ],
         'getByUuid' => [
             'application/json',
         ],
@@ -399,6 +402,349 @@ class ContactsApi
                 $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($contactsCreateContactPayload));
             } else {
                 $httpBody = $contactsCreateContactPayload;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        if (is_string($formParamValueItem)) {
+                            // JSON part
+                            $multipartContents[] = [
+                                'name' => $formParamName,
+                                'contents' => $formParamValueItem,
+                                'headers' => [
+                                    'Content-Disposition' => "form-data; name=\"$formParamName\"; filename=\"$formParamName.json\"",
+                                    'Content-Type' => 'application/json; charset=UTF-8'
+                                ]
+                            ];
+                        } else {
+                            $multipartContents[] = [
+                                'name' => $formParamName,
+                                'contents' => $formParamValueItem
+                            ];
+                        }
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation createHousehold
+     *
+     * Create a household (EXPERIMENTAL)
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdCreateHouseholdPayload $contactsHouseholdCreateHouseholdPayload contactsHouseholdCreateHouseholdPayload (required)
+     * @param  string|null $name The name of the Household to create (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHousehold'] to see the possible values for this operation
+     *
+     * @throws ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws InvalidArgumentException
+     * @return mixed|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+     */
+    public function createHousehold(
+        \Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdCreateHouseholdPayload $contactsHouseholdCreateHouseholdPayload,
+        ?string $name = null,
+        string $contentType = self::contentTypes['createHousehold'][0]
+    ): mixed|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+    {
+        list($response) = $this->createHouseholdWithHttpInfo($contactsHouseholdCreateHouseholdPayload, $name, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation createHouseholdWithHttpInfo
+     *
+     * Create a household (EXPERIMENTAL)
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdCreateHouseholdPayload $contactsHouseholdCreateHouseholdPayload (required)
+     * @param  string|null $name The name of the Household to create (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHousehold'] to see the possible values for this operation
+     *
+     * @throws ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws InvalidArgumentException
+     * @return array of mixed|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function createHouseholdWithHttpInfo(
+        \Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdCreateHouseholdPayload $contactsHouseholdCreateHouseholdPayload,
+        ?string $name = null,
+        string $contentType = self::contentTypes['createHousehold'][0]
+    ): array
+    {
+        $request = $this->createHouseholdRequest($contactsHouseholdCreateHouseholdPayload, $name, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            switch($statusCode) {
+                case 201:
+                    return $this->handleResponseWithDataType(
+                        'mixed',
+                        $request,
+                        $response,
+                    );
+                case 500:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
+                case 400:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
+            }
+            
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return $this->handleResponseWithDataType(
+                'mixed',
+                $request,
+                $response,
+            );
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'mixed',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+            }
+        
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation createHouseholdAsync
+     *
+     * Create a household (EXPERIMENTAL)
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdCreateHouseholdPayload $contactsHouseholdCreateHouseholdPayload (required)
+     * @param  string|null $name The name of the Household to create (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHousehold'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
+     */
+    public function createHouseholdAsync(
+        \Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdCreateHouseholdPayload $contactsHouseholdCreateHouseholdPayload,
+        ?string $name = null,
+        string $contentType = self::contentTypes['createHousehold'][0]
+    ): PromiseInterface
+    {
+        return $this->createHouseholdAsyncWithHttpInfo($contactsHouseholdCreateHouseholdPayload, $name, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation createHouseholdAsyncWithHttpInfo
+     *
+     * Create a household (EXPERIMENTAL)
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdCreateHouseholdPayload $contactsHouseholdCreateHouseholdPayload (required)
+     * @param  string|null $name The name of the Household to create (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHousehold'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
+     */
+    public function createHouseholdAsyncWithHttpInfo(
+        \Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdCreateHouseholdPayload $contactsHouseholdCreateHouseholdPayload,
+        ?string $name = null,
+        string $contentType = self::contentTypes['createHousehold'][0]
+    ): PromiseInterface
+    {
+        $returnType = 'mixed';
+        $request = $this->createHouseholdRequest($contactsHouseholdCreateHouseholdPayload, $name, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if (in_array($returnType, ['\SplFileObject', '\Psr\Http\Message\StreamInterface'])) {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'createHousehold'
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdCreateHouseholdPayload $contactsHouseholdCreateHouseholdPayload (required)
+     * @param  string|null $name The name of the Household to create (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createHousehold'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function createHouseholdRequest(
+        \Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdCreateHouseholdPayload $contactsHouseholdCreateHouseholdPayload,
+        ?string $name = null,
+        string $contentType = self::contentTypes['createHousehold'][0]
+    ): Request
+    {
+
+        // verify the required parameter 'contactsHouseholdCreateHouseholdPayload' is set
+        if ($contactsHouseholdCreateHouseholdPayload === null || (is_array($contactsHouseholdCreateHouseholdPayload) && count($contactsHouseholdCreateHouseholdPayload) === 0)) {
+            throw new InvalidArgumentException(
+                'Missing the required parameter $contactsHouseholdCreateHouseholdPayload when calling createHousehold'
+            );
+        }
+
+
+
+        $resourcePath = '/crm/api/v1/contacts/household';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $name,
+            'name', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($contactsHouseholdCreateHouseholdPayload)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($contactsHouseholdCreateHouseholdPayload));
+            } else {
+                $httpBody = $contactsHouseholdCreateHouseholdPayload;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
