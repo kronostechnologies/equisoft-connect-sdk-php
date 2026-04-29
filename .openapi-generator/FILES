@@ -634,4 +634,3 @@ src/Model/UsersUpdateUserPayload.php
 src/Model/UsersUser.php
 src/Model/UsersUserGroup.php
 src/ObjectSerializer.php
-tests/Model/ContactsHouseholdCreateHouseholdPayloadTest.php
