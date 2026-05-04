@@ -58,7 +58,9 @@ class ContactsHouseholdCreateHouseholdPayload implements ModelInterface, ArrayAc
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'name' => 'string'
+        'name' => 'string',
+        'ownerIds' => 'int[]',
+        'private' => 'bool'
     ];
 
     /**
@@ -67,7 +69,9 @@ class ContactsHouseholdCreateHouseholdPayload implements ModelInterface, ArrayAc
       * @var array<string, string|null>
       */
     protected static array $openAPIFormats = [
-        'name' => null
+        'name' => null,
+        'ownerIds' => null,
+        'private' => null
     ];
 
     /**
@@ -76,7 +80,9 @@ class ContactsHouseholdCreateHouseholdPayload implements ModelInterface, ArrayAc
       * @var array<string, bool>
       */
     protected static array $openAPINullables = [
-        'name' => false
+        'name' => false,
+        'ownerIds' => false,
+        'private' => false
     ];
 
     /**
@@ -165,7 +171,9 @@ class ContactsHouseholdCreateHouseholdPayload implements ModelInterface, ArrayAc
      * @var array<string, string>
      */
     protected static array $attributeMap = [
-        'name' => 'name'
+        'name' => 'name',
+        'ownerIds' => 'ownerIds',
+        'private' => 'private'
     ];
 
     /**
@@ -174,7 +182,9 @@ class ContactsHouseholdCreateHouseholdPayload implements ModelInterface, ArrayAc
      * @var array<string, string>
      */
     protected static array $setters = [
-        'name' => 'setName'
+        'name' => 'setName',
+        'ownerIds' => 'setOwnerIds',
+        'private' => 'setPrivate'
     ];
 
     /**
@@ -183,7 +193,9 @@ class ContactsHouseholdCreateHouseholdPayload implements ModelInterface, ArrayAc
      * @var array<string, string>
      */
     protected static array $getters = [
-        'name' => 'getName'
+        'name' => 'getName',
+        'ownerIds' => 'getOwnerIds',
+        'private' => 'getPrivate'
     ];
 
     /**
@@ -243,6 +255,8 @@ class ContactsHouseholdCreateHouseholdPayload implements ModelInterface, ArrayAc
     public function __construct(?array $data = null)
     {
         $this->setIfExists('name', $data ?? [], null);
+        $this->setIfExists('ownerIds', $data ?? [], null);
+        $this->setIfExists('private', $data ?? [], null);
     }
 
     /**
@@ -313,6 +327,60 @@ class ContactsHouseholdCreateHouseholdPayload implements ModelInterface, ArrayAc
             throw new InvalidArgumentException('non-nullable name cannot be null');
         }
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets ownerIds
+     *
+     * @return int[]|null
+     */
+    public function getOwnerIds(): ?array
+    {
+        return $this->container['ownerIds'];
+    }
+
+    /**
+     * Sets ownerIds
+     *
+     * @param int[]|null $ownerIds ownerIds
+     *
+     * @return $this
+     */
+    public function setOwnerIds(?array $ownerIds): static
+    {
+        if (is_null($ownerIds)) {
+            throw new InvalidArgumentException('non-nullable ownerIds cannot be null');
+        }
+        $this->container['ownerIds'] = $ownerIds;
+
+        return $this;
+    }
+
+    /**
+     * Gets private
+     *
+     * @return bool|null
+     */
+    public function getPrivate(): ?bool
+    {
+        return $this->container['private'];
+    }
+
+    /**
+     * Sets private
+     *
+     * @param bool|null $private private
+     *
+     * @return $this
+     */
+    public function setPrivate(?bool $private): static
+    {
+        if (is_null($private)) {
+            throw new InvalidArgumentException('non-nullable private cannot be null');
+        }
+        $this->container['private'] = $private;
 
         return $this;
     }
