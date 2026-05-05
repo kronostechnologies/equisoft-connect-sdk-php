@@ -59,7 +59,7 @@ class ContactsHouseholdCreateHouseholdPayload implements ModelInterface, ArrayAc
       */
     protected static array $openAPITypes = [
         'name' => 'string',
-        'ownerIds' => 'int[]',
+        'ownerUuids' => 'string[]',
         'private' => 'bool'
     ];
 
@@ -70,7 +70,7 @@ class ContactsHouseholdCreateHouseholdPayload implements ModelInterface, ArrayAc
       */
     protected static array $openAPIFormats = [
         'name' => null,
-        'ownerIds' => null,
+        'ownerUuids' => null,
         'private' => null
     ];
 
@@ -81,7 +81,7 @@ class ContactsHouseholdCreateHouseholdPayload implements ModelInterface, ArrayAc
       */
     protected static array $openAPINullables = [
         'name' => false,
-        'ownerIds' => false,
+        'ownerUuids' => false,
         'private' => false
     ];
 
@@ -172,7 +172,7 @@ class ContactsHouseholdCreateHouseholdPayload implements ModelInterface, ArrayAc
      */
     protected static array $attributeMap = [
         'name' => 'name',
-        'ownerIds' => 'ownerIds',
+        'ownerUuids' => 'ownerUuids',
         'private' => 'private'
     ];
 
@@ -183,7 +183,7 @@ class ContactsHouseholdCreateHouseholdPayload implements ModelInterface, ArrayAc
      */
     protected static array $setters = [
         'name' => 'setName',
-        'ownerIds' => 'setOwnerIds',
+        'ownerUuids' => 'setOwnerUuids',
         'private' => 'setPrivate'
     ];
 
@@ -194,7 +194,7 @@ class ContactsHouseholdCreateHouseholdPayload implements ModelInterface, ArrayAc
      */
     protected static array $getters = [
         'name' => 'getName',
-        'ownerIds' => 'getOwnerIds',
+        'ownerUuids' => 'getOwnerUuids',
         'private' => 'getPrivate'
     ];
 
@@ -255,7 +255,7 @@ class ContactsHouseholdCreateHouseholdPayload implements ModelInterface, ArrayAc
     public function __construct(?array $data = null)
     {
         $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('ownerIds', $data ?? [], null);
+        $this->setIfExists('ownerUuids', $data ?? [], null);
         $this->setIfExists('private', $data ?? [], null);
     }
 
@@ -332,28 +332,28 @@ class ContactsHouseholdCreateHouseholdPayload implements ModelInterface, ArrayAc
     }
 
     /**
-     * Gets ownerIds
+     * Gets ownerUuids
      *
-     * @return int[]|null
+     * @return string[]|null
      */
-    public function getOwnerIds(): ?array
+    public function getOwnerUuids(): ?array
     {
-        return $this->container['ownerIds'];
+        return $this->container['ownerUuids'];
     }
 
     /**
-     * Sets ownerIds
+     * Sets ownerUuids
      *
-     * @param int[]|null $ownerIds ownerIds
+     * @param string[]|null $ownerUuids ownerUuids
      *
      * @return $this
      */
-    public function setOwnerIds(?array $ownerIds): static
+    public function setOwnerUuids(?array $ownerUuids): static
     {
-        if (is_null($ownerIds)) {
-            throw new InvalidArgumentException('non-nullable ownerIds cannot be null');
+        if (is_null($ownerUuids)) {
+            throw new InvalidArgumentException('non-nullable ownerUuids cannot be null');
         }
-        $this->container['ownerIds'] = $ownerIds;
+        $this->container['ownerUuids'] = $ownerUuids;
 
         return $this;
     }
