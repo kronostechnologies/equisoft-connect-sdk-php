@@ -640,6 +640,3 @@ src/Model/UsersUser.php
 src/Model/UsersUserGroup.php
 src/Model/UsersUserIdentity.php
 src/ObjectSerializer.php
-tests/Model/ContactsHouseholdGetHouseholdResponseTest.php
-tests/Model/ContactsHouseholdHouseholdTest.php
-tests/Model/UsersUserIdentityTest.php
