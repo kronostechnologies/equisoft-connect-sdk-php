@@ -56,6 +56,8 @@ docs/Model/ContactsCreateSegmentationPayload.md
 docs/Model/ContactsCreateWebsitePayload.md
 docs/Model/ContactsEmail.md
 docs/Model/ContactsHouseholdCreateHouseholdPayload.md
+docs/Model/ContactsHouseholdGetHouseholdResponse.md
+docs/Model/ContactsHouseholdHousehold.md
 docs/Model/ContactsIdentification.md
 docs/Model/ContactsIndividualIdentification.md
 docs/Model/ContactsInvestmentObjective.md
@@ -315,6 +317,7 @@ docs/Model/UsersRole.md
 docs/Model/UsersUpdateUserPayload.md
 docs/Model/UsersUser.md
 docs/Model/UsersUserGroup.md
+docs/Model/UsersUserIdentity.md
 git_push.sh
 phpunit.xml.dist
 src/Api/ContactsApi.php
@@ -373,6 +376,8 @@ src/Model/ContactsCreateSegmentationPayload.php
 src/Model/ContactsCreateWebsitePayload.php
 src/Model/ContactsEmail.php
 src/Model/ContactsHouseholdCreateHouseholdPayload.php
+src/Model/ContactsHouseholdGetHouseholdResponse.php
+src/Model/ContactsHouseholdHousehold.php
 src/Model/ContactsIdentification.php
 src/Model/ContactsIndividualIdentification.php
 src/Model/ContactsInvestmentObjective.php
@@ -633,4 +638,8 @@ src/Model/UsersRole.php
 src/Model/UsersUpdateUserPayload.php
 src/Model/UsersUser.php
 src/Model/UsersUserGroup.php
+src/Model/UsersUserIdentity.php
 src/ObjectSerializer.php
+tests/Model/ContactsHouseholdGetHouseholdResponseTest.php
+tests/Model/ContactsHouseholdHouseholdTest.php
+tests/Model/UsersUserIdentityTest.php

@@ -82,6 +82,9 @@ class ContactsApi
         'getByUuid' => [
             'application/json',
         ],
+        'getHouseholdByUuid' => [
+            'application/json',
+        ],
         'listContact' => [
             'application/json',
         ],
@@ -476,13 +479,13 @@ class ContactsApi
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return mixed|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdGetHouseholdResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
     public function createHousehold(
         \Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdCreateHouseholdPayload $contactsHouseholdCreateHouseholdPayload,
         ?string $name = null,
         string $contentType = self::contentTypes['createHousehold'][0]
-    ): mixed|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+    ): \Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdGetHouseholdResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
     {
         list($response) = $this->createHouseholdWithHttpInfo($contactsHouseholdCreateHouseholdPayload, $name, $contentType);
         return $response;
@@ -499,7 +502,7 @@ class ContactsApi
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of mixed|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdGetHouseholdResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createHouseholdWithHttpInfo(
         \Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdCreateHouseholdPayload $contactsHouseholdCreateHouseholdPayload,
@@ -534,7 +537,7 @@ class ContactsApi
             switch($statusCode) {
                 case 201:
                     return $this->handleResponseWithDataType(
-                        'mixed',
+                        '\Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdGetHouseholdResponse',
                         $request,
                         $response,
                     );
@@ -567,7 +570,7 @@ class ContactsApi
             }
 
             return $this->handleResponseWithDataType(
-                'mixed',
+                '\Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdGetHouseholdResponse',
                 $request,
                 $response,
             );
@@ -576,7 +579,7 @@ class ContactsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'mixed',
+                        '\Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdGetHouseholdResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -647,7 +650,7 @@ class ContactsApi
         string $contentType = self::contentTypes['createHousehold'][0]
     ): PromiseInterface
     {
-        $returnType = 'mixed';
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdGetHouseholdResponse';
         $request = $this->createHouseholdRequest($contactsHouseholdCreateHouseholdPayload, $name, $contentType);
 
         return $this->client
@@ -811,46 +814,370 @@ class ContactsApi
     /**
      * Operation getByUuid
      *
-     * Get contact by Uuid
+     * Gets a household by uuid (EXPERIMENTAL)
      *
-     * @param  string $contactUuid Contact unique identifier. (required)
-     * @param  string|null $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $householdUuid The unique identifier of the household to fetch (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getByUuid'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContact|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdGetHouseholdResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
      */
     public function getByUuid(
-        string $contactUuid,
-        ?string $acceptLanguage = null,
+        string $householdUuid,
         string $contentType = self::contentTypes['getByUuid'][0]
-    ): \Equisoft\SDK\EquisoftConnect\Model\ContactsContact|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+    ): \Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdGetHouseholdResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
     {
-        list($response) = $this->getByUuidWithHttpInfo($contactUuid, $acceptLanguage, $contentType);
+        list($response) = $this->getByUuidWithHttpInfo($householdUuid, $contentType);
         return $response;
     }
 
     /**
      * Operation getByUuidWithHttpInfo
      *
+     * Gets a household by uuid (EXPERIMENTAL)
+     *
+     * @param  string $householdUuid The unique identifier of the household to fetch (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getByUuid'] to see the possible values for this operation
+     *
+     * @throws ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdGetHouseholdResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getByUuidWithHttpInfo(
+        string $householdUuid,
+        string $contentType = self::contentTypes['getByUuid'][0]
+    ): array
+    {
+        $request = $this->getByUuidRequest($householdUuid, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            switch($statusCode) {
+                case 200:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdGetHouseholdResponse',
+                        $request,
+                        $response,
+                    );
+                case 500:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
+                case 400:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
+            }
+            
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return $this->handleResponseWithDataType(
+                '\Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdGetHouseholdResponse',
+                $request,
+                $response,
+            );
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdGetHouseholdResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+            }
+        
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getByUuidAsync
+     *
+     * Gets a household by uuid (EXPERIMENTAL)
+     *
+     * @param  string $householdUuid The unique identifier of the household to fetch (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getByUuid'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
+     */
+    public function getByUuidAsync(
+        string $householdUuid,
+        string $contentType = self::contentTypes['getByUuid'][0]
+    ): PromiseInterface
+    {
+        return $this->getByUuidAsyncWithHttpInfo($householdUuid, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getByUuidAsyncWithHttpInfo
+     *
+     * Gets a household by uuid (EXPERIMENTAL)
+     *
+     * @param  string $householdUuid The unique identifier of the household to fetch (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getByUuid'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
+     */
+    public function getByUuidAsyncWithHttpInfo(
+        string $householdUuid,
+        string $contentType = self::contentTypes['getByUuid'][0]
+    ): PromiseInterface
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdGetHouseholdResponse';
+        $request = $this->getByUuidRequest($householdUuid, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if (in_array($returnType, ['\SplFileObject', '\Psr\Http\Message\StreamInterface'])) {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getByUuid'
+     *
+     * @param  string $householdUuid The unique identifier of the household to fetch (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getByUuid'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function getByUuidRequest(
+        string $householdUuid,
+        string $contentType = self::contentTypes['getByUuid'][0]
+    ): Request
+    {
+
+        // verify the required parameter 'householdUuid' is set
+        if ($householdUuid === null || (is_array($householdUuid) && count($householdUuid) === 0)) {
+            throw new InvalidArgumentException(
+                'Missing the required parameter $householdUuid when calling getByUuid'
+            );
+        }
+
+
+        $resourcePath = '/crm/api/v1/contacts/household/{householdUuid}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if ($householdUuid !== null) {
+            $resourcePath = str_replace(
+                '{' . 'householdUuid' . '}',
+                ObjectSerializer::toPathValue($householdUuid),
+                $resourcePath
+            );
+        }
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        if (is_string($formParamValueItem)) {
+                            // JSON part
+                            $multipartContents[] = [
+                                'name' => $formParamName,
+                                'contents' => $formParamValueItem,
+                                'headers' => [
+                                    'Content-Disposition' => "form-data; name=\"$formParamName\"; filename=\"$formParamName.json\"",
+                                    'Content-Type' => 'application/json; charset=UTF-8'
+                                ]
+                            ];
+                        } else {
+                            $multipartContents[] = [
+                                'name' => $formParamName,
+                                'contents' => $formParamValueItem
+                            ];
+                        }
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getHouseholdByUuid
+     *
      * Get contact by Uuid
      *
      * @param  string $contactUuid Contact unique identifier. (required)
      * @param  string|null $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getByUuid'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getHouseholdByUuid'] to see the possible values for this operation
+     *
+     * @throws ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsContact|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+     */
+    public function getHouseholdByUuid(
+        string $contactUuid,
+        ?string $acceptLanguage = null,
+        string $contentType = self::contentTypes['getHouseholdByUuid'][0]
+    ): \Equisoft\SDK\EquisoftConnect\Model\ContactsContact|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+    {
+        list($response) = $this->getHouseholdByUuidWithHttpInfo($contactUuid, $acceptLanguage, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation getHouseholdByUuidWithHttpInfo
+     *
+     * Get contact by Uuid
+     *
+     * @param  string $contactUuid Contact unique identifier. (required)
+     * @param  string|null $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getHouseholdByUuid'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
      * @return array of \Equisoft\SDK\EquisoftConnect\Model\ContactsContact|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getByUuidWithHttpInfo(
+    public function getHouseholdByUuidWithHttpInfo(
         string $contactUuid,
         ?string $acceptLanguage = null,
-        string $contentType = self::contentTypes['getByUuid'][0]
+        string $contentType = self::contentTypes['getHouseholdByUuid'][0]
     ): array
     {
-        $request = $this->getByUuidRequest($contactUuid, $acceptLanguage, $contentType);
+        $request = $this->getHouseholdByUuidRequest($contactUuid, $acceptLanguage, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -961,24 +1288,24 @@ class ContactsApi
     }
 
     /**
-     * Operation getByUuidAsync
+     * Operation getHouseholdByUuidAsync
      *
      * Get contact by Uuid
      *
      * @param  string $contactUuid Contact unique identifier. (required)
      * @param  string|null $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getByUuid'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getHouseholdByUuid'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
-    public function getByUuidAsync(
+    public function getHouseholdByUuidAsync(
         string $contactUuid,
         ?string $acceptLanguage = null,
-        string $contentType = self::contentTypes['getByUuid'][0]
+        string $contentType = self::contentTypes['getHouseholdByUuid'][0]
     ): PromiseInterface
     {
-        return $this->getByUuidAsyncWithHttpInfo($contactUuid, $acceptLanguage, $contentType)
+        return $this->getHouseholdByUuidAsyncWithHttpInfo($contactUuid, $acceptLanguage, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -987,25 +1314,25 @@ class ContactsApi
     }
 
     /**
-     * Operation getByUuidAsyncWithHttpInfo
+     * Operation getHouseholdByUuidAsyncWithHttpInfo
      *
      * Get contact by Uuid
      *
      * @param  string $contactUuid Contact unique identifier. (required)
      * @param  string|null $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getByUuid'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getHouseholdByUuid'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
-    public function getByUuidAsyncWithHttpInfo(
+    public function getHouseholdByUuidAsyncWithHttpInfo(
         string $contactUuid,
         ?string $acceptLanguage = null,
-        string $contentType = self::contentTypes['getByUuid'][0]
+        string $contentType = self::contentTypes['getHouseholdByUuid'][0]
     ): PromiseInterface
     {
         $returnType = '\Equisoft\SDK\EquisoftConnect\Model\ContactsContact';
-        $request = $this->getByUuidRequest($contactUuid, $acceptLanguage, $contentType);
+        $request = $this->getHouseholdByUuidRequest($contactUuid, $acceptLanguage, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1044,26 +1371,26 @@ class ContactsApi
     }
 
     /**
-     * Create request for operation 'getByUuid'
+     * Create request for operation 'getHouseholdByUuid'
      *
      * @param  string $contactUuid Contact unique identifier. (required)
      * @param  string|null $acceptLanguage Specify preferred language for returned data. Format is https://tools.ietf.org/html/rfc3282. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getByUuid'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getHouseholdByUuid'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function getByUuidRequest(
+    public function getHouseholdByUuidRequest(
         string $contactUuid,
         ?string $acceptLanguage = null,
-        string $contentType = self::contentTypes['getByUuid'][0]
+        string $contentType = self::contentTypes['getHouseholdByUuid'][0]
     ): Request
     {
 
         // verify the required parameter 'contactUuid' is set
         if ($contactUuid === null || (is_array($contactUuid) && count($contactUuid) === 0)) {
             throw new InvalidArgumentException(
-                'Missing the required parameter $contactUuid when calling getByUuid'
+                'Missing the required parameter $contactUuid when calling getHouseholdByUuid'
             );
         }
 
