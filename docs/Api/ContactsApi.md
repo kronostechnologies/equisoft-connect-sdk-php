@@ -5,9 +5,9 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createContact()**](ContactsApi.md#createContact) | **POST** /crm/api/v1/contacts | Create a contact |
-| [**createHousehold()**](ContactsApi.md#createHousehold) | **POST** /crm/api/v1/contacts/household | Create a household (EXPERIMENTAL) |
+| [**createHousehold()**](ContactsApi.md#createHousehold) | **POST** /crm/api/v1/contacts/households | Create a household (EXPERIMENTAL) |
 | [**getByUuid()**](ContactsApi.md#getByUuid) | **GET** /crm/api/v1/contacts/{contactUuid} | Get contact by Uuid |
-| [**getHouseholdByUuid()**](ContactsApi.md#getHouseholdByUuid) | **GET** /crm/api/v1/contacts/household/{householdUuid} | Gets a household by uuid (EXPERIMENTAL) |
+| [**getHouseholdByUuid()**](ContactsApi.md#getHouseholdByUuid) | **GET** /crm/api/v1/contacts/households/{householdUuid} | Gets a household by uuid (EXPERIMENTAL) |
 | [**listContact()**](ContactsApi.md#listContact) | **GET** /crm/api/v1/contacts | List contact |
 | [**listContactDocument()**](ContactsApi.md#listContactDocument) | **GET** /crm/api/v1/contacts/{contactUuid}/documents | List contact documents |
 | [**listContactInvestment()**](ContactsApi.md#listContactInvestment) | **GET** /crm/api/v1/contacts/{contactUuid}/investmentAccounts | List contact investments |
