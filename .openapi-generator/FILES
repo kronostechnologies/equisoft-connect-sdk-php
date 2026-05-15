@@ -55,6 +55,7 @@ docs/Model/ContactsCreateRevenuePayload.md
 docs/Model/ContactsCreateSegmentationPayload.md
 docs/Model/ContactsCreateWebsitePayload.md
 docs/Model/ContactsEmail.md
+docs/Model/ContactsHouseholdAddress.md
 docs/Model/ContactsHouseholdCreateHouseholdPayload.md
 docs/Model/ContactsHouseholdGetHouseholdResponse.md
 docs/Model/ContactsHouseholdHousehold.md
@@ -375,6 +376,7 @@ src/Model/ContactsCreateRevenuePayload.php
 src/Model/ContactsCreateSegmentationPayload.php
 src/Model/ContactsCreateWebsitePayload.php
 src/Model/ContactsEmail.php
+src/Model/ContactsHouseholdAddress.php
 src/Model/ContactsHouseholdCreateHouseholdPayload.php
 src/Model/ContactsHouseholdGetHouseholdResponse.php
 src/Model/ContactsHouseholdHousehold.php
@@ -640,3 +642,4 @@ src/Model/UsersUser.php
 src/Model/UsersUserGroup.php
 src/Model/UsersUserIdentity.php
 src/ObjectSerializer.php
+tests/Model/ContactsHouseholdAddressTest.php

@@ -251,6 +251,7 @@ Class | Method | HTTP request | Description
 - [ContactsCreateSegmentationPayload](docs/Model/ContactsCreateSegmentationPayload.md)
 - [ContactsCreateWebsitePayload](docs/Model/ContactsCreateWebsitePayload.md)
 - [ContactsEmail](docs/Model/ContactsEmail.md)
+- [ContactsHouseholdAddress](docs/Model/ContactsHouseholdAddress.md)
 - [ContactsHouseholdCreateHouseholdPayload](docs/Model/ContactsHouseholdCreateHouseholdPayload.md)
 - [ContactsHouseholdGetHouseholdResponse](docs/Model/ContactsHouseholdGetHouseholdResponse.md)
 - [ContactsHouseholdHousehold](docs/Model/ContactsHouseholdHousehold.md)
