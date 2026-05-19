@@ -715,7 +715,7 @@ class ContactsApi
 
 
 
-        $resourcePath = '/crm/api/v1/contacts/households';
+        $resourcePath = '/crm/api/v1/households';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1400,7 +1400,7 @@ class ContactsApi
         }
 
 
-        $resourcePath = '/crm/api/v1/contacts/households/{householdUuid}';
+        $resourcePath = '/crm/api/v1/households/{householdUuid}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
