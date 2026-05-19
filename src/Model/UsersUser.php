@@ -59,6 +59,7 @@ class UsersUser implements ModelInterface, ArrayAccess, JsonSerializable
       */
     protected static array $openAPITypes = [
         'id' => 'int',
+        'uuid' => 'string',
         'displayName' => 'string',
         'firstName' => 'string',
         'lastName' => 'string',
@@ -77,6 +78,7 @@ class UsersUser implements ModelInterface, ArrayAccess, JsonSerializable
       */
     protected static array $openAPIFormats = [
         'id' => null,
+        'uuid' => null,
         'displayName' => null,
         'firstName' => null,
         'lastName' => null,
@@ -95,6 +97,7 @@ class UsersUser implements ModelInterface, ArrayAccess, JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
+        'uuid' => true,
         'displayName' => false,
         'firstName' => false,
         'lastName' => false,
@@ -193,6 +196,7 @@ class UsersUser implements ModelInterface, ArrayAccess, JsonSerializable
      */
     protected static array $attributeMap = [
         'id' => 'id',
+        'uuid' => 'uuid',
         'displayName' => 'displayName',
         'firstName' => 'firstName',
         'lastName' => 'lastName',
@@ -211,6 +215,7 @@ class UsersUser implements ModelInterface, ArrayAccess, JsonSerializable
      */
     protected static array $setters = [
         'id' => 'setId',
+        'uuid' => 'setUuid',
         'displayName' => 'setDisplayName',
         'firstName' => 'setFirstName',
         'lastName' => 'setLastName',
@@ -229,6 +234,7 @@ class UsersUser implements ModelInterface, ArrayAccess, JsonSerializable
      */
     protected static array $getters = [
         'id' => 'getId',
+        'uuid' => 'getUuid',
         'displayName' => 'getDisplayName',
         'firstName' => 'getFirstName',
         'lastName' => 'getLastName',
@@ -297,6 +303,7 @@ class UsersUser implements ModelInterface, ArrayAccess, JsonSerializable
     public function __construct(?array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
+        $this->setIfExists('uuid', $data ?? [], null);
         $this->setIfExists('displayName', $data ?? [], null);
         $this->setIfExists('firstName', $data ?? [], null);
         $this->setIfExists('lastName', $data ?? [], null);
@@ -337,6 +344,9 @@ class UsersUser implements ModelInterface, ArrayAccess, JsonSerializable
 
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
+        }
+        if ($this->container['uuid'] === null) {
+            $invalidProperties[] = "'uuid' can't be null";
         }
         if ($this->container['displayName'] === null) {
             $invalidProperties[] = "'displayName' can't be null";
@@ -394,6 +404,40 @@ class UsersUser implements ModelInterface, ArrayAccess, JsonSerializable
             throw new InvalidArgumentException('non-nullable id cannot be null');
         }
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets uuid
+     *
+     * @return string|null
+     */
+    public function getUuid(): ?string
+    {
+        return $this->container['uuid'];
+    }
+
+    /**
+     * Sets uuid
+     *
+     * @param string|null $uuid The user's uuid.
+     *
+     * @return $this
+     */
+    public function setUuid(?string $uuid): static
+    {
+        if (is_null($uuid)) {
+            array_push($this->openAPINullablesSetToNull, 'uuid');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('uuid', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['uuid'] = $uuid;
 
         return $this;
     }

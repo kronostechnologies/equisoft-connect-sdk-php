@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | The user&#39;s unique identifier (ID). |
+**uuid** | **string** | The user&#39;s uuid. |
 **displayName** | **string** | The user&#39;s full display name. |
 **firstName** | **string** | The user&#39;s first name. |
 **lastName** | **string** | The user&#39;s last name. |

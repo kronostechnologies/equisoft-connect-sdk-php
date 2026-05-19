@@ -11,7 +11,6 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 | [**legacyProvisioningDeleteOrganization()**](LegacyProvisioningApi.md#legacyProvisioningDeleteOrganization) | **POST** /apps/provisioning/kronos.provisioning.deleteOrganization | Delete an organization. |
 | [**legacyProvisioningDeleteUser()**](LegacyProvisioningApi.md#legacyProvisioningDeleteUser) | **POST** /apps/provisioning/kronos.provisioning.deleteUser | Delete a user. |
 | [**legacyProvisioningEnableContactPersonalizedFieldsModule()**](LegacyProvisioningApi.md#legacyProvisioningEnableContactPersonalizedFieldsModule) | **POST** /apps/provisioning/kronos.provisioning.enableContactPersonalizedFieldsModule | Enable Contact Personalized Fields module for a database. |
-| [**legacyProvisioningEnableFnaForUser()**](LegacyProvisioningApi.md#legacyProvisioningEnableFnaForUser) | **POST** /apps/provisioning/kronos.provisioning.enableFnaForUser | Enable FNA for user. |
 | [**legacyProvisioningGetCrmGatewaysAccessReport()**](LegacyProvisioningApi.md#legacyProvisioningGetCrmGatewaysAccessReport) | **GET** /apps/provisioning/kronos.provisioning.getCrmGatewaysAccessReport | Get a report of active accesses for all CRM datagateways. |
 | [**legacyProvisioningGetFFGatewaysAccessReport()**](LegacyProvisioningApi.md#legacyProvisioningGetFFGatewaysAccessReport) | **GET** /apps/provisioning/kronos.provisioning.getFFGatewaysAccessReport | Get a report of active accesses for all FF datagateways. |
 | [**legacyProvisioningGetGatewayArchiveByDate()**](LegacyProvisioningApi.md#legacyProvisioningGetGatewayArchiveByDate) | **GET** /apps/provisioning/kronos.provisioning.getGatewayArchiveByDate | Get the archives for a given gateway at the given date. |
@@ -424,64 +423,6 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **orgId** | **string**| Organization identifier. | |
-
-### Return type
-
-[**\Equisoft\SDK\EquisoftConnect\Model\LegacyResponse**](../Model/LegacyResponse.md)
-
-### Authorization
-
-[OAuth2](../../README.md#OAuth2)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `legacyProvisioningEnableFnaForUser()`
-
-```php
-legacyProvisioningEnableFnaForUser($userId): \Equisoft\SDK\EquisoftConnect\Model\LegacyResponse
-```
-
-Enable FNA for user.
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure OAuth2 access token for authorization: OAuth2
-$config = Equisoft\SDK\EquisoftConnect\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\LegacyProvisioningApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$userId = 'userId_example'; // string | User identifier.
-
-try {
-    $result = $apiInstance->legacyProvisioningEnableFnaForUser($userId);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling LegacyProvisioningApi->legacyProvisioningEnableFnaForUser: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **userId** | **string**| User identifier. | |
 
 ### Return type
 
