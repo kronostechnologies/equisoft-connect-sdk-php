@@ -644,7 +644,3 @@ src/Model/UsersUser.php
 src/Model/UsersUserGroup.php
 src/Model/UsersUserIdentity.php
 src/ObjectSerializer.php
-tests/Model/ContactsHouseholdsCreateHouseholdPayloadTest.php
-tests/Model/ContactsHouseholdsGetHouseholdResponseTest.php
-tests/Model/ContactsHouseholdsHouseholdTest.php
-tests/Model/ContactsHouseholdsListHouseholdResponseTest.php
