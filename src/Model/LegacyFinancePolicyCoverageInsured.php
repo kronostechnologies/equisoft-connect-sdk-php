@@ -60,8 +60,7 @@ class LegacyFinancePolicyCoverageInsured implements ModelInterface, ArrayAccess,
     protected static array $openAPITypes = [
         'name' => 'string',
         'insuranceClass' => 'string',
-        'smoker' => 'string',
-        'fnaExternalId' => 'string'
+        'smoker' => 'string'
     ];
 
     /**
@@ -72,8 +71,7 @@ class LegacyFinancePolicyCoverageInsured implements ModelInterface, ArrayAccess,
     protected static array $openAPIFormats = [
         'name' => null,
         'insuranceClass' => null,
-        'smoker' => null,
-        'fnaExternalId' => null
+        'smoker' => null
     ];
 
     /**
@@ -84,8 +82,7 @@ class LegacyFinancePolicyCoverageInsured implements ModelInterface, ArrayAccess,
     protected static array $openAPINullables = [
         'name' => false,
         'insuranceClass' => false,
-        'smoker' => false,
-        'fnaExternalId' => false
+        'smoker' => false
     ];
 
     /**
@@ -176,8 +173,7 @@ class LegacyFinancePolicyCoverageInsured implements ModelInterface, ArrayAccess,
     protected static array $attributeMap = [
         'name' => 'name',
         'insuranceClass' => 'insuranceClass',
-        'smoker' => 'smoker',
-        'fnaExternalId' => 'fnaExternalId'
+        'smoker' => 'smoker'
     ];
 
     /**
@@ -188,8 +184,7 @@ class LegacyFinancePolicyCoverageInsured implements ModelInterface, ArrayAccess,
     protected static array $setters = [
         'name' => 'setName',
         'insuranceClass' => 'setInsuranceClass',
-        'smoker' => 'setSmoker',
-        'fnaExternalId' => 'setFnaExternalId'
+        'smoker' => 'setSmoker'
     ];
 
     /**
@@ -200,8 +195,7 @@ class LegacyFinancePolicyCoverageInsured implements ModelInterface, ArrayAccess,
     protected static array $getters = [
         'name' => 'getName',
         'insuranceClass' => 'getInsuranceClass',
-        'smoker' => 'getSmoker',
-        'fnaExternalId' => 'getFnaExternalId'
+        'smoker' => 'getSmoker'
     ];
 
     /**
@@ -263,7 +257,6 @@ class LegacyFinancePolicyCoverageInsured implements ModelInterface, ArrayAccess,
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('insuranceClass', $data ?? [], null);
         $this->setIfExists('smoker', $data ?? [], null);
-        $this->setIfExists('fnaExternalId', $data ?? [], null);
     }
 
     /**
@@ -385,33 +378,6 @@ class LegacyFinancePolicyCoverageInsured implements ModelInterface, ArrayAccess,
             throw new InvalidArgumentException('non-nullable smoker cannot be null');
         }
         $this->container['smoker'] = $smoker;
-
-        return $this;
-    }
-
-    /**
-     * Gets fnaExternalId
-     *
-     * @return string|null
-     */
-    public function getFnaExternalId(): ?string
-    {
-        return $this->container['fnaExternalId'];
-    }
-
-    /**
-     * Sets fnaExternalId
-     *
-     * @param string|null $fnaExternalId FNA external id.
-     *
-     * @return $this
-     */
-    public function setFnaExternalId(?string $fnaExternalId): static
-    {
-        if (is_null($fnaExternalId)) {
-            throw new InvalidArgumentException('non-nullable fnaExternalId cannot be null');
-        }
-        $this->container['fnaExternalId'] = $fnaExternalId;
 
         return $this;
     }
