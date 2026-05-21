@@ -24,7 +24,6 @@ Name | Type | Description | Notes
 **excludeDeceased** | **bool** | Set to true to exclude contact that are deceased. | [optional]
 **anniversary** | **bool** | Returns only contacts that their anniversary is today. | [optional]
 **anniversaryRange** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyDateRange**](LegacyDateRange.md) |  | [optional]
-**excludeFNA** | **bool** | Exclude contacts linked to Equisoft/plan. Default: false. | [optional]
 **search** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyContactOptionGetListSearch**](LegacyContactOptionGetListSearch.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

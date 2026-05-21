@@ -78,7 +78,6 @@ class LegacyContactGetListOptions implements ModelInterface, ArrayAccess, JsonSe
         'excludeDeceased' => 'bool',
         'anniversary' => 'bool',
         'anniversaryRange' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyDateRange',
-        'excludeFNA' => 'bool',
         'search' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyContactOptionGetListSearch'
     ];
 
@@ -108,7 +107,6 @@ class LegacyContactGetListOptions implements ModelInterface, ArrayAccess, JsonSe
         'excludeDeceased' => null,
         'anniversary' => null,
         'anniversaryRange' => null,
-        'excludeFNA' => null,
         'search' => null
     ];
 
@@ -138,7 +136,6 @@ class LegacyContactGetListOptions implements ModelInterface, ArrayAccess, JsonSe
         'excludeDeceased' => false,
         'anniversary' => false,
         'anniversaryRange' => false,
-        'excludeFNA' => false,
         'search' => false
     ];
 
@@ -248,7 +245,6 @@ class LegacyContactGetListOptions implements ModelInterface, ArrayAccess, JsonSe
         'excludeDeceased' => 'exclude_deceased',
         'anniversary' => 'anniversary',
         'anniversaryRange' => 'anniversaryRange',
-        'excludeFNA' => 'excludeFNA',
         'search' => 'search'
     ];
 
@@ -278,7 +274,6 @@ class LegacyContactGetListOptions implements ModelInterface, ArrayAccess, JsonSe
         'excludeDeceased' => 'setExcludeDeceased',
         'anniversary' => 'setAnniversary',
         'anniversaryRange' => 'setAnniversaryRange',
-        'excludeFNA' => 'setExcludeFNA',
         'search' => 'setSearch'
     ];
 
@@ -308,7 +303,6 @@ class LegacyContactGetListOptions implements ModelInterface, ArrayAccess, JsonSe
         'excludeDeceased' => 'getExcludeDeceased',
         'anniversary' => 'getAnniversary',
         'anniversaryRange' => 'getAnniversaryRange',
-        'excludeFNA' => 'getExcludeFNA',
         'search' => 'getSearch'
     ];
 
@@ -439,7 +433,6 @@ class LegacyContactGetListOptions implements ModelInterface, ArrayAccess, JsonSe
         $this->setIfExists('excludeDeceased', $data ?? [], null);
         $this->setIfExists('anniversary', $data ?? [], null);
         $this->setIfExists('anniversaryRange', $data ?? [], null);
-        $this->setIfExists('excludeFNA', $data ?? [], null);
         $this->setIfExists('search', $data ?? [], null);
     }
 
@@ -1060,33 +1053,6 @@ class LegacyContactGetListOptions implements ModelInterface, ArrayAccess, JsonSe
             throw new InvalidArgumentException('non-nullable anniversaryRange cannot be null');
         }
         $this->container['anniversaryRange'] = $anniversaryRange;
-
-        return $this;
-    }
-
-    /**
-     * Gets excludeFNA
-     *
-     * @return bool|null
-     */
-    public function getExcludeFNA(): ?bool
-    {
-        return $this->container['excludeFNA'];
-    }
-
-    /**
-     * Sets excludeFNA
-     *
-     * @param bool|null $excludeFNA Exclude contacts linked to Equisoft/plan. Default: false.
-     *
-     * @return $this
-     */
-    public function setExcludeFNA(?bool $excludeFNA): static
-    {
-        if (is_null($excludeFNA)) {
-            throw new InvalidArgumentException('non-nullable excludeFNA cannot be null');
-        }
-        $this->container['excludeFNA'] = $excludeFNA;
 
         return $this;
     }
