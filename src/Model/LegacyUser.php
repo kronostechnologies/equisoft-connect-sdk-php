@@ -60,7 +60,8 @@ class LegacyUser implements ModelInterface, ArrayAccess, JsonSerializable
     protected static array $openAPITypes = [
         'id' => 'string',
         'displayName' => 'string',
-        'email' => 'string'
+        'email' => 'string',
+        'uuid' => 'string'
     ];
 
     /**
@@ -71,7 +72,8 @@ class LegacyUser implements ModelInterface, ArrayAccess, JsonSerializable
     protected static array $openAPIFormats = [
         'id' => null,
         'displayName' => null,
-        'email' => null
+        'email' => null,
+        'uuid' => null
     ];
 
     /**
@@ -82,7 +84,8 @@ class LegacyUser implements ModelInterface, ArrayAccess, JsonSerializable
     protected static array $openAPINullables = [
         'id' => false,
         'displayName' => false,
-        'email' => false
+        'email' => false,
+        'uuid' => false
     ];
 
     /**
@@ -173,7 +176,8 @@ class LegacyUser implements ModelInterface, ArrayAccess, JsonSerializable
     protected static array $attributeMap = [
         'id' => 'id',
         'displayName' => 'displayName',
-        'email' => 'email'
+        'email' => 'email',
+        'uuid' => 'uuid'
     ];
 
     /**
@@ -184,7 +188,8 @@ class LegacyUser implements ModelInterface, ArrayAccess, JsonSerializable
     protected static array $setters = [
         'id' => 'setId',
         'displayName' => 'setDisplayName',
-        'email' => 'setEmail'
+        'email' => 'setEmail',
+        'uuid' => 'setUuid'
     ];
 
     /**
@@ -195,7 +200,8 @@ class LegacyUser implements ModelInterface, ArrayAccess, JsonSerializable
     protected static array $getters = [
         'id' => 'getId',
         'displayName' => 'getDisplayName',
-        'email' => 'getEmail'
+        'email' => 'getEmail',
+        'uuid' => 'getUuid'
     ];
 
     /**
@@ -257,6 +263,7 @@ class LegacyUser implements ModelInterface, ArrayAccess, JsonSerializable
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('displayName', $data ?? [], null);
         $this->setIfExists('email', $data ?? [], null);
+        $this->setIfExists('uuid', $data ?? [], null);
     }
 
     /**
@@ -378,6 +385,33 @@ class LegacyUser implements ModelInterface, ArrayAccess, JsonSerializable
             throw new InvalidArgumentException('non-nullable email cannot be null');
         }
         $this->container['email'] = $email;
+
+        return $this;
+    }
+
+    /**
+     * Gets uuid
+     *
+     * @return string|null
+     */
+    public function getUuid(): ?string
+    {
+        return $this->container['uuid'];
+    }
+
+    /**
+     * Sets uuid
+     *
+     * @param string|null $uuid Uuid of the user.
+     *
+     * @return $this
+     */
+    public function setUuid(?string $uuid): static
+    {
+        if (is_null($uuid)) {
+            throw new InvalidArgumentException('non-nullable uuid cannot be null');
+        }
+        $this->container['uuid'] = $uuid;
 
         return $this;
     }
