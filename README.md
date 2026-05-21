@@ -82,6 +82,7 @@ Class | Method | HTTP request | Description
 *ContactsApi* | [**listContact**](docs/Api/ContactsApi.md#listcontact) | **GET** /crm/api/v1/contacts | List contact
 *ContactsApi* | [**listContactDocument**](docs/Api/ContactsApi.md#listcontactdocument) | **GET** /crm/api/v1/contacts/{contactUuid}/documents | List contact documents
 *ContactsApi* | [**listContactInvestment**](docs/Api/ContactsApi.md#listcontactinvestment) | **GET** /crm/api/v1/contacts/{contactUuid}/investmentAccounts | List contact investments
+*ContactsApi* | [**listHouseholds**](docs/Api/ContactsApi.md#listhouseholds) | **GET** /crm/api/v1/households | List household entries (EXPERIMENTAL)
 *ContactsApi* | [**patchContact**](docs/Api/ContactsApi.md#patchcontact) | **PATCH** /crm/api/v1/contacts/{contactUuid} | Update a contact
 *DatabasesApi* | [**getDatabase**](docs/Api/DatabasesApi.md#getdatabase) | **GET** /crm/api/v1/databases/{databaseUuid} | Get a database
 *DatabasesApi* | [**getUser**](docs/Api/DatabasesApi.md#getuser) | **GET** /crm/api/v1/databases/{databaseUuid}/users/{userId} | Get a database&#39;s user
@@ -251,9 +252,10 @@ Class | Method | HTTP request | Description
 - [ContactsCreateWebsitePayload](docs/Model/ContactsCreateWebsitePayload.md)
 - [ContactsEmail](docs/Model/ContactsEmail.md)
 - [ContactsHouseholdAddress](docs/Model/ContactsHouseholdAddress.md)
-- [ContactsHouseholdCreateHouseholdPayload](docs/Model/ContactsHouseholdCreateHouseholdPayload.md)
-- [ContactsHouseholdGetHouseholdResponse](docs/Model/ContactsHouseholdGetHouseholdResponse.md)
-- [ContactsHouseholdHousehold](docs/Model/ContactsHouseholdHousehold.md)
+- [ContactsHouseholdsCreateHouseholdPayload](docs/Model/ContactsHouseholdsCreateHouseholdPayload.md)
+- [ContactsHouseholdsGetHouseholdResponse](docs/Model/ContactsHouseholdsGetHouseholdResponse.md)
+- [ContactsHouseholdsHousehold](docs/Model/ContactsHouseholdsHousehold.md)
+- [ContactsHouseholdsListHouseholdResponse](docs/Model/ContactsHouseholdsListHouseholdResponse.md)
 - [ContactsIdentification](docs/Model/ContactsIdentification.md)
 - [ContactsIndividualIdentification](docs/Model/ContactsIndividualIdentification.md)
 - [ContactsInvestmentObjective](docs/Model/ContactsInvestmentObjective.md)

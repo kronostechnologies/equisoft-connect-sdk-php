@@ -1,11 +1,9 @@
-# # ContactsHouseholdCreateHouseholdPayload
+# # ContactsHouseholdsListHouseholdResponse
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **string** |  |
-**ownerUuids** | **string[]** |  | [optional]
-**private** | **bool** |  | [optional]
+**items** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdsHousehold[]**](ContactsHouseholdsHousehold.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

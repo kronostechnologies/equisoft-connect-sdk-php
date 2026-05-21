@@ -11,6 +11,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 | [**listContact()**](ContactsApi.md#listContact) | **GET** /crm/api/v1/contacts | List contact |
 | [**listContactDocument()**](ContactsApi.md#listContactDocument) | **GET** /crm/api/v1/contacts/{contactUuid}/documents | List contact documents |
 | [**listContactInvestment()**](ContactsApi.md#listContactInvestment) | **GET** /crm/api/v1/contacts/{contactUuid}/investmentAccounts | List contact investments |
+| [**listHouseholds()**](ContactsApi.md#listHouseholds) | **GET** /crm/api/v1/households | List household entries (EXPERIMENTAL) |
 | [**patchContact()**](ContactsApi.md#patchContact) | **PATCH** /crm/api/v1/contacts/{contactUuid} | Update a contact |
 
 
@@ -75,7 +76,7 @@ try {
 ## `createHousehold()`
 
 ```php
-createHousehold($contactsHouseholdCreateHouseholdPayload, $name): \Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdGetHouseholdResponse
+createHousehold($contactsHouseholdsCreateHouseholdPayload, $name): \Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdsGetHouseholdResponse
 ```
 
 Create a household (EXPERIMENTAL)
@@ -97,11 +98,11 @@ $apiInstance = new Equisoft\SDK\EquisoftConnect\Api\ContactsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$contactsHouseholdCreateHouseholdPayload = new \Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdCreateHouseholdPayload(); // \Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdCreateHouseholdPayload
+$contactsHouseholdsCreateHouseholdPayload = new \Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdsCreateHouseholdPayload(); // \Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdsCreateHouseholdPayload
 $name = 'name_example'; // string | The name of the Household to create
 
 try {
-    $result = $apiInstance->createHousehold($contactsHouseholdCreateHouseholdPayload, $name);
+    $result = $apiInstance->createHousehold($contactsHouseholdsCreateHouseholdPayload, $name);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContactsApi->createHousehold: ', $e->getMessage(), PHP_EOL;
@@ -112,12 +113,12 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **contactsHouseholdCreateHouseholdPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdCreateHouseholdPayload**](../Model/ContactsHouseholdCreateHouseholdPayload.md)|  | |
+| **contactsHouseholdsCreateHouseholdPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdsCreateHouseholdPayload**](../Model/ContactsHouseholdsCreateHouseholdPayload.md)|  | |
 | **name** | **string**| The name of the Household to create | [optional] |
 
 ### Return type
 
-[**\Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdGetHouseholdResponse**](../Model/ContactsHouseholdGetHouseholdResponse.md)
+[**\Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdsGetHouseholdResponse**](../Model/ContactsHouseholdsGetHouseholdResponse.md)
 
 ### Authorization
 
@@ -195,7 +196,7 @@ try {
 ## `getHouseholdByUuid()`
 
 ```php
-getHouseholdByUuid($householdUuid): \Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdGetHouseholdResponse
+getHouseholdByUuid($householdUuid): \Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdsGetHouseholdResponse
 ```
 
 Gets a household by uuid (EXPERIMENTAL)
@@ -235,7 +236,7 @@ try {
 
 ### Return type
 
-[**\Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdGetHouseholdResponse**](../Model/ContactsHouseholdGetHouseholdResponse.md)
+[**\Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdsGetHouseholdResponse**](../Model/ContactsHouseholdsGetHouseholdResponse.md)
 
 ### Authorization
 
@@ -464,6 +465,61 @@ try {
 ### Return type
 
 [**\Equisoft\SDK\EquisoftConnect\Model\InvestmentsListAccountResponse**](../Model/InvestmentsListAccountResponse.md)
+
+### Authorization
+
+[OAuth2](../../README.md#OAuth2)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `listHouseholds()`
+
+```php
+listHouseholds(): \Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdsListHouseholdResponse
+```
+
+List household entries (EXPERIMENTAL)
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Equisoft\SDK\EquisoftConnect\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\ContactsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+
+try {
+    $result = $apiInstance->listHouseholds();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ContactsApi->listHouseholds: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdsListHouseholdResponse**](../Model/ContactsHouseholdsListHouseholdResponse.md)
 
 ### Authorization
 

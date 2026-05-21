@@ -56,9 +56,10 @@ docs/Model/ContactsCreateSegmentationPayload.md
 docs/Model/ContactsCreateWebsitePayload.md
 docs/Model/ContactsEmail.md
 docs/Model/ContactsHouseholdAddress.md
-docs/Model/ContactsHouseholdCreateHouseholdPayload.md
-docs/Model/ContactsHouseholdGetHouseholdResponse.md
-docs/Model/ContactsHouseholdHousehold.md
+docs/Model/ContactsHouseholdsCreateHouseholdPayload.md
+docs/Model/ContactsHouseholdsGetHouseholdResponse.md
+docs/Model/ContactsHouseholdsHousehold.md
+docs/Model/ContactsHouseholdsListHouseholdResponse.md
 docs/Model/ContactsIdentification.md
 docs/Model/ContactsIndividualIdentification.md
 docs/Model/ContactsInvestmentObjective.md
@@ -377,9 +378,10 @@ src/Model/ContactsCreateSegmentationPayload.php
 src/Model/ContactsCreateWebsitePayload.php
 src/Model/ContactsEmail.php
 src/Model/ContactsHouseholdAddress.php
-src/Model/ContactsHouseholdCreateHouseholdPayload.php
-src/Model/ContactsHouseholdGetHouseholdResponse.php
-src/Model/ContactsHouseholdHousehold.php
+src/Model/ContactsHouseholdsCreateHouseholdPayload.php
+src/Model/ContactsHouseholdsGetHouseholdResponse.php
+src/Model/ContactsHouseholdsHousehold.php
+src/Model/ContactsHouseholdsListHouseholdResponse.php
 src/Model/ContactsIdentification.php
 src/Model/ContactsIndividualIdentification.php
 src/Model/ContactsInvestmentObjective.php
@@ -642,3 +644,7 @@ src/Model/UsersUser.php
 src/Model/UsersUserGroup.php
 src/Model/UsersUserIdentity.php
 src/ObjectSerializer.php
+tests/Model/ContactsHouseholdsCreateHouseholdPayloadTest.php
+tests/Model/ContactsHouseholdsGetHouseholdResponseTest.php
+tests/Model/ContactsHouseholdsHouseholdTest.php
+tests/Model/ContactsHouseholdsListHouseholdResponseTest.php
