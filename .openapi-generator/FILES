@@ -281,6 +281,7 @@ docs/Model/MovementCopyMovement.md
 docs/Model/MovementCopyMovementPayload.md
 docs/Model/MovementDatabase.md
 docs/Model/MovementDistributionList.md
+docs/Model/MovementEntityUuidsResponse.md
 docs/Model/MovementExecutedMovementInfoResponse.md
 docs/Model/MovementGatewayAccessCode.md
 docs/Model/MovementIdMappingRequest.md
@@ -604,6 +605,7 @@ src/Model/MovementCopyMovement.php
 src/Model/MovementCopyMovementPayload.php
 src/Model/MovementDatabase.php
 src/Model/MovementDistributionList.php
+src/Model/MovementEntityUuidsResponse.php
 src/Model/MovementExecutedMovementInfoResponse.php
 src/Model/MovementGatewayAccessCode.php
 src/Model/MovementIdMappingRequest.php
@@ -644,3 +646,4 @@ src/Model/UsersUser.php
 src/Model/UsersUserGroup.php
 src/Model/UsersUserIdentity.php
 src/ObjectSerializer.php
+tests/Model/MovementEntityUuidsResponseTest.php

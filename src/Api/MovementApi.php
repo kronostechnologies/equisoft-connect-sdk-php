@@ -82,6 +82,9 @@ class MovementApi
         'deleteMovement' => [
             'application/json',
         ],
+        'getExecutedMovementEntityUuids' => [
+            'application/json',
+        ],
         'getExecutedMovementIdMapping' => [
             'application/json',
         ],
@@ -1033,6 +1036,370 @@ class MovementApi
         $query = ObjectSerializer::buildQuery($queryParams);
         return new Request(
             'DELETE',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getExecutedMovementEntityUuids
+     *
+     * Get the list of source UUIDs for entities of a given type in an executed movement
+     *
+     * @param  int $executedMovementId Executed Movement identifier (required)
+     * @param  string $entityType Type of entity (e.g. contact) (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getExecutedMovementEntityUuids'] to see the possible values for this operation
+     *
+     * @throws ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementEntityUuidsResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+     */
+    public function getExecutedMovementEntityUuids(
+        int $executedMovementId,
+        string $entityType,
+        string $contentType = self::contentTypes['getExecutedMovementEntityUuids'][0]
+    ): \Equisoft\SDK\EquisoftConnect\Model\MovementEntityUuidsResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+    {
+        list($response) = $this->getExecutedMovementEntityUuidsWithHttpInfo($executedMovementId, $entityType, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation getExecutedMovementEntityUuidsWithHttpInfo
+     *
+     * Get the list of source UUIDs for entities of a given type in an executed movement
+     *
+     * @param  int $executedMovementId Executed Movement identifier (required)
+     * @param  string $entityType Type of entity (e.g. contact) (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getExecutedMovementEntityUuids'] to see the possible values for this operation
+     *
+     * @throws ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\MovementEntityUuidsResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getExecutedMovementEntityUuidsWithHttpInfo(
+        int $executedMovementId,
+        string $entityType,
+        string $contentType = self::contentTypes['getExecutedMovementEntityUuids'][0]
+    ): array
+    {
+        $request = $this->getExecutedMovementEntityUuidsRequest($executedMovementId, $entityType, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            switch($statusCode) {
+                case 200:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\MovementEntityUuidsResponse',
+                        $request,
+                        $response,
+                    );
+                case 400:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
+                case 401:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
+                case 500:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
+            }
+            
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return $this->handleResponseWithDataType(
+                '\Equisoft\SDK\EquisoftConnect\Model\MovementEntityUuidsResponse',
+                $request,
+                $response,
+            );
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\MovementEntityUuidsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+            }
+        
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getExecutedMovementEntityUuidsAsync
+     *
+     * Get the list of source UUIDs for entities of a given type in an executed movement
+     *
+     * @param  int $executedMovementId Executed Movement identifier (required)
+     * @param  string $entityType Type of entity (e.g. contact) (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getExecutedMovementEntityUuids'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
+     */
+    public function getExecutedMovementEntityUuidsAsync(
+        int $executedMovementId,
+        string $entityType,
+        string $contentType = self::contentTypes['getExecutedMovementEntityUuids'][0]
+    ): PromiseInterface
+    {
+        return $this->getExecutedMovementEntityUuidsAsyncWithHttpInfo($executedMovementId, $entityType, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getExecutedMovementEntityUuidsAsyncWithHttpInfo
+     *
+     * Get the list of source UUIDs for entities of a given type in an executed movement
+     *
+     * @param  int $executedMovementId Executed Movement identifier (required)
+     * @param  string $entityType Type of entity (e.g. contact) (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getExecutedMovementEntityUuids'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
+     */
+    public function getExecutedMovementEntityUuidsAsyncWithHttpInfo(
+        int $executedMovementId,
+        string $entityType,
+        string $contentType = self::contentTypes['getExecutedMovementEntityUuids'][0]
+    ): PromiseInterface
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\MovementEntityUuidsResponse';
+        $request = $this->getExecutedMovementEntityUuidsRequest($executedMovementId, $entityType, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if (in_array($returnType, ['\SplFileObject', '\Psr\Http\Message\StreamInterface'])) {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getExecutedMovementEntityUuids'
+     *
+     * @param  int $executedMovementId Executed Movement identifier (required)
+     * @param  string $entityType Type of entity (e.g. contact) (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getExecutedMovementEntityUuids'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function getExecutedMovementEntityUuidsRequest(
+        int $executedMovementId,
+        string $entityType,
+        string $contentType = self::contentTypes['getExecutedMovementEntityUuids'][0]
+    ): Request
+    {
+
+        // verify the required parameter 'executedMovementId' is set
+        if ($executedMovementId === null || (is_array($executedMovementId) && count($executedMovementId) === 0)) {
+            throw new InvalidArgumentException(
+                'Missing the required parameter $executedMovementId when calling getExecutedMovementEntityUuids'
+            );
+        }
+
+        // verify the required parameter 'entityType' is set
+        if ($entityType === null || (is_array($entityType) && count($entityType) === 0)) {
+            throw new InvalidArgumentException(
+                'Missing the required parameter $entityType when calling getExecutedMovementEntityUuids'
+            );
+        }
+
+
+        $resourcePath = '/crm/api/v1/movements/executed/{executedMovementId}/entityUuids';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $entityType,
+            'entityType', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            true // required
+        ) ?? []);
+
+
+        // path params
+        if ($executedMovementId !== null) {
+            $resourcePath = str_replace(
+                '{' . 'executedMovementId' . '}',
+                ObjectSerializer::toPathValue($executedMovementId),
+                $resourcePath
+            );
+        }
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        if (is_string($formParamValueItem)) {
+                            // JSON part
+                            $multipartContents[] = [
+                                'name' => $formParamName,
+                                'contents' => $formParamValueItem,
+                                'headers' => [
+                                    'Content-Disposition' => "form-data; name=\"$formParamName\"; filename=\"$formParamName.json\"",
+                                    'Content-Type' => 'application/json; charset=UTF-8'
+                                ]
+                            ];
+                        } else {
+                            $multipartContents[] = [
+                                'name' => $formParamName,
+                                'contents' => $formParamValueItem
+                            ];
+                        }
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
             $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody

@@ -7,6 +7,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 | [**addMovement()**](MovementApi.md#addMovement) | **POST** /crm/api/v1/movements | Add a movement |
 | [**cancelMovement()**](MovementApi.md#cancelMovement) | **POST** /crm/api/v1/movements/{movementId}/cancel | Cancel a movement. |
 | [**deleteMovement()**](MovementApi.md#deleteMovement) | **DELETE** /crm/api/v1/movements/{movementId} | Delete a movement. |
+| [**getExecutedMovementEntityUuids()**](MovementApi.md#getExecutedMovementEntityUuids) | **GET** /crm/api/v1/movements/executed/{executedMovementId}/entityUuids | Get the list of source UUIDs for entities of a given type in an executed movement |
 | [**getExecutedMovementIdMapping()**](MovementApi.md#getExecutedMovementIdMapping) | **POST** /crm/api/v1/movements/executed/{executedMovementId}/idMapping | Get the mappings for id and uuid between the source and destination databases, for a given entity type |
 | [**getExecutedMovementInfo()**](MovementApi.md#getExecutedMovementInfo) | **GET** /crm/api/v1/movements/executed/{executedMovementId}/info | Get basic information about an executed movement |
 | [**getMovementStatistic()**](MovementApi.md#getMovementStatistic) | **GET** /crm/api/v1/movements/statistic | Get movement statistic |
@@ -171,6 +172,66 @@ try {
 ### Return type
 
 void (empty response body)
+
+### Authorization
+
+[OAuth2](../../README.md#OAuth2)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getExecutedMovementEntityUuids()`
+
+```php
+getExecutedMovementEntityUuids($executedMovementId, $entityType): \Equisoft\SDK\EquisoftConnect\Model\MovementEntityUuidsResponse
+```
+
+Get the list of source UUIDs for entities of a given type in an executed movement
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Equisoft\SDK\EquisoftConnect\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\MovementApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$executedMovementId = 56; // int | Executed Movement identifier
+$entityType = 'entityType_example'; // string | Type of entity (e.g. contact)
+
+try {
+    $result = $apiInstance->getExecutedMovementEntityUuids($executedMovementId, $entityType);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MovementApi->getExecutedMovementEntityUuids: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **executedMovementId** | **int**| Executed Movement identifier | |
+| **entityType** | **string**| Type of entity (e.g. contact) | |
+
+### Return type
+
+[**\Equisoft\SDK\EquisoftConnect\Model\MovementEntityUuidsResponse**](../Model/MovementEntityUuidsResponse.md)
 
 ### Authorization
 
