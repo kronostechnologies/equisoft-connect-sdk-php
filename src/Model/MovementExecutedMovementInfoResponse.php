@@ -259,6 +259,7 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
 
     public const MOVEMENT_TYPE_MOVE = 'move';
     public const MOVEMENT_TYPE_COPY = 'copy';
+    public const MOVEMENT_TYPE_CONTACTS = 'contacts';
     public const MOVEMENT_TYPE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
 
     /**
@@ -271,6 +272,7 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
         return [
             self::MOVEMENT_TYPE_MOVE,
             self::MOVEMENT_TYPE_COPY,
+            self::MOVEMENT_TYPE_CONTACTS,
             self::MOVEMENT_TYPE_UNKNOWN_DEFAULT_OPEN_API,
         ];
     }
@@ -469,7 +471,7 @@ class MovementExecutedMovementInfoResponse implements ModelInterface, ArrayAcces
     /**
      * Sets movementType
      *
-     * @param string|null $movementType Type of movement (move, copy)
+     * @param string|null $movementType Type of movement (move, copy, contacts)
      *
      * @return $this
      */
