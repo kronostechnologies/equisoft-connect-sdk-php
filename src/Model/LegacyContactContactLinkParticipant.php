@@ -912,7 +912,7 @@ class LegacyContactContactLinkParticipant implements ModelInterface, ArrayAccess
     /**
      * Sets main
      *
-     * @param string|null $main Main participant (boolean).
+     * @param string|null $main Main participant (bool).
      *
      * @return $this
      */

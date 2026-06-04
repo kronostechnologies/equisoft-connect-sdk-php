@@ -1937,7 +1937,7 @@ class LegacyContactSpouseContactPayloadItem implements ModelInterface, ArrayAcce
     /**
      * Sets active
      *
-     * @param string|null $active Active (boolean).
+     * @param string|null $active Active (bool).
      *
      * @return $this
      */
@@ -1965,7 +1965,7 @@ class LegacyContactSpouseContactPayloadItem implements ModelInterface, ArrayAcce
     /**
      * Sets publish
      *
-     * @param string|null $publish Publish (boolean).
+     * @param string|null $publish Publish (bool).
      *
      * @return $this
      * @deprecated

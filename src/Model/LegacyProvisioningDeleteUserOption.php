@@ -334,7 +334,7 @@ class LegacyProvisioningDeleteUserOption implements ModelInterface, ArrayAccess,
     /**
      * Sets keepFNAUser
      *
-     * @param string|null $keepFNAUser Do not delete the associated fna user. (boolean).
+     * @param string|null $keepFNAUser Do not delete the associated fna user. (bool).
      *
      * @return $this
      */

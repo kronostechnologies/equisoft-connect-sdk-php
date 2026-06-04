@@ -2035,7 +2035,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, Js
     /**
      * Sets active
      *
-     * @param string|null $active Active (boolean).
+     * @param string|null $active Active (bool).
      *
      * @return $this
      */
@@ -2063,7 +2063,7 @@ class LegacyContactContactPayloadItem implements ModelInterface, ArrayAccess, Js
     /**
      * Sets publish
      *
-     * @param string|null $publish Publish (boolean).
+     * @param string|null $publish Publish (bool).
      *
      * @return $this
      * @deprecated

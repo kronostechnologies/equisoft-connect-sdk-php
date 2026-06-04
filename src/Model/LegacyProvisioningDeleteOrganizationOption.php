@@ -303,7 +303,7 @@ class LegacyProvisioningDeleteOrganizationOption implements ModelInterface, Arra
     /**
      * Sets keepFNAUsers
      *
-     * @param string $keepFNAUsers Do not delete the associated fna user. (boolean).
+     * @param string $keepFNAUsers Do not delete the associated fna user. (bool).
      *
      * @return $this
      */
