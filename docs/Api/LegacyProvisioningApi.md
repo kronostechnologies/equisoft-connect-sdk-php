@@ -20,7 +20,6 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 | [**legacyProvisioningMonitorDatagateways()**](LegacyProvisioningApi.md#legacyProvisioningMonitorDatagateways) | **GET** /apps/provisioning/kronos.provisioning.monitorDatagateways | Monitor stats of the datagateways for a given environment. |
 | [**legacyProvisioningSyncControlData()**](LegacyProvisioningApi.md#legacyProvisioningSyncControlData) | **POST** /apps/provisioning/kronos.provisioning.syncControlData | Sync one database pilotage. |
 | [**legacyProvisioningSyncControlDataForAllDatabase()**](LegacyProvisioningApi.md#legacyProvisioningSyncControlDataForAllDatabase) | **POST** /apps/provisioning/kronos.provisioning.syncControlDataForAllDatabase | Use gearman to sync all database for a given profile. |
-| [**legacyProvisioningUpdateUser()**](LegacyProvisioningApi.md#legacyProvisioningUpdateUser) | **POST** /apps/provisioning/kronos.provisioning.updateUser | Update a user. |
 
 
 ## `legacyProvisioningAddOrganization()`
@@ -953,66 +952,6 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
-## `legacyProvisioningUpdateUser()`
-
-```php
-legacyProvisioningUpdateUser($userId, $legacyProvisioningUserPayloadRequest): \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningAddUpdateUserResponse
-```
-
-Update a user.
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure OAuth2 access token for authorization: OAuth2
-$config = Equisoft\SDK\EquisoftConnect\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\LegacyProvisioningApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$userId = 'userId_example'; // string | User identifier.
-$legacyProvisioningUserPayloadRequest = new \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserPayloadRequest(); // \Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserPayloadRequest
-
-try {
-    $result = $apiInstance->legacyProvisioningUpdateUser($userId, $legacyProvisioningUserPayloadRequest);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling LegacyProvisioningApi->legacyProvisioningUpdateUser: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **userId** | **string**| User identifier. | |
-| **legacyProvisioningUserPayloadRequest** | [**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningUserPayloadRequest**](../Model/LegacyProvisioningUserPayloadRequest.md)|  | |
-
-### Return type
-
-[**\Equisoft\SDK\EquisoftConnect\Model\LegacyProvisioningAddUpdateUserResponse**](../Model/LegacyProvisioningAddUpdateUserResponse.md)
-
-### Authorization
-
-[OAuth2](../../README.md#OAuth2)
-
-### HTTP request headers
-
-- **Content-Type**: `application/json`
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)

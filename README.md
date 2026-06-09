@@ -188,7 +188,6 @@ Class | Method | HTTP request | Description
 *LegacyProvisioningApi* | [**legacyProvisioningMonitorDatagateways**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningmonitordatagateways) | **GET** /apps/provisioning/kronos.provisioning.monitorDatagateways | Monitor stats of the datagateways for a given environment.
 *LegacyProvisioningApi* | [**legacyProvisioningSyncControlData**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningsynccontroldata) | **POST** /apps/provisioning/kronos.provisioning.syncControlData | Sync one database pilotage.
 *LegacyProvisioningApi* | [**legacyProvisioningSyncControlDataForAllDatabase**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningsynccontroldataforalldatabase) | **POST** /apps/provisioning/kronos.provisioning.syncControlDataForAllDatabase | Use gearman to sync all database for a given profile.
-*LegacyProvisioningApi* | [**legacyProvisioningUpdateUser**](docs/Api/LegacyProvisioningApi.md#legacyprovisioningupdateuser) | **POST** /apps/provisioning/kronos.provisioning.updateUser | Update a user.
 *MovementApi* | [**addMovement**](docs/Api/MovementApi.md#addmovement) | **POST** /crm/api/v1/movements | Add a movement
 *MovementApi* | [**cancelMovement**](docs/Api/MovementApi.md#cancelmovement) | **POST** /crm/api/v1/movements/{movementId}/cancel | Cancel a movement.
 *MovementApi* | [**deleteMovement**](docs/Api/MovementApi.md#deletemovement) | **DELETE** /crm/api/v1/movements/{movementId} | Delete a movement.

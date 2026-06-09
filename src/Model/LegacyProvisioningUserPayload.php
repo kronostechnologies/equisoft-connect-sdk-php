@@ -64,20 +64,8 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, Json
         'lang' => 'string',
         'role' => 'string',
         'concurrentAccess' => 'int',
-        'password' => 'string',
-        'noPassword' => 'string',
-        'requirePasswordChange' => 'string',
-        'enableMobile' => 'string',
         'allowDelegation' => 'string',
-        'gender' => 'string',
-        'phoneWork' => 'string',
-        'phoneWorkExtension' => 'string',
-        'phoneHome' => 'string',
-        'phoneCell' => 'string',
-        'phoneFax' => 'string',
-        'phoneMain' => 'string',
-        'address' => '\Equisoft\SDK\EquisoftConnect\Model\LegacyContactAddress[]',
-        'noFNA' => 'string'
+        'phoneCell' => 'string'
     ];
 
     /**
@@ -92,20 +80,8 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, Json
         'lang' => null,
         'role' => null,
         'concurrentAccess' => null,
-        'password' => null,
-        'noPassword' => null,
-        'requirePasswordChange' => null,
-        'enableMobile' => null,
         'allowDelegation' => null,
-        'gender' => null,
-        'phoneWork' => null,
-        'phoneWorkExtension' => null,
-        'phoneHome' => null,
-        'phoneCell' => null,
-        'phoneFax' => null,
-        'phoneMain' => null,
-        'address' => null,
-        'noFNA' => null
+        'phoneCell' => null
     ];
 
     /**
@@ -120,20 +96,8 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, Json
         'lang' => false,
         'role' => false,
         'concurrentAccess' => false,
-        'password' => false,
-        'noPassword' => false,
-        'requirePasswordChange' => false,
-        'enableMobile' => false,
         'allowDelegation' => false,
-        'gender' => false,
-        'phoneWork' => false,
-        'phoneWorkExtension' => false,
-        'phoneHome' => false,
-        'phoneCell' => false,
-        'phoneFax' => false,
-        'phoneMain' => false,
-        'address' => false,
-        'noFNA' => false
+        'phoneCell' => false
     ];
 
     /**
@@ -228,20 +192,8 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, Json
         'lang' => 'lang',
         'role' => 'role',
         'concurrentAccess' => 'concurrentAccess',
-        'password' => 'password',
-        'noPassword' => 'noPassword',
-        'requirePasswordChange' => 'requirePasswordChange',
-        'enableMobile' => 'enableMobile',
         'allowDelegation' => 'allowDelegation',
-        'gender' => 'gender',
-        'phoneWork' => 'phoneWork',
-        'phoneWorkExtension' => 'phoneWorkExtension',
-        'phoneHome' => 'phoneHome',
-        'phoneCell' => 'phoneCell',
-        'phoneFax' => 'phoneFax',
-        'phoneMain' => 'phoneMain',
-        'address' => 'address',
-        'noFNA' => 'noFNA'
+        'phoneCell' => 'phoneCell'
     ];
 
     /**
@@ -256,20 +208,8 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, Json
         'lang' => 'setLang',
         'role' => 'setRole',
         'concurrentAccess' => 'setConcurrentAccess',
-        'password' => 'setPassword',
-        'noPassword' => 'setNoPassword',
-        'requirePasswordChange' => 'setRequirePasswordChange',
-        'enableMobile' => 'setEnableMobile',
         'allowDelegation' => 'setAllowDelegation',
-        'gender' => 'setGender',
-        'phoneWork' => 'setPhoneWork',
-        'phoneWorkExtension' => 'setPhoneWorkExtension',
-        'phoneHome' => 'setPhoneHome',
-        'phoneCell' => 'setPhoneCell',
-        'phoneFax' => 'setPhoneFax',
-        'phoneMain' => 'setPhoneMain',
-        'address' => 'setAddress',
-        'noFNA' => 'setNoFNA'
+        'phoneCell' => 'setPhoneCell'
     ];
 
     /**
@@ -284,20 +224,8 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, Json
         'lang' => 'getLang',
         'role' => 'getRole',
         'concurrentAccess' => 'getConcurrentAccess',
-        'password' => 'getPassword',
-        'noPassword' => 'getNoPassword',
-        'requirePasswordChange' => 'getRequirePasswordChange',
-        'enableMobile' => 'getEnableMobile',
         'allowDelegation' => 'getAllowDelegation',
-        'gender' => 'getGender',
-        'phoneWork' => 'getPhoneWork',
-        'phoneWorkExtension' => 'getPhoneWorkExtension',
-        'phoneHome' => 'getPhoneHome',
-        'phoneCell' => 'getPhoneCell',
-        'phoneFax' => 'getPhoneFax',
-        'phoneMain' => 'getPhoneMain',
-        'address' => 'getAddress',
-        'noFNA' => 'getNoFNA'
+        'phoneCell' => 'getPhoneCell'
     ];
 
     /**
@@ -348,15 +276,6 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, Json
     public const ROLE_USER = 'USER';
     public const ROLE_KRONOS = 'KRONOS';
     public const ROLE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
-    public const GENDER_F = 'F';
-    public const GENDER_M = 'M';
-    public const GENDER_UNKNOWN = 'UNKNOWN';
-    public const GENDER_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
-    public const PHONE_MAIN_CELL = 'cell';
-    public const PHONE_MAIN_FAX = 'fax';
-    public const PHONE_MAIN_HOME = 'home';
-    public const PHONE_MAIN_WORK = 'work';
-    public const PHONE_MAIN_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
 
     /**
      * Gets allowable values of the enum
@@ -388,37 +307,6 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, Json
     }
 
     /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public static function getGenderAllowableValues()
-    {
-        return [
-            self::GENDER_F,
-            self::GENDER_M,
-            self::GENDER_UNKNOWN,
-            self::GENDER_UNKNOWN_DEFAULT_OPEN_API,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public static function getPhoneMainAllowableValues()
-    {
-        return [
-            self::PHONE_MAIN_CELL,
-            self::PHONE_MAIN_FAX,
-            self::PHONE_MAIN_HOME,
-            self::PHONE_MAIN_WORK,
-            self::PHONE_MAIN_UNKNOWN_DEFAULT_OPEN_API,
-        ];
-    }
-
-    /**
      * Associative array for storing property values
      *
      * @var array
@@ -438,20 +326,8 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, Json
         $this->setIfExists('lang', $data ?? [], null);
         $this->setIfExists('role', $data ?? [], null);
         $this->setIfExists('concurrentAccess', $data ?? [], null);
-        $this->setIfExists('password', $data ?? [], null);
-        $this->setIfExists('noPassword', $data ?? [], null);
-        $this->setIfExists('requirePasswordChange', $data ?? [], null);
-        $this->setIfExists('enableMobile', $data ?? [], null);
         $this->setIfExists('allowDelegation', $data ?? [], null);
-        $this->setIfExists('gender', $data ?? [], null);
-        $this->setIfExists('phoneWork', $data ?? [], null);
-        $this->setIfExists('phoneWorkExtension', $data ?? [], null);
-        $this->setIfExists('phoneHome', $data ?? [], null);
         $this->setIfExists('phoneCell', $data ?? [], null);
-        $this->setIfExists('phoneFax', $data ?? [], null);
-        $this->setIfExists('phoneMain', $data ?? [], null);
-        $this->setIfExists('address', $data ?? [], null);
-        $this->setIfExists('noFNA', $data ?? [], null);
     }
 
     /**
@@ -495,24 +371,6 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, Json
             $invalidProperties[] = sprintf(
                 "invalid value '%s' for 'role', must be one of '%s'",
                 $this->container['role'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = self::getGenderAllowableValues();
-        if (!is_null($this->container['gender']) && !in_array($this->container['gender'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'gender', must be one of '%s'",
-                $this->container['gender'],
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = self::getPhoneMainAllowableValues();
-        if (!is_null($this->container['phoneMain']) && !in_array($this->container['phoneMain'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'phoneMain', must be one of '%s'",
-                $this->container['phoneMain'],
                 implode("', '", $allowedValues)
             );
         }
@@ -703,122 +561,6 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, Json
     }
 
     /**
-     * Gets password
-     *
-     * @return string|null
-     * @deprecated
-     */
-    public function getPassword(): ?string
-    {
-        return $this->container['password'];
-    }
-
-    /**
-     * Sets password
-     *
-     * @param string|null $password This option does nothing.
-     *
-     * @return $this
-     * @deprecated
-     */
-    public function setPassword(?string $password): static
-    {
-        if (is_null($password)) {
-            throw new InvalidArgumentException('non-nullable password cannot be null');
-        }
-        $this->container['password'] = $password;
-
-        return $this;
-    }
-
-    /**
-     * Gets noPassword
-     *
-     * @return string|null
-     * @deprecated
-     */
-    public function getNoPassword(): ?string
-    {
-        return $this->container['noPassword'];
-    }
-
-    /**
-     * Sets noPassword
-     *
-     * @param string|null $noPassword This option does nothing.
-     *
-     * @return $this
-     * @deprecated
-     */
-    public function setNoPassword(?string $noPassword): static
-    {
-        if (is_null($noPassword)) {
-            throw new InvalidArgumentException('non-nullable noPassword cannot be null');
-        }
-        $this->container['noPassword'] = $noPassword;
-
-        return $this;
-    }
-
-    /**
-     * Gets requirePasswordChange
-     *
-     * @return string|null
-     * @deprecated
-     */
-    public function getRequirePasswordChange(): ?string
-    {
-        return $this->container['requirePasswordChange'];
-    }
-
-    /**
-     * Sets requirePasswordChange
-     *
-     * @param string|null $requirePasswordChange This option does nothing.
-     *
-     * @return $this
-     * @deprecated
-     */
-    public function setRequirePasswordChange(?string $requirePasswordChange): static
-    {
-        if (is_null($requirePasswordChange)) {
-            throw new InvalidArgumentException('non-nullable requirePasswordChange cannot be null');
-        }
-        $this->container['requirePasswordChange'] = $requirePasswordChange;
-
-        return $this;
-    }
-
-    /**
-     * Gets enableMobile
-     *
-     * @return string|null
-     * @deprecated
-     */
-    public function getEnableMobile(): ?string
-    {
-        return $this->container['enableMobile'];
-    }
-
-    /**
-     * Sets enableMobile
-     *
-     * @param string|null $enableMobile This option does nothing.
-     *
-     * @return $this
-     * @deprecated
-     */
-    public function setEnableMobile(?string $enableMobile): static
-    {
-        if (is_null($enableMobile)) {
-            throw new InvalidArgumentException('non-nullable enableMobile cannot be null');
-        }
-        $this->container['enableMobile'] = $enableMobile;
-
-        return $this;
-    }
-
-    /**
      * Gets allowDelegation
      *
      * @return string|null
@@ -846,118 +588,6 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, Json
     }
 
     /**
-     * Gets gender
-     *
-     * @return string|null
-     */
-    public function getGender(): ?string
-    {
-        return $this->container['gender'];
-    }
-
-    /**
-     * Sets gender
-     *
-     * @param string|null $gender Gender of this user.
-     *
-     * @return $this
-     */
-    public function setGender(?string $gender): static
-    {
-        if (is_null($gender)) {
-            throw new InvalidArgumentException('non-nullable gender cannot be null');
-        }
-        $allowedValues = self::getGenderAllowableValues();
-        if (!in_array($gender, $allowedValues, true)) {
-            $gender = self::GENDER_UNKNOWN_DEFAULT_OPEN_API;
-        }
-        $this->container['gender'] = $gender;
-
-        return $this;
-    }
-
-    /**
-     * Gets phoneWork
-     *
-     * @return string|null
-     */
-    public function getPhoneWork(): ?string
-    {
-        return $this->container['phoneWork'];
-    }
-
-    /**
-     * Sets phoneWork
-     *
-     * @param string|null $phoneWork Work phone number of this user.
-     *
-     * @return $this
-     */
-    public function setPhoneWork(?string $phoneWork): static
-    {
-        if (is_null($phoneWork)) {
-            throw new InvalidArgumentException('non-nullable phoneWork cannot be null');
-        }
-        $this->container['phoneWork'] = $phoneWork;
-
-        return $this;
-    }
-
-    /**
-     * Gets phoneWorkExtension
-     *
-     * @return string|null
-     */
-    public function getPhoneWorkExtension(): ?string
-    {
-        return $this->container['phoneWorkExtension'];
-    }
-
-    /**
-     * Sets phoneWorkExtension
-     *
-     * @param string|null $phoneWorkExtension Extension of work phone number of this user.
-     *
-     * @return $this
-     */
-    public function setPhoneWorkExtension(?string $phoneWorkExtension): static
-    {
-        if (is_null($phoneWorkExtension)) {
-            throw new InvalidArgumentException('non-nullable phoneWorkExtension cannot be null');
-        }
-        $this->container['phoneWorkExtension'] = $phoneWorkExtension;
-
-        return $this;
-    }
-
-    /**
-     * Gets phoneHome
-     *
-     * @return string|null
-     */
-    public function getPhoneHome(): ?string
-    {
-        return $this->container['phoneHome'];
-    }
-
-    /**
-     * Sets phoneHome
-     *
-     * @param string|null $phoneHome Home phone number of this user.
-     *
-     * @return $this
-     */
-    public function setPhoneHome(?string $phoneHome): static
-    {
-        if (is_null($phoneHome)) {
-            throw new InvalidArgumentException('non-nullable phoneHome cannot be null');
-        }
-        $this->container['phoneHome'] = $phoneHome;
-
-        return $this;
-    }
-
-    /**
      * Gets phoneCell
      *
      * @return string|null
@@ -980,118 +610,6 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, Json
             throw new InvalidArgumentException('non-nullable phoneCell cannot be null');
         }
         $this->container['phoneCell'] = $phoneCell;
-
-        return $this;
-    }
-
-    /**
-     * Gets phoneFax
-     *
-     * @return string|null
-     */
-    public function getPhoneFax(): ?string
-    {
-        return $this->container['phoneFax'];
-    }
-
-    /**
-     * Sets phoneFax
-     *
-     * @param string|null $phoneFax Fax phone number of this user.
-     *
-     * @return $this
-     */
-    public function setPhoneFax(?string $phoneFax): static
-    {
-        if (is_null($phoneFax)) {
-            throw new InvalidArgumentException('non-nullable phoneFax cannot be null');
-        }
-        $this->container['phoneFax'] = $phoneFax;
-
-        return $this;
-    }
-
-    /**
-     * Gets phoneMain
-     *
-     * @return string|null
-     */
-    public function getPhoneMain(): ?string
-    {
-        return $this->container['phoneMain'];
-    }
-
-    /**
-     * Sets phoneMain
-     *
-     * @param string|null $phoneMain The phone type to be the main phone number. Default: work.
-     *
-     * @return $this
-     */
-    public function setPhoneMain(?string $phoneMain): static
-    {
-        if (is_null($phoneMain)) {
-            throw new InvalidArgumentException('non-nullable phoneMain cannot be null');
-        }
-        $allowedValues = self::getPhoneMainAllowableValues();
-        if (!in_array($phoneMain, $allowedValues, true)) {
-            $phoneMain = self::PHONE_MAIN_UNKNOWN_DEFAULT_OPEN_API;
-        }
-        $this->container['phoneMain'] = $phoneMain;
-
-        return $this;
-    }
-
-    /**
-     * Gets address
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\LegacyContactAddress[]|null
-     */
-    public function getAddress(): ?array
-    {
-        return $this->container['address'];
-    }
-
-    /**
-     * Sets address
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\LegacyContactAddress[]|null $address Address of this user.
-     *
-     * @return $this
-     */
-    public function setAddress(?array $address): static
-    {
-        if (is_null($address)) {
-            throw new InvalidArgumentException('non-nullable address cannot be null');
-        }
-        $this->container['address'] = $address;
-
-        return $this;
-    }
-
-    /**
-     * Gets noFNA
-     *
-     * @return string|null
-     */
-    public function getNoFNA(): ?string
-    {
-        return $this->container['noFNA'];
-    }
-
-    /**
-     * Sets noFNA
-     *
-     * @param string|null $noFNA Skip Equisoft Plan (false, true. Default: false).
-     *
-     * @return $this
-     */
-    public function setNoFNA(?string $noFNA): static
-    {
-        if (is_null($noFNA)) {
-            throw new InvalidArgumentException('non-nullable noFNA cannot be null');
-        }
-        $this->container['noFNA'] = $noFNA;
 
         return $this;
     }
