@@ -315,6 +315,7 @@ docs/Model/TasksTask.md
 docs/Model/TasksTransferToCompletedResponse.md
 docs/Model/TasksVisibilityType.md
 docs/Model/Translation.md
+docs/Model/UsersCreateUserPayload.md
 docs/Model/UsersListUsersResponse.md
 docs/Model/UsersRole.md
 docs/Model/UsersUpdateUserPayload.md
@@ -639,6 +640,7 @@ src/Model/TasksTask.php
 src/Model/TasksTransferToCompletedResponse.php
 src/Model/TasksVisibilityType.php
 src/Model/Translation.php
+src/Model/UsersCreateUserPayload.php
 src/Model/UsersListUsersResponse.php
 src/Model/UsersRole.php
 src/Model/UsersUpdateUserPayload.php
@@ -646,3 +648,4 @@ src/Model/UsersUser.php
 src/Model/UsersUserGroup.php
 src/Model/UsersUserIdentity.php
 src/ObjectSerializer.php
+tests/Model/UsersCreateUserPayloadTest.php

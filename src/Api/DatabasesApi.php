@@ -73,6 +73,9 @@ class DatabasesApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
+        'createUser' => [
+            'application/json',
+        ],
         'getDatabase' => [
             'application/json',
         ],
@@ -137,6 +140,368 @@ class DatabasesApi
     public function getConfig(): Configuration
     {
         return $this->config;
+    }
+
+    /**
+     * Operation createUser
+     *
+     * Create a user for the database
+     *
+     * @param  string $databaseUuid Database unique identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\UsersCreateUserPayload $usersCreateUserPayload usersCreateUserPayload (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUser'] to see the possible values for this operation
+     *
+     * @throws ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\UsersUser|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+     */
+    public function createUser(
+        string $databaseUuid,
+        \Equisoft\SDK\EquisoftConnect\Model\UsersCreateUserPayload $usersCreateUserPayload,
+        string $contentType = self::contentTypes['createUser'][0]
+    ): \Equisoft\SDK\EquisoftConnect\Model\UsersUser|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+    {
+        list($response) = $this->createUserWithHttpInfo($databaseUuid, $usersCreateUserPayload, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation createUserWithHttpInfo
+     *
+     * Create a user for the database
+     *
+     * @param  string $databaseUuid Database unique identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\UsersCreateUserPayload $usersCreateUserPayload (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUser'] to see the possible values for this operation
+     *
+     * @throws ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\UsersUser|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function createUserWithHttpInfo(
+        string $databaseUuid,
+        \Equisoft\SDK\EquisoftConnect\Model\UsersCreateUserPayload $usersCreateUserPayload,
+        string $contentType = self::contentTypes['createUser'][0]
+    ): array
+    {
+        $request = $this->createUserRequest($databaseUuid, $usersCreateUserPayload, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            switch($statusCode) {
+                case 201:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\UsersUser',
+                        $request,
+                        $response,
+                    );
+                case 401:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
+                case 404:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
+                case 500:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
+            }
+            
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return $this->handleResponseWithDataType(
+                '\Equisoft\SDK\EquisoftConnect\Model\UsersUser',
+                $request,
+                $response,
+            );
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\UsersUser',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+            }
+        
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation createUserAsync
+     *
+     * Create a user for the database
+     *
+     * @param  string $databaseUuid Database unique identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\UsersCreateUserPayload $usersCreateUserPayload (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUser'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
+     */
+    public function createUserAsync(
+        string $databaseUuid,
+        \Equisoft\SDK\EquisoftConnect\Model\UsersCreateUserPayload $usersCreateUserPayload,
+        string $contentType = self::contentTypes['createUser'][0]
+    ): PromiseInterface
+    {
+        return $this->createUserAsyncWithHttpInfo($databaseUuid, $usersCreateUserPayload, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation createUserAsyncWithHttpInfo
+     *
+     * Create a user for the database
+     *
+     * @param  string $databaseUuid Database unique identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\UsersCreateUserPayload $usersCreateUserPayload (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUser'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
+     */
+    public function createUserAsyncWithHttpInfo(
+        string $databaseUuid,
+        \Equisoft\SDK\EquisoftConnect\Model\UsersCreateUserPayload $usersCreateUserPayload,
+        string $contentType = self::contentTypes['createUser'][0]
+    ): PromiseInterface
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\UsersUser';
+        $request = $this->createUserRequest($databaseUuid, $usersCreateUserPayload, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if (in_array($returnType, ['\SplFileObject', '\Psr\Http\Message\StreamInterface'])) {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'createUser'
+     *
+     * @param  string $databaseUuid Database unique identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\UsersCreateUserPayload $usersCreateUserPayload (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createUser'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function createUserRequest(
+        string $databaseUuid,
+        \Equisoft\SDK\EquisoftConnect\Model\UsersCreateUserPayload $usersCreateUserPayload,
+        string $contentType = self::contentTypes['createUser'][0]
+    ): Request
+    {
+
+        // verify the required parameter 'databaseUuid' is set
+        if ($databaseUuid === null || (is_array($databaseUuid) && count($databaseUuid) === 0)) {
+            throw new InvalidArgumentException(
+                'Missing the required parameter $databaseUuid when calling createUser'
+            );
+        }
+
+        // verify the required parameter 'usersCreateUserPayload' is set
+        if ($usersCreateUserPayload === null || (is_array($usersCreateUserPayload) && count($usersCreateUserPayload) === 0)) {
+            throw new InvalidArgumentException(
+                'Missing the required parameter $usersCreateUserPayload when calling createUser'
+            );
+        }
+
+
+        $resourcePath = '/crm/api/v1/databases/{databaseUuid}/users';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if ($databaseUuid !== null) {
+            $resourcePath = str_replace(
+                '{' . 'databaseUuid' . '}',
+                ObjectSerializer::toPathValue($databaseUuid),
+                $resourcePath
+            );
+        }
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($usersCreateUserPayload)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($usersCreateUserPayload));
+            } else {
+                $httpBody = $usersCreateUserPayload;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        if (is_string($formParamValueItem)) {
+                            // JSON part
+                            $multipartContents[] = [
+                                'name' => $formParamName,
+                                'contents' => $formParamValueItem,
+                                'headers' => [
+                                    'Content-Disposition' => "form-data; name=\"$formParamName\"; filename=\"$formParamName.json\"",
+                                    'Content-Type' => 'application/json; charset=UTF-8'
+                                ]
+                            ];
+                        } else {
+                            $multipartContents[] = [
+                                'name' => $formParamName,
+                                'contents' => $formParamValueItem
+                            ];
+                        }
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
     }
 
     /**
