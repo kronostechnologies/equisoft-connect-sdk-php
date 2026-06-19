@@ -59,7 +59,9 @@ class MovementUserMap implements ModelInterface, ArrayAccess, JsonSerializable
       */
     protected static array $openAPITypes = [
         'srcEmail' => 'string',
-        'dstEmail' => 'string'
+        'dstEmail' => 'string',
+        'srcUuid' => 'string',
+        'dstUuid' => 'string'
     ];
 
     /**
@@ -69,7 +71,9 @@ class MovementUserMap implements ModelInterface, ArrayAccess, JsonSerializable
       */
     protected static array $openAPIFormats = [
         'srcEmail' => null,
-        'dstEmail' => null
+        'dstEmail' => null,
+        'srcUuid' => null,
+        'dstUuid' => null
     ];
 
     /**
@@ -79,7 +83,9 @@ class MovementUserMap implements ModelInterface, ArrayAccess, JsonSerializable
       */
     protected static array $openAPINullables = [
         'srcEmail' => false,
-        'dstEmail' => false
+        'dstEmail' => false,
+        'srcUuid' => true,
+        'dstUuid' => true
     ];
 
     /**
@@ -169,7 +175,9 @@ class MovementUserMap implements ModelInterface, ArrayAccess, JsonSerializable
      */
     protected static array $attributeMap = [
         'srcEmail' => 'srcEmail',
-        'dstEmail' => 'dstEmail'
+        'dstEmail' => 'dstEmail',
+        'srcUuid' => 'srcUuid',
+        'dstUuid' => 'dstUuid'
     ];
 
     /**
@@ -179,7 +187,9 @@ class MovementUserMap implements ModelInterface, ArrayAccess, JsonSerializable
      */
     protected static array $setters = [
         'srcEmail' => 'setSrcEmail',
-        'dstEmail' => 'setDstEmail'
+        'dstEmail' => 'setDstEmail',
+        'srcUuid' => 'setSrcUuid',
+        'dstUuid' => 'setDstUuid'
     ];
 
     /**
@@ -189,7 +199,9 @@ class MovementUserMap implements ModelInterface, ArrayAccess, JsonSerializable
      */
     protected static array $getters = [
         'srcEmail' => 'getSrcEmail',
-        'dstEmail' => 'getDstEmail'
+        'dstEmail' => 'getDstEmail',
+        'srcUuid' => 'getSrcUuid',
+        'dstUuid' => 'getDstUuid'
     ];
 
     /**
@@ -250,6 +262,8 @@ class MovementUserMap implements ModelInterface, ArrayAccess, JsonSerializable
     {
         $this->setIfExists('srcEmail', $data ?? [], null);
         $this->setIfExists('dstEmail', $data ?? [], null);
+        $this->setIfExists('srcUuid', $data ?? [], null);
+        $this->setIfExists('dstUuid', $data ?? [], null);
     }
 
     /**
@@ -344,6 +358,74 @@ class MovementUserMap implements ModelInterface, ArrayAccess, JsonSerializable
             throw new InvalidArgumentException('non-nullable dstEmail cannot be null');
         }
         $this->container['dstEmail'] = $dstEmail;
+
+        return $this;
+    }
+
+    /**
+     * Gets srcUuid
+     *
+     * @return string|null
+     */
+    public function getSrcUuid(): ?string
+    {
+        return $this->container['srcUuid'];
+    }
+
+    /**
+     * Sets srcUuid
+     *
+     * @param string|null $srcUuid Uuid of the webuser in the source database.
+     *
+     * @return $this
+     */
+    public function setSrcUuid(?string $srcUuid): static
+    {
+        if (is_null($srcUuid)) {
+            array_push($this->openAPINullablesSetToNull, 'srcUuid');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('srcUuid', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['srcUuid'] = $srcUuid;
+
+        return $this;
+    }
+
+    /**
+     * Gets dstUuid
+     *
+     * @return string|null
+     */
+    public function getDstUuid(): ?string
+    {
+        return $this->container['dstUuid'];
+    }
+
+    /**
+     * Sets dstUuid
+     *
+     * @param string|null $dstUuid Uuid of the webuser in the destination database.
+     *
+     * @return $this
+     */
+    public function setDstUuid(?string $dstUuid): static
+    {
+        if (is_null($dstUuid)) {
+            array_push($this->openAPINullablesSetToNull, 'dstUuid');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('dstUuid', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['dstUuid'] = $dstUuid;
 
         return $this;
     }
