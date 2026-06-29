@@ -59,6 +59,7 @@ class InvestmentsAccountUser implements ModelInterface, ArrayAccess, JsonSeriali
       */
     protected static array $openAPITypes = [
         'id' => 'int',
+        'uuid' => 'string',
         'name' => 'string',
         'email' => 'string'
     ];
@@ -70,6 +71,7 @@ class InvestmentsAccountUser implements ModelInterface, ArrayAccess, JsonSeriali
       */
     protected static array $openAPIFormats = [
         'id' => null,
+        'uuid' => null,
         'name' => null,
         'email' => null
     ];
@@ -81,6 +83,7 @@ class InvestmentsAccountUser implements ModelInterface, ArrayAccess, JsonSeriali
       */
     protected static array $openAPINullables = [
         'id' => false,
+        'uuid' => false,
         'name' => false,
         'email' => false
     ];
@@ -172,6 +175,7 @@ class InvestmentsAccountUser implements ModelInterface, ArrayAccess, JsonSeriali
      */
     protected static array $attributeMap = [
         'id' => 'id',
+        'uuid' => 'uuid',
         'name' => 'name',
         'email' => 'email'
     ];
@@ -183,6 +187,7 @@ class InvestmentsAccountUser implements ModelInterface, ArrayAccess, JsonSeriali
      */
     protected static array $setters = [
         'id' => 'setId',
+        'uuid' => 'setUuid',
         'name' => 'setName',
         'email' => 'setEmail'
     ];
@@ -194,6 +199,7 @@ class InvestmentsAccountUser implements ModelInterface, ArrayAccess, JsonSeriali
      */
     protected static array $getters = [
         'id' => 'getId',
+        'uuid' => 'getUuid',
         'name' => 'getName',
         'email' => 'getEmail'
     ];
@@ -255,6 +261,7 @@ class InvestmentsAccountUser implements ModelInterface, ArrayAccess, JsonSeriali
     public function __construct(?array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
+        $this->setIfExists('uuid', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('email', $data ?? [], null);
     }
@@ -324,6 +331,33 @@ class InvestmentsAccountUser implements ModelInterface, ArrayAccess, JsonSeriali
             throw new InvalidArgumentException('non-nullable id cannot be null');
         }
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets uuid
+     *
+     * @return string|null
+     */
+    public function getUuid(): ?string
+    {
+        return $this->container['uuid'];
+    }
+
+    /**
+     * Sets uuid
+     *
+     * @param string|null $uuid uuid
+     *
+     * @return $this
+     */
+    public function setUuid(?string $uuid): static
+    {
+        if (is_null($uuid)) {
+            throw new InvalidArgumentException('non-nullable uuid cannot be null');
+        }
+        $this->container['uuid'] = $uuid;
 
         return $this;
     }

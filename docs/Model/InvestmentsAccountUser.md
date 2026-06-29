@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional]
+**uuid** | **string** |  | [optional]
 **name** | **string** |  | [optional]
 **email** | **string** |  | [optional]
 
