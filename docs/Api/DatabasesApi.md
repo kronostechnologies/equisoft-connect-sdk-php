@@ -5,6 +5,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createUser()**](DatabasesApi.md#createUser) | **POST** /crm/api/v1/databases/{databaseUuid}/users | Create a user for the database |
+| [**deleteUser()**](DatabasesApi.md#deleteUser) | **DELETE** /crm/api/v1/databases/{databaseUuid}/users/{userUuid} | Delete a user for the database |
 | [**getDatabase()**](DatabasesApi.md#getDatabase) | **GET** /crm/api/v1/databases/{databaseUuid} | Get a database |
 | [**getUser()**](DatabasesApi.md#getUser) | **GET** /crm/api/v1/databases/{databaseUuid}/users/{userId} | Get a database&#39;s user |
 | [**listDatabases()**](DatabasesApi.md#listDatabases) | **GET** /crm/api/v1/databases | List all databases |
@@ -59,6 +60,67 @@ try {
 ### Return type
 
 [**\Equisoft\SDK\EquisoftConnect\Model\UsersUser**](../Model/UsersUser.md)
+
+### Authorization
+
+[OAuth2](../../README.md#OAuth2)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `deleteUser()`
+
+```php
+deleteUser($databaseUuid, $userUuid, $usersDeleteUserPayload)
+```
+
+Delete a user for the database
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Equisoft\SDK\EquisoftConnect\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\DatabasesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$databaseUuid = 'databaseUuid_example'; // string | Database unique identifier.
+$userUuid = 'userUuid_example'; // string | User uuid.
+$usersDeleteUserPayload = new \Equisoft\SDK\EquisoftConnect\Model\UsersDeleteUserPayload(); // \Equisoft\SDK\EquisoftConnect\Model\UsersDeleteUserPayload
+
+try {
+    $apiInstance->deleteUser($databaseUuid, $userUuid, $usersDeleteUserPayload);
+} catch (Exception $e) {
+    echo 'Exception when calling DatabasesApi->deleteUser: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **databaseUuid** | **string**| Database unique identifier. | |
+| **userUuid** | **string**| User uuid. | |
+| **usersDeleteUserPayload** | [**\Equisoft\SDK\EquisoftConnect\Model\UsersDeleteUserPayload**](../Model/UsersDeleteUserPayload.md)|  | |
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 

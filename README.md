@@ -85,6 +85,7 @@ Class | Method | HTTP request | Description
 *ContactsApi* | [**listHouseholds**](docs/Api/ContactsApi.md#listhouseholds) | **GET** /crm/api/v1/households | List household entries (EXPERIMENTAL)
 *ContactsApi* | [**patchContact**](docs/Api/ContactsApi.md#patchcontact) | **PATCH** /crm/api/v1/contacts/{contactUuid} | Update a contact
 *DatabasesApi* | [**createUser**](docs/Api/DatabasesApi.md#createuser) | **POST** /crm/api/v1/databases/{databaseUuid}/users | Create a user for the database
+*DatabasesApi* | [**deleteUser**](docs/Api/DatabasesApi.md#deleteuser) | **DELETE** /crm/api/v1/databases/{databaseUuid}/users/{userUuid} | Delete a user for the database
 *DatabasesApi* | [**getDatabase**](docs/Api/DatabasesApi.md#getdatabase) | **GET** /crm/api/v1/databases/{databaseUuid} | Get a database
 *DatabasesApi* | [**getUser**](docs/Api/DatabasesApi.md#getuser) | **GET** /crm/api/v1/databases/{databaseUuid}/users/{userId} | Get a database&#39;s user
 *DatabasesApi* | [**listDatabases**](docs/Api/DatabasesApi.md#listdatabases) | **GET** /crm/api/v1/databases | List all databases
@@ -513,6 +514,7 @@ Class | Method | HTTP request | Description
 - [TasksVisibilityType](docs/Model/TasksVisibilityType.md)
 - [Translation](docs/Model/Translation.md)
 - [UsersCreateUserPayload](docs/Model/UsersCreateUserPayload.md)
+- [UsersDeleteUserPayload](docs/Model/UsersDeleteUserPayload.md)
 - [UsersListUsersResponse](docs/Model/UsersListUsersResponse.md)
 - [UsersRole](docs/Model/UsersRole.md)
 - [UsersUpdateUserPayload](docs/Model/UsersUpdateUserPayload.md)
