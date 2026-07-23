@@ -67,8 +67,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, JsonSerializable
         'datagatewayEnabled' => 'bool',
         'isMultiUser' => 'bool',
         'equisoftPlanEnabled' => 'bool',
-        'organizationUuid' => 'string',
-        'billable' => 'bool'
+        'organizationUuid' => 'string'
     ];
 
     /**
@@ -86,8 +85,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, JsonSerializable
         'datagatewayEnabled' => null,
         'isMultiUser' => null,
         'equisoftPlanEnabled' => null,
-        'organizationUuid' => null,
-        'billable' => null
+        'organizationUuid' => null
     ];
 
     /**
@@ -105,8 +103,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, JsonSerializable
         'datagatewayEnabled' => false,
         'isMultiUser' => false,
         'equisoftPlanEnabled' => false,
-        'organizationUuid' => true,
-        'billable' => false
+        'organizationUuid' => true
     ];
 
     /**
@@ -204,8 +201,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, JsonSerializable
         'datagatewayEnabled' => 'datagatewayEnabled',
         'isMultiUser' => 'isMultiUser',
         'equisoftPlanEnabled' => 'equisoftPlanEnabled',
-        'organizationUuid' => 'organizationUuid',
-        'billable' => 'billable'
+        'organizationUuid' => 'organizationUuid'
     ];
 
     /**
@@ -223,8 +219,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, JsonSerializable
         'datagatewayEnabled' => 'setDatagatewayEnabled',
         'isMultiUser' => 'setIsMultiUser',
         'equisoftPlanEnabled' => 'setEquisoftPlanEnabled',
-        'organizationUuid' => 'setOrganizationUuid',
-        'billable' => 'setBillable'
+        'organizationUuid' => 'setOrganizationUuid'
     ];
 
     /**
@@ -242,8 +237,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, JsonSerializable
         'datagatewayEnabled' => 'getDatagatewayEnabled',
         'isMultiUser' => 'getIsMultiUser',
         'equisoftPlanEnabled' => 'getEquisoftPlanEnabled',
-        'organizationUuid' => 'getOrganizationUuid',
-        'billable' => 'getBillable'
+        'organizationUuid' => 'getOrganizationUuid'
     ];
 
     /**
@@ -312,7 +306,6 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, JsonSerializable
         $this->setIfExists('isMultiUser', $data ?? [], null);
         $this->setIfExists('equisoftPlanEnabled', $data ?? [], null);
         $this->setIfExists('organizationUuid', $data ?? [], null);
-        $this->setIfExists('billable', $data ?? [], null);
     }
 
     /**
@@ -365,9 +358,6 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, JsonSerializable
         }
         if ($this->container['isMultiUser'] === null) {
             $invalidProperties[] = "'isMultiUser' can't be null";
-        }
-        if ($this->container['billable'] === null) {
-            $invalidProperties[] = "'billable' can't be null";
         }
         return $invalidProperties;
     }
@@ -657,33 +647,6 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, JsonSerializable
             }
         }
         $this->container['organizationUuid'] = $organizationUuid;
-
-        return $this;
-    }
-
-    /**
-     * Gets billable
-     *
-     * @return bool
-     */
-    public function getBillable(): bool
-    {
-        return $this->container['billable'];
-    }
-
-    /**
-     * Sets billable
-     *
-     * @param bool $billable Is Database Billable
-     *
-     * @return $this
-     */
-    public function setBillable(bool $billable): static
-    {
-        if (is_null($billable)) {
-            throw new InvalidArgumentException('non-nullable billable cannot be null');
-        }
-        $this->container['billable'] = $billable;
 
         return $this;
     }
