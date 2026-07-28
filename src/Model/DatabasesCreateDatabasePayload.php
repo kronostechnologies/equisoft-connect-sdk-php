@@ -1,6 +1,6 @@
 <?php
 /**
- * LegacyProvisioningUserPayload
+ * DatabasesCreateDatabasePayload
  *
  * PHP version 8.1
  *
@@ -34,14 +34,14 @@ use ReturnTypeWillChange;
 use Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * LegacyProvisioningUserPayload Class Doc Comment
+ * DatabasesCreateDatabasePayload Class Doc Comment
  *
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
  */
-class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, JsonSerializable
+class DatabasesCreateDatabasePayload implements ModelInterface, ArrayAccess, JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, Json
       *
       * @var string
       */
-    protected static string $openAPIModelName = 'legacy.provisioning.UserPayload';
+    protected static string $openAPIModelName = 'databases.CreateDatabasePayload';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,13 +58,10 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, Json
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'firstName' => 'string',
-        'lastName' => 'string',
-        'email' => 'string',
-        'lang' => 'string',
-        'role' => 'string',
-        'concurrentAccess' => 'int',
-        'allowDelegation' => 'string'
+        'organizationUuid' => 'string',
+        'profile' => 'string',
+        'ownerUserUuid' => 'string',
+        'locale' => 'string'
     ];
 
     /**
@@ -73,13 +70,10 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, Json
       * @var array<string, string|null>
       */
     protected static array $openAPIFormats = [
-        'firstName' => null,
-        'lastName' => null,
-        'email' => null,
-        'lang' => null,
-        'role' => null,
-        'concurrentAccess' => null,
-        'allowDelegation' => null
+        'organizationUuid' => null,
+        'profile' => null,
+        'ownerUserUuid' => null,
+        'locale' => null
     ];
 
     /**
@@ -88,13 +82,10 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, Json
       * @var array<string, bool>
       */
     protected static array $openAPINullables = [
-        'firstName' => false,
-        'lastName' => false,
-        'email' => false,
-        'lang' => false,
-        'role' => false,
-        'concurrentAccess' => false,
-        'allowDelegation' => false
+        'organizationUuid' => false,
+        'profile' => false,
+        'ownerUserUuid' => false,
+        'locale' => false
     ];
 
     /**
@@ -183,13 +174,10 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, Json
      * @var array<string, string>
      */
     protected static array $attributeMap = [
-        'firstName' => 'firstName',
-        'lastName' => 'lastName',
-        'email' => 'email',
-        'lang' => 'lang',
-        'role' => 'role',
-        'concurrentAccess' => 'concurrentAccess',
-        'allowDelegation' => 'allowDelegation'
+        'organizationUuid' => 'organizationUuid',
+        'profile' => 'profile',
+        'ownerUserUuid' => 'ownerUserUuid',
+        'locale' => 'locale'
     ];
 
     /**
@@ -198,13 +186,10 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, Json
      * @var array<string, string>
      */
     protected static array $setters = [
-        'firstName' => 'setFirstName',
-        'lastName' => 'setLastName',
-        'email' => 'setEmail',
-        'lang' => 'setLang',
-        'role' => 'setRole',
-        'concurrentAccess' => 'setConcurrentAccess',
-        'allowDelegation' => 'setAllowDelegation'
+        'organizationUuid' => 'setOrganizationUuid',
+        'profile' => 'setProfile',
+        'ownerUserUuid' => 'setOwnerUserUuid',
+        'locale' => 'setLocale'
     ];
 
     /**
@@ -213,13 +198,10 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, Json
      * @var array<string, string>
      */
     protected static array $getters = [
-        'firstName' => 'getFirstName',
-        'lastName' => 'getLastName',
-        'email' => 'getEmail',
-        'lang' => 'getLang',
-        'role' => 'getRole',
-        'concurrentAccess' => 'getConcurrentAccess',
-        'allowDelegation' => 'getAllowDelegation'
+        'organizationUuid' => 'getOrganizationUuid',
+        'profile' => 'getProfile',
+        'ownerUserUuid' => 'getOwnerUserUuid',
+        'locale' => 'getLocale'
     ];
 
     /**
@@ -263,42 +245,6 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, Json
         return self::$openAPIModelName;
     }
 
-    public const LANG_EN = 'en';
-    public const LANG_FR = 'fr';
-    public const LANG_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
-    public const ROLE_ADMIN = 'ADMIN';
-    public const ROLE_USER = 'USER';
-    public const ROLE_KRONOS = 'KRONOS';
-    public const ROLE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public static function getLangAllowableValues()
-    {
-        return [
-            self::LANG_EN,
-            self::LANG_FR,
-            self::LANG_UNKNOWN_DEFAULT_OPEN_API,
-        ];
-    }
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public static function getRoleAllowableValues()
-    {
-        return [
-            self::ROLE_ADMIN,
-            self::ROLE_USER,
-            self::ROLE_KRONOS,
-            self::ROLE_UNKNOWN_DEFAULT_OPEN_API,
-        ];
-    }
 
     /**
      * Associative array for storing property values
@@ -314,13 +260,10 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, Json
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('firstName', $data ?? [], null);
-        $this->setIfExists('lastName', $data ?? [], null);
-        $this->setIfExists('email', $data ?? [], null);
-        $this->setIfExists('lang', $data ?? [], null);
-        $this->setIfExists('role', $data ?? [], null);
-        $this->setIfExists('concurrentAccess', $data ?? [], null);
-        $this->setIfExists('allowDelegation', $data ?? [], null);
+        $this->setIfExists('organizationUuid', $data ?? [], null);
+        $this->setIfExists('profile', $data ?? [], null);
+        $this->setIfExists('ownerUserUuid', $data ?? [], null);
+        $this->setIfExists('locale', $data ?? [], null);
     }
 
     /**
@@ -350,24 +293,15 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, Json
     {
         $invalidProperties = [];
 
-        $allowedValues = self::getLangAllowableValues();
-        if (!is_null($this->container['lang']) && !in_array($this->container['lang'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'lang', must be one of '%s'",
-                $this->container['lang'],
-                implode("', '", $allowedValues)
-            );
+        if ($this->container['organizationUuid'] === null) {
+            $invalidProperties[] = "'organizationUuid' can't be null";
         }
-
-        $allowedValues = self::getRoleAllowableValues();
-        if (!is_null($this->container['role']) && !in_array($this->container['role'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'role', must be one of '%s'",
-                $this->container['role'],
-                implode("', '", $allowedValues)
-            );
+        if ($this->container['profile'] === null) {
+            $invalidProperties[] = "'profile' can't be null";
         }
-
+        if ($this->container['ownerUserUuid'] === null) {
+            $invalidProperties[] = "'ownerUserUuid' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -384,198 +318,109 @@ class LegacyProvisioningUserPayload implements ModelInterface, ArrayAccess, Json
 
 
     /**
-     * Gets firstName
+     * Gets organizationUuid
      *
-     * @return string|null
+     * @return string
      */
-    public function getFirstName(): ?string
+    public function getOrganizationUuid(): string
     {
-        return $this->container['firstName'];
+        return $this->container['organizationUuid'];
     }
 
     /**
-     * Sets firstName
+     * Sets organizationUuid
      *
-     * @param string|null $firstName First name.
+     * @param string $organizationUuid Organization UUID to bind user on
      *
      * @return $this
      */
-    public function setFirstName(?string $firstName): static
+    public function setOrganizationUuid(string $organizationUuid): static
     {
-        if (is_null($firstName)) {
-            throw new InvalidArgumentException('non-nullable firstName cannot be null');
+        if (is_null($organizationUuid)) {
+            throw new InvalidArgumentException('non-nullable organizationUuid cannot be null');
         }
-        $this->container['firstName'] = $firstName;
+        $this->container['organizationUuid'] = $organizationUuid;
 
         return $this;
     }
 
     /**
-     * Gets lastName
+     * Gets profile
      *
-     * @return string|null
+     * @return string
      */
-    public function getLastName(): ?string
+    public function getProfile(): string
     {
-        return $this->container['lastName'];
+        return $this->container['profile'];
     }
 
     /**
-     * Sets lastName
+     * Sets profile
      *
-     * @param string|null $lastName Last name.
+     * @param string $profile Profile name
      *
      * @return $this
      */
-    public function setLastName(?string $lastName): static
+    public function setProfile(string $profile): static
     {
-        if (is_null($lastName)) {
-            throw new InvalidArgumentException('non-nullable lastName cannot be null');
+        if (is_null($profile)) {
+            throw new InvalidArgumentException('non-nullable profile cannot be null');
         }
-        $this->container['lastName'] = $lastName;
+        $this->container['profile'] = $profile;
 
         return $this;
     }
 
     /**
-     * Gets email
+     * Gets ownerUserUuid
      *
-     * @return string|null
+     * @return string
      */
-    public function getEmail(): ?string
+    public function getOwnerUserUuid(): string
     {
-        return $this->container['email'];
+        return $this->container['ownerUserUuid'];
     }
 
     /**
-     * Sets email
+     * Sets ownerUserUuid
      *
-     * @param string|null $email Email address used for login.
+     * @param string $ownerUserUuid User UUID to bind database owner
      *
      * @return $this
      */
-    public function setEmail(?string $email): static
+    public function setOwnerUserUuid(string $ownerUserUuid): static
     {
-        if (is_null($email)) {
-            throw new InvalidArgumentException('non-nullable email cannot be null');
+        if (is_null($ownerUserUuid)) {
+            throw new InvalidArgumentException('non-nullable ownerUserUuid cannot be null');
         }
-        $this->container['email'] = $email;
+        $this->container['ownerUserUuid'] = $ownerUserUuid;
 
         return $this;
     }
 
     /**
-     * Gets lang
+     * Gets locale
      *
      * @return string|null
      */
-    public function getLang(): ?string
+    public function getLocale(): ?string
     {
-        return $this->container['lang'];
+        return $this->container['locale'];
     }
 
     /**
-     * Sets lang
+     * Sets locale
      *
-     * @param string|null $lang User language. Organisation default lang will be used if not provided.
+     * @param string|null $locale Locale for the database
      *
      * @return $this
      */
-    public function setLang(?string $lang): static
+    public function setLocale(?string $locale): static
     {
-        if (is_null($lang)) {
-            throw new InvalidArgumentException('non-nullable lang cannot be null');
+        if (is_null($locale)) {
+            throw new InvalidArgumentException('non-nullable locale cannot be null');
         }
-        $allowedValues = self::getLangAllowableValues();
-        if (!in_array($lang, $allowedValues, true)) {
-            $lang = self::LANG_UNKNOWN_DEFAULT_OPEN_API;
-        }
-        $this->container['lang'] = $lang;
-
-        return $this;
-    }
-
-    /**
-     * Gets role
-     *
-     * @return string|null
-     */
-    public function getRole(): ?string
-    {
-        return $this->container['role'];
-    }
-
-    /**
-     * Sets role
-     *
-     * @param string|null $role User role.
-     *
-     * @return $this
-     */
-    public function setRole(?string $role): static
-    {
-        if (is_null($role)) {
-            throw new InvalidArgumentException('non-nullable role cannot be null');
-        }
-        $allowedValues = self::getRoleAllowableValues();
-        if (!in_array($role, $allowedValues, true)) {
-            $role = self::ROLE_UNKNOWN_DEFAULT_OPEN_API;
-        }
-        $this->container['role'] = $role;
-
-        return $this;
-    }
-
-    /**
-     * Gets concurrentAccess
-     *
-     * @return int|null
-     */
-    public function getConcurrentAccess(): ?int
-    {
-        return $this->container['concurrentAccess'];
-    }
-
-    /**
-     * Sets concurrentAccess
-     *
-     * @param int|null $concurrentAccess Number of allowed concurrent accesses with this user. Default: 1.
-     *
-     * @return $this
-     */
-    public function setConcurrentAccess(?int $concurrentAccess): static
-    {
-        if (is_null($concurrentAccess)) {
-            throw new InvalidArgumentException('non-nullable concurrentAccess cannot be null');
-        }
-        $this->container['concurrentAccess'] = $concurrentAccess;
-
-        return $this;
-    }
-
-    /**
-     * Gets allowDelegation
-     *
-     * @return string|null
-     */
-    public function getAllowDelegation(): ?string
-    {
-        return $this->container['allowDelegation'];
-    }
-
-    /**
-     * Sets allowDelegation
-     *
-     * @param string|null $allowDelegation Allow the user to delegate access to his data (false, true. Default: false).
-     *
-     * @return $this
-     */
-    public function setAllowDelegation(?string $allowDelegation): static
-    {
-        if (is_null($allowDelegation)) {
-            throw new InvalidArgumentException('non-nullable allowDelegation cannot be null');
-        }
-        $this->container['allowDelegation'] = $allowDelegation;
+        $this->container['locale'] = $locale;
 
         return $this;
     }

@@ -4,6 +4,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**createDatabase()**](DatabasesApi.md#createDatabase) | **POST** /crm/api/v1/databases | Create database for an organization |
 | [**createUser()**](DatabasesApi.md#createUser) | **POST** /crm/api/v1/databases/{databaseUuid}/users | Create a user for the database |
 | [**deleteUser()**](DatabasesApi.md#deleteUser) | **DELETE** /crm/api/v1/databases/{databaseUuid}/users/{userUuid} | Delete a user for the database |
 | [**getDatabase()**](DatabasesApi.md#getDatabase) | **GET** /crm/api/v1/databases/{databaseUuid} | Get a database |
@@ -13,6 +14,64 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 | [**updateState()**](DatabasesApi.md#updateState) | **PUT** /crm/api/v1/databases/{databaseUuid}/state | Update a database&#39;s state |
 | [**updateUser()**](DatabasesApi.md#updateUser) | **PATCH** /crm/api/v1/databases/{databaseUuid}/users/{userId} | Update a database&#39;s user |
 
+
+## `createDatabase()`
+
+```php
+createDatabase($databasesCreateDatabasePayload): \Equisoft\SDK\EquisoftConnect\Model\DatabasesDatabase
+```
+
+Create database for an organization
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Equisoft\SDK\EquisoftConnect\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\DatabasesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$databasesCreateDatabasePayload = new \Equisoft\SDK\EquisoftConnect\Model\DatabasesCreateDatabasePayload(); // \Equisoft\SDK\EquisoftConnect\Model\DatabasesCreateDatabasePayload
+
+try {
+    $result = $apiInstance->createDatabase($databasesCreateDatabasePayload);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DatabasesApi->createDatabase: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **databasesCreateDatabasePayload** | [**\Equisoft\SDK\EquisoftConnect\Model\DatabasesCreateDatabasePayload**](../Model/DatabasesCreateDatabasePayload.md)|  | |
+
+### Return type
+
+[**\Equisoft\SDK\EquisoftConnect\Model\DatabasesDatabase**](../Model/DatabasesDatabase.md)
+
+### Authorization
+
+[OAuth2](../../README.md#OAuth2)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
 ## `createUser()`
 

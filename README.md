@@ -84,6 +84,7 @@ Class | Method | HTTP request | Description
 *ContactsApi* | [**listContactInvestment**](docs/Api/ContactsApi.md#listcontactinvestment) | **GET** /crm/api/v1/contacts/{contactUuid}/investmentAccounts | List contact investments
 *ContactsApi* | [**listHouseholds**](docs/Api/ContactsApi.md#listhouseholds) | **GET** /crm/api/v1/households | List household entries (EXPERIMENTAL)
 *ContactsApi* | [**patchContact**](docs/Api/ContactsApi.md#patchcontact) | **PATCH** /crm/api/v1/contacts/{contactUuid} | Update a contact
+*DatabasesApi* | [**createDatabase**](docs/Api/DatabasesApi.md#createdatabase) | **POST** /crm/api/v1/databases | Create database for an organization
 *DatabasesApi* | [**createUser**](docs/Api/DatabasesApi.md#createuser) | **POST** /crm/api/v1/databases/{databaseUuid}/users | Create a user for the database
 *DatabasesApi* | [**deleteUser**](docs/Api/DatabasesApi.md#deleteuser) | **DELETE** /crm/api/v1/databases/{databaseUuid}/users/{userUuid} | Delete a user for the database
 *DatabasesApi* | [**getDatabase**](docs/Api/DatabasesApi.md#getdatabase) | **GET** /crm/api/v1/databases/{databaseUuid} | Get a database
@@ -283,6 +284,7 @@ Class | Method | HTTP request | Description
 - [DatabaseSetDistributorPayload](docs/Model/DatabaseSetDistributorPayload.md)
 - [DatabaseState](docs/Model/DatabaseState.md)
 - [DatabaseUpdateStatePayload](docs/Model/DatabaseUpdateStatePayload.md)
+- [DatabasesCreateDatabasePayload](docs/Model/DatabasesCreateDatabasePayload.md)
 - [DatabasesDatabase](docs/Model/DatabasesDatabase.md)
 - [DatabasesListDatabasesResponse](docs/Model/DatabasesListDatabasesResponse.md)
 - [DateOrDateTime](docs/Model/DateOrDateTime.md)

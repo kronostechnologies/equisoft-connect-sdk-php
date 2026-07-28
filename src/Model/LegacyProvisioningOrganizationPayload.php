@@ -64,20 +64,7 @@ class LegacyProvisioningOrganizationPayload implements ModelInterface, ArrayAcce
         'ownerName' => 'string',
         'ownerEmail' => 'string',
         'lang' => 'string',
-        'parentOrganizationUuid' => 'string',
-        'mainPhone' => 'string',
-        'tollFree' => 'string',
-        'fax' => 'string',
-        'address' => 'string',
-        'addressLine2' => 'string',
-        'addressCity' => 'string',
-        'addressState' => 'string',
-        'addressPostalCode' => 'string',
-        'addressCountry' => 'string',
-        'webSite' => 'string',
-        'organizationEmail' => 'string',
-        'installPersonalizedFieldsModule' => 'bool',
-        'installFnaModule' => 'bool'
+        'parentOrganizationUuid' => 'string'
     ];
 
     /**
@@ -92,20 +79,7 @@ class LegacyProvisioningOrganizationPayload implements ModelInterface, ArrayAcce
         'ownerName' => null,
         'ownerEmail' => null,
         'lang' => null,
-        'parentOrganizationUuid' => null,
-        'mainPhone' => null,
-        'tollFree' => null,
-        'fax' => null,
-        'address' => null,
-        'addressLine2' => null,
-        'addressCity' => null,
-        'addressState' => null,
-        'addressPostalCode' => null,
-        'addressCountry' => null,
-        'webSite' => null,
-        'organizationEmail' => null,
-        'installPersonalizedFieldsModule' => null,
-        'installFnaModule' => null
+        'parentOrganizationUuid' => null
     ];
 
     /**
@@ -120,20 +94,7 @@ class LegacyProvisioningOrganizationPayload implements ModelInterface, ArrayAcce
         'ownerName' => false,
         'ownerEmail' => false,
         'lang' => false,
-        'parentOrganizationUuid' => false,
-        'mainPhone' => false,
-        'tollFree' => false,
-        'fax' => false,
-        'address' => false,
-        'addressLine2' => false,
-        'addressCity' => false,
-        'addressState' => false,
-        'addressPostalCode' => false,
-        'addressCountry' => false,
-        'webSite' => false,
-        'organizationEmail' => false,
-        'installPersonalizedFieldsModule' => false,
-        'installFnaModule' => false
+        'parentOrganizationUuid' => false
     ];
 
     /**
@@ -228,20 +189,7 @@ class LegacyProvisioningOrganizationPayload implements ModelInterface, ArrayAcce
         'ownerName' => 'ownerName',
         'ownerEmail' => 'ownerEmail',
         'lang' => 'lang',
-        'parentOrganizationUuid' => 'parentOrganizationUuid',
-        'mainPhone' => 'mainPhone',
-        'tollFree' => 'tollFree',
-        'fax' => 'fax',
-        'address' => 'address',
-        'addressLine2' => 'addressLine2',
-        'addressCity' => 'addressCity',
-        'addressState' => 'addressState',
-        'addressPostalCode' => 'addressPostalCode',
-        'addressCountry' => 'addressCountry',
-        'webSite' => 'webSite',
-        'organizationEmail' => 'organizationEmail',
-        'installPersonalizedFieldsModule' => 'installPersonalizedFieldsModule',
-        'installFnaModule' => 'installFnaModule'
+        'parentOrganizationUuid' => 'parentOrganizationUuid'
     ];
 
     /**
@@ -256,20 +204,7 @@ class LegacyProvisioningOrganizationPayload implements ModelInterface, ArrayAcce
         'ownerName' => 'setOwnerName',
         'ownerEmail' => 'setOwnerEmail',
         'lang' => 'setLang',
-        'parentOrganizationUuid' => 'setParentOrganizationUuid',
-        'mainPhone' => 'setMainPhone',
-        'tollFree' => 'setTollFree',
-        'fax' => 'setFax',
-        'address' => 'setAddress',
-        'addressLine2' => 'setAddressLine2',
-        'addressCity' => 'setAddressCity',
-        'addressState' => 'setAddressState',
-        'addressPostalCode' => 'setAddressPostalCode',
-        'addressCountry' => 'setAddressCountry',
-        'webSite' => 'setWebSite',
-        'organizationEmail' => 'setOrganizationEmail',
-        'installPersonalizedFieldsModule' => 'setInstallPersonalizedFieldsModule',
-        'installFnaModule' => 'setInstallFnaModule'
+        'parentOrganizationUuid' => 'setParentOrganizationUuid'
     ];
 
     /**
@@ -284,20 +219,7 @@ class LegacyProvisioningOrganizationPayload implements ModelInterface, ArrayAcce
         'ownerName' => 'getOwnerName',
         'ownerEmail' => 'getOwnerEmail',
         'lang' => 'getLang',
-        'parentOrganizationUuid' => 'getParentOrganizationUuid',
-        'mainPhone' => 'getMainPhone',
-        'tollFree' => 'getTollFree',
-        'fax' => 'getFax',
-        'address' => 'getAddress',
-        'addressLine2' => 'getAddressLine2',
-        'addressCity' => 'getAddressCity',
-        'addressState' => 'getAddressState',
-        'addressPostalCode' => 'getAddressPostalCode',
-        'addressCountry' => 'getAddressCountry',
-        'webSite' => 'getWebSite',
-        'organizationEmail' => 'getOrganizationEmail',
-        'installPersonalizedFieldsModule' => 'getInstallPersonalizedFieldsModule',
-        'installFnaModule' => 'getInstallFnaModule'
+        'parentOrganizationUuid' => 'getParentOrganizationUuid'
     ];
 
     /**
@@ -363,19 +285,6 @@ class LegacyProvisioningOrganizationPayload implements ModelInterface, ArrayAcce
         $this->setIfExists('ownerEmail', $data ?? [], null);
         $this->setIfExists('lang', $data ?? [], null);
         $this->setIfExists('parentOrganizationUuid', $data ?? [], null);
-        $this->setIfExists('mainPhone', $data ?? [], null);
-        $this->setIfExists('tollFree', $data ?? [], null);
-        $this->setIfExists('fax', $data ?? [], null);
-        $this->setIfExists('address', $data ?? [], null);
-        $this->setIfExists('addressLine2', $data ?? [], null);
-        $this->setIfExists('addressCity', $data ?? [], null);
-        $this->setIfExists('addressState', $data ?? [], null);
-        $this->setIfExists('addressPostalCode', $data ?? [], null);
-        $this->setIfExists('addressCountry', $data ?? [], null);
-        $this->setIfExists('webSite', $data ?? [], null);
-        $this->setIfExists('organizationEmail', $data ?? [], null);
-        $this->setIfExists('installPersonalizedFieldsModule', $data ?? [], null);
-        $this->setIfExists('installFnaModule', $data ?? [], null);
     }
 
     /**
@@ -605,357 +514,6 @@ class LegacyProvisioningOrganizationPayload implements ModelInterface, ArrayAcce
             throw new InvalidArgumentException('non-nullable parentOrganizationUuid cannot be null');
         }
         $this->container['parentOrganizationUuid'] = $parentOrganizationUuid;
-
-        return $this;
-    }
-
-    /**
-     * Gets mainPhone
-     *
-     * @return string|null
-     */
-    public function getMainPhone(): ?string
-    {
-        return $this->container['mainPhone'];
-    }
-
-    /**
-     * Sets mainPhone
-     *
-     * @param string|null $mainPhone Organization main phone number.
-     *
-     * @return $this
-     */
-    public function setMainPhone(?string $mainPhone): static
-    {
-        if (is_null($mainPhone)) {
-            throw new InvalidArgumentException('non-nullable mainPhone cannot be null');
-        }
-        $this->container['mainPhone'] = $mainPhone;
-
-        return $this;
-    }
-
-    /**
-     * Gets tollFree
-     *
-     * @return string|null
-     */
-    public function getTollFree(): ?string
-    {
-        return $this->container['tollFree'];
-    }
-
-    /**
-     * Sets tollFree
-     *
-     * @param string|null $tollFree Organization tollFree phone number.
-     *
-     * @return $this
-     */
-    public function setTollFree(?string $tollFree): static
-    {
-        if (is_null($tollFree)) {
-            throw new InvalidArgumentException('non-nullable tollFree cannot be null');
-        }
-        $this->container['tollFree'] = $tollFree;
-
-        return $this;
-    }
-
-    /**
-     * Gets fax
-     *
-     * @return string|null
-     */
-    public function getFax(): ?string
-    {
-        return $this->container['fax'];
-    }
-
-    /**
-     * Sets fax
-     *
-     * @param string|null $fax Organization fax phone number.
-     *
-     * @return $this
-     */
-    public function setFax(?string $fax): static
-    {
-        if (is_null($fax)) {
-            throw new InvalidArgumentException('non-nullable fax cannot be null');
-        }
-        $this->container['fax'] = $fax;
-
-        return $this;
-    }
-
-    /**
-     * Gets address
-     *
-     * @return string|null
-     */
-    public function getAddress(): ?string
-    {
-        return $this->container['address'];
-    }
-
-    /**
-     * Sets address
-     *
-     * @param string|null $address Organization address first line.
-     *
-     * @return $this
-     */
-    public function setAddress(?string $address): static
-    {
-        if (is_null($address)) {
-            throw new InvalidArgumentException('non-nullable address cannot be null');
-        }
-        $this->container['address'] = $address;
-
-        return $this;
-    }
-
-    /**
-     * Gets addressLine2
-     *
-     * @return string|null
-     */
-    public function getAddressLine2(): ?string
-    {
-        return $this->container['addressLine2'];
-    }
-
-    /**
-     * Sets addressLine2
-     *
-     * @param string|null $addressLine2 Organization address second line.
-     *
-     * @return $this
-     */
-    public function setAddressLine2(?string $addressLine2): static
-    {
-        if (is_null($addressLine2)) {
-            throw new InvalidArgumentException('non-nullable addressLine2 cannot be null');
-        }
-        $this->container['addressLine2'] = $addressLine2;
-
-        return $this;
-    }
-
-    /**
-     * Gets addressCity
-     *
-     * @return string|null
-     */
-    public function getAddressCity(): ?string
-    {
-        return $this->container['addressCity'];
-    }
-
-    /**
-     * Sets addressCity
-     *
-     * @param string|null $addressCity Organization address city.
-     *
-     * @return $this
-     */
-    public function setAddressCity(?string $addressCity): static
-    {
-        if (is_null($addressCity)) {
-            throw new InvalidArgumentException('non-nullable addressCity cannot be null');
-        }
-        $this->container['addressCity'] = $addressCity;
-
-        return $this;
-    }
-
-    /**
-     * Gets addressState
-     *
-     * @return string|null
-     */
-    public function getAddressState(): ?string
-    {
-        return $this->container['addressState'];
-    }
-
-    /**
-     * Sets addressState
-     *
-     * @param string|null $addressState Organization address state/province.
-     *
-     * @return $this
-     */
-    public function setAddressState(?string $addressState): static
-    {
-        if (is_null($addressState)) {
-            throw new InvalidArgumentException('non-nullable addressState cannot be null');
-        }
-        $this->container['addressState'] = $addressState;
-
-        return $this;
-    }
-
-    /**
-     * Gets addressPostalCode
-     *
-     * @return string|null
-     */
-    public function getAddressPostalCode(): ?string
-    {
-        return $this->container['addressPostalCode'];
-    }
-
-    /**
-     * Sets addressPostalCode
-     *
-     * @param string|null $addressPostalCode Organization address postal code.
-     *
-     * @return $this
-     */
-    public function setAddressPostalCode(?string $addressPostalCode): static
-    {
-        if (is_null($addressPostalCode)) {
-            throw new InvalidArgumentException('non-nullable addressPostalCode cannot be null');
-        }
-        $this->container['addressPostalCode'] = $addressPostalCode;
-
-        return $this;
-    }
-
-    /**
-     * Gets addressCountry
-     *
-     * @return string|null
-     */
-    public function getAddressCountry(): ?string
-    {
-        return $this->container['addressCountry'];
-    }
-
-    /**
-     * Sets addressCountry
-     *
-     * @param string|null $addressCountry Organization address country.
-     *
-     * @return $this
-     */
-    public function setAddressCountry(?string $addressCountry): static
-    {
-        if (is_null($addressCountry)) {
-            throw new InvalidArgumentException('non-nullable addressCountry cannot be null');
-        }
-        $this->container['addressCountry'] = $addressCountry;
-
-        return $this;
-    }
-
-    /**
-     * Gets webSite
-     *
-     * @return string|null
-     */
-    public function getWebSite(): ?string
-    {
-        return $this->container['webSite'];
-    }
-
-    /**
-     * Sets webSite
-     *
-     * @param string|null $webSite Organization website url.
-     *
-     * @return $this
-     */
-    public function setWebSite(?string $webSite): static
-    {
-        if (is_null($webSite)) {
-            throw new InvalidArgumentException('non-nullable webSite cannot be null');
-        }
-        $this->container['webSite'] = $webSite;
-
-        return $this;
-    }
-
-    /**
-     * Gets organizationEmail
-     *
-     * @return string|null
-     */
-    public function getOrganizationEmail(): ?string
-    {
-        return $this->container['organizationEmail'];
-    }
-
-    /**
-     * Sets organizationEmail
-     *
-     * @param string|null $organizationEmail Organization email.
-     *
-     * @return $this
-     */
-    public function setOrganizationEmail(?string $organizationEmail): static
-    {
-        if (is_null($organizationEmail)) {
-            throw new InvalidArgumentException('non-nullable organizationEmail cannot be null');
-        }
-        $this->container['organizationEmail'] = $organizationEmail;
-
-        return $this;
-    }
-
-    /**
-     * Gets installPersonalizedFieldsModule
-     *
-     * @return bool|null
-     */
-    public function getInstallPersonalizedFieldsModule(): ?bool
-    {
-        return $this->container['installPersonalizedFieldsModule'];
-    }
-
-    /**
-     * Sets installPersonalizedFieldsModule
-     *
-     * @param bool|null $installPersonalizedFieldsModule Install personalized fields module.
-     *
-     * @return $this
-     */
-    public function setInstallPersonalizedFieldsModule(?bool $installPersonalizedFieldsModule): static
-    {
-        if (is_null($installPersonalizedFieldsModule)) {
-            throw new InvalidArgumentException('non-nullable installPersonalizedFieldsModule cannot be null');
-        }
-        $this->container['installPersonalizedFieldsModule'] = $installPersonalizedFieldsModule;
-
-        return $this;
-    }
-
-    /**
-     * Gets installFnaModule
-     *
-     * @return bool|null
-     */
-    public function getInstallFnaModule(): ?bool
-    {
-        return $this->container['installFnaModule'];
-    }
-
-    /**
-     * Sets installFnaModule
-     *
-     * @param bool|null $installFnaModule Install FNA module.
-     *
-     * @return $this
-     */
-    public function setInstallFnaModule(?bool $installFnaModule): static
-    {
-        if (is_null($installFnaModule)) {
-            throw new InvalidArgumentException('non-nullable installFnaModule cannot be null');
-        }
-        $this->container['installFnaModule'] = $installFnaModule;
 
         return $this;
     }

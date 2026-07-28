@@ -85,6 +85,7 @@ docs/Model/CredentialsResponse.md
 docs/Model/DatabaseSetDistributorPayload.md
 docs/Model/DatabaseState.md
 docs/Model/DatabaseUpdateStatePayload.md
+docs/Model/DatabasesCreateDatabasePayload.md
 docs/Model/DatabasesDatabase.md
 docs/Model/DatabasesListDatabasesResponse.md
 docs/Model/DateOrDateTime.md
@@ -410,6 +411,7 @@ src/Model/CredentialsResponse.php
 src/Model/DatabaseSetDistributorPayload.php
 src/Model/DatabaseState.php
 src/Model/DatabaseUpdateStatePayload.php
+src/Model/DatabasesCreateDatabasePayload.php
 src/Model/DatabasesDatabase.php
 src/Model/DatabasesListDatabasesResponse.php
 src/Model/DateOrDateTime.php
@@ -650,3 +652,4 @@ src/Model/UsersUser.php
 src/Model/UsersUserGroup.php
 src/Model/UsersUserIdentity.php
 src/ObjectSerializer.php
+tests/Model/DatabasesCreateDatabasePayloadTest.php
