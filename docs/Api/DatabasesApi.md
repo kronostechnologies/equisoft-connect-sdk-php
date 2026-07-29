@@ -6,6 +6,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 | ------------- | ------------- | ------------- |
 | [**createDatabase()**](DatabasesApi.md#createDatabase) | **POST** /crm/api/v1/databases | Create database for an organization |
 | [**createUser()**](DatabasesApi.md#createUser) | **POST** /crm/api/v1/databases/{databaseUuid}/users | Create a user for the database |
+| [**deleteDatabase()**](DatabasesApi.md#deleteDatabase) | **DELETE** /crm/api/v1/databases/{databaseUuid} | Delete a database |
 | [**deleteUser()**](DatabasesApi.md#deleteUser) | **DELETE** /crm/api/v1/databases/{databaseUuid}/users/{userUuid} | Delete a user for the database |
 | [**getDatabase()**](DatabasesApi.md#getDatabase) | **GET** /crm/api/v1/databases/{databaseUuid} | Get a database |
 | [**getUser()**](DatabasesApi.md#getUser) | **GET** /crm/api/v1/databases/{databaseUuid}/users/{userId} | Get a database&#39;s user |
@@ -127,6 +128,63 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `deleteDatabase()`
+
+```php
+deleteDatabase($databaseUuid)
+```
+
+Delete a database
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth2
+$config = Equisoft\SDK\EquisoftConnect\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Equisoft\SDK\EquisoftConnect\Api\DatabasesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$databaseUuid = 'databaseUuid_example'; // string | Database unique identifier.
+
+try {
+    $apiInstance->deleteDatabase($databaseUuid);
+} catch (Exception $e) {
+    echo 'Exception when calling DatabasesApi->deleteDatabase: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **databaseUuid** | **string**| Database unique identifier. | |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[OAuth2](../../README.md#OAuth2)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
