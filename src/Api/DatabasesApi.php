@@ -2151,7 +2151,7 @@ class DatabasesApi
      *
      * List all databases
      *
-     * @param  string|null $organizationUuid Organization unique identifier. (optional)
+     * @param  string|null $organizationUuid Organization unique identifier. (optional) (deprecated)
      * @param  string|null $databaseName Database name. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listDatabases'] to see the possible values for this operation
      *
@@ -2174,7 +2174,7 @@ class DatabasesApi
      *
      * List all databases
      *
-     * @param  string|null $organizationUuid Organization unique identifier. (optional)
+     * @param  string|null $organizationUuid Organization unique identifier. (optional) (deprecated)
      * @param  string|null $databaseName Database name. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listDatabases'] to see the possible values for this operation
      *
@@ -2289,7 +2289,7 @@ class DatabasesApi
      *
      * List all databases
      *
-     * @param  string|null $organizationUuid Organization unique identifier. (optional)
+     * @param  string|null $organizationUuid Organization unique identifier. (optional) (deprecated)
      * @param  string|null $databaseName Database name. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listDatabases'] to see the possible values for this operation
      *
@@ -2315,7 +2315,7 @@ class DatabasesApi
      *
      * List all databases
      *
-     * @param  string|null $organizationUuid Organization unique identifier. (optional)
+     * @param  string|null $organizationUuid Organization unique identifier. (optional) (deprecated)
      * @param  string|null $databaseName Database name. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listDatabases'] to see the possible values for this operation
      *
@@ -2370,7 +2370,7 @@ class DatabasesApi
     /**
      * Create request for operation 'listDatabases'
      *
-     * @param  string|null $organizationUuid Organization unique identifier. (optional)
+     * @param  string|null $organizationUuid Organization unique identifier. (optional) (deprecated)
      * @param  string|null $databaseName Database name. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listDatabases'] to see the possible values for this operation
      *
