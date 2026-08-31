@@ -1,10 +1,9 @@
-# # ContactsBooleanCustomField
+# # ContactsCustomField
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **string** |  |
-**value** | **bool** |  | [optional]
+**type** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsCustomFieldType**](ContactsCustomFieldType.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -55,6 +55,8 @@ docs/Model/ContactsCreateRegistrationNumbersPayload.md
 docs/Model/ContactsCreateRevenuePayload.md
 docs/Model/ContactsCreateSegmentationPayload.md
 docs/Model/ContactsCreateWebsitePayload.md
+docs/Model/ContactsCustomField.md
+docs/Model/ContactsCustomFieldType.md
 docs/Model/ContactsDateCustomField.md
 docs/Model/ContactsEmail.md
 docs/Model/ContactsFieldValueCustomField.md
@@ -387,6 +389,8 @@ src/Model/ContactsCreateRegistrationNumbersPayload.php
 src/Model/ContactsCreateRevenuePayload.php
 src/Model/ContactsCreateSegmentationPayload.php
 src/Model/ContactsCreateWebsitePayload.php
+src/Model/ContactsCustomField.php
+src/Model/ContactsCustomFieldType.php
 src/Model/ContactsDateCustomField.php
 src/Model/ContactsEmail.php
 src/Model/ContactsFieldValueCustomField.php
@@ -664,3 +668,4 @@ src/Model/UsersUser.php
 src/Model/UsersUserGroup.php
 src/Model/UsersUserIdentity.php
 src/ObjectSerializer.php
+tests/Model/ContactsCustomFieldTypeTest.php

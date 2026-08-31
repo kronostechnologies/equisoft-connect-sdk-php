@@ -72,7 +72,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, JsonSerializable
         'emails' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsEmail[]',
         'websites' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsWebSite[]',
         'links' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactRelation[]',
-        'customFields' => 'mixed[]',
+        'customFields' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsCustomField[]',
         'notes' => 'string',
         'notesAdditionalInformation' => 'string',
         'creationDate' => '\DateTime',
@@ -833,7 +833,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Gets customFields
      *
-     * @return mixed[]|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsCustomField[]|null
      */
     public function getCustomFields(): ?array
     {
@@ -843,7 +843,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Sets customFields
      *
-     * @param mixed[]|null $customFields Custom fields keyed by system name
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsCustomField[]|null $customFields Custom fields keyed by system name
      *
      * @return $this
      */

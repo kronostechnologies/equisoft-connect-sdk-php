@@ -66,11 +66,7 @@ class ContactsCustomField implements ModelInterface, ArrayAccess, JsonSerializab
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'systemName' => 'string',
-        'type' => 'string',
-        'label' => 'string',
-        'visible' => 'bool',
-        'sort' => 'int'
+        'type' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsCustomFieldType'
     ];
 
     /**
@@ -79,11 +75,7 @@ class ContactsCustomField implements ModelInterface, ArrayAccess, JsonSerializab
       * @var array<string, string|null>
       */
     protected static array $openAPIFormats = [
-        'systemName' => null,
-        'type' => null,
-        'label' => null,
-        'visible' => null,
-        'sort' => null
+        'type' => null
     ];
 
     /**
@@ -92,11 +84,7 @@ class ContactsCustomField implements ModelInterface, ArrayAccess, JsonSerializab
       * @var array<string, bool>
       */
     protected static array $openAPINullables = [
-        'systemName' => false,
-        'type' => false,
-        'label' => false,
-        'visible' => false,
-        'sort' => false
+        'type' => false
     ];
 
     /**
@@ -185,11 +173,7 @@ class ContactsCustomField implements ModelInterface, ArrayAccess, JsonSerializab
      * @var array<string, string>
      */
     protected static array $attributeMap = [
-        'systemName' => 'systemName',
-        'type' => 'type',
-        'label' => 'label',
-        'visible' => 'visible',
-        'sort' => 'sort'
+        'type' => 'type'
     ];
 
     /**
@@ -198,11 +182,7 @@ class ContactsCustomField implements ModelInterface, ArrayAccess, JsonSerializab
      * @var array<string, string>
      */
     protected static array $setters = [
-        'systemName' => 'setSystemName',
-        'type' => 'setType',
-        'label' => 'setLabel',
-        'visible' => 'setVisible',
-        'sort' => 'setSort'
+        'type' => 'setType'
     ];
 
     /**
@@ -211,11 +191,7 @@ class ContactsCustomField implements ModelInterface, ArrayAccess, JsonSerializab
      * @var array<string, string>
      */
     protected static array $getters = [
-        'systemName' => 'getSystemName',
-        'type' => 'getType',
-        'label' => 'getLabel',
-        'visible' => 'getVisible',
-        'sort' => 'getSort'
+        'type' => 'getType'
     ];
 
     /**
@@ -283,11 +259,7 @@ class ContactsCustomField implements ModelInterface, ArrayAccess, JsonSerializab
         // Initialize discriminator property with the model name.
         $this->container['type'] = static::$openAPIModelName;
 
-        $this->setIfExists('systemName', $data ?? [], null);
         $this->setIfExists('type', $data ?? [], null);
-        $this->setIfExists('label', $data ?? [], null);
-        $this->setIfExists('visible', $data ?? [], null);
-        $this->setIfExists('sort', $data ?? [], null);
     }
 
     /**
@@ -317,6 +289,9 @@ class ContactsCustomField implements ModelInterface, ArrayAccess, JsonSerializab
     {
         $invalidProperties = [];
 
+        if ($this->container['type'] === null) {
+            $invalidProperties[] = "'type' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -333,38 +308,11 @@ class ContactsCustomField implements ModelInterface, ArrayAccess, JsonSerializab
 
 
     /**
-     * Gets systemName
-     *
-     * @return string|null
-     */
-    public function getSystemName(): ?string
-    {
-        return $this->container['systemName'];
-    }
-
-    /**
-     * Sets systemName
-     *
-     * @param string|null $systemName systemName
-     *
-     * @return $this
-     */
-    public function setSystemName(?string $systemName): static
-    {
-        if (is_null($systemName)) {
-            throw new InvalidArgumentException('non-nullable systemName cannot be null');
-        }
-        $this->container['systemName'] = $systemName;
-
-        return $this;
-    }
-
-    /**
      * Gets type
      *
-     * @return string|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsCustomFieldType
      */
-    public function getType(): ?string
+    public function getType(): \Equisoft\SDK\EquisoftConnect\Model\ContactsCustomFieldType
     {
         return $this->container['type'];
     }
@@ -372,97 +320,16 @@ class ContactsCustomField implements ModelInterface, ArrayAccess, JsonSerializab
     /**
      * Sets type
      *
-     * @param string|null $type type
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsCustomFieldType $type type
      *
      * @return $this
      */
-    public function setType(?string $type): static
+    public function setType(\Equisoft\SDK\EquisoftConnect\Model\ContactsCustomFieldType $type): static
     {
         if (is_null($type)) {
             throw new InvalidArgumentException('non-nullable type cannot be null');
         }
         $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets label
-     *
-     * @return string|null
-     */
-    public function getLabel(): ?string
-    {
-        return $this->container['label'];
-    }
-
-    /**
-     * Sets label
-     *
-     * @param string|null $label label
-     *
-     * @return $this
-     */
-    public function setLabel(?string $label): static
-    {
-        if (is_null($label)) {
-            throw new InvalidArgumentException('non-nullable label cannot be null');
-        }
-        $this->container['label'] = $label;
-
-        return $this;
-    }
-
-    /**
-     * Gets visible
-     *
-     * @return bool|null
-     */
-    public function getVisible(): ?bool
-    {
-        return $this->container['visible'];
-    }
-
-    /**
-     * Sets visible
-     *
-     * @param bool|null $visible visible
-     *
-     * @return $this
-     */
-    public function setVisible(?bool $visible): static
-    {
-        if (is_null($visible)) {
-            throw new InvalidArgumentException('non-nullable visible cannot be null');
-        }
-        $this->container['visible'] = $visible;
-
-        return $this;
-    }
-
-    /**
-     * Gets sort
-     *
-     * @return int|null
-     */
-    public function getSort(): ?int
-    {
-        return $this->container['sort'];
-    }
-
-    /**
-     * Sets sort
-     *
-     * @param int|null $sort sort
-     *
-     * @return $this
-     */
-    public function setSort(?int $sort): static
-    {
-        if (is_null($sort)) {
-            throw new InvalidArgumentException('non-nullable sort cannot be null');
-        }
-        $this->container['sort'] = $sort;
 
         return $this;
     }
