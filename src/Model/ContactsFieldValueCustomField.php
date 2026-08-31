@@ -27,12 +27,6 @@
 
 namespace Equisoft\SDK\EquisoftConnect\Model;
 
-use ArrayAccess;
-use JsonSerializable;
-use InvalidArgumentException;
-use ReturnTypeWillChange;
-use Equisoft\SDK\EquisoftConnect\ObjectSerializer;
-
 /**
  * ContactsFieldValueCustomField Class Doc Comment
  *
@@ -41,7 +35,7 @@ use Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
  */
-class ContactsFieldValueCustomField implements ModelInterface, ArrayAccess, JsonSerializable
+class ContactsFieldValueCustomField extends ContactsCustomField
 {
     public const DISCRIMINATOR = null;
 
@@ -58,11 +52,7 @@ class ContactsFieldValueCustomField implements ModelInterface, ArrayAccess, Json
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'systemName' => 'string',
         'type' => 'string',
-        'label' => 'string',
-        'visible' => 'bool',
-        'sort' => 'int',
         'value' => 'int'
     ];
 
@@ -72,11 +62,7 @@ class ContactsFieldValueCustomField implements ModelInterface, ArrayAccess, Json
       * @var array<string, string|null>
       */
     protected static array $openAPIFormats = [
-        'systemName' => null,
         'type' => null,
-        'label' => null,
-        'visible' => null,
-        'sort' => null,
         'value' => null
     ];
 
@@ -86,11 +72,7 @@ class ContactsFieldValueCustomField implements ModelInterface, ArrayAccess, Json
       * @var array<string, bool>
       */
     protected static array $openAPINullables = [
-        'systemName' => false,
         'type' => false,
-        'label' => false,
-        'visible' => false,
-        'sort' => false,
         'value' => false
     ];
 
@@ -108,7 +90,7 @@ class ContactsFieldValueCustomField implements ModelInterface, ArrayAccess, Json
      */
     public static function openAPITypes(): array
     {
-        return self::$openAPITypes;
+        return self::$openAPITypes + parent::openAPITypes();
     }
 
     /**
@@ -118,7 +100,7 @@ class ContactsFieldValueCustomField implements ModelInterface, ArrayAccess, Json
      */
     public static function openAPIFormats(): array
     {
-        return self::$openAPIFormats;
+        return self::$openAPIFormats + parent::openAPIFormats();
     }
 
     /**
@@ -128,7 +110,7 @@ class ContactsFieldValueCustomField implements ModelInterface, ArrayAccess, Json
      */
     protected static function openAPINullables(): array
     {
-        return self::$openAPINullables;
+        return self::$openAPINullables + parent::openAPINullables();
     }
 
     /**
@@ -180,11 +162,7 @@ class ContactsFieldValueCustomField implements ModelInterface, ArrayAccess, Json
      * @var array<string, string>
      */
     protected static array $attributeMap = [
-        'systemName' => 'systemName',
         'type' => 'type',
-        'label' => 'label',
-        'visible' => 'visible',
-        'sort' => 'sort',
         'value' => 'value'
     ];
 
@@ -194,11 +172,7 @@ class ContactsFieldValueCustomField implements ModelInterface, ArrayAccess, Json
      * @var array<string, string>
      */
     protected static array $setters = [
-        'systemName' => 'setSystemName',
         'type' => 'setType',
-        'label' => 'setLabel',
-        'visible' => 'setVisible',
-        'sort' => 'setSort',
         'value' => 'setValue'
     ];
 
@@ -208,11 +182,7 @@ class ContactsFieldValueCustomField implements ModelInterface, ArrayAccess, Json
      * @var array<string, string>
      */
     protected static array $getters = [
-        'systemName' => 'getSystemName',
         'type' => 'getType',
-        'label' => 'getLabel',
-        'visible' => 'getVisible',
-        'sort' => 'getSort',
         'value' => 'getValue'
     ];
 
@@ -224,7 +194,7 @@ class ContactsFieldValueCustomField implements ModelInterface, ArrayAccess, Json
      */
     public static function attributeMap(): array
     {
-        return self::$attributeMap;
+        return parent::attributeMap() + self::$attributeMap;
     }
 
     /**
@@ -234,7 +204,7 @@ class ContactsFieldValueCustomField implements ModelInterface, ArrayAccess, Json
      */
     public static function setters(): array
     {
-        return self::$setters;
+        return parent::setters() + self::$setters;
     }
 
     /**
@@ -244,7 +214,7 @@ class ContactsFieldValueCustomField implements ModelInterface, ArrayAccess, Json
      */
     public static function getters(): array
     {
-        return self::$getters;
+        return parent::getters() + self::$getters;
     }
 
     /**
@@ -273,12 +243,6 @@ class ContactsFieldValueCustomField implements ModelInterface, ArrayAccess, Json
         ];
     }
 
-    /**
-     * Associative array for storing property values
-     *
-     * @var array
-     */
-    protected array $container = [];
 
     /**
      * Constructor
@@ -287,11 +251,9 @@ class ContactsFieldValueCustomField implements ModelInterface, ArrayAccess, Json
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('systemName', $data ?? [], null);
+        parent::__construct($data);
+
         $this->setIfExists('type', $data ?? [], null);
-        $this->setIfExists('label', $data ?? [], null);
-        $this->setIfExists('visible', $data ?? [], null);
-        $this->setIfExists('sort', $data ?? [], null);
         $this->setIfExists('value', $data ?? [], null);
     }
 
@@ -320,7 +282,7 @@ class ContactsFieldValueCustomField implements ModelInterface, ArrayAccess, Json
      */
     public function listInvalidProperties(): array
     {
-        $invalidProperties = [];
+        $invalidProperties = parent::listInvalidProperties();
 
         $allowedValues = self::getTypeAllowableValues();
         if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
@@ -345,33 +307,6 @@ class ContactsFieldValueCustomField implements ModelInterface, ArrayAccess, Json
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets systemName
-     *
-     * @return string|null
-     */
-    public function getSystemName(): ?string
-    {
-        return $this->container['systemName'];
-    }
-
-    /**
-     * Sets systemName
-     *
-     * @param string|null $systemName systemName
-     *
-     * @return $this
-     */
-    public function setSystemName(?string $systemName): static
-    {
-        if (is_null($systemName)) {
-            throw new InvalidArgumentException('non-nullable systemName cannot be null');
-        }
-        $this->container['systemName'] = $systemName;
-
-        return $this;
-    }
 
     /**
      * Gets type
@@ -400,87 +335,6 @@ class ContactsFieldValueCustomField implements ModelInterface, ArrayAccess, Json
             $type = self::TYPE_UNKNOWN_DEFAULT_OPEN_API;
         }
         $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets label
-     *
-     * @return string|null
-     */
-    public function getLabel(): ?string
-    {
-        return $this->container['label'];
-    }
-
-    /**
-     * Sets label
-     *
-     * @param string|null $label label
-     *
-     * @return $this
-     */
-    public function setLabel(?string $label): static
-    {
-        if (is_null($label)) {
-            throw new InvalidArgumentException('non-nullable label cannot be null');
-        }
-        $this->container['label'] = $label;
-
-        return $this;
-    }
-
-    /**
-     * Gets visible
-     *
-     * @return bool|null
-     */
-    public function getVisible(): ?bool
-    {
-        return $this->container['visible'];
-    }
-
-    /**
-     * Sets visible
-     *
-     * @param bool|null $visible visible
-     *
-     * @return $this
-     */
-    public function setVisible(?bool $visible): static
-    {
-        if (is_null($visible)) {
-            throw new InvalidArgumentException('non-nullable visible cannot be null');
-        }
-        $this->container['visible'] = $visible;
-
-        return $this;
-    }
-
-    /**
-     * Gets sort
-     *
-     * @return int|null
-     */
-    public function getSort(): ?int
-    {
-        return $this->container['sort'];
-    }
-
-    /**
-     * Sets sort
-     *
-     * @param int|null $sort sort
-     *
-     * @return $this
-     */
-    public function setSort(?int $sort): static
-    {
-        if (is_null($sort)) {
-            throw new InvalidArgumentException('non-nullable sort cannot be null');
-        }
-        $this->container['sort'] = $sort;
 
         return $this;
     }

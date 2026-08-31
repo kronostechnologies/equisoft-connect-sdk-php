@@ -43,7 +43,15 @@ use Equisoft\SDK\EquisoftConnect\ObjectSerializer;
  */
 class ContactsCustomField implements ModelInterface, ArrayAccess, JsonSerializable
 {
-    public const DISCRIMINATOR = null;
+    public const DISCRIMINATOR = 'type';
+    public const DISCRIMINATOR_MAP = [
+        "boolean_field" => "ContactsBooleanCustomField",
+        "date_field" => "ContactsDateCustomField",
+        "money_field" => "ContactsMoneyCustomField",
+        "numeric_field" => "ContactsNumericCustomField",
+        "text_field" => "ContactsTextCustomField",
+        "vd_field" => "ContactsFieldValueCustomField",
+    ];
 
     /**
       * The original name of the model.
@@ -251,6 +259,12 @@ class ContactsCustomField implements ModelInterface, ArrayAccess, JsonSerializab
         return self::$openAPIModelName;
     }
 
+    public const TYPE_BOOLEAN_FIELD = 'boolean_field';
+    public const TYPE_DATE_FIELD = 'date_field';
+    public const TYPE_MONEY_FIELD = 'money_field';
+    public const TYPE_NUMERIC_FIELD = 'numeric_field';
+    public const TYPE_TEXT_FIELD = 'text_field';
+    public const TYPE_VD_FIELD = 'vd_field';
 
     /**
      * Associative array for storing property values
@@ -266,6 +280,9 @@ class ContactsCustomField implements ModelInterface, ArrayAccess, JsonSerializab
      */
     public function __construct(?array $data = null)
     {
+        // Initialize discriminator property with the model name.
+        $this->container['type'] = static::$openAPIModelName;
+
         $this->setIfExists('systemName', $data ?? [], null);
         $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('label', $data ?? [], null);
