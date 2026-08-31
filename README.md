@@ -255,7 +255,6 @@ Class | Method | HTTP request | Description
 - [ContactsCreateRevenuePayload](docs/Model/ContactsCreateRevenuePayload.md)
 - [ContactsCreateSegmentationPayload](docs/Model/ContactsCreateSegmentationPayload.md)
 - [ContactsCreateWebsitePayload](docs/Model/ContactsCreateWebsitePayload.md)
-- [ContactsCustomField](docs/Model/ContactsCustomField.md)
 - [ContactsDateCustomField](docs/Model/ContactsDateCustomField.md)
 - [ContactsEmail](docs/Model/ContactsEmail.md)
 - [ContactsFieldValueCustomField](docs/Model/ContactsFieldValueCustomField.md)
