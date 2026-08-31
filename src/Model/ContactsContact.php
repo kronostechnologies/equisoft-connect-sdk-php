@@ -72,7 +72,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, JsonSerializable
         'emails' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsEmail[]',
         'websites' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsWebSite[]',
         'links' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactRelation[]',
-        'customFields' => 'object',
+        'customFields' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsCustomField[]',
         'notes' => 'string',
         'notesAdditionalInformation' => 'string',
         'creationDate' => '\DateTime',
@@ -833,9 +833,9 @@ class ContactsContact implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Gets customFields
      *
-     * @return object|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsCustomField[]|null
      */
-    public function getCustomFields(): ?object
+    public function getCustomFields(): ?array
     {
         return $this->container['customFields'];
     }
@@ -843,11 +843,11 @@ class ContactsContact implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Sets customFields
      *
-     * @param object|null $customFields Custom fields keyed by system name
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsCustomField[]|null $customFields Custom fields keyed by system name
      *
      * @return $this
      */
-    public function setCustomFields(?object $customFields): static
+    public function setCustomFields(?array $customFields): static
     {
         if (is_null($customFields)) {
             throw new InvalidArgumentException('non-nullable customFields cannot be null');
