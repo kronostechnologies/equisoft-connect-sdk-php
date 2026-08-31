@@ -36,6 +36,7 @@ docs/Model/ContactPatchContactPayload.md
 docs/Model/ContactPatchDto.md
 docs/Model/ContactsAdditionalInformation.md
 docs/Model/ContactsAddress.md
+docs/Model/ContactsBooleanCustomField.md
 docs/Model/ContactsCivilStatus.md
 docs/Model/ContactsContact.md
 docs/Model/ContactsContactFieldValue.md
@@ -54,7 +55,10 @@ docs/Model/ContactsCreateRegistrationNumbersPayload.md
 docs/Model/ContactsCreateRevenuePayload.md
 docs/Model/ContactsCreateSegmentationPayload.md
 docs/Model/ContactsCreateWebsitePayload.md
+docs/Model/ContactsCustomField.md
+docs/Model/ContactsDateCustomField.md
 docs/Model/ContactsEmail.md
+docs/Model/ContactsFieldValueCustomField.md
 docs/Model/ContactsHouseholdAddress.md
 docs/Model/ContactsHouseholdsCreateHouseholdPayload.md
 docs/Model/ContactsHouseholdsGetHouseholdResponse.md
@@ -65,6 +69,8 @@ docs/Model/ContactsIndividualIdentification.md
 docs/Model/ContactsInvestmentObjective.md
 docs/Model/ContactsInvestorProfile.md
 docs/Model/ContactsListContactResponse.md
+docs/Model/ContactsMoneyCustomField.md
+docs/Model/ContactsNumericCustomField.md
 docs/Model/ContactsOccupation.md
 docs/Model/ContactsOrganizationIdentification.md
 docs/Model/ContactsPhone.md
@@ -72,6 +78,7 @@ docs/Model/ContactsRegistrationNumbers.md
 docs/Model/ContactsRevenue.md
 docs/Model/ContactsRiskTolerance.md
 docs/Model/ContactsSegmentation.md
+docs/Model/ContactsTextCustomField.md
 docs/Model/ContactsWebSite.md
 docs/Model/ContextActor.md
 docs/Model/ContextEquisoftConnect.md
@@ -362,6 +369,7 @@ src/Model/ContactPatchContactPayload.php
 src/Model/ContactPatchDto.php
 src/Model/ContactsAdditionalInformation.php
 src/Model/ContactsAddress.php
+src/Model/ContactsBooleanCustomField.php
 src/Model/ContactsCivilStatus.php
 src/Model/ContactsContact.php
 src/Model/ContactsContactFieldValue.php
@@ -380,7 +388,10 @@ src/Model/ContactsCreateRegistrationNumbersPayload.php
 src/Model/ContactsCreateRevenuePayload.php
 src/Model/ContactsCreateSegmentationPayload.php
 src/Model/ContactsCreateWebsitePayload.php
+src/Model/ContactsCustomField.php
+src/Model/ContactsDateCustomField.php
 src/Model/ContactsEmail.php
+src/Model/ContactsFieldValueCustomField.php
 src/Model/ContactsHouseholdAddress.php
 src/Model/ContactsHouseholdsCreateHouseholdPayload.php
 src/Model/ContactsHouseholdsGetHouseholdResponse.php
@@ -391,6 +402,8 @@ src/Model/ContactsIndividualIdentification.php
 src/Model/ContactsInvestmentObjective.php
 src/Model/ContactsInvestorProfile.php
 src/Model/ContactsListContactResponse.php
+src/Model/ContactsMoneyCustomField.php
+src/Model/ContactsNumericCustomField.php
 src/Model/ContactsOccupation.php
 src/Model/ContactsOrganizationIdentification.php
 src/Model/ContactsPhone.php
@@ -398,6 +411,7 @@ src/Model/ContactsRegistrationNumbers.php
 src/Model/ContactsRevenue.php
 src/Model/ContactsRiskTolerance.php
 src/Model/ContactsSegmentation.php
+src/Model/ContactsTextCustomField.php
 src/Model/ContactsWebSite.php
 src/Model/ContextActor.php
 src/Model/ContextEquisoftConnect.php
@@ -652,3 +666,10 @@ src/Model/UsersUser.php
 src/Model/UsersUserGroup.php
 src/Model/UsersUserIdentity.php
 src/ObjectSerializer.php
+tests/Model/ContactsBooleanCustomFieldTest.php
+tests/Model/ContactsCustomFieldTest.php
+tests/Model/ContactsDateCustomFieldTest.php
+tests/Model/ContactsFieldValueCustomFieldTest.php
+tests/Model/ContactsMoneyCustomFieldTest.php
+tests/Model/ContactsNumericCustomFieldTest.php
+tests/Model/ContactsTextCustomFieldTest.php
