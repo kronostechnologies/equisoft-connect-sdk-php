@@ -52,7 +52,7 @@ class ContactsFieldValueCustomField extends ContactsCustomField
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'type' => 'string',
+        'type' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsCustomFieldType',
         'value' => 'int'
     ];
 
@@ -227,21 +227,6 @@ class ContactsFieldValueCustomField extends ContactsCustomField
         return self::$openAPIModelName;
     }
 
-    public const TYPE_VD_FIELD = 'vd_field';
-    public const TYPE_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public static function getTypeAllowableValues()
-    {
-        return [
-            self::TYPE_VD_FIELD,
-            self::TYPE_UNKNOWN_DEFAULT_OPEN_API,
-        ];
-    }
 
 
     /**
@@ -287,15 +272,6 @@ class ContactsFieldValueCustomField extends ContactsCustomField
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
         }
-        $allowedValues = self::getTypeAllowableValues();
-        if (!is_null($this->container['type']) && !in_array($this->container['type'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'type', must be one of '%s'",
-                $this->container['type'],
-                implode("', '", $allowedValues)
-            );
-        }
-
         return $invalidProperties;
     }
 
@@ -314,9 +290,9 @@ class ContactsFieldValueCustomField extends ContactsCustomField
     /**
      * Gets type
      *
-     * @return string
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsCustomFieldType
      */
-    public function getType(): string
+    public function getType(): \Equisoft\SDK\EquisoftConnect\Model\ContactsCustomFieldType
     {
         return $this->container['type'];
     }
@@ -324,18 +300,14 @@ class ContactsFieldValueCustomField extends ContactsCustomField
     /**
      * Sets type
      *
-     * @param string $type type
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsCustomFieldType $type type
      *
      * @return $this
      */
-    public function setType(string $type): static
+    public function setType(\Equisoft\SDK\EquisoftConnect\Model\ContactsCustomFieldType $type): static
     {
         if (is_null($type)) {
             throw new InvalidArgumentException('non-nullable type cannot be null');
-        }
-        $allowedValues = self::getTypeAllowableValues();
-        if (!in_array($type, $allowedValues, true)) {
-            $type = self::TYPE_UNKNOWN_DEFAULT_OPEN_API;
         }
         $this->container['type'] = $type;
 
