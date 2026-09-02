@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **emails** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsEmail[]**](ContactsEmail.md) |  | [optional]
 **websites** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsWebSite[]**](ContactsWebSite.md) |  | [optional]
 **links** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsContactRelation[]**](ContactsContactRelation.md) | Only available for getContact. Will always be empty for listContact | [optional]
+**customFields** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsCustomField[]**](ContactsCustomField.md) | Custom fields keyed by system name |
 **notes** | **string** |  | [optional]
 **notesAdditionalInformation** | **string** |  | [optional]
 **creationDate** | **\DateTime** |  | [optional]

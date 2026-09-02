@@ -72,6 +72,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, JsonSerializable
         'emails' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsEmail[]',
         'websites' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsWebSite[]',
         'links' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsContactRelation[]',
+        'customFields' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsCustomField[]',
         'notes' => 'string',
         'notesAdditionalInformation' => 'string',
         'creationDate' => '\DateTime',
@@ -102,6 +103,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, JsonSerializable
         'emails' => null,
         'websites' => null,
         'links' => null,
+        'customFields' => null,
         'notes' => null,
         'notesAdditionalInformation' => null,
         'creationDate' => 'date-time',
@@ -132,6 +134,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, JsonSerializable
         'emails' => false,
         'websites' => false,
         'links' => false,
+        'customFields' => false,
         'notes' => false,
         'notesAdditionalInformation' => false,
         'creationDate' => true,
@@ -242,6 +245,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, JsonSerializable
         'emails' => 'emails',
         'websites' => 'websites',
         'links' => 'links',
+        'customFields' => 'customFields',
         'notes' => 'notes',
         'notesAdditionalInformation' => 'notesAdditionalInformation',
         'creationDate' => 'creationDate',
@@ -272,6 +276,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, JsonSerializable
         'emails' => 'setEmails',
         'websites' => 'setWebsites',
         'links' => 'setLinks',
+        'customFields' => 'setCustomFields',
         'notes' => 'setNotes',
         'notesAdditionalInformation' => 'setNotesAdditionalInformation',
         'creationDate' => 'setCreationDate',
@@ -302,6 +307,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, JsonSerializable
         'emails' => 'getEmails',
         'websites' => 'getWebsites',
         'links' => 'getLinks',
+        'customFields' => 'getCustomFields',
         'notes' => 'getNotes',
         'notesAdditionalInformation' => 'getNotesAdditionalInformation',
         'creationDate' => 'getCreationDate',
@@ -382,6 +388,7 @@ class ContactsContact implements ModelInterface, ArrayAccess, JsonSerializable
         $this->setIfExists('emails', $data ?? [], null);
         $this->setIfExists('websites', $data ?? [], null);
         $this->setIfExists('links', $data ?? [], null);
+        $this->setIfExists('customFields', $data ?? [], null);
         $this->setIfExists('notes', $data ?? [], null);
         $this->setIfExists('notesAdditionalInformation', $data ?? [], null);
         $this->setIfExists('creationDate', $data ?? [], null);
@@ -427,6 +434,9 @@ class ContactsContact implements ModelInterface, ArrayAccess, JsonSerializable
         }
         if ($this->container['contactType'] === null) {
             $invalidProperties[] = "'contactType' can't be null";
+        }
+        if ($this->container['customFields'] === null) {
+            $invalidProperties[] = "'customFields' can't be null";
         }
         return $invalidProperties;
     }
@@ -819,6 +829,33 @@ class ContactsContact implements ModelInterface, ArrayAccess, JsonSerializable
             throw new InvalidArgumentException('non-nullable links cannot be null');
         }
         $this->container['links'] = $links;
+
+        return $this;
+    }
+
+    /**
+     * Gets customFields
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsCustomField[]
+     */
+    public function getCustomFields(): array
+    {
+        return $this->container['customFields'];
+    }
+
+    /**
+     * Sets customFields
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsCustomField[] $customFields Custom fields keyed by system name
+     *
+     * @return $this
+     */
+    public function setCustomFields(array $customFields): static
+    {
+        if (is_null($customFields)) {
+            throw new InvalidArgumentException('non-nullable customFields cannot be null');
+        }
+        $this->container['customFields'] = $customFields;
 
         return $this;
     }
