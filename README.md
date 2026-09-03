@@ -114,6 +114,7 @@ Class | Method | HTTP request | Description
 *EventsApi* | [**putEventLinksDocuments**](docs/Api/EventsApi.md#puteventlinksdocuments) | **PUT** /crm/api/v1/events/{eventId}/documents | Update the links between an event and existing documents
 *EventsApi* | [**restoreEventInternalNote**](docs/Api/EventsApi.md#restoreeventinternalnote) | **POST** /crm/api/v1/events/{eventId}/notes/{noteId}/restore | Restore an archived internal note for an event.
 *EventsApi* | [**transferEventToCompleted**](docs/Api/EventsApi.md#transfereventtocompleted) | **POST** /crm/api/v1/events/{eventId}/transferToCompleted | Transfer an event to the completed/done calendar.
+*ExtractionApi* | [**addExtraction**](docs/Api/ExtractionApi.md#addextraction) | **POST** /crm/api/v1/extractions | Add an extraction
 *FieldValuesApi* | [**createGroup**](docs/Api/FieldValuesApi.md#creategroup) | **POST** /crm/api/v1/fields/{fieldName}/groups | Create a group
 *FieldValuesApi* | [**createGroupValue**](docs/Api/FieldValuesApi.md#creategroupvalue) | **POST** /crm/api/v1/fields/{fieldName}/groups/{id}/values | Create a group value
 *FieldValuesApi* | [**createValue**](docs/Api/FieldValuesApi.md#createvalue) | **POST** /crm/api/v1/fields/{fieldName}/values | Create a value
@@ -317,6 +318,8 @@ Class | Method | HTTP request | Description
 - [EventsPutEventLinkDocumentsPayload](docs/Model/EventsPutEventLinkDocumentsPayload.md)
 - [EventsTransferToCompletedResponse](docs/Model/EventsTransferToCompletedResponse.md)
 - [EventsVisibilityType](docs/Model/EventsVisibilityType.md)
+- [ExtractionAddExtractionPayload](docs/Model/ExtractionAddExtractionPayload.md)
+- [ExtractionAddExtractionResponse](docs/Model/ExtractionAddExtractionResponse.md)
 - [FieldValue](docs/Model/FieldValue.md)
 - [FieldValueCreateGroupPayload](docs/Model/FieldValueCreateGroupPayload.md)
 - [FieldValueCreateOrUpdateGroupResponse](docs/Model/FieldValueCreateOrUpdateGroupResponse.md)
@@ -545,6 +548,7 @@ Class | Method | HTTP request | Description
     - **crm:database**: Read/Write access on databases
     - **crm:datagateway**: Read/Write access on gateways
     - **crm:event**: Read/Write access on events
+    - **crm:extraction**: Read/Write access on extractions
     - **crm:fieldValue**: Read/Write access on field values
     - **crm:file**: Read/Write access on documents
     - **crm:insurance:read**: Read access on insurance
