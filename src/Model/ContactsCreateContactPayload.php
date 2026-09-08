@@ -59,6 +59,7 @@ class ContactsCreateContactPayload implements ModelInterface, ArrayAccess, JsonS
       */
     protected static array $openAPITypes = [
         'identification' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsCreateIdentificationPayload',
+        'customFields' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsCreateCustomFieldPayload[]',
         'additionalInformation' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsCreateAdditionalInformationPayload',
         'segmentation' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsCreateSegmentationPayload',
         'addresses' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsCreateAddressPayload[]',
@@ -77,6 +78,7 @@ class ContactsCreateContactPayload implements ModelInterface, ArrayAccess, JsonS
       */
     protected static array $openAPIFormats = [
         'identification' => null,
+        'customFields' => null,
         'additionalInformation' => null,
         'segmentation' => null,
         'addresses' => null,
@@ -95,6 +97,7 @@ class ContactsCreateContactPayload implements ModelInterface, ArrayAccess, JsonS
       */
     protected static array $openAPINullables = [
         'identification' => false,
+        'customFields' => false,
         'additionalInformation' => true,
         'segmentation' => true,
         'addresses' => false,
@@ -193,6 +196,7 @@ class ContactsCreateContactPayload implements ModelInterface, ArrayAccess, JsonS
      */
     protected static array $attributeMap = [
         'identification' => 'identification',
+        'customFields' => 'customFields',
         'additionalInformation' => 'additionalInformation',
         'segmentation' => 'segmentation',
         'addresses' => 'addresses',
@@ -211,6 +215,7 @@ class ContactsCreateContactPayload implements ModelInterface, ArrayAccess, JsonS
      */
     protected static array $setters = [
         'identification' => 'setIdentification',
+        'customFields' => 'setCustomFields',
         'additionalInformation' => 'setAdditionalInformation',
         'segmentation' => 'setSegmentation',
         'addresses' => 'setAddresses',
@@ -229,6 +234,7 @@ class ContactsCreateContactPayload implements ModelInterface, ArrayAccess, JsonS
      */
     protected static array $getters = [
         'identification' => 'getIdentification',
+        'customFields' => 'getCustomFields',
         'additionalInformation' => 'getAdditionalInformation',
         'segmentation' => 'getSegmentation',
         'addresses' => 'getAddresses',
@@ -297,6 +303,7 @@ class ContactsCreateContactPayload implements ModelInterface, ArrayAccess, JsonS
     public function __construct(?array $data = null)
     {
         $this->setIfExists('identification', $data ?? [], null);
+        $this->setIfExists('customFields', $data ?? [], null);
         $this->setIfExists('additionalInformation', $data ?? [], null);
         $this->setIfExists('segmentation', $data ?? [], null);
         $this->setIfExists('addresses', $data ?? [], null);
@@ -376,6 +383,33 @@ class ContactsCreateContactPayload implements ModelInterface, ArrayAccess, JsonS
             throw new InvalidArgumentException('non-nullable identification cannot be null');
         }
         $this->container['identification'] = $identification;
+
+        return $this;
+    }
+
+    /**
+     * Gets customFields
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsCreateCustomFieldPayload[]|null
+     */
+    public function getCustomFields(): ?array
+    {
+        return $this->container['customFields'];
+    }
+
+    /**
+     * Sets customFields
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsCreateCustomFieldPayload[]|null $customFields Custom fields keyed by system name
+     *
+     * @return $this
+     */
+    public function setCustomFields(?array $customFields): static
+    {
+        if (is_null($customFields)) {
+            throw new InvalidArgumentException('non-nullable customFields cannot be null');
+        }
+        $this->container['customFields'] = $customFields;
 
         return $this;
     }
