@@ -59,7 +59,7 @@ class ContactsCreateContactPayload implements ModelInterface, ArrayAccess, JsonS
       */
     protected static array $openAPITypes = [
         'identification' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsCreateIdentificationPayload',
-        'customFields' => 'array<string,\Equisoft\SDK\EquisoftConnect\Model\ContactsCreateCustomFieldPayload[]>',
+        'customFields' => 'array<string,\Equisoft\SDK\EquisoftConnect\Model\ContactsCreateCustomFieldPayload>',
         'additionalInformation' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsCreateAdditionalInformationPayload',
         'segmentation' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsCreateSegmentationPayload',
         'addresses' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsCreateAddressPayload[]',
@@ -390,7 +390,7 @@ class ContactsCreateContactPayload implements ModelInterface, ArrayAccess, JsonS
     /**
      * Gets customFields
      *
-     * @return array<string,\Equisoft\SDK\EquisoftConnect\Model\ContactsCreateCustomFieldPayload[]>|null
+     * @return array<string,\Equisoft\SDK\EquisoftConnect\Model\ContactsCreateCustomFieldPayload>|null
      */
     public function getCustomFields(): ?array
     {
@@ -400,7 +400,7 @@ class ContactsCreateContactPayload implements ModelInterface, ArrayAccess, JsonS
     /**
      * Sets customFields
      *
-     * @param array<string,\Equisoft\SDK\EquisoftConnect\Model\ContactsCreateCustomFieldPayload[]>|null $customFields Custom fields keyed by system name
+     * @param array<string,\Equisoft\SDK\EquisoftConnect\Model\ContactsCreateCustomFieldPayload>|null $customFields Custom fields keyed by system name
      *
      * @return $this
      */
