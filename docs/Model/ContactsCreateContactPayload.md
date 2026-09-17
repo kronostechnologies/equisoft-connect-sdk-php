@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **identification** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsCreateIdentificationPayload**](ContactsCreateIdentificationPayload.md) |  |
-**customFields** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsCreateCustomFieldPayload[]**](ContactsCreateCustomFieldPayload.md) | Custom fields keyed by system name | [optional]
+**customFields** | **array<string,\Equisoft\SDK\EquisoftConnect\Model\ContactsCreateCustomFieldPayload[]>** | Custom fields keyed by system name | [optional]
 **additionalInformation** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsCreateAdditionalInformationPayload**](ContactsCreateAdditionalInformationPayload.md) |  | [optional]
 **segmentation** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsCreateSegmentationPayload**](ContactsCreateSegmentationPayload.md) |  | [optional]
 **addresses** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsCreateAddressPayload[]**](ContactsCreateAddressPayload.md) |  | [optional]
