@@ -63,8 +63,7 @@ class ExtractionAddExtractionPayload implements ModelInterface, ArrayAccess, Jso
         'date' => 'string',
         'users' => 'string[]',
         'includeDocument' => 'bool',
-        'includeGroup' => 'bool',
-        'deleteExistingAccount' => 'bool'
+        'includeGroup' => 'bool'
     ];
 
     /**
@@ -78,8 +77,7 @@ class ExtractionAddExtractionPayload implements ModelInterface, ArrayAccess, Jso
         'date' => null,
         'users' => null,
         'includeDocument' => null,
-        'includeGroup' => null,
-        'deleteExistingAccount' => null
+        'includeGroup' => null
     ];
 
     /**
@@ -93,8 +91,7 @@ class ExtractionAddExtractionPayload implements ModelInterface, ArrayAccess, Jso
         'date' => false,
         'users' => false,
         'includeDocument' => false,
-        'includeGroup' => false,
-        'deleteExistingAccount' => false
+        'includeGroup' => false
     ];
 
     /**
@@ -188,8 +185,7 @@ class ExtractionAddExtractionPayload implements ModelInterface, ArrayAccess, Jso
         'date' => 'date',
         'users' => 'users',
         'includeDocument' => 'includeDocument',
-        'includeGroup' => 'includeGroup',
-        'deleteExistingAccount' => 'deleteExistingAccount'
+        'includeGroup' => 'includeGroup'
     ];
 
     /**
@@ -203,8 +199,7 @@ class ExtractionAddExtractionPayload implements ModelInterface, ArrayAccess, Jso
         'date' => 'setDate',
         'users' => 'setUsers',
         'includeDocument' => 'setIncludeDocument',
-        'includeGroup' => 'setIncludeGroup',
-        'deleteExistingAccount' => 'setDeleteExistingAccount'
+        'includeGroup' => 'setIncludeGroup'
     ];
 
     /**
@@ -218,8 +213,7 @@ class ExtractionAddExtractionPayload implements ModelInterface, ArrayAccess, Jso
         'date' => 'getDate',
         'users' => 'getUsers',
         'includeDocument' => 'getIncludeDocument',
-        'includeGroup' => 'getIncludeGroup',
-        'deleteExistingAccount' => 'getDeleteExistingAccount'
+        'includeGroup' => 'getIncludeGroup'
     ];
 
     /**
@@ -284,7 +278,6 @@ class ExtractionAddExtractionPayload implements ModelInterface, ArrayAccess, Jso
         $this->setIfExists('users', $data ?? [], null);
         $this->setIfExists('includeDocument', $data ?? [], null);
         $this->setIfExists('includeGroup', $data ?? [], null);
-        $this->setIfExists('deleteExistingAccount', $data ?? [], null);
     }
 
     /**
@@ -493,33 +486,6 @@ class ExtractionAddExtractionPayload implements ModelInterface, ArrayAccess, Jso
             throw new InvalidArgumentException('non-nullable includeGroup cannot be null');
         }
         $this->container['includeGroup'] = $includeGroup;
-
-        return $this;
-    }
-
-    /**
-     * Gets deleteExistingAccount
-     *
-     * @return bool|null
-     */
-    public function getDeleteExistingAccount(): ?bool
-    {
-        return $this->container['deleteExistingAccount'];
-    }
-
-    /**
-     * Sets deleteExistingAccount
-     *
-     * @param bool|null $deleteExistingAccount deleteExistingAccount
-     *
-     * @return $this
-     */
-    public function setDeleteExistingAccount(?bool $deleteExistingAccount): static
-    {
-        if (is_null($deleteExistingAccount)) {
-            throw new InvalidArgumentException('non-nullable deleteExistingAccount cannot be null');
-        }
-        $this->container['deleteExistingAccount'] = $deleteExistingAccount;
 
         return $this;
     }

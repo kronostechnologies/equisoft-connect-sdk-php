@@ -10,6 +10,5 @@ Name | Type | Description | Notes
 **users** | **string[]** | List of users uuids. | [optional]
 **includeDocument** | **bool** |  | [optional]
 **includeGroup** | **bool** |  | [optional]
-**deleteExistingAccount** | **bool** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
