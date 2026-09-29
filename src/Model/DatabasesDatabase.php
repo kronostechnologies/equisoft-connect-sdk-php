@@ -621,6 +621,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, JsonSerializable
      * Gets organizationUuid
      *
      * @return string|null
+     * @deprecated
      */
     public function getOrganizationUuid(): ?string
     {
@@ -633,6 +634,7 @@ class DatabasesDatabase implements ModelInterface, ArrayAccess, JsonSerializable
      * @param string|null $organizationUuid Organization uuid
      *
      * @return $this
+     * @deprecated
      */
     public function setOrganizationUuid(?string $organizationUuid): static
     {
