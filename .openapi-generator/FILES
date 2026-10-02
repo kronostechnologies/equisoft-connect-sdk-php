@@ -142,6 +142,7 @@ docs/Model/FieldValueLocalizedString.md
 docs/Model/FieldValueUpdateGroupPayload.md
 docs/Model/FieldValueUpdateValuePayload.md
 docs/Model/FieldValueValue.md
+docs/Model/FieldValueValueSummary.md
 docs/Model/GatewaysAccessesCapsilAccess.md
 docs/Model/GatewaysAccessesCarrierAdminSystem.md
 docs/Model/GatewaysAccessesCreateAccessResponse.md
@@ -321,6 +322,7 @@ docs/Model/MovementUserTuple.md
 docs/Model/MovementUserTuplePayload.md
 docs/Model/MovementValidationError.md
 docs/Model/MovementValidationErrorResponse.md
+docs/Model/OpportunityOpportunity.md
 docs/Model/ParametersCompanyResponse.md
 docs/Model/TasksCreateTaskPayload.md
 docs/Model/TasksCreateTaskResponse.md
@@ -486,6 +488,7 @@ src/Model/FieldValueLocalizedString.php
 src/Model/FieldValueUpdateGroupPayload.php
 src/Model/FieldValueUpdateValuePayload.php
 src/Model/FieldValueValue.php
+src/Model/FieldValueValueSummary.php
 src/Model/GatewaysAccessesCapsilAccess.php
 src/Model/GatewaysAccessesCarrierAdminSystem.php
 src/Model/GatewaysAccessesCreateAccessResponse.php
@@ -666,6 +669,7 @@ src/Model/MovementUserTuple.php
 src/Model/MovementUserTuplePayload.php
 src/Model/MovementValidationError.php
 src/Model/MovementValidationErrorResponse.php
+src/Model/OpportunityOpportunity.php
 src/Model/ParametersCompanyResponse.php
 src/Model/TasksCreateTaskPayload.php
 src/Model/TasksCreateTaskResponse.php
@@ -688,3 +692,5 @@ src/Model/UsersUser.php
 src/Model/UsersUserGroup.php
 src/Model/UsersUserIdentity.php
 src/ObjectSerializer.php
+tests/Model/FieldValueValueSummaryTest.php
+tests/Model/OpportunityOpportunityTest.php
