@@ -388,6 +388,7 @@ Class | Method | HTTP request | Description
 - [InvestmentsCannexProduct](docs/Model/InvestmentsCannexProduct.md)
 - [InvestmentsListAccountResponse](docs/Model/InvestmentsListAccountResponse.md)
 - [InvestmentsListAssetResponse](docs/Model/InvestmentsListAssetResponse.md)
+- [InvestmentsOwnerContact](docs/Model/InvestmentsOwnerContact.md)
 - [InvestmentsProduct](docs/Model/InvestmentsProduct.md)
 - [KronosFieldValuesFieldValuesGet](docs/Model/KronosFieldValuesFieldValuesGet.md)
 - [KronosFieldValuesValue](docs/Model/KronosFieldValuesValue.md)

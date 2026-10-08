@@ -61,7 +61,9 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, JsonSerializabl
         'id' => 'int',
         'accountNumber' => 'string',
         'owner1' => 'string',
+        'ownerContact1' => '\Equisoft\SDK\EquisoftConnect\Model\InvestmentsOwnerContact',
         'owner2' => 'string',
+        'ownerContact2' => '\Equisoft\SDK\EquisoftConnect\Model\InvestmentsOwnerContact',
         'type' => '\Equisoft\SDK\EquisoftConnect\Model\Translation[]',
         'typeCode' => 'string',
         'description' => '\Equisoft\SDK\EquisoftConnect\Model\Translation[]',
@@ -106,7 +108,9 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, JsonSerializabl
         'id' => null,
         'accountNumber' => null,
         'owner1' => null,
+        'ownerContact1' => null,
         'owner2' => null,
+        'ownerContact2' => null,
         'type' => null,
         'typeCode' => null,
         'description' => null,
@@ -151,7 +155,9 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, JsonSerializabl
         'id' => false,
         'accountNumber' => false,
         'owner1' => false,
+        'ownerContact1' => false,
         'owner2' => false,
+        'ownerContact2' => true,
         'type' => false,
         'typeCode' => false,
         'description' => false,
@@ -276,7 +282,9 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, JsonSerializabl
         'id' => 'id',
         'accountNumber' => 'accountNumber',
         'owner1' => 'owner1',
+        'ownerContact1' => 'ownerContact1',
         'owner2' => 'owner2',
+        'ownerContact2' => 'ownerContact2',
         'type' => 'type',
         'typeCode' => 'typeCode',
         'description' => 'description',
@@ -321,7 +329,9 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, JsonSerializabl
         'id' => 'setId',
         'accountNumber' => 'setAccountNumber',
         'owner1' => 'setOwner1',
+        'ownerContact1' => 'setOwnerContact1',
         'owner2' => 'setOwner2',
+        'ownerContact2' => 'setOwnerContact2',
         'type' => 'setType',
         'typeCode' => 'setTypeCode',
         'description' => 'setDescription',
@@ -366,7 +376,9 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, JsonSerializabl
         'id' => 'getId',
         'accountNumber' => 'getAccountNumber',
         'owner1' => 'getOwner1',
+        'ownerContact1' => 'getOwnerContact1',
         'owner2' => 'getOwner2',
+        'ownerContact2' => 'getOwnerContact2',
         'type' => 'getType',
         'typeCode' => 'getTypeCode',
         'description' => 'getDescription',
@@ -461,7 +473,9 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, JsonSerializabl
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('accountNumber', $data ?? [], null);
         $this->setIfExists('owner1', $data ?? [], null);
+        $this->setIfExists('ownerContact1', $data ?? [], null);
         $this->setIfExists('owner2', $data ?? [], null);
+        $this->setIfExists('ownerContact2', $data ?? [], null);
         $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('typeCode', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
@@ -597,6 +611,7 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, JsonSerializabl
      * Gets owner1
      *
      * @return string|null
+     * @deprecated
      */
     public function getOwner1(): ?string
     {
@@ -609,6 +624,7 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, JsonSerializabl
      * @param string|null $owner1 owner1
      *
      * @return $this
+     * @deprecated
      */
     public function setOwner1(?string $owner1): static
     {
@@ -621,9 +637,37 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, JsonSerializabl
     }
 
     /**
+     * Gets ownerContact1
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\InvestmentsOwnerContact|null
+     */
+    public function getOwnerContact1(): ?\Equisoft\SDK\EquisoftConnect\Model\InvestmentsOwnerContact
+    {
+        return $this->container['ownerContact1'];
+    }
+
+    /**
+     * Sets ownerContact1
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\InvestmentsOwnerContact|null $ownerContact1 ownerContact1
+     *
+     * @return $this
+     */
+    public function setOwnerContact1(?\Equisoft\SDK\EquisoftConnect\Model\InvestmentsOwnerContact $ownerContact1): static
+    {
+        if (is_null($ownerContact1)) {
+            throw new InvalidArgumentException('non-nullable ownerContact1 cannot be null');
+        }
+        $this->container['ownerContact1'] = $ownerContact1;
+
+        return $this;
+    }
+
+    /**
      * Gets owner2
      *
      * @return string|null
+     * @deprecated
      */
     public function getOwner2(): ?string
     {
@@ -636,6 +680,7 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, JsonSerializabl
      * @param string|null $owner2 owner2
      *
      * @return $this
+     * @deprecated
      */
     public function setOwner2(?string $owner2): static
     {
@@ -643,6 +688,40 @@ class InvestmentsAccount implements ModelInterface, ArrayAccess, JsonSerializabl
             throw new InvalidArgumentException('non-nullable owner2 cannot be null');
         }
         $this->container['owner2'] = $owner2;
+
+        return $this;
+    }
+
+    /**
+     * Gets ownerContact2
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\InvestmentsOwnerContact|null
+     */
+    public function getOwnerContact2(): ?\Equisoft\SDK\EquisoftConnect\Model\InvestmentsOwnerContact
+    {
+        return $this->container['ownerContact2'];
+    }
+
+    /**
+     * Sets ownerContact2
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\InvestmentsOwnerContact|null $ownerContact2 ownerContact2
+     *
+     * @return $this
+     */
+    public function setOwnerContact2(?\Equisoft\SDK\EquisoftConnect\Model\InvestmentsOwnerContact $ownerContact2): static
+    {
+        if (is_null($ownerContact2)) {
+            array_push($this->openAPINullablesSetToNull, 'ownerContact2');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('ownerContact2', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['ownerContact2'] = $ownerContact2;
 
         return $this;
     }

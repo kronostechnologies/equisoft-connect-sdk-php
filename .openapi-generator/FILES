@@ -188,6 +188,7 @@ docs/Model/InvestmentsCannexInformation.md
 docs/Model/InvestmentsCannexProduct.md
 docs/Model/InvestmentsListAccountResponse.md
 docs/Model/InvestmentsListAssetResponse.md
+docs/Model/InvestmentsOwnerContact.md
 docs/Model/InvestmentsProduct.md
 docs/Model/KronosFieldValuesFieldValuesGet.md
 docs/Model/KronosFieldValuesValue.md
@@ -534,6 +535,7 @@ src/Model/InvestmentsCannexInformation.php
 src/Model/InvestmentsCannexProduct.php
 src/Model/InvestmentsListAccountResponse.php
 src/Model/InvestmentsListAssetResponse.php
+src/Model/InvestmentsOwnerContact.php
 src/Model/InvestmentsProduct.php
 src/Model/KronosFieldValuesFieldValuesGet.php
 src/Model/KronosFieldValuesValue.php
@@ -692,3 +694,4 @@ src/Model/UsersUser.php
 src/Model/UsersUserGroup.php
 src/Model/UsersUserIdentity.php
 src/ObjectSerializer.php
+tests/Model/InvestmentsOwnerContactTest.php
