@@ -1,6 +1,6 @@
 <?php
 /**
- * UsersUserIdentity
+ * ExtractionsResumeExtractionPayload
  *
  * PHP version 8.1
  *
@@ -34,14 +34,14 @@ use ReturnTypeWillChange;
 use Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * UsersUserIdentity Class Doc Comment
+ * ExtractionsResumeExtractionPayload Class Doc Comment
  *
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
  */
-class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
+class ExtractionsResumeExtractionPayload implements ModelInterface, ArrayAccess, JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
       *
       * @var string
       */
-    protected static string $openAPIModelName = 'users.UserIdentity';
+    protected static string $openAPIModelName = 'extractions.ResumeExtractionPayload';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,9 +58,7 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'uuid' => 'string',
-        'displayName' => 'string',
-        'email' => 'string'
+        'resumeDate' => 'string'
     ];
 
     /**
@@ -69,9 +67,7 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
       * @var array<string, string|null>
       */
     protected static array $openAPIFormats = [
-        'uuid' => null,
-        'displayName' => null,
-        'email' => null
+        'resumeDate' => null
     ];
 
     /**
@@ -80,9 +76,7 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
       * @var array<string, bool>
       */
     protected static array $openAPINullables = [
-        'uuid' => false,
-        'displayName' => false,
-        'email' => false
+        'resumeDate' => false
     ];
 
     /**
@@ -171,9 +165,7 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
      * @var array<string, string>
      */
     protected static array $attributeMap = [
-        'uuid' => 'uuid',
-        'displayName' => 'displayName',
-        'email' => 'email'
+        'resumeDate' => 'resumeDate'
     ];
 
     /**
@@ -182,9 +174,7 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
      * @var array<string, string>
      */
     protected static array $setters = [
-        'uuid' => 'setUuid',
-        'displayName' => 'setDisplayName',
-        'email' => 'setEmail'
+        'resumeDate' => 'setResumeDate'
     ];
 
     /**
@@ -193,9 +183,7 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
      * @var array<string, string>
      */
     protected static array $getters = [
-        'uuid' => 'getUuid',
-        'displayName' => 'getDisplayName',
-        'email' => 'getEmail'
+        'resumeDate' => 'getResumeDate'
     ];
 
     /**
@@ -254,9 +242,7 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('uuid', $data ?? [], null);
-        $this->setIfExists('displayName', $data ?? [], null);
-        $this->setIfExists('email', $data ?? [], null);
+        $this->setIfExists('resumeDate', $data ?? [], null);
     }
 
     /**
@@ -286,14 +272,8 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['uuid'] === null) {
-            $invalidProperties[] = "'uuid' can't be null";
-        }
-        if ($this->container['displayName'] === null) {
-            $invalidProperties[] = "'displayName' can't be null";
-        }
-        if ($this->container['email'] === null) {
-            $invalidProperties[] = "'email' can't be null";
+        if ($this->container['resumeDate'] === null) {
+            $invalidProperties[] = "'resumeDate' can't be null";
         }
         return $invalidProperties;
     }
@@ -311,82 +291,28 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
 
 
     /**
-     * Gets uuid
+     * Gets resumeDate
      *
      * @return string
      */
-    public function getUuid(): string
+    public function getResumeDate(): string
     {
-        return $this->container['uuid'];
+        return $this->container['resumeDate'];
     }
 
     /**
-     * Sets uuid
+     * Sets resumeDate
      *
-     * @param string $uuid uuid
+     * @param string $resumeDate resumeDate
      *
      * @return $this
      */
-    public function setUuid(string $uuid): static
+    public function setResumeDate(string $resumeDate): static
     {
-        if (is_null($uuid)) {
-            throw new InvalidArgumentException('non-nullable uuid cannot be null');
+        if (is_null($resumeDate)) {
+            throw new InvalidArgumentException('non-nullable resumeDate cannot be null');
         }
-        $this->container['uuid'] = $uuid;
-
-        return $this;
-    }
-
-    /**
-     * Gets displayName
-     *
-     * @return string
-     */
-    public function getDisplayName(): string
-    {
-        return $this->container['displayName'];
-    }
-
-    /**
-     * Sets displayName
-     *
-     * @param string $displayName displayName
-     *
-     * @return $this
-     */
-    public function setDisplayName(string $displayName): static
-    {
-        if (is_null($displayName)) {
-            throw new InvalidArgumentException('non-nullable displayName cannot be null');
-        }
-        $this->container['displayName'] = $displayName;
-
-        return $this;
-    }
-
-    /**
-     * Gets email
-     *
-     * @return string
-     */
-    public function getEmail(): string
-    {
-        return $this->container['email'];
-    }
-
-    /**
-     * Sets email
-     *
-     * @param string $email email
-     *
-     * @return $this
-     */
-    public function setEmail(string $email): static
-    {
-        if (is_null($email)) {
-            throw new InvalidArgumentException('non-nullable email cannot be null');
-        }
-        $this->container['email'] = $email;
+        $this->container['resumeDate'] = $resumeDate;
 
         return $this;
     }

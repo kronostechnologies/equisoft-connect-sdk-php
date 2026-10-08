@@ -76,6 +76,18 @@ class ExtractionApi
         'addExtraction' => [
             'application/json',
         ],
+        'deleteExtraction' => [
+            'application/json',
+        ],
+        'getExtraction' => [
+            'application/json',
+        ],
+        'listExtractions' => [
+            'application/json',
+        ],
+        'resumeExtraction' => [
+            'application/json',
+        ],
     ];
 
     /**
@@ -129,19 +141,19 @@ class ExtractionApi
      *
      * Add an extraction
      *
-     * @param  \Equisoft\SDK\EquisoftConnect\Model\ExtractionAddExtractionPayload $extractionAddExtractionPayload extractionAddExtractionPayload (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\ExtractionsAddExtractionPayload $extractionsAddExtractionPayload extractionsAddExtractionPayload (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addExtraction'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ExtractionAddExtractionResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementValidationErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|null
      */
     public function addExtraction(
-        \Equisoft\SDK\EquisoftConnect\Model\ExtractionAddExtractionPayload $extractionAddExtractionPayload,
+        \Equisoft\SDK\EquisoftConnect\Model\ExtractionsAddExtractionPayload $extractionsAddExtractionPayload,
         string $contentType = self::contentTypes['addExtraction'][0]
-    ): \Equisoft\SDK\EquisoftConnect\Model\ExtractionAddExtractionResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+    ): \Equisoft\SDK\EquisoftConnect\Model\MovementValidationErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|null
     {
-        list($response) = $this->addExtractionWithHttpInfo($extractionAddExtractionPayload, $contentType);
+        list($response) = $this->addExtractionWithHttpInfo($extractionsAddExtractionPayload, $contentType);
         return $response;
     }
 
@@ -150,19 +162,19 @@ class ExtractionApi
      *
      * Add an extraction
      *
-     * @param  \Equisoft\SDK\EquisoftConnect\Model\ExtractionAddExtractionPayload $extractionAddExtractionPayload (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\ExtractionsAddExtractionPayload $extractionsAddExtractionPayload (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addExtraction'] to see the possible values for this operation
      *
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      * @throws InvalidArgumentException
-     * @return array of \Equisoft\SDK\EquisoftConnect\Model\ExtractionAddExtractionResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function addExtractionWithHttpInfo(
-        \Equisoft\SDK\EquisoftConnect\Model\ExtractionAddExtractionPayload $extractionAddExtractionPayload,
+        \Equisoft\SDK\EquisoftConnect\Model\ExtractionsAddExtractionPayload $extractionsAddExtractionPayload,
         string $contentType = self::contentTypes['addExtraction'][0]
     ): array
     {
-        $request = $this->addExtractionRequest($extractionAddExtractionPayload, $contentType);
+        $request = $this->addExtractionRequest($extractionsAddExtractionPayload, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -186,58 +198,14 @@ class ExtractionApi
 
             $statusCode = $response->getStatusCode();
 
-            switch($statusCode) {
-                case 200:
-                    return $this->handleResponseWithDataType(
-                        '\Equisoft\SDK\EquisoftConnect\Model\ExtractionAddExtractionResponse',
-                        $request,
-                        $response,
-                    );
-                case 400:
-                    return $this->handleResponseWithDataType(
-                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
-                        $request,
-                        $response,
-                    );
-                case 401:
-                    return $this->handleResponseWithDataType(
-                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
-                        $request,
-                        $response,
-                    );
-                case 500:
-                    return $this->handleResponseWithDataType(
-                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
-                        $request,
-                        $response,
-                    );
-            }
-            
 
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            return $this->handleResponseWithDataType(
-                '\Equisoft\SDK\EquisoftConnect\Model\ExtractionAddExtractionResponse',
-                $request,
-                $response,
-            );
+            return [null, $statusCode, $response->getHeaders()];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
-                case 200:
+                case 422:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Equisoft\SDK\EquisoftConnect\Model\ExtractionAddExtractionResponse',
+                        '\Equisoft\SDK\EquisoftConnect\Model\MovementValidationErrorResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -277,18 +245,18 @@ class ExtractionApi
      *
      * Add an extraction
      *
-     * @param  \Equisoft\SDK\EquisoftConnect\Model\ExtractionAddExtractionPayload $extractionAddExtractionPayload (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\ExtractionsAddExtractionPayload $extractionsAddExtractionPayload (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addExtraction'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function addExtractionAsync(
-        \Equisoft\SDK\EquisoftConnect\Model\ExtractionAddExtractionPayload $extractionAddExtractionPayload,
+        \Equisoft\SDK\EquisoftConnect\Model\ExtractionsAddExtractionPayload $extractionsAddExtractionPayload,
         string $contentType = self::contentTypes['addExtraction'][0]
     ): PromiseInterface
     {
-        return $this->addExtractionAsyncWithHttpInfo($extractionAddExtractionPayload, $contentType)
+        return $this->addExtractionAsyncWithHttpInfo($extractionsAddExtractionPayload, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -301,19 +269,630 @@ class ExtractionApi
      *
      * Add an extraction
      *
-     * @param  \Equisoft\SDK\EquisoftConnect\Model\ExtractionAddExtractionPayload $extractionAddExtractionPayload (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\ExtractionsAddExtractionPayload $extractionsAddExtractionPayload (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addExtraction'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return PromiseInterface
      */
     public function addExtractionAsyncWithHttpInfo(
-        \Equisoft\SDK\EquisoftConnect\Model\ExtractionAddExtractionPayload $extractionAddExtractionPayload,
+        \Equisoft\SDK\EquisoftConnect\Model\ExtractionsAddExtractionPayload $extractionsAddExtractionPayload,
         string $contentType = self::contentTypes['addExtraction'][0]
     ): PromiseInterface
     {
-        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\ExtractionAddExtractionResponse';
-        $request = $this->addExtractionRequest($extractionAddExtractionPayload, $contentType);
+        $returnType = '';
+        $request = $this->addExtractionRequest($extractionsAddExtractionPayload, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'addExtraction'
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\ExtractionsAddExtractionPayload $extractionsAddExtractionPayload (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addExtraction'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function addExtractionRequest(
+        \Equisoft\SDK\EquisoftConnect\Model\ExtractionsAddExtractionPayload $extractionsAddExtractionPayload,
+        string $contentType = self::contentTypes['addExtraction'][0]
+    ): Request
+    {
+
+        // verify the required parameter 'extractionsAddExtractionPayload' is set
+        if ($extractionsAddExtractionPayload === null || (is_array($extractionsAddExtractionPayload) && count($extractionsAddExtractionPayload) === 0)) {
+            throw new InvalidArgumentException(
+                'Missing the required parameter $extractionsAddExtractionPayload when calling addExtraction'
+            );
+        }
+
+
+        $resourcePath = '/crm/api/v1/extractions';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($extractionsAddExtractionPayload)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($extractionsAddExtractionPayload));
+            } else {
+                $httpBody = $extractionsAddExtractionPayload;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        if (is_string($formParamValueItem)) {
+                            // JSON part
+                            $multipartContents[] = [
+                                'name' => $formParamName,
+                                'contents' => $formParamValueItem,
+                                'headers' => [
+                                    'Content-Disposition' => "form-data; name=\"$formParamName\"; filename=\"$formParamName.json\"",
+                                    'Content-Type' => 'application/json; charset=UTF-8'
+                                ]
+                            ];
+                        } else {
+                            $multipartContents[] = [
+                                'name' => $formParamName,
+                                'contents' => $formParamValueItem
+                            ];
+                        }
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation deleteExtraction
+     *
+     * Delete an extraction
+     *
+     * @param  string $uuid Unique identifier. (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteExtraction'] to see the possible values for this operation
+     *
+     * @throws ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|null
+     */
+    public function deleteExtraction(
+        string $uuid,
+        string $contentType = self::contentTypes['deleteExtraction'][0]
+    ): ?\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+    {
+        list($response) = $this->deleteExtractionWithHttpInfo($uuid, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation deleteExtractionWithHttpInfo
+     *
+     * Delete an extraction
+     *
+     * @param  string $uuid Unique identifier. (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteExtraction'] to see the possible values for this operation
+     *
+     * @throws ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function deleteExtractionWithHttpInfo(
+        string $uuid,
+        string $contentType = self::contentTypes['deleteExtraction'][0]
+    ): array
+    {
+        $request = $this->deleteExtractionRequest($uuid, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+
+            return [null, $statusCode, $response->getHeaders()];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+            }
+        
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation deleteExtractionAsync
+     *
+     * Delete an extraction
+     *
+     * @param  string $uuid Unique identifier. (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteExtraction'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
+     */
+    public function deleteExtractionAsync(
+        string $uuid,
+        string $contentType = self::contentTypes['deleteExtraction'][0]
+    ): PromiseInterface
+    {
+        return $this->deleteExtractionAsyncWithHttpInfo($uuid, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation deleteExtractionAsyncWithHttpInfo
+     *
+     * Delete an extraction
+     *
+     * @param  string $uuid Unique identifier. (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteExtraction'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
+     */
+    public function deleteExtractionAsyncWithHttpInfo(
+        string $uuid,
+        string $contentType = self::contentTypes['deleteExtraction'][0]
+    ): PromiseInterface
+    {
+        $returnType = '';
+        $request = $this->deleteExtractionRequest($uuid, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'deleteExtraction'
+     *
+     * @param  string $uuid Unique identifier. (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['deleteExtraction'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function deleteExtractionRequest(
+        string $uuid,
+        string $contentType = self::contentTypes['deleteExtraction'][0]
+    ): Request
+    {
+
+        // verify the required parameter 'uuid' is set
+        if ($uuid === null || (is_array($uuid) && count($uuid) === 0)) {
+            throw new InvalidArgumentException(
+                'Missing the required parameter $uuid when calling deleteExtraction'
+            );
+        }
+
+
+        $resourcePath = '/crm/api/v1/extractions/{uuid}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if ($uuid !== null) {
+            $resourcePath = str_replace(
+                '{' . 'uuid' . '}',
+                ObjectSerializer::toPathValue($uuid),
+                $resourcePath
+            );
+        }
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        if (is_string($formParamValueItem)) {
+                            // JSON part
+                            $multipartContents[] = [
+                                'name' => $formParamName,
+                                'contents' => $formParamValueItem,
+                                'headers' => [
+                                    'Content-Disposition' => "form-data; name=\"$formParamName\"; filename=\"$formParamName.json\"",
+                                    'Content-Type' => 'application/json; charset=UTF-8'
+                                ]
+                            ];
+                        } else {
+                            $multipartContents[] = [
+                                'name' => $formParamName,
+                                'contents' => $formParamValueItem
+                            ];
+                        }
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'DELETE',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getExtraction
+     *
+     * Get an extraction
+     *
+     * @param  string $uuid Unique identifier. (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getExtraction'] to see the possible values for this operation
+     *
+     * @throws ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ExtractionsExtraction|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+     */
+    public function getExtraction(
+        string $uuid,
+        string $contentType = self::contentTypes['getExtraction'][0]
+    ): \Equisoft\SDK\EquisoftConnect\Model\ExtractionsExtraction|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+    {
+        list($response) = $this->getExtractionWithHttpInfo($uuid, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation getExtractionWithHttpInfo
+     *
+     * Get an extraction
+     *
+     * @param  string $uuid Unique identifier. (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getExtraction'] to see the possible values for this operation
+     *
+     * @throws ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\ExtractionsExtraction|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getExtractionWithHttpInfo(
+        string $uuid,
+        string $contentType = self::contentTypes['getExtraction'][0]
+    ): array
+    {
+        $request = $this->getExtractionRequest($uuid, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            switch($statusCode) {
+                case 200:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ExtractionsExtraction',
+                        $request,
+                        $response,
+                    );
+                case 404:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
+                case 400:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
+                case 401:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
+                case 500:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
+            }
+            
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return $this->handleResponseWithDataType(
+                '\Equisoft\SDK\EquisoftConnect\Model\ExtractionsExtraction',
+                $request,
+                $response,
+            );
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ExtractionsExtraction',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+            }
+        
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getExtractionAsync
+     *
+     * Get an extraction
+     *
+     * @param  string $uuid Unique identifier. (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getExtraction'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
+     */
+    public function getExtractionAsync(
+        string $uuid,
+        string $contentType = self::contentTypes['getExtraction'][0]
+    ): PromiseInterface
+    {
+        return $this->getExtractionAsyncWithHttpInfo($uuid, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getExtractionAsyncWithHttpInfo
+     *
+     * Get an extraction
+     *
+     * @param  string $uuid Unique identifier. (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getExtraction'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
+     */
+    public function getExtractionAsyncWithHttpInfo(
+        string $uuid,
+        string $contentType = self::contentTypes['getExtraction'][0]
+    ): PromiseInterface
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\ExtractionsExtraction';
+        $request = $this->getExtractionRequest($uuid, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -352,26 +931,419 @@ class ExtractionApi
     }
 
     /**
-     * Create request for operation 'addExtraction'
+     * Create request for operation 'getExtraction'
      *
-     * @param  \Equisoft\SDK\EquisoftConnect\Model\ExtractionAddExtractionPayload $extractionAddExtractionPayload (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addExtraction'] to see the possible values for this operation
+     * @param  string $uuid Unique identifier. (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getExtraction'] to see the possible values for this operation
      *
      * @throws InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function addExtractionRequest(
-        \Equisoft\SDK\EquisoftConnect\Model\ExtractionAddExtractionPayload $extractionAddExtractionPayload,
-        string $contentType = self::contentTypes['addExtraction'][0]
+    public function getExtractionRequest(
+        string $uuid,
+        string $contentType = self::contentTypes['getExtraction'][0]
     ): Request
     {
 
-        // verify the required parameter 'extractionAddExtractionPayload' is set
-        if ($extractionAddExtractionPayload === null || (is_array($extractionAddExtractionPayload) && count($extractionAddExtractionPayload) === 0)) {
+        // verify the required parameter 'uuid' is set
+        if ($uuid === null || (is_array($uuid) && count($uuid) === 0)) {
             throw new InvalidArgumentException(
-                'Missing the required parameter $extractionAddExtractionPayload when calling addExtraction'
+                'Missing the required parameter $uuid when calling getExtraction'
             );
         }
+
+
+        $resourcePath = '/crm/api/v1/extractions/{uuid}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if ($uuid !== null) {
+            $resourcePath = str_replace(
+                '{' . 'uuid' . '}',
+                ObjectSerializer::toPathValue($uuid),
+                $resourcePath
+            );
+        }
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        if (is_string($formParamValueItem)) {
+                            // JSON part
+                            $multipartContents[] = [
+                                'name' => $formParamName,
+                                'contents' => $formParamValueItem,
+                                'headers' => [
+                                    'Content-Disposition' => "form-data; name=\"$formParamName\"; filename=\"$formParamName.json\"",
+                                    'Content-Type' => 'application/json; charset=UTF-8'
+                                ]
+                            ];
+                        } else {
+                            $multipartContents[] = [
+                                'name' => $formParamName,
+                                'contents' => $formParamValueItem
+                            ];
+                        }
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation listExtractions
+     *
+     * List extractions
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\ExtractionsAddExtractionPayload $extractionsAddExtractionPayload extractionsAddExtractionPayload (required)
+     * @param  string|null $status Filter extraction status. (optional)
+     * @param  bool|null $today Filter by today only. Default: false. (optional)
+     * @param  bool|null $includeDeleted Filter by including deleted extractions. Default: false. (optional)
+     * @param  string|null $pageToken Token to specify which page to fetch. (optional)
+     * @param  string|null $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listExtractions'] to see the possible values for this operation
+     *
+     * @throws ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ExtractionsListExtractionResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+     */
+    public function listExtractions(
+        \Equisoft\SDK\EquisoftConnect\Model\ExtractionsAddExtractionPayload $extractionsAddExtractionPayload,
+        ?string $status = null,
+        ?bool $today = null,
+        ?bool $includeDeleted = null,
+        ?string $pageToken = null,
+        ?string $maxResults = null,
+        string $contentType = self::contentTypes['listExtractions'][0]
+    ): \Equisoft\SDK\EquisoftConnect\Model\ExtractionsListExtractionResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+    {
+        list($response) = $this->listExtractionsWithHttpInfo($extractionsAddExtractionPayload, $status, $today, $includeDeleted, $pageToken, $maxResults, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation listExtractionsWithHttpInfo
+     *
+     * List extractions
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\ExtractionsAddExtractionPayload $extractionsAddExtractionPayload (required)
+     * @param  string|null $status Filter extraction status. (optional)
+     * @param  bool|null $today Filter by today only. Default: false. (optional)
+     * @param  bool|null $includeDeleted Filter by including deleted extractions. Default: false. (optional)
+     * @param  string|null $pageToken Token to specify which page to fetch. (optional)
+     * @param  string|null $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listExtractions'] to see the possible values for this operation
+     *
+     * @throws ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\ExtractionsListExtractionResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function listExtractionsWithHttpInfo(
+        \Equisoft\SDK\EquisoftConnect\Model\ExtractionsAddExtractionPayload $extractionsAddExtractionPayload,
+        ?string $status = null,
+        ?bool $today = null,
+        ?bool $includeDeleted = null,
+        ?string $pageToken = null,
+        ?string $maxResults = null,
+        string $contentType = self::contentTypes['listExtractions'][0]
+    ): array
+    {
+        $request = $this->listExtractionsRequest($extractionsAddExtractionPayload, $status, $today, $includeDeleted, $pageToken, $maxResults, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            switch($statusCode) {
+                case 200:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ExtractionsListExtractionResponse',
+                        $request,
+                        $response,
+                    );
+                case 400:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
+                case 401:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
+                case 500:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
+            }
+            
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return $this->handleResponseWithDataType(
+                '\Equisoft\SDK\EquisoftConnect\Model\ExtractionsListExtractionResponse',
+                $request,
+                $response,
+            );
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ExtractionsListExtractionResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+            }
+        
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation listExtractionsAsync
+     *
+     * List extractions
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\ExtractionsAddExtractionPayload $extractionsAddExtractionPayload (required)
+     * @param  string|null $status Filter extraction status. (optional)
+     * @param  bool|null $today Filter by today only. Default: false. (optional)
+     * @param  bool|null $includeDeleted Filter by including deleted extractions. Default: false. (optional)
+     * @param  string|null $pageToken Token to specify which page to fetch. (optional)
+     * @param  string|null $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listExtractions'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
+     */
+    public function listExtractionsAsync(
+        \Equisoft\SDK\EquisoftConnect\Model\ExtractionsAddExtractionPayload $extractionsAddExtractionPayload,
+        ?string $status = null,
+        ?bool $today = null,
+        ?bool $includeDeleted = null,
+        ?string $pageToken = null,
+        ?string $maxResults = null,
+        string $contentType = self::contentTypes['listExtractions'][0]
+    ): PromiseInterface
+    {
+        return $this->listExtractionsAsyncWithHttpInfo($extractionsAddExtractionPayload, $status, $today, $includeDeleted, $pageToken, $maxResults, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation listExtractionsAsyncWithHttpInfo
+     *
+     * List extractions
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\ExtractionsAddExtractionPayload $extractionsAddExtractionPayload (required)
+     * @param  string|null $status Filter extraction status. (optional)
+     * @param  bool|null $today Filter by today only. Default: false. (optional)
+     * @param  bool|null $includeDeleted Filter by including deleted extractions. Default: false. (optional)
+     * @param  string|null $pageToken Token to specify which page to fetch. (optional)
+     * @param  string|null $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listExtractions'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
+     */
+    public function listExtractionsAsyncWithHttpInfo(
+        \Equisoft\SDK\EquisoftConnect\Model\ExtractionsAddExtractionPayload $extractionsAddExtractionPayload,
+        ?string $status = null,
+        ?bool $today = null,
+        ?bool $includeDeleted = null,
+        ?string $pageToken = null,
+        ?string $maxResults = null,
+        string $contentType = self::contentTypes['listExtractions'][0]
+    ): PromiseInterface
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\ExtractionsListExtractionResponse';
+        $request = $this->listExtractionsRequest($extractionsAddExtractionPayload, $status, $today, $includeDeleted, $pageToken, $maxResults, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if (in_array($returnType, ['\SplFileObject', '\Psr\Http\Message\StreamInterface'])) {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'listExtractions'
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\ExtractionsAddExtractionPayload $extractionsAddExtractionPayload (required)
+     * @param  string|null $status Filter extraction status. (optional)
+     * @param  bool|null $today Filter by today only. Default: false. (optional)
+     * @param  bool|null $includeDeleted Filter by including deleted extractions. Default: false. (optional)
+     * @param  string|null $pageToken Token to specify which page to fetch. (optional)
+     * @param  string|null $maxResults Maximum number of records for one result page. If the query return more records, nextPageToken will be specified in the result to get the records of the next page. Defaults to 250 records. Can never be more than 2500 records. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listExtractions'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function listExtractionsRequest(
+        \Equisoft\SDK\EquisoftConnect\Model\ExtractionsAddExtractionPayload $extractionsAddExtractionPayload,
+        ?string $status = null,
+        ?bool $today = null,
+        ?bool $includeDeleted = null,
+        ?string $pageToken = null,
+        ?string $maxResults = null,
+        string $contentType = self::contentTypes['listExtractions'][0]
+    ): Request
+    {
+
+        // verify the required parameter 'extractionsAddExtractionPayload' is set
+        if ($extractionsAddExtractionPayload === null || (is_array($extractionsAddExtractionPayload) && count($extractionsAddExtractionPayload) === 0)) {
+            throw new InvalidArgumentException(
+                'Missing the required parameter $extractionsAddExtractionPayload when calling listExtractions'
+            );
+        }
+
+
+
+
+
 
 
         $resourcePath = '/crm/api/v1/extractions';
@@ -381,6 +1353,51 @@ class ExtractionApi
         $httpBody = '';
         $multipart = false;
 
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $status,
+            'status', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $today,
+            'today', // param base name
+            'boolean', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $includeDeleted,
+            'includeDeleted', // param base name
+            'boolean', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pageToken,
+            'pageToken', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $maxResults,
+            'maxResults', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
 
 
 
@@ -392,12 +1409,325 @@ class ExtractionApi
         );
 
         // for model (json/xml)
-        if (isset($extractionAddExtractionPayload)) {
+        if (isset($extractionsAddExtractionPayload)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($extractionAddExtractionPayload));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($extractionsAddExtractionPayload));
             } else {
-                $httpBody = $extractionAddExtractionPayload;
+                $httpBody = $extractionsAddExtractionPayload;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        if (is_string($formParamValueItem)) {
+                            // JSON part
+                            $multipartContents[] = [
+                                'name' => $formParamName,
+                                'contents' => $formParamValueItem,
+                                'headers' => [
+                                    'Content-Disposition' => "form-data; name=\"$formParamName\"; filename=\"$formParamName.json\"",
+                                    'Content-Type' => 'application/json; charset=UTF-8'
+                                ]
+                            ];
+                        } else {
+                            $multipartContents[] = [
+                                'name' => $formParamName,
+                                'contents' => $formParamValueItem
+                            ];
+                        }
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation resumeExtraction
+     *
+     * Resume an extraction
+     *
+     * @param  string $uuid Unique identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\ExtractionsResumeExtractionPayload $extractionsResumeExtractionPayload extractionsResumeExtractionPayload (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['resumeExtraction'] to see the possible values for this operation
+     *
+     * @throws ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\MovementValidationErrorResponse|null
+     */
+    public function resumeExtraction(
+        string $uuid,
+        \Equisoft\SDK\EquisoftConnect\Model\ExtractionsResumeExtractionPayload $extractionsResumeExtractionPayload,
+        string $contentType = self::contentTypes['resumeExtraction'][0]
+    ): \Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\MovementValidationErrorResponse|null
+    {
+        list($response) = $this->resumeExtractionWithHttpInfo($uuid, $extractionsResumeExtractionPayload, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation resumeExtractionWithHttpInfo
+     *
+     * Resume an extraction
+     *
+     * @param  string $uuid Unique identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\ExtractionsResumeExtractionPayload $extractionsResumeExtractionPayload (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['resumeExtraction'] to see the possible values for this operation
+     *
+     * @throws ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function resumeExtractionWithHttpInfo(
+        string $uuid,
+        \Equisoft\SDK\EquisoftConnect\Model\ExtractionsResumeExtractionPayload $extractionsResumeExtractionPayload,
+        string $contentType = self::contentTypes['resumeExtraction'][0]
+    ): array
+    {
+        $request = $this->resumeExtractionRequest($uuid, $extractionsResumeExtractionPayload, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+
+            return [null, $statusCode, $response->getHeaders()];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 422:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\MovementValidationErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+            }
+        
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation resumeExtractionAsync
+     *
+     * Resume an extraction
+     *
+     * @param  string $uuid Unique identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\ExtractionsResumeExtractionPayload $extractionsResumeExtractionPayload (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['resumeExtraction'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
+     */
+    public function resumeExtractionAsync(
+        string $uuid,
+        \Equisoft\SDK\EquisoftConnect\Model\ExtractionsResumeExtractionPayload $extractionsResumeExtractionPayload,
+        string $contentType = self::contentTypes['resumeExtraction'][0]
+    ): PromiseInterface
+    {
+        return $this->resumeExtractionAsyncWithHttpInfo($uuid, $extractionsResumeExtractionPayload, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation resumeExtractionAsyncWithHttpInfo
+     *
+     * Resume an extraction
+     *
+     * @param  string $uuid Unique identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\ExtractionsResumeExtractionPayload $extractionsResumeExtractionPayload (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['resumeExtraction'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
+     */
+    public function resumeExtractionAsyncWithHttpInfo(
+        string $uuid,
+        \Equisoft\SDK\EquisoftConnect\Model\ExtractionsResumeExtractionPayload $extractionsResumeExtractionPayload,
+        string $contentType = self::contentTypes['resumeExtraction'][0]
+    ): PromiseInterface
+    {
+        $returnType = '';
+        $request = $this->resumeExtractionRequest($uuid, $extractionsResumeExtractionPayload, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'resumeExtraction'
+     *
+     * @param  string $uuid Unique identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\ExtractionsResumeExtractionPayload $extractionsResumeExtractionPayload (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['resumeExtraction'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function resumeExtractionRequest(
+        string $uuid,
+        \Equisoft\SDK\EquisoftConnect\Model\ExtractionsResumeExtractionPayload $extractionsResumeExtractionPayload,
+        string $contentType = self::contentTypes['resumeExtraction'][0]
+    ): Request
+    {
+
+        // verify the required parameter 'uuid' is set
+        if ($uuid === null || (is_array($uuid) && count($uuid) === 0)) {
+            throw new InvalidArgumentException(
+                'Missing the required parameter $uuid when calling resumeExtraction'
+            );
+        }
+
+        // verify the required parameter 'extractionsResumeExtractionPayload' is set
+        if ($extractionsResumeExtractionPayload === null || (is_array($extractionsResumeExtractionPayload) && count($extractionsResumeExtractionPayload) === 0)) {
+            throw new InvalidArgumentException(
+                'Missing the required parameter $extractionsResumeExtractionPayload when calling resumeExtraction'
+            );
+        }
+
+
+        $resourcePath = '/crm/api/v1/extractions/{uuid}/resume';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if ($uuid !== null) {
+            $resourcePath = str_replace(
+                '{' . 'uuid' . '}',
+                ObjectSerializer::toPathValue($uuid),
+                $resourcePath
+            );
+        }
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($extractionsResumeExtractionPayload)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($extractionsResumeExtractionPayload));
+            } else {
+                $httpBody = $extractionsResumeExtractionPayload;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {

@@ -1,6 +1,6 @@
 <?php
 /**
- * UsersUserIdentity
+ * ExtractionsDetails
  *
  * PHP version 8.1
  *
@@ -34,14 +34,14 @@ use ReturnTypeWillChange;
 use Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * UsersUserIdentity Class Doc Comment
+ * ExtractionsDetails Class Doc Comment
  *
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
  */
-class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
+class ExtractionsDetails implements ModelInterface, ArrayAccess, JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
       *
       * @var string
       */
-    protected static string $openAPIModelName = 'users.UserIdentity';
+    protected static string $openAPIModelName = 'extractions.Details';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,9 +58,12 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'uuid' => 'string',
-        'displayName' => 'string',
-        'email' => 'string'
+        'database' => 'string',
+        'recipient' => 'string',
+        'users' => '\Equisoft\SDK\EquisoftConnect\Model\UsersUserIdentity[]',
+        'includeDocuments' => 'bool',
+        'includeGroups' => 'bool',
+        'resume' => 'bool'
     ];
 
     /**
@@ -69,9 +72,12 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
       * @var array<string, string|null>
       */
     protected static array $openAPIFormats = [
-        'uuid' => null,
-        'displayName' => null,
-        'email' => null
+        'database' => null,
+        'recipient' => null,
+        'users' => null,
+        'includeDocuments' => null,
+        'includeGroups' => null,
+        'resume' => null
     ];
 
     /**
@@ -80,9 +86,12 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
       * @var array<string, bool>
       */
     protected static array $openAPINullables = [
-        'uuid' => false,
-        'displayName' => false,
-        'email' => false
+        'database' => false,
+        'recipient' => false,
+        'users' => false,
+        'includeDocuments' => false,
+        'includeGroups' => false,
+        'resume' => false
     ];
 
     /**
@@ -171,9 +180,12 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
      * @var array<string, string>
      */
     protected static array $attributeMap = [
-        'uuid' => 'uuid',
-        'displayName' => 'displayName',
-        'email' => 'email'
+        'database' => 'database',
+        'recipient' => 'recipient',
+        'users' => 'users',
+        'includeDocuments' => 'includeDocuments',
+        'includeGroups' => 'includeGroups',
+        'resume' => 'resume'
     ];
 
     /**
@@ -182,9 +194,12 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
      * @var array<string, string>
      */
     protected static array $setters = [
-        'uuid' => 'setUuid',
-        'displayName' => 'setDisplayName',
-        'email' => 'setEmail'
+        'database' => 'setDatabase',
+        'recipient' => 'setRecipient',
+        'users' => 'setUsers',
+        'includeDocuments' => 'setIncludeDocuments',
+        'includeGroups' => 'setIncludeGroups',
+        'resume' => 'setResume'
     ];
 
     /**
@@ -193,9 +208,12 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
      * @var array<string, string>
      */
     protected static array $getters = [
-        'uuid' => 'getUuid',
-        'displayName' => 'getDisplayName',
-        'email' => 'getEmail'
+        'database' => 'getDatabase',
+        'recipient' => 'getRecipient',
+        'users' => 'getUsers',
+        'includeDocuments' => 'getIncludeDocuments',
+        'includeGroups' => 'getIncludeGroups',
+        'resume' => 'getResume'
     ];
 
     /**
@@ -254,9 +272,12 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('uuid', $data ?? [], null);
-        $this->setIfExists('displayName', $data ?? [], null);
-        $this->setIfExists('email', $data ?? [], null);
+        $this->setIfExists('database', $data ?? [], null);
+        $this->setIfExists('recipient', $data ?? [], null);
+        $this->setIfExists('users', $data ?? [], null);
+        $this->setIfExists('includeDocuments', $data ?? [], null);
+        $this->setIfExists('includeGroups', $data ?? [], null);
+        $this->setIfExists('resume', $data ?? [], null);
     }
 
     /**
@@ -286,15 +307,6 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['uuid'] === null) {
-            $invalidProperties[] = "'uuid' can't be null";
-        }
-        if ($this->container['displayName'] === null) {
-            $invalidProperties[] = "'displayName' can't be null";
-        }
-        if ($this->container['email'] === null) {
-            $invalidProperties[] = "'email' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -311,82 +323,163 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
 
 
     /**
-     * Gets uuid
+     * Gets database
      *
-     * @return string
+     * @return string|null
      */
-    public function getUuid(): string
+    public function getDatabase(): ?string
     {
-        return $this->container['uuid'];
+        return $this->container['database'];
     }
 
     /**
-     * Sets uuid
+     * Sets database
      *
-     * @param string $uuid uuid
+     * @param string|null $database Database name.
      *
      * @return $this
      */
-    public function setUuid(string $uuid): static
+    public function setDatabase(?string $database): static
     {
-        if (is_null($uuid)) {
-            throw new InvalidArgumentException('non-nullable uuid cannot be null');
+        if (is_null($database)) {
+            throw new InvalidArgumentException('non-nullable database cannot be null');
         }
-        $this->container['uuid'] = $uuid;
+        $this->container['database'] = $database;
 
         return $this;
     }
 
     /**
-     * Gets displayName
+     * Gets recipient
      *
-     * @return string
+     * @return string|null
      */
-    public function getDisplayName(): string
+    public function getRecipient(): ?string
     {
-        return $this->container['displayName'];
+        return $this->container['recipient'];
     }
 
     /**
-     * Sets displayName
+     * Sets recipient
      *
-     * @param string $displayName displayName
+     * @param string|null $recipient Recipient of the extraction.
      *
      * @return $this
      */
-    public function setDisplayName(string $displayName): static
+    public function setRecipient(?string $recipient): static
     {
-        if (is_null($displayName)) {
-            throw new InvalidArgumentException('non-nullable displayName cannot be null');
+        if (is_null($recipient)) {
+            throw new InvalidArgumentException('non-nullable recipient cannot be null');
         }
-        $this->container['displayName'] = $displayName;
+        $this->container['recipient'] = $recipient;
 
         return $this;
     }
 
     /**
-     * Gets email
+     * Gets users
      *
-     * @return string
+     * @return \Equisoft\SDK\EquisoftConnect\Model\UsersUserIdentity[]|null
      */
-    public function getEmail(): string
+    public function getUsers(): ?array
     {
-        return $this->container['email'];
+        return $this->container['users'];
     }
 
     /**
-     * Sets email
+     * Sets users
      *
-     * @param string $email email
+     * @param \Equisoft\SDK\EquisoftConnect\Model\UsersUserIdentity[]|null $users List of users associated with the extraction. Empty list means all users.
      *
      * @return $this
      */
-    public function setEmail(string $email): static
+    public function setUsers(?array $users): static
     {
-        if (is_null($email)) {
-            throw new InvalidArgumentException('non-nullable email cannot be null');
+        if (is_null($users)) {
+            throw new InvalidArgumentException('non-nullable users cannot be null');
         }
-        $this->container['email'] = $email;
+        $this->container['users'] = $users;
+
+        return $this;
+    }
+
+    /**
+     * Gets includeDocuments
+     *
+     * @return bool|null
+     */
+    public function getIncludeDocuments(): ?bool
+    {
+        return $this->container['includeDocuments'];
+    }
+
+    /**
+     * Sets includeDocuments
+     *
+     * @param bool|null $includeDocuments Indicates whether to include documents in the extraction.
+     *
+     * @return $this
+     */
+    public function setIncludeDocuments(?bool $includeDocuments): static
+    {
+        if (is_null($includeDocuments)) {
+            throw new InvalidArgumentException('non-nullable includeDocuments cannot be null');
+        }
+        $this->container['includeDocuments'] = $includeDocuments;
+
+        return $this;
+    }
+
+    /**
+     * Gets includeGroups
+     *
+     * @return bool|null
+     */
+    public function getIncludeGroups(): ?bool
+    {
+        return $this->container['includeGroups'];
+    }
+
+    /**
+     * Sets includeGroups
+     *
+     * @param bool|null $includeGroups Indicates whether to include groups in the extraction.
+     *
+     * @return $this
+     */
+    public function setIncludeGroups(?bool $includeGroups): static
+    {
+        if (is_null($includeGroups)) {
+            throw new InvalidArgumentException('non-nullable includeGroups cannot be null');
+        }
+        $this->container['includeGroups'] = $includeGroups;
+
+        return $this;
+    }
+
+    /**
+     * Gets resume
+     *
+     * @return bool|null
+     */
+    public function getResume(): ?bool
+    {
+        return $this->container['resume'];
+    }
+
+    /**
+     * Sets resume
+     *
+     * @param bool|null $resume Indicates whether the extraction is a resume.
+     *
+     * @return $this
+     */
+    public function setResume(?bool $resume): static
+    {
+        if (is_null($resume)) {
+            throw new InvalidArgumentException('non-nullable resume cannot be null');
+        }
+        $this->container['resume'] = $resume;
 
         return $this;
     }

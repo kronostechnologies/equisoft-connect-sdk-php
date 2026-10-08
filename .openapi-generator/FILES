@@ -26,6 +26,7 @@ docs/Model/AccessRights.md
 docs/Model/AdminCredentialPayload.md
 docs/Model/CalendarsCalendar.md
 docs/Model/CalendarsListCalendarResponse.md
+docs/Model/ChangeMetadata.md
 docs/Model/ContactContactAddress.md
 docs/Model/ContactContactEmail.md
 docs/Model/ContactContactMaritalStatus.md
@@ -125,8 +126,12 @@ docs/Model/EventsPatchEventResponse.md
 docs/Model/EventsPutEventLinkDocumentsPayload.md
 docs/Model/EventsTransferToCompletedResponse.md
 docs/Model/EventsVisibilityType.md
-docs/Model/ExtractionAddExtractionPayload.md
-docs/Model/ExtractionAddExtractionResponse.md
+docs/Model/ExtractionsAddExtractionPayload.md
+docs/Model/ExtractionsDetails.md
+docs/Model/ExtractionsExtraction.md
+docs/Model/ExtractionsListExtractionResponse.md
+docs/Model/ExtractionsResumeExtractionPayload.md
+docs/Model/ExtraxtionsStatus.md
 docs/Model/FieldValue.md
 docs/Model/FieldValueCreateGroupPayload.md
 docs/Model/FieldValueCreateOrUpdateGroupResponse.md
@@ -373,6 +378,7 @@ src/Model/AccessRights.php
 src/Model/AdminCredentialPayload.php
 src/Model/CalendarsCalendar.php
 src/Model/CalendarsListCalendarResponse.php
+src/Model/ChangeMetadata.php
 src/Model/ContactContactAddress.php
 src/Model/ContactContactEmail.php
 src/Model/ContactContactMaritalStatus.php
@@ -472,8 +478,12 @@ src/Model/EventsPatchEventResponse.php
 src/Model/EventsPutEventLinkDocumentsPayload.php
 src/Model/EventsTransferToCompletedResponse.php
 src/Model/EventsVisibilityType.php
-src/Model/ExtractionAddExtractionPayload.php
-src/Model/ExtractionAddExtractionResponse.php
+src/Model/ExtractionsAddExtractionPayload.php
+src/Model/ExtractionsDetails.php
+src/Model/ExtractionsExtraction.php
+src/Model/ExtractionsListExtractionResponse.php
+src/Model/ExtractionsResumeExtractionPayload.php
+src/Model/ExtraxtionsStatus.php
 src/Model/FieldValue.php
 src/Model/FieldValueCreateGroupPayload.php
 src/Model/FieldValueCreateOrUpdateGroupResponse.php
@@ -694,4 +704,10 @@ src/Model/UsersUser.php
 src/Model/UsersUserGroup.php
 src/Model/UsersUserIdentity.php
 src/ObjectSerializer.php
-tests/Model/InvestmentsOwnerContactTest.php
+tests/Model/ChangeMetadataTest.php
+tests/Model/ExtractionsAddExtractionPayloadTest.php
+tests/Model/ExtractionsDetailsTest.php
+tests/Model/ExtractionsExtractionTest.php
+tests/Model/ExtractionsListExtractionResponseTest.php
+tests/Model/ExtractionsResumeExtractionPayloadTest.php
+tests/Model/ExtraxtionsStatusTest.php

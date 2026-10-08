@@ -1,6 +1,6 @@
 <?php
 /**
- * UsersUserIdentity
+ * ExtractionsAddExtractionPayload
  *
  * PHP version 8.1
  *
@@ -34,14 +34,14 @@ use ReturnTypeWillChange;
 use Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * UsersUserIdentity Class Doc Comment
+ * ExtractionsAddExtractionPayload Class Doc Comment
  *
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
  */
-class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
+class ExtractionsAddExtractionPayload implements ModelInterface, ArrayAccess, JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
       *
       * @var string
       */
-    protected static string $openAPIModelName = 'users.UserIdentity';
+    protected static string $openAPIModelName = 'extractions.AddExtractionPayload';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,9 +58,12 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'uuid' => 'string',
-        'displayName' => 'string',
-        'email' => 'string'
+        'database' => 'string',
+        'recipient' => 'string',
+        'date' => 'string',
+        'users' => 'string[]',
+        'includeDocument' => 'bool',
+        'includeGroup' => 'bool'
     ];
 
     /**
@@ -69,9 +72,12 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
       * @var array<string, string|null>
       */
     protected static array $openAPIFormats = [
-        'uuid' => null,
-        'displayName' => null,
-        'email' => null
+        'database' => null,
+        'recipient' => null,
+        'date' => null,
+        'users' => null,
+        'includeDocument' => null,
+        'includeGroup' => null
     ];
 
     /**
@@ -80,9 +86,12 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
       * @var array<string, bool>
       */
     protected static array $openAPINullables = [
-        'uuid' => false,
-        'displayName' => false,
-        'email' => false
+        'database' => false,
+        'recipient' => false,
+        'date' => false,
+        'users' => false,
+        'includeDocument' => false,
+        'includeGroup' => false
     ];
 
     /**
@@ -171,9 +180,12 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
      * @var array<string, string>
      */
     protected static array $attributeMap = [
-        'uuid' => 'uuid',
-        'displayName' => 'displayName',
-        'email' => 'email'
+        'database' => 'database',
+        'recipient' => 'recipient',
+        'date' => 'date',
+        'users' => 'users',
+        'includeDocument' => 'includeDocument',
+        'includeGroup' => 'includeGroup'
     ];
 
     /**
@@ -182,9 +194,12 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
      * @var array<string, string>
      */
     protected static array $setters = [
-        'uuid' => 'setUuid',
-        'displayName' => 'setDisplayName',
-        'email' => 'setEmail'
+        'database' => 'setDatabase',
+        'recipient' => 'setRecipient',
+        'date' => 'setDate',
+        'users' => 'setUsers',
+        'includeDocument' => 'setIncludeDocument',
+        'includeGroup' => 'setIncludeGroup'
     ];
 
     /**
@@ -193,9 +208,12 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
      * @var array<string, string>
      */
     protected static array $getters = [
-        'uuid' => 'getUuid',
-        'displayName' => 'getDisplayName',
-        'email' => 'getEmail'
+        'database' => 'getDatabase',
+        'recipient' => 'getRecipient',
+        'date' => 'getDate',
+        'users' => 'getUsers',
+        'includeDocument' => 'getIncludeDocument',
+        'includeGroup' => 'getIncludeGroup'
     ];
 
     /**
@@ -254,9 +272,12 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('uuid', $data ?? [], null);
-        $this->setIfExists('displayName', $data ?? [], null);
-        $this->setIfExists('email', $data ?? [], null);
+        $this->setIfExists('database', $data ?? [], null);
+        $this->setIfExists('recipient', $data ?? [], null);
+        $this->setIfExists('date', $data ?? [], null);
+        $this->setIfExists('users', $data ?? [], null);
+        $this->setIfExists('includeDocument', $data ?? [], null);
+        $this->setIfExists('includeGroup', $data ?? [], null);
     }
 
     /**
@@ -286,14 +307,11 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['uuid'] === null) {
-            $invalidProperties[] = "'uuid' can't be null";
+        if ($this->container['database'] === null) {
+            $invalidProperties[] = "'database' can't be null";
         }
-        if ($this->container['displayName'] === null) {
-            $invalidProperties[] = "'displayName' can't be null";
-        }
-        if ($this->container['email'] === null) {
-            $invalidProperties[] = "'email' can't be null";
+        if ($this->container['recipient'] === null) {
+            $invalidProperties[] = "'recipient' can't be null";
         }
         return $invalidProperties;
     }
@@ -311,82 +329,163 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
 
 
     /**
-     * Gets uuid
+     * Gets database
      *
      * @return string
      */
-    public function getUuid(): string
+    public function getDatabase(): string
     {
-        return $this->container['uuid'];
+        return $this->container['database'];
     }
 
     /**
-     * Sets uuid
+     * Sets database
      *
-     * @param string $uuid uuid
+     * @param string $database database
      *
      * @return $this
      */
-    public function setUuid(string $uuid): static
+    public function setDatabase(string $database): static
     {
-        if (is_null($uuid)) {
-            throw new InvalidArgumentException('non-nullable uuid cannot be null');
+        if (is_null($database)) {
+            throw new InvalidArgumentException('non-nullable database cannot be null');
         }
-        $this->container['uuid'] = $uuid;
+        $this->container['database'] = $database;
 
         return $this;
     }
 
     /**
-     * Gets displayName
+     * Gets recipient
      *
      * @return string
      */
-    public function getDisplayName(): string
+    public function getRecipient(): string
     {
-        return $this->container['displayName'];
+        return $this->container['recipient'];
     }
 
     /**
-     * Sets displayName
+     * Sets recipient
      *
-     * @param string $displayName displayName
+     * @param string $recipient recipient
      *
      * @return $this
      */
-    public function setDisplayName(string $displayName): static
+    public function setRecipient(string $recipient): static
     {
-        if (is_null($displayName)) {
-            throw new InvalidArgumentException('non-nullable displayName cannot be null');
+        if (is_null($recipient)) {
+            throw new InvalidArgumentException('non-nullable recipient cannot be null');
         }
-        $this->container['displayName'] = $displayName;
+        $this->container['recipient'] = $recipient;
 
         return $this;
     }
 
     /**
-     * Gets email
+     * Gets date
      *
-     * @return string
+     * @return string|null
      */
-    public function getEmail(): string
+    public function getDate(): ?string
     {
-        return $this->container['email'];
+        return $this->container['date'];
     }
 
     /**
-     * Sets email
+     * Sets date
      *
-     * @param string $email email
+     * @param string|null $date date
      *
      * @return $this
      */
-    public function setEmail(string $email): static
+    public function setDate(?string $date): static
     {
-        if (is_null($email)) {
-            throw new InvalidArgumentException('non-nullable email cannot be null');
+        if (is_null($date)) {
+            throw new InvalidArgumentException('non-nullable date cannot be null');
         }
-        $this->container['email'] = $email;
+        $this->container['date'] = $date;
+
+        return $this;
+    }
+
+    /**
+     * Gets users
+     *
+     * @return string[]|null
+     */
+    public function getUsers(): ?array
+    {
+        return $this->container['users'];
+    }
+
+    /**
+     * Sets users
+     *
+     * @param string[]|null $users List of users uuids.
+     *
+     * @return $this
+     */
+    public function setUsers(?array $users): static
+    {
+        if (is_null($users)) {
+            throw new InvalidArgumentException('non-nullable users cannot be null');
+        }
+        $this->container['users'] = $users;
+
+        return $this;
+    }
+
+    /**
+     * Gets includeDocument
+     *
+     * @return bool|null
+     */
+    public function getIncludeDocument(): ?bool
+    {
+        return $this->container['includeDocument'];
+    }
+
+    /**
+     * Sets includeDocument
+     *
+     * @param bool|null $includeDocument includeDocument
+     *
+     * @return $this
+     */
+    public function setIncludeDocument(?bool $includeDocument): static
+    {
+        if (is_null($includeDocument)) {
+            throw new InvalidArgumentException('non-nullable includeDocument cannot be null');
+        }
+        $this->container['includeDocument'] = $includeDocument;
+
+        return $this;
+    }
+
+    /**
+     * Gets includeGroup
+     *
+     * @return bool|null
+     */
+    public function getIncludeGroup(): ?bool
+    {
+        return $this->container['includeGroup'];
+    }
+
+    /**
+     * Sets includeGroup
+     *
+     * @param bool|null $includeGroup includeGroup
+     *
+     * @return $this
+     */
+    public function setIncludeGroup(?bool $includeGroup): static
+    {
+        if (is_null($includeGroup)) {
+            throw new InvalidArgumentException('non-nullable includeGroup cannot be null');
+        }
+        $this->container['includeGroup'] = $includeGroup;
 
         return $this;
     }

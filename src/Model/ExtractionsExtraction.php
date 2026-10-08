@@ -1,6 +1,6 @@
 <?php
 /**
- * UsersUserIdentity
+ * ExtractionsExtraction
  *
  * PHP version 8.1
  *
@@ -34,14 +34,14 @@ use ReturnTypeWillChange;
 use Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * UsersUserIdentity Class Doc Comment
+ * ExtractionsExtraction Class Doc Comment
  *
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
  */
-class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
+class ExtractionsExtraction implements ModelInterface, ArrayAccess, JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
       *
       * @var string
       */
-    protected static string $openAPIModelName = 'users.UserIdentity';
+    protected static string $openAPIModelName = 'extractions.Extraction';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -59,8 +59,11 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
       */
     protected static array $openAPITypes = [
         'uuid' => 'string',
-        'displayName' => 'string',
-        'email' => 'string'
+        'status' => 'string',
+        'scheduledAt' => '\DateTime',
+        'details' => '\Equisoft\SDK\EquisoftConnect\Model\ExtractionsDetails',
+        'changeMetadata' => '\Equisoft\SDK\EquisoftConnect\Model\ChangeMetadata',
+        'processedAt' => '\DateTime'
     ];
 
     /**
@@ -70,8 +73,11 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
       */
     protected static array $openAPIFormats = [
         'uuid' => null,
-        'displayName' => null,
-        'email' => null
+        'status' => null,
+        'scheduledAt' => 'date-time',
+        'details' => null,
+        'changeMetadata' => null,
+        'processedAt' => 'date-time'
     ];
 
     /**
@@ -81,8 +87,11 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
       */
     protected static array $openAPINullables = [
         'uuid' => false,
-        'displayName' => false,
-        'email' => false
+        'status' => false,
+        'scheduledAt' => false,
+        'details' => false,
+        'changeMetadata' => false,
+        'processedAt' => true
     ];
 
     /**
@@ -172,8 +181,11 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
      */
     protected static array $attributeMap = [
         'uuid' => 'uuid',
-        'displayName' => 'displayName',
-        'email' => 'email'
+        'status' => 'status',
+        'scheduledAt' => 'scheduledAt',
+        'details' => 'details',
+        'changeMetadata' => 'changeMetadata',
+        'processedAt' => 'processedAt'
     ];
 
     /**
@@ -183,8 +195,11 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
      */
     protected static array $setters = [
         'uuid' => 'setUuid',
-        'displayName' => 'setDisplayName',
-        'email' => 'setEmail'
+        'status' => 'setStatus',
+        'scheduledAt' => 'setScheduledAt',
+        'details' => 'setDetails',
+        'changeMetadata' => 'setChangeMetadata',
+        'processedAt' => 'setProcessedAt'
     ];
 
     /**
@@ -194,8 +209,11 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
      */
     protected static array $getters = [
         'uuid' => 'getUuid',
-        'displayName' => 'getDisplayName',
-        'email' => 'getEmail'
+        'status' => 'getStatus',
+        'scheduledAt' => 'getScheduledAt',
+        'details' => 'getDetails',
+        'changeMetadata' => 'getChangeMetadata',
+        'processedAt' => 'getProcessedAt'
     ];
 
     /**
@@ -255,8 +273,11 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
     public function __construct(?array $data = null)
     {
         $this->setIfExists('uuid', $data ?? [], null);
-        $this->setIfExists('displayName', $data ?? [], null);
-        $this->setIfExists('email', $data ?? [], null);
+        $this->setIfExists('status', $data ?? [], null);
+        $this->setIfExists('scheduledAt', $data ?? [], null);
+        $this->setIfExists('details', $data ?? [], null);
+        $this->setIfExists('changeMetadata', $data ?? [], null);
+        $this->setIfExists('processedAt', $data ?? [], null);
     }
 
     /**
@@ -286,15 +307,6 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['uuid'] === null) {
-            $invalidProperties[] = "'uuid' can't be null";
-        }
-        if ($this->container['displayName'] === null) {
-            $invalidProperties[] = "'displayName' can't be null";
-        }
-        if ($this->container['email'] === null) {
-            $invalidProperties[] = "'email' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -313,9 +325,9 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Gets uuid
      *
-     * @return string
+     * @return string|null
      */
-    public function getUuid(): string
+    public function getUuid(): ?string
     {
         return $this->container['uuid'];
     }
@@ -323,11 +335,11 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Sets uuid
      *
-     * @param string $uuid uuid
+     * @param string|null $uuid Unique identifier of the created extraction.
      *
      * @return $this
      */
-    public function setUuid(string $uuid): static
+    public function setUuid(?string $uuid): static
     {
         if (is_null($uuid)) {
             throw new InvalidArgumentException('non-nullable uuid cannot be null');
@@ -338,55 +350,143 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
     }
 
     /**
-     * Gets displayName
+     * Gets status
      *
-     * @return string
+     * @return string|null
      */
-    public function getDisplayName(): string
+    public function getStatus(): ?string
     {
-        return $this->container['displayName'];
+        return $this->container['status'];
     }
 
     /**
-     * Sets displayName
+     * Sets status
      *
-     * @param string $displayName displayName
+     * @param string|null $status Status of the extraction.
      *
      * @return $this
      */
-    public function setDisplayName(string $displayName): static
+    public function setStatus(?string $status): static
     {
-        if (is_null($displayName)) {
-            throw new InvalidArgumentException('non-nullable displayName cannot be null');
+        if (is_null($status)) {
+            throw new InvalidArgumentException('non-nullable status cannot be null');
         }
-        $this->container['displayName'] = $displayName;
+        $this->container['status'] = $status;
 
         return $this;
     }
 
     /**
-     * Gets email
+     * Gets scheduledAt
      *
-     * @return string
+     * @return \DateTime|null
      */
-    public function getEmail(): string
+    public function getScheduledAt(): ?\DateTime
     {
-        return $this->container['email'];
+        return $this->container['scheduledAt'];
     }
 
     /**
-     * Sets email
+     * Sets scheduledAt
      *
-     * @param string $email email
+     * @param \DateTime|null $scheduledAt Date and time when the extraction is scheduled.
      *
      * @return $this
      */
-    public function setEmail(string $email): static
+    public function setScheduledAt(?\DateTime $scheduledAt): static
     {
-        if (is_null($email)) {
-            throw new InvalidArgumentException('non-nullable email cannot be null');
+        if (is_null($scheduledAt)) {
+            throw new InvalidArgumentException('non-nullable scheduledAt cannot be null');
         }
-        $this->container['email'] = $email;
+        $this->container['scheduledAt'] = $scheduledAt;
+
+        return $this;
+    }
+
+    /**
+     * Gets details
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ExtractionsDetails|null
+     */
+    public function getDetails(): ?\Equisoft\SDK\EquisoftConnect\Model\ExtractionsDetails
+    {
+        return $this->container['details'];
+    }
+
+    /**
+     * Sets details
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ExtractionsDetails|null $details details
+     *
+     * @return $this
+     */
+    public function setDetails(?\Equisoft\SDK\EquisoftConnect\Model\ExtractionsDetails $details): static
+    {
+        if (is_null($details)) {
+            throw new InvalidArgumentException('non-nullable details cannot be null');
+        }
+        $this->container['details'] = $details;
+
+        return $this;
+    }
+
+    /**
+     * Gets changeMetadata
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ChangeMetadata|null
+     */
+    public function getChangeMetadata(): ?\Equisoft\SDK\EquisoftConnect\Model\ChangeMetadata
+    {
+        return $this->container['changeMetadata'];
+    }
+
+    /**
+     * Sets changeMetadata
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ChangeMetadata|null $changeMetadata changeMetadata
+     *
+     * @return $this
+     */
+    public function setChangeMetadata(?\Equisoft\SDK\EquisoftConnect\Model\ChangeMetadata $changeMetadata): static
+    {
+        if (is_null($changeMetadata)) {
+            throw new InvalidArgumentException('non-nullable changeMetadata cannot be null');
+        }
+        $this->container['changeMetadata'] = $changeMetadata;
+
+        return $this;
+    }
+
+    /**
+     * Gets processedAt
+     *
+     * @return \DateTime|null
+     */
+    public function getProcessedAt(): ?\DateTime
+    {
+        return $this->container['processedAt'];
+    }
+
+    /**
+     * Sets processedAt
+     *
+     * @param \DateTime|null $processedAt Date and time when the extraction was processed.
+     *
+     * @return $this
+     */
+    public function setProcessedAt(?\DateTime $processedAt): static
+    {
+        if (is_null($processedAt)) {
+            array_push($this->openAPINullablesSetToNull, 'processedAt');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('processedAt', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['processedAt'] = $processedAt;
 
         return $this;
     }

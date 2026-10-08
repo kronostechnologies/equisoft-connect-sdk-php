@@ -1,6 +1,6 @@
 <?php
 /**
- * UsersUserIdentity
+ * ExtractionsListExtractionResponse
  *
  * PHP version 8.1
  *
@@ -34,14 +34,14 @@ use ReturnTypeWillChange;
 use Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * UsersUserIdentity Class Doc Comment
+ * ExtractionsListExtractionResponse Class Doc Comment
  *
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
  */
-class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
+class ExtractionsListExtractionResponse implements ModelInterface, ArrayAccess, JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
       *
       * @var string
       */
-    protected static string $openAPIModelName = 'users.UserIdentity';
+    protected static string $openAPIModelName = 'extractions.ListExtractionResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,9 +58,9 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'uuid' => 'string',
-        'displayName' => 'string',
-        'email' => 'string'
+        'nextPageToken' => 'string',
+        'previousPageToken' => 'string',
+        'items' => '\Equisoft\SDK\EquisoftConnect\Model\ExtractionsExtraction[]'
     ];
 
     /**
@@ -69,9 +69,9 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
       * @var array<string, string|null>
       */
     protected static array $openAPIFormats = [
-        'uuid' => null,
-        'displayName' => null,
-        'email' => null
+        'nextPageToken' => null,
+        'previousPageToken' => null,
+        'items' => null
     ];
 
     /**
@@ -80,9 +80,9 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
       * @var array<string, bool>
       */
     protected static array $openAPINullables = [
-        'uuid' => false,
-        'displayName' => false,
-        'email' => false
+        'nextPageToken' => false,
+        'previousPageToken' => false,
+        'items' => false
     ];
 
     /**
@@ -171,9 +171,9 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
      * @var array<string, string>
      */
     protected static array $attributeMap = [
-        'uuid' => 'uuid',
-        'displayName' => 'displayName',
-        'email' => 'email'
+        'nextPageToken' => 'nextPageToken',
+        'previousPageToken' => 'previousPageToken',
+        'items' => 'items'
     ];
 
     /**
@@ -182,9 +182,9 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
      * @var array<string, string>
      */
     protected static array $setters = [
-        'uuid' => 'setUuid',
-        'displayName' => 'setDisplayName',
-        'email' => 'setEmail'
+        'nextPageToken' => 'setNextPageToken',
+        'previousPageToken' => 'setPreviousPageToken',
+        'items' => 'setItems'
     ];
 
     /**
@@ -193,9 +193,9 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
      * @var array<string, string>
      */
     protected static array $getters = [
-        'uuid' => 'getUuid',
-        'displayName' => 'getDisplayName',
-        'email' => 'getEmail'
+        'nextPageToken' => 'getNextPageToken',
+        'previousPageToken' => 'getPreviousPageToken',
+        'items' => 'getItems'
     ];
 
     /**
@@ -254,9 +254,9 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('uuid', $data ?? [], null);
-        $this->setIfExists('displayName', $data ?? [], null);
-        $this->setIfExists('email', $data ?? [], null);
+        $this->setIfExists('nextPageToken', $data ?? [], null);
+        $this->setIfExists('previousPageToken', $data ?? [], null);
+        $this->setIfExists('items', $data ?? [], null);
     }
 
     /**
@@ -286,14 +286,8 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['uuid'] === null) {
-            $invalidProperties[] = "'uuid' can't be null";
-        }
-        if ($this->container['displayName'] === null) {
-            $invalidProperties[] = "'displayName' can't be null";
-        }
-        if ($this->container['email'] === null) {
-            $invalidProperties[] = "'email' can't be null";
+        if ($this->container['items'] === null) {
+            $invalidProperties[] = "'items' can't be null";
         }
         return $invalidProperties;
     }
@@ -311,82 +305,82 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
 
 
     /**
-     * Gets uuid
+     * Gets nextPageToken
      *
-     * @return string
+     * @return string|null
      */
-    public function getUuid(): string
+    public function getNextPageToken(): ?string
     {
-        return $this->container['uuid'];
+        return $this->container['nextPageToken'];
     }
 
     /**
-     * Sets uuid
+     * Sets nextPageToken
      *
-     * @param string $uuid uuid
+     * @param string|null $nextPageToken Opaque token used to get the next page of the result. Omitted if no more results.
      *
      * @return $this
      */
-    public function setUuid(string $uuid): static
+    public function setNextPageToken(?string $nextPageToken): static
     {
-        if (is_null($uuid)) {
-            throw new InvalidArgumentException('non-nullable uuid cannot be null');
+        if (is_null($nextPageToken)) {
+            throw new InvalidArgumentException('non-nullable nextPageToken cannot be null');
         }
-        $this->container['uuid'] = $uuid;
+        $this->container['nextPageToken'] = $nextPageToken;
 
         return $this;
     }
 
     /**
-     * Gets displayName
+     * Gets previousPageToken
      *
-     * @return string
+     * @return string|null
      */
-    public function getDisplayName(): string
+    public function getPreviousPageToken(): ?string
     {
-        return $this->container['displayName'];
+        return $this->container['previousPageToken'];
     }
 
     /**
-     * Sets displayName
+     * Sets previousPageToken
      *
-     * @param string $displayName displayName
+     * @param string|null $previousPageToken Opaque token used to get the next page of the result. Omitted if no more results.
      *
      * @return $this
      */
-    public function setDisplayName(string $displayName): static
+    public function setPreviousPageToken(?string $previousPageToken): static
     {
-        if (is_null($displayName)) {
-            throw new InvalidArgumentException('non-nullable displayName cannot be null');
+        if (is_null($previousPageToken)) {
+            throw new InvalidArgumentException('non-nullable previousPageToken cannot be null');
         }
-        $this->container['displayName'] = $displayName;
+        $this->container['previousPageToken'] = $previousPageToken;
 
         return $this;
     }
 
     /**
-     * Gets email
+     * Gets items
      *
-     * @return string
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ExtractionsExtraction[]
      */
-    public function getEmail(): string
+    public function getItems(): array
     {
-        return $this->container['email'];
+        return $this->container['items'];
     }
 
     /**
-     * Sets email
+     * Sets items
      *
-     * @param string $email email
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ExtractionsExtraction[] $items items
      *
      * @return $this
      */
-    public function setEmail(string $email): static
+    public function setItems(array $items): static
     {
-        if (is_null($email)) {
-            throw new InvalidArgumentException('non-nullable email cannot be null');
+        if (is_null($items)) {
+            throw new InvalidArgumentException('non-nullable items cannot be null');
         }
-        $this->container['email'] = $email;
+        $this->container['items'] = $items;
 
         return $this;
     }

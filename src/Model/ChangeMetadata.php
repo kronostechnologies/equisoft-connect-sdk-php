@@ -1,6 +1,6 @@
 <?php
 /**
- * UsersUserIdentity
+ * ChangeMetadata
  *
  * PHP version 8.1
  *
@@ -34,14 +34,14 @@ use ReturnTypeWillChange;
 use Equisoft\SDK\EquisoftConnect\ObjectSerializer;
 
 /**
- * UsersUserIdentity Class Doc Comment
+ * ChangeMetadata Class Doc Comment
  *
  * @package  Equisoft\SDK\EquisoftConnect
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
  */
-class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
+class ChangeMetadata implements ModelInterface, ArrayAccess, JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
       *
       * @var string
       */
-    protected static string $openAPIModelName = 'users.UserIdentity';
+    protected static string $openAPIModelName = 'ChangeMetadata';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,9 +58,12 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'uuid' => 'string',
-        'displayName' => 'string',
-        'email' => 'string'
+        'createdAt' => '\DateTime',
+        'createdBy' => '\Equisoft\SDK\EquisoftConnect\Model\UsersUserIdentity',
+        'modifiedAt' => '\DateTime',
+        'modifiedBy' => '\Equisoft\SDK\EquisoftConnect\Model\UsersUserIdentity',
+        'deletedAt' => '\DateTime',
+        'deletedBy' => '\Equisoft\SDK\EquisoftConnect\Model\UsersUserIdentity'
     ];
 
     /**
@@ -69,9 +72,12 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
       * @var array<string, string|null>
       */
     protected static array $openAPIFormats = [
-        'uuid' => null,
-        'displayName' => null,
-        'email' => null
+        'createdAt' => 'date-time',
+        'createdBy' => null,
+        'modifiedAt' => 'date-time',
+        'modifiedBy' => null,
+        'deletedAt' => 'date-time',
+        'deletedBy' => null
     ];
 
     /**
@@ -80,9 +86,12 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
       * @var array<string, bool>
       */
     protected static array $openAPINullables = [
-        'uuid' => false,
-        'displayName' => false,
-        'email' => false
+        'createdAt' => true,
+        'createdBy' => true,
+        'modifiedAt' => true,
+        'modifiedBy' => true,
+        'deletedAt' => true,
+        'deletedBy' => true
     ];
 
     /**
@@ -171,9 +180,12 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
      * @var array<string, string>
      */
     protected static array $attributeMap = [
-        'uuid' => 'uuid',
-        'displayName' => 'displayName',
-        'email' => 'email'
+        'createdAt' => 'createdAt',
+        'createdBy' => 'createdBy',
+        'modifiedAt' => 'modifiedAt',
+        'modifiedBy' => 'modifiedBy',
+        'deletedAt' => 'deletedAt',
+        'deletedBy' => 'deletedBy'
     ];
 
     /**
@@ -182,9 +194,12 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
      * @var array<string, string>
      */
     protected static array $setters = [
-        'uuid' => 'setUuid',
-        'displayName' => 'setDisplayName',
-        'email' => 'setEmail'
+        'createdAt' => 'setCreatedAt',
+        'createdBy' => 'setCreatedBy',
+        'modifiedAt' => 'setModifiedAt',
+        'modifiedBy' => 'setModifiedBy',
+        'deletedAt' => 'setDeletedAt',
+        'deletedBy' => 'setDeletedBy'
     ];
 
     /**
@@ -193,9 +208,12 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
      * @var array<string, string>
      */
     protected static array $getters = [
-        'uuid' => 'getUuid',
-        'displayName' => 'getDisplayName',
-        'email' => 'getEmail'
+        'createdAt' => 'getCreatedAt',
+        'createdBy' => 'getCreatedBy',
+        'modifiedAt' => 'getModifiedAt',
+        'modifiedBy' => 'getModifiedBy',
+        'deletedAt' => 'getDeletedAt',
+        'deletedBy' => 'getDeletedBy'
     ];
 
     /**
@@ -254,9 +272,12 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('uuid', $data ?? [], null);
-        $this->setIfExists('displayName', $data ?? [], null);
-        $this->setIfExists('email', $data ?? [], null);
+        $this->setIfExists('createdAt', $data ?? [], null);
+        $this->setIfExists('createdBy', $data ?? [], null);
+        $this->setIfExists('modifiedAt', $data ?? [], null);
+        $this->setIfExists('modifiedBy', $data ?? [], null);
+        $this->setIfExists('deletedAt', $data ?? [], null);
+        $this->setIfExists('deletedBy', $data ?? [], null);
     }
 
     /**
@@ -286,15 +307,6 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['uuid'] === null) {
-            $invalidProperties[] = "'uuid' can't be null";
-        }
-        if ($this->container['displayName'] === null) {
-            $invalidProperties[] = "'displayName' can't be null";
-        }
-        if ($this->container['email'] === null) {
-            $invalidProperties[] = "'email' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -311,82 +323,205 @@ class UsersUserIdentity implements ModelInterface, ArrayAccess, JsonSerializable
 
 
     /**
-     * Gets uuid
+     * Gets createdAt
      *
-     * @return string
+     * @return \DateTime|null
      */
-    public function getUuid(): string
+    public function getCreatedAt(): ?\DateTime
     {
-        return $this->container['uuid'];
+        return $this->container['createdAt'];
     }
 
     /**
-     * Sets uuid
+     * Sets createdAt
      *
-     * @param string $uuid uuid
+     * @param \DateTime|null $createdAt createdAt
      *
      * @return $this
      */
-    public function setUuid(string $uuid): static
+    public function setCreatedAt(?\DateTime $createdAt): static
     {
-        if (is_null($uuid)) {
-            throw new InvalidArgumentException('non-nullable uuid cannot be null');
+        if (is_null($createdAt)) {
+            array_push($this->openAPINullablesSetToNull, 'createdAt');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('createdAt', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
-        $this->container['uuid'] = $uuid;
+        $this->container['createdAt'] = $createdAt;
 
         return $this;
     }
 
     /**
-     * Gets displayName
+     * Gets createdBy
      *
-     * @return string
+     * @return \Equisoft\SDK\EquisoftConnect\Model\UsersUserIdentity|null
      */
-    public function getDisplayName(): string
+    public function getCreatedBy(): ?\Equisoft\SDK\EquisoftConnect\Model\UsersUserIdentity
     {
-        return $this->container['displayName'];
+        return $this->container['createdBy'];
     }
 
     /**
-     * Sets displayName
+     * Sets createdBy
      *
-     * @param string $displayName displayName
+     * @param \Equisoft\SDK\EquisoftConnect\Model\UsersUserIdentity|null $createdBy createdBy
      *
      * @return $this
      */
-    public function setDisplayName(string $displayName): static
+    public function setCreatedBy(?\Equisoft\SDK\EquisoftConnect\Model\UsersUserIdentity $createdBy): static
     {
-        if (is_null($displayName)) {
-            throw new InvalidArgumentException('non-nullable displayName cannot be null');
+        if (is_null($createdBy)) {
+            array_push($this->openAPINullablesSetToNull, 'createdBy');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('createdBy', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
-        $this->container['displayName'] = $displayName;
+        $this->container['createdBy'] = $createdBy;
 
         return $this;
     }
 
     /**
-     * Gets email
+     * Gets modifiedAt
      *
-     * @return string
+     * @return \DateTime|null
      */
-    public function getEmail(): string
+    public function getModifiedAt(): ?\DateTime
     {
-        return $this->container['email'];
+        return $this->container['modifiedAt'];
     }
 
     /**
-     * Sets email
+     * Sets modifiedAt
      *
-     * @param string $email email
+     * @param \DateTime|null $modifiedAt modifiedAt
      *
      * @return $this
      */
-    public function setEmail(string $email): static
+    public function setModifiedAt(?\DateTime $modifiedAt): static
     {
-        if (is_null($email)) {
-            throw new InvalidArgumentException('non-nullable email cannot be null');
+        if (is_null($modifiedAt)) {
+            array_push($this->openAPINullablesSetToNull, 'modifiedAt');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('modifiedAt', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
-        $this->container['email'] = $email;
+        $this->container['modifiedAt'] = $modifiedAt;
+
+        return $this;
+    }
+
+    /**
+     * Gets modifiedBy
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\UsersUserIdentity|null
+     */
+    public function getModifiedBy(): ?\Equisoft\SDK\EquisoftConnect\Model\UsersUserIdentity
+    {
+        return $this->container['modifiedBy'];
+    }
+
+    /**
+     * Sets modifiedBy
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\UsersUserIdentity|null $modifiedBy modifiedBy
+     *
+     * @return $this
+     */
+    public function setModifiedBy(?\Equisoft\SDK\EquisoftConnect\Model\UsersUserIdentity $modifiedBy): static
+    {
+        if (is_null($modifiedBy)) {
+            array_push($this->openAPINullablesSetToNull, 'modifiedBy');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('modifiedBy', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['modifiedBy'] = $modifiedBy;
+
+        return $this;
+    }
+
+    /**
+     * Gets deletedAt
+     *
+     * @return \DateTime|null
+     */
+    public function getDeletedAt(): ?\DateTime
+    {
+        return $this->container['deletedAt'];
+    }
+
+    /**
+     * Sets deletedAt
+     *
+     * @param \DateTime|null $deletedAt deletedAt
+     *
+     * @return $this
+     */
+    public function setDeletedAt(?\DateTime $deletedAt): static
+    {
+        if (is_null($deletedAt)) {
+            array_push($this->openAPINullablesSetToNull, 'deletedAt');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('deletedAt', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['deletedAt'] = $deletedAt;
+
+        return $this;
+    }
+
+    /**
+     * Gets deletedBy
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\UsersUserIdentity|null
+     */
+    public function getDeletedBy(): ?\Equisoft\SDK\EquisoftConnect\Model\UsersUserIdentity
+    {
+        return $this->container['deletedBy'];
+    }
+
+    /**
+     * Sets deletedBy
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\UsersUserIdentity|null $deletedBy deletedBy
+     *
+     * @return $this
+     */
+    public function setDeletedBy(?\Equisoft\SDK\EquisoftConnect\Model\UsersUserIdentity $deletedBy): static
+    {
+        if (is_null($deletedBy)) {
+            array_push($this->openAPINullablesSetToNull, 'deletedBy');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('deletedBy', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['deletedBy'] = $deletedBy;
 
         return $this;
     }

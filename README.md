@@ -115,6 +115,10 @@ Class | Method | HTTP request | Description
 *EventsApi* | [**restoreEventInternalNote**](docs/Api/EventsApi.md#restoreeventinternalnote) | **POST** /crm/api/v1/events/{eventId}/notes/{noteId}/restore | Restore an archived internal note for an event.
 *EventsApi* | [**transferEventToCompleted**](docs/Api/EventsApi.md#transfereventtocompleted) | **POST** /crm/api/v1/events/{eventId}/transferToCompleted | Transfer an event to the completed/done calendar.
 *ExtractionApi* | [**addExtraction**](docs/Api/ExtractionApi.md#addextraction) | **POST** /crm/api/v1/extractions | Add an extraction
+*ExtractionApi* | [**deleteExtraction**](docs/Api/ExtractionApi.md#deleteextraction) | **DELETE** /crm/api/v1/extractions/{uuid} | Delete an extraction
+*ExtractionApi* | [**getExtraction**](docs/Api/ExtractionApi.md#getextraction) | **GET** /crm/api/v1/extractions/{uuid} | Get an extraction
+*ExtractionApi* | [**listExtractions**](docs/Api/ExtractionApi.md#listextractions) | **GET** /crm/api/v1/extractions | List extractions
+*ExtractionApi* | [**resumeExtraction**](docs/Api/ExtractionApi.md#resumeextraction) | **POST** /crm/api/v1/extractions/{uuid}/resume | Resume an extraction
 *FieldValuesApi* | [**createGroup**](docs/Api/FieldValuesApi.md#creategroup) | **POST** /crm/api/v1/fields/{fieldName}/groups | Create a group
 *FieldValuesApi* | [**createGroupValue**](docs/Api/FieldValuesApi.md#creategroupvalue) | **POST** /crm/api/v1/fields/{fieldName}/groups/{id}/values | Create a group value
 *FieldValuesApi* | [**createValue**](docs/Api/FieldValuesApi.md#createvalue) | **POST** /crm/api/v1/fields/{fieldName}/values | Create a value
@@ -226,6 +230,7 @@ Class | Method | HTTP request | Description
 - [AdminCredentialPayload](docs/Model/AdminCredentialPayload.md)
 - [CalendarsCalendar](docs/Model/CalendarsCalendar.md)
 - [CalendarsListCalendarResponse](docs/Model/CalendarsListCalendarResponse.md)
+- [ChangeMetadata](docs/Model/ChangeMetadata.md)
 - [ContactContactAddress](docs/Model/ContactContactAddress.md)
 - [ContactContactEmail](docs/Model/ContactContactEmail.md)
 - [ContactContactMaritalStatus](docs/Model/ContactContactMaritalStatus.md)
@@ -325,8 +330,12 @@ Class | Method | HTTP request | Description
 - [EventsPutEventLinkDocumentsPayload](docs/Model/EventsPutEventLinkDocumentsPayload.md)
 - [EventsTransferToCompletedResponse](docs/Model/EventsTransferToCompletedResponse.md)
 - [EventsVisibilityType](docs/Model/EventsVisibilityType.md)
-- [ExtractionAddExtractionPayload](docs/Model/ExtractionAddExtractionPayload.md)
-- [ExtractionAddExtractionResponse](docs/Model/ExtractionAddExtractionResponse.md)
+- [ExtractionsAddExtractionPayload](docs/Model/ExtractionsAddExtractionPayload.md)
+- [ExtractionsDetails](docs/Model/ExtractionsDetails.md)
+- [ExtractionsExtraction](docs/Model/ExtractionsExtraction.md)
+- [ExtractionsListExtractionResponse](docs/Model/ExtractionsListExtractionResponse.md)
+- [ExtractionsResumeExtractionPayload](docs/Model/ExtractionsResumeExtractionPayload.md)
+- [ExtraxtionsStatus](docs/Model/ExtraxtionsStatus.md)
 - [FieldValue](docs/Model/FieldValue.md)
 - [FieldValueCreateGroupPayload](docs/Model/FieldValueCreateGroupPayload.md)
 - [FieldValueCreateOrUpdateGroupResponse](docs/Model/FieldValueCreateOrUpdateGroupResponse.md)
