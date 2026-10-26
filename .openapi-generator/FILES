@@ -18,6 +18,7 @@ docs/Api/LegacyFinanceApi.md
 docs/Api/LegacyParametersApi.md
 docs/Api/LegacyProvisioningApi.md
 docs/Api/MovementApi.md
+docs/Api/OpportunitiesApi.md
 docs/Api/RemoteAccountApi.md
 docs/Api/SystemParametersApi.md
 docs/Api/TasksApi.md
@@ -328,6 +329,7 @@ docs/Model/MovementUserTuple.md
 docs/Model/MovementUserTuplePayload.md
 docs/Model/MovementValidationError.md
 docs/Model/MovementValidationErrorResponse.md
+docs/Model/OpportunitiesListOpportunityResponse.md
 docs/Model/OpportunityCreateOpportunitySchema.md
 docs/Model/OpportunityOpportunity.md
 docs/Model/ParametersCompanyResponse.md
@@ -368,6 +370,7 @@ src/Api/LegacyFinanceApi.php
 src/Api/LegacyParametersApi.php
 src/Api/LegacyProvisioningApi.php
 src/Api/MovementApi.php
+src/Api/OpportunitiesApi.php
 src/Api/RemoteAccountApi.php
 src/Api/SystemParametersApi.php
 src/Api/TasksApi.php
@@ -682,6 +685,7 @@ src/Model/MovementUserTuple.php
 src/Model/MovementUserTuplePayload.php
 src/Model/MovementValidationError.php
 src/Model/MovementValidationErrorResponse.php
+src/Model/OpportunitiesListOpportunityResponse.php
 src/Model/OpportunityCreateOpportunitySchema.php
 src/Model/OpportunityOpportunity.php
 src/Model/ParametersCompanyResponse.php
@@ -706,3 +710,5 @@ src/Model/UsersUser.php
 src/Model/UsersUserGroup.php
 src/Model/UsersUserIdentity.php
 src/ObjectSerializer.php
+tests/Api/OpportunitiesApiTest.php
+tests/Model/OpportunitiesListOpportunityResponseTest.php

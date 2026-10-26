@@ -58,7 +58,7 @@ class OpportunityOpportunity implements ModelInterface, ArrayAccess, JsonSeriali
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'id' => 'string',
+        'id' => 'int',
         'name' => 'string',
         'referenceNumber' => 'string',
         'approachDate' => '\DateTime',
@@ -486,9 +486,9 @@ class OpportunityOpportunity implements ModelInterface, ArrayAccess, JsonSeriali
     /**
      * Gets id
      *
-     * @return string
+     * @return int
      */
-    public function getId(): string
+    public function getId(): int
     {
         return $this->container['id'];
     }
@@ -496,11 +496,11 @@ class OpportunityOpportunity implements ModelInterface, ArrayAccess, JsonSeriali
     /**
      * Sets id
      *
-     * @param string $id Unique numerical identifier.
+     * @param int $id Unique numerical identifier.
      *
      * @return $this
      */
-    public function setId(string $id): static
+    public function setId(int $id): static
     {
         if (is_null($id)) {
             throw new InvalidArgumentException('non-nullable id cannot be null');

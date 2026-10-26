@@ -205,6 +205,7 @@ Class | Method | HTTP request | Description
 *MovementApi* | [**getExecutedMovementInfo**](docs/Api/MovementApi.md#getexecutedmovementinfo) | **GET** /crm/api/v1/movements/executed/{executedMovementId}/info | Get basic information about an executed movement
 *MovementApi* | [**getMovementStatistic**](docs/Api/MovementApi.md#getmovementstatistic) | **GET** /crm/api/v1/movements/statistic | Get movement statistic
 *MovementApi* | [**listMovements**](docs/Api/MovementApi.md#listmovements) | **GET** /crm/api/v1/movements | List all movements
+*OpportunitiesApi* | [**listOpportunities**](docs/Api/OpportunitiesApi.md#listopportunities) | **GET** /crm/api/v1/opportunities | List user opportunities
 *RemoteAccountApi* | [**getMailAccountAccessRights**](docs/Api/RemoteAccountApi.md#getmailaccountaccessrights) | **GET** /crm/api/v1/mailAccounts/{remoteAccountId}/accessRights | Return the mail account access rights granted to the currently connected user account.
 *SystemParametersApi* | [**getCompanyDetails**](docs/Api/SystemParametersApi.md#getcompanydetails) | **GET** /crm/api/v1/databases/{databaseUuid}/parameters/account/company | Get company information about the enterprise or an alternate company
 *SystemParametersApi* | [**getCompanyLogo**](docs/Api/SystemParametersApi.md#getcompanylogo) | **GET** /crm/api/v1/databases/{databaseUuid}/parameters/account/company/logo | Get company logo
@@ -532,6 +533,7 @@ Class | Method | HTTP request | Description
 - [MovementUserTuplePayload](docs/Model/MovementUserTuplePayload.md)
 - [MovementValidationError](docs/Model/MovementValidationError.md)
 - [MovementValidationErrorResponse](docs/Model/MovementValidationErrorResponse.md)
+- [OpportunitiesListOpportunityResponse](docs/Model/OpportunitiesListOpportunityResponse.md)
 - [OpportunityCreateOpportunitySchema](docs/Model/OpportunityCreateOpportunitySchema.md)
 - [OpportunityOpportunity](docs/Model/OpportunityOpportunity.md)
 - [ParametersCompanyResponse](docs/Model/ParametersCompanyResponse.md)
@@ -574,6 +576,7 @@ Class | Method | HTTP request | Description
     - **crm:insurance:read**: Read access on insurance
     - **crm:investment:read**: Read access on investment
     - **crm:movement**: Read/Write access on movement
+    - **crm:opportunity**: Read/Write access on opportunities
     - **crm:remoteAccount**: Read/Write access on mail accounts
     - **crm:task**: Read/Write access on tasks
     - **crm:user**: Read/Write access on users

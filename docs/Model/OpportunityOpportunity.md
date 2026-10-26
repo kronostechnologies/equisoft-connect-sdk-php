@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **string** | Unique numerical identifier. |
+**id** | **int** | Unique numerical identifier. |
 **name** | **string** | Name. |
 **referenceNumber** | **string** | Reference number. |
 **approachDate** | **\DateTime** | Approach Date. | [optional]
