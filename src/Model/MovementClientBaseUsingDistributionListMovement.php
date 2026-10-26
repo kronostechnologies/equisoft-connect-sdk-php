@@ -66,7 +66,7 @@ class MovementClientBaseUsingDistributionListMovement extends MovementMovement
         'sourceDistributionList' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDistributionList',
         'destinationDatabase' => '\Equisoft\SDK\EquisoftConnect\Model\MovementDatabase',
         'destinationUser' => '\Equisoft\SDK\EquisoftConnect\Model\MovementUser',
-        'transferOption' => '\Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption'
+        'transferOption' => 'string'
     ];
 
     /**
@@ -305,6 +305,23 @@ class MovementClientBaseUsingDistributionListMovement extends MovementMovement
         return self::$openAPIModelName;
     }
 
+    public const TRANSFER_OPTION_COPY = 'COPY';
+    public const TRANSFER_OPTION_TRANSFER = 'TRANSFER';
+    public const TRANSFER_OPTION_UNKNOWN_DEFAULT_OPEN_API = 'unknown_default_open_api';
+
+    /**
+     * Gets allowable values of the enum
+     *
+     * @return string[]
+     */
+    public static function getTransferOptionAllowableValues()
+    {
+        return [
+            self::TRANSFER_OPTION_COPY,
+            self::TRANSFER_OPTION_TRANSFER,
+            self::TRANSFER_OPTION_UNKNOWN_DEFAULT_OPEN_API,
+        ];
+    }
 
 
     /**
@@ -375,6 +392,15 @@ class MovementClientBaseUsingDistributionListMovement extends MovementMovement
         if ($this->container['transferOption'] === null) {
             $invalidProperties[] = "'transferOption' can't be null";
         }
+        $allowedValues = self::getTransferOptionAllowableValues();
+        if (!is_null($this->container['transferOption']) && !in_array($this->container['transferOption'], $allowedValues, true)) {
+            $invalidProperties[] = sprintf(
+                "invalid value '%s' for 'transferOption', must be one of '%s'",
+                $this->container['transferOption'],
+                implode("', '", $allowedValues)
+            );
+        }
+
         return $invalidProperties;
     }
 
@@ -813,9 +839,9 @@ class MovementClientBaseUsingDistributionListMovement extends MovementMovement
     /**
      * Gets transferOption
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption
+     * @return string
      */
-    public function getTransferOption(): \Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption
+    public function getTransferOption(): string
     {
         return $this->container['transferOption'];
     }
@@ -823,14 +849,18 @@ class MovementClientBaseUsingDistributionListMovement extends MovementMovement
     /**
      * Sets transferOption
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption $transferOption transferOption
+     * @param string $transferOption Transfer option.
      *
      * @return $this
      */
-    public function setTransferOption(\Equisoft\SDK\EquisoftConnect\Model\MovementTransferOption $transferOption): static
+    public function setTransferOption(string $transferOption): static
     {
         if (is_null($transferOption)) {
             throw new InvalidArgumentException('non-nullable transferOption cannot be null');
+        }
+        $allowedValues = self::getTransferOptionAllowableValues();
+        if (!in_array($transferOption, $allowedValues, true)) {
+            $transferOption = self::TRANSFER_OPTION_UNKNOWN_DEFAULT_OPEN_API;
         }
         $this->container['transferOption'] = $transferOption;
 
