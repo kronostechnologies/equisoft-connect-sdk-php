@@ -228,10 +228,10 @@ Class | Method | HTTP request | Description
 ## Models
 
 - [AccessRights](docs/Model/AccessRights.md)
+- [ActorIdentity](docs/Model/ActorIdentity.md)
 - [AdminCredentialPayload](docs/Model/AdminCredentialPayload.md)
 - [CalendarsCalendar](docs/Model/CalendarsCalendar.md)
 - [CalendarsListCalendarResponse](docs/Model/CalendarsListCalendarResponse.md)
-- [ChangeMetadata](docs/Model/ChangeMetadata.md)
 - [ContactContactAddress](docs/Model/ContactContactAddress.md)
 - [ContactContactEmail](docs/Model/ContactContactEmail.md)
 - [ContactContactMaritalStatus](docs/Model/ContactContactMaritalStatus.md)

@@ -60,7 +60,7 @@ class ExtractionsDetails implements ModelInterface, ArrayAccess, JsonSerializabl
     protected static array $openAPITypes = [
         'database' => 'string',
         'recipient' => 'string',
-        'users' => '\Equisoft\SDK\EquisoftConnect\Model\UsersUserIdentity[]',
+        'users' => '\Equisoft\SDK\EquisoftConnect\Model\ActorIdentity[]',
         'includeDocuments' => 'bool',
         'includeGroups' => 'bool',
         'resume' => 'bool'
@@ -379,7 +379,7 @@ class ExtractionsDetails implements ModelInterface, ArrayAccess, JsonSerializabl
     /**
      * Gets users
      *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\UsersUserIdentity[]|null
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ActorIdentity[]|null
      */
     public function getUsers(): ?array
     {
@@ -389,7 +389,7 @@ class ExtractionsDetails implements ModelInterface, ArrayAccess, JsonSerializabl
     /**
      * Sets users
      *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\UsersUserIdentity[]|null $users List of users associated with the extraction. Empty list means all users.
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ActorIdentity[]|null $users List of users associated with the extraction. Empty list means all users.
      *
      * @return $this
      */

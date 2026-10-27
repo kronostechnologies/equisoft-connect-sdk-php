@@ -58,7 +58,7 @@ class ExtractionsResumeExtractionPayload implements ModelInterface, ArrayAccess,
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'resumeDate' => 'string'
+        'resumeDate' => '\DateTime'
     ];
 
     /**
@@ -67,7 +67,7 @@ class ExtractionsResumeExtractionPayload implements ModelInterface, ArrayAccess,
       * @var array<string, string|null>
       */
     protected static array $openAPIFormats = [
-        'resumeDate' => null
+        'resumeDate' => 'date'
     ];
 
     /**
@@ -293,9 +293,9 @@ class ExtractionsResumeExtractionPayload implements ModelInterface, ArrayAccess,
     /**
      * Gets resumeDate
      *
-     * @return string
+     * @return \DateTime
      */
-    public function getResumeDate(): string
+    public function getResumeDate(): \DateTime
     {
         return $this->container['resumeDate'];
     }
@@ -303,11 +303,11 @@ class ExtractionsResumeExtractionPayload implements ModelInterface, ArrayAccess,
     /**
      * Sets resumeDate
      *
-     * @param string $resumeDate resumeDate
+     * @param \DateTime $resumeDate resumeDate
      *
      * @return $this
      */
-    public function setResumeDate(string $resumeDate): static
+    public function setResumeDate(\DateTime $resumeDate): static
     {
         if (is_null($resumeDate)) {
             throw new InvalidArgumentException('non-nullable resumeDate cannot be null');

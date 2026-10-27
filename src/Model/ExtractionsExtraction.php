@@ -58,11 +58,16 @@ class ExtractionsExtraction implements ModelInterface, ArrayAccess, JsonSerializ
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
+        'createdAt' => '\DateTime',
+        'createdBy' => '\Equisoft\SDK\EquisoftConnect\Model\ActorIdentity',
+        'updatedAt' => '\DateTime',
+        'updatedBy' => '\Equisoft\SDK\EquisoftConnect\Model\ActorIdentity',
+        'deletedAt' => '\DateTime',
+        'deletedBy' => '\Equisoft\SDK\EquisoftConnect\Model\ActorIdentity',
         'uuid' => 'string',
         'status' => 'string',
         'scheduledAt' => '\DateTime',
         'details' => '\Equisoft\SDK\EquisoftConnect\Model\ExtractionsDetails',
-        'changeMetadata' => '\Equisoft\SDK\EquisoftConnect\Model\ChangeMetadata',
         'processedAt' => '\DateTime'
     ];
 
@@ -72,11 +77,16 @@ class ExtractionsExtraction implements ModelInterface, ArrayAccess, JsonSerializ
       * @var array<string, string|null>
       */
     protected static array $openAPIFormats = [
+        'createdAt' => 'date-time',
+        'createdBy' => null,
+        'updatedAt' => 'date-time',
+        'updatedBy' => null,
+        'deletedAt' => 'date-time',
+        'deletedBy' => null,
         'uuid' => null,
         'status' => null,
         'scheduledAt' => 'date-time',
         'details' => null,
-        'changeMetadata' => null,
         'processedAt' => 'date-time'
     ];
 
@@ -86,11 +96,16 @@ class ExtractionsExtraction implements ModelInterface, ArrayAccess, JsonSerializ
       * @var array<string, bool>
       */
     protected static array $openAPINullables = [
+        'createdAt' => true,
+        'createdBy' => true,
+        'updatedAt' => true,
+        'updatedBy' => true,
+        'deletedAt' => true,
+        'deletedBy' => true,
         'uuid' => false,
         'status' => false,
         'scheduledAt' => false,
         'details' => false,
-        'changeMetadata' => false,
         'processedAt' => true
     ];
 
@@ -180,11 +195,16 @@ class ExtractionsExtraction implements ModelInterface, ArrayAccess, JsonSerializ
      * @var array<string, string>
      */
     protected static array $attributeMap = [
+        'createdAt' => 'createdAt',
+        'createdBy' => 'createdBy',
+        'updatedAt' => 'updatedAt',
+        'updatedBy' => 'updatedBy',
+        'deletedAt' => 'deletedAt',
+        'deletedBy' => 'deletedBy',
         'uuid' => 'uuid',
         'status' => 'status',
         'scheduledAt' => 'scheduledAt',
         'details' => 'details',
-        'changeMetadata' => 'changeMetadata',
         'processedAt' => 'processedAt'
     ];
 
@@ -194,11 +214,16 @@ class ExtractionsExtraction implements ModelInterface, ArrayAccess, JsonSerializ
      * @var array<string, string>
      */
     protected static array $setters = [
+        'createdAt' => 'setCreatedAt',
+        'createdBy' => 'setCreatedBy',
+        'updatedAt' => 'setUpdatedAt',
+        'updatedBy' => 'setUpdatedBy',
+        'deletedAt' => 'setDeletedAt',
+        'deletedBy' => 'setDeletedBy',
         'uuid' => 'setUuid',
         'status' => 'setStatus',
         'scheduledAt' => 'setScheduledAt',
         'details' => 'setDetails',
-        'changeMetadata' => 'setChangeMetadata',
         'processedAt' => 'setProcessedAt'
     ];
 
@@ -208,11 +233,16 @@ class ExtractionsExtraction implements ModelInterface, ArrayAccess, JsonSerializ
      * @var array<string, string>
      */
     protected static array $getters = [
+        'createdAt' => 'getCreatedAt',
+        'createdBy' => 'getCreatedBy',
+        'updatedAt' => 'getUpdatedAt',
+        'updatedBy' => 'getUpdatedBy',
+        'deletedAt' => 'getDeletedAt',
+        'deletedBy' => 'getDeletedBy',
         'uuid' => 'getUuid',
         'status' => 'getStatus',
         'scheduledAt' => 'getScheduledAt',
         'details' => 'getDetails',
-        'changeMetadata' => 'getChangeMetadata',
         'processedAt' => 'getProcessedAt'
     ];
 
@@ -272,11 +302,16 @@ class ExtractionsExtraction implements ModelInterface, ArrayAccess, JsonSerializ
      */
     public function __construct(?array $data = null)
     {
+        $this->setIfExists('createdAt', $data ?? [], null);
+        $this->setIfExists('createdBy', $data ?? [], null);
+        $this->setIfExists('updatedAt', $data ?? [], null);
+        $this->setIfExists('updatedBy', $data ?? [], null);
+        $this->setIfExists('deletedAt', $data ?? [], null);
+        $this->setIfExists('deletedBy', $data ?? [], null);
         $this->setIfExists('uuid', $data ?? [], null);
         $this->setIfExists('status', $data ?? [], null);
         $this->setIfExists('scheduledAt', $data ?? [], null);
         $this->setIfExists('details', $data ?? [], null);
-        $this->setIfExists('changeMetadata', $data ?? [], null);
         $this->setIfExists('processedAt', $data ?? [], null);
     }
 
@@ -321,6 +356,210 @@ class ExtractionsExtraction implements ModelInterface, ArrayAccess, JsonSerializ
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets createdAt
+     *
+     * @return \DateTime|null
+     */
+    public function getCreatedAt(): ?\DateTime
+    {
+        return $this->container['createdAt'];
+    }
+
+    /**
+     * Sets createdAt
+     *
+     * @param \DateTime|null $createdAt createdAt
+     *
+     * @return $this
+     */
+    public function setCreatedAt(?\DateTime $createdAt): static
+    {
+        if (is_null($createdAt)) {
+            array_push($this->openAPINullablesSetToNull, 'createdAt');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('createdAt', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['createdAt'] = $createdAt;
+
+        return $this;
+    }
+
+    /**
+     * Gets createdBy
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ActorIdentity|null
+     */
+    public function getCreatedBy(): ?\Equisoft\SDK\EquisoftConnect\Model\ActorIdentity
+    {
+        return $this->container['createdBy'];
+    }
+
+    /**
+     * Sets createdBy
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ActorIdentity|null $createdBy createdBy
+     *
+     * @return $this
+     */
+    public function setCreatedBy(?\Equisoft\SDK\EquisoftConnect\Model\ActorIdentity $createdBy): static
+    {
+        if (is_null($createdBy)) {
+            array_push($this->openAPINullablesSetToNull, 'createdBy');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('createdBy', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['createdBy'] = $createdBy;
+
+        return $this;
+    }
+
+    /**
+     * Gets updatedAt
+     *
+     * @return \DateTime|null
+     */
+    public function getUpdatedAt(): ?\DateTime
+    {
+        return $this->container['updatedAt'];
+    }
+
+    /**
+     * Sets updatedAt
+     *
+     * @param \DateTime|null $updatedAt updatedAt
+     *
+     * @return $this
+     */
+    public function setUpdatedAt(?\DateTime $updatedAt): static
+    {
+        if (is_null($updatedAt)) {
+            array_push($this->openAPINullablesSetToNull, 'updatedAt');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('updatedAt', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['updatedAt'] = $updatedAt;
+
+        return $this;
+    }
+
+    /**
+     * Gets updatedBy
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ActorIdentity|null
+     */
+    public function getUpdatedBy(): ?\Equisoft\SDK\EquisoftConnect\Model\ActorIdentity
+    {
+        return $this->container['updatedBy'];
+    }
+
+    /**
+     * Sets updatedBy
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ActorIdentity|null $updatedBy updatedBy
+     *
+     * @return $this
+     */
+    public function setUpdatedBy(?\Equisoft\SDK\EquisoftConnect\Model\ActorIdentity $updatedBy): static
+    {
+        if (is_null($updatedBy)) {
+            array_push($this->openAPINullablesSetToNull, 'updatedBy');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('updatedBy', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['updatedBy'] = $updatedBy;
+
+        return $this;
+    }
+
+    /**
+     * Gets deletedAt
+     *
+     * @return \DateTime|null
+     */
+    public function getDeletedAt(): ?\DateTime
+    {
+        return $this->container['deletedAt'];
+    }
+
+    /**
+     * Sets deletedAt
+     *
+     * @param \DateTime|null $deletedAt deletedAt
+     *
+     * @return $this
+     */
+    public function setDeletedAt(?\DateTime $deletedAt): static
+    {
+        if (is_null($deletedAt)) {
+            array_push($this->openAPINullablesSetToNull, 'deletedAt');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('deletedAt', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['deletedAt'] = $deletedAt;
+
+        return $this;
+    }
+
+    /**
+     * Gets deletedBy
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ActorIdentity|null
+     */
+    public function getDeletedBy(): ?\Equisoft\SDK\EquisoftConnect\Model\ActorIdentity
+    {
+        return $this->container['deletedBy'];
+    }
+
+    /**
+     * Sets deletedBy
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ActorIdentity|null $deletedBy deletedBy
+     *
+     * @return $this
+     */
+    public function setDeletedBy(?\Equisoft\SDK\EquisoftConnect\Model\ActorIdentity $deletedBy): static
+    {
+        if (is_null($deletedBy)) {
+            array_push($this->openAPINullablesSetToNull, 'deletedBy');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('deletedBy', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['deletedBy'] = $deletedBy;
+
+        return $this;
+    }
 
     /**
      * Gets uuid
@@ -426,33 +665,6 @@ class ExtractionsExtraction implements ModelInterface, ArrayAccess, JsonSerializ
             throw new InvalidArgumentException('non-nullable details cannot be null');
         }
         $this->container['details'] = $details;
-
-        return $this;
-    }
-
-    /**
-     * Gets changeMetadata
-     *
-     * @return \Equisoft\SDK\EquisoftConnect\Model\ChangeMetadata|null
-     */
-    public function getChangeMetadata(): ?\Equisoft\SDK\EquisoftConnect\Model\ChangeMetadata
-    {
-        return $this->container['changeMetadata'];
-    }
-
-    /**
-     * Sets changeMetadata
-     *
-     * @param \Equisoft\SDK\EquisoftConnect\Model\ChangeMetadata|null $changeMetadata changeMetadata
-     *
-     * @return $this
-     */
-    public function setChangeMetadata(?\Equisoft\SDK\EquisoftConnect\Model\ChangeMetadata $changeMetadata): static
-    {
-        if (is_null($changeMetadata)) {
-            throw new InvalidArgumentException('non-nullable changeMetadata cannot be null');
-        }
-        $this->container['changeMetadata'] = $changeMetadata;
 
         return $this;
     }

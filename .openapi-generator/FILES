@@ -24,10 +24,10 @@ docs/Api/SystemParametersApi.md
 docs/Api/TasksApi.md
 docs/Api/UsersApi.md
 docs/Model/AccessRights.md
+docs/Model/ActorIdentity.md
 docs/Model/AdminCredentialPayload.md
 docs/Model/CalendarsCalendar.md
 docs/Model/CalendarsListCalendarResponse.md
-docs/Model/ChangeMetadata.md
 docs/Model/ContactContactAddress.md
 docs/Model/ContactContactEmail.md
 docs/Model/ContactContactMaritalStatus.md
@@ -379,10 +379,10 @@ src/ApiException.php
 src/Configuration.php
 src/HeaderSelector.php
 src/Model/AccessRights.php
+src/Model/ActorIdentity.php
 src/Model/AdminCredentialPayload.php
 src/Model/CalendarsCalendar.php
 src/Model/CalendarsListCalendarResponse.php
-src/Model/ChangeMetadata.php
 src/Model/ContactContactAddress.php
 src/Model/ContactContactEmail.php
 src/Model/ContactContactMaritalStatus.php
@@ -710,3 +710,4 @@ src/Model/UsersUser.php
 src/Model/UsersUserGroup.php
 src/Model/UsersUserIdentity.php
 src/ObjectSerializer.php
+tests/Model/ActorIdentityTest.php

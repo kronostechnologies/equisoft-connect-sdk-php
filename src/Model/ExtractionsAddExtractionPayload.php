@@ -60,7 +60,7 @@ class ExtractionsAddExtractionPayload implements ModelInterface, ArrayAccess, Js
     protected static array $openAPITypes = [
         'database' => 'string',
         'recipient' => 'string',
-        'date' => 'string',
+        'date' => '\DateTime',
         'users' => 'string[]',
         'includeDocument' => 'bool',
         'includeGroup' => 'bool'
@@ -74,7 +74,7 @@ class ExtractionsAddExtractionPayload implements ModelInterface, ArrayAccess, Js
     protected static array $openAPIFormats = [
         'database' => null,
         'recipient' => null,
-        'date' => null,
+        'date' => 'date',
         'users' => null,
         'includeDocument' => null,
         'includeGroup' => null
@@ -385,9 +385,9 @@ class ExtractionsAddExtractionPayload implements ModelInterface, ArrayAccess, Js
     /**
      * Gets date
      *
-     * @return string|null
+     * @return \DateTime|null
      */
-    public function getDate(): ?string
+    public function getDate(): ?\DateTime
     {
         return $this->container['date'];
     }
@@ -395,11 +395,11 @@ class ExtractionsAddExtractionPayload implements ModelInterface, ArrayAccess, Js
     /**
      * Sets date
      *
-     * @param string|null $date date
+     * @param \DateTime|null $date date
      *
      * @return $this
      */
-    public function setDate(?string $date): static
+    public function setDate(?\DateTime $date): static
     {
         if (is_null($date)) {
             throw new InvalidArgumentException('non-nullable date cannot be null');

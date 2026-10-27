@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **database** | **string** |  |
 **recipient** | **string** |  |
-**date** | **string** |  | [optional]
+**date** | **\DateTime** |  | [optional]
 **users** | **string[]** | List of users uuids. | [optional]
 **includeDocument** | **bool** |  | [optional]
 **includeGroup** | **bool** |  | [optional]
