@@ -205,6 +205,7 @@ Class | Method | HTTP request | Description
 *MovementApi* | [**getExecutedMovementInfo**](docs/Api/MovementApi.md#getexecutedmovementinfo) | **GET** /crm/api/v1/movements/executed/{executedMovementId}/info | Get basic information about an executed movement
 *MovementApi* | [**getMovementStatistic**](docs/Api/MovementApi.md#getmovementstatistic) | **GET** /crm/api/v1/movements/statistic | Get movement statistic
 *MovementApi* | [**listMovements**](docs/Api/MovementApi.md#listmovements) | **GET** /crm/api/v1/movements | List all movements
+*OpportunitiesApi* | [**getOpportunity**](docs/Api/OpportunitiesApi.md#getopportunity) | **GET** /crm/api/v1/opportunities/{id} | Get opportunity
 *OpportunitiesApi* | [**listOpportunities**](docs/Api/OpportunitiesApi.md#listopportunities) | **GET** /crm/api/v1/opportunities | List user opportunities
 *RemoteAccountApi* | [**getMailAccountAccessRights**](docs/Api/RemoteAccountApi.md#getmailaccountaccessrights) | **GET** /crm/api/v1/mailAccounts/{remoteAccountId}/accessRights | Return the mail account access rights granted to the currently connected user account.
 *SystemParametersApi* | [**getCompanyDetails**](docs/Api/SystemParametersApi.md#getcompanydetails) | **GET** /crm/api/v1/databases/{databaseUuid}/parameters/account/company | Get company information about the enterprise or an alternate company
