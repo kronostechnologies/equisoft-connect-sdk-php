@@ -66,7 +66,8 @@ class ContactsCreateCustomFieldPayload implements ModelInterface, ArrayAccess, J
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
-        'type' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsCustomFieldTypeSchema'
+        'type' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsCustomFieldTypeSchema',
+        'systemName' => 'string'
     ];
 
     /**
@@ -75,7 +76,8 @@ class ContactsCreateCustomFieldPayload implements ModelInterface, ArrayAccess, J
       * @var array<string, string|null>
       */
     protected static array $openAPIFormats = [
-        'type' => null
+        'type' => null,
+        'systemName' => null
     ];
 
     /**
@@ -84,7 +86,8 @@ class ContactsCreateCustomFieldPayload implements ModelInterface, ArrayAccess, J
       * @var array<string, bool>
       */
     protected static array $openAPINullables = [
-        'type' => false
+        'type' => false,
+        'systemName' => false
     ];
 
     /**
@@ -173,7 +176,8 @@ class ContactsCreateCustomFieldPayload implements ModelInterface, ArrayAccess, J
      * @var array<string, string>
      */
     protected static array $attributeMap = [
-        'type' => 'type'
+        'type' => 'type',
+        'systemName' => 'systemName'
     ];
 
     /**
@@ -182,7 +186,8 @@ class ContactsCreateCustomFieldPayload implements ModelInterface, ArrayAccess, J
      * @var array<string, string>
      */
     protected static array $setters = [
-        'type' => 'setType'
+        'type' => 'setType',
+        'systemName' => 'setSystemName'
     ];
 
     /**
@@ -191,7 +196,8 @@ class ContactsCreateCustomFieldPayload implements ModelInterface, ArrayAccess, J
      * @var array<string, string>
      */
     protected static array $getters = [
-        'type' => 'getType'
+        'type' => 'getType',
+        'systemName' => 'getSystemName'
     ];
 
     /**
@@ -260,6 +266,7 @@ class ContactsCreateCustomFieldPayload implements ModelInterface, ArrayAccess, J
         $this->container['type'] = static::$openAPIModelName;
 
         $this->setIfExists('type', $data ?? [], null);
+        $this->setIfExists('systemName', $data ?? [], null);
     }
 
     /**
@@ -291,6 +298,9 @@ class ContactsCreateCustomFieldPayload implements ModelInterface, ArrayAccess, J
 
         if ($this->container['type'] === null) {
             $invalidProperties[] = "'type' can't be null";
+        }
+        if ($this->container['systemName'] === null) {
+            $invalidProperties[] = "'systemName' can't be null";
         }
         return $invalidProperties;
     }
@@ -330,6 +340,33 @@ class ContactsCreateCustomFieldPayload implements ModelInterface, ArrayAccess, J
             throw new InvalidArgumentException('non-nullable type cannot be null');
         }
         $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets systemName
+     *
+     * @return string
+     */
+    public function getSystemName(): string
+    {
+        return $this->container['systemName'];
+    }
+
+    /**
+     * Sets systemName
+     *
+     * @param string $systemName The field system name
+     *
+     * @return $this
+     */
+    public function setSystemName(string $systemName): static
+    {
+        if (is_null($systemName)) {
+            throw new InvalidArgumentException('non-nullable systemName cannot be null');
+        }
+        $this->container['systemName'] = $systemName;
 
         return $this;
     }
