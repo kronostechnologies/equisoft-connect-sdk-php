@@ -456,9 +456,6 @@ class OpportunityOpportunity implements ModelInterface, ArrayAccess, JsonSeriali
         if ($this->container['referenceNumber'] === null) {
             $invalidProperties[] = "'referenceNumber' can't be null";
         }
-        if ($this->container['probability'] === null) {
-            $invalidProperties[] = "'probability' can't be null";
-        }
         if ($this->container['notes'] === null) {
             $invalidProperties[] = "'notes' can't be null";
         }
@@ -805,9 +802,9 @@ class OpportunityOpportunity implements ModelInterface, ArrayAccess, JsonSeriali
     /**
      * Gets probability
      *
-     * @return float
+     * @return float|null
      */
-    public function getProbability(): float
+    public function getProbability(): ?float
     {
         return $this->container['probability'];
     }
@@ -815,11 +812,11 @@ class OpportunityOpportunity implements ModelInterface, ArrayAccess, JsonSeriali
     /**
      * Sets probability
      *
-     * @param float $probability Probability, in increments of 10.
+     * @param float|null $probability Probability, in increments of 10.
      *
      * @return $this
      */
-    public function setProbability(float $probability): static
+    public function setProbability(?float $probability): static
     {
         if (is_null($probability)) {
             throw new InvalidArgumentException('non-nullable probability cannot be null');

@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **realIncome** | **float** | Real Income. | [optional]
 **expectedClosingDate** | **\DateTime** | Expected closing date | [optional]
 **realClosingDate** | **\DateTime** | Real closing date | [optional]
-**probability** | **float** | Probability, in increments of 10. |
+**probability** | **float** | Probability, in increments of 10. | [optional]
 **source** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValueValueSummary**](FieldValueValueSummary.md) |  | [optional]
 **status** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValueValueSummary**](FieldValueValueSummary.md) |  | [optional]
 **step** | [**\Equisoft\SDK\EquisoftConnect\Model\FieldValueValueSummary**](FieldValueValueSummary.md) |  | [optional]
