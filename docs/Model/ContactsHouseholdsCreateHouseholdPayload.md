@@ -7,5 +7,6 @@ Name | Type | Description | Notes
 **name** | **string** |  |
 **ownerUuids** | **string[]** |  | [optional]
 **private** | **bool** |  | [optional]
+**relatedContacts** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdsRelatedContactPayload[]**](ContactsHouseholdsRelatedContactPayload.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

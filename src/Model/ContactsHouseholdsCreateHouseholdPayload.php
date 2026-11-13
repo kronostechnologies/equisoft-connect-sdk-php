@@ -60,7 +60,8 @@ class ContactsHouseholdsCreateHouseholdPayload implements ModelInterface, ArrayA
     protected static array $openAPITypes = [
         'name' => 'string',
         'ownerUuids' => 'string[]',
-        'private' => 'bool'
+        'private' => 'bool',
+        'relatedContacts' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdsRelatedContactPayload[]'
     ];
 
     /**
@@ -71,7 +72,8 @@ class ContactsHouseholdsCreateHouseholdPayload implements ModelInterface, ArrayA
     protected static array $openAPIFormats = [
         'name' => null,
         'ownerUuids' => null,
-        'private' => null
+        'private' => null,
+        'relatedContacts' => null
     ];
 
     /**
@@ -82,7 +84,8 @@ class ContactsHouseholdsCreateHouseholdPayload implements ModelInterface, ArrayA
     protected static array $openAPINullables = [
         'name' => false,
         'ownerUuids' => false,
-        'private' => false
+        'private' => false,
+        'relatedContacts' => true
     ];
 
     /**
@@ -173,7 +176,8 @@ class ContactsHouseholdsCreateHouseholdPayload implements ModelInterface, ArrayA
     protected static array $attributeMap = [
         'name' => 'name',
         'ownerUuids' => 'ownerUuids',
-        'private' => 'private'
+        'private' => 'private',
+        'relatedContacts' => 'relatedContacts'
     ];
 
     /**
@@ -184,7 +188,8 @@ class ContactsHouseholdsCreateHouseholdPayload implements ModelInterface, ArrayA
     protected static array $setters = [
         'name' => 'setName',
         'ownerUuids' => 'setOwnerUuids',
-        'private' => 'setPrivate'
+        'private' => 'setPrivate',
+        'relatedContacts' => 'setRelatedContacts'
     ];
 
     /**
@@ -195,7 +200,8 @@ class ContactsHouseholdsCreateHouseholdPayload implements ModelInterface, ArrayA
     protected static array $getters = [
         'name' => 'getName',
         'ownerUuids' => 'getOwnerUuids',
-        'private' => 'getPrivate'
+        'private' => 'getPrivate',
+        'relatedContacts' => 'getRelatedContacts'
     ];
 
     /**
@@ -257,6 +263,7 @@ class ContactsHouseholdsCreateHouseholdPayload implements ModelInterface, ArrayA
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('ownerUuids', $data ?? [], null);
         $this->setIfExists('private', $data ?? [], null);
+        $this->setIfExists('relatedContacts', $data ?? [], null);
     }
 
     /**
@@ -381,6 +388,40 @@ class ContactsHouseholdsCreateHouseholdPayload implements ModelInterface, ArrayA
             throw new InvalidArgumentException('non-nullable private cannot be null');
         }
         $this->container['private'] = $private;
+
+        return $this;
+    }
+
+    /**
+     * Gets relatedContacts
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdsRelatedContactPayload[]|null
+     */
+    public function getRelatedContacts(): ?array
+    {
+        return $this->container['relatedContacts'];
+    }
+
+    /**
+     * Sets relatedContacts
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdsRelatedContactPayload[]|null $relatedContacts relatedContacts
+     *
+     * @return $this
+     */
+    public function setRelatedContacts(?array $relatedContacts): static
+    {
+        if (is_null($relatedContacts)) {
+            array_push($this->openAPINullablesSetToNull, 'relatedContacts');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('relatedContacts', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['relatedContacts'] = $relatedContacts;
 
         return $this;
     }
