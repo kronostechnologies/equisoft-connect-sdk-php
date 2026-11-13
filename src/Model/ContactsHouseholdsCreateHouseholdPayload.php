@@ -61,7 +61,8 @@ class ContactsHouseholdsCreateHouseholdPayload implements ModelInterface, ArrayA
         'name' => 'string',
         'ownerUuids' => 'string[]',
         'private' => 'bool',
-        'relatedContacts' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdsRelatedContactPayload[]'
+        'relatedContacts' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdsRelatedContactPayload[]',
+        'members' => '\Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdsHouseholdMemberPayload[]'
     ];
 
     /**
@@ -73,7 +74,8 @@ class ContactsHouseholdsCreateHouseholdPayload implements ModelInterface, ArrayA
         'name' => null,
         'ownerUuids' => null,
         'private' => null,
-        'relatedContacts' => null
+        'relatedContacts' => null,
+        'members' => null
     ];
 
     /**
@@ -85,7 +87,8 @@ class ContactsHouseholdsCreateHouseholdPayload implements ModelInterface, ArrayA
         'name' => false,
         'ownerUuids' => false,
         'private' => false,
-        'relatedContacts' => true
+        'relatedContacts' => true,
+        'members' => true
     ];
 
     /**
@@ -177,7 +180,8 @@ class ContactsHouseholdsCreateHouseholdPayload implements ModelInterface, ArrayA
         'name' => 'name',
         'ownerUuids' => 'ownerUuids',
         'private' => 'private',
-        'relatedContacts' => 'relatedContacts'
+        'relatedContacts' => 'relatedContacts',
+        'members' => 'members'
     ];
 
     /**
@@ -189,7 +193,8 @@ class ContactsHouseholdsCreateHouseholdPayload implements ModelInterface, ArrayA
         'name' => 'setName',
         'ownerUuids' => 'setOwnerUuids',
         'private' => 'setPrivate',
-        'relatedContacts' => 'setRelatedContacts'
+        'relatedContacts' => 'setRelatedContacts',
+        'members' => 'setMembers'
     ];
 
     /**
@@ -201,7 +206,8 @@ class ContactsHouseholdsCreateHouseholdPayload implements ModelInterface, ArrayA
         'name' => 'getName',
         'ownerUuids' => 'getOwnerUuids',
         'private' => 'getPrivate',
-        'relatedContacts' => 'getRelatedContacts'
+        'relatedContacts' => 'getRelatedContacts',
+        'members' => 'getMembers'
     ];
 
     /**
@@ -264,6 +270,7 @@ class ContactsHouseholdsCreateHouseholdPayload implements ModelInterface, ArrayA
         $this->setIfExists('ownerUuids', $data ?? [], null);
         $this->setIfExists('private', $data ?? [], null);
         $this->setIfExists('relatedContacts', $data ?? [], null);
+        $this->setIfExists('members', $data ?? [], null);
     }
 
     /**
@@ -422,6 +429,40 @@ class ContactsHouseholdsCreateHouseholdPayload implements ModelInterface, ArrayA
             }
         }
         $this->container['relatedContacts'] = $relatedContacts;
+
+        return $this;
+    }
+
+    /**
+     * Gets members
+     *
+     * @return \Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdsHouseholdMemberPayload[]|null
+     */
+    public function getMembers(): ?array
+    {
+        return $this->container['members'];
+    }
+
+    /**
+     * Sets members
+     *
+     * @param \Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdsHouseholdMemberPayload[]|null $members members
+     *
+     * @return $this
+     */
+    public function setMembers(?array $members): static
+    {
+        if (is_null($members)) {
+            array_push($this->openAPINullablesSetToNull, 'members');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('members', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['members'] = $members;
 
         return $this;
     }

@@ -71,6 +71,7 @@ docs/Model/ContactsHouseholdAddress.md
 docs/Model/ContactsHouseholdsCreateHouseholdPayload.md
 docs/Model/ContactsHouseholdsGetHouseholdResponse.md
 docs/Model/ContactsHouseholdsHousehold.md
+docs/Model/ContactsHouseholdsHouseholdMemberPayload.md
 docs/Model/ContactsHouseholdsListHouseholdResponse.md
 docs/Model/ContactsHouseholdsRelatedContactPayload.md
 docs/Model/ContactsIdentification.md
@@ -427,6 +428,7 @@ src/Model/ContactsHouseholdAddress.php
 src/Model/ContactsHouseholdsCreateHouseholdPayload.php
 src/Model/ContactsHouseholdsGetHouseholdResponse.php
 src/Model/ContactsHouseholdsHousehold.php
+src/Model/ContactsHouseholdsHouseholdMemberPayload.php
 src/Model/ContactsHouseholdsListHouseholdResponse.php
 src/Model/ContactsHouseholdsRelatedContactPayload.php
 src/Model/ContactsIdentification.php
@@ -712,4 +714,4 @@ src/Model/UsersUser.php
 src/Model/UsersUserGroup.php
 src/Model/UsersUserIdentity.php
 src/ObjectSerializer.php
-tests/Model/ContactsHouseholdsRelatedContactPayloadTest.php
+tests/Model/ContactsHouseholdsHouseholdMemberPayloadTest.php

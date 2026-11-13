@@ -276,6 +276,7 @@ Class | Method | HTTP request | Description
 - [ContactsHouseholdsCreateHouseholdPayload](docs/Model/ContactsHouseholdsCreateHouseholdPayload.md)
 - [ContactsHouseholdsGetHouseholdResponse](docs/Model/ContactsHouseholdsGetHouseholdResponse.md)
 - [ContactsHouseholdsHousehold](docs/Model/ContactsHouseholdsHousehold.md)
+- [ContactsHouseholdsHouseholdMemberPayload](docs/Model/ContactsHouseholdsHouseholdMemberPayload.md)
 - [ContactsHouseholdsListHouseholdResponse](docs/Model/ContactsHouseholdsListHouseholdResponse.md)
 - [ContactsHouseholdsRelatedContactPayload](docs/Model/ContactsHouseholdsRelatedContactPayload.md)
 - [ContactsIdentification](docs/Model/ContactsIdentification.md)
