@@ -76,13 +76,10 @@ All URIs are relative to *http://localhost*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *ContactsApi* | [**createContact**](docs/Api/ContactsApi.md#createcontact) | **POST** /crm/api/v1/contacts | Create a contact
-*ContactsApi* | [**createHousehold**](docs/Api/ContactsApi.md#createhousehold) | **POST** /crm/api/v1/households | Create a household (EXPERIMENTAL)
 *ContactsApi* | [**getByUuid**](docs/Api/ContactsApi.md#getbyuuid) | **GET** /crm/api/v1/contacts/{contactUuid} | Get contact by Uuid
-*ContactsApi* | [**getHouseholdByUuid**](docs/Api/ContactsApi.md#gethouseholdbyuuid) | **GET** /crm/api/v1/households/{householdUuid} | Gets a household by uuid (EXPERIMENTAL)
 *ContactsApi* | [**listContact**](docs/Api/ContactsApi.md#listcontact) | **GET** /crm/api/v1/contacts | List contact
 *ContactsApi* | [**listContactDocument**](docs/Api/ContactsApi.md#listcontactdocument) | **GET** /crm/api/v1/contacts/{contactUuid}/documents | List contact documents
 *ContactsApi* | [**listContactInvestment**](docs/Api/ContactsApi.md#listcontactinvestment) | **GET** /crm/api/v1/contacts/{contactUuid}/investmentAccounts | List contact investments
-*ContactsApi* | [**listHouseholds**](docs/Api/ContactsApi.md#listhouseholds) | **GET** /crm/api/v1/households | List household entries (EXPERIMENTAL)
 *ContactsApi* | [**patchContact**](docs/Api/ContactsApi.md#patchcontact) | **PATCH** /crm/api/v1/contacts/{contactUuid} | Update a contact
 *DatabasesApi* | [**createDatabase**](docs/Api/DatabasesApi.md#createdatabase) | **POST** /crm/api/v1/databases | Create database for an organization
 *DatabasesApi* | [**createUser**](docs/Api/DatabasesApi.md#createuser) | **POST** /crm/api/v1/databases/{databaseUuid}/users | Create a user for the database
