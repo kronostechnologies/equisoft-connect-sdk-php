@@ -1,9 +1,0 @@
-# # ContactsHouseholdsGetHouseholdResponse
-
-## Properties
-
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**household** | [**\Equisoft\SDK\EquisoftConnect\Model\ContactsHouseholdsHousehold**](ContactsHouseholdsHousehold.md) |  | [optional]
-
-[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

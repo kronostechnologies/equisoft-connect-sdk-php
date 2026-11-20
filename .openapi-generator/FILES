@@ -67,13 +67,6 @@ docs/Model/ContactsDateCustomField.md
 docs/Model/ContactsEmail.md
 docs/Model/ContactsFieldValueCreateCustomFieldPayload.md
 docs/Model/ContactsFieldValueCustomField.md
-docs/Model/ContactsHouseholdAddress.md
-docs/Model/ContactsHouseholdsCreateHouseholdPayload.md
-docs/Model/ContactsHouseholdsGetHouseholdResponse.md
-docs/Model/ContactsHouseholdsHousehold.md
-docs/Model/ContactsHouseholdsHouseholdMemberPayload.md
-docs/Model/ContactsHouseholdsListHouseholdResponse.md
-docs/Model/ContactsHouseholdsRelatedContactPayload.md
 docs/Model/ContactsIdentification.md
 docs/Model/ContactsIndividualIdentification.md
 docs/Model/ContactsInvestmentObjective.md
@@ -424,13 +417,6 @@ src/Model/ContactsDateCustomField.php
 src/Model/ContactsEmail.php
 src/Model/ContactsFieldValueCreateCustomFieldPayload.php
 src/Model/ContactsFieldValueCustomField.php
-src/Model/ContactsHouseholdAddress.php
-src/Model/ContactsHouseholdsCreateHouseholdPayload.php
-src/Model/ContactsHouseholdsGetHouseholdResponse.php
-src/Model/ContactsHouseholdsHousehold.php
-src/Model/ContactsHouseholdsHouseholdMemberPayload.php
-src/Model/ContactsHouseholdsListHouseholdResponse.php
-src/Model/ContactsHouseholdsRelatedContactPayload.php
 src/Model/ContactsIdentification.php
 src/Model/ContactsIndividualIdentification.php
 src/Model/ContactsInvestmentObjective.php
