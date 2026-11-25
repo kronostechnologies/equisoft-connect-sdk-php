@@ -73,10 +73,16 @@ class OpportunitiesApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
+        'createOpportunity' => [
+            'application/json',
+        ],
         'getOpportunity' => [
             'application/json',
         ],
         'listOpportunities' => [
+            'application/json',
+        ],
+        'updateOpportunity' => [
             'application/json',
         ],
     ];
@@ -125,6 +131,343 @@ class OpportunitiesApi
     public function getConfig(): Configuration
     {
         return $this->config;
+    }
+
+    /**
+     * Operation createOpportunity
+     *
+     * Create an opportunity
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\OpportunityCreateOpportunityPayload $opportunityCreateOpportunityPayload opportunityCreateOpportunityPayload (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunity'] to see the possible values for this operation
+     *
+     * @throws ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\OpportunityOpportunity|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+     */
+    public function createOpportunity(
+        \Equisoft\SDK\EquisoftConnect\Model\OpportunityCreateOpportunityPayload $opportunityCreateOpportunityPayload,
+        string $contentType = self::contentTypes['createOpportunity'][0]
+    ): \Equisoft\SDK\EquisoftConnect\Model\OpportunityOpportunity|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+    {
+        list($response) = $this->createOpportunityWithHttpInfo($opportunityCreateOpportunityPayload, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation createOpportunityWithHttpInfo
+     *
+     * Create an opportunity
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\OpportunityCreateOpportunityPayload $opportunityCreateOpportunityPayload (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunity'] to see the possible values for this operation
+     *
+     * @throws ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\OpportunityOpportunity|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function createOpportunityWithHttpInfo(
+        \Equisoft\SDK\EquisoftConnect\Model\OpportunityCreateOpportunityPayload $opportunityCreateOpportunityPayload,
+        string $contentType = self::contentTypes['createOpportunity'][0]
+    ): array
+    {
+        $request = $this->createOpportunityRequest($opportunityCreateOpportunityPayload, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            switch($statusCode) {
+                case 201:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\OpportunityOpportunity',
+                        $request,
+                        $response,
+                    );
+                case 401:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
+                case 400:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
+                case 500:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
+            }
+            
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return $this->handleResponseWithDataType(
+                '\Equisoft\SDK\EquisoftConnect\Model\OpportunityOpportunity',
+                $request,
+                $response,
+            );
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\OpportunityOpportunity',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+            }
+        
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation createOpportunityAsync
+     *
+     * Create an opportunity
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\OpportunityCreateOpportunityPayload $opportunityCreateOpportunityPayload (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunity'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
+     */
+    public function createOpportunityAsync(
+        \Equisoft\SDK\EquisoftConnect\Model\OpportunityCreateOpportunityPayload $opportunityCreateOpportunityPayload,
+        string $contentType = self::contentTypes['createOpportunity'][0]
+    ): PromiseInterface
+    {
+        return $this->createOpportunityAsyncWithHttpInfo($opportunityCreateOpportunityPayload, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation createOpportunityAsyncWithHttpInfo
+     *
+     * Create an opportunity
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\OpportunityCreateOpportunityPayload $opportunityCreateOpportunityPayload (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunity'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
+     */
+    public function createOpportunityAsyncWithHttpInfo(
+        \Equisoft\SDK\EquisoftConnect\Model\OpportunityCreateOpportunityPayload $opportunityCreateOpportunityPayload,
+        string $contentType = self::contentTypes['createOpportunity'][0]
+    ): PromiseInterface
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\OpportunityOpportunity';
+        $request = $this->createOpportunityRequest($opportunityCreateOpportunityPayload, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if (in_array($returnType, ['\SplFileObject', '\Psr\Http\Message\StreamInterface'])) {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'createOpportunity'
+     *
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\OpportunityCreateOpportunityPayload $opportunityCreateOpportunityPayload (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOpportunity'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function createOpportunityRequest(
+        \Equisoft\SDK\EquisoftConnect\Model\OpportunityCreateOpportunityPayload $opportunityCreateOpportunityPayload,
+        string $contentType = self::contentTypes['createOpportunity'][0]
+    ): Request
+    {
+
+        // verify the required parameter 'opportunityCreateOpportunityPayload' is set
+        if ($opportunityCreateOpportunityPayload === null || (is_array($opportunityCreateOpportunityPayload) && count($opportunityCreateOpportunityPayload) === 0)) {
+            throw new InvalidArgumentException(
+                'Missing the required parameter $opportunityCreateOpportunityPayload when calling createOpportunity'
+            );
+        }
+
+
+        $resourcePath = '/crm/api/v1/opportunities';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($opportunityCreateOpportunityPayload)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($opportunityCreateOpportunityPayload));
+            } else {
+                $httpBody = $opportunityCreateOpportunityPayload;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        if (is_string($formParamValueItem)) {
+                            // JSON part
+                            $multipartContents[] = [
+                                'name' => $formParamName,
+                                'contents' => $formParamValueItem,
+                                'headers' => [
+                                    'Content-Disposition' => "form-data; name=\"$formParamName\"; filename=\"$formParamName.json\"",
+                                    'Content-Type' => 'application/json; charset=UTF-8'
+                                ]
+                            ];
+                        } else {
+                            $multipartContents[] = [
+                                'name' => $formParamName,
+                                'contents' => $formParamValueItem
+                            ];
+                        }
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
     }
 
     /**
@@ -862,6 +1205,368 @@ class OpportunitiesApi
         $query = ObjectSerializer::buildQuery($queryParams);
         return new Request(
             'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation updateOpportunity
+     *
+     * Update an opportunity
+     *
+     * @param  int $id Identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\OpportunityPatchOpportunityPayload $opportunityPatchOpportunityPayload opportunityPatchOpportunityPayload (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunity'] to see the possible values for this operation
+     *
+     * @throws ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws InvalidArgumentException
+     * @return \Equisoft\SDK\EquisoftConnect\Model\OpportunityOpportunity|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+     */
+    public function updateOpportunity(
+        int $id,
+        \Equisoft\SDK\EquisoftConnect\Model\OpportunityPatchOpportunityPayload $opportunityPatchOpportunityPayload,
+        string $contentType = self::contentTypes['updateOpportunity'][0]
+    ): \Equisoft\SDK\EquisoftConnect\Model\OpportunityOpportunity|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse
+    {
+        list($response) = $this->updateOpportunityWithHttpInfo($id, $opportunityPatchOpportunityPayload, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation updateOpportunityWithHttpInfo
+     *
+     * Update an opportunity
+     *
+     * @param  int $id Identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\OpportunityPatchOpportunityPayload $opportunityPatchOpportunityPayload (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunity'] to see the possible values for this operation
+     *
+     * @throws ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws InvalidArgumentException
+     * @return array of \Equisoft\SDK\EquisoftConnect\Model\OpportunityOpportunity|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse|\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updateOpportunityWithHttpInfo(
+        int $id,
+        \Equisoft\SDK\EquisoftConnect\Model\OpportunityPatchOpportunityPayload $opportunityPatchOpportunityPayload,
+        string $contentType = self::contentTypes['updateOpportunity'][0]
+    ): array
+    {
+        $request = $this->updateOpportunityRequest($id, $opportunityPatchOpportunityPayload, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            switch($statusCode) {
+                case 200:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\OpportunityOpportunity',
+                        $request,
+                        $response,
+                    );
+                case 401:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
+                case 404:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
+                case 500:
+                    return $this->handleResponseWithDataType(
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $request,
+                        $response,
+                    );
+            }
+            
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return $this->handleResponseWithDataType(
+                '\Equisoft\SDK\EquisoftConnect\Model\OpportunityOpportunity',
+                $request,
+                $response,
+            );
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\OpportunityOpportunity',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 404:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Equisoft\SDK\EquisoftConnect\Model\ErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+            }
+        
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation updateOpportunityAsync
+     *
+     * Update an opportunity
+     *
+     * @param  int $id Identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\OpportunityPatchOpportunityPayload $opportunityPatchOpportunityPayload (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunity'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
+     */
+    public function updateOpportunityAsync(
+        int $id,
+        \Equisoft\SDK\EquisoftConnect\Model\OpportunityPatchOpportunityPayload $opportunityPatchOpportunityPayload,
+        string $contentType = self::contentTypes['updateOpportunity'][0]
+    ): PromiseInterface
+    {
+        return $this->updateOpportunityAsyncWithHttpInfo($id, $opportunityPatchOpportunityPayload, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation updateOpportunityAsyncWithHttpInfo
+     *
+     * Update an opportunity
+     *
+     * @param  int $id Identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\OpportunityPatchOpportunityPayload $opportunityPatchOpportunityPayload (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunity'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
+     */
+    public function updateOpportunityAsyncWithHttpInfo(
+        int $id,
+        \Equisoft\SDK\EquisoftConnect\Model\OpportunityPatchOpportunityPayload $opportunityPatchOpportunityPayload,
+        string $contentType = self::contentTypes['updateOpportunity'][0]
+    ): PromiseInterface
+    {
+        $returnType = '\Equisoft\SDK\EquisoftConnect\Model\OpportunityOpportunity';
+        $request = $this->updateOpportunityRequest($id, $opportunityPatchOpportunityPayload, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if (in_array($returnType, ['\SplFileObject', '\Psr\Http\Message\StreamInterface'])) {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'updateOpportunity'
+     *
+     * @param  int $id Identifier. (required)
+     * @param  \Equisoft\SDK\EquisoftConnect\Model\OpportunityPatchOpportunityPayload $opportunityPatchOpportunityPayload (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOpportunity'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function updateOpportunityRequest(
+        int $id,
+        \Equisoft\SDK\EquisoftConnect\Model\OpportunityPatchOpportunityPayload $opportunityPatchOpportunityPayload,
+        string $contentType = self::contentTypes['updateOpportunity'][0]
+    ): Request
+    {
+
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new InvalidArgumentException(
+                'Missing the required parameter $id when calling updateOpportunity'
+            );
+        }
+
+        // verify the required parameter 'opportunityPatchOpportunityPayload' is set
+        if ($opportunityPatchOpportunityPayload === null || (is_array($opportunityPatchOpportunityPayload) && count($opportunityPatchOpportunityPayload) === 0)) {
+            throw new InvalidArgumentException(
+                'Missing the required parameter $opportunityPatchOpportunityPayload when calling updateOpportunity'
+            );
+        }
+
+
+        $resourcePath = '/crm/api/v1/opportunities/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($opportunityPatchOpportunityPayload)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($opportunityPatchOpportunityPayload));
+            } else {
+                $httpBody = $opportunityPatchOpportunityPayload;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        if (is_string($formParamValueItem)) {
+                            // JSON part
+                            $multipartContents[] = [
+                                'name' => $formParamName,
+                                'contents' => $formParamValueItem,
+                                'headers' => [
+                                    'Content-Disposition' => "form-data; name=\"$formParamName\"; filename=\"$formParamName.json\"",
+                                    'Content-Type' => 'application/json; charset=UTF-8'
+                                ]
+                            ];
+                        } else {
+                            $multipartContents[] = [
+                                'name' => $formParamName,
+                                'contents' => $formParamValueItem
+                            ];
+                        }
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires OAuth (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'PATCH',
             $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody

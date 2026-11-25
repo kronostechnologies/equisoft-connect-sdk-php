@@ -325,8 +325,9 @@ docs/Model/MovementUserTuplePayload.md
 docs/Model/MovementValidationError.md
 docs/Model/MovementValidationErrorResponse.md
 docs/Model/OpportunitiesListOpportunityResponse.md
-docs/Model/OpportunityCreateOpportunitySchema.md
+docs/Model/OpportunityCreateOpportunityPayload.md
 docs/Model/OpportunityOpportunity.md
+docs/Model/OpportunityPatchOpportunityPayload.md
 docs/Model/ParametersCompanyResponse.md
 docs/Model/TasksCreateTaskPayload.md
 docs/Model/TasksCreateTaskResponse.md
@@ -676,8 +677,9 @@ src/Model/MovementUserTuplePayload.php
 src/Model/MovementValidationError.php
 src/Model/MovementValidationErrorResponse.php
 src/Model/OpportunitiesListOpportunityResponse.php
-src/Model/OpportunityCreateOpportunitySchema.php
+src/Model/OpportunityCreateOpportunityPayload.php
 src/Model/OpportunityOpportunity.php
+src/Model/OpportunityPatchOpportunityPayload.php
 src/Model/ParametersCompanyResponse.php
 src/Model/TasksCreateTaskPayload.php
 src/Model/TasksCreateTaskResponse.php
@@ -700,3 +702,5 @@ src/Model/UsersUser.php
 src/Model/UsersUserGroup.php
 src/Model/UsersUserIdentity.php
 src/ObjectSerializer.php
+tests/Model/OpportunityCreateOpportunityPayloadTest.php
+tests/Model/OpportunityPatchOpportunityPayloadTest.php
