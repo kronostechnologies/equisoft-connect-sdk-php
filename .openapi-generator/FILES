@@ -702,5 +702,3 @@ src/Model/UsersUser.php
 src/Model/UsersUserGroup.php
 src/Model/UsersUserIdentity.php
 src/ObjectSerializer.php
-tests/Model/OpportunityCreateOpportunityPayloadTest.php
-tests/Model/OpportunityPatchOpportunityPayloadTest.php
