@@ -59,6 +59,7 @@ class DocumentsDocument implements ModelInterface, ArrayAccess, JsonSerializable
       */
     protected static array $openAPITypes = [
         'id' => 'int',
+        'uuid' => 'string',
         'name' => 'string',
         'type' => '\Equisoft\SDK\EquisoftConnect\Model\DocumentDocumentGroup',
         'subType' => '\Equisoft\SDK\EquisoftConnect\Model\DocumentDocumentValue',
@@ -75,6 +76,7 @@ class DocumentsDocument implements ModelInterface, ArrayAccess, JsonSerializable
       */
     protected static array $openAPIFormats = [
         'id' => null,
+        'uuid' => null,
         'name' => null,
         'type' => null,
         'subType' => null,
@@ -91,6 +93,7 @@ class DocumentsDocument implements ModelInterface, ArrayAccess, JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
+        'uuid' => false,
         'name' => false,
         'type' => true,
         'subType' => true,
@@ -187,6 +190,7 @@ class DocumentsDocument implements ModelInterface, ArrayAccess, JsonSerializable
      */
     protected static array $attributeMap = [
         'id' => 'id',
+        'uuid' => 'uuid',
         'name' => 'name',
         'type' => 'type',
         'subType' => 'subType',
@@ -203,6 +207,7 @@ class DocumentsDocument implements ModelInterface, ArrayAccess, JsonSerializable
      */
     protected static array $setters = [
         'id' => 'setId',
+        'uuid' => 'setUuid',
         'name' => 'setName',
         'type' => 'setType',
         'subType' => 'setSubType',
@@ -219,6 +224,7 @@ class DocumentsDocument implements ModelInterface, ArrayAccess, JsonSerializable
      */
     protected static array $getters = [
         'id' => 'getId',
+        'uuid' => 'getUuid',
         'name' => 'getName',
         'type' => 'getType',
         'subType' => 'getSubType',
@@ -285,6 +291,7 @@ class DocumentsDocument implements ModelInterface, ArrayAccess, JsonSerializable
     public function __construct(?array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
+        $this->setIfExists('uuid', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('subType', $data ?? [], null);
@@ -359,6 +366,33 @@ class DocumentsDocument implements ModelInterface, ArrayAccess, JsonSerializable
             throw new InvalidArgumentException('non-nullable id cannot be null');
         }
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets uuid
+     *
+     * @return string|null
+     */
+    public function getUuid(): ?string
+    {
+        return $this->container['uuid'];
+    }
+
+    /**
+     * Sets uuid
+     *
+     * @param string|null $uuid uuid
+     *
+     * @return $this
+     */
+    public function setUuid(?string $uuid): static
+    {
+        if (is_null($uuid)) {
+            throw new InvalidArgumentException('non-nullable uuid cannot be null');
+        }
+        $this->container['uuid'] = $uuid;
 
         return $this;
     }

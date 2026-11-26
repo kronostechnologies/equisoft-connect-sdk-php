@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional]
+**uuid** | **string** |  | [optional]
 **name** | **string** |  | [optional]
 **type** | [**\Equisoft\SDK\EquisoftConnect\Model\DocumentDocumentGroup**](DocumentDocumentGroup.md) |  | [optional]
 **subType** | [**\Equisoft\SDK\EquisoftConnect\Model\DocumentDocumentValue**](DocumentDocumentValue.md) |  | [optional]
