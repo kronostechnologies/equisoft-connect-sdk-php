@@ -59,6 +59,7 @@ class OpportunityOpportunity implements ModelInterface, ArrayAccess, JsonSeriali
       */
     protected static array $openAPITypes = [
         'id' => 'int',
+        'uuid' => 'string',
         'name' => 'string',
         'referenceNumber' => 'string',
         'approachDate' => '\DateTime',
@@ -93,6 +94,7 @@ class OpportunityOpportunity implements ModelInterface, ArrayAccess, JsonSeriali
       */
     protected static array $openAPIFormats = [
         'id' => null,
+        'uuid' => null,
         'name' => null,
         'referenceNumber' => null,
         'approachDate' => 'date',
@@ -127,6 +129,7 @@ class OpportunityOpportunity implements ModelInterface, ArrayAccess, JsonSeriali
       */
     protected static array $openAPINullables = [
         'id' => false,
+        'uuid' => false,
         'name' => false,
         'referenceNumber' => false,
         'approachDate' => true,
@@ -241,6 +244,7 @@ class OpportunityOpportunity implements ModelInterface, ArrayAccess, JsonSeriali
      */
     protected static array $attributeMap = [
         'id' => 'id',
+        'uuid' => 'uuid',
         'name' => 'name',
         'referenceNumber' => 'referenceNumber',
         'approachDate' => 'approachDate',
@@ -275,6 +279,7 @@ class OpportunityOpportunity implements ModelInterface, ArrayAccess, JsonSeriali
      */
     protected static array $setters = [
         'id' => 'setId',
+        'uuid' => 'setUuid',
         'name' => 'setName',
         'referenceNumber' => 'setReferenceNumber',
         'approachDate' => 'setApproachDate',
@@ -309,6 +314,7 @@ class OpportunityOpportunity implements ModelInterface, ArrayAccess, JsonSeriali
      */
     protected static array $getters = [
         'id' => 'getId',
+        'uuid' => 'getUuid',
         'name' => 'getName',
         'referenceNumber' => 'getReferenceNumber',
         'approachDate' => 'getApproachDate',
@@ -393,6 +399,7 @@ class OpportunityOpportunity implements ModelInterface, ArrayAccess, JsonSeriali
     public function __construct(?array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
+        $this->setIfExists('uuid', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('referenceNumber', $data ?? [], null);
         $this->setIfExists('approachDate', $data ?? [], null);
@@ -450,6 +457,9 @@ class OpportunityOpportunity implements ModelInterface, ArrayAccess, JsonSeriali
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
+        if ($this->container['uuid'] === null) {
+            $invalidProperties[] = "'uuid' can't be null";
+        }
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
         }
@@ -503,6 +513,33 @@ class OpportunityOpportunity implements ModelInterface, ArrayAccess, JsonSeriali
             throw new InvalidArgumentException('non-nullable id cannot be null');
         }
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets uuid
+     *
+     * @return string
+     */
+    public function getUuid(): string
+    {
+        return $this->container['uuid'];
+    }
+
+    /**
+     * Sets uuid
+     *
+     * @param string $uuid Unique identifier.
+     *
+     * @return $this
+     */
+    public function setUuid(string $uuid): static
+    {
+        if (is_null($uuid)) {
+            throw new InvalidArgumentException('non-nullable uuid cannot be null');
+        }
+        $this->container['uuid'] = $uuid;
 
         return $this;
     }

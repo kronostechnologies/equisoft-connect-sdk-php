@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Unique numerical identifier. |
+**uuid** | **string** | Unique identifier. |
 **name** | **string** | Name. |
 **referenceNumber** | **string** | Reference number. |
 **approachDate** | **\DateTime** | Approach Date. | [optional]
